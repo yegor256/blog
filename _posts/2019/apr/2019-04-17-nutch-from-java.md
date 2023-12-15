@@ -106,7 +106,7 @@ public class Main {
     Path home = new Path("target");
     // Next, we have to create a file with a list of URLs Nutch will
     // start crawling from:
-    String[] urls = { "http://www.zerocracy.com" };
+    String[] urls = { "https://www.zerocracy.com" };
     final Path targets = new Path(home, "urls");
     Files.createDirectory(Paths.get(targets.toString()));
     Files.write(

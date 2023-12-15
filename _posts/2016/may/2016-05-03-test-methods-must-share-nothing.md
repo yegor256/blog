@@ -44,7 +44,7 @@ in one `FooTest.java` file. Preparing all objects in one "before" is not
 possible. So we have to do certain things again and again in our test
 methods.
 
-Let's take a look at one of the classes in our [Takes Framework](http://www.takes.org):
+Let's take a look at one of the classes in our [Takes Framework](https://www.takes.org):
 [`VerboseListTest`](https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java).
 It's a unit test and it has a problem, which I'm trying to tell you about.
 Look at that [`MSG`](https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java#L54)

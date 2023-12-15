@@ -48,11 +48,11 @@ for example?
 I think we should. And I think I know the reason why.
 
 It's not because we introduce unnecessary coupling, as Allen Holub said in his
-[Why extends is evil](http://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html) article.
+[Why extends is evil](https://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html) article.
 He was definitely right, but I believe it's not the root cause of the problem.
 
 "Inherit," as an English verb, has a number of meanings.
-[This one](http://www.oxforddictionaries.com/us/definition/american_english/inherit)
+[This one](https://www.oxforddictionaries.com/us/definition/american_english/inherit)
 is what inheritance inventors in [Simula](https://en.wikipedia.org/wiki/Simula) had in mind, I guess:
 "Derive (a quality, characteristic, or predisposition) genetically from one's parents or ancestors."
 
@@ -86,7 +86,7 @@ is exactly that---copying---and it has nothing to do with the meaning
 of the word "inherit" I quoted above.
 
 Implementation inheritance is much closer to a different
-[meaning](http://www.oxforddictionaries.com/us/definition/american_english/inherit):
+[meaning](https://www.oxforddictionaries.com/us/definition/american_english/inherit):
 "Receive (money, property, or a title) as an heir at the death of the previous holder."
 Who is dead, you ask? An object is dead if it allows other objects to
 _inherit_ its encapsulated code and data. This is implementation

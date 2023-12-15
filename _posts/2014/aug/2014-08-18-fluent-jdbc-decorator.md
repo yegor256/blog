@@ -35,7 +35,7 @@ via JDBC, avoiding the need to use
 <!--more-->
 
 [jcabi-jdbc](http://jdbc.jcabi.com) is a lightweight wrapper of
-[JDBC](http://www.oracle.com/technetwork/java/javase/jdbc/index.html).
+[JDBC](https://www.oracle.com/technetwork/java/javase/jdbc/index.html).
 It is very convenient to use when you don't need a full-scale
 [ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
 (like Hibernate), but want just to select, insert, or update
@@ -46,7 +46,7 @@ You start it by instantiating the class with a single parameter---data source.
 
 You can obtain the data source from your connection pool. There are many
 implementations of connection pools. I would recommend that you use
-[BoneCP](http://www.jolbox.com/). Below is an example of how you would connect to PostgreSQL:
+[BoneCP](https://www.jolbox.com/). Below is an example of how you would connect to PostgreSQL:
 
 ```java
 @Cacheable(forever = true)

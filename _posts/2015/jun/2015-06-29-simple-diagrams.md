@@ -88,7 +88,7 @@ are easy to count. I've seen diagrams with 25 or more rectangles ... that's unac
 **Use UML**.
 Well, use whatever notation you feel comfortable with, but many years ago
 people agreed that instead of using different notations, it would be easier
-to learn one for all; that's [UML](http://www.uml.org/).
+to learn one for all; that's [UML](https://www.uml.org/).
 It's a huge format/standard/language,
 but you don't need to know all of it. Just learn the basics; that will be
 enough to express almost any idea you have. I would recommend

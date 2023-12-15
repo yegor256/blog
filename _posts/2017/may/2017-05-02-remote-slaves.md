@@ -141,7 +141,7 @@ without any web cameras or Slack channels.
 
 It's no surprise that many big companies have already decided to stop this telecommuting
 nonsense and put their slaves back behind closed doors; take
-[Google](http://www.tbray.org/ongoing/When/201x/2014/02/19/Leaving-Google),
+[Google](https://www.tbray.org/ongoing/When/201x/2014/02/19/Leaving-Google),
 [Yahoo](http://money.cnn.com/2013/02/25/technology/yahoo-work-from-home/index.html?iid=EL), and
 [Best Buy](http://money.cnn.com/2013/03/05/technology/best-buy-work-from-home/index.html)
 for example.

@@ -15,7 +15,7 @@ keywords:
 ---
 
 I needed to create a custom syntax highlighting
-for [requs.org](http://www.requs.org)
+for [requs.org](https://www.requs.org)
 on which I'm using Jekyll for site rendering.
 
 This is how my code blocks look in markdown pages:

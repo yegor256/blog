@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 We're starting a new thing, a seed fund. Its name is
-[SeedRamp](http://www.seedramp.com). The formula is simple: You schedule
+[SeedRamp](https://www.seedramp.com). The formula is simple: You schedule
 an interview, we have a one-hour conversation, you present me your
 startup idea, and we either give you cash right away or explain why we don't
 feel like it. We don't do any due diligence or background checks. The decision
@@ -136,9 +136,9 @@ to get a new product.
 
 ## We Are Not Cowards
 
-{% badge http://www.seedramp.com/images/logo.svg 128 http://www.seedramp.com %}
+{% badge https://www.seedramp.com/images/logo.svg 128 https://www.seedramp.com %}
 
-[SeedRamp](http://www.seedramp.com) is going to solve all of these three problems.
+[SeedRamp](https://www.seedramp.com) is going to solve all of these three problems.
 
 First of all, we completely remove the necessity to have any connections
 in order to reach us. You need money? Just _schedule_ an appointment online.

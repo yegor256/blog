@@ -19,7 +19,7 @@ jb_picture:
   caption: The Departed (2006) by Martin Scorsese
 ---
 
-{% badge https://www.0rsk.com/logo.svg 64 http://www.0rsk.com %}
+{% badge https://www.0rsk.com/logo.svg 64 https://www.0rsk.com %}
 
 "A project manager's work should not focus on dealing with problems;
 it should focus on preventing them,"---this is how
@@ -30,7 +30,7 @@ a project manager know about the problems which are supposed to be
 prevented? This is what that chapter and
 [_Risk Management Tricks of the Trade for Project Managers_](https://amzn.to/2V5b0wp)
 (yet another great book by the same author) are dedicated to. What I learned
-from these books, and from my multi-year [experience](http://www.technoparkcorp.com/process/risk/risk/)
+from these books, and from my multi-year [experience](https://www.technoparkcorp.com/process/risk/risk/)
 of identifying, analyzing and dealing with risks, is that the best
 format for specifying them consists of three parts: cause, risk, and effect.
 

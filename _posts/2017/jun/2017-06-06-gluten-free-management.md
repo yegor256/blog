@@ -48,7 +48,7 @@ from the reality and its threats.
 {% quote Truth hurts and modern management is not about hurting people, it's about making them happy. %}
 
 **Be Politically Correct**.
-How many [latinx](http://www.huffingtonpost.com/entry/why-people-are-using-the-term-latinx_us_57753328e4b0cc0fa136a159)
+How many [latinx](https://www.huffingtonpost.com/entry/why-people-are-using-the-term-latinx_us_57753328e4b0cc0fa136a159)
 are in your team? What about gays and transsexuals?
 You're not sure? That's wrong. You have to count. You don't know how to
 segregate bi-sexuals from "normal" people and black females from white males?

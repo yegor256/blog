@@ -39,7 +39,7 @@ strongly recommend moving there.
 
 ## Create RubyGems Account
 
-Create an account in [RubyGems.org](http://www.rubygems.org).
+Create an account in [RubyGems.org](https://www.rubygems.org).
 
 ## Create `rubygems.yml`
 

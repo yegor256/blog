@@ -47,7 +47,7 @@ existing scripts. You just teach Rultor how to call them.
 
 The first advantage you get once you start calling your deployment
 scripts from Rultor is the [usage of Docker]({% pst 2014/jul/2014-07-29-docker-in-rultor %}).
-I'm sure you know what [Docker](http://www.docker.io) is, but for those who don't---it is a
+I'm sure you know what [Docker](https://www.docker.io) is, but for those who don't---it is a
 manager of virtual Linux "machines." It's a command line script
 that you call when you need to run some script in a new virtual machine (aka "container").
 Docker starts the container almost immediately and runs your script. The beauty

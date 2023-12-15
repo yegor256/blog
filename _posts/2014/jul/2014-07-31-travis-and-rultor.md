@@ -16,7 +16,7 @@ keywords:
   - hosted continuous integration
 ---
 
-{% badge /images/2014/07/travis-logo.png 100 http://www.travis-ci.org %}
+{% badge /images/2014/07/travis-logo.png 100 https://www.travis-ci.org %}
 
 {% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
 
@@ -149,7 +149,7 @@ Rultor reports to GitHub. This is exactly what happened in
 
 ## Scenario #4: Deploy to CloudBees
 
-[s3auth.com](http://www.s3auth.com) is a
+[s3auth.com](https://www.s3auth.com) is a
 [Basic HTTP authentication gateway for Amazon S3 Buckets]({% pst 2014/apr/2014-04-21-s3-http-basic-auth %}).
 It is a Java web app.
 In its pull request [#195](https://github.com/yegor256/s3auth/pull/195), a resource
@@ -161,7 +161,7 @@ Then, [`@davvd`](https://github.com/davvd) instructed Rultor to deploy
 [a new Docker container]({% pst 2014/jul/2014-07-29-docker-in-rultor %})
 and ran `mvn clean deploy` in it.
 
-Maven deployed the application to [CloudBees](http://www.cloudbees.com):
+Maven deployed the application to [CloudBees](https://www.cloudbees.com):
 
 {% figure /images/2014/07/rultor-s3auth-195.png 600 %}
 

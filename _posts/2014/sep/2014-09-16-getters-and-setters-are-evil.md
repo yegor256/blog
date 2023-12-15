@@ -28,7 +28,7 @@ jb_picture:
 ---
 
 There is an old debate, started in 2003 by Allen Holub
-in this [Why getter and setter methods are evil](http://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html)
+in this [Why getter and setter methods are evil](https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html)
 famous article, about whether getters/setters is an
 [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
 and should be avoided or if it is something we inevitably need in object-oriented

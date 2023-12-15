@@ -16,7 +16,7 @@ keywords:
   - jaxb alternatives
 ---
 
-{% badge http://img.xembly.org/logo-256x256.png 64 http://www.xembly.org %}
+{% badge http://img.xembly.org/logo-256x256.png 64 https://www.xembly.org %}
 
 [JAXB](http://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding)
 is a 10-year-old Java technology that allows us to
@@ -25,7 +25,7 @@ back (unmarshalling). This technology is based on
 [setters and getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %})
 and, in my opinion, violates key principles of object-oriented
 programming by turning objects into **passive data structures**. I would
-recommend you use [Xembly](http://www.xembly.org)
+recommend you use [Xembly](https://www.xembly.org)
 instead for marshalling Java objects into XML documents.
 
 <!--more-->
@@ -110,7 +110,7 @@ our XML document should be delivered in. It may be a `String` or an `InputStream
 or maybe an instance of `org.w3c.dom.Document`. Making many `toXML()` methods
 in each object would definitely be a disaster.
 
-[Xembly](http://www.xembly.org) provides a solution. As I've
+[Xembly](https://www.xembly.org) provides a solution. As I've
 [mentioned before]({% pst 2014/apr/2014-04-09-xembly-intro %}), it is
 an imperative language for XML constructions and manipulations. Here is
 how we can implement our `Book` object with the help of Xembly:
@@ -142,7 +142,7 @@ final Book book = new Book("0132350882", "Clean Code");
 final String xml = new Xembler(book.toXembly()).xml();
 ```
 
-This [`Xembler`](http://www.xembly.org/apidocs-0.21/org/xembly/Xembler.html)
+This [`Xembler`](https://www.xembly.org/apidocs-0.21/org/xembly/Xembler.html)
 class will convert Xembly directives into an XML document.
 
 The beauty of this solution is that the internals of the object are

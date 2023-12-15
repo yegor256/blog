@@ -79,9 +79,9 @@ never _learn_ what the project wants from you and _why_.
 You will not know the reasoning behind our rules. You will never think about them.
 You will not really care about them. But they are not only about the formatting
 of spaces and brackets. There are [over 900]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
-of them in [Qulice](http://www.qulice.com) and some of
+of them in [Qulice](https://www.qulice.com) and some of
 them were designed especially for the object-oriented philosophy
-[we](http://www.elegantobjects.org) are preaching.
+[we](https://www.elegantobjects.org) are preaching.
 
 Thus, simply put, we don't want you to go through the static analysis phase easily.
 We want you to suffer in order to learn.

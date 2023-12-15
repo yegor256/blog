@@ -18,8 +18,8 @@ keywords:
 ---
 
 This is a very common practice in Java
-(using [`LoggerFactory`](http://www.slf4j.org/apidocs/org/slf4j/LoggerFactory.html)
-from [slf4j](http://www.slf4j.org/)):
+(using [`LoggerFactory`](https://www.slf4j.org/apidocs/org/slf4j/LoggerFactory.html)
+from [slf4j](https://www.slf4j.org/)):
 
 ```java
 import org.slf4j.LoggerFactory;

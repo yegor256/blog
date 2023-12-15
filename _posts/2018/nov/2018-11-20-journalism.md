@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 This July, just four months ago,
-I submitted an article to [InfoQ](http://www.infoq.com/), a
+I submitted an article to [InfoQ](https://www.infoq.com/), a
 popular online tech magazine. In the article I
 suggested that in order to improve our projects we must not make programmers worry
 about the quality of code they write, but instead let them focus mostly

@@ -22,7 +22,7 @@ social:
 
 A few days ago, my article
 [Why Continuous Integration Doesn't Work](http://devops.com/blogs/continuous-integration-doesnt-work/)
-was published at [DevOps.com](http://www.devops.com). Almost the same
+was published at [DevOps.com](https://www.devops.com). Almost the same
 day I received a few strongly negative critiques on Twitter.
 
 Here is my response to the un-asked question:
@@ -39,10 +39,10 @@ Apache Continuum, Hudson, CruiseControl, and Jenkins in over 50 open
 source and commercial projects. Besides that,
 a few years ago I created a hosted
 [continuous integration]({% pst 2016/aug/2016-08-01-continuous-integration-maturity %}) service called
-[fazend.com](http://www.fazend.com),
+[fazend.com](https://www.fazend.com),
 renamed to [rultor.com](https://www.rultor.com) in 2013.
-Currently, I'm also an active user of [Travis](http://www.travis-ci.org)
-and [AppVeyor](http://www.appveyor.com).
+Currently, I'm also an active user of [Travis](https://www.travis-ci.org)
+and [AppVeyor](https://www.appveyor.com).
 
 ## How Continuous Integration Should Work
 

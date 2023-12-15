@@ -142,7 +142,7 @@ In this case, I documented the alternatives and gave my reasons why
 they are not good for us. As you see, the reasons are very biased; I
 basically expressed my personal opinions about these three
 frameworks and definitely gave preference to my own open
-source [Takes](http://www.takes.org) framework. Is it good? No, it's not.
+source [Takes](https://www.takes.org) framework. Is it good? No, it's not.
 But I'm the [architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}),
 and I do what I think is right for the project.
 

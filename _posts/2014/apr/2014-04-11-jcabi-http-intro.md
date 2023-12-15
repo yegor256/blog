@@ -47,7 +47,7 @@ JSON response to return a value. For example, this is how I use the new client
 to return a current EUR rate:
 
 ```java
-String uri = "http://www.getexchangerates.com/api/latest.json";
+String uri = "https://www.getexchangerates.com/api/latest.json";
 String rate = new JdkRequest(uri)
   .header("Accept", "application/json")
   .fetch()
@@ -95,7 +95,7 @@ In the future, it will be possible to introduce new implementations without brea
 Say, for instance, I want to fetch a page and then do something with it. These two calls perform the task differently, but the end results are the same:
 
 ```java
-String uri = "http://www.google.com";
+String uri = "https://www.google.com";
 Response page;
 page = new JdkRequest(uri).fetch();
 page = new ApacheRequest(uri).fetch();

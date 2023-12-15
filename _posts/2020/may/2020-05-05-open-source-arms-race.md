@@ -79,7 +79,7 @@ companies invest in open source:
     and so on.
 
   * **Foundations**.
-    [Apache](http://www.apache.org/foundation/thanks),
+    [Apache](https://www.apache.org/foundation/thanks),
     [Linux](https://www.linuxfoundation.org/membership/members/),
     [Eclipse](https://www.eclipse.org/membership/exploreMembership.php#allmembers),
     [GNOME](https://www.gnome.org/foundation/),
@@ -106,7 +106,7 @@ companies invest in open source:
     [Nginx](https://github.com/nginx/nginx)
       ([$670m](https://techcrunch.com/2019/03/11/f5-acquires-nginx-for-670m-to-move-into-open-source-multi-cloud-services/)),
     and [so on](https://index.co/market/open-source/acquisitions).
-    The market is [booming](https://a16z.com/2019/10/04/commercializing-open-source/), by the way.
+    The market is [booming](https://a16z.com/open-source-from-community-to-commercialization/), by the way.
 
   * **Donations**.
     Google, for example, [donates](https://opensource.google/docs/growing/funding/) to

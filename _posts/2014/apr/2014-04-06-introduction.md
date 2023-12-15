@@ -29,6 +29,6 @@ this works out!
 <!--more-->
 
 BTW, I purchased the
-[Cambria font](http://www.myfonts.com/fonts/ascender/cambria/)
+[Cambria font](https://www.myfonts.com/fonts/ascender/cambria/)
 just for this new blog. It cost, &euro;98. Nevertheless, I think
 it's a good investment for this new venture.

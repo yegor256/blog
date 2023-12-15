@@ -57,7 +57,7 @@ a [dynamic shortcut](https://stackoverflow.com/questions/19017258)
 to it in the bytecode.
 
 Why is this bad, aside from the fact that
-1) it's [slow](http://www.buzdin.lv/2011/01/is-java-reflection-really-slow.html),
+1) it's [slow](https://www.buzdin.lv/2011/01/is-java-reflection-really-slow.html),
 2) it's more verbose and so [less readable](https://armedia.com/blog/instanceof-avoid-in-code/),
 and
 3) it introduces a new point of failure since the object `items` may not be

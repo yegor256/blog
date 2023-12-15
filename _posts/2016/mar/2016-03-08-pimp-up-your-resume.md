@@ -202,8 +202,8 @@ a blog if you want to position yourself as an expensive software engineer.
 
 It doesn't need to be a very popular blog; don't focus on numbers. But
 it has to be properly created, designed, and hosted. Don't use
-[WordPress](http://www.wordpress.com), [Blogger](http://www.blogger.com),
-or [Tumblr](http://www.tumblr.com). Instead,
+[WordPress](https://www.wordpress.com), [Blogger](https://www.blogger.com),
+or [Tumblr](https://www.tumblr.com). Instead,
 I would recommend you think about static site generators like
 [Jekyll](https://jekyllrb.com/) and host
 it all on [GitHub Pages](https://pages.github.com/). That's what I'm doing.

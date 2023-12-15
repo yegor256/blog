@@ -21,7 +21,7 @@ jb_picture:
 
 That's what a character played by actor Bruce Willis said to Robert DeNiro's
 movie producer character in Barry Levinson's brilliant film
-[What Just Happened](http://www.imdb.com/title/tt0486674/). I second that.
+[What Just Happened](https://www.imdb.com/title/tt0486674/). I second that.
 Producers,
 [recruiters]({% pst 2017/feb/2017-02-21-say-no-to-google-recruiters %}),
 managers, real estate agents,
@@ -64,7 +64,7 @@ technologies for finding the right person.
 There is [Stack Overflow Careers](https://careers.stackoverflow.com/),
 which not only allows me to find a programmer but also see what he or she talks about and
 the quality of his or her questions and answers. There is
-[GitHub](http://www.github.com) that demonstrates the code written
+[GitHub](https://www.github.com) that demonstrates the code written
 by a programmer, helping me easily understand its quality.
 There are professional certifications that show how strong
 a candidate's skills are. And there are plenty of other avenues.
@@ -109,7 +109,7 @@ Or we just _don't know_ how to write a [good resume]({% pst 2016/mar/2016-03-08-
 our skills properly. They are exploiting our weaknesses to make money.
 
 A friend of mine was looking for a house in San Francisco a few months ago. He
-actually found the house on [Zillow](http://www.zillow.com) but paid $70,000
+actually found the house on [Zillow](https://www.zillow.com) but paid $70,000
 to two real estate agents to help him close the deal
 (the price of the house was close to $1.4 million,
 with 2.5 percent to each agent). What did these "hard-working" people do to earn his $70,000?

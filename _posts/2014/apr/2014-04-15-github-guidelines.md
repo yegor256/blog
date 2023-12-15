@@ -17,7 +17,7 @@ keywords:
 
 This manual explains the workflow used when working with a [XDSD](https://www.xdsd.org)
 project hosted
-on [GitHub](http://www.github.com). You start when a GitHub issue is
+on [GitHub](https://www.github.com). You start when a GitHub issue is
 assigned to you. Next, you will receive a message from a
 [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 containing the issue number, title, description and its budget in hours (usually

@@ -124,7 +124,7 @@ Avoiding code duplication is a very important achievement. Moreover,
 I believe that it is the most important target for any software project.
 
 These small web apps work exactly as explained above:
-[s3auth.com](http://www.s3auth.com),
-[stateful.co](http://www.stateful.co),
-[bibrarian.com](http://www.bibrarian.com).
+[s3auth.com](https://www.s3auth.com),
+[stateful.co](https://www.stateful.co),
+[bibrarian.com](https://www.bibrarian.com).
 They are all open source, and you can see their source code in GitHub.

@@ -69,7 +69,7 @@ years ago, in my [How Much Do You Pay Per Line of Code?]({% pst 2014/apr/2014-04
 post, but will try again from a different perspective).
 
 Take a look at [yegor256/takes#430](https://github.com/yegor256/takes/issues/430),
-a feature request in the [Takes Framework](http://www.takes.org),
+a feature request in the [Takes Framework](https://www.takes.org),
 one of the projects we're managing.
 Let's see how much the project paid for the work done in this ticket:
 

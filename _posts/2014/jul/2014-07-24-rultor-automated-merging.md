@@ -23,7 +23,7 @@ keywords:
 You get a GitHub pull request. You review it. It looks correct---it's time
 to merge it into `master`. You post a comment in it, asking
 [@rultor](https://github.com/rultor) to test and merge. Rultor starts a new
-[Docker](http://www.docker.io) container, merges the pull request into `master`, runs all tests and, if
+[Docker](https://www.docker.io) container, merges the pull request into `master`, runs all tests and, if
 everything looks clean---merges, pushes, and closes the request.
 
 Then, you ask [@rultor](https://github.com/rultor) to deploy the current version

@@ -63,9 +63,9 @@ from overly-paid programmers/managers who are just trying to keep their jobs, do
 
   * "Individual rewards foster competition in an environment
     where co-operation is essential for success,"
-    [says](http://www.agilebuddha.com/agile/metrics-to-build-great-agile-teams-measure-influence-not-control/)
-    [Avienaash Shiralige](http://www.agilebuddha.com/author/admin/),
-    an Agile Coach at [AgileBuddha](http://www.agilebuddha.com/).
+    [says](https://www.agilebuddha.com/agile/metrics-to-build-great-agile-teams-measure-influence-not-control/)
+    [Avienaash Shiralige](https://www.agilebuddha.com/author/admin/),
+    an Agile Coach at [AgileBuddha](https://www.agilebuddha.com/).
 
   * "Individual metrics discourage team collaboration,"
     [says](https://www.infoq.com/articles/not-destroy-team-metrics/)

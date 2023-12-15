@@ -20,7 +20,7 @@ keywords:
 
 {% badge /images/2014/05/github-logo.png 128 %}
 
-[GitHub](http://www.github.com) is an awesome platform for maintaining Git sources and
+[GitHub](https://www.github.com) is an awesome platform for maintaining Git sources and
 tracking project issues. I moved all my projects (both private and public)
 to GitHub about three years ago and have no regrets. Moreover,
 GitHub gives access to almost all of its features through RESTful JSON API.

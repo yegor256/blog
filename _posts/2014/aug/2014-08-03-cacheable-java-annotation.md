@@ -20,10 +20,10 @@ keywords:
 {% badge https://www.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
 
 Say, you have a method that takes time to execute and you want
-its result to be cached. There are [many solutions](http://www.coderanch.com/how-to/java/CachingStrategies),
+its result to be cached. There are [many solutions](https://www.coderanch.com/how-to/java/CachingStrategies),
 including
 [Apache Commons JCS](http://commons.apache.org/proper/commons-jcs/),
-[Ehcache](http://www.ehcache.org),
+[Ehcache](https://www.ehcache.org),
 [JSR 107](https://jcp.org/en/jsr/detail?id=107),
 [Guava Caching](https://code.google.com/p/guava-libraries/wiki/CachesExplained)
 and many others.

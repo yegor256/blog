@@ -62,7 +62,7 @@ public final class FooTest {
 This is Java and I'm using [JUnit5](https://junit.org/junit5/)+[Hamcrest](http://hamcrest.org/) 
 together with my own logging framework
 [jcabi-log](https://log.jcabi.com), which is a decorator of 
-[Slf4j](http://www.slf4j.org/), which uses [Log4j](https://logging.apache.org/log4j/2.x/) to print to 
+[Slf4j](https://www.slf4j.org/), which uses [Log4j](https://logging.apache.org/log4j/2.x/) to print to 
 the console.
 
 What is going on here? There is a class `Foo` with a method `build()`, which

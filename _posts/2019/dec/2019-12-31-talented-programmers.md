@@ -41,7 +41,7 @@ suggests paying attention to the person's passion, communication skills,
 personal attitude, and the ability to work in a team.
 [Joel Spolsky](https://www.joelonsoftware.com/2006/10/25/the-guerrilla-guide-to-interviewing-version-30/)
 suggests hiring those who are smart and can get things done.
-[Haoyi](http://www.lihaoyi.com/post/HowtoconductagoodProgrammingInterview.html)
+[Haoyi](https://www.lihaoyi.com/post/HowtoconductagoodProgrammingInterview.html)
 gives very detailed instructions for the interviewer with the focus being
 on the candidate's ability to write code, discuss problems, reason
 about constraints, and be a person we would enjoy working with.

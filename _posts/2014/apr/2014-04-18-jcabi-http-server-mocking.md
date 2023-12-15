@@ -75,7 +75,7 @@ The container finds the first available and unoccupied port.
 In the example above, I added just one answer. This means that the container
 will reply only to the first HTTP request with that answer and that all
 consecutive requests will cause HTTP responses with status "internal server
-error [500](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)."
+error [500](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)."
 
 In lines 5 through 8, I make an HTTP request to the already started server.
 Also, I make an assertion that the body of the HTTP response contains the text

@@ -41,14 +41,14 @@ Besides that, I'm a proud holder of
 [PRINCE2 Foundation](/pdf/certifications/PRINCE2-Jun08.pdf),
 [MCP](/pdf/certifications/MCP-Oct07.pdf),
 and
-[COSMIC](http://www.cosmicon.com/certificateHoldersV3.asp) certificates.
+[COSMIC](https://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 
 I am a **programmer**, I [write](https://github.com/yegor256)
 mostly in Java, but also in Ruby, PHP, and JavaScript (watch [this](https://www.youtube.com/watch?v=cGcCcxx4xrg)).
 I'm the founder and lead architect of
 [Zold](https://www.zold.io),
-[Cactoos](http://www.cactoos.org),
-[Takes](http://www.takes.org),
+[Cactoos](https://www.cactoos.org),
+[Takes](https://www.takes.org),
 [Rultor](https://www.rultor.com),
 and [a few others](/pets.html).
 You can sponsor me on [GitHub](https://github.com/sponsors/yegor256).
@@ -66,7 +66,7 @@ called [Elegant Objects](/elegant-objects.html), plus
 [a few other books](/books.html),
 and founded [a movement for better OOP](https://elegantobjects.org).
 
-I was an **investor** at [SeedRamp.com](http://www.seedramp.com), I've
+I was an **investor** at [SeedRamp.com](https://www.seedramp.com), I've
 made a few investments, but I've got no results yet.
 
 I am a **philanthropist**, I donate a few thousand dollars every year (started in 2015)

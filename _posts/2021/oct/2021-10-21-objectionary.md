@@ -19,7 +19,7 @@ jb_picture:
   caption: Mænd & høns (2015) by Anders Thomas Jensen
 ---
 
-{% badge /images/books/elegant-objects/cactus.svg 128 http://www.eolang.org %}
+{% badge /images/books/elegant-objects/cactus.svg 128 https://www.eolang.org %}
 
 Since the time of Kernighan and Ritchie we share binary code in
 libraries. You need to print some text with [`printf()`](https://en.wikipedia.org/wiki/Printf_format_string) in C++? 

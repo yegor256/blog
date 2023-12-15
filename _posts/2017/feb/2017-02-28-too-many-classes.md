@@ -118,7 +118,7 @@ are about.
 
 In a medium-sized application or a library, there will be as many as 10 to 15
 prefixes you will have to remember, no more. For example, in the
-[Takes Framework](http://www.takes.org), there are 24,000 lines of code,
+[Takes Framework](https://www.takes.org), there are 24,000 lines of code,
 410 Java files, and 10 prefixes: `Bc`, `Cc`, `Tk`, `Rq`, `Rs`, `Fb`,
 `Fk`, `Hm`, `Ps`, and `Xe`. Not so difficult to remember what they mean, right?
 

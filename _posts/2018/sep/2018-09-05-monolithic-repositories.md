@@ -33,7 +33,7 @@ advocate the second approach. I believe they are wrong.
 {% jb_picture_body %}
 
 Let's use the following JavaScript function as an example.
-It downloads a JSON document from a [Zold](http://www.zold.io)
+It downloads a JSON document from a [Zold](https://www.zold.io)
 node (using [jQuery](https://jquery.com/))
 and places part of its content on the HTML page.
 Then it colors the data according to its value.
@@ -158,7 +158,7 @@ Here is what I did:
   * [Implemented](https://github.com/yegor256/colorizejs/issues/3) and released
     the next version [0.1.0](https://github.com/yegor256/colorizejs/tree/0.1.0);
   * [Added it](https://github.com/zold-io/zold.github.io/issues/81) to Zold front-end,
-    tested it, and released it---check it out [here](http://www.zold.io/health.html).
+    tested it, and released it---check it out [here](https://www.zold.io/health.html).
 
 It took almost three weeks of waiting and four hours of work, just
 to move a small piece of JavaScript code to a new repository and release
@@ -177,7 +177,7 @@ There are also a few good analyses of both approaches, for example
 [Monolithic repositories vs. Many repositories](https://www.dotconferences.com/2016/05/fabien-potencier-monolithic-repositories-vs-many-repositories)
 speech by Fabien Potencier at dotScale 2016
 and
-[Repo Style Wars: Mono vs Multi](http://www.gigamonkeys.com/mono-vs-multi/)
+[Repo Style Wars: Mono vs Multi](https://www.gigamonkeys.com/mono-vs-multi/)
 by Peter Seibel.
 
 In a nutshell, they

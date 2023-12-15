@@ -151,7 +151,7 @@ To summarize, the trouble is not exactly in the name suffix, but in the very ide
 of representing the entire server on the client side rather than its _entities_. Such
 an abstraction is 1) too big and 2) very data driven.
 
-BTW, check out some of the [JCabi libraries](http://www.jcabi.com) (Java) for examples
+BTW, check out some of the [JCabi libraries](https://www.jcabi.com) (Java) for examples
 of object-oriented clients without "client" objects:
 [jcabi-github](http://github.jcabi.com),
 [jcabi-dynamo](http://dynamo.jcabi.com),

@@ -30,7 +30,7 @@ and let testers find and report bugs; then we'll fix them. Or this one:
 Being afraid to make a mistake makes me write slower and experiment less,
 which translates into lower-quality software. Read more about that
 [here](http://programmers.stackexchange.com/questions/41248) and
-[here](http://www.joelonsoftware.com/articles/fog0000000067.html).
+[here](https://www.joelonsoftware.com/articles/fog0000000067.html).
 But allow me to look at this from a different perspective and assert
 that yes, indeed, good programmers create _fewer_ bugs.
 

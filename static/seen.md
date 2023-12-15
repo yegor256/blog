@@ -46,7 +46,7 @@ with Sergey Pavlovich:
 [аудио](https://sdcast.ksdaemon.ru/2018/10/sdcast-87/) (in Russian).
 
 5 Sep 2018:
-[FrontEnd Weekend](http://www.frontendweekend.ml)
+[FrontEnd Weekend](https://www.frontendweekend.ml)
 with Andrey Smirnov:
 [аудио](https://soundcloud.com/frontend-weekend/fw-68) (in Russian).
 
@@ -86,6 +86,6 @@ with [@gamussa](https://twitter.com/gamussa) et al.:
 [аудио](http://razbor-poletov.com/2016/03/episode-105.html) (in Russian).
 
 17 Sep 2014:
-[CollaborationSuperpowers](http://www.CollaborationSuperpowers.com) with
+[CollaborationSuperpowers](https://www.CollaborationSuperpowers.com) with
 Lisette Sutherland:
 [video](https://www.youtube.com/watch?v=TWBBZK_XRNU).

@@ -20,7 +20,7 @@ translated:
 ---
 
 This page contains most typical mistakes I see in the Java code of people
-working with me. Static analysis (we're using [qulice](http://www.qulice.com)
+working with me. Static analysis (we're using [qulice](https://www.qulice.com)
 can't catch all of the mistakes for obvious reasons, and that's why I decided to
 list them all here.
 

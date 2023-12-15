@@ -33,7 +33,7 @@ asking to provide more specific and practical examples.
 Thus, in order to illustrate my strongly negative attitude to "mutability via setters," I took
 an existing [commons-email](http://commons.apache.org/proper/commons-email/) Java library from Apache
 and re-designed it my way, without setters and with "object thinking" in mind.
-I released my library as part of the [jcabi](http://www.jcabi.com) family---[jcabi-email](http://email.jcabi.com). Let's see what benefits
+I released my library as part of the [jcabi](https://www.jcabi.com) family---[jcabi-email](http://email.jcabi.com). Let's see what benefits
 we get from a "pure" object-oriented and immutable approach, without getters.
 
 <!--more-->

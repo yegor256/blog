@@ -98,7 +98,7 @@ Let's take them one by one.
 ## They Have Names
 
 This is how you make a
-[red tomato](http://www.rapidtables.com/web/color/red-color.htm)
+[red tomato](https://www.rapidtables.com/web/color/red-color.htm)
 color object with a constructor:
 
 ```java

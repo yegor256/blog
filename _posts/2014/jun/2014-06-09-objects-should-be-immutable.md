@@ -325,5 +325,5 @@ elimination of code needed to protect mutable objects from corruption.&rdquo; I 
 
 If you have some other arguments, please post them below and I'll try to comment.
 
-P.S. Check [takes.org](http://www.takes.org),
+P.S. Check [takes.org](https://www.takes.org),
 a Java web framework that consists entirely of immutable objects.

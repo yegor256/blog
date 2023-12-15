@@ -56,7 +56,7 @@ a test that is easy to make "red" is a good test. A test that is always
 <!-- ************************************************************** -->
 James Shore
 ([@jamesshore](https://twitter.com/jamesshore))
-in [Red-Green-Refactor](http://www.jamesshore.com/Blog/Red-Green-Refactor.html)
+in [Red-Green-Refactor](https://www.jamesshore.com/Blog/Red-Green-Refactor.html)
 (Nov 2005):
 
 > You'll run through several cycles very quickly, then find yourself

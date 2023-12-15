@@ -149,7 +149,7 @@ look better, we are inevitably making it _work_ better. But this happens
 only when the entire team is forced (!) to follow the rules dictated by the
 static analyzer(s). I've written about this in
 [Strict Control of Java Code Quality]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}).
-I use [qulice.com](http://www.qulice.com) in Java projects
+I use [qulice.com](https://www.qulice.com) in Java projects
 and [rubocop](https://github.com/bbatsov/rubocop) in Ruby, but there
 are many similar tools for nearly every language.
 

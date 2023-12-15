@@ -98,7 +98,7 @@ Foo-Hash: 7ef4ac3
 In runtime, you can show these values to the user to help him
 understand which version of the product he is working with at any given moment.
 
-Look at [stateful.co](http://www.stateful.co), for example. At the bottom
+Look at [stateful.co](https://www.stateful.co), for example. At the bottom
 of its front page, you see the version number and Git hash. They are
 retrieved from `MANIFEST.MF` of the deployed WAR package, on every page click.
 

@@ -167,7 +167,7 @@ No noise, very clean code, and obvious logic.
 
 ## Inappropriately Exposed Implementation Details
 
-[Some say](http://www.ibm.com/developerworks/library/j-jtp05254/)
+[Some say](https://www.ibm.com/developerworks/library/j-jtp05254/)
 the ability to put a checked exception into `throws` in the method
 signature instead of catching it here and rethrowing a new type
 encourages us to have too many irrelevant exception types in method

@@ -44,7 +44,7 @@ have or don't. They may not be as important to an office ~~slave~~
 they are crucial.
 
 **How to Search**.
-The [StackExchange](http://www.stackexchange.com) knowledge base
+The [StackExchange](https://www.stackexchange.com) knowledge base
 is huge and contains answers to almost any
 software question you may ask. You have to know how to search it,
 and not only via Google. You have to be familiar with the platform and

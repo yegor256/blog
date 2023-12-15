@@ -64,7 +64,7 @@ to make the right choice and never miss their CFP deadlines.
   <td>Apr</td>
   <td>Jan</td></tr>
 -->
-<tr><td><a href="http://www.oredev.org/">Øredev</a></td>
+<tr><td><a href="https://www.oredev.org/">Øredev</a></td>
   <td>Malmö</td>
   <td>Nov</td>
   <td>Mar</td>
@@ -94,7 +94,7 @@ to make the right choice and never miss their CFP deadlines.
   <td>May</td>
   <td><a href="https://twitter.com/qcon">@qcon</a></td>
   </tr>
-<tr><td><a href="http://www.jfokus.se/">JFokus</a></td>
+<tr><td><a href="https://www.jfokus.se/">JFokus</a></td>
   <td>Stockholm</td>
   <td>Feb</td>
   <td>Jun</td>

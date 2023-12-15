@@ -40,7 +40,7 @@ Recently, we developed [DeJump](https://github.com/objectionary/dejump),
 an automated tool that modifies programs written in [EOLANG](https://www.eolang.org),
 our own object-oriented language, such that "jumping objects" (GOTO, BREAK, and CONTINUE)
 are replaced with recursion or other declarative mechanisms. A research paper
-about the tool was recently accepted at a computer science conference ([CSAI'23](http://www.csai.org/)).
+about the tool was recently accepted at a computer science conference ([CSAI'23](https://www.csai.org/)).
 However, even though the tool exists, it has not been tested with a larger amount of
 source code, and it needs a few important improvements in its algorithm.
 Thus, we suggest creating the second version of the tool, with the required improvements
@@ -264,12 +264,12 @@ February 2010,
 US patent application 12/703,202,
 February 2010
 
-[Quality of Process Control in Software Projects](http://www.iwsm-mensura.org/2009),
+[Quality of Process Control in Software Projects](https://www.iwsm-mensura.org/2009),
 IWSM/Mensura, Amsterdam,
 November 2009,
 [PDF](/pdf/2009/IWSM09-article.pdf)
 
-[Quality of Code Can be Planned and Controlled](http://www.iaria.org/conferences2009/ProgramVALID09.html),
+[Quality of Code Can be Planned and Controlled](https://www.iaria.org/conferences2009/ProgramVALID09.html),
 The First International Conference on Advances in System Testing and Validation Lifecycle (VALID 2009),
 Porto, Portugal,
 September 2009,
@@ -281,7 +281,7 @@ ETH Zurich, Switzerland,
 July 2009,
 [PDF](/pdf/2009/SEAFOOD09-article.pdf)
 
-[Method for Software Cost Estimating w/Scope Champions](http://www.springer.com/us/book/9783642021510),
+[Method for Software Cost Estimating w/Scope Champions](https://www.springer.com/us/book/9783642021510),
 10th International Conference, PROFES 2009,
 Oulu, Finland,
 June 2009

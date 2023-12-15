@@ -34,11 +34,11 @@ servers, like Jenkins.
 
 {% jb_picture_body %}
 
-[Qulice](http://www.qulice.com) takes things one step further. It
+[Qulice](https://www.qulice.com) takes things one step further. It
 aggregates a few quality checkers, configures them to a maximum
 strict mode, and breaks your build if any of them fail.
 
-{% badge http://img.qulice.com/logo.svg 128 http://www.qulice.com %}
+{% badge http://img.qulice.com/logo.svg 128 https://www.qulice.com %}
 
 Seriously. There are
 [over 130 checks](http://checkstyle.sourceforge.net/checks.html) in Checkstyle,

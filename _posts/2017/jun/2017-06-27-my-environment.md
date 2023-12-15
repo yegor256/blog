@@ -47,7 +47,7 @@ together with
 for Java projects. I've got a free open source
 license from [JetBrains](https://www.jetbrains.com/),
 because I'm an active contributor and
-an author of [Takes Framework](http://www.takes.org).
+an author of [Takes Framework](https://www.takes.org).
 If you contribute to open source (and
 [you must]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})), you may do
 the same, I believe, just [email them](mailto:opensource@jetbrains.com) and ask.
@@ -69,7 +69,7 @@ to Sublime because it's just better. I also tried
 for web browsing. I also have
 [Safari](https://www.apple.com/lae/safari/),
 [FireFox](https://www.mozilla.org/en-US/firefox/new/),
-and [Opera](http://www.opera.com/) but only to verify my websites
+and [Opera](https://www.opera.com/) but only to verify my websites
 for cross-browser compatibility, that's all. I'm using these
 plugins:
 [AdBlock](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom),
@@ -110,7 +110,7 @@ for editing vector graphics, mainly SVG. Also, it's good for
 converting SVG into PNG.
 
 <img src="/images/2017/06/env-pixelmator.jpg" class="env-ico" alt="icon"/><br/>
-[Pixelmator](http://www.pixelmator.com/) ($30)
+[Pixelmator](https://www.pixelmator.com/) ($30)
 for editing rasterized images, like PNG, GIF, JPEG, etc.
 The icons you see at this page were created with the help of
 Pixelmator. It is a perfect alternative to
@@ -151,7 +151,7 @@ for FTP and AWS S3 file management.
 for webinars and video recording.
 
 <img src="/images/2017/06/env-mtorrent.jpg" class="env-ico" alt="icon"/><br/>
-[µTorrent](http://www.utorrent.com/) (free)
+[µTorrent](https://www.utorrent.com/) (free)
 for stealing movies. I find them mostly at
 [rutracker.org](http://rutracker.org/forum/index.php) or
 [The Pirate Bay](https://piratebay.to/).
@@ -160,11 +160,11 @@ against piracy, but most movies are either too expensive or not
 available for purchase.
 
 <img src="/images/2017/06/env-vlc.jpg" class="env-ico" alt="icon"/><br/>
-[VLC](http://www.videolan.org/vlc/index.html) (free)
+[VLC](https://www.videolan.org/vlc/index.html) (free)
 for watching those stolen movies.
 
 <img src="/images/2017/06/env-vienna.jpg" class="env-ico" alt="icon"/><br/>
-[Vienna](http://www.vienna-rss.com/) (free)
+[Vienna](https://www.vienna-rss.com/) (free)
 for reading RSS feeds, rarely.
 
 <img src="/images/2017/06/env-istat.jpg" class="env-ico" alt="icon"/><br/>
@@ -207,5 +207,5 @@ for P2P messaging.
 [Colloquy](http://colloquy.info/) for IRC messaging when I need it.
 
 <img src="/images/2017/06/env-pokerstars.jpg" class="env-ico" alt="icon"/><br/>
-[PokerStars](http://www.pokerstars.com/poker/download/?source=13953351) (not free at all)
+[PokerStars](https://www.pokerstars.com/poker/download/?source=13953351) (not free at all)
 for playing poker before falling asleep.

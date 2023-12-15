@@ -37,7 +37,7 @@ any formatting inside XML.
 
 The latest versions of Chrome, Safari, Firefox and IE all support
 this mechanism. When a browser retrieves an XML document from a server,
-and the document has an XSL stylesheet [associated](http://www.w3.org/TR/xml-stylesheet/)
+and the document has an XSL stylesheet [associated](https://www.w3.org/TR/xml-stylesheet/)
 with it---the browser transforms XML into HTML on-fly.
 
 <!--more-->
@@ -45,12 +45,12 @@ with it---the browser transforms XML into HTML on-fly.
 ## Working Example
 
 Let's review a simple Java web application that works
-this way. It is using [Takes Framework](http://www.takes.org)
+this way. It is using [Takes Framework](https://www.takes.org)
 that makes this mechanism possible. In the next post, I'll explain
 how ReXSL works. For now, though, let's focus on the idea of delivering
 bare data in XML and formatting it with an XSL stylesheet.
 
-Open [http://www.stateful.co](http://www.stateful.co)---it is
+Open [https://www.stateful.co](https://www.stateful.co)---it is
 a collection of stateful web primitives, explained in the
 [Atomic Counters at Stateful.co]({% pst 2014/may/2014-05-18-cloud-autoincrement-counters %}) article.
 
@@ -88,7 +88,7 @@ this document is more suitable for machine parsing instead of reading by a human
 The document contains data, which is important for its requester.
 It's up to the requester on how to render the data or to not render it at all.
 
-Its second line [associates](http://www.w3.org/TR/xml-stylesheet/)
+Its second line [associates](https://www.w3.org/TR/xml-stylesheet/)
 the document with the XSL stylesheet `/xsl/index.xsl` that
 is loaded by the browser separately:
 
@@ -111,8 +111,8 @@ For example:
 
 ```xml
 <xsl:stylesheet version="2.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns="http://www.w3.org/1999/xhtml">
+  xmlns:xsl="https://www.w3.org/1999/XSL/Transform"
+  xmlns="https://www.w3.org/1999/xhtml">
   <xsl:template match="page">
     <html>
       <body>
@@ -187,7 +187,7 @@ and transform XML into HTML on the server side. Thus, for modern browsers that s
 we will deliver XML and for all others---HTML.
 
 This is exactly how [ReXSL framework](https://github.com/yegor256/rexsl) works.
-Open [http://www.stateful.co](http://www.stateful.co) in Internet Explorer
+Open [https://www.stateful.co](https://www.stateful.co) in Internet Explorer
 and you will see an HTML document, not an XML document as is the case with Chrome.
 
 BTW, see how all this is implemented:

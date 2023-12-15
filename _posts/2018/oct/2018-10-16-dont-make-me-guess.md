@@ -22,7 +22,7 @@ jb_picture:
 It's Sunday. I'm at home, drinking tea and writing a new document for
 one of our future investors. One of my contacts in Telegram all of a sudden shoots me
 a message. I haven't talked to this guy for at least two months. He is
-a software developer. I know him because he works at [Zerocracy](http://www.zerocracy.com).
+a software developer. I know him because he works at [Zerocracy](https://www.zerocracy.com).
 His name is Paul.
 
 <!--more-->

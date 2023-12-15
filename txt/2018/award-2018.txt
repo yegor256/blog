@@ -543,7 +543,7 @@ Warning: Project MIGHT NOT to pass to the lines of code rule (9033 loc at the ti
 + Releases are made to maven central repo (example https://search.maven.org/search?q=g:com.github.seratch%20a:jslack)
 + CI being used with Travis
 + Project seems to be documented for a potential end-user of the library in the readme
-? There is javadoc documentation of the library (http://www.javadoc.io/doc/com.github.seratch/jslack/1.1.6)
+? There is javadoc documentation of the library (https://www.javadoc.io/doc/com.github.seratch/jslack/1.1.6)
   but it's not mentioned on the readme
 ? 9033 LOC < 10.000 lines of code
 - No info on readme in a quick-start manner of how to properly build the project

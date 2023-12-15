@@ -224,7 +224,7 @@ Founded 12-Apr-2019.
 Others (less stable or successful):
 [jpeek](https://github.com/yegor256/jpeek),
 [xcop](https://github.com/yegor256/xcop),
-[phpRack](http://www.phpRack.com/),
-[netbout](http://www.netbout.com),
-[thindeck](http://www.thindeck.com),
-[h12](http://www.h12.co).
+[phpRack](https://www.phpRack.com/),
+[netbout](https://www.netbout.com),
+[thindeck](https://www.thindeck.com),
+[h12](https://www.h12.co).

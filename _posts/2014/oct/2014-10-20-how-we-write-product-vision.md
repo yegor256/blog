@@ -54,7 +54,7 @@ product will conquer the world.
 By the way, don't confuse a Product Statement with a [Mission](https://en.wikipedia.org/wiki/Mission_statement),
 which is a much broader declaration of an overall goal of your business. You
 may have a hundred products but only a single mission. For example,
-Disney [says](http://www.lifehack.org/articles/work/20-sample-vision-statement-for-the-new-startup.html)
+Disney [says](https://www.lifehack.org/articles/work/20-sample-vision-statement-for-the-new-startup.html)
 that its mission is: "to make people happy." They've got
 hundreds of products that help them accomplish this mission. And each product
 has its own Product Statement.
@@ -62,7 +62,7 @@ has its own Product Statement.
 I find these articles helpful:
 [The Product Vision](https://www.scrumalliance.org/community/articles/2009/january/the-product-vision),
 [Agile Artifacts: The Product Vision Statement](https://platinumedge.com/blog/agile-artifacts-product-vision-statement),
-[The Art of Agile Development: Vision](http://www.jamesshore.com/Agile-Book/vision.html).
+[The Art of Agile Development: Vision](https://www.jamesshore.com/Agile-Book/vision.html).
 
 ## Stakeholders and Needs
 
@@ -92,7 +92,7 @@ stakeholders need?
 Your project will be considered successful if you **satisfy** all the needs
 of all your positive stakeholders and **neutralize** negative ones.
 
-This [Stakeholder Needs and Requirements](http://www.sebokwiki.org/wiki/Stakeholder_Needs_and_Requirements)
+This [Stakeholder Needs and Requirements](https://www.sebokwiki.org/wiki/Stakeholder_Needs_and_Requirements)
 article from SEBOK will be helpful.
 
 ## Actors and Features

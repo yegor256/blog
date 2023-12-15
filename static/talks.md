@@ -319,7 +319,7 @@ to meet Russian researchers, who challenge world-size problems;
 <span class="venue-rate green">B</span>
 <img src="https://i.ytimg.com/vi/9ynzUGZjKFk/mqdefault.jpg" class="past-talk" alt="JPoint 2019"/>
 **Software testing pitfalls**;
-[JPoint](https://jpoint.ru/en/talks/6wxij7hz0buprldhj02uwg/);
+[JPoint](https://www.youtube.com/watch?v=9ynzUGZjKFk);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 5 April;
 [slides](https://www.slideshare.net/YegorBugayenko/software-testing-pitfalls),
@@ -574,7 +574,7 @@ the audience was well prepared, the organizers werefriendly
 <span class="venue-rate green">B</span>
 <img src="https://i.ytimg.com/vi/cv23Z6xpwDw/mqdefault.jpg" class="past-talk" alt="JDK.IO 2017"/>
 **Java Annotations Are a Bad Idea**;
-[JDK IO 2017](http://www.jdk.io/);
+[JDK IO 2017](https://www.jdk.io/);
 <span class="city">Copenhagen</span>, <span class="country">Denmark</span>;
 19-20 June 2017;
 [video](https://youtu.be/cv23Z6xpwDw),
@@ -745,7 +745,7 @@ bigger ones that take a few days
 <span class="venue-rate green">B+</span>
 <img src="https://i.ytimg.com/vi/MSBf2RftCKo/mqdefault.jpg" class="past-talk" alt="DevOn Summit 2017"/>
 **A Few Best Practices for Time-Wasting on a Software Team**;
-[DevOn Summit 2017](http://www.devonsummit.com/speakers/);
+[DevOn Summit 2017](https://www.devonsummit.com/speakers/);
 <span class="city">Delft</span>, <span class="country">The Netherlands</span>;
 30 March 2017;
 [video](https://www.youtube.com/watch?v=MSBf2RftCKo).
@@ -849,7 +849,7 @@ everybody involved. I'm sure next year they will do it better
 BuildStuff Ukraine 2016;
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 21-22 November 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/who-is-a-software-architect),
+[slides](https://www.slideshare.net/YegorBugayenko/who-is-a-software-architect),
 [video](https://www.youtube.com/watch?v=R1lA7pN60xg).
 It was probably too big to be managed right. The Lithuanian part was a bit
 better, while the Ukrainian was not so great at all, maybe because I don't like
@@ -859,10 +859,10 @@ at my presentation&mdash;that was just sad. What I did like was the food
 
 <img src="https://i.ytimg.com/vi/wd-SA1HVmLg/mqdefault.jpg" class="past-talk" alt="BuildStuff 2016"/>
 **How Do You Know When Your Product Is Ready to be Shipped?**;
-[BuildStuff 2016](http://www.buildstuff.lt/);
+[BuildStuff 2016](https://www.buildstuff.lt/);
 <span class="city">Vilnius</span>, <span class="country">Lithuania</span>;
 18 November 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/how-do-you-know-when-your-product-is-ready-to-be-shipped),
+[slides](https://www.slideshare.net/YegorBugayenko/how-do-you-know-when-your-product-is-ready-to-be-shipped),
 [video](https://www.youtube.com/watch?v=wd-SA1HVmLg)
 {: .talk-event}
 
@@ -872,7 +872,7 @@ at my presentation&mdash;that was just sad. What I did like was the food
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 <span class="city">Tallinn</span>, <span class="country">Estonia</span>;
 17 November 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/seven-sins-of-a-software-project),
+[slides](https://www.slideshare.net/YegorBugayenko/seven-sins-of-a-software-project),
 [video](https://www.youtube.com/watch?v=hkXLOxZ6Fs4).
 The event was rather small (about 300 people), but well-prepared. At my presentation,
 the room was full
@@ -883,14 +883,14 @@ the room was full
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
 <span class="city">Tallinn</span>, <span class="country">Estonia</span>;
 16 November 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/keep-your-servers-in-github),
+[slides](https://www.slideshare.net/YegorBugayenko/keep-your-servers-in-github),
 [video](https://www.youtube.com/watch?v=mq4bsnKK0qs)
 {: .talk-event}
 
 <span class="venue-rate orange">C</span>
 <img src="https://i.ytimg.com/vi/_61CuGhyv-o/mqdefault.jpg" class="past-talk" alt="DevOpsPro Moscow 2016"/>
 **A Practical Example of a One-Click Release**;
-[DevOpsPro Moscow 2016](http://www.devopspro.ru/yegor-bugayenko/);
+[DevOpsPro Moscow 2016](https://www.devopspro.ru/yegor-bugayenko/);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 15 November 2016;
 [video](https://www.youtube.com/watch?v=_61CuGhyv-o).
@@ -925,10 +925,10 @@ they are doing. I will try to attend again next year
 <span class="venue-rate green">B-</span>
 <img src="https://i.ytimg.com/vi/03PXmPc7Q3g/mqdefault.jpg" class="past-talk" alt="Øredev 2016"/>
 **ORM Is an Offensive Anti-Pattern**;
-[Øredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko);
+[Øredev 2016](https://www.oredev.org/2016/speakers/yegor-bugayenko);
 Malmö, Sweden;
 9-10 November 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/orm-is-an-offensive-antipattern),
+[slides](https://www.slideshare.net/YegorBugayenko/orm-is-an-offensive-antipattern),
 [video](https://www.youtube.com/watch?v=03PXmPc7Q3g),
 [photos](https://www.facebook.com/yegor256/posts/10211092077247768).
 The event was ~~pretty~~ too big; I would say about 800 attendees, 60 speakers, six tracks, and three
@@ -943,10 +943,10 @@ to attend next year
 
 <img src="https://i.ytimg.com/vi/EDKbYVEInMU/mqdefault.jpg" class="past-talk" alt="Øredev 2016"/>
 **Built-In Fake Objects**;
-[Øredev 2016](http://www.oredev.org/2016/speakers/yegor-bugayenko);
+[Øredev 2016](https://www.oredev.org/2016/speakers/yegor-bugayenko);
 Malmö, Sweden;
 9-10 November 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/builtin-fake-objects),
+[slides](https://www.slideshare.net/YegorBugayenko/builtin-fake-objects),
 [video](https://www.youtube.com/watch?v=EDKbYVEInMU)
 {: .talk-event}
 
@@ -956,7 +956,7 @@ Malmö, Sweden;
 [JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 14 October 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/practical-example-of-aop-with-aspectj),
+[slides](https://www.slideshare.net/YegorBugayenko/practical-example-of-aop-with-aspectj),
 [video](https://www.youtube.com/watch?v=4SRoLYxvIQ8),
 [photos](https://www.facebook.com/yegor256/posts/10210826984460614).
 The venue was great, the size average (about 500 people), and organizers were
@@ -993,10 +993,10 @@ the money they saved on better food
 
 <img src="https://i.ytimg.com/vi/pynZF10U880/mqdefault.jpg" class="past-talk" alt="Object Thinking Meetup #1"/>
 **How Anemic Objects Kill OOP**;
-[Object Thinking](http://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (Meetup #1);
+[Object Thinking](https://www.meetup.com/Object-Thinking-in-Silicon-Valley/events/228145728/) (Meetup #1);
 <span class="city">Palo Alto, CA</span>, <span class="country">USA</span>;
 12 July 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/how-anemic-objects-kill-oop),
+[slides](https://www.slideshare.net/YegorBugayenko/how-anemic-objects-kill-oop),
 [video](https://www.youtube.com/watch?v=pynZF10U880)
 {: .talk-event}
 
@@ -1006,7 +1006,7 @@ the money they saved on better food
 Salt Lake City DevOpsDays;
 <span class="city">Salt Lake City, UT</span>, <span class="country">USA</span>;
 15 June 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/eight-maturity-levels-of-continuous-integration),
+[slides](https://www.slideshare.net/YegorBugayenko/eight-maturity-levels-of-continuous-integration),
 [video](https://www.youtube.com/watch?v=3dJP_LtUGgg).
 There were about 250 people with just one track and a pretty good
 organization, even though the budget was rather low. I liked the event and
@@ -1020,7 +1020,7 @@ the audience. However, the venue was not comfortable at all
 [JavaDay 2016](http://javaday.by/);
 <span class="city">Minsk</span>, <span class="country">Belarus</span>;
 11 June 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/java-vs-oop),
+[slides](https://www.slideshare.net/YegorBugayenko/java-vs-oop),
 [photos](https://www.facebook.com/javadayby/photos/?tab=album&amp;album_id=1060019404063727),
 [video](https://www.youtube.com/watch?v=6hOBfjJ2bpw).
 It was a surprisingly well-organized one-day event with more than 300 attendees,
@@ -1037,7 +1037,7 @@ venue was not really comfortable, and the content was mostly outdated
 [GeekOUT 2016](http://2016.geekout.ee/speakers/yegor-bugayenko/);
 <span class="city">Tallinn</span>, <span class="country">Estonia</span>;
 9 June 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/chat-bot-architecture),
+[slides](https://www.slideshare.net/YegorBugayenko/chat-bot-architecture),
 [photos](https://www.facebook.com/yegor256/posts/10209692585621352),
 [video](https://www.youtube.com/watch?v=7yTIWFZrXpg),
 [official video](https://vimeo.com/album/3998953/video/170745388).
@@ -1055,7 +1055,7 @@ again
 NDC Oslo;
 <span class="city">Oslo</span>, <span class="country">Norway</span>;
 8 June 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/problems-with-chat-bots),
+[slides](https://www.slideshare.net/YegorBugayenko/problems-with-chat-bots),
 [video](https://www.youtube.com/watch?v=vU_x6oK437I).
 It was a very big event with, I'd guess, 1,500 visitors and nine (!) tracks.
 What was good was they paid for all travel expenses, and the venue was
@@ -1070,7 +1070,7 @@ sponsor booths. Besides that, I never even met the organizers
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
 <span class="city">Dnipro</span>, <span class="country">Ukraine</span>;
 3 June 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/oop-is-dead-not-yet),
+[slides](https://www.slideshare.net/YegorBugayenko/oop-is-dead-not-yet),
 [video](https://www.youtube.com/watch?v=APCUGQlkO3U).
 There were about 400 people, two or three tracks, and a terrible venue. Seriously,
 the place was a total disaster, even though it's a newly built conference
@@ -1086,7 +1086,7 @@ with love, but the venue and speakers, unfortunately, didn't play along
 [ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
 <span class="city">Dnipro</span>, <span class="country">Ukraine</span>;
 2 June 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/who-manages-who),
+[slides](https://www.slideshare.net/YegorBugayenko/who-manages-who),
 [video](https://www.youtube.com/watch?v=sZoJ3gO4PSo)
 {: .talk-event}
 
@@ -1134,7 +1134,7 @@ and forgot about content. Aside from that, it's definitely a place to see again
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 21 May 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/orm-is-a-perfect-antipattern),
+[slides](https://www.slideshare.net/YegorBugayenko/orm-is-a-perfect-antipattern),
 [photos](https://www.facebook.com/yegor256/posts/10209552490959073),
 [video](https://www.youtube.com/watch?v=63tS3HNmhiE).
 The venue, the logistics, the food, the organization, the size (more than 1,000 people),
@@ -1149,7 +1149,7 @@ very positive, and I definitely will try to attend it next year
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 21 May 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/how-immutability-helps-in-oop),
+[slides](https://www.slideshare.net/YegorBugayenko/how-immutability-helps-in-oop),
 [photos](https://www.facebook.com/yegor256/posts/10209552490959073),
 [video](https://www.youtube.com/watch?v=EnhRgXrHCC4)
 {: .talk-event}
@@ -1160,7 +1160,7 @@ very positive, and I definitely will try to attend it next year
 [DEVit 2016](http://devitconf.org/);
 <span class="city">Thessaloniki</span>, <span class="country">Greece</span>;
 20 May 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/need-it-robust-make-it-fragile),
+[slides](https://www.slideshare.net/YegorBugayenko/need-it-robust-make-it-fragile),
 [photos](https://www.facebook.com/yegor256/posts/10209535256568224),
 [video](https://www.youtube.com/watch?v=nCGBgI1MNwE).
 Surprisingly, the conference was very good. Just two tracks for about 400
@@ -1176,7 +1176,7 @@ of focus on a specific subject. Aside from that, it was a positive experience
 [I T.A.K.E. Unconference 2016](http://itakeunconf.com/);
 <span class="city">Bucharest</span>, <span class="country">Romania</span>;
 19 May 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/microservices-as-chat-bots),
+[slides](https://www.slideshare.net/YegorBugayenko/microservices-as-chat-bots),
 [photos](https://www.facebook.com/yegor256/posts/10209525009272048),
 [video](https://www.youtube.com/watch?v=vOMqDcSXnT0).
 It was a rather small conference (around 150 people) without any specific
@@ -1187,10 +1187,10 @@ and my talk was delayed for more than 20 minutes
 
 <img src="https://i.ytimg.com/vi/p7m7_iiqaHI/mqdefault.jpg" class="past-talk" alt="Bucharest JUG"/>
 **How Much Immutability Is Enough?**;
-[Bucharest JUG Meetup](http://www.meetup.com/Bucharest-Java-User-Group/events/228944158/);
+[Bucharest JUG Meetup](https://www.meetup.com/Bucharest-Java-User-Group/events/228944158/);
 <span class="city">Bucharest</span>, <span class="country">Romania</span>;
 18 May 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/how-much-immutability-is-enough),
+[slides](https://www.slideshare.net/YegorBugayenko/how-much-immutability-is-enough),
 [photos](https://www.facebook.com/yegor256/posts/10209525009272048),
 [video](https://www.youtube.com/watch?v=p7m7_iiqaHI)
 {: .talk-event}
@@ -1202,7 +1202,7 @@ and my talk was delayed for more than 20 minutes
 <span class="city">Kraków</span>, <span class="country">Poland</span>;
 13 May 2016;
 [video](https://vimeo.com/177215750),
-[slides](http://www.slideshare.net/YegorBugayenko/fail-fast-into-users-face),
+[slides](https://www.slideshare.net/YegorBugayenko/fail-fast-into-users-face),
 [photos](https://www.facebook.com/yegor256/posts/10209494716834756).
 Even though it's a big (more than 1,000 people) and popular European conference about Java, my
 overall impression was not really positive. The venue was not
@@ -1221,7 +1221,7 @@ of room for improvement
 [Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/);
 <span class="city">Tallinn</span>, <span class="country">Estonia</span>;
 10 May 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/preflight-build-pitfalls),
+[slides](https://www.slideshare.net/YegorBugayenko/preflight-build-pitfalls),
 [photos](https://www.facebook.com/yegor256/posts/10209460572181161),
 [video](https://www.youtube.com/watch?v=Ht0JI41kA4I).
 The conference was rather small (around 150 people), but well-organized. What
@@ -1237,7 +1237,7 @@ and become better; the potential is definitely there
 [New Trends in Project Management](http://ntpm.pl/);
 <span class="city">Gdynia</span>, <span class="country">Poland</span>;
 26 April 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/meetings-or-discipline),
+[slides](https://www.slideshare.net/YegorBugayenko/meetings-or-discipline),
 [photos](https://www.facebook.com/yegor256/posts/10209365963416001),
 [video](https://www.youtube.com/watch?v=pt9uHp35fwM).
 It was an interesting event, mostly because the audience was full
@@ -1268,7 +1268,7 @@ deliver. Aside from that, the impression was positive
 [JPoint 2016](http://javapoint.ru/en/);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 22-24 April 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/orm-is-offensive),
+[slides](https://www.slideshare.net/YegorBugayenko/orm-is-offensive),
 [photos](https://www.facebook.com/yegor256/posts/10209338227802628),
 [video](https://www.youtube.com/watch?v=aER4uwyFbqQ).
 It was a very big (more than 1,200 people) and a very well-organized
@@ -1286,7 +1286,7 @@ was perfect
 [Student Day](http://students.javapoint.ru/talks/bugaenko/)
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 22-24 April 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/object-oriented-lies),
+[slides](https://www.slideshare.net/YegorBugayenko/object-oriented-lies),
 [photos](https://www.facebook.com/yegor256/posts/10209338227802628),
 [video](https://www.youtube.com/watch?v=F4N25kZ2zQU).
 It was one of the best conferences I've attended so far, very well-organized and
@@ -1298,7 +1298,7 @@ corrections were received. I would suggest inviting new speakers&mdash;it seems 
 <span class="venue-rate green">B-</span>
 <img src="https://i.ytimg.com/vi/gL4XwP-EBOg/mqdefault.jpg" class="past-talk" alt="WEBIT.Festival 2016"/>
 **Continuous Integration May Have Negative Effects**;
-[WEBIT.Festival 2016](http://www.webit.bg/speaker.php?id=2128);
+[WEBIT.Festival 2016](https://www.webit.bg/speaker.php?id=2128);
 <span class="city">Sophia</span>, <span class="country">Bulgaria</span>;
 20 April 2016;
 [photos](https://www.facebook.com/yegor256/posts/10209310350105703),
@@ -1316,7 +1316,7 @@ why my presentation was accepted there
 NextBuild 2016<br/>
 <span class="city">Eindhoven</span>, <span class="country">The Netherlands</span>;
 16 April 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/blame-the-project),
+[slides](https://www.slideshare.net/YegorBugayenko/blame-the-project),
 [photos](https://www.facebook.com/yegor256/posts/10209283233547806),
 [video](https://www.youtube.com/watch?v=b6r2W3P9vgY).
 The event was free to attend but very well-organized. The location was
@@ -1332,7 +1332,7 @@ that the same happened to other speakers
 [AgileEE 2016](http://Kyiv2016.agileee.org/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 9 April 2016
-[slides](http://www.slideshare.net/YegorBugayenko/meetings-are-a-threat-to-code-quality),
+[slides](https://www.slideshare.net/YegorBugayenko/meetings-are-a-threat-to-code-quality),
 [photos](https://www.facebook.com/yegor256/posts/10209222357985955);
 [video](https://www.youtube.com/watch?v=xbovkm0tTn0).
 The organization, food, location, audience, welcoming, and departing were very good, but
@@ -1346,7 +1346,7 @@ Aside from that, everything else was good, and I liked being there
 [Outsource People 2016](http://outsource-people.com/en);
 <span class="city">Minsk</span>, <span class="country">Belarus</span>;
 8 April 2016
-[slides](http://www.slideshare.net/YegorBugayenko/software-outsourcing-10-years-ahead),
+[slides](https://www.slideshare.net/YegorBugayenko/software-outsourcing-10-years-ahead),
 [photos](https://www.facebook.com/yegor256/posts/10209219903204587),
 [video](https://www.youtube.com/watch?v=9j5pq71BS5U).
 The conference was rather small but well-focused. The audience was actively
@@ -1361,7 +1361,7 @@ were not reimbursed. Also, the content was not really well-prepared or monitored
 [Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/);
 <span class="city">Olomouc</span>, <span class="country">Czech Republic</span>;
 5 April 2016
-[slides](http://www.slideshare.net/YegorBugayenko/meetings-help-us-and-kill-our-projects),
+[slides](https://www.slideshare.net/YegorBugayenko/meetings-help-us-and-kill-our-projects),
 [photos](https://www.facebook.com/yegor256/posts/10209204748545730),
 [video](https://www.youtube.com/watch?v=dE0_j4Kk6jo).
 There were more than 250 people and just two main tracks&mdash;a good setup.
@@ -1373,10 +1373,10 @@ were rather boring and not well-prepared. Aside from that, I liked it
 <span class="venue-rate orange">C</span>
 <img src="https://i.ytimg.com/vi/LB_YLWhGrco/mqdefault.jpg" class="past-talk" alt="SEDC 2016"/>
 **Meetings and Motivation, Friends or Enemies?**;
-[SEDC 2016](http://www.sedcconference.org/);
+[SEDC 2016](https://www.sedcconference.org/);
 <span class="city">Washington, D.C.</span>, <span class="country">USA</span>;
 31 March 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/meetingsfree-programming),
+[slides](https://www.slideshare.net/YegorBugayenko/meetingsfree-programming),
 [photos](https://www.facebook.com/yegor256/posts/10209166064338649),
 [video](https://www.youtube.com/watch?v=LB_YLWhGrco).
 The place was good, the food was very good, the organization was not bad, but
@@ -1391,7 +1391,7 @@ presentation. It's not really a conference but more like a meetup
 [CascadiaIT](http://casitconf.org/casitconf16/talks/);
 <span class="city">Seattle, WA</span>, <span class="country">USA</span>;
 12 March 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/microservices-as-chat-bots),
+[slides](https://www.slideshare.net/YegorBugayenko/microservices-as-chat-bots),
 [photos](https://www.facebook.com/yegor256/posts/10208900274414067).
 It was a very small conference, with barely 10 (!) people in the room. The
 talks were separated into six rooms, with no specific focus on subjects. Moreover,
@@ -1407,7 +1407,7 @@ a time-wasting event for me
 [Kyiv DevOps Day](https://www.facebook.com/events/1492540384386929/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 27 February 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/need-robust-software-make-it-fragile),
+[slides](https://www.slideshare.net/YegorBugayenko/need-robust-software-make-it-fragile),
 [photos](https://www.facebook.com/yegor256/posts/10208769445463425),
 [video](https://www.youtube.com/watch?v=QMcDa2eyRBY).
 Looks like these DataRobot (the sponsor of the event) guys
@@ -1423,10 +1423,10 @@ is just trash. To be honest, the previous event at Fedoriv Hub was much better
 <span class="venue-rate red">F</span>
 <img src="https://i.ytimg.com/vi/mHCwlZSlZeU/mqdefault.jpg" class="past-talk" alt="DeveloperWeek 2015"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**;
-[DeveloperWeek 2016](http://www.developerweek.com/);
+[DeveloperWeek 2016](https://www.developerweek.com/);
 <span class="city">San Francisco, CA</span>, <span class="country">USA</span>;
 17 February 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/chat-bots-are-the-new-ui),
+[slides](https://www.slideshare.net/YegorBugayenko/chat-bots-are-the-new-ui),
 [photos](https://www.facebook.com/yegor256/posts/10208695807182514),
 [video](https://www.youtube.com/watch?v=mHCwlZSlZeU).
 This was a shame for the entire industry&mdash;a money-making event with
@@ -1441,7 +1441,7 @@ tickets
 [DevNexus 2016](https://www.devnexus.com/s/speakers#Yegor_Bugayenko);
 <span class="city">Altanta, GA</span>, <span class="country">USA</span>;
 16 February 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/chat-bots-vs-ui),
+[slides](https://www.slideshare.net/YegorBugayenko/chat-bots-vs-ui),
 [photos](https://www.facebook.com/yegor256/posts/10208707358871299),
 [video](https://www.youtube.com/watch?v=Xj226o2xI9Y).
 This was a huge event with, I would say, more than 2,000 participants and almost
@@ -1459,7 +1459,7 @@ on tickets. It was a waste of time and money
 [The Entrepreneurs' Club](https://www.facebook.com/events/166135913758018/);
 <span class="city">Palo Alto, CA</span>, <span class="country">USA</span>;
 11 February 2016;
-[slides](http://www.slideshare.net/YegorBugayenko/xdsd-management-without-meetings),
+[slides](https://www.slideshare.net/YegorBugayenko/xdsd-management-without-meetings),
 [photos](https://www.facebook.com/yegor256/posts/10208653076874283),
 [video](https://www.youtube.com/watch?v=qRZYJGYdrwk).
 There were about 50 people in the room, most of whom were rather
@@ -1476,7 +1476,7 @@ I received a number of leads from this event
 [DevOpsDays Warsaw 2015](http://devopsdays.pl/);
 <span class="city">Warsaw</span>, <span class="country">Poland</span>;
 24-25 November 2015;
-[slides](http://www.slideshare.net/YegorBugayenko/continuous-integration-is-dead),
+[slides](https://www.slideshare.net/YegorBugayenko/continuous-integration-is-dead),
 [photos](https://www.facebook.com/yegor256/posts/10208114809057924),
 [video](https://www.youtube.com/watch?v=6SfIc5ff-8U).
 The event was rather big, with more than 300 people in the room. However, the audience
@@ -1492,7 +1492,7 @@ bad&mdash;an old Soviet-time hotel
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 23 November 2015;
 [photos](https://www.facebook.com/yegor256/posts/10208100666144360),
-[slides](http://www.slideshare.net/YegorBugayenko/how-do-you-talk-to-your-microservice),
+[slides](https://www.slideshare.net/YegorBugayenko/how-do-you-talk-to-your-microservice),
 [video](https://www.youtube.com/watch?v=jUil-aTImgU).
 The place was a total trash pit (small rooms in NSC Olimpiyskiy) with bad lighting,
 bad sound, and a lack of proper ventilation. There was no preparation of talks
@@ -1516,7 +1516,7 @@ all the attempts of organizers to make it fun
 <span class="venue-rate orange">A</span>
 <img src="https://i.ytimg.com/vi/2a2nWELIk-Y/mqdefault.jpg" class="past-talk" alt="Kyiv DevOps 2015"/>
 **Continuous Integration Is Dead**;
-[Kyiv DevOps Meetup](http://www.meetup.com/Kyiv-DevOps/events/224967053/);
+[Kyiv DevOps Meetup](https://www.meetup.com/Kyiv-DevOps/events/224967053/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 19 September 2015;
 [photos](https://www.facebook.com/yegor256/posts/10207965398482753),
@@ -1526,7 +1526,7 @@ all the attempts of organizers to make it fun
 <span class="venue-rate orange">B</span>
 <img src="https://i.ytimg.com/vi/3IXk5yEJMIs/mqdefault.jpg" class="past-talk" alt="San Francisco DevOps 2015"/>
 **CI Is DEAD. Or Is It?!**;
-[San Francisco DevOps Meetup](http://www.meetup.com/San-Francisco-DevOps/events/221628916/);
+[San Francisco DevOps Meetup](https://www.meetup.com/San-Francisco-DevOps/events/221628916/);
 <span class="city">San Fancisco, CA</span>, <span class="country">USA</span>;
 23 April 2015;
 [video](https://www.youtube.com/watch?v=3IXk5yEJMIs)

@@ -27,7 +27,7 @@ is significantly higher than a bug in source code. I totally agree.
 <!--more-->
 
 In XDSD projects we specify requirements using
-[Requs](http://www.requs.org),
+[Requs](https://www.requs.org),
 a [controlled natural language](http://en.wikipedia.org/wiki/Controlled_natural_language)
 that sounds like English, while at the same time is parseable by computers.
 A simple requirements document in Requs may look similar to:
@@ -41,7 +41,7 @@ UC1 where Employee gets raise: "TBD."
 This Software Requirements Specification (SRS) defines two types (`Department`
 and `Employee`) and one method `UC` (aka "use case").
 
-Requs syntax is explained [here](http://www.requs.org/syntax.html).
+Requs syntax is explained [here](https://www.requs.org/syntax.html).
 
 The main and only goal of requirements engineering in any XDSD project is to
 create a complete and non-ambiguous SRS document. The person who performs this
@@ -139,7 +139,7 @@ document using the same method our
 server uses to compile them.
 
 Before I can compile, though, I need to install
-[JDK7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+[JDK7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 and [Maven](http://maven.apache.org/download.cgi).
 
 Afterwards, I make the following command line call in the project directory:

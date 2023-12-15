@@ -74,7 +74,7 @@ shares with Microsoft name of them. Microsoft Corporation has
 been printing extra shares [nine times](https://www.microsoft.com/en-us/Investor/FAQ.aspx) after their IPO in 1986.
 When Bill Gates founded the company in April 1975, he had 500K shares, which were equal
 to 50% (I'm guessing, do you know exact numbers?).
-Now he holds [nearly 223M](http://www.investopedia.com/articles/investing/122215/top-4-microsoft-shareholders.asp),
+Now he holds [nearly 223M](https://www.investopedia.com/articles/investing/122215/top-4-microsoft-shareholders.asp),
 which is just 2.8% of the total.
 
 Now, the most annoying part. In reality, shares are not just pieces of paper
@@ -217,7 +217,7 @@ day will come faster than you expect.
 Try not to give convertible notes with a maturity date to anyone.
 
 [SAFE](https://blog.ycombinator.com/announcing-the-safe-a-replacement-for-convertible-notes)
-is a form of convertible notes, introduced by [YC](http://www.ycombinator.com),
+is a form of convertible notes, introduced by [YC](https://www.ycombinator.com),
 which doesn't have a maturity date at all. This technically means that
 you don't have to pay them anything back. Well, there is only one situation
 when you have to pay---in case your startup dies. In that case, you will

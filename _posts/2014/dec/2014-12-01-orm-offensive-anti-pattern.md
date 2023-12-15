@@ -52,8 +52,8 @@ accessing a relational database from an object-oriented language
 in almost every language; for example:
 [Hibernate](http://hibernate.org/orm/) for Java,
 [ActiveRecord]({% pst 2016/jul/2016-07-26-active-record %}) for Ruby on Rails,
-[Doctrine](http://www.doctrine-project.org/) for PHP, and
-[SQLAlchemy](http://www.sqlalchemy.org/) for Python.
+[Doctrine](https://www.doctrine-project.org/) for PHP, and
+[SQLAlchemy](https://www.sqlalchemy.org/) for Python.
 In Java, the ORM design is even standardized as [JPA](https://en.wikipedia.org/wiki/Java_Persistence_API).
 
 First, let's see how ORM works, by example. Let's use Java, PostgreSQL, and Hibernate.
@@ -315,7 +315,7 @@ see how we can implement these two classes.
 {% youtube 03PXmPc7Q3g %}
 
 I'm going to use [jcabi-jdbc](http://jdbc.jcabi.com) as a JDBC wrapper,
-but you can use something else like [jOOQ](http://www.jooq.org),
+but you can use something else like [jOOQ](https://www.jooq.org),
 or just plain JDBC if you like. It doesn't
 really matter. What matters is that your database interactions are hidden
 inside objects. Let's start with `Posts` and implement it in class

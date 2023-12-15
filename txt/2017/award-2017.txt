@@ -428,7 +428,7 @@ These are the example Classes where I mostly found these issues. There are more,
 
 About 25K lines of python code:
 + Github issues
-+ Really extensive contribution guide (http://www.ulakbus.org/wiki/wiki.html)
++ Really extensive contribution guide (https://www.ulakbus.org/wiki/wiki.html)
 + Code extensively documented, in Turkish though
 + Short release cycle
 + Both low-level and high-level tests (with selenium)

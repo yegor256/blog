@@ -91,7 +91,7 @@ will assure you that customer satisfaction is more important than money.
 However, I'm suggesting you be strong enough to face the reality---it's all _lies_.
 
 The majority of software outsourcing projects fail.
-The vast majority (see the latest [CHAOS report](http://www.csus.edu/indiv/v/velianitis/161/ChaosReport.pdf)).
+The vast majority (see the latest [CHAOS report](https://www.csus.edu/indiv/v/velianitis/161/ChaosReport.pdf)).
 Software developers realize this better than you,
 mostly because they see how it happens every day.
 And your project is not an exception. Thus, let's forget about these
@@ -226,7 +226,7 @@ In my experience, this unpredictability and unreliability of a software
 outsourcing team is in most cases caused by a project sponsor himself or herself.
 This happens when you don't listen to them or they are afraid to tell
 you the _truth_, which is usually the same thing. Some call this
-"[fear-driven development](http://www.hanselman.com/blog/FearDrivenDevelopmentFDD.aspx)."
+"[fear-driven development](https://www.hanselman.com/blog/FearDrivenDevelopmentFDD.aspx)."
 The team is afraid of you, and in order to
 keep you on board as a paying customer, has to lie to you.
 

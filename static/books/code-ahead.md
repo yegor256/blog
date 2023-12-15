@@ -74,7 +74,7 @@ There will be about 220 pages. I will select 10 reviewers in the next two
 weeks.
 
 Dec 27, 2017:
-I purchased the domain [codeahead.org](http://www.codeahead.org).
+I purchased the domain [codeahead.org](https://www.codeahead.org).
 
 Mar 7, 2017:
 I wrote a two-page intro to the book. It will be a **novel**. A novel about

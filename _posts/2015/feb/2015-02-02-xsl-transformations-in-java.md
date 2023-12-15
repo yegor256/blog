@@ -17,7 +17,7 @@ keywords:
 
 {% badge https://www.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
 
-[XSL transformation](http://www.w3.org/TR/xslt20/)
+[XSL transformation](https://www.w3.org/TR/xslt20/)
 (XSLT) is a powerful mechanism for converting one
 XML document into another. However, in Java, XML manipulations
 are rather verbose and complex. Even for a simple XSL transformation,
@@ -81,7 +81,7 @@ That's it. Now let's see what's there in that `status.xsl` file
 (this is just a skeleton of it; the full version is [here](https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl)):
 
 ```xml
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:xsl="https://www.w3.org/1999/XSL/Transform"
   version="2.0">
   <xsl:output method="text"/>
   <xsl:template match="/talk">

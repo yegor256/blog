@@ -16,7 +16,7 @@ keywords:
   - xpath
 ---
 
-{% badge http://img.xembly.org/logo-256x256.png 64 http://www.xembly.org %}
+{% badge http://img.xembly.org/logo-256x256.png 64 https://www.xembly.org %}
 
 I use XML in almost every one of my projects. And, despite all the fuss about
 JSON/YAML, I honestly
@@ -26,15 +26,15 @@ invented. Also, I believe that the beauty of XML reveals itself when used in
 combination with related technologies.
 
 For example, you can expose your data in XML and render it for the end-user
-using [XSL stylesheet](http://www.w3.org/Style/XSL/).
+using [XSL stylesheet](https://www.w3.org/Style/XSL/).
 
 <!--more-->
 
 Another example would be when you validate the same data, before rendering, to
 ensure that the structure is correct. You can do this with the
-[XSD](http://www.w3.org/TR/xmlschema11-1/) schema. Alternatively, you can pick
+[XSD](https://www.w3.org/TR/xmlschema11-1/) schema. Alternatively, you can pick
 specific data elements from the entire document by using
-[XPath](http://www.w3.org/TR/xpath/) queries.
+[XPath](https://www.w3.org/TR/xpath/) queries.
 
 Essentially, these three technologies, XSL, XSD schema and XPath, are what makes
 XML so powerful.
@@ -74,7 +74,7 @@ All of these methods have their own drawbacks. However, all of them have one par
 Simply put, XML lacks a tool for primitive data manipulations within
 a document. Perhaps, it is this shortcoming that makes XML unpopular with some.
 
-Anyway, here is a tool I created a few month ago: [Xembly](http://www.xembly.org).
+Anyway, here is a tool I created a few month ago: [Xembly](https://www.xembly.org).
 It is an imperative language with a few simple directives and resembles [Assembly](http://en.wikipedia.org/wiki/Assembly_language)
 in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions or variables - just a sequence of directives with arguments.
 

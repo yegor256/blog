@@ -22,8 +22,8 @@ jb_picture:
 Which line do you like more, the first or the second:
 
 ```java
-new HTTP("http://www.google.com").read();
-new HTTP().read("http://www.google.com");
+new HTTP("https://www.google.com").read();
+new HTTP().read("https://www.google.com");
 ```
 
 What is the difference? The first class `HTTP` encapsulates a URL,

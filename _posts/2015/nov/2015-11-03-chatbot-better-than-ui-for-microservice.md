@@ -272,7 +272,7 @@ to some extent, this approach is feasible, I believe.
 
 I didn't go too far with this idea, but something was done. We have
 a messaging platform that allows multiple chatbots to communicate
-with users. It's called [Netbout](http://www.netbout.com). It's a very
+with users. It's called [Netbout](https://www.netbout.com). It's a very
 primitive web system with isolated discussions. Simply put, anyone
 can create a new discussion, invite a few friends, and post messages there.
 Both users and chatbots can do that.
@@ -283,7 +283,7 @@ the candidate clicks the "Submit" button, a new discussion starts, and the first
 chatbot decides who should [interview]({% pst 2016/mar/2016-03-01-how-we-interview-programmers %})
 that person. The decision is made
 according to the skills listed in the form. The chatbot invites one of our
-[best programmers](http://www.teamed.io/#check-out-ourbest-developers)
+[best programmers](https://www.teamed.io/#check-out-ourbest-developers)
 to conduct the interview. When the interview is done, another chatbot explains to
 the candidate what the next steps are, registers him or her in our
 database, and starts to show the progress of work.

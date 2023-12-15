@@ -292,7 +292,7 @@ was based on this blog post:
 <a href="https://www.youtube.com/watch?v=PVvLQGnyDrQ"><img src="https://i.ytimg.com/vi/PVvLQGnyDrQ/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 January 11, 2017<br/>
 &#35;20: **Gradients of Immutability**<br/>
-We discussed what immutability really was, with a few example in Java and [EO](http://www.eolang.org)
+We discussed what immutability really was, with a few example in Java and [EO](https://www.eolang.org)
 (new language we're developing now). The discussion was based on this blog post:
 [_Gradients of Immutability_]({% pst 2016/sep/2016-09-07-gradients-of-immutability %}).
 
@@ -363,7 +363,7 @@ and
 March 2, 2016<br/>
 &#35;12: **Takes, Java Web Framework, Intro**<br/>
 This was be a very practical Java coding webinar. We created
-[jare.io](http://www.jare.io), a web system, using Takes Framework, immutable objects
+[jare.io](https://www.jare.io), a web system, using Takes Framework, immutable objects
 and the best practices of pure fanatical object-oriented programming.
 We used this blog post as a guidance:
 [_Java Web App Architecture In Takes Framework_]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})

@@ -119,7 +119,7 @@ which depends heavily on Reflection and
 
 In other words, fluent interfaces mean large classes or some ugly workarounds.
 I mentioned this problem earlier, when I [wrote]({% pst 2017/oct/2017-10-10-streams-vs-decorators %}) about
-[Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
+[Streams API](https://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
 and the interface
 [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html),
 which is perfectly fluent. There are 43 methods!

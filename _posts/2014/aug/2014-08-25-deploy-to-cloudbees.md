@@ -17,7 +17,7 @@ keywords:
   - continuous delivery cloudbees
 ---
 
-When I deploy a new version of [stateful.co](http://www.stateful.co),
+When I deploy a new version of [stateful.co](https://www.stateful.co),
 a Java web application, to CloudBees, it takes 30 seconds of my time.
 Maybe even less. Recently, I deployed version 1.6.5. You can see
 how it all happened, in [GitHub issue #6](https://github.com/sttc/stateful/issues/6):
@@ -36,7 +36,7 @@ takes just a few seconds of your time.
 
 <p style="border:1px solid red;padding:1em;color:red;">
 Since CloudBees is
-<a href="http://www.cloudbees.com/press/cloudbees-becomes-enterprise-jenkins-company">shutting down its PaaS service</a>
+<a href="https://www.cloudbees.com/press/cloudbees-becomes-enterprise-jenkins-company">shutting down its PaaS service</a>
 by the end of December, 2014,
 this article will have no sense after that.
 </p>

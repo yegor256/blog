@@ -38,7 +38,7 @@ Make sure [the contract]({% pst 2015/may/2015-05-04-how-to-protect-business-idea
 you have with the [software outsourcing team]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
 includes something like this: "Parties shall deem all deliverables created by
 the developer as _works made for hire_ as is defined under the
-[Copyright Law of the United States](http://www.copyright.gov/title17/)."
+[Copyright Law of the United States](https://www.copyright.gov/title17/)."
 This is the shortest and easiest definition of "whatever you create
 for me is mine." Put this into the contract and the outsourcing company
 won't be able to claim that the software it created belongs to it,

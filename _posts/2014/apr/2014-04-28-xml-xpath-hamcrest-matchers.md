@@ -93,7 +93,7 @@ The following example works right out-of-the-box---without any extra configurati
 
 ```java
 MatcherAssert.assertThat(
-  new URL("http://www.google.com").getContent(),
+  new URL("https://www.google.com").getContent(),
   XhtmlMatchers.hasXPath("//xhtml:body")
 );
 ```

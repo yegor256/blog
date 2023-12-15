@@ -18,7 +18,7 @@ social:
   - hackernews: https://news.ycombinator.com/item?id=11394981
 ---
 
-{% badge http://www.jare.io/images/logo.svg 92 http://www.jare.io %}
+{% badge https://www.jare.io/images/logo.svg 92 https://www.jare.io %}
 
 CDN stands for a Content Delivery Network. Technically, it is a bunch
 of servers located in different countries and continents. You give them
@@ -27,7 +27,7 @@ server depending on who is trying to resolve it. As a result, the
 file is always close to the end-user and your website loads much faster
 than without a CDN. Sounds good, but all CDN providers want money
 for their service and usually a rather complex setup and registration
-procedure. My pet project [jare.io](http://www.jare.io) is a free
+procedure. My pet project [jare.io](https://www.jare.io) is a free
 CDN that is simple to configure. It utilizes AWS CloudFront resources.
 
 <!--more-->
@@ -41,14 +41,14 @@ this HTML:
 ```
 
 I want this `logo.svg` to be delivered via a CDN. There are two steps.
-First, I register my domain at [jare.io](http://www.jare.io):
+First, I register my domain at [jare.io](https://www.jare.io):
 
 {% figure /images/2016/03/jare-1.png 600 %}
 
 Second, I change my HTML:
 
 ```html
-<img src="//cf.jare.io/?u=http://www.teamed.io/images/logo.svg"/>
+<img src="//cf.jare.io/?u=https://www.teamed.io/images/logo.svg"/>
 ```
 
 That's it.
@@ -66,7 +66,7 @@ this solution works. First, let's discuss what CDN is and how it works.
 ## URL, DNS, TCP, HTTP
 
 When your browser wants to load an image, it has a [URL](https://en.wikipedia.org/wiki/Uniform_Resource_Locator)
-for that, like in the example above. This is the URL: `http://www.teamed.io/image/logo.svg`.
+for that, like in the example above. This is the URL: `https://www.teamed.io/image/logo.svg`.
 There are three important parts in this address. First is `http`, the
 [protocol](https://en.wikipedia.org/wiki/Communications_protocol).
 Second is `www.teamed.io`, the [host](https://en.wikipedia.org/wiki/Host_%28network%29) name,
@@ -132,7 +132,7 @@ that is hosted in Prague, Czech Republic (I'm using `curl` as suggested
 
 ```text
 $ curl -w "@f.txt" -o /dev/null -s \
-  http://www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
+  https://www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
     time_namelookup:  0.005
        time_connect:  0.376
    time_pretransfer:  0.377
@@ -259,7 +259,7 @@ from the HTTP request URI. For example, the request from the browser
 has this URI path:
 
 ```text
-/?u=http://www.teamed.io/images/logo.svg
+/?u=https://www.teamed.io/images/logo.svg
 ```
 
 Remember, the request is made to `cf.jare.io`, which is the address of

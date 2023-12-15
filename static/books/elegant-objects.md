@@ -116,13 +116,13 @@ For OOP related questions, please use comment sections in one
 of [these blog posts](/tag/oop.html).
 
 Nov 27, 2017:
-I purchased the domain [elegantobjects.org](http://www.elegantobjects.org).
+I purchased the domain [elegantobjects.org](https://www.elegantobjects.org).
 Everything that is related to the EO concept will be added there. Please,
 add yourself to the list of fans or contributors, if you feel like it. We need
 to build a community, to help our ideas grow!
 
 Nov 17, 2017:
-I signed a contract with [I-manager Publications](http://www.imanagerpublications.com/),
+I signed a contract with [I-manager Publications](https://www.imanagerpublications.com/),
 an academic book/magazine publisher in India. They will re-print the first
 volume of the book and distribute it among universities and colleges in
 India.
@@ -428,7 +428,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     </a>
     <span class="name">Victor Bugaenko</span>
     <span class="text">Because I really believe in EO conception and want
-    to make it popular in Russia. http://www.eolang.ru/</span>
+    to make it popular in Russia. https://www.eolang.ru/</span>
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/patrizio-colomba-03628170/">
@@ -635,23 +635,23 @@ I've collected all reviews of the book written by readers on their
 blogs to help you better understand what the book is about, why it's
 good, and how it could be better:
 
-  * [Ben Nadel](http://www.bennadel.com/blog/3108-elegant-objects-by-yegor-bugayenko.htm)
+  * [Ben Nadel](https://www.bennadel.com/blog/3108-elegant-objects-by-yegor-bugayenko.htm)
   * [Alexei Vinogradov](http://qa-blog.alexei-vinogradov.de/2016/05/elegant-objects-egor-bugayenko/) (in Russian)
-  * [Renaud Pradenc](http://www.renaudpradenc.com/?p=504)
+  * [Renaud Pradenc](https://www.renaudpradenc.com/?p=504)
   * [Željko Vrba](http://zvrba.net/articles/eo-review.html)
   * [Руслан Кеба](http://rukeba.com/by-the-way/elegant-objects/) (in Russian)
   * [Lee Kelleher](https://leekelleher.com/2016/10/book-review-elegant-objects-vol1/)
   * [Dmitry Bushenko](http://clojure.by/articles/2016-07/elegant-objects) (in Russian)
-  * [Koray Tugay](http://www.tugay.biz/2016/09/notes-on-elegant-objects-volume-1.html) (mostly negative)
+  * [Koray Tugay](https://www.tugay.biz/2016/09/notes-on-elegant-objects-volume-1.html) (mostly negative)
   * [Anderson Dorow](https://adorow.github.io/blog/2017/05/28/elegant-objects-volume-1-review-chapter-1)
-  * [Enrique Pablo Molinari](http://www.copypasteisforword.com/notes/elegant-objects)
+  * [Enrique Pablo Molinari](https://www.copypasteisforword.com/notes/elegant-objects)
   * [Tomasz Dziurko](http://tomaszdziurko.com/2017/07/lobotomy-to-your-object-oriented-thinking-elegant-objects-book-review/)
   * [Quinn Gil](https://quinngil.com/2017/08/06/book-review-elegant-objects-vol-1/)
   * [Javin Paul](http://javarevisited.blogspot.com/2017/04/top-5-books-to-learn-object-oriented-programming.html)
   * [Andrey Panasyuk](https://andreypanasyuk.wordpress.com/2017/08/17/elegant-objects/)
   * [Igor Grishaev](http://grishaev.me/oop-1) (in Russian)
   * [Łukasz Konopski](http://lkonopski.blogspot.ru/2018/01/oop-is-not-dead-elegant-objects.html?utm_source=jvm-bloggers.com&utm_medium=link&utm_campaign=jvm-bloggers)
-  * [Alexey Nikitin](http://www.nikialeksey.com/2018/01/30/elegant-objects-vol1-review.html) (in Russian)
+  * [Alexey Nikitin](https://www.nikialeksey.com/2018/01/30/elegant-objects-vol1-review.html) (in Russian)
   * [Manu Pijierro](https://medium.com/@mpijierro/review-del-libro-elegants-objects-vol-1-c0fbc5a0359e) (in Spanish)
   * [Felix Roth](https://thinkingsideways.net/reviews/2019/02/10/elegant-objects-review.html)
 
@@ -773,17 +773,17 @@ covers a subject I haven't discussed on the blog yet.
 This is not exactly the text you will see in the book, though. This is the
 text my selected **11 reviewers** received this week from me by mail.
 By the way, their names are (in alphabetic order):
-[Andrei Istomin](http://www.linkedin.com/in/andrej-istomin-51ba7530),
+[Andrei Istomin](https://www.linkedin.com/in/andrej-istomin-51ba7530),
 [Aneesh Dogra](http://in.linkedin.com/in/aneeshdogra),
 [Francesco Bianchi](http://ie.linkedin.com/in/francesco-bianchi-4b49784),
 [Ion Bordian](http://dk.linkedin.com/in/ion-bordian-06701a88),
 [Kanstantsin Kamkou](http://de.linkedin.com/in/kkamkou/en),
 [Michal Švec](http://cz.linkedin.com/in/michal-švec-77065711),
-[Nicos Kekchidis](http://www.linkedin.com/in/nicoskek),
-[Philip Buuck](http://www.linkedin.com/in/philipbuuck),
-[Simon Tsai](http://www.linkedin.com/in/simonjtsai),
+[Nicos Kekchidis](https://www.linkedin.com/in/nicoskek),
+[Philip Buuck](https://www.linkedin.com/in/philipbuuck),
+[Simon Tsai](https://www.linkedin.com/in/simonjtsai),
 [Thanasis Papapanagiotou](http://nl.linkedin.com/in/thanpa),
-and [Xiasong Pan](http://www.linkedin.com/in/xipan).
+and [Xiasong Pan](https://www.linkedin.com/in/xipan).
 I hope to receive their reviews by the end of January. Then, I will
 spend another two to three weeks taking their recommendations into account,
 and the book will go out at the end of February.

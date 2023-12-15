@@ -31,7 +31,7 @@ be very harmful.
 {% jb_picture_body %}
 
 I've found this
-[good article](http://www.eremedia.com/ere/a-low-turnover-rate-could-mean-that-you-have-ugly-employees/)
+[good article](https://www.eremedia.com/ere/a-low-turnover-rate-could-mean-that-you-have-ugly-employees/)
 where John Sullivan explains why low turnover could be a troubling
 symptom. It's a really good read, but rather generic. It is not specifically about software
 teams. My experience is mostly focused on programmers and their

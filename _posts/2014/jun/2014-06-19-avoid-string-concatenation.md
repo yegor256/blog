@@ -61,7 +61,7 @@ concatenation tool when readability is important.
 [`String.format()`](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String,%20java.lang.Object...%29)
 is my favorite option. It makes text phrases easy to understand
 and modify. It is a static utility method that mirrors
-[`sprintf()`](http://www.cplusplus.com/reference/cstdio/sprintf/) from C.
+[`sprintf()`](https://www.cplusplus.com/reference/cstdio/sprintf/) from C.
 It allows you to build a string using a pattern and substitutors:
 
 ```java

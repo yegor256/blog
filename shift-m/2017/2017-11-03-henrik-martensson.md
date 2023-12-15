@@ -20,7 +20,7 @@ image: /images/andreea/podcast.png
 
 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/350688076%3Fsecret_token%3Ds-bT8d7&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
 
-[Henrik Mårtensson](http://www.henrikmartensson.org/HMBMC/Welcome.html)
+[Henrik Mårtensson](https://www.henrikmartensson.org/HMBMC/Welcome.html)
 was a special guest.
 
 This is the blog post we've been talking about:

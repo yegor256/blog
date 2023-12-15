@@ -19,7 +19,7 @@ noindex: true
 <iframe class='video' src='https://www.youtube.com/embed/TWBBZK_XRNU?controls=2' allowfullscreen='true'></iframe>
 
 Here is an interview taken by Lisette Sutherland from
-[www.CollaborationSuperpowers.com](http://www.collaborationsuperpowers.com),
+[www.CollaborationSuperpowers.com](https://www.collaborationsuperpowers.com),
 a few hours ago,
 which I enjoyed to give.
 

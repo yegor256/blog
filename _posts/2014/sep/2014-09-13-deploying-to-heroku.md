@@ -22,7 +22,7 @@ including [RubyGems](https://www.yegor256.com/2014/08/26/publish-to-rubygems.htm
 [CloudBees](https://www.yegor256.com/2014/08/25/deploy-to-cloudbees.html)
 and [Maven Central](https://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html).
 
-{% badge /images/2014/09/heroku-logo.svg 100 http://www.heroku.com %}
+{% badge /images/2014/09/heroku-logo.svg 100 https://www.heroku.com %}
 
 This one describes how Heroku deployment can be automated. When I
 need to deploy a new version of an Aintshy web application,
@@ -35,7 +35,7 @@ a free hosted DevOps assistant.
 
 <!--more-->
 
-Create a new project at [Heroku.com](http://www.heroku.com).
+Create a new project at [Heroku.com](https://www.heroku.com).
 
 Then install their [command line tool-belt](https://toolbelt.heroku.com/).
 

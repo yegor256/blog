@@ -113,7 +113,7 @@ every year.
 They are [on top of the world](https://ourworldindata.org/mental-health) in the
 insanity competition. California is not the most insane state though, it's
 somewhere in the middle of the
-[ranking](http://www.mentalhealthamerica.net/issues/2017-state-mental-health-america-ranking-states).
+[ranking](https://www.mentalhealthamerica.net/issues/2017-state-mental-health-america-ranking-states).
 
 The statistical figures I can also confirm empirically:
 Almost every single family I've met there has their kid diagnosed with
@@ -202,7 +202,7 @@ Check their [prices](https://www.wholefoodsmarket.com/shop/PAL/3173).
 
 Going out to a decent restaurant will cost you around $100, for two. For example,
 see the menu at [Tamarine](https://tamarinerestaurant.com/) and
-[JOYA](http://www.joya.com/menus.html). A cup of coffee or tea at
+[JOYA](https://www.joya.com/menus.html). A cup of coffee or tea at
 [Starbucks](https://www.starbucks.com/) or [Peet's](https://www.peets.com/) will
 go for $4-5.
 

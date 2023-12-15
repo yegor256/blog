@@ -38,7 +38,7 @@ where <i>W<sub>t</sub></i> is a set of all _resources and risks_ in the world at
 some defined point in time <i>t</i>. <i>W<sub>t</sub></i> _is the world_,
 at the moment <i>t</i>. A project transforms the world, moving it from one
 state to another.
-[PMBOK](http://www.pmi.org/PMBOK-Guide-and-Standards.aspx) defines projects as
+[PMBOK](https://www.pmi.org/PMBOK-Guide-and-Standards.aspx) defines projects as
 "temporary endeavors undertaken to create unique products, services, or results,"
 which is just a specific case of my definition. Mine is more abstract, I believe.
 

@@ -16,7 +16,7 @@ keywords:
   - xslt for web app
 ---
 
-{% badge http://www.takes.org/logo.png 96 http://www.takes.org %}
+{% badge https://www.takes.org/logo.png 96 https://www.takes.org %}
 
 A year ago, I [tried to explain]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %})
 how effectively data and its presentation can be separated
@@ -25,7 +25,7 @@ instead of using [templating](https://en.wikipedia.org/wiki/Comparison_of_web_te
 (like JSP, Velocity, FreeMarker, etc.) and injection of data into HTML,
 we compose them in the form of an XML document and then let
 the XSL stylesheet transform them into HTML. Here is a brief example
-of how all this can be used together with the [Takes framework](http://www.takes.org).
+of how all this can be used together with the [Takes framework](https://www.takes.org).
 
 <!--more-->
 
@@ -67,8 +67,8 @@ we create the view as an XSL stylesheet, which will transform XML into HTML:
 
 ```xml
 <xsl:stylesheet version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns="http://www.w3.org/1999/xhtml">
+  xmlns:xsl="https://www.w3.org/1999/XSL/Transform"
+  xmlns="https://www.w3.org/1999/xhtml">
   <xsl:template match="page">
     <html>
       <body>
@@ -84,7 +84,7 @@ we create the view as an XSL stylesheet, which will transform XML into HTML:
 
 As you see, the view doesn't know anything about the model in terms of
 implementation. All it knows is the format of XML data output produced
-by the model. Here is how you design it in the [Takes framework](http://www.takes.org).
+by the model. Here is how you design it in the [Takes framework](https://www.takes.org).
 Let's start with a simple example:
 
 ```java
@@ -146,7 +146,7 @@ resource on classpath. You see the content of that file above.
 That's it.
 
 Well, not really. Building XML from strings is not a good idea. We
-have a better instrument in the Takes framework. We use [Xembly](http://www.xembly.org),
+have a better instrument in the Takes framework. We use [Xembly](https://www.xembly.org),
 which is a simple imperative language for building and modifying
 XML documents. More about it here:
 [Xembly, an Assembly for XML]({% pst 2014/apr/2014-04-09-xembly-intro %}).

@@ -32,7 +32,7 @@ classes, and 4) no class casting, reflection,
 and [`instanceof`]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %})
 operators. These four basic principles should guarantee
 clean code and transparent architecture. That's how the
-[Takes](http://www.takes.org) framework was born.
+[Takes](https://www.takes.org) framework was born.
 Let's see what was created and how it works.
 
 <!--more-->
@@ -189,7 +189,7 @@ Hello, world!
 ```
 
 That's all you need to build a web server. Now let's discuss how to make
-it object-oriented and composable. Let's try to see how the [Takes](http://www.takes.org)
+it object-oriented and composable. Let's try to see how the [Takes](https://www.takes.org)
 framework was built.
 
 ## Routing/Dispatching
@@ -236,7 +236,7 @@ Obviously, `Exit.NEVER` always responds with, "Don't stop, please."
 Now let's see what's inside the HTTP request arriving at `TkFoo` and what
 we can get out of it. This is how the
 [`Request`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html)
-interface is defined in [Takes](http://www.takes.org):
+interface is defined in [Takes](https://www.takes.org):
 
 ```java
 public interface Request {
@@ -248,7 +248,7 @@ public interface Request {
 The request is divided into two parts: the head and the body. The head
 contains all lines that go before the empty line that starts
 a body, according to HTTP specification in
-[RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html). There are many useful
+[RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html). There are many useful
 decorators for `Request` in the framework. For example, `RqMethod` will
 help you get the method name from the first line of the header:
 
@@ -341,7 +341,7 @@ If you're using Maven, this is the `pom.xml` you should start with:
 ```xml
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
     http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -585,7 +585,7 @@ constructors of custom _takes_.
 For example, we have a PostgreSQL database that contains
 some table data that we need to render. Here is how I would
 initialize a connection to it in the `Entry` class (I'm using
-a [BoneCP](http://www.jolbox.com/) connection pool):
+a [BoneCP](https://www.jolbox.com/) connection pool):
 
 ```java
 public final class Entry {

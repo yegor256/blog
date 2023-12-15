@@ -64,7 +64,7 @@ By the way, I'm not a lawyer; I'm speaking here from practical experience only.
 
 The first and easiest step is a so-called NDA. Here is a very simple
 and useful example of one, from
-[NOLO](http://www.nolo.com/legal-encyclopedia/sample-confidentiality-agreement-nda-33343.html).
+[NOLO](https://www.nolo.com/legal-encyclopedia/sample-confidentiality-agreement-nda-33343.html).
 You put the name of your programmers into the document and ask them to sign it.
 They won't object, and you get a piece of paper with a signature; what's next?
 
@@ -122,7 +122,7 @@ Copyright is where the government starts to protect you, but you have to
 pay us for it (by "us" I mean all of us, the society). Well, at least in
 the United States. In the United Kingdom, it's free, for example.
 
-In the U.S., you go to [copyright.gov](http://www.copyright.gov),
+In the U.S., you go to [copyright.gov](https://www.copyright.gov),
 click "register a copyright,"
 fill in an online form,
 post the description of your business idea in a plain text file,
@@ -168,7 +168,7 @@ for searching algorithms and mention them in your patent in the list
 of references.
 
 Finally, you pay $425 (if you're a small company) and submit it to the
-[USPTO](http://www.uspto.gov). There is also an option to file a "provisional"
+[USPTO](https://www.uspto.gov). There is also an option to file a "provisional"
 patent, but I would recommend you not do this, as it's just an extra hassle. Simply
 file a normal one.
 
@@ -192,7 +192,7 @@ Maybe I'll win, but my chances will be low.
 By the way, in a few years, you will receive a patent from the USPTO and put it on the shelf.
 You will then have to pay $480 more. Also, at the end of three years, you will have to pay $800 just
 to keep your guarantee alive. That escalates to $1,800 in seven years and $3,700 in 11 years
-(see the [fee schedule](http://www.uspto.gov/learning-and-resources/fees-and-payment/uspto-fee-schedule)).
+(see the [fee schedule](https://www.uspto.gov/learning-and-resources/fees-and-payment/uspto-fee-schedule)).
 Told you; just like gangsters.
 
 To summarize, getting a patent is the best instrument available at the moment

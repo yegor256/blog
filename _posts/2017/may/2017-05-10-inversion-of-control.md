@@ -23,9 +23,9 @@ jb_picture:
 seems to have become the cornerstone concept of many frameworks
 and object-oriented designs since it was described by
 [Martin Fowler](https://martinfowler.com/bliki/InversionOfControl.html),
-[Robert Martin](https://web.archive.org/web/20041221102842/http://www.objectmentor.com/resources/articles/dip.pdf)
+[Robert Martin](https://web.archive.org/web/20041221102842/https://www.objectmentor.com/resources/articles/dip.pdf)
 and
-[others](http://www.laputan.org/drc/drc.html)
+[others](https://www.laputan.org/drc/drc.html)
 ten years ago. Despite its popularity IoC is
 misunderstood and overcomplicated all too often.
 

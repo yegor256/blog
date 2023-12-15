@@ -57,7 +57,7 @@ Of course, you don't want to be a "jack of all trades," since they are never
 paid well. You want to be focused. But "one focus" in life is not enough. I switch
 languages every 4-6 years. I started with Pascal, then it was C++, then Java,
 then PHP (yes, you heard right, I'm
-[ZCE](http://www.zend.com/en/yellow-pages/ZEND007965)/[ZFCE](http://www.zend.com/en/yellow-pages/ZEND007965)),
+[ZCE](https://www.zend.com/en/yellow-pages/ZEND007965)/[ZFCE](https://www.zend.com/en/yellow-pages/ZEND007965)),
 then Java again, and now it's Ruby.
 
 **Go Full Cycle**.

@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 I get asked this question very often: Where and how do you find
-and hire a good programmer? Since I'm a programmer and I [manage](http://www.teamed.io)
+and hire a good programmer? Since I'm a programmer and I [manage](https://www.teamed.io)
 software projects, I'm supposed to know the tricks. I do, of course; there
 are many of them, but the list below succinctly summarizes the most important ones.
 

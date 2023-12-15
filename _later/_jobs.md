@@ -25,7 +25,7 @@ Moreover, ~~most~~ some of them even put restrictive
 employment contracts or NDA-s. Dispite [recent efforts](https://beta.congress.gov/bill/113th-congress/senate-bill/84)
 of law makers to make that clauses illegal,
 about half of American employees are still explicitly prohibited
-or strongly [discouraged](http://www.iwpr.org/publications/pubs/pay-secrecy-and-wage-discrimination)
+or strongly [discouraged](https://www.iwpr.org/publications/pubs/pay-secrecy-and-wage-discrimination)
 from discussing pay with their coworkers.
 My question is do we really want to know how much our friends are making and
 will that information, if being available, help us write better software?

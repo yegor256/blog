@@ -19,7 +19,7 @@ keywords:
   - aspectj weaving annotations
 ---
 
-Sometimes, I want to log (through [slf4j](http://www.slf4j.org)
+Sometimes, I want to log (through [slf4j](https://www.slf4j.org)
 and [log4j](http://logging.apache.org/log4j/2.x/)) every execution
 of a method, seeing what arguments it receives, what
 it returns and how much time every execution takes.

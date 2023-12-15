@@ -47,7 +47,7 @@ It may return `NULL` instead of an object---that's what is wrong.
 `NULL` is a terrible practice in an object-oriented paradigm and should be avoided at
 [all costs]({% pst 2016/mar/2016-03-22-try-finally-if-not-null %}).
 There have been a number of opinions about this published already, including
-[Null References, The Billion Dollar Mistake](http://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare)
+[Null References, The Billion Dollar Mistake](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare)
 presentation by Tony Hoare and the entire
 [Object Thinking](https://amzn.to/266oJr4)
 book by David West.

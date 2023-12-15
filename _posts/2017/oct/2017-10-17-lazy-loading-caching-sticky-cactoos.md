@@ -172,7 +172,7 @@ However there is a better way to implement it.
 Let's refactor our class, this time using
 [`Scalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html)
 from
-[Cactoos](http://www.cactoos.org):
+[Cactoos](https://www.cactoos.org):
 
 ```java
 class Encrypted4 implements Encrypted {

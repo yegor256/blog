@@ -18,7 +18,7 @@ buffer:
   - "I would say that it's a light version of AWS Data Pipeline. ThreeCopies does exactly the same, but it's easier to configure, and it's cheaper"
 ---
 
-{% badge http://www.threecopies.com/images/logo.png 64 http://www.threecopies.com %}
+{% badge https://www.threecopies.com/images/logo.png 64 https://www.threecopies.com %}
 
 I have a number of data resources which exist in one place only and which
 I don't really want to lose. For example, I have a hosted PHP website,
@@ -52,7 +52,7 @@ The biggest issue is that every single owner of a data source faces
 exactly the same set of problems. "Why can't I create a hosted solution for
 these scripts, to help everybody to back up their data," I was asking myself
 for years. "Well, I can," was the answer just a few weeks ago, and
-I created [ThreeCopies](http://www.threecopies.com).
+I created [ThreeCopies](https://www.threecopies.com).
 
 It's a very simple hosted executor of bash scripts, which you edit
 through a web interface. Then one of our servers starts a Docker
@@ -69,7 +69,7 @@ the value of either `hour`, `day`, or `week`.
 
 How your script pulls the data, packages it, and archives it, depends on the
 data. I created a short cheat sheet for most common scenarios. This is how
-I backup the MySQL database for [thePMP](http://www.thepmp.com), for example:
+I backup the MySQL database for [thePMP](https://www.thepmp.com), for example:
 
 ```bash
 # I don't want to back up every hour
@@ -97,7 +97,7 @@ wrong and restart the script. All logs are available through the browser. No
 SSH, no terminals.
 
 I would say that it's a light version of
-[AWS Data Pipeline](https://aws.amazon.com/datapipeline/). [ThreeCopies](http://www.threecopies.com)
+[AWS Data Pipeline](https://aws.amazon.com/datapipeline/). [ThreeCopies](https://www.threecopies.com)
 does exactly the same, but it's easier to configure, and it's cheaper.
 I'm charging $0.01 per script execution hour. And I actually charge
 per second, while AWS always charges for a full hour. For $5.00 you get

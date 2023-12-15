@@ -19,7 +19,7 @@ keywords:
 Let's talk about [lambda expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
 (and [Stream API](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html))
 introduced in Java&nbsp;8.
-According to [Oracle](http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html),
+According to [Oracle](https://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html),
 they "_enable you to treat functionality as a method argument_"
 and "_support functional-style operations_" respectively. In other words, they are
 guests from the world of

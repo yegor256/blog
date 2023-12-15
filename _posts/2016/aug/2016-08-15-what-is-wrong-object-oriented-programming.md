@@ -67,22 +67,22 @@ provides a structured way to write spaghetti code."
 I did not have C++ in mind." and
 "Java and C++ make you think that the new ideas are like the old ones.
 Java is the most distressing thing to happen to computing since MS-DOS."
-([proof](http://www.cc.gatech.edu/fac/mark.guzdial/squeak/oopsla.html))
+([proof](https://www.cc.gatech.edu/fac/mark.guzdial/squeak/oopsla.html))
 
 
 <img src="/images/2016/08/paul-graham.jpg" class="quote-author" alt="Paul Graham"/><br/>
 [**Paul Graham**](https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29) (2003)<br/>
-[The Hundred-Year Language](http://www.paulgraham.com/hundred.html)<br/>
+[The Hundred-Year Language](https://www.paulgraham.com/hundred.html)<br/>
 "Object-oriented programming offers a sustainable way to write spaghetti code."
 
 <img src="/images/2016/08/richard-mansfield.jpg" class="quote-author" alt="Richard Mansfield"/><br/>
 **Richard Mansfield** (2005)<br/>
-[Has OOP Failed?](http://www.4js.com/files/documents/products/genero/WhitePaperHasOOPFailed.pdf)<br/>
+[Has OOP Failed?](https://www.4js.com/files/documents/products/genero/WhitePaperHasOOPFailed.pdf)<br/>
 "With OOP-inflected programming languages, computer software becomes more
 verbose, less readable, less descriptive, and harder to modify and maintain."
 
 <img src="/images/2016/08/eric-raymond.jpg" class="quote-author" alt="Eric Raymond"/><br/>
-[**Eric Raymond**](http://www.catb.org/esr/) (2005)<br/>
+[**Eric Raymond**](https://www.catb.org/esr/) (2005)<br/>
 [The Art of UNIX Programming](http://catb.org/esr/writings/taoup/html/unix_and_oo.html)<br/>
 "The OO design concept initially proved valuable in the design of graphics
 systems, graphical user interfaces, and certain kinds of simulation.
@@ -122,7 +122,7 @@ real and accidental complexity."
 
 <img src="/images/2016/08/rich-hickey.jpg" class="quote-author" alt="Rich Hickey"/><br/>
 [**Rich Hickey**](https://github.com/richhickey) (2010)<br/>
-[SE Radio, Episode 158](http://www.se-radio.net/2010/03/episode-158-rich-hickey-on-clojure/)<br/>
+[SE Radio, Episode 158](https://www.se-radio.net/2010/03/episode-158-rich-hickey-on-clojure/)<br/>
 "I think that large objected-oriented programs struggle
 with increasing complexity as you build this large object graph of
 mutable objects. You know, trying to understand and keep in your mind
@@ -159,7 +159,7 @@ sharing and security. In many ways, it is still essentially procedural code."
 
 <img src="/images/2016/08/lawrence-krubner.jpg" class="quote-author" alt="Lawrence Krubner"/><br/>
 [**Lawrence Krubner**](https://www.linkedin.com/in/krubner) (2014)<br/>
-[Object Oriented Programming is an expensive disaster which must end](http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end)<br/>
+[Object Oriented Programming is an expensive disaster which must end](https://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end)<br/>
 "We now know that OOP is an experiment that failed.
 It is time to move on. It is time that we, as a community, admit that
 this idea has failed us, and we must give up on it."

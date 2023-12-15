@@ -15,7 +15,7 @@ keywords:
   - cookie authentication security
 ---
 
-{% badge http://www.takes.org/logo.png 96 http://www.takes.org %}
+{% badge https://www.takes.org/logo.png 96 https://www.takes.org %}
 
 When you enter your email and password into the Facebook login page,
 you get into your account. Then, wherever you go in the site,
@@ -24,7 +24,7 @@ remembers you and doesn't ask for the password again and again. This works
 thanks to [HTTP cookies](https://en.wikipedia.org/wiki/HTTP_cookie)
 and is called _cookie-based authentication_. Even though this mechanism
 often causes some security problems, it is very popular and simple.
-Here is how [Takes](http://www.takes.org) makes it possible in a few lines of code.
+Here is how [Takes](https://www.takes.org) makes it possible in a few lines of code.
 
 <!--more-->
 
@@ -127,7 +127,7 @@ have access to it.
 ## How It's Done in Takes
 
 Here is how this cookie-based authentication mechanism is designed in the
-[Takes](http://www.takes.org) framework. The entire framework consists of
+[Takes](https://www.takes.org) framework. The entire framework consists of
 _takes_, which receive requests and produce responses
 ([this article]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})
 explains the framework in more detail). When the request comes in,
