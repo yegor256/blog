@@ -114,6 +114,16 @@ these concerns explicitly in the Discussion section, they may think you are
 either concealing the research's weaknesses or are not astute enough to
 recognize them. In either case, it could lead to a revision of your paper.
 
+<hr/>
+
+You may find inspiration in these papers 
+(use [Google Scholar](https://scholar.google.com/) to download their PDFs):
+
+  * Zhaowei Zhang et al., _Diet Code Is Healthy: Simplifying Programs for Pre-trained Models of Code_, ESEC/FSE 2022
+  * Norman Peitek et al., _Correlates of Programmer Efficacy and Their Link to Experience: A Combined EEG and Eye-Tracking Study_, ESEC/FSE 2022
+
+<hr/>
+
 These opinions might also be helpful:
 
   * [Guide to Writing the Results and Discussion Sections of a Scientific Article](https://goldbio.com/articles/article/Guide-to-results-and-discussion-section)

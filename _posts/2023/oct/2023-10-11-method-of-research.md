@@ -102,8 +102,8 @@ You may find inspiration in these papers
 (use [Google Scholar](https://scholar.google.com/) to download their PDFs):
 
   * Melina Vidoni, _Evaluating Unit Testing Practices in R Packages_, ICSE 2021
-  * Reem S. Alsuhaibani, et al., _On the Naming of Methods: A Survey of Professional Developers_, ICSE 2021
-  * Anastasia Ruvimova, et al., _An Exploratory Study of Productivity in Software Teams_, ICSE 2022
+  * Reem S. Alsuhaibani et al., _On the Naming of Methods: A Survey of Professional Developers_, ICSE 2021
+  * Anastasia Ruvimova et al., _An Exploratory Study of Productivity in Software Teams_, ICSE 2022
 
 <hr/>
 
