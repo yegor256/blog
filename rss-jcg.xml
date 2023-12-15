@@ -247,7 +247,7 @@ Both are wrong.&lt;/p&gt;
       <item>
         <title>Vertical and Horizontal Decorating</title>
         
-          <description>&lt;p&gt;A &lt;a href=&quot;http://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;decorator pattern&lt;/a&gt;
+          <description>&lt;p&gt;A &lt;a href=&quot;https://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;decorator pattern&lt;/a&gt;
 is one of the best ways to add features to an object
 without changing its interface. I use
 &lt;a href=&quot;/2015/02/26/composable-decorators.html&quot;&gt;composable decorators&lt;/a&gt;
@@ -373,7 +373,7 @@ and let testers find and report bugs; then we’ll fix them. Or this one:
 Being afraid to make a mistake makes me write slower and experiment less,
 which translates into lower-quality software. Read more about that
 &lt;a href=&quot;http://programmers.stackexchange.com/questions/41248&quot;&gt;here&lt;/a&gt; and
-&lt;a href=&quot;http://www.joelonsoftware.com/articles/fog0000000067.html&quot;&gt;here&lt;/a&gt;.
+&lt;a href=&quot;https://www.joelonsoftware.com/articles/fog0000000067.html&quot;&gt;here&lt;/a&gt;.
 But allow me to look at this from a different perspective and assert
 that yes, indeed, good programmers create &lt;em&gt;fewer&lt;/em&gt; bugs.&lt;/p&gt;
 
@@ -485,16 +485,16 @@ company through which I put my admiration of discipline and clean design into pr
       <item>
         <title>JAXB Is Doing It Wrong; Try Xembly</title>
         
-          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://www.xembly.org&quot;&gt;&lt;img src=&quot;http://img.xembly.org/logo-256x256.png&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://www.xembly.org&quot;&gt;&lt;img src=&quot;http://img.xembly.org/logo-256x256.png&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding&quot;&gt;JAXB&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding&quot;&gt;JAXB&lt;/a&gt;
 is a 10-year-old Java technology that allows us to
 convert a Java object into an XML document (marshalling) and
 back (unmarshalling). This technology is based on
 &lt;a href=&quot;/2014/09/16/getters-and-setters-are-evil.html&quot;&gt;setters and getters&lt;/a&gt;
 and, in my opinion, violates key principles of object-oriented
 programming by turning objects into &lt;strong&gt;passive data structures&lt;/strong&gt;. I would
-recommend you use &lt;a href=&quot;http://www.xembly.org&quot;&gt;Xembly&lt;/a&gt;
+recommend you use &lt;a href=&quot;https://www.xembly.org&quot;&gt;Xembly&lt;/a&gt;
 instead for marshalling Java objects into XML documents.&lt;/p&gt;
 
 </description>
@@ -520,7 +520,7 @@ classes, and 4) no class casting, reflection,
 and &lt;a href=&quot;/2015/04/02/class-casting-is-anti-pattern.html&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;instanceof&lt;/code&gt;&lt;/a&gt;
 operators. These four basic principles should guarantee
 clean code and transparent architecture. That’s how the
-&lt;a href=&quot;http://www.takes.org&quot;&gt;Takes&lt;/a&gt; framework was born.
+&lt;a href=&quot;https://www.takes.org&quot;&gt;Takes&lt;/a&gt; framework was born.
 Let’s see what was created and how it works.&lt;/p&gt;
 
 </description>
@@ -533,11 +533,11 @@ Let’s see what was created and how it works.&lt;/p&gt;
       <item>
         <title>Composable Decorators vs. Imperative Utility Methods</title>
         
-          <description>&lt;p&gt;The &lt;a href=&quot;http://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;decorator pattern&lt;/a&gt;
+          <description>&lt;p&gt;The &lt;a href=&quot;https://en.wikipedia.org/wiki/Decorator_pattern&quot;&gt;decorator pattern&lt;/a&gt;
 is my favorite among all other patterns I’m aware of. It is a very simple
 and yet very powerful mechanism to make your code
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Cohesion_%28computer_science%29&quot;&gt;highly cohesive&lt;/a&gt; and
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Coupling_%28computer_programming%29&quot;&gt;loosely coupled&lt;/a&gt;.
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29&quot;&gt;highly cohesive&lt;/a&gt; and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29&quot;&gt;loosely coupled&lt;/a&gt;.
 However, I believe decorators are not used often enough. They should
 be everywhere, but they are not. The biggest advantage we get from decorators
 is that they make our code &lt;em&gt;composable&lt;/em&gt;. That’s why the title of this
@@ -577,7 +577,7 @@ friendly and nice?&lt;/p&gt;
         <title>Utility Classes Have Nothing to Do With Functional Programming</title>
         
           <description>&lt;p&gt;I was recently &lt;a href=&quot;https://twitter.com/lukaseder/status/564866432790708224&quot;&gt;accused&lt;/a&gt; of being against
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt;
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Functional_programming&quot;&gt;functional programming&lt;/a&gt;
 because &lt;a href=&quot;/2014/05/05/oop-alternative-to-utility-classes.html&quot;&gt;I call utility classes an anti-pattern&lt;/a&gt;.
 That’s absolutely wrong! Well, I do consider them a terrible anti-pattern,
 but they have nothing to do with functional programming. I believe there are
@@ -617,7 +617,7 @@ why you always work &lt;strong&gt;top down&lt;/strong&gt;. Let’s see what I me
       <item>
         <title>Don&apos;t Repeat Yourself in Maven POMs; Use Jcabi-Parent</title>
         
-          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://http.jcabi.com&quot;&gt;&lt;img src=&quot;https://www.jcabi.com/logo-square.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://http.jcabi.com&quot;&gt;&lt;img src=&quot;https://www.jcabi.com/logo-square.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;Maven is a build automation tool mostly for Java projects. It’s a great
 tool, but it has one important drawback that has motivated the creation
@@ -649,9 +649,9 @@ what code duplication means. It’s a disaster. However, there is a solution.&lt
       <item>
         <title>XSL Transformation in Java: An Easy Way</title>
         
-          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;http://http.jcabi.com&quot;&gt;&lt;img src=&quot;https://www.jcabi.com/logo-square.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
+          <description>&lt;figure class=&quot;badge&quot;&gt;&lt;a href=&quot;https://http.jcabi.com&quot;&gt;&lt;img src=&quot;https://www.jcabi.com/logo-square.svg&quot; style=&quot;width:64px;max-width:100%;&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://www.w3.org/TR/xslt20/&quot;&gt;XSL transformation&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.w3.org/TR/xslt20/&quot;&gt;XSL transformation&lt;/a&gt;
 (XSLT) is a powerful mechanism for converting one
 XML document into another. However, in Java, XML manipulations
 are rather verbose and complex. Even for a simple XSL transformation,
@@ -813,7 +813,7 @@ asking to provide more specific and practical examples.&lt;/p&gt;
 &lt;p&gt;Thus, in order to illustrate my strongly negative attitude to “mutability via setters,” I took
 an existing &lt;a href=&quot;http://commons.apache.org/proper/commons-email/&quot;&gt;commons-email&lt;/a&gt; Java library from Apache
 and re-designed it my way, without setters and with “object thinking” in mind.
-I released my library as part of the &lt;a href=&quot;http://www.jcabi.com&quot;&gt;jcabi&lt;/a&gt; family—&lt;a href=&quot;http://email.jcabi.com&quot;&gt;jcabi-email&lt;/a&gt;. Let’s see what benefits
+I released my library as part of the &lt;a href=&quot;https://www.jcabi.com&quot;&gt;jcabi&lt;/a&gt; family—&lt;a href=&quot;https://email.jcabi.com&quot;&gt;jcabi-email&lt;/a&gt;. Let’s see what benefits
 we get from a “pure” object-oriented and immutable approach, without getters.&lt;/p&gt;
 
 </description>
@@ -847,7 +847,7 @@ on someone’s t-shirt, the most &lt;em&gt;reputable&lt;/em&gt; programmer gets 
         
           <description>&lt;p&gt;A few days ago, my article
 &lt;a href=&quot;http://devops.com/blogs/continuous-integration-doesnt-work/&quot;&gt;Why Continuous Integration Doesn’t Work&lt;/a&gt;
-was published at &lt;a href=&quot;http://www.devops.com&quot;&gt;DevOps.com&lt;/a&gt;. Almost the same
+was published at &lt;a href=&quot;https://www.devops.com&quot;&gt;DevOps.com&lt;/a&gt;. Almost the same
 day I received a few strongly negative critiques on Twitter.&lt;/p&gt;
 
 &lt;p&gt;Here is my response to the un-asked question:&lt;/p&gt;
@@ -920,7 +920,7 @@ of code and quality of the internal processes that connect our team.&lt;/p&gt;
           <description>&lt;p&gt;Every project I’m working with starts with a setup of
 &lt;a href=&quot;/2016/08/01/continuous-integration-maturity.html&quot;&gt;continuous integration&lt;/a&gt;
 pipeline. I’m a big fan of cloud services,
-that’s why I was always using &lt;a href=&quot;http://www.travis-ci.org&quot;&gt;Travis&lt;/a&gt;. A few of
+that’s why I was always using &lt;a href=&quot;https://www.travis-ci.org&quot;&gt;Travis&lt;/a&gt;. A few of
 my clients questioned this choice recently, mostly because
 of the price. So I decided to make a brief analysis of the market.&lt;/p&gt;
 
@@ -955,8 +955,8 @@ the best and highly recommended):&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.shippable.com&quot;&gt;Shippable&lt;/a&gt;&amp;#x263A;&lt;/td&gt;
-  &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;http://www.shippable.com/pricing.html&quot;&gt;free&lt;/a&gt; (!)&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.shippable.com&quot;&gt;Shippable&lt;/a&gt;&amp;#x263A;&lt;/td&gt;
+  &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;https://www.shippable.com/pricing.html&quot;&gt;free&lt;/a&gt; (!)&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
@@ -966,7 +966,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td&gt;&lt;a href=&quot;https://app.shippable.com/projects/542e8fb980088cee586d3806/builds/latest&quot;&gt;
     &lt;img src=&quot;https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master&quot; class=&quot;x-build&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.travis-ci.org&quot;&gt;Travis&lt;/a&gt;&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.travis-ci.org&quot;&gt;Travis&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;https://travis-ci.com/plans&quot;&gt;$69/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
@@ -977,8 +977,8 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td&gt;&lt;a href=&quot;https://travis-ci.org/yegor256/rultor&quot;&gt;
     &lt;img src=&quot;https://travis-ci.org/yegor256/rultor.svg?branch=master&quot; class=&quot;x-build&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.appveyor.com&quot;&gt;AppVeyor&lt;/a&gt;&lt;/td&gt;
-  &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;http://www.appveyor.com/pricing&quot;&gt;$39/mo&lt;/a&gt;&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.appveyor.com&quot;&gt;AppVeyor&lt;/a&gt;&lt;/td&gt;
+  &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;https://www.appveyor.com/pricing&quot;&gt;$39/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
@@ -988,7 +988,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td&gt;&lt;a href=&quot;https://ci.appveyor.com/project/yegor256/rultor/branch/master&quot;&gt;
     &lt;img src=&quot;https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true&quot; class=&quot;x-build&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.wercker.com&quot;&gt;Wercker&lt;/a&gt;&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.wercker.com&quot;&gt;Wercker&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;$350/mo&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
@@ -1000,7 +1000,7 @@ the best and highly recommended):&lt;/p&gt;
     &lt;img src=&quot;https://app.wercker.com/status/0e6506c69e078b7692e50b240c034524/s%20wercker status&quot; class=&quot;x-build&quot; alt=&quot;badge&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;tr&gt;&lt;td colspan=&quot;9&quot; class=&quot;x-hr&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.semaphoreapp.com&quot;&gt;SemaphoreApp&lt;/a&gt;&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.semaphoreapp.com&quot;&gt;SemaphoreApp&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;https://semaphoreapp.com/pricing&quot;&gt;$29/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
@@ -1009,7 +1009,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.snap-ci.com&quot;&gt;Snap-CI&lt;/a&gt;&amp;#x263A;&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.snap-ci.com&quot;&gt;Snap-CI&lt;/a&gt;&amp;#x263A;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;https://snap-ci.com/plans&quot;&gt;$30/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
@@ -1027,7 +1027,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.circleci.com&quot;&gt;CircleCI&lt;/a&gt;&amp;#x263A;&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.circleci.com&quot;&gt;CircleCI&lt;/a&gt;&amp;#x263A;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;https://circleci.com/pricing&quot;&gt;$19/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
@@ -1045,7 +1045,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;?&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.deploybot.com&quot;&gt;DeployBot&lt;/a&gt;&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.deploybot.com&quot;&gt;DeployBot&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;https://signup.deploybot.com/signup/new&quot;&gt;$15/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
@@ -1063,7 +1063,7 @@ the best and highly recommended):&lt;/p&gt;
   &lt;td class=&quot;center&quot;&gt;?&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://www.greenhouseci.com&quot;&gt;GreenHouseCI&lt;/a&gt;&lt;/td&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;https://www.greenhouseci.com&quot;&gt;GreenHouseCI&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;x-right&quot;&gt;&lt;a href=&quot;https://greenhouseci.com/pricing.html&quot;&gt;$49/mo&lt;/a&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-yes green&quot;&gt;&lt;/i&gt;&lt;/td&gt;
   &lt;td class=&quot;center&quot;&gt;&lt;i class=&quot;icon-no red&quot;&gt;&lt;/i&gt;&lt;/td&gt;
@@ -1111,7 +1111,7 @@ almost impossible to maintain.&lt;/p&gt;
         <title>Getters/Setters. Evil. Period.</title>
         
           <description>&lt;p&gt;There is an old debate, started in 2003 by Allen Holub
-in this &lt;a href=&quot;http://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html&quot;&gt;Why getter and setter methods are evil&lt;/a&gt;
+in this &lt;a href=&quot;https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html&quot;&gt;Why getter and setter methods are evil&lt;/a&gt;
 famous article, about whether getters/setters is an
 &lt;a href=&quot;/2016/02/03/design-patterns-and-anti-patterns.html&quot;&gt;anti-pattern&lt;/a&gt;
 and should be avoided or if it is something we inevitably need in object-oriented
@@ -1188,7 +1188,7 @@ the data?&lt;/p&gt;
         <title>Simple Java SSH Client</title>
         
           <description>&lt;p&gt;An execution of a shell command via SSH can be done in
-Java, in just a few lines, using &lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jcabi-ssh&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+Java, in just a few lines, using &lt;a href=&quot;https://ssh.jcabi.com&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jcabi-ssh&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;hello&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Shell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Plain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SSH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
@@ -1198,8 +1198,8 @@ Java, in just a few lines, using &lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;
 &lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;echo &apos;Hello, world!&apos;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://ssh.jcabi.com&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jcabi-ssh&lt;/code&gt;&lt;/a&gt; is
-a convenient wrapper of &lt;a href=&quot;http://www.jcraft.com/jsch/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSch&lt;/code&gt;&lt;/a&gt;,
+&lt;p&gt;&lt;a href=&quot;https://ssh.jcabi.com&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jcabi-ssh&lt;/code&gt;&lt;/a&gt; is
+a convenient wrapper of &lt;a href=&quot;https://www.jcraft.com/jsch/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSch&lt;/code&gt;&lt;/a&gt;,
 a well-known pure Java implementation of SSH2.&lt;/p&gt;
 
 </description>
@@ -1212,7 +1212,7 @@ a well-known pure Java implementation of SSH2.&lt;/p&gt;
       <item>
         <title>How to Release to Maven Central, in One Click</title>
         
-          <description>&lt;p&gt;When I release a new version of &lt;a href=&quot;http://aspects.jcabi.com&quot;&gt;jcabi-aspects&lt;/a&gt;,
+          <description>&lt;p&gt;When I release a new version of &lt;a href=&quot;https://aspects.jcabi.com&quot;&gt;jcabi-aspects&lt;/a&gt;,
 a Java open source library, to Maven Central, it takes 30 seconds of my time.
 Maybe even less. Recently, I released version 0.17.2. You can see
 how it all happened, in &lt;a href=&quot;https://github.com/jcabi/jcabi-aspects/issues/80&quot;&gt;GitHub issue #80&lt;/a&gt;:&lt;/p&gt;
@@ -1237,7 +1237,7 @@ takes just a few seconds of your time.&lt;/p&gt;
         <title>Objects Should Be Immutable</title>
         
           <description>&lt;p&gt;In object-oriented programming, an object is
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Immutable_object&quot;&gt;immutable&lt;/a&gt; if its state can’t be
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Immutable_object&quot;&gt;immutable&lt;/a&gt; if its state can’t be
 modified after it is created.
 In Java, a good example of an
 immutable &lt;a href=&quot;/2016/07/14/who-is-object.html&quot;&gt;object&lt;/a&gt;
@@ -1255,12 +1255,12 @@ new strings, but its own state will never change.&lt;/p&gt;
       <item>
         <title>Java Method Logging with AOP and Annotations</title>
         
-          <description>&lt;p&gt;Sometimes, I want to log (through &lt;a href=&quot;http://www.slf4j.org&quot;&gt;slf4j&lt;/a&gt;
+          <description>&lt;p&gt;Sometimes, I want to log (through &lt;a href=&quot;https://www.slf4j.org&quot;&gt;slf4j&lt;/a&gt;
 and &lt;a href=&quot;http://logging.apache.org/log4j/2.x/&quot;&gt;log4j&lt;/a&gt;) every execution
 of a method, seeing what arguments it receives, what
 it returns and how much time every execution takes.
 This is how I’m doing it, with help of &lt;a href=&quot;http://eclipse.org/aspectj/&quot;&gt;AspectJ&lt;/a&gt;,
-&lt;a href=&quot;http://aspects.jcabi.com&quot;&gt;jcabi-aspects&lt;/a&gt; and Java 6
+&lt;a href=&quot;https://aspects.jcabi.com&quot;&gt;jcabi-aspects&lt;/a&gt; and Java 6
 &lt;a href=&quot;/2016/04/12/java-annotations-are-evil.html&quot;&gt;annotations&lt;/a&gt;:&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
@@ -1330,7 +1330,7 @@ from JDK7 are perfect examples of utility classes.&lt;/p&gt;
         <title>Typical Mistakes in Java Code</title>
         
           <description>&lt;p&gt;This page contains most typical mistakes I see in the Java code of people
-working with me. Static analysis (we’re using &lt;a href=&quot;http://www.qulice.com&quot;&gt;qulice&lt;/a&gt;
+working with me. Static analysis (we’re using &lt;a href=&quot;https://www.qulice.com&quot;&gt;qulice&lt;/a&gt;
 can’t catch all of the mistakes for obvious reasons, and that’s why I decided to
 list them all here.&lt;/p&gt;
 

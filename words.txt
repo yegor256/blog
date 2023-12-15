@@ -554,6 +554,7 @@ assure
 assured
 AST
 ASTs
+astute
 asylum
 at
 ate
@@ -1952,6 +1953,7 @@ corrections
 corrective
 correctly
 correctness
+correlates
 correlation
 correspond
 corresponding
@@ -2462,6 +2464,7 @@ didn't
 die
 died
 dies
+diet
 diff
 differ
 difference
@@ -2673,6 +2676,7 @@ door
 doors
 doris
 dorks
+dosch
 dose
 dosomethingelse
 dot
@@ -2749,6 +2753,7 @@ dull
 dumb
 dumber
 dummies
+dunton
 duplicate
 duplicates
 duplication
@@ -2822,6 +2827,7 @@ education
 educational
 edwards
 EE
+EEG
 effect
 effective
 effectively
@@ -2966,6 +2972,7 @@ enforcing
 engage
 engaged
 engagement
+engages
 engaging
 engine
 engineer
@@ -3061,6 +3068,7 @@ escalates
 escape
 escapes
 escort
+ESEC
 especially
 esperanto
 essay
@@ -3248,6 +3256,7 @@ extremely
 extrovert
 extroverted
 eye
+eye-tracking
 eyes
 fabrics
 facade
@@ -3612,6 +3621,7 @@ founders
 founders'
 four
 four-page
+fourteen
 fourth
 fowler
 FP
@@ -3665,6 +3675,7 @@ frustrated
 frustrates
 frustrating
 frustration
+FSE
 ftbasic
 ftcli
 FTP
@@ -4515,6 +4526,7 @@ injections
 injury
 inline
 innate
+innately
 inner
 innobookcrossing
 innocence
@@ -4630,6 +4642,8 @@ interpret
 interpretation
 interpreted
 interpreter
+interpreting
+interprets
 interrupt
 interrupted
 interruptedexception
@@ -5004,8 +5018,10 @@ korean
 kotlin
 KPIs
 krakow
+kretchmer
 kristina
 kristine
+kroemer
 krubner
 kruchten
 kuban
@@ -5760,6 +5776,7 @@ mode
 model
 model-view-controller
 modeling
+models
 moderator
 modern
 modifiable
@@ -6087,6 +6104,7 @@ nope
 nor
 normal
 normally
+norman
 nose
 NoSQL
 not
@@ -6400,6 +6418,7 @@ overleaf
 overload
 overloaded
 overloading
+overlook
 overlooked
 overly
 overly-paid
@@ -6572,6 +6591,7 @@ pedal
 peer
 peers
 peet's
+peitek
 pen
 penalize
 penalties
@@ -6758,6 +6778,7 @@ pleasure
 plenty
 plethora
 PLOP
+PLOS
 plot
 plugin
 plugins
@@ -6890,6 +6911,7 @@ pre-merge
 pre-money
 pre-process
 pre-production
+pre-trained
 preach
 preaching
 preamble
@@ -7398,6 +7420,7 @@ recipient
 recipients
 reckon
 recognition
+recognize
 recognized
 recognizing
 recommend
@@ -7464,6 +7487,7 @@ refrigerator
 refund
 refunds
 refuse
+refused
 regard
 regarding
 regardless
@@ -7627,6 +7651,7 @@ requs
 rerun
 reschedule
 research
+research's
 researcher
 researchers
 researching
@@ -7735,6 +7760,7 @@ reviewer's
 reviewers
 reviewing
 reviews
+revision
 revoke
 revolution
 revolver
@@ -7819,6 +7845,7 @@ route
 router
 routine
 row
+rowan
 rows
 royalties
 rq
@@ -8900,6 +8927,7 @@ summaries
 summarize
 summarized
 summarizes
+summarizing
 summary
 summer
 sumptuous
@@ -9511,6 +9539,7 @@ txr
 txt
 txtauthor
 txthead
+tyasning
 tyler
 tyler's
 type
@@ -9725,6 +9754,7 @@ USA
 usability
 usable
 usage
+USC
 use
 used
 used-to-be
@@ -9825,6 +9855,7 @@ verified
 verifiers
 verify
 verifying
+vermont
 version
 versionalize
 versionalizes
@@ -10263,6 +10294,7 @@ zerocrat
 zerorsk
 ZFCE
 zhang
+zhaowei
 zhu
 zi
 zilles
