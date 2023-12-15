@@ -36,11 +36,11 @@ three years ago and don't want to replace with a new one, simply
 because [rumors are](https://blog.devteam.space/new-macbook-pro-is-not-a-laptop-for-developers-anymore-d0d4b1b8b7de)
 its quality is very low. My smartphone is
 [iPhone&nbsp;6s](https://www.apple.com/shop/buy-iphone/iphone6s).
-For video and podcast recording I'm using [Zoom&nbsp;H6](http://amzn.to/2tjPebw)
+For video and podcast recording I'm using [Zoom&nbsp;H6](https://amzn.to/2tjPebw)
 together with
-[Movo LV4-O2](http://amzn.to/2tkdA4G) microphone,
-[Sennheiser HD 380 PRO](http://amzn.to/2ienJf9) headphones, and
-[SLIK Sprint 150](http://amzn.to/2xy2ivL) tripod.
+[Movo LV4-O2](https://amzn.to/2tkdA4G) microphone,
+[Sennheiser HD 380 PRO](https://amzn.to/2ienJf9) headphones, and
+[SLIK Sprint 150](https://amzn.to/2xy2ivL) tripod.
 
 <img src="/images/2017/06/env-intellij-idea.jpg" class="env-ico" alt="icon"/><br/>
 [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) (~~$499~~ free)

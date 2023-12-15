@@ -128,19 +128,19 @@ if we are talking about closed-source commercial code. We are lucky if
 the classes have more or less descriptive names and are small and
 cohesive.
 
-{% badge /images/2015/04/book-goos.jpg 96 http://amzn.to/1PBpoDT %}
+{% badge /images/2015/04/book-goos.jpg 96 https://amzn.to/1PBpoDT %}
 
-{% badge /images/2015/04/book-legacy.jpg 96 http://amzn.to/1SdcZ8M %}
+{% badge /images/2015/04/book-legacy.jpg 96 https://amzn.to/1SdcZ8M %}
 
 However, instead of documentation I prefer to deal with unit tests. They
 explain the code much better and prove that it works. When I don't
 understand how the class works, I try to write a unit test for it. In most
 cases it's not possible, for many reasons. In such a case I try to apply
 everything I learned from
-[_Working Effectively With Legacy Code_](http://amzn.to/1SdcZ8M)
+[_Working Effectively With Legacy Code_](https://amzn.to/1SdcZ8M)
 by Michael Feathers
 and
-[_Growing Object-Oriented Software, Guided by Tests_](http://amzn.to/1PBpoDT)
+[_Growing Object-Oriented Software, Guided by Tests_](https://amzn.to/1PBpoDT)
 by Steve Freeman and Nat Pryce.
 Both books are pretty much focused on this very problem: what to do
 when you don't know what to do, testing-wise.

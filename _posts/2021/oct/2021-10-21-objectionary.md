@@ -40,7 +40,7 @@ Wouldn't it be more elegant to deal with individual objects instead?
 {% jb_picture_body %}
 
 The idea is not new and not mine. 
-I got it from the book [Object Thinking](http://amzn.to/266oJr4)
+I got it from the book [Object Thinking](https://amzn.to/266oJr4)
 by David West, where he suggested creating an _Objectionary_ (page 306), 
 a "combination of dictionary and object factory," with the following properties:
 
@@ -50,7 +50,7 @@ a "combination of dictionary and object factory," with the following properties:
   * Objects are nothing more than collections of objects;
   * Objects require hardware-specific VMs for execution.
 
-{% badge /images/2015/04/book-object-thinking.jpg 96 http://amzn.to/266oJr4 %}
+{% badge /images/2015/04/book-object-thinking.jpg 96 https://amzn.to/266oJr4 %}
 Seventeen years later (the book was published in 2004), we implemented the idea
 on top of [EO](https://www.eolang.org), our new programming language.
 The language is intentionally much simpler than Java or C++.

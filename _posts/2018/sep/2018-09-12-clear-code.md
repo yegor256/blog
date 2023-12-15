@@ -19,7 +19,7 @@ jb_picture:
   caption: The Rum Diary (2011) by Bruce Robinson
 ---
 
-There is a famous book by Robert Martin called [_Clean Code_](http://amzn.to/2m7LmaA).
+There is a famous book by Robert Martin called [_Clean Code_](https://amzn.to/2m7LmaA).
 The title is an obvious call to all of us: the code must be _clean_. Clean, like a kitchen,
 I suppose---there are no dirty dishes, no garbage on the floor, no smelly
 towels. Dirt to be cleaned in a code base, according to Martin, includes
@@ -42,10 +42,10 @@ It's not _clear_ how to use it---that's why it's useless.
 The metaphor applies to the source code. Making it clean is the first
 and very important step, which will remove all those coding anti-patterns
 so many books speak about, including my favorite
-[_Code Complete_](http://amzn.to/2cs4cXW) by Steve McConnell,
-[_Working Effectively With Legacy Code_](http://amzn.to/1SdcZ8M)
+[_Code Complete_](https://amzn.to/2cs4cXW) by Steve McConnell,
+[_Working Effectively With Legacy Code_](https://amzn.to/1SdcZ8M)
 by Michael Feathers, and
-[_Clean Code_](http://amzn.to/2m7LmaA).
+[_Clean Code_](https://amzn.to/2m7LmaA).
 A very important step, but not the most important one.
 A dirty kitchen that is useful is better than a clean one that I can't use, isn't it?
 

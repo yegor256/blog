@@ -40,7 +40,7 @@ explicit barriers between objects? Let's see.
 {% jb_picture_body %}
 
 First, I'm not the first and not the only one asking this question.
-[David West](http://amzn.to/266oJr4) much earlier said that "in most ways,
+[David West](https://amzn.to/266oJr4) much earlier said that "in most ways,
 encapsulation is a discipline more than a real barrier," and
 that "seldom is the integrity of an object protected in any absolute sense".
 In practice, "it is up to the user of an object to respect that object's encapsulation.''

@@ -21,16 +21,16 @@ nospell: true
 Here they are, in chronological order:
 
 孫子, _兵法_, 5th century BC,
-[Buy](http://amzn.to/2y8hu3O).
+[Buy](https://amzn.to/2y8hu3O).
 
 Niccolò Machiavelli, _Il Principe_, 1513.
-[Buy](http://amzn.to/2xeLKtt).
+[Buy](https://amzn.to/2xeLKtt).
 
 Friedrich Nietzsche, _Der Antichrist_, 1888.
-[Buy](http://amzn.to/2xeFnX2).
+[Buy](https://amzn.to/2xeFnX2).
 
 Eric Berne, _Games People Play: The Psychology of Human Relationships_, 1964.
-[Buy](http://amzn.to/2fixqLX).
+[Buy](https://amzn.to/2fixqLX).
 
 Анатолий Протопопов, _Трактат о любви_, 2003.
 [Купить](https://www.litres.ru/anatoliy-protopopov/traktat-o-lubvi/)

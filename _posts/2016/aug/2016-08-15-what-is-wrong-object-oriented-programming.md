@@ -52,7 +52,7 @@ which could only have originated in California."
 <!-- 1995 -->
 <!--
 [Paul Graham](https://en.wikipedia.org/wiki/Paul_Graham_%28computer_programmer%29)
-in [Ansi Common Lisp](http://amzn.to/29JwmOz), page 408:
+in [Ansi Common Lisp](https://amzn.to/29JwmOz), page 408:
 "The object-oriented model makes it easy to build up programs
 by accretion. What this often means, in practice, is that it
 provides a structured way to write spaghetti code."

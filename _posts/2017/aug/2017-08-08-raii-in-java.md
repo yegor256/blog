@@ -25,7 +25,7 @@ buffer:
 Resource Acquisition Is Initialization
 ([RAII](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization))
 is a design idea introduced in C++ by
-[Bjarne Stroustrup](http://amzn.to/2uMlANB)
+[Bjarne Stroustrup](https://amzn.to/2uMlANB)
 for exception-safe resource management.
 Thanks to garbage collection Java
 [doesn't have](https://stackoverflow.com/questions/477399) this feature,

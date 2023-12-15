@@ -92,7 +92,7 @@ mocks, fixtures, stubs, integration
 tests, and so on. I truly believe that a professional programmer spends more
 time creating automated tests than writing production code. That's why
 I'd recommend you focus on testing if you want to become a better engineer.
-Start with the great book [_Growing Object-Oriented Software, Guided by Tests_](http://amzn.to/1PBpoDT)
+Start with the great book [_Growing Object-Oriented Software, Guided by Tests_](https://amzn.to/1PBpoDT)
 by Steve Freeman and Nat Pryce and make yourself [a rule]({% pst 2017/mar/2017-03-24-tdd-that-works %}):
 every line of code, that you are at all in doubt about, must be proven by a test.
 
@@ -159,7 +159,7 @@ achievable goal. However, ask yourself, did you manage to read a dozen books
 over the last calendar year? I seriously doubt many of you will answer positively.
 Books are important because they are way more formal and "complete" than blog
 posts, news articles, or conference presentations. They cover entire topics,
-not parts of them. For example, did you read the [Git book](http://amzn.to/2crIfoY) ever? Most programmers
+not parts of them. For example, did you read the [Git book](https://amzn.to/2crIfoY) ever? Most programmers
 I know who use Git never even touched the book. They use Git, but barely understand
 what's under the hood. This is how junior developers behave. Be professional,
 read the manual!

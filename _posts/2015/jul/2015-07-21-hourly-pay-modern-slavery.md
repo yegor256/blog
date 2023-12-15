@@ -35,7 +35,7 @@ ancient slaves in our offices and in front of our monitors?
 {% jb_picture_body %}
 
 This post is partially provoked by a recently published semi-historical book
-[_How to Manage Your Slaves_](http://amzn.to/2crHiNG)
+[_How to Manage Your Slaves_](https://amzn.to/2crHiNG)
 by Jerry Toner. However, there's more. The entire eXtremely Distributed
 Software Development ([XDSD](https://www.xdsd.org)) methodology
 is based on a primary fundamental principle that states,
@@ -44,7 +44,7 @@ per hour, per week, or per month, but rather for verified deliverables.
 What is the difference and what does all this have to do with slavery?
 Let's see.
 
-{% badge /images/2015/07/how-to-manage-your-slaves.jpg 96 http://amzn.to/2crHiNG %}
+{% badge /images/2015/07/how-to-manage-your-slaves.jpg 96 https://amzn.to/2crHiNG %}
 
 My point here is that any payment schedule based on time instead of results
 is turning us into slaves.

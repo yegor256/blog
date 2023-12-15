@@ -83,7 +83,7 @@ all at one glance and immediately understand who is who. I just made up
 the number five, but you get the idea---make sure all diagram participants
 are easy to count. I've seen diagrams with 25 or more rectangles ... that's unacceptable.
 
-{% badge /images/2015/06/uml-distilled-book.jpg 96 http://amzn.to/2bQVt00 %}
+{% badge /images/2015/06/uml-distilled-book.jpg 96 https://amzn.to/2bQVt00 %}
 
 **Use UML**.
 Well, use whatever notation you feel comfortable with, but many years ago
@@ -92,7 +92,7 @@ to learn one for all; that's [UML](http://www.uml.org/).
 It's a huge format/standard/language,
 but you don't need to know all of it. Just learn the basics; that will be
 enough to express almost any idea you have. I would recommend
-[UML Distilled: A Brief Guide to the Standard Object Modeling Language (3rd Edition)](http://amzn.to/2bQVt00)
+[UML Distilled: A Brief Guide to the Standard Object Modeling Language (3rd Edition)](https://amzn.to/2bQVt00)
 by Martin Fowler.
 
 **Direct and Annotate Lines**.

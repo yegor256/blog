@@ -22,7 +22,7 @@ jb_picture:
 [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) (a.k.a. TDD)
 was [rediscovered](https://www.quora.com/Why-does-Kent-Beck-refer-to-the-rediscovery-of-test-driven-development)
 by [Kent Beck](https://en.wikipedia.org/wiki/Kent_Beck) and explained in
-[his famous book](http://amzn.to/2mTuxCs) in 2002.
+[his famous book](https://amzn.to/2mTuxCs) in 2002.
 In 2014, David Heinemeier Hansson (the creator of Ruby on Rails)
 said that TDD [is dead](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html)
 and only [harms architecture](http://david.heinemeierhansson.com/2014/test-induced-design-damage.html).

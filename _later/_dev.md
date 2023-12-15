@@ -84,7 +84,7 @@ and fix them as soon as possible.
 
 **Deployment Pipeline**.
 Read:
-[Continuous Delivery](http://amzn.to/2c7sR4V) (book).
+[Continuous Delivery](https://amzn.to/2c7sR4V) (book).
 
 **Continuous Integration**.
 

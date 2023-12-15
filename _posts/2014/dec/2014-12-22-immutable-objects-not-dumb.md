@@ -52,12 +52,12 @@ to Oracle documentation, and its methods may return different values each time
 we call them. An object of class `File`, being perfectly immutable,
 represents a mutable real-world entity, a file on disk.
 
-{% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2c7sVS1 %}
+{% badge /images/2014/12/java-concurrency-in-practice.png 100 https://amzn.to/2c7sVS1 %}
 
 In [this post]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}), I said
 that "an object is immutable if its state can't be modified after it is created."
 This definition is not mine; it's taken from
-[Java Concurrency in Practice by Goetz et al.](http://amzn.to/2c7sVS1), Section 3.4
+[Java Concurrency in Practice by Goetz et al.](https://amzn.to/2c7sVS1), Section 3.4
 (by the way, I highly recommend you read it). Now look at this class
 (I'm using [jcabi-http](http://http.jcabi.com) to read and write over HTTP):
 

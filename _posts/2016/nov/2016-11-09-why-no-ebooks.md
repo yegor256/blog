@@ -31,14 +31,14 @@ to go if you want to read my content.
 
 First of all, there is a simple technical reason:
 
-{% badge /images/2016/11/ctan-lion.jpg 92 http://amzn.to/2fBsTPn %}
+{% badge /images/2016/11/ctan-lion.jpg 92 https://amzn.to/2fBsTPn %}
 
 **I don't know how to format them**.
 I type all my books in [LaTeX](https://www.latex-project.org/).
 To my knowledge, it's the best and
 most powerful typesetting software. If you don't use it yet, you
 absolutely must read
-[The TeX Book](http://amzn.to/2fBsTPn) by Donald Knuth. Even if you're not
+[The TeX Book](https://amzn.to/2fBsTPn) by Donald Knuth. Even if you're not
 going to become a book writer or publisher, you must read the book.
 You will enjoy reading and will simply fall in love with TeX. The only
 problem with TeX is that it formats texts for a fixed page size, unlike

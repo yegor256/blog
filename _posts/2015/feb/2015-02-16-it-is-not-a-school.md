@@ -141,7 +141,7 @@ also contribute to the project. It's a win-win.
 Here is another example: Say you have to fix a Java module and you're a Java
 developer. You understand Java, but you don't understand how this algorithm works.
 You could blame yourself for not reading
-[Knuth](http://amzn.to/2c5o1n2)
+[Knuth](https://amzn.to/2c5o1n2)
 in school and ask the project to train you on it. A good and strong project manager should tell you that it's not a school
 and get rid of you. Again, a bad scenario for both of you. Instead,
 blame the project. The code is _not self-descriptive_ and is difficult to

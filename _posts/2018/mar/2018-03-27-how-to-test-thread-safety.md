@@ -226,7 +226,7 @@ class BooksTest {
 }
 ```
 
-{% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2c7sVS1 %}
+{% badge /images/2014/12/java-concurrency-in-practice.png 100 https://amzn.to/2c7sVS1 %}
 
 The first argument of `assertThat()` is an instance of
 [`Func`](http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/Func.html)
@@ -243,7 +243,7 @@ By the way, in order to make `Books` thread-safe we just need to add
 `synchronized` to its method `add()`. Or maybe you can suggest a better
 solution?
 
-P.S. I learned all this from [Java Concurrency in Practice](http://amzn.to/2c7sVS1)
+P.S. I learned all this from [Java Concurrency in Practice](https://amzn.to/2c7sVS1)
 by Goetz et al.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Do you create unit tests to prove that your classes are thread-safe?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1028678871187640329?ref_src=twsrc%5Etfw">August 12, 2018</a></blockquote>

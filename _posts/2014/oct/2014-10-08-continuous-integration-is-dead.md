@@ -73,7 +73,7 @@ Let's see the organizational side.
 Continuous integration is not only a server that builds, but a
 management/organizational process that should "work." Being a process
 that works means exactly what Jez Humble said in
-[Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](http://amzn.to/2c7sR4V),
+[Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](https://amzn.to/2c7sR4V),
 on page 55:
 
 > Crucially, if the build fails, the development team

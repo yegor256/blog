@@ -20,7 +20,7 @@ jb_picture:
 ---
 
 I [interviewed](https://www.youtube.com/watch?v=s-hdZZzMCac)
-David West, the author of the [Object Thinking](http://amzn.to/266oJr4) book,
+David West, the author of the [Object Thinking](https://amzn.to/266oJr4) book,
 a few weeks ago, and he said that classes were not meant to be in
 object-oriented programming at all. He actually said that
 [earlier](https://www.youtube.com/watch?v=RdE-d_EhzmA); I just didn't

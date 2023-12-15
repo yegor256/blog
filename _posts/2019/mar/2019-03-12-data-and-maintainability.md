@@ -188,7 +188,7 @@ example made a promise to take part of the problem and let me never worry about 
 but in reality it only made the problem larger, by giving me back two problems:
 `print()` and `Idx`.
 
-{% badge /images/2019/03/bjarne-stroustrup-book.jpg 96 http://amzn.to/2uMlANB %}
+{% badge /images/2019/03/bjarne-stroustrup-book.jpg 96 https://amzn.to/2uMlANB %}
 
 Why is this thanks to C++? Because C++ added object-orientation on top of C procedural
 programming ideas, never even thinking about prohibiting some of them, to _force_
@@ -200,7 +200,7 @@ switch the paradigm from procedures and variables to objects and methods.
 methods and classes and said: "Use them, they are more convenient
 than variables, ... or maybe not, sometimes, ... I don't know"
 (I'm not sure it's his quote, but I believe that it's very close to what he
-had in mind). Read [his book](http://amzn.to/2uMlANB), and you will see how many pages are dedicated to
+had in mind). Read [his book](https://amzn.to/2uMlANB), and you will see how many pages are dedicated to
 the philosophy of object orientation and how many to the technicalities of
 operators and statements.
 

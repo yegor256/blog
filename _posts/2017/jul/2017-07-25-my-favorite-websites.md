@@ -113,7 +113,7 @@ I was using these guys, but they seem to be ~~dead~~ less popular now:
 LinkedIn, Google+.
 
 <img src="/images/2017/07/sites-amazon.jpg" class="env-ico" alt="icon"/><br/>
-[Amazon](http://amzn.to/2ufwBbw)
+[Amazon](https://amzn.to/2ufwBbw)
 is where I buy everything that is not food or clothes.
 
 <img src="/images/2017/07/sites-aws.jpg" class="env-ico" alt="icon"/><br/>

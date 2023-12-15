@@ -69,7 +69,7 @@ Volume 1:
 
 Volume 2:
 <br/>
-<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+<a href="https://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 <br/>
 [PDF teaser](/pdf/books/eo2-teaser.pdf)
 
@@ -153,7 +153,7 @@ I will send you the stickers to your home address, free of charge.
 
 Apr 18, 2017:
 The second volume of the book is available
-[on Amazon](http://amzn.to/2pD42k3)! There are 220 pages, 15 sections,
+[on Amazon](https://amzn.to/2pD42k3)! There are 220 pages, 15 sections,
 one illustration and zero typos.
 Table of contents is [here](/images/books/elegant-objects/contents-2.pdf).
 

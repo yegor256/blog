@@ -48,10 +48,10 @@ two major success factors in
 [software outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
 that are very often neglected.
 
-{% badge /images/2015/05/wei-liao-zi-book.jpg 96 http://amzn.to/2bQVQI2 %}
+{% badge /images/2015/05/wei-liao-zi-book.jpg 96 https://amzn.to/2bQVQI2 %}
 
 I learned this principle from [Wei Liao Zi](https://en.wikipedia.org/wiki/Wei_Liaozi).
-He said, according to [Military Strategy Classics of Ancient China](http://amzn.to/2bQVQI2),
+He said, according to [Military Strategy Classics of Ancient China](https://amzn.to/2bQVQI2),
 p.239:
 
 > When information from below reaches up high, and the concerns

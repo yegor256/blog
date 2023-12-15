@@ -19,7 +19,7 @@ jb_picture:
 ---
 
 There is a great book called
-[Software Requirements](http://amzn.to/2c5n12h)
+[Software Requirements](https://amzn.to/2c5n12h)
 written by Karl Wiegers about, well, software requirements.
 It's a must read for every software engineer, in my opinion. There's
 no need for me to repeat what it says, but there are a few very

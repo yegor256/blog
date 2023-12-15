@@ -15,9 +15,9 @@ keywords:
   - quotes about software testing
 ---
 
-{% badge /images/2014/08/art-of-software-testing.png 96 http://amzn.to/1Y3qAbN %}
+{% badge /images/2014/08/art-of-software-testing.png 96 https://amzn.to/1Y3qAbN %}
 
-"[The Art of Software Testing"](http://amzn.to/1Y3qAbN)"
+"[The Art of Software Testing"](https://amzn.to/1Y3qAbN)"
 by Glenford J. Myers, Tom Badgett and Corey Sandler is one of
 my favorite books concerning testing and software engineering in
 general. In this article, I will provide an overview of the book, as well as
@@ -41,14 +41,14 @@ with a more robust level of detail or on a much higher level of abstraction.
 For example, Chapter 3 contains an eleven-page checklist to be used
 by a code reviewer in order to find programming mistakes.
 This list is definitely not comprehensive and it can't compete with, say,
-"[Code Complete](http://amzn.to/2bNjO8C)" by Steve McConnell.
+"[Code Complete](https://amzn.to/2bNjO8C)" by Steve McConnell.
 I believe, this checklist had significant value twenty years ago, but now it is out of date.
 
 Chapter 5 discusses basic principles and strategies of unit testing.
 However, the discussion is not abstract enough for a short 25-page summary,
 and is not specific enough for a detailed discussion. Again, twenty
 years ago this information may have had some value. Nowadays,
-"[Growing Object-Oriented Software, Guided by Tests](http://amzn.to/1PBpoDT)"
+"[Growing Object-Oriented Software, Guided by Tests](https://amzn.to/1PBpoDT)"
 by Steven Freeman and Nat Pryce
 is a much better source for this subject.
 
@@ -67,7 +67,7 @@ full of priceless quotes that can also be very practical. For example, on page 6
 
 > Testing is a destructive, even sadistic, process, which explains why most people find it difficult
 
-{% badge /images/2014/08/glenford-myers.png 200 http://amzn.to/1Y3qAbN %}
+{% badge /images/2014/08/glenford-myers.png 200 https://amzn.to/1Y3qAbN %}
 
 In Chapter 2, Dr. Myers discusses the psychology of testing and a very common and crucial
 misunderstanding of testing objectives. He claims that it is commonly accepted that

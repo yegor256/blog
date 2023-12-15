@@ -24,7 +24,7 @@ image: /images/andreea/podcast.png
 
 Video is [here](https://www.youtube.com/watch?v=UaxSDFesUR0).
 
-His great book on object-oriented programming: [Object Thinking](http://amzn.to/266oJr4)
+His great book on object-oriented programming: [Object Thinking](https://amzn.to/266oJr4)
 
 ## Transcript
 

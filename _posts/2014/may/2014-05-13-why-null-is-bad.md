@@ -49,7 +49,7 @@ It may return `NULL` instead of an object---that's what is wrong.
 There have been a number of opinions about this published already, including
 [Null References, The Billion Dollar Mistake](http://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare)
 presentation by Tony Hoare and the entire
-[Object Thinking](http://amzn.to/266oJr4)
+[Object Thinking](https://amzn.to/266oJr4)
 book by David West.
 
 Here, I'll try to summarize all the arguments and show examples of
@@ -89,8 +89,8 @@ Now, let's see the arguments against `NULL`.
 
 Besides Tony Hoare's presentation and David West's book
 mentioned above, I read these publications before writing this post:
-[Clean Code](http://amzn.to/2m7LmaA) by Robert Martin,
-[Code Complete](http://amzn.to/2cs4cXW) by Steve McConnell,
+[Clean Code](https://amzn.to/2m7LmaA) by Robert Martin,
+[Code Complete](https://amzn.to/2cs4cXW) by Steve McConnell,
 [Say "No" to "Null"](http://elegantcode.com/2010/05/01/say-no-to-null/) by John Sonmez,
 [Is returning null bad design?](http://stackoverflow.com/questions/1274792/is-returning-null-bad-design) discussion at Stack Overflow.
 

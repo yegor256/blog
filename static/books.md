@@ -84,7 +84,7 @@ dependency injection, reflection, and others.
 <br/>
 Published: 18 Apr 2017.
 <br/>
-<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+<a href="https://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 {: .book-par}
 
 {: .book-badge}

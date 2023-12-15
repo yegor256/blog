@@ -25,7 +25,7 @@ jb_picture:
 it should focus on preventing them,"---this is how
 [Rita Mulcahy](https://en.wikipedia.org/wiki/Rita_Mulcahy) started
 a chapter about Risk Management in her great book
-[_PMP Exam Prep_](http://amzn.to/266pAYB). Sounds smart, but how does
+[_PMP Exam Prep_](https://amzn.to/266pAYB). Sounds smart, but how does
 a project manager know about the problems which are supposed to be
 prevented? This is what that chapter and
 [_Risk Management Tricks of the Trade for Project Managers_](https://amzn.to/2V5b0wp)
