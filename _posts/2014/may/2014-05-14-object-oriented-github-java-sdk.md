@@ -37,7 +37,7 @@ but faced a number of issues:
 {% badge https://www.jcabi.com/logo-square.svg 64 %}
 
 Keeping in mind all those drawbacks, I created my
-own library---[jcabi-github](http://github.jcabi.com).
+own library---[jcabi-github](https://github.jcabi.com).
 Let's look at its most important advantages.
 
 <!--more-->
@@ -128,12 +128,12 @@ int found = github.entry()
   .intValue();
 ```
 
-[jcabi-http](http://http.jcabi.com) HTTP client is used by [jcabi-github](http://github.jcabi.com).
+[jcabi-http](https://http.jcabi.com) HTTP client is used by [jcabi-github](https://github.jcabi.com).
 
 ## Immutable
 
 All classes are truly immutable and annotated with
-[`@Immutable`](http://aspects.jcabi.com/annotation-immutable.html).
+[`@Immutable`](https://aspects.jcabi.com/annotation-immutable.html).
 This may sound like a minor benefit, but it was very important for me.
 I'm using this annotation in all my projects to ensure my classes are truly immutable.
 

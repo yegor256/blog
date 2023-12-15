@@ -17,7 +17,7 @@ keywords:
   - how to read manifest.mf
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 http://manifests.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://manifests.jcabi.com %}
 
 Every Java package (JAR, WAR, EAR, etc.) has
 a [`MANIFEST.MF`](http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html)
@@ -35,7 +35,7 @@ When your application has multiple JAR dependencies, you have multiple
 `META-INF/MANIFEST.MF`. Very often it is necessary to go through all of
 them in runtime and find the attribute by its name.
 
-[jcabi-manifests](http://manifests.jcabi.com) makes it possible with a one-liner:
+[jcabi-manifests](https://manifests.jcabi.com) makes it possible with a one-liner:
 
 ```java
 import com.jcabi.manifests.Manifests;
@@ -127,7 +127,7 @@ details right into `MANIFEST.MF`:
 ```
 
 Afterwards, you can retrieve them in
-runtime using [`jcabi-manifests`](http://manifests.jcabi.com):
+runtime using [`jcabi-manifests`](https://manifests.jcabi.com):
 
 ```java
 String url = Manifests.read("Pgsql");

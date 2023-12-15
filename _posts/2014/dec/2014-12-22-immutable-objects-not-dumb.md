@@ -59,7 +59,7 @@ that "an object is immutable if its state can't be modified after it is created.
 This definition is not mine; it's taken from
 [Java Concurrency in Practice by Goetz et al.](https://amzn.to/2c7sVS1), Section 3.4
 (by the way, I highly recommend you read it). Now look at this class
-(I'm using [jcabi-http](http://http.jcabi.com) to read and write over HTTP):
+(I'm using [jcabi-http](https://http.jcabi.com) to read and write over HTTP):
 
 ```java
 @Immutable

@@ -17,12 +17,12 @@ keywords:
   - aspectj weaving annotations
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://aspects.jcabi.com %}
 
 Say, you want to allow a Java method to work for
 a maximum of five seconds and want an exception
 to be thrown if the timeframe is exceeded. Here is how
-you can do it with [jcabi-aspects](http://aspects.jcabi.com)
+you can do it with [jcabi-aspects](https://aspects.jcabi.com)
 and [AspectJ](http://eclipse.org/aspectj/):
 
 ```java
@@ -37,16 +37,16 @@ public class Resource {
 <!--more-->
 
 Keep in mind that you should weave your classes after
-compilation, as explained [here](http://aspects.jcabi.com/example-weaving.html).
+compilation, as explained [here](https://aspects.jcabi.com/example-weaving.html).
 
 Let's discuss how this actually works, but first,
 I recommend you read [this post]({% pst 2014/jun/2014-06-01-aop-aspectj-java-method-logging %}),
 which explains how AOP aspects work together with
 [Java annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}).
 
-Due to [`@Timeable`](http://aspects.jcabi.com/annotation-timeable.html)
+Due to [`@Timeable`](https://aspects.jcabi.com/annotation-timeable.html)
 annotation and class weaving, every call to a method `load()`
-is intercepted by an aspect from [jcabi-aspects](http://aspects.jcabi.com).
+is intercepted by an aspect from [jcabi-aspects](https://aspects.jcabi.com).
 That aspect starts a new thread that monitors the execution of a method
 every second, checking whether it is still running.
 

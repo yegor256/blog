@@ -16,7 +16,7 @@ keywords:
   - java xml parsing best practices
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 http://xml.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://xml.jcabi.com %}
 
 Unlike with many other modern languages, parsing XML in Java requires  more than
 one line of code. XML traversing using XPath takes even more code,  and I find
@@ -40,7 +40,7 @@ XML xml = new XMLDocument(
 <!--more-->
 
 Now, we have an object of interface
-[`XML`](http://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html)
+[`XML`](https://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html)
 that can traverse the XML tree and convert it back to text.
 
 For example:

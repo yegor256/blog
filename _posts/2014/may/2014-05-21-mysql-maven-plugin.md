@@ -27,9 +27,9 @@ memory and on disc. However, it is always good to make sure
 that your classes are tested against a database identical
 to the one you have in production environment.
 
-{% badge https://www.jcabi.com/logo-square.svg 64 http://mysql.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://mysql.jcabi.com %}
 
-I've created my own Maven plugin, [jcabi-mysql-maven-plugin](http://mysql.jcabi.com),
+I've created my own Maven plugin, [jcabi-mysql-maven-plugin](https://mysql.jcabi.com),
 that does exactly two things: starts a MySQL server on
 `pre-integration-test` phase and shuts it down on
 `post-integration-test`.
@@ -37,7 +37,7 @@ that does exactly two things: starts a MySQL server on
 <!--more-->
 
 This is how you configure it in `pom.xml`
-(see also its full [usage instructions](http://mysql.jcabi.com/usage.html)):
+(see also its full [usage instructions](https://mysql.jcabi.com/usage.html)):
 
 ```xml
 <project>
@@ -143,7 +143,7 @@ This archive contains exactly the same files as you would use
 for a traditional MySQL installation. When the archive is unpacked,
 it is ready to start serving SQL requests as a normal MySQL server.
 
-3. [**`jcabi-mysql-maven-plugin`**](http://mysql.jcabi.com)
+3. [**`jcabi-mysql-maven-plugin`**](https://mysql.jcabi.com)
 starts a server, binding it to a TCP port reserved randomly.
 The main responsibility of my Maven plugin is to make sure
 that MySQL server starts correctly on every platform (Mac OS, Linux, Windows)
@@ -213,7 +213,7 @@ reserved TCP port, during resources copying. This operation
 is called "resources filtering," and you can read about it
 [here](https://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html).
 
-That's pretty much it. I'm using [jcabi-mysql-maven-plugin](http://mysql.jcabi.com)
+That's pretty much it. I'm using [jcabi-mysql-maven-plugin](https://mysql.jcabi.com)
 in a few projects, and it helps me to stay confident that my code works
 with a real MySQL server. I'm also using the
 [Liquibase](https://www.liquibase.org/)

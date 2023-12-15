@@ -302,14 +302,14 @@ Very often, I hear people say that immutability is a
 fancy feature, while absolutely impractical in real
 enterprise systems. As a counter-argument, I can only show
 some examples of real-life applications that contain only immutable Java objects:
-[`jcabi-http`](http://http.jcabi.com),
+[`jcabi-http`](https://http.jcabi.com),
 [`jcabi-xml`]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %}),
 [`jcabi-github`]({% pst 2014/may/2014-05-14-object-oriented-github-java-sdk %}),
 [`jcabi-s3`]({% pst 2014/may/2014-05-26-amazon-s3-java-oop-adapter %}),
 [`jcabi-dynamo`]({% pst 2014/apr/2014-04-14-jcabi-dynamo-java-api-of-aws-dynamodb %}),
 [`jcabi-w3c`]({% pst 2014/apr/2014-04-29-w3c-java-validators %}),
 [`jcabi-jdbc`]({% pst 2014/aug/2014-08-18-fluent-jdbc-decorator %}),
-[`jcabi-simpledb`](http://simpledb.jcabi.com),
+[`jcabi-simpledb`](https://simpledb.jcabi.com),
 [`jcabi-ssh`]({% pst 2014/sep/2014-09-02-java-ssh-client %}).
 The above are all Java libraries that work solely with immutable
 classes/objects. [netbout.com](https://github.com/netbout/netbout)

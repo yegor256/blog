@@ -148,8 +148,8 @@ class Document {
 
 This document is immutable, and its state (`id` ad `title`) is its identity. Let's
 see how we can use this immutable class
-(by the way, I'm using [`@Immutable`](http://aspects.jcabi.com/annotation-immutable.html) annotation
-from [jcabi-aspects](http://aspects.jcabi.com)):
+(by the way, I'm using [`@Immutable`](https://aspects.jcabi.com/annotation-immutable.html) annotation
+from [jcabi-aspects](https://aspects.jcabi.com)):
 
 ```java
 Document first = new Document(50, "How to grill a sandwich");

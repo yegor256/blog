@@ -299,8 +299,8 @@ this caching problem to
 another layer of your application.
 
 For example, in Java, you can use aspect-oriented programming aspects.
-For example, [jcabi-aspects](http://aspects.jcabi.com) has
-[`@Cacheable`](http://aspects.jcabi.com/annotation-cacheable.html)
+For example, [jcabi-aspects](https://aspects.jcabi.com) has
+[`@Cacheable`](https://aspects.jcabi.com/annotation-cacheable.html)
 annotation that caches the value returned by a method:
 
 ```java

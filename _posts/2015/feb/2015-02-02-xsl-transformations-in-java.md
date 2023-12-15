@@ -15,7 +15,7 @@ keywords:
   - java xslt code example
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
 
 [XSL transformation](https://www.w3.org/TR/xslt20/)
 (XSLT) is a powerful mechanism for converting one
@@ -67,7 +67,7 @@ it to plain English text.
 Here is how we're doing that with the help of
 [jcabi-xml]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %})
 and its class,
-[`XSLDocument`](http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html).
+[`XSLDocument`](https://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html).
 
 ```java
 final String xml = // comes from DynamoDB
@@ -97,7 +97,7 @@ That's it. Now let's see what's there in that `status.xsl` file
 ```
 
 It is good practice to create XSL documents only once per application
-run. We have a static utility method [`XSLDocument.make()`](http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29) for this:
+run. We have a static utility method [`XSLDocument.make()`](https://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29) for this:
 
 ```java
 final class Foo {

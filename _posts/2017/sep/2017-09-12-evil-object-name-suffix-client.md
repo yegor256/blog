@@ -153,8 +153,8 @@ an abstraction is 1) too big and 2) very data driven.
 
 BTW, check out some of the [JCabi libraries](https://www.jcabi.com) (Java) for examples
 of object-oriented clients without "client" objects:
-[jcabi-github](http://github.jcabi.com),
-[jcabi-dynamo](http://dynamo.jcabi.com),
+[jcabi-github](https://github.jcabi.com),
+[jcabi-dynamo](https://dynamo.jcabi.com),
 [jcabi-s3](http://s3.jcabi.com),
-or [jcabi-simpledb](http://simpledb.jcabi.com).
+or [jcabi-simpledb](https://simpledb.jcabi.com).
 

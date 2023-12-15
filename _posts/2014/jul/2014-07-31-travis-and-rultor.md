@@ -63,7 +63,7 @@ continuously integrate it. Every commit made to `master` triggers
 a new build in Travis. The result of the build changes the status
 of the project in Travis: either "failing" or "passing."
 
-[`jcabi-aspects`](http://aspects.jcabi.com) is a collection of
+[`jcabi-aspects`](https://aspects.jcabi.com) is a collection of
 [AOP AspectJ aspects]({% pst 2014/jun/2014-06-01-aop-aspectj-java-method-logging %}).
 We configured Travis to build it continuously. This is the badge it produces (the left one):
 

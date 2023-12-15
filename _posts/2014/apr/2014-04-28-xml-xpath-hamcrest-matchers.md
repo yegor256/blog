@@ -18,7 +18,7 @@ keywords:
   - hamcrest xpath example code
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 http://matchers.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://matchers.jcabi.com %}
 
 [Hamcrest](https://github.com/hamcrest/JavaHamcrest) is my favorite instrument
 in unit testing. It replaces the JUnit procedural assertions of
@@ -26,7 +26,7 @@ in unit testing. It replaces the JUnit procedural assertions of
 that subject in more detail sometime later.
 
 Now, though, I want to demonstrate a new library published today on GitHub and
-Maven Central: [jcabi-matchers](http://matchers.jcabi.com).
+Maven Central: [jcabi-matchers](https://matchers.jcabi.com).
 jcabi-matchers is a collection of
 Hamcrest matchers to make XPath assertions in XML and XHTML documents.
 
@@ -71,7 +71,7 @@ this method, converting a `String` into `Node` becomes a repetitive and routine
 task in every unit test.
 
 The above is a very strange limitation of Hamcrest in contrast to
-[jcabi-matchers](http://matchers.jcabi.com), which works with almost anything, from a
+[jcabi-matchers](https://matchers.jcabi.com), which works with almost anything, from a
 `String` to a
 [`Reader`](http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html) and
 even an [`InputStream`](http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html).
@@ -85,7 +85,7 @@ The library provides
 [a simple implementation](https://code.google.com/p/xml-matchers/source/browse/trunk/xml-matchers/src/main/java/org/xmlmatchers/namespace/SimpleNamespaceContext.java) of this interface,
 but, still, it is requires extra code in every unit test.
 
-[jcabi-matchers](http://matchers.jcabi.com) simplifies namespace handling
+[jcabi-matchers](https://matchers.jcabi.com) simplifies namespace handling
 problems even further, as it pre-defines most popular namespaces, including
 `xhtml`, `xs`, `xsl`, etc.
 

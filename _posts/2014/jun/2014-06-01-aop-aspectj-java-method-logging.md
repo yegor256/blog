@@ -24,7 +24,7 @@ and [log4j](http://logging.apache.org/log4j/2.x/)) every execution
 of a method, seeing what arguments it receives, what
 it returns and how much time every execution takes.
 This is how I'm doing it, with help of [AspectJ](http://eclipse.org/aspectj/),
-[jcabi-aspects](http://aspects.jcabi.com) and Java 6
+[jcabi-aspects](https://aspects.jcabi.com) and Java 6
 [annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}):
 
 ```java
@@ -64,8 +64,8 @@ be accessed in runtime.
 For example,
 [`@Override`](http://docs.oracle.com/javase/7/docs/api/java/lang/Override.html) is of
 the first type (its retention type is [`SOURCE`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE)), while [`@Test`](http://junit.sourceforge.net/javadoc/org/junit/Test.html) from JUnit is of the second type (retention type is [`RUNTIME`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)).
-[`@Loggable`](http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html)---the one I'm using in the script above---is an annotation of the second type,
-from [jcabi-aspects](http://aspects.jcabi.com).
+[`@Loggable`](https://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html)---the one I'm using in the script above---is an annotation of the second type,
+from [jcabi-aspects](https://aspects.jcabi.com).
 It stays with the byte-code in the `.class` file after compilation.
 
 Again, it is important to understand that even though
@@ -103,7 +103,7 @@ implements the desired functionality.
 ## AspectJ
 
 Let's see what these magic words mean. But, first,
-let's see how [jcabi-aspects](http://aspects.jcabi.com)
+let's see how [jcabi-aspects](https://aspects.jcabi.com)
 implements them using [AspectJ](http://eclipse.org/aspectj/)
 (it's a simplified example, full code you can find in
 [`MethodLogger.java`](https://github.com/jcabi/jcabi-aspects/blob/jcabi-0.15.2/src/main/java/com/jcabi/aspects/aj/MethodLogger.java)):
@@ -249,12 +249,12 @@ compiled Java binaries with attached annotations.
 
 # jcabi-aspects
 
-[jcabi-aspects](http://aspects.jcabi.com) is a JAR library
+[jcabi-aspects](https://aspects.jcabi.com) is a JAR library
 that contains `Loggable` annotation and `MethodLogger`
-aspect (btw, there are [many more](http://aspects.jcabi.com)
+aspect (btw, there are [many more](https://aspects.jcabi.com)
 aspects and annotations). You don't need to write your own
 aspect for method logging. Just add a few dependencies to
-your classpath and configure [jcabi-maven-plugin](http://plugin.jcabi.com)
+your classpath and configure [jcabi-maven-plugin](https://plugin.jcabi.com)
 for aspect weaving
 (get their latest versions in [Maven Central](http://search.maven.org/)):
 
@@ -291,9 +291,9 @@ for aspect weaving
 Since this weaving procedure takes a lot of configuration effort,
 I created a convenient Maven plugin with an `ajc` goal, which does
 the entire aspect weaving job. You can use AspectJ directly, but
-I recommend that you use [jcabi-maven-plugin](http://plugin.jcabi.com).
+I recommend that you use [jcabi-maven-plugin](https://plugin.jcabi.com).
 
-That's it. Now you can use [`@com.jcabi.aspects.Loggable`](http://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html)
+That's it. Now you can use [`@com.jcabi.aspects.Loggable`](https://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html)
 annotation and your methods will be logged through slf4j.
 
 If something doesn't work as explained, don't hesitate to

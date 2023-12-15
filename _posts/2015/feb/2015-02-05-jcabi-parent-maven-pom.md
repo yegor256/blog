@@ -15,7 +15,7 @@ keywords:
   - parent pom maven
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
 
 Maven is a build automation tool mostly for Java projects. It's a great
 tool, but it has one important drawback that has motivated the creation
@@ -39,7 +39,7 @@ what code duplication means. It's a disaster. However, there is a solution.
 
 <!--more-->
 
-[jcabi-parent](http://parent.jcabi.com) is a very simple Maven dependency
+[jcabi-parent](https://parent.jcabi.com) is a very simple Maven dependency
 with nothing inside it except a large `pom.xml` with multiple pre-configured
 dependencies, profiles, and plugins. All you need to do in order to reuse them
 all in your project is define `com.jcabi:parent` as your parent POM:
@@ -53,7 +53,7 @@ all in your project is define `com.jcabi:parent` as your parent POM:
   <parent>
     <groupId>com.jcabi</groupId>
     <artifactId>parent</artifactId>
-    <!-- check the latest version at http://parent.jcabi.com -->
+    <!-- check the latest version at https://parent.jcabi.com -->
     <version>0.32.1</version>
   </parent>
   [...]

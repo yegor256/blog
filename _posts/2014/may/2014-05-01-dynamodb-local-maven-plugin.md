@@ -34,7 +34,7 @@ that you start all your supplementary test stubs during
 the `pre-integration-test` phase, run your tests in the `integration-test`
 phase and then shutdown all stubs during the `post-integration-test`.
 
-{% badge https://www.jcabi.com/logo-square.svg 64 http://dynamodb.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://dynamodb.jcabi.com %}
 
 It would be great if it were possible to use DynamoDB Local
 that way. I didn't find any Maven plugins for that purpose,
@@ -43,7 +43,7 @@ so I decided to create my own---[jcabi-dynamodb-maven-plugin](https://github.com
 <!--more-->
 
 Full usage details for the plugin are explained
-on [its website](http://dynamodb.jcabi.com). However, here is a simple example
+on [its website](https://dynamodb.jcabi.com). However, here is a simple example
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
 ```xml
@@ -100,9 +100,9 @@ you should create tables before every integration test, using
 `createTable()` from [DynamoDB SDK](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/dynamodbv2/package-summary.html).
 
 To avoid this type of extra hassle, in the latest version 0.6 of
-[jcabi-dynamodb-maven-plugin](http://dynamodb.jcabi.com)
+[jcabi-dynamodb-maven-plugin](https://dynamodb.jcabi.com)
 [we introduced](https://github.com/jcabi/jcabi-dynamodb-maven-plugin/issues/16)
-a new goal [`create-tables`](http://dynamodb.jcabi.com/example-create-tables.html):
+a new goal [`create-tables`](https://dynamodb.jcabi.com/example-create-tables.html):
 
 ```xml
 <plugin>
@@ -153,7 +153,7 @@ of [`CreateTable`](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference
 The table will be created during the
 `pre-integration-test` phase and dropped at the
 `post-integration-test` phase. Now, we can make our
-integration test much more meaningful with the help of [jcabi-dynamo](http://dynamo.jcabi.com):
+integration test much more meaningful with the help of [jcabi-dynamo](https://dynamo.jcabi.com):
 
 ```java
 import com.jcabi.dynamo.Attributes;

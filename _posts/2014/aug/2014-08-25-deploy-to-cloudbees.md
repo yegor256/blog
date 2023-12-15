@@ -220,6 +220,6 @@ I will try to help you.
 
 Also, a similar configuration can be performed
 for [Heroku]({% pst 2014/sep/2014-09-13-deploying-to-heroku %})
-(using [jcabi-heroku-maven-plugin](http://heroku.jcabi.com))
-and for AWS Elastic Beanstalk (using [jcabi-beanstalk-maven-plugin](http://beanstalk.jcabi.com)).
+(using [jcabi-heroku-maven-plugin](https://heroku.jcabi.com))
+and for AWS Elastic Beanstalk (using [jcabi-beanstalk-maven-plugin](https://beanstalk.jcabi.com)).
 I'll probably dedicate individual posts to them, as well.

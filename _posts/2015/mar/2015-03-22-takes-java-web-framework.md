@@ -653,7 +653,7 @@ public final class TkIndexTest {
 
 Also, we can start the entire application or any individual _take_ in a
 test HTTP server and test its behavior via a real TCP socket; for example
-(I'm using [jcabi-http](http://http.jcabi.com) to make an HTTP request and check the output):
+(I'm using [jcabi-http](https://http.jcabi.com) to make an HTTP request and check the output):
 
 ```java
 public final class TkIndexTest {

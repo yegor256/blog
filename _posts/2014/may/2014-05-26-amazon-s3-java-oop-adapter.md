@@ -199,7 +199,7 @@ I'm using [JUnit](http://junit.org/) and [Mockito](https://code.google.com/p/moc
 ## Immutability
 
 All classes in [jcabi-s3](http://s3.jcabi.com) are
-annotated with [`@Immutable`](http://aspects.jcabi.com/annotation-immutable.html)
+annotated with [`@Immutable`](https://aspects.jcabi.com/annotation-immutable.html)
 and are truly immutable.
 
 The library ships as a JAR dependency in

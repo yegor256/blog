@@ -252,7 +252,7 @@ I simplified the actual algorithm of retrying a method call on failure, but I'm
 sure you get the idea. [AspectJ](https://www.eclipse.org/aspectj/),
 the [AOP](https://en.wikipedia.org/wiki/Aspect-oriented_programming)
 engine, uses
-[`@RetryOnFailure`](http://aspects.jcabi.com/annotation-retryonfailure.html)
+[`@RetryOnFailure`](https://aspects.jcabi.com/annotation-retryonfailure.html)
 annotation as a signal, informing us that the class
 has to be wrapped into another one. This is happening behind the scenes. We don't
 see that supplementary class, which implements the retrying algorithm.
