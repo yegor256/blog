@@ -49,7 +49,7 @@ Nice, isn't it? Now, let's see how it works.
 
 ## Annotation with Runtime Retention
 
-[Annotations](http://en.wikipedia.org/wiki/Java_annotation) is
+[Annotations](https://en.wikipedia.org/wiki/Java_annotation) is
 a technique introduced in Java 6. It is a meta-programming
 instrument that doesn't change the way code works, but gives
 marks to certain elements (methods, classes or variables).
@@ -75,7 +75,7 @@ a marker saying "please, log my execution."
 
 ## Aspect Oriented Programming (AOP)
 
-[AOP](http://en.wikipedia.org/wiki/Aspect-oriented_programming)
+[AOP](https://en.wikipedia.org/wiki/Aspect-oriented_programming)
 is a useful technique that enables adding executable blocks
 to the source code without explicitly changing it. In our example,
 we don't want to log method execution inside the class. Instead,

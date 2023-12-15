@@ -97,7 +97,7 @@ a Java object, which encapsulates all AWS interaction details.
 
 Since [jcabi-s3](http://s3.jcabi.com) exposes all entities
 as interfaces, they can easily be extended through encapsulation
-([Decorator Pattern](http://en.wikipedia.org/wiki/Decorator_pattern)).
+([Decorator Pattern](https://en.wikipedia.org/wiki/Decorator_pattern)).
 
 For example, you want your code to retry S3 object read operations
 a few times before giving up and

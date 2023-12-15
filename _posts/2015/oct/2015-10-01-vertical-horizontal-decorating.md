@@ -26,7 +26,7 @@ buffer:
   - "I migrate to horizontal decorating when the number of decorators starts to grow..."
 ---
 
-A [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)
+A [decorator pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
 is one of the best ways to add features to an object
 without changing its interface. I use
 [composable decorators]({% pst 2015/feb/2015-02-26-composable-decorators %})

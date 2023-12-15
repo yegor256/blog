@@ -154,7 +154,7 @@ want to keep my customers waiting.
 
 This is where puzzle driven development
 helps me. Instead of submitting bug reports, I add
-"[TBD](http://en.wikipedia.org/wiki/To_be_announced)" puzzles in
+"[TBD](https://en.wikipedia.org/wiki/To_be_announced)" puzzles in
 the SRS document. The puzzles are informal replacements of normally very strict
 formal requirements. They satisfy my customer, since they are in
 plain English, and are understandable by technical people.

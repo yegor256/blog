@@ -18,7 +18,7 @@ keywords:
   - xslt java web framework
 ---
 
-[Separating data and their presentation](http://en.wikipedia.org/wiki/Separation_of_presentation_and_content)
+[Separating data and their presentation](https://en.wikipedia.org/wiki/Separation_of_presentation_and_content)
 is a great concept. Take HTML and CSS for example. HTML is supposed to have pure data and
 CSS is supposed to format that data in order to make it readable by a human. Years ago,
 that was probably the intention of HTML/CSS, but in reality it doesn't work like that.
@@ -28,7 +28,7 @@ We still have to format our data using HTML tags, while
 [CSS]({% pst 2014/jun/2014-06-26-sass-in-java-webapp %})
 can help slightly with positioning and decorating.
 
-On the other hand, XML with [XSLT](http://en.wikipedia.org/wiki/XSLT)
+On the other hand, XML with [XSLT](https://en.wikipedia.org/wiki/XSLT)
 implements perfectly the idea of separating data and presentation. XML documents,
 like HTML, are supposed to contain data only without any information about
 positioning or formatting. XSL stylesheets position and decorate the data.
@@ -138,8 +138,8 @@ to know are a few simple commands and the principle of XML transformation.
 ## Why Not a Templating Engine?
 
 Now, why is this approach better than all that widely use Java templating engines, including
-[JSP](http://en.wikipedia.org/wiki/JavaServer_Pages),
-[JSF](http://en.wikipedia.org/wiki/JavaServer_Faces),
+[JSP](https://en.wikipedia.org/wiki/JavaServer_Pages),
+[JSF](https://en.wikipedia.org/wiki/JavaServer_Faces),
 [Velocity](http://velocity.apache.org/engine/devel/),
 [FreeMarker](http://freemarker.org/),
 [Tiles](http://tiles.apache.org/), etc?
@@ -182,7 +182,7 @@ done by Julian Reschke. Besides that, XSLT 2.0 is
 [not supported](http://stackoverflow.com/questions/6282340/which-browsers-support-xslt-2-0-already) at all.
 
 There is a workaround, though. We can understand which browser
-is making a request (via its [`User-Agent`](http://en.wikipedia.org/wiki/User_agent) HTTP header)
+is making a request (via its [`User-Agent`](https://en.wikipedia.org/wiki/User_agent) HTTP header)
 and transform XML into HTML on the server side. Thus, for modern browsers that support XSL,
 we will deliver XML and for all others---HTML.
 

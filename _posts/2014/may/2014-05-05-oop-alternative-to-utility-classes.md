@@ -35,7 +35,7 @@ This design idea is very popular in the Java world (as well as C#, Ruby, etc.)
 because utility classes provide common functionality used everywhere.
 
 Here, we want to follow the
-[DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and avoid
+[DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and avoid
 duplication. Therefore, we place common code blocks into utility classes and
 reuse them when necessary:
 
@@ -159,14 +159,14 @@ collection of strings and hides all I/O operations. When we iterate it---a
 file is being read. When we `addAll()` to it---a file is being written.
 
 `Trimmed` also implements `Collection<String>` and encapsulates a collection of
-strings ([Decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)).
+strings ([Decorator pattern](https://en.wikipedia.org/wiki/Decorator_pattern)).
 Every time the next line is retrieved, it gets trimmed.
 
 All classes taking
 participation in the snippet are rather small: `Trimmed`, `FileLines`, and
 `UnicodeFile`.
 Each of them is responsible for its own single feature, thus following perfectly
-the [single responsibility principle](http://en.wikipedia.org/wiki/Single_responsibility_principle).
+the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
 {% youtube D0dqC_3Bch8 %}
 

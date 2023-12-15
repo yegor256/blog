@@ -75,7 +75,7 @@ Simply put, XML lacks a tool for primitive data manipulations within
 a document. Perhaps, it is this shortcoming that makes XML unpopular with some.
 
 Anyway, here is a tool I created a few month ago: [Xembly](https://www.xembly.org).
-It is an imperative language with a few simple directives and resembles [Assembly](http://en.wikipedia.org/wiki/Assembly_language)
+It is an imperative language with a few simple directives and resembles [Assembly](https://en.wikipedia.org/wiki/Assembly_language)
 in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions or variables - just a sequence of directives with arguments.
 
 Let's create a simple example. Say, for instance, we want to add a new account number `36`

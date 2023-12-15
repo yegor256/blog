@@ -30,8 +30,8 @@ future.
 
 <!--more-->
 
-DynamoDB is a [NoSQL](http://en.wikipedia.org/wiki/NoSQL) database accessible
-through [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer)
+DynamoDB is a [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database accessible
+through [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer)
 JSON API. Its design is relatively simple. There are tables, which basically
 are collections of data structures, or in AWS terminology, "items."
 
@@ -51,7 +51,7 @@ optional attributes. For instance, take the example table `depts`:
 For Java, Amazon provides an
 [SDK](https://aws.amazon.com/documentation/sdkforjava/), which mirrors all
 RESTful calls to Java methods. The SDK works fine, but is designed in a pure
-[procedural](http://en.wikipedia.org/wiki/Procedural_programming) style.
+[procedural](https://en.wikipedia.org/wiki/Procedural_programming) style.
 
 Let's say we want to add a new item to the table above. RESTful call
 [`putItem`](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html)
@@ -88,12 +88,12 @@ try {
 
 The above script works fine, but there is one major drawback---it is not
 object oriented. It is a perfect example of an imperative [procedural
-programming](http://en.wikipedia.org/wiki/Procedural_programming).
+programming](https://en.wikipedia.org/wiki/Procedural_programming).
 
 To allow you to compare, let me show what I've done with
 [jcabi-dynamo](http://dynamo.jcabi.com). Here is my code, which does exactly the
 same thing, but in an
-[object-oriented](http://en.wikipedia.org/wiki/Object-oriented_programming) way:
+[object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) way:
 
 ```java
 Region region = // instantiate it with credentials

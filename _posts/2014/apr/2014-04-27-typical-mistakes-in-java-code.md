@@ -300,7 +300,7 @@ why do they have to share the same input constants?
 
 ## Test Data Coupling
 
-This is an example of [data coupling](http://en.wikipedia.org/wiki/Coupling_%28computer_programming%29) in a test method:
+This is an example of [data coupling](https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29) in a test method:
 
 ```java
 User user = new User("Jeff");

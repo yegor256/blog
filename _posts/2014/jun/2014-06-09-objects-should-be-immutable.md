@@ -26,7 +26,7 @@ related:
 ---
 
 In object-oriented programming, an object is
-[immutable](http://en.wikipedia.org/wiki/Immutable_object) if its state can't be
+[immutable](https://en.wikipedia.org/wiki/Immutable_object) if its state can't be
 modified after it is created.
 In Java, a good example of an
 immutable [object]({% pst 2016/jul/2016-07-14-who-is-object %})

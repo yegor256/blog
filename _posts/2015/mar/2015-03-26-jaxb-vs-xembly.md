@@ -18,7 +18,7 @@ keywords:
 
 {% badge http://img.xembly.org/logo-256x256.png 64 https://www.xembly.org %}
 
-[JAXB](http://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding)
+[JAXB](https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding)
 is a 10-year-old Java technology that allows us to
 convert a Java object into an XML document (marshalling) and
 back (unmarshalling). This technology is based on

@@ -31,7 +31,7 @@ Let's assume you're using MySQL (PostgreSQL or any other
 database configuration will be very similar.)
 
 Add `liquibase-maven-plugin`
-to your [`pom.xml`](http://maven.apache.org/pom.html) (get its latest
+to your [`pom.xml`](https://maven.apache.org/pom.html) (get its latest
 version in [Maven Central](http://search.maven.org/)):
 
 ```xml
@@ -61,7 +61,7 @@ version in [Maven Central](http://search.maven.org/)):
 To check that it works, run `mvn liquibase:help`.
 
 I would recommend you keep database credentials
-in [`settings.xml`](http://maven.apache.org/settings.html)
+in [`settings.xml`](https://maven.apache.org/settings.html)
 and  in their respective profiles. For example:
 
 ```xml

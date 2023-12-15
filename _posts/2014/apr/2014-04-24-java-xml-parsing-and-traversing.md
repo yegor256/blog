@@ -54,7 +54,7 @@ System.out.println(xml.toString());
 
 Method `xpath()` allows you to find a collection of text nodes
 or attributes in the document, and then convert them to
-a collection of strings, using [XPath query](http://en.wikipedia.org/wiki/XPath):
+a collection of strings, using [XPath query](https://en.wikipedia.org/wiki/XPath):
 
 ```java
 // outputs "hello" and "world"

@@ -81,7 +81,7 @@ Both projects satisfied the
 of their users. I'm mentioning this to
 emphasize that both projects produced valuable and useful lines of code. There
 was no garbage and almost no [code
-duplication](http://en.wikipedia.org/wiki/Duplicate_code).
+duplication](https://en.wikipedia.org/wiki/Duplicate_code).
 
 ## Show Me the Money
 
@@ -117,7 +117,7 @@ removed 9k, which comes to 54k in all. To complete this work, we spent only $7k
 
 This also means that programmers were writing approximately 150 lines per hour
 or over a thousand per day.
-[The Mythical Man-Month](http://en.wikipedia.org/wiki/The_Mythical_Man-Month)
+[The Mythical Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)
 talks about 10 lines per day, which is a hundred times less than we saw in our project.
 
 $350k vs $7k, $3.98 vs &cent;13? What do you think?

@@ -24,7 +24,7 @@ jb_picture:
 
 It is a very common problem in project management---how to make team
 members more responsible and avoid [micro
-management](http://en.wikipedia.org/wiki/Micromanagement)?
+management](https://en.wikipedia.org/wiki/Micromanagement)?
 We start with creating plans, drawing Gantt charts, announcing milestones,
 motivating everybody and promising big bonuses on success.
 

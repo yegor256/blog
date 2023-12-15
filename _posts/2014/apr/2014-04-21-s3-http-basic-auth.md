@@ -52,7 +52,7 @@ few people had access to the content using their Web browsers.
 ## HTTP Basic Authentication
 
 The HTTP protocol offers a nice
-["basic access authentication"](http://en.wikipedia.org/wiki/Basic_access_authentication)
+["basic access authentication"](https://en.wikipedia.org/wiki/Basic_access_authentication)
 feature that doesn't require any extra site pages.
 
 When an HTTP request arrives at the server, it doesn't deliver the content but
@@ -61,7 +61,7 @@ who you are, please authenticate yourself."
 
 The browser shows its native login screen and prompts for a user name and
 password. After entering the login credentials, they are concatenated,
-[Base64](http://en.wikipedia.org/wiki/Base64) encoded, and added to the next
+[Base64](https://en.wikipedia.org/wiki/Base64) encoded, and added to the next
 request in `Authorization` HTTP header.
 
 {% figure /images/2014/04/s3auth-authentication-dialog.png 600 %}

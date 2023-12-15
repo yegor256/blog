@@ -47,8 +47,8 @@ components, in simple terms.
 {% youtube nheD2LNYrpk %}
 
 First, to create a web server, we should create
-a new [network socket](http://en.wikipedia.org/wiki/Network_socket),
-that accepts connections on a certain [TCP port](http://en.wikipedia.org/wiki/Port_%28computer_networking%29).
+a new [network socket](https://en.wikipedia.org/wiki/Network_socket),
+that accepts connections on a certain [TCP port](https://en.wikipedia.org/wiki/Port_%28computer_networking%29).
 Usually it is 80, but I'm going to use 8080 for testing purposes.
 This is done in Java with the [`ServerSocket`](http://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html) class:
 
@@ -340,10 +340,10 @@ If you're using Maven, this is the `pom.xml` you should start with:
 
 ```xml
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="https://maven.apache.org/POM/4.0.0"
   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-    http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  xsi:schemaLocation="https://maven.apache.org/POM/4.0.0
+    https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>foo</groupId>
   <artifactId>foo</artifactId>
@@ -569,8 +569,8 @@ in terms of [MVC]({% pst 2016/dec/2016-12-13-mvc-vs-oop %}).
 
 I'll write a separate article about templating with Xembly and XSL very soon.
 
-In the meantime, we'll create decorators for [JSF/Facelets](http://en.wikipedia.org/wiki/Facelets)
-and [JSP](http://en.wikipedia.org/wiki/JavaServer_Pages) rendering
+In the meantime, we'll create decorators for [JSF/Facelets](https://en.wikipedia.org/wiki/Facelets)
+and [JSP](https://en.wikipedia.org/wiki/JavaServer_Pages) rendering
 in Takes. If you're interested in helping, please fork the framework
 and submit your pull requests.
 

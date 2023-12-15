@@ -28,7 +28,7 @@ I guess, DynamoDB Local is meant to be used in
 integration testing and this is how we're going to use it below.
 
 I use Maven to run all of my Java integration
-testing using [`maven-failsafe-plugin`](http://maven.apache.org/surefire/maven-failsafe-plugin/).
+testing using [`maven-failsafe-plugin`](https://maven.apache.org/surefire/maven-failsafe-plugin/).
 The philosophy of integration testing with Maven is
 that you start all your supplementary test stubs during
 the `pre-integration-test` phase, run your tests in the `integration-test`

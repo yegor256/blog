@@ -57,7 +57,7 @@ how `NULL` usage can be avoided and replaced with proper object-oriented constru
 
 Basically, there are two possible alternatives to `NULL`.
 
-The first one is **[Null Object](http://en.wikipedia.org/wiki/Null_Object_pattern)**
+The first one is **[Null Object](https://en.wikipedia.org/wiki/Null_Object_pattern)**
 design [pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
 (the best way is to make it a constant):
 
@@ -114,9 +114,9 @@ if (employee == null) {
 ```
 
 This is how exceptional situations are supposed to be handled in
-[C](http://en.wikipedia.org/wiki/C_%28programming_language%29) and
+[C](https://en.wikipedia.org/wiki/C_%28programming_language%29) and
 other imperative procedural languages. OOP introduced
-[exception handling](http://en.wikipedia.org/wiki/Exception_handling)
+[exception handling](https://en.wikipedia.org/wiki/Exception_handling)
 primarily to get rid of these ad-hoc error handling blocks.
 In OOP, we let exceptions bubble up until they reach an application-wide
 error handler and our code becomes much cleaner and shorter:

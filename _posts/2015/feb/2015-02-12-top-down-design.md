@@ -34,7 +34,7 @@ why you always work **top down**. Let's see what I mean through a practical exam
 {% jb_picture_body %}
 
 Say I'm contracted by a friend of mine to create a word-counting command line
-tool very similar to [wc](http://en.wikipedia.org/wiki/Wc_%28Unix%29). He
+tool very similar to [wc](https://en.wikipedia.org/wiki/Wc_%28Unix%29). He
 promised to pay me $200 for this work, and I promised him I'd deliver the
 product in two increments---an alpha and beta version. I promised him
 I'd release the alpha version on Saturday and the beta version on Sunday. He is

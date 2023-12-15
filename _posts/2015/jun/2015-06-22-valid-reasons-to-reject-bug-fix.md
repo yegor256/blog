@@ -84,7 +84,7 @@ a test, a bug fix is a waste of the project's money.
 Furthermore, without a unit test reproducing the issue, there is no
 guarantee that our bug fix doesn't introduce more bugs. I would even say that
 the more bug fixes we have, the higher the
-[entropy](http://en.wikipedia.org/wiki/Entropy_%28information_theory%29).
+[entropy](https://en.wikipedia.org/wiki/Entropy_%28information_theory%29).
 And the only way to decrease this uncertainty is by covering the
 code with unit tests. Without a test, a bug fix brings more disorder
 to the code base.

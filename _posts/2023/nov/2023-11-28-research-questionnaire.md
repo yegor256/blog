@@ -73,6 +73,10 @@ _responsibilities_ onto them. Our role is to determine if they enjoy their offic
 space. We should observe their behavior, symptoms, and reactions to draw
 conclusions. Simply asking, "Do you feel comfortable?" suggests a lazy or
 inexperienced interviewer.
+Responding to such a _generic_ question, respondents will have to put together 
+their entire experience of being in the office, analyze it, make some
+conclusions, and then summarize them for us---this is the work we researchers have to do,
+not our interviewees.
 
 Consider this revised questionnaire:
 

@@ -93,7 +93,7 @@ browser and gets a hold of a properly encrypted email cookie? In this case,
 the thief would be able to use the same cookie for authentication even without
 knowing its content. The server would trust the information and let the
 person into my account. This type of attack is called
-[man-in-the-middle](http://en.wikipedia.org/wiki/Man-in-the-middle_attack) (MITM).
+[man-in-the-middle](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) (MITM).
 To prevent this from happening, we should use HTTPS and inform the browser
 that the cookie is sensitive and should never be returned to the server without
 SSL encryption. That's done by an extra flag in the `Set-Cookie` header:
@@ -111,7 +111,7 @@ JavaScript code into the page (Don't ask me how ... this will happen only
 if your entire HTML rendering is done wrong), and this code will gain access
 to the cookie. Then, the code will send the cookie somewhere else so
 the attacker can collect it. This type of attack is called
-[cross-site scripting](http://en.wikipedia.org/wiki/Cross-site_scripting) (XSS).
+[cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) (XSS).
 To prevent this, there is another flag for the `Set-Cookie` header, called `HttpOnly`:
 
 ```text

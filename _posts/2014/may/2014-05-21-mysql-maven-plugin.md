@@ -137,7 +137,7 @@ you're developing locally, but in
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})
 environment this can be a problem. That's why we're reserving a TCP port first.
 
-2. [**`maven-dependency-plugin`**](http://maven.apache.org/plugins/maven-dependency-plugin/unpack-mojo.html)
+2. [**`maven-dependency-plugin`**](https://maven.apache.org/plugins/maven-dependency-plugin/unpack-mojo.html)
 is downloading a MySQL distribution in a zip archive (rather big file, over 300Mb for Linux), and unpacks it.
 This archive contains exactly the same files as you would use
 for a traditional MySQL installation. When the archive is unpacked,
@@ -211,7 +211,7 @@ hibernate.connection.password=root
 Maven will replace that `${mysql.port}` with the number of
 reserved TCP port, during resources copying. This operation
 is called "resources filtering," and you can read about it
-[here](http://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html).
+[here](https://maven.apache.org/plugins/maven-resources-plugin/examples/filter.html).
 
 That's pretty much it. I'm using [jcabi-mysql-maven-plugin](http://mysql.jcabi.com)
 in a few projects, and it helps me to stay confident that my code works

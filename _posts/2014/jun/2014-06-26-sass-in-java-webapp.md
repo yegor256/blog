@@ -85,7 +85,7 @@ to compress/minify the style sheets produced by the SASS compiler:
 Minified `.css` files will be placed into `target/css-min`.
 
 The final step is to configure the
-[maven-war-plugin](http://maven.apache.org/plugins/maven-war-plugin/)
+[maven-war-plugin](https://maven.apache.org/plugins/maven-war-plugin/)
 to pick up `.css` files and package them into the final WAR archive:
 
 ```xml
