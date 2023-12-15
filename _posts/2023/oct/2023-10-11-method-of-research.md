@@ -33,22 +33,26 @@ You start the section with a paragraph where you state the main _objective_ of t
 research, then break it down into a few 
 [_research questions_](https://en.wikipedia.org/wiki/Research_question).
 
-Then, you explain, paragraph by paragraph, the _procedures_ of the method. In each
-step, you either collect, combine, or generate data. First, you explain what
-you do. Second, you highlight how your procedures contribute to one of the
+Then, you explain the _procedures_ of the method (strictly one procedure per paragraph). 
+In each step, you either collected, combined, or generated data. First, you explain what
+you did. Second, you highlight how your procedure contributed to one of the
 research questions. Third, you justify your actions by providing strong enough
 reasons for why you performed these specific manipulations with the data.
 
 Here is a toy sample of the Method section:
 
 ``` 
+\section{Method}
+
 The goal of this study is to understand whether 
 cats love fruits. This leads to the following 
-research questions: 
-  RQ1: What is a correlation between the color 
-  of a cat's fur and its passion for fruits? 
-  RQ2: Which fruits are preferred by cats: 
-  bananas, apples, or marakujas?
+research questions:   
+\begin{description}
+\item[RQ1] What is a correlation between the color 
+of a cat's fur and its passion for fruits? 
+\item[RQ2] Which fruits are preferred by cats: 
+bananas, apples, or marakujas?
+\end{description}
 
 First, we found 15 cats: 2 white, 3 black, 
 and 10 of mixed color. It is important for RQ1 

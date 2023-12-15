@@ -65,7 +65,9 @@ on Introduction, Results, and Discussion.
 
 ## Introduction
 
-Answer these questions in this particular order:
+[Answer](https://goldbio.com/articles/article/how-to-write-introduction-section) 
+these questions in this particular order:
+
   * What is going on in your field of study?
   * What is wrong?
   * Why is this Problem important?
