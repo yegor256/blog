@@ -195,7 +195,8 @@ repository is not being watched over, the badges will eventually start failing.
 
 In order to use your code we have to trust it, meaning that we have to
 be sure that it works, or at least passes automated tests. (Do I have to say that
-you must have tests?) How can we be sure it works? [CI]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %})
+you [must have tests]({% pst 2022/jul/2022-07-05-safety-net %})?) 
+How can we be sure it works? [CI]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %})
 is the answer. We must be able
 to see the logs of the recent CI build and make sure it is clean.
 
