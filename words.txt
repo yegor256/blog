@@ -22,6 +22,7 @@ abusers
 abusing
 abusive
 academic
+academicians
 accent
 accept
 acceptable
@@ -1365,6 +1366,7 @@ cheering
 cheerleader
 cheerleaders
 chef
+cherry-picked
 chess
 chevrolet
 chew
@@ -1550,6 +1552,7 @@ coffee
 cog
 cognitive
 cogs
+coherent
 cohesion
 cohesive
 coin
@@ -1828,6 +1831,7 @@ constructed
 constructing
 construction
 constructive
+constructively
 constructor
 constructors
 constructs
@@ -2598,6 +2602,7 @@ distilled
 distinguish
 distinguishes
 distinguishing
+distorted
 distract
 distracting
 distraction
@@ -2823,6 +2828,7 @@ editors
 edsger
 educate
 educated
+educating
 education
 educational
 edwards
@@ -3671,6 +3677,7 @@ frivolous
 from
 front
 front-end
+frustrate
 frustrated
 frustrates
 frustrating
@@ -3893,6 +3900,7 @@ graham
 grain
 grammar
 grammarly
+grammatical
 grandchildren
 grant
 graph
@@ -4397,6 +4405,7 @@ improvise
 in
 in-budget
 in-code
+in-cooperation
 in-docker
 in-house
 in-memory
@@ -4406,6 +4415,7 @@ in-the-office
 inability
 inaccurate
 inadequacy
+inadequate
 inapplicable
 inappropriate
 inbox
@@ -5736,6 +5746,7 @@ misleading
 mismatch
 mismatches
 misplaced
+misquoted
 miss
 missed
 misses
@@ -6748,6 +6759,7 @@ placed
 placement
 places
 placing
+plagiarism
 plagues
 plain
 plainmixin
@@ -7305,6 +7317,7 @@ rant
 rapidly
 rapist
 rapists
+rapport
 rapportive
 rare
 rarely
@@ -7760,7 +7773,6 @@ reviewer's
 reviewers
 reviewing
 reviews
-revision
 revoke
 revolution
 revolver
@@ -7770,6 +7782,7 @@ reward-focused
 rewarded
 rewarding
 rewards
+rework
 rewrite
 rex
 ReXSL
@@ -8355,6 +8368,7 @@ simulation
 sin
 sinatra
 since
+sincere
 sincerely
 sing
 singer
@@ -8759,6 +8773,7 @@ stole
 stolen
 stop
 stopped
+stopper
 stoppers
 stops
 storage
@@ -8924,6 +8939,7 @@ suits
 sullivan
 sum
 summaries
+summarization
 summarize
 summarized
 summarizes
@@ -9241,6 +9257,7 @@ thirty-two
 this
 thomas
 thompson
+thoroughly
 those
 though
 thought
@@ -9886,6 +9903,7 @@ vidoni
 vienna
 view
 viewed
+viewpoints
 views
 vigilant
 vigilantes

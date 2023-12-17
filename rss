@@ -1,15 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-12-16T15:01:14+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Results and Discussion: Facts and Interpretation</title><link href="https://www.yegor256.com/2023/12/11/results-and-discussion.html" rel="alternate" type="text/html" title="Results and Discussion: Facts and Interpretation" /><published>2023-12-11T00:00:00+00:00</published><updated>2023-12-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/11/results-and-discussion</id><content type="html" xml:base="https://www.yegor256.com/2023/12/11/results-and-discussion.html"><![CDATA[<p>Almost every empirical research paper contains two essential sections: Results
-and Discussion. The former presents the facts collected through the research
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-12-17T15:21:25+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Review a Research Paper: Constructive Critique in Five Steps</title><link href="https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html" rel="alternate" type="text/html" title="Review a Research Paper: Constructive Critique in Five Steps" /><published>2023-12-17T00:00:00+00:00</published><updated>2023-12-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/17/how-to-review-research-paper</id><content type="html" xml:base="https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html"><![CDATA[<p>I’m helping <a href="/2021/04/14/how-we-organized-iccq.html">organize</a> 
+the <a href="https://www.iccq.ru">ICCQ conference</a> this year for the fourth time, with the
+in-cooperation support of the IEEE Computer Society. Based on this short-term
+experience, I can assert that reviewing research papers is a skill that even some
+reputable and experienced academicians either don’t possess or are too lazy to
+apply. We often encounter sketchy, subjective, and disputable reviews that
+don’t assist authors but only frustrate and discourage them. In this short blog
+post, as an absolute amateur in the subject matter, I will try to summarize how
+to review an academic research paper (thus mostly helping other newbies).</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Берегись автомобиля (1966) by Эльдар Рязанов" src="/images/2023/12/beregis-avtomobila.jpg" longdesc="#ed6a985f" /><figcaption id="ed6a985f">Берегись автомобиля (1966) by Эльдар Рязанов</figcaption></figure>
+
+<p>Structure your review as a plain text of <em>five</em> paragraphs, 
+each answering one question:</p>
+
+<ol>
+  <li>How did you understand the thesis of the paper?</li>
+  <li>What are the positive points?</li>
+  <li>What are the major inconsistencies?</li>
+  <li>What are the minor mistakes?</li>
+  <li>What’s next?</li>
+</ol>
+
+<p>First, provide a brief summary of the paper. The main purpose of this paragraph
+is to ensure that you, the reviewer, have actually read the paper and
+understood what it’s about. Such summarization helps build <em>rapport</em> between you
+and the readers of your review—the authors of the paper, whom you intend to
+criticize. The better your summary, the more they will respect your negative
+points, taking them constructively.</p>
+
+<p>Then, identify the <strong>positive points</strong> of the paper, again demonstrating that you
+have read and appreciate it. Here is a cheat list of the most typical merits a
+good research paper may have (most important at the top):</p>
+
+<ul>
+  <li>The idea is new and contributes significantly to the field.</li>
+  <li>The research question(s) are clear, well-defined, and relevant.</li>
+  <li>The method is robust, appropriate, and clearly described.</li>
+  <li>The paper thoroughly reviews existing literature.</li>
+  <li>The data found effectively supports the conclusions.</li>
+  <li>The results are significant.</li>
+  <li>The conclusion effectively summarizes the research.</li>
+  <li>The paper is well-organized.</li>
+  <li>The paper is well-written with clear and concise language.</li>
+</ul>
+
+<p>Next, highlight the <strong>major</strong> inconsistencies. This list of typical 
+mistakes may help you (the most severe ones are at the top):</p>
+
+<ul>
+  <li>Certain parts of the paper are obvious <a href="https://en.wikipedia.org/wiki/Plagiarism">plagiarism</a>.</li>
+  <li>The purpose of the research is unclear.</li>
+  <li>The need for this research in the field is not obvious.</li>
+  <li>The research questions are not clearly defined.</li>
+  <li>Literature review misses important related work.</li>
+  <li>Conclusions are not fully supported by the data.</li>
+  <li>Data is distorted or cherry-picked to fit a hypothesis.</li>
+  <li>The viewpoints presented are biased and/or lack balance.</li>
+  <li>Important details of the <a href="/2023/10/11/method-of-research.html">research method</a> are missing.</li>
+  <li>Not all limitations or threats to validity are identified.</li>
+  <li>The <a href="/2022/08/24/research-paper-template.html">structure</a> is not coherent.</li>
+  <li>Some statements are ambiguous.</li>
+</ul>
+
+<p>Then, mention <strong>minor</strong> mistakes. The difference between minor and major
+problems is that a minor problem is not a “show stopper”: a paper with minor
+mistakes but without major ones may be accepted for publication, while the
+opposite is not true. A paper with major issues must be rejected with a
+suggestion for rework by the authors. Here is a list of the most typical minor
+issues:</p>
+
+<ul>
+  <li>The abstract is inadequate.</li>
+  <li>Sources are misquoted or <a href="/2023/09/05/style-checker-for-bibtex-files.html">incorrectly cited</a>.</li>
+  <li>The title of the article is inappropriate.</li>
+  <li>There are grammatical errors, typos, and unclear language.</li>
+</ul>
+
+<p>Finally, conclude your review: what should be done <strong>next</strong>? Do you suggest
+publishing the paper? Do you think the authors are moving in the right
+direction? Should they continue working on this topic, or would it be better to
+abandon it for something more meaningful? Be honest and sincere; don’t be
+afraid of offending them: the review is <em>anonymous</em> anyway.</p>
+
+<p>Obviously, I’m joking. It’s easy to offend an author, especially a young one.
+Thus, as a good reviewer, you must understand your mission: the review you
+provide should help the authors by <em>encouraging</em> and <em>educating</em> them. Making
+them feel miserable is definitely not the purpose of the review, though it is
+sometimes an unfortunate side effect. Try to minimize it.</p>
+
+<hr />
+
+<p>Here is a toy example:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In their research, the authors claim that all programmers 
+are lazy and selfish creatures, grounding their conclusion 
+on a survey of 150 respondents.
+
+Pros:
+  - An important topic was addressed.
+  - The reasoning is clear and concise.
+  - The conclusion is very true.
+
+Major cons:
+  - Similar research done by Dean [1] is overlooked.
+  - It's obvious that they are lazy; why another research?
+  - Only Java programmers were interviewed.
+
+Minor cons:
+  - Typos and broken English here and there.
+  - The font in most figures is too small.
+
+Even though the subject of the research is important, 
+I believe this paper is not yet ready for publication 
+and requires significant rework.
+
+[1] Dean et al., Programmers Are Super Lazy, 2022
+</code></pre></div></div>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[A review of a research paper may be structured in five sections in order to be most effective for the authors of the paper being reviewed.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/12/beregis-avtomobila.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/12/beregis-avtomobila.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Results and Discussion: Facts and Interpretation</title><link href="https://www.yegor256.com/2023/12/11/results-and-discussion.html" rel="alternate" type="text/html" title="Results and Discussion: Facts and Interpretation" /><published>2023-12-11T00:00:00+00:00</published><updated>2023-12-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/11/results-and-discussion</id><content type="html" xml:base="https://www.yegor256.com/2023/12/11/results-and-discussion.html"><![CDATA[<p>Almost every <a href="https://en.wikipedia.org/wiki/Empirical_research">empirical research</a> 
+paper contains two essential sections: <em>Results</em>
+and <em>Discussion</em>. The former presents the facts collected through the research
 <a href="/2023/10/11/method-of-research.html">method</a>, 
 while the latter interprets them to answer the research questions. When
 interpreting the data, you must address the most obvious concerns that readers
 may have. For example, in the Results section, you might state: “85% of
-respondents refused to participate in our survey” (this is a fact). Then, in
+respondents refused to participate in our survey” (this is a <em>fact</em>). Then, in
 the Discussion section, you might say: “We believe that programmers are
-innately lazy and irresponsible” (this is an interpretation). You might also
+innately lazy and irresponsible” (this is an <em>interpretation</em>). You might also
 add, “Perhaps not all of them were lazy, but just busy.” While the Results
 section leaves no room for doubt, summarizing findings “as is,” the Discussion
-section engages in an open debate with an imaginative reader.</p>
+section engages in an open <em>debate</em> with an imaginative reader.</p>
 
 <!--more-->
 
@@ -40,11 +160,12 @@ a short questionnaire of just 128 questions.
 115 people refused, which is 85%.
 The full list of those who refused, along with 
 their names and home addresses, 
-is published on GitHub: https://github.com/...
+is published in GitHub repository\footnote{
+  \url{https://github.com/...}}.
 </code></pre></div></div>
 
 <p>In the <a href="/2023/10/11/method-of-research.html">Method</a> section, 
-you posed several Research Questions. Now, in the <strong>Discussion</strong> section, 
+you posed several <em>Research Questions</em>. Now, in the <strong>Discussion</strong> section, 
 you answer them using the data you’ve just presented in the Results. 
 This is the time for an opinionated interpretation of the data: be brave and direct, yet careful.</p>
 
@@ -54,7 +175,7 @@ The answers you provide are your speculation, imagination, improvisation, etc.
 Also, through the Q&amp;A format, you acknowledge the limitations of your 
 research and suggest potential future research topics.</p>
 
-<p>Consider these questions:</p>
+<p>Consider these questions (re-phrase them for your own context):</p>
 
 <ul>
   <li>Why are these results important?</li>
@@ -94,7 +215,7 @@ years of experience in the field; they will certainly have concerns about your
 Method, Results, and answers to the Research Questions. If you don’t address
 these concerns explicitly in the Discussion section, they may think you are
 either concealing the research’s weaknesses or are not astute enough to
-recognize them. In either case, it could lead to a revision of your paper.</p>
+recognize them. In either case, it could lead to a rejection of your paper.</p>
 
 <hr />
 
@@ -1000,104 +1121,4 @@ when the server issues a red signal.</p>
 <p>P.S. By the way, the <code class="language-plaintext highlighter-rouge">toString()</code> method has another bug that 
 isn’t detected by either the first or second test. Can you identify it? 
 Could you devise a test that would expose this bug? 
-Would you categorize this test as “fast” or “deep”?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="java" /><summary type="html"><![CDATA[Humans should run "fast" tests to catch obvious mistakes, while servers should execute "deep" tests to ensure the highest quality.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/inglourious-basterds.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/inglourious-basterds.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Double-Blind Review Is What Makes Decisions Fair</title><link href="https://www.yegor256.com/2023/08/15/decision-making-process.html" rel="alternate" type="text/html" title="The Double-Blind Review Is What Makes Decisions Fair" /><published>2023-08-15T00:00:00+00:00</published><updated>2023-08-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/15/decision-making-process</id><content type="html" xml:base="https://www.yegor256.com/2023/08/15/decision-making-process.html"><![CDATA[<p>How does your team review ideas, project proposals, or paper drafts?
-Imagine I’m on your team and I need a budget allocated to a new project. 
-I craft a proposal, elucidate the motivation, assess the risks, develop a plan, 
-and then what? Do I create a PowerPoint presentation, present to my teammates 
-for half an hour, answer their questions for another half hour, hear their honest 
-feedback, after which they vote and a decision is made? If this is how 
-things are organized within your team, you risk stifling creativity and motivation.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Возвращение (2003) by Andrey Zvyagintsev" src="/images/2023/08/the-return.jpg" longdesc="#b5305e77" /><figcaption id="b5305e77">Возвращение (2003) by Andrey Zvyagintsev</figcaption></figure>
-
-<p>There are several problems with this fairly typical decision-making process 
-in software teams or companies (with the most critical ones listed last):</p>
-
-<ul>
-  <li>
-    <p><strong>Overload</strong>.
-  Regardless of how crucial your proposal is, many meeting attendees have their own priorities. 
-  You cannot expect them to concentrate fully on your idea or actively engage 
-  in the discussion. Furthermore, some might just be lazy by nature.</p>
-  </li>
-  <li>
-    <p><strong>Incompetence</strong>.
-  No matter how talented your teammates are, expecting them to grasp 
-  every detail of your proposal in just thirty minutes and then evaluate 
-  it both objectively and professionally is unrealistic. It’s more likely 
-  they’ll base their judgments on personal feelings towards you.</p>
-  </li>
-  <li>
-    <p><strong>Friendship</strong>.
-  The decision-makers at the meeting are your colleagues. It’s challenging 
-  for them to provide unbiased and candid feedback since they don’t want 
-  to risk upsetting a friend. Very few can maintain both 
-  honesty and friendship—it’s a rare quality.</p>
-  </li>
-  <li>
-    <p><strong>Jealousy</strong>.
-  Since you’re presenting a proposal, it inherently becomes a contest for resources. 
-  You’re seeking either a project budget or a reallocation of team efforts. 
-  This puts you in opposition to others at the meeting. Many attendees might 
-  resent your initiative, even subconsciously attempting to thwart you.</p>
-  </li>
-  <li>
-    <p><strong>Fear</strong>.
-  If you’re the one presenting today, someone else might be in your 
-  shoes tomorrow. The same individuals critiquing your idea today 
-  might face similar scrutiny tomorrow. As much as we aim for professionalism, 
-  the urge for revenge can be strong, making candid feedback risky.</p>
-  </li>
-</ul>
-
-<p>Considering these factors, it’s logical to presume that at the end of such 
-meetings—especially if the decision goes against you—you might feel frustrated. 
-You might view your team as lacking competence and feel that your talents 
-go unrecognized. Best-case scenario: you decide not to present any new proposals. 
-Worst-case: you begin seeking out a new team.</p>
-
-<p>The issue isn’t necessarily with the team (they all are more or less the same) 
-or your proposal (we all make mistakes). The crux of the problem lies in the 
-decision-making process itself. Traditional meetings might not be the best avenue. 
-Instead, I propose the following approach:</p>
-
-<ul>
-  <li>There is a review board of 10+ members and a secretary;</li>
-  <li>Proposals are submitted directly to the secretary;</li>
-  <li>The secretary randomly selects three board reviewers;</li>
-  <li>Each reviewer evaluates the proposal in writing;</li>
-  <li>Reviewers aren’t aware of the author’s identity;</li>
-  <li>They then submit their written feedback to the secretary;</li>
-  <li>A decision is made if 2+ reviewers endorse the proposal;</li>
-  <li>The secretary informs you of the verdict;</li>
-  <li>You don’t know the names of reviewers.</li>
-</ul>
-
-<p>This method introduces two vital elements that can enhance the objectivity 
-of decisions and increase proposal authors’ satisfaction: <em>anonymity</em> and <em>authorship</em>. 
-On one hand, reviewers can offer genuine feedback without fear of backlash, 
-knowing their identity remains confidential. Conversely, since their feedback 
-is documented, they’re incentivized to remain professional and objective. 
-Not knowing the author ensures decisions aren’t influenced by personal relationships.</p>
-
-<p>Moreover, this system can elevate the <em>quality of proposals</em>. As authors 
-can’t verbally elaborate during meetings, they’re compelled to articulate 
-their ideas comprehensively in writing. The standard of feedback might 
-also improve, particularly if the secretary mandates specific criteria 
-for review summaries, as opposed to vague remarks.</p>
-
-<p>A very similar review mechanism is practiced by <a href="/2021/04/14/how-we-organized-iccq.html">scientific conferences</a>. 
-When you submit a paper to one, they don’t organize a meeting where you present it in an attempt 
-to persuade them to accept your work. Instead, they ask you to 
-<a href="https://www.journals.elsevier.com/social-science-and-medicine/policies/double-blind-peer-review-guidelines">double-blind</a> 
-your paper and then they send it to a few, more or less, randomly selected reviewers. 
-When your paper is rejected (or accepted), you receive a detailed summary of the reasons, 
-along with suggestions on how to improve it. If the conference is of a high level 
-and its reviewers are doing their job correctly, you will be 
-satisfied even in the case of rejection.</p>
-
-<p>In conclusion, the suggested process can lead to superior decision 
-quality and boost the motivation of those proposing ideas. Even if some suggestions 
-are declined, they’re more likely to return to the review board with renewed proposals.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html"><![CDATA[If your team practices decision making meetings I have a better idea for you: establish a review board with the principles of anonymity and authorship.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/the-return.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/the-return.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+Would you categorize this test as “fast” or “deep”?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="java" /><summary type="html"><![CDATA[Humans should run "fast" tests to catch obvious mistakes, while servers should execute "deep" tests to ensure the highest quality.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/inglourious-basterds.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/inglourious-basterds.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
