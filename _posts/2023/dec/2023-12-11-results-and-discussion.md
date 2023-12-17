@@ -18,18 +18,19 @@ jb_picture:
   caption: Mulholland Drive (2001) by David Lynch
 ---
 
-Almost every empirical research paper contains two essential sections: Results
-and Discussion. The former presents the facts collected through the research
+Almost every [empirical research](https://en.wikipedia.org/wiki/Empirical_research) 
+paper contains two essential sections: _Results_
+and _Discussion_. The former presents the facts collected through the research
 [method]({% pst 2023/oct/2023-10-11-method-of-research %}), 
 while the latter interprets them to answer the research questions. When
 interpreting the data, you must address the most obvious concerns that readers
 may have. For example, in the Results section, you might state: "85% of
-respondents refused to participate in our survey" (this is a fact). Then, in
+respondents refused to participate in our survey" (this is a _fact_). Then, in
 the Discussion section, you might say: "We believe that programmers are
-innately lazy and irresponsible" (this is an interpretation). You might also
+innately lazy and irresponsible" (this is an _interpretation_). You might also
 add, "Perhaps not all of them were lazy, but just busy." While the Results
 section leaves no room for doubt, summarizing findings "as is," the Discussion
-section engages in an open debate with an imaginative reader.
+section engages in an open _debate_ with an imaginative reader.
 
 <!--more-->
 
@@ -59,11 +60,12 @@ a short questionnaire of just 128 questions.
 115 people refused, which is 85%.
 The full list of those who refused, along with 
 their names and home addresses, 
-is published on GitHub: https://github.com/...
+is published in GitHub repository\footnote{
+  \url{https://github.com/...}}.
 ```
 
 In the [Method]({% pst 2023/oct/2023-10-11-method-of-research %}) section, 
-you posed several Research Questions. Now, in the **Discussion** section, 
+you posed several _Research Questions_. Now, in the **Discussion** section, 
 you answer them using the data you've just presented in the Results. 
 This is the time for an opinionated interpretation of the data: be brave and direct, yet careful.
 
@@ -73,7 +75,7 @@ The answers you provide are your speculation, imagination, improvisation, etc.
 Also, through the Q&A format, you acknowledge the limitations of your 
 research and suggest potential future research topics.
 
-Consider these questions:
+Consider these questions (re-phrase them for your own context):
 
   * Why are these results important?
   * Why has no one discovered this before?
@@ -112,7 +114,7 @@ years of experience in the field; they will certainly have concerns about your
 Method, Results, and answers to the Research Questions. If you don't address
 these concerns explicitly in the Discussion section, they may think you are
 either concealing the research's weaknesses or are not astute enough to
-recognize them. In either case, it could lead to a revision of your paper.
+recognize them. In either case, it could lead to a rejection of your paper.
 
 <hr/>
 

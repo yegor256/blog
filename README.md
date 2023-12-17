@@ -41,5 +41,5 @@ $ docker run -it --rm \
   -v "$(readlink -f /code/blog):/b" \
   -p 4000:4000 \
   yegor256/blog-image \
-  'cd /b && bundle update && bundle exec jekyll serve --drafts --future --trace --host=0.0.0.0'
+  'cd /b && bundle update && bundle exec jekyll serve --trace --host=0.0.0.0'
 ```
