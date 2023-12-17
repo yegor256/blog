@@ -200,9 +200,9 @@ How can we be sure it works? [CI]({% pst 2014/oct/2014-10-05-ten-hosted-continuo
 is the answer. We must be able
 to see the logs of the recent CI build and make sure it is clean.
 
-It's a matter of trust. You may never use those Travis builds and simply
+It's a matter of trust. You may never use those <del>Travis</del> GitHub Actions builds and simply
 ignore their red and green signals, but they are important for us---your
-clients. I add Travis badges to all projects of mine, right after I create
+clients. I add <del>Travis</del> GitHub Actions badges to all projects of mine, right after I create
 a new repository.
 
 ## Contribution Guidelines
