@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-12-27T04:41:53+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Defend Me Against ChatGPT</title><link href="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html" rel="alternate" type="text/html" title="Defend Me Against ChatGPT" /><published>2023-12-26T00:00:00+00:00</published><updated>2023-12-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt</id><content type="html" xml:base="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html"><![CDATA[<p>I do enjoy <a href="https://en.wikipedia.org/wiki/ChatGPT">ChatGPT</a> a lot. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-12-27T10:19:23+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Defend Me Against ChatGPT</title><link href="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html" rel="alternate" type="text/html" title="Defend Me Against ChatGPT" /><published>2023-12-26T00:00:00+00:00</published><updated>2023-12-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt</id><content type="html" xml:base="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html"><![CDATA[<p>I do enjoy <a href="https://en.wikipedia.org/wiki/ChatGPT">ChatGPT</a> a lot. 
 The blog post you’re reading now was written by me and
 then given to ChatGPT to fix its grammar and polish the writing style. Until
 recently, since 2014, when I wrote my <a href="/2014/04/06/introduction.html">first blog post</a>, 
@@ -37,9 +37,9 @@ academic, sophisticated, smart, and deep. The text, not the student.</p>
 of feedback teachers will provide to students equipped with ChatGPT or a
 similar paper-writing robot. My relatively <a href="/2021/12/01/teaching.html">short experience</a> in teaching
 (just <a href="/teaching.html">three years</a>) tells me that the biggest challenge in teaching is quickly
-dividing students into smart+enthusiastic (20%) and 
+<em>dividing</em> students into smart+enthusiastic (20%) and 
 <a href="https://www.gcu.edu/blog/teaching-school-administration/myth-unmotivated-students">unmotivated</a> (80%), before
-the latter category entirely exhausts me, and I classify all students
+the latter category entirely exhausts me, and I classify <em>all</em> students
 as “pointless waste of time” and give everybody an “A” just to get rid of
 them.</p>
 
@@ -49,8 +49,8 @@ they make mistakes that are easy to spot: the grammar is wrong, the structure
 is messy, the logic of the discussion is weak, and so on. Lazy and/or
 stupid students reveal themselves in the first round of paper review. I
 can quickly understand who I’m dealing with and stop paying attention to them.
-The students who are smart and enthusiastic win, because they get my entire
-attention. The unmotivated ones lose, but who cares.</p>
+The students who are smart and enthusiastic <em>win</em>, because they get my entire
+attention. The unmotivated ones <em>lose</em>, … but who cares.</p>
 
 <aside class="quote">Now, it takes much more time for me to understand who is who.
 </aside>
@@ -58,20 +58,20 @@ attention. The unmotivated ones lose, but who cares.</p>
 <p>However, with the help of ChatGPT, the situation changes dramatically. Now, the
 papers I have to review <em>all</em> look <em>perfect</em>: the grammar is spotless, the
 structure is solid, and the flow of thoughts is logical. In other words, the
-unmotivated students now look like smart and enthusiastic ones, while they are
+unmotivated students now <em>look like</em> smart and enthusiastic ones, while they are
 not. Now, it takes much more time for me to understand who is who. Sometimes I
 can’t figure it out for weeks, especially if the teaching is remote and I don’t
 see students but only communicate with them in chats or conference calls.</p>
 
 <p>I keep wasting my time on students who don’t care. All they need from me is a
-passing grade, but ChatGPT makes them look like promising talents who I should
+passing grade, but ChatGPT makes them <em>look like</em> promising talents who I should
 invest my time in. In the end, the students who really need my time don’t get
-it, thanks to ChatGPT.</p>
+it, … thanks to ChatGPT.</p>
 
 <p>Thus, I see ChatGPT as a big threat to the education process and believe that
 very soon, tools that <a href="https://foundation.mozilla.org/en/blog/how-to-tell-chat-gpt-generated-text/">validate texts</a> 
 for the presence of generative AI in them
-will become powerful enough to <em>defend</em> me from ChatGPT.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><summary type="html"><![CDATA[If students are permitted to use ChatGPT as a paper-writing aid, teachers must possess a tool to detect the presence of generative AI in their texts.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/12/terminator.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/12/terminator.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Review a Research Paper: Constructive Critique in Five Steps</title><link href="https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html" rel="alternate" type="text/html" title="Review a Research Paper: Constructive Critique in Five Steps" /><published>2023-12-17T00:00:00+00:00</published><updated>2023-12-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/17/how-to-review-research-paper</id><content type="html" xml:base="https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html"><![CDATA[<p>I’m helping <a href="/2021/04/14/how-we-organized-iccq.html">organize</a> 
+will become powerful enough to <em>defend</em> me from ChatGPT.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><category term="science" /><summary type="html"><![CDATA[If students are permitted to use ChatGPT as a paper-writing aid, teachers must possess a tool to detect the presence of generative AI in their texts.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/12/terminator.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/12/terminator.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Review a Research Paper: Constructive Critique in Five Steps</title><link href="https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html" rel="alternate" type="text/html" title="Review a Research Paper: Constructive Critique in Five Steps" /><published>2023-12-17T00:00:00+00:00</published><updated>2023-12-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/17/how-to-review-research-paper</id><content type="html" xml:base="https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html"><![CDATA[<p>I’m helping <a href="/2021/04/14/how-we-organized-iccq.html">organize</a> 
 the <a href="https://www.iccq.ru">ICCQ conference</a> this year for the fourth time, with the
 in-cooperation support of the IEEE Computer Society. Based on this short-term
 experience, I can assert that reviewing research papers is a skill that even some
