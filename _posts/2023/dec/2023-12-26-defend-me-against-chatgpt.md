@@ -38,7 +38,7 @@ Should students be allowed to use ChatGPT when they write their coursework,
 diplomas, and research papers?
 [Nature](https://www.nature.com/articles/d41586-023-03507-3),
 [The Wall Street Journal](https://www.wsj.com/tech/ai/teachers-ai-classroom-schools-678d7d84),
-[The New York Tiimes](https://www.nytimes.com/2023/02/02/learning/students-chatgpt.html), 
+[The New York Times](https://www.nytimes.com/2023/02/02/learning/students-chatgpt.html), 
 and
 [MIT Technology Review](https://www.technologyreview.com/2023/04/06/1071059/chatgpt-change-not-destroy-education-openai/)
 believe that despite all the risks, we have no other choice: students will use
