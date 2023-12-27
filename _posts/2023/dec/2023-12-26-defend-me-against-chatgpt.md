@@ -3,7 +3,7 @@ layout: post
 title: "Defend Me Against ChatGPT"
 date: 2023-12-26
 place: Moscow, Russia
-tags: ai
+tags: ai science
 description: |
   If students are permitted to use ChatGPT as a paper-writing aid, 
   teachers must possess a tool to detect the presence of 
@@ -83,7 +83,7 @@ can't figure it out for weeks, especially if the teaching is remote and I don't
 see students but only communicate with them in chats or conference calls.
 
 I keep wasting my time on students who don't care. All they need from me is a
-passing grade, but ChatGPT makes them look like promising talents who I should
+passing grade, but ChatGPT makes them _look like_ promising talents who I should
 invest my time in. In the end, the students who really need my time don't get
 it, ... thanks to ChatGPT.
 
