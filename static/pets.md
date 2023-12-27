@@ -221,10 +221,11 @@ to do in order to implement those plans.
 <br/>
 Founded 12-Apr-2019.
 
+<!-- 
 Others (less stable or successful):
 [jpeek](https://github.com/yegor256/jpeek),
 [xcop](https://github.com/yegor256/xcop),
 [phpRack](https://www.phpRack.com/),
 [netbout](https://www.netbout.com),
-[thindeck](https://www.thindeck.com),
-[h12](https://www.h12.co).
+[thindeck](https://www.thindeck.com).
+-->
