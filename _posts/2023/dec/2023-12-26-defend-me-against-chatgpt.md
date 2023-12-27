@@ -77,7 +77,7 @@ attention. The unmotivated ones _lose_, ... but who cares.
 However, with the help of ChatGPT, the situation changes dramatically. Now, the
 papers I have to review _all_ look _perfect_: the grammar is spotless, the
 structure is solid, and the flow of thoughts is logical. In other words, the
-unmotivated students now look like smart and enthusiastic ones, while they are
+unmotivated students now _look like_ smart and enthusiastic ones, while they are
 not. Now, it takes much more time for me to understand who is who. Sometimes I
 can't figure it out for weeks, especially if the teaching is remote and I don't
 see students but only communicate with them in chats or conference calls.
