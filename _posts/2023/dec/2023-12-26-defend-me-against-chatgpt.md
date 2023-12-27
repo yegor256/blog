@@ -88,6 +88,7 @@ invest my time in. In the end, the students who really need my time don't get
 it, thanks to ChatGPT.
 
 Thus, I see ChatGPT as a big threat to the education process and believe that
-very soon, tools that validate texts for the presence of generative AI in them
+very soon, tools that [validate texts](https://foundation.mozilla.org/en/blog/how-to-tell-chat-gpt-generated-text/) 
+for the presence of generative AI in them
 will become powerful enough to _defend_ me from ChatGPT.
 
