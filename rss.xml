@@ -1,4 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-12-17T15:21:25+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Review a Research Paper: Constructive Critique in Five Steps</title><link href="https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html" rel="alternate" type="text/html" title="Review a Research Paper: Constructive Critique in Five Steps" /><published>2023-12-17T00:00:00+00:00</published><updated>2023-12-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/17/how-to-review-research-paper</id><content type="html" xml:base="https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html"><![CDATA[<p>I’m helping <a href="/2021/04/14/how-we-organized-iccq.html">organize</a> 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2023-12-27T04:41:53+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Defend Me Against ChatGPT</title><link href="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html" rel="alternate" type="text/html" title="Defend Me Against ChatGPT" /><published>2023-12-26T00:00:00+00:00</published><updated>2023-12-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt</id><content type="html" xml:base="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html"><![CDATA[<p>I do enjoy <a href="https://en.wikipedia.org/wiki/ChatGPT">ChatGPT</a> a lot. 
+The blog post you’re reading now was written by me and
+then given to ChatGPT to fix its grammar and polish the writing style. Until
+recently, since 2014, when I wrote my <a href="/2014/04/06/introduction.html">first blog post</a>, 
+I used the service of a
+few proofreaders, who charged me $20-40 per hour to rewrite 
+<a href="/contents.html">all of my 350+ texts</a>. 
+Now, I pay a few dollars a month to <a href="https://openai.com/">OpenAI</a>. However, while the value of
+this generative AI is obvious, I also experience serious harm from ChatGPT,
+especially when reading papers written by my students with its help.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Terminator (1984) by James Cameron" src="/images/2023/12/terminator.jpg" longdesc="#4a0c411e" /><figcaption id="4a0c411e">Terminator (1984) by James Cameron</figcaption></figure>
+
+<p>Should students be allowed to use ChatGPT when they write their coursework,
+diplomas, and research papers?
+<a href="https://www.nature.com/articles/d41586-023-03507-3">Nature</a>,
+<a href="https://www.wsj.com/tech/ai/teachers-ai-classroom-schools-678d7d84">The Wall Street Journal</a>,
+<a href="https://www.nytimes.com/2023/02/02/learning/students-chatgpt.html">The New York Times</a>, 
+and
+<a href="https://www.technologyreview.com/2023/04/06/1071059/chatgpt-change-not-destroy-education-openai/">MIT Technology Review</a>
+believe that despite all the risks, we have no other choice: students will use
+it, no matter what teachers think about it.</p>
+
+<aside class="quote">Most of them will never read what the robot wrote.
+</aside>
+
+<p>Indeed, why not? What’s wrong with letting kids write those boring documents
+faster? Nothing, if we ignore the obvious threat: most of them will never read
+what the robot wrote. They simply prompt a very short description of the task
+and get back a full-blown piece of text with all the necessary bells and
+whistles. Moreover, with the next prompt, the text can be made even more
+academic, sophisticated, smart, and deep. The text, not the student.</p>
+
+<p>But it’s not the threat I worry about. I’m much more concerned about the quality
+of feedback teachers will provide to students equipped with ChatGPT or a
+similar paper-writing robot. My relatively <a href="/2021/12/01/teaching.html">short experience</a> in teaching
+(just <a href="/teaching.html">three years</a>) tells me that the biggest challenge in teaching is quickly
+dividing students into smart+enthusiastic (20%) and 
+<a href="https://www.gcu.edu/blog/teaching-school-administration/myth-unmotivated-students">unmotivated</a> (80%), before
+the latter category entirely exhausts me, and I classify all students
+as “pointless waste of time” and give everybody an “A” just to get rid of
+them.</p>
+
+<p>When students write papers by themselves, without the help of 
+<a href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence">generative AI</a>,
+they make mistakes that are easy to spot: the grammar is wrong, the structure
+is messy, the logic of the discussion is weak, and so on. Lazy and/or
+stupid students reveal themselves in the first round of paper review. I
+can quickly understand who I’m dealing with and stop paying attention to them.
+The students who are smart and enthusiastic win, because they get my entire
+attention. The unmotivated ones lose, but who cares.</p>
+
+<aside class="quote">Now, it takes much more time for me to understand who is who.
+</aside>
+
+<p>However, with the help of ChatGPT, the situation changes dramatically. Now, the
+papers I have to review <em>all</em> look <em>perfect</em>: the grammar is spotless, the
+structure is solid, and the flow of thoughts is logical. In other words, the
+unmotivated students now look like smart and enthusiastic ones, while they are
+not. Now, it takes much more time for me to understand who is who. Sometimes I
+can’t figure it out for weeks, especially if the teaching is remote and I don’t
+see students but only communicate with them in chats or conference calls.</p>
+
+<p>I keep wasting my time on students who don’t care. All they need from me is a
+passing grade, but ChatGPT makes them look like promising talents who I should
+invest my time in. In the end, the students who really need my time don’t get
+it, thanks to ChatGPT.</p>
+
+<p>Thus, I see ChatGPT as a big threat to the education process and believe that
+very soon, tools that <a href="https://foundation.mozilla.org/en/blog/how-to-tell-chat-gpt-generated-text/">validate texts</a> 
+for the presence of generative AI in them
+will become powerful enough to <em>defend</em> me from ChatGPT.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><summary type="html"><![CDATA[If students are permitted to use ChatGPT as a paper-writing aid, teachers must possess a tool to detect the presence of generative AI in their texts.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/12/terminator.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/12/terminator.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Review a Research Paper: Constructive Critique in Five Steps</title><link href="https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html" rel="alternate" type="text/html" title="Review a Research Paper: Constructive Critique in Five Steps" /><published>2023-12-17T00:00:00+00:00</published><updated>2023-12-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/17/how-to-review-research-paper</id><content type="html" xml:base="https://www.yegor256.com/2023/12/17/how-to-review-research-paper.html"><![CDATA[<p>I’m helping <a href="/2021/04/14/how-we-organized-iccq.html">organize</a> 
 the <a href="https://www.iccq.ru">ICCQ conference</a> this year for the fourth time, with the
 in-cooperation support of the IEEE Computer Society. Based on this short-term
 experience, I can assert that reviewing research papers is a skill that even some
@@ -478,7 +551,8 @@ participate in the study.
 provided informed consent—this is important if humans (or cats) are involved,
 so don’t forget about it.</p>
 
-<p>In the “Results” section, which follows the Method, you present the data that
+<p>In the “Results” section, which follows the Method, you 
+<a href="/2023/12/11/results-and-discussion.html">present</a> the data that
 were collected, combined, or generated (without giving any opinion or
 subjective interpretation of it!). Some of this data may have already been
 mentioned in the Method section, but not the most important details. For
@@ -487,7 +561,8 @@ names, ages, or breeds—this information goes into the Results, in the form of
 a nicely formatted table. How much “results” to show in the Method and how much
 in the Results is, I believe, a matter of taste.</p>
 
-<p>In the “Discussion” section, which follows the Results, you engage in a dialogue
+<p>In the “Discussion” section, which follows the Results, you 
+<a href="/2023/12/11/results-and-discussion.html">engage in a dialogue</a>
 with yourself, questioning the procedures of the Method. This is where
 you are allowed to have an opinion about the data collected, combined, and
 generated. For example, we may discuss whether the results of our research
@@ -970,155 +1045,4 @@ I tried not to repeat what <a href="https://www.githubnext.com">GitHubNext</a> i
 
 <p>I’m thankful to ChatGPT for helping me build this list.</p>
 
-<p>What do you think <del>I</del> we missed?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><category term="programming" /><summary type="html"><![CDATA[Robots will likely revolutionize software engineering ranging from code reviews and bug fixing to automated refactoring, backlog prioritization, and employee appraisals.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fast Tests Help Humans, Deep Tests Help Servers</title><link href="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html" rel="alternate" type="text/html" title="Fast Tests Help Humans, Deep Tests Help Servers" /><published>2023-08-22T00:00:00+00:00</published><updated>2023-08-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/22/fast-vs-deep-testing</id><content type="html" xml:base="https://www.yegor256.com/2023/08/22/fast-vs-deep-testing.html"><![CDATA[<p>In order to reveal errors of higher complexity, automated tests are 
-turned into integration tests that involve external resources in test 
-scenarios, instead of their mocks. While this approach improves test 
-coverage, it slows down the entire build pipeline. This compromises 
-the very idea of automated tests, which are meant to be a 
-<a href="/2022/07/05/safety-net.html">safety net</a>
-and help programmers edit code safely. Splitting the tests into “fast” 
-and “deep,” and then allowing humans to run the former while servers 
-run the latter, might be a good solution to the problem.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Inglourious Basterds (2009) by Quentin Tarantino" src="/images/2023/08/inglourious-basterds.jpg" longdesc="#98a0f5f2" /><figcaption id="98a0f5f2">Inglourious Basterds (2009) by Quentin Tarantino</figcaption></figure>
-
-<p>Consider this Java code with a simple <code class="language-plaintext highlighter-rouge">toString()</code> static method:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">static</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">(</span><span class="nc">InputStream</span> <span class="n">stream</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
-  <span class="kd">final</span> <span class="nc">StringBuilder</span> <span class="n">buf</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
-  <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kt">int</span> <span class="n">d</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
-    <span class="k">if</span> <span class="o">(</span><span class="n">d</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
-      <span class="k">break</span><span class="o">;</span>
-    <span class="o">}</span>
-    <span class="n">buf</span><span class="o">.</span><span class="na">append</span><span class="o">((</span><span class="kt">char</span><span class="o">)</span> <span class="n">d</span><span class="o">);</span>
-  <span class="o">}</span>
-  <span class="k">return</span> <span class="n">buf</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>It reads the <code class="language-plaintext highlighter-rouge">stream</code> byte by byte, appends them to the buffer, and
-returns the buffer to the client. Here is the JUnit5 test that validates
-the functionality:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
-<span class="kt">void</span> <span class="nf">readsSomeData</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
-  <span class="nc">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span>
-    <span class="s">"ABC"</span><span class="o">,</span>
-    <span class="n">toString</span><span class="o">(</span>
-      <span class="k">new</span> <span class="nf">ByteArrayInputStream</span><span class="o">(</span>
-        <span class="k">new</span> <span class="kt">byte</span><span class="o">[]</span> <span class="o">{</span><span class="mh">0x41</span><span class="o">,</span> <span class="mh">0x42</span><span class="o">,</span> <span class="mh">0x43</span><span class="o">}</span>
-      <span class="o">)</span>
-    <span class="o">)</span>
-  <span class="o">);</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>So far, so good. The test works, and the method seems to be correct. Moreover, the test 
-completes very quickly—just 5ms on my laptop. However, upon closer 
-inspection, we can identify a bug in the method: it doesn’t close the 
-input stream. This issue doesn’t impact the test because the input 
-stream is in memory and doesn’t hold any valuable resources that might leak. 
-However, if we introduce a new test, it will expose this problem:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
-<span class="kt">void</span> <span class="nf">readsFromManyFiles</span><span class="o">(</span><span class="nd">@TempDir</span> <span class="nc">Path</span> <span class="n">tmp</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
-  <span class="nc">Path</span> <span class="n">f</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="s">"test.txt"</span><span class="o">);</span>
-  <span class="nc">Files</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">f</span><span class="o">,</span> <span class="s">"Hello, world!"</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
-  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">20000</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
-    <span class="nc">Assertions</span><span class="o">.</span><span class="na">assertEquals</span><span class="o">(</span>
-      <span class="mi">13</span><span class="o">,</span>
-      <span class="n">toString</span><span class="o">(</span><span class="k">new</span> <span class="nc">FileInputStream</span><span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="na">toFile</span><span class="o">())).</span><span class="na">length</span><span class="o">()</span>
-    <span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>When I run this test, I get a <code class="language-plaintext highlighter-rouge">FileNotFoundException</code> with a message saying 
-<code class="language-plaintext highlighter-rouge">Too many open files</code>. If I reduce the upper limit in the for loop to 10000, 
-the error disappears. This most definitely happens because the maximum number of open files 
-on Mac OS X <a href="https://superuser.com/a/443168">is 12,288</a>. However, on Ubuntu, 
-this limit is <a href="https://askubuntu.com/questions/1049058">set to 65536</a>. Thus, my test 
-won’t spot an error if I run it on Ubuntu. I’m sure you know how to fix this error in the toString() method.</p>
-
-<p>Obviously, the second test is much slower than the first one, taking 
-650ms on my laptop (130 times slower!). This is just an example of a test that 
-aids in bug detection but is time-consuming. Typically, integration tests 
-demonstrate such a negative impact on performance because they involve “external” 
-resources, which are slow. The file system, used by the second test, is one such external resource.</p>
-
-<p>650ms might not be problematic when there are only a few test methods in 
-a young project. However, as the number of tests increases, slow tests 
-quickly become an issue since the overall build time lengthens, frustrating 
-programmers. Automated tests, meant to assist coders, turn into a hindrance. 
-If a coder has to wait several minutes after every code change to ensure nothing broke, 
-frustration ensues. Often, the frustrated coder might remove those slow tests.</p>
-
-<aside class="quote">It’s impossible to make integration tests faster since they are inherently slow for a reason.
-</aside>
-
-<p>It goes without saying that deleting slow tests isn’t the solution. 
-So, what is? Speeding them up? Not quite. It’s almost always challenging, 
-if not impossible, to make integration tests faster since they are inherently 
-slow for a reason. The only way to speed them up is to mock those slow 
-external resources. But these resources are tested specifically to detect 
-bugs that unit tests might miss. For instance, in our case, if we mock 
-the input stream, the second test will miss the bug. Therefore, the 
-second (integration) test must be slow to be valuable.</p>
-
-<p>Classifying tests into <em>fast</em> and <em>deep</em> may be a solution. The first category comprises 
-tests that mock as much as possible and take no more than 20ms to run. 
-The second category consists of tests that probe deeper to uncover elusive bugs, 
-which might be overlooked by faster tests. More often than not, unit tests 
-fall into the first category, while integration tests fit into the second. 
-The distinction of “unit-vs-integration” is, in my view, misleading. “Fast-vs-deep” 
-is much clearer since it’s evident to which category a test belongs. 
-If a test takes under 20ms, it’s fast; if not, it’s deep.</p>
-
-<p>Once tests are designated as either fast or deep, they should be run in two 
-distinct scenarios: programmers run the fast tests during coding, 
-while servers execute the deep tests during software build and/or release phases. 
-In JUnit5, this categorization can be achieved using the @Tag annotation:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Test</span>
-<span class="nd">@Tag</span><span class="o">(</span><span class="s">"fast"</span><span class="o">)</span>
-<span class="kt">void</span> <span class="nf">readsSomeData</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
-  <span class="c1">// ...</span>
-<span class="o">}</span>
-<span class="nd">@Test</span>
-<span class="nd">@Tag</span><span class="o">(</span><span class="s">"deep"</span><span class="o">)</span>
-<span class="kt">void</span> <span class="nf">readsFromManyFiles</span><span class="o">(</span><span class="nd">@TempDir</span> <span class="nc">Path</span> <span class="n">tmp</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
-  <span class="c1">// ...</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>In most cases, obvious bugs will be detected by fast tests, giving programmers 
-confidence when editing the code. On the rare occasions when fast tests 
-fail to identify certain bugs, the deep tests will catch them. Only then 
-will programmers run the slow tests on their laptops.</p>
-
-<p>This is how <code class="language-plaintext highlighter-rouge">pom.xml</code> may be configured to turn “fast” tests ON, by default:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
-  <span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
-  <span class="nt">&lt;configuration&gt;</span>
-    <span class="nt">&lt;groups&gt;</span>fast<span class="nt">&lt;/groups&gt;</span>
-  <span class="nt">&lt;/configuration&gt;</span>
-<span class="nt">&lt;/plugin&gt;</span>
-</code></pre></div></div>
-
-<p>In the CI environment, Maven must be started with the following flag:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mvn test -Dgroups=slow
-</code></pre></div></div>
-
-<p>A programmer can also run the “slow” tests on their own laptop using 
-the same command line flag. However, this will typically only be done 
-when the server issues a red signal.</p>
-
-<p>P.S. By the way, the <code class="language-plaintext highlighter-rouge">toString()</code> method has another bug that 
-isn’t detected by either the first or second test. Can you identify it? 
-Could you devise a test that would expose this bug? 
-Would you categorize this test as “fast” or “deep”?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="java" /><summary type="html"><![CDATA[Humans should run "fast" tests to catch obvious mistakes, while servers should execute "deep" tests to ensure the highest quality.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/inglourious-basterds.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/inglourious-basterds.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>What do you think <del>I</del> we missed?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><category term="programming" /><summary type="html"><![CDATA[Robots will likely revolutionize software engineering ranging from code reviews and bug fixing to automated refactoring, backlog prioritization, and employee appraisals.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

@@ -800,6 +800,7 @@ believe
 believed
 believes
 believing
+bells
 belong
 belongs
 belov
@@ -1323,6 +1324,7 @@ characterized
 characters
 charencoding
 charge
+charged
 charges
 charging
 charisma
@@ -1997,6 +1999,7 @@ courage
 courageous
 course
 courses
+coursework
 court
 courteous
 courtesy
@@ -2499,6 +2502,7 @@ diminishing
 dinislam
 dinner
 diplomacy
+diplomas
 diplomat
 dipping
 dir
@@ -2623,6 +2627,7 @@ diversity
 divert
 divide
 dividends
+dividing
 diving
 divorce
 divorces
@@ -3056,6 +3061,7 @@ equally
 equals
 equates
 equipment
+equipped
 equity
 equivalent
 ER
@@ -3180,6 +3186,7 @@ exercised
 exerts
 exhausted
 exhaustive
+exhausts
 exhibit
 exist
 existed
@@ -3690,6 +3697,7 @@ ftremote
 fuel
 fulfilling
 full
+full-blown
 full-hearted
 full-purpose
 full-speed
@@ -6492,6 +6500,7 @@ pantone
 pantonecolor
 pants
 paper
+paper-writing
 papers
 papertrail
 paperwork
@@ -6825,6 +6834,7 @@ polemic
 police
 policies
 policy
+polish
 polished
 polisher
 polite
@@ -7124,10 +7134,12 @@ promoting
 promotion
 promotional
 promotions
+prompt
 prompts
 pronoun
 proof
 proof-of-concept
+proofreaders
 proofs
 propaganda
 propagandists
@@ -8632,6 +8644,7 @@ sporchi
 sport
 sports
 spot
+spotless
 spots
 spouse
 spouses
@@ -10089,6 +10102,7 @@ whichever
 while
 whine
 whispering
+whistles
 white
 white-box
 whites'
