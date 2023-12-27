@@ -57,9 +57,9 @@ But it's not the threat I worry about. I'm much more concerned about the quality
 of feedback teachers will provide to students equipped with ChatGPT or a
 similar paper-writing robot. My relatively [short experience]({% pst 2021/dec/2021-12-01-teaching %}) in teaching
 (just [three years](/teaching.html)) tells me that the biggest challenge in teaching is quickly
-dividing students into smart+enthusiastic (20%) and 
+_dividing_ students into smart+enthusiastic (20%) and 
 [unmotivated](https://www.gcu.edu/blog/teaching-school-administration/myth-unmotivated-students) (80%), before
-the latter category entirely exhausts me, and I classify all students
+the latter category entirely exhausts me, and I classify _all_ students
 as "pointless waste of time" and give everybody an "A" just to get rid of
 them.
 
@@ -69,8 +69,8 @@ they make mistakes that are easy to spot: the grammar is wrong, the structure
 is messy, the logic of the discussion is weak, and so on. Lazy and/or
 stupid students reveal themselves in the first round of paper review. I
 can quickly understand who I'm dealing with and stop paying attention to them.
-The students who are smart and enthusiastic win, because they get my entire
-attention. The unmotivated ones lose, but who cares.
+The students who are smart and enthusiastic _win_, because they get my entire
+attention. The unmotivated ones _lose_, ... but who cares.
 
 {% quote Now, it takes much more time for me to understand who is who. %}
 
@@ -85,7 +85,7 @@ see students but only communicate with them in chats or conference calls.
 I keep wasting my time on students who don't care. All they need from me is a
 passing grade, but ChatGPT makes them look like promising talents who I should
 invest my time in. In the end, the students who really need my time don't get
-it, thanks to ChatGPT.
+it, ... thanks to ChatGPT.
 
 Thus, I see ChatGPT as a big threat to the education process and believe that
 very soon, tools that [validate texts](https://foundation.mozilla.org/en/blog/how-to-tell-chat-gpt-generated-text/) 
