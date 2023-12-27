@@ -78,7 +78,8 @@ At the end of the section, we mentioned that all participants in the experiment
 provided informed consent—this is important if humans (or cats) are involved,
 so don't forget about it.
 
-In the "Results" section, which follows the Method, you present the data that
+In the "Results" section, which follows the Method, you 
+[present]({% pst 2023/dec/2023-12-11-results-and-discussion %}) the data that
 were collected, combined, or generated (without giving any opinion or
 subjective interpretation of it!). Some of this data may have already been
 mentioned in the Method section, but not the most important details. For
@@ -87,7 +88,8 @@ names, ages, or breeds---this information goes into the Results, in the form of
 a nicely formatted table. How much "results" to show in the Method and how much
 in the Results is, I believe, a matter of taste.
 
-In the "Discussion" section, which follows the Results, you engage in a dialogue
+In the "Discussion" section, which follows the Results, you 
+[engage in a dialogue]({% pst 2023/dec/2023-12-11-results-and-discussion %})
 with yourself, questioning the procedures of the Method. This is where
 you are allowed to have an opinion about the data collected, combined, and
 generated. For example, we may discuss whether the results of our research
