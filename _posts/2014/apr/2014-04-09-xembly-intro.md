@@ -16,7 +16,7 @@ keywords:
   - xpath
 ---
 
-{% badge http://img.xembly.org/logo-256x256.png 64 https://www.xembly.org %}
+{% badge https://www.xembly.org/logo.png 64 https://www.xembly.org %}
 
 I use XML in almost every one of my projects. And, despite all the fuss about
 JSON/YAML, I honestly
