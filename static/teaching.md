@@ -33,12 +33,13 @@ mostly the courses about software development and project management.
 As much as it's possible, I'm trying to video-record all lectures.
 Most lectures are in English, but some of them are in Russian too.
 
-Sep 2023<br/>
-**Project Management Beyond Agile**<br/>
+<img src="http://img.youtube.com/vi/N1SOZ-vKgzQ/maxresdefault.jpg" class="lecture"/>
+Jan 2024<br/>
+**Open Source Best Practices**<br/>
 in [Innopolis University](https://innopolis.university/) (Kazan, Russia)<br/>
-10 lectures: in progress...
-[slides](https://github.com/yegor256/pmba),
-[videos](https://www.youtube.com/playlist?list=PLaIsQH4uc08x_T-Aelduv3Zf0DWRx40pq)
+8 lectures:
+[slides](https://github.com/yegor256/osbp),
+[videos](...)
 {: .lecture}
 
 Sep 2023<br/>
@@ -47,6 +48,15 @@ in [HSE University](https://www.hse.ru/en/) (Moscow, Russia)<br/>
 24 lectures: in progress...
 [slides](https://github.com/yegor256/sqm),
 [videos](https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl)
+{: .lecture}
+
+<img src="http://img.youtube.com/vi/N1SOZ-vKgzQ/maxresdefault.jpg" class="lecture"/>
+Sep 2023<br/>
+**Project Management Beyond Agile**<br/>
+in [Innopolis University](https://innopolis.university/) (Kazan, Russia)<br/>
+10 lectures:
+[slides](https://github.com/yegor256/pmba),
+[videos](https://www.youtube.com/playlist?list=PLaIsQH4uc08x_T-Aelduv3Zf0DWRx40pq)
 {: .lecture}
 
 <img src="http://img.youtube.com/vi/8FPU_N3LxqA/maxresdefault.jpg" class="lecture"/>
