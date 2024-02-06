@@ -11,7 +11,7 @@ function ping_uri {
     --output /dev/null \
     --max-time 15 \
     --fail \
-    -H 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \
+    --user-agent 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \
     -H 'Accept: text/html,*/*' \
     -H 'Accept-Encoding: gzip, deflate' \
     -H 'Cache-Control: max-age=0' \

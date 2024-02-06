@@ -20,7 +20,7 @@
 
 source 'https://rubygems.org'
 
-gem 'jekyll', '4.3.2'
+gem 'jekyll', '4.3.3'
 gem 'jekyll-bits', '0.15'
 gem 'jekyll-chatgpt-translate', '0.0.43'
 gem 'jekyll-feed', '0.17.0'
