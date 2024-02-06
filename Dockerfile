@@ -39,7 +39,7 @@ RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 && \
   cmake ../.. && \
   make && \
   make install && \
-  tidy-html5 --version
+  tidy --version
 
 RUN sudo apt-get install -y woff2
 COPY _docker/woff.zip /tmp/woff.zip
