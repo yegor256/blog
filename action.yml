@@ -9,5 +9,6 @@ runs:
   image: Dockerfile
   entrypoint: /bin/bash
   args:
+    - '-c'
     - 'ruby -v && bundle update && bundle exec rake'
 

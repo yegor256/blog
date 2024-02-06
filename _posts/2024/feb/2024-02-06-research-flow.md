@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Incremental Research Flow"
+title: "I&I Research Flow"
 date: 2024-02-06
 place: Moscow, Russia
 tags: science
@@ -24,7 +24,7 @@ then write a research paper about it. You can do it on your own and then present
 me the result in the end. Sometimes it may work, but most probably it won't.
 I will have many comments, suggestions and plain simple disagreements with your
 research questions, results, or conclusions. Just like in software engineering,
-waterfall approach is not an effective one. Instead, an incremental workflow
+waterfall approach is not an effective one. Instead, an _incremental and iterative_ workflow
 may give way better results: you make a small step forward, we discuss, you re-write,
 we agree, and you make the next step. The ultimate objective is to write a paper
 that will be published in a good journal or presented at a decent conference.
@@ -76,16 +76,24 @@ Now you are ready to do the research, incrementally demonstrating your results t
 which I will criticize and then either approve or ask you to re-work, in this 
 particular order:
 
-  * Research Questions
-  * Research Method --- [how to?]({% pst 2023/oct/2023-10-11-method-of-research %})
-  * Preliminary Experiments
-  * Related Work --- [how to?]({% pst 2023/sep/2023-09-29-how-to-write-related-work-section %})
-  * Results --- [how to?]({% pst 2023/dec/2023-12-11-results-and-discussion %})
-  * Limitations
-  * Discussion --- [how to?]({% pst 2023/dec/2023-12-11-results-and-discussion %})
-  * Conclusion
-  * Introduction
-  * Abstract
-  * Title
+  1. Research Questions
+  1. Research Method --- [how to?]({% pst 2023/oct/2023-10-11-method-of-research %})
+  1. Preliminary Experiments
+  1. Related Work --- [how to?]({% pst 2023/sep/2023-09-29-how-to-write-related-work-section %})
+  1. Results --- [how to?]({% pst 2023/dec/2023-12-11-results-and-discussion %})
+  1. Limitations
+  1. Discussion --- [how to?]({% pst 2023/dec/2023-12-11-results-and-discussion %})
+  1. Conclusion
+  1. Introduction
+  1. Abstract
+  1. Title
 
-To be continued...
+Every step produces a few new paragraphs to the LaTeX document.
+In [this blog post]({% pst 2022/aug/2022-08-24-research-paper-template %}) 
+you may find some recommendations for each of the steps.
+
+I strongly recommend not to continue to the next step, unless the previous
+one is discussed and approved. Doing so may lead to larger frustration on your
+side, when you write almost the entire paper and we both realize that the 
+entire piece must be re-written and experiments must be re-done.
+
