@@ -1,5 +1,5 @@
 docker:
-  directory: .
+  directory: repo
 assets:
   secrets.yml: "yegor256/home#assets/blog/secrets.yml"
   chatgpt-key.txt: "yegor256/home#assets/blog/chatgpt-key.txt"
