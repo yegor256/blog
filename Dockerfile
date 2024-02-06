@@ -21,27 +21,35 @@ LABEL Description="yegor256.com" Vendor="Yegor Bugayenko" Version="1.0"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN sudo apt-get -y update --fix-missing \
-  && sudo apt-get -y install aspell aspell-en graphviz gnuplot s3cmd fontforge liblapack-dev cmake plantuml libxml2-utils shellcheck
+RUN sudo apt-get -y update --fix-missing && \
+  sudo apt-get -y install aspell aspell-en graphviz gnuplot s3cmd fontforge liblapack-dev cmake plantuml libxml2-utils shellcheck && \
+  plantuml -version && \
+  aspell --version && \
+  fontforge --version && \
+  gnuplot --version && \
+  cmake --version && \
+  shellcheck --version
 
-RUN sudo npm install -g eslint
-
-COPY _docker/plantuml.jar /usr/share/plantuml/plantuml.jar
+RUN sudo npm install -g eslint && \
+  eslint --version
 
 RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 && \
   cd _tidy-html5/build/cmake && \
   git checkout 5.8.0 && \
   cmake ../.. && \
   make && \
-  make install
+  make install && \
+  tidy-html5 --version
 
 RUN sudo apt-get install -y woff2
 COPY _docker/woff.zip /tmp/woff.zip
 RUN unzip /tmp/woff.zip -d _sfnt2woff && \
   cd _sfnt2woff && \
   make && \
-  cp sfnt2woff /usr/local/bin/
+  cp sfnt2woff /usr/local/bin/ && \
+  sfnt2woff --version
 
-RUN npm install -g cssshrink@0.0.5
+RUN npm install -g cssshrink@0.0.5 && \
+  cssshrink --version
 
 RUN /bin/bash -l -c "gem update --system && gem install jgd -v 1.13.0"
