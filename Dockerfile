@@ -22,7 +22,9 @@ LABEL Description="yegor256.com" Vendor="Yegor Bugayenko" Version="1.0"
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN sudo apt-get -y update --fix-missing \
-  && sudo apt-get -y install aspell aspell-en graphviz gnuplot s3cmd fontforge liblapack-dev cmake plantuml libxml2-utils shellcheck eslint
+  && sudo apt-get -y install aspell aspell-en graphviz gnuplot s3cmd fontforge liblapack-dev cmake plantuml libxml2-utils shellcheck
+
+RUN sudo npm install -g eslint
 
 COPY _docker/plantuml.jar /usr/share/plantuml/plantuml.jar
 

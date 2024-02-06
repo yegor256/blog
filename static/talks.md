@@ -602,7 +602,7 @@ average, the organization was good, the food was tasty
 <span class="venue-rate green">B</span>
 <img src="https://i.ytimg.com/vi/Rip_04Bv3Jk/mqdefault.jpg" class="past-talk" alt="PMCon 2017"/>
 **How to Be Honest and Keep a Client**;
-[PMCon Kharkiv 2017](http://pmcon.dev-pro.net/);
+PMCon Kharkiv 2017;
 <span class="city">Kharkiv</span>, <span class="country">Ukraine</span>;
 11 June 2017;
 [video](https://youtu.be/Rip_04Bv3Jk),

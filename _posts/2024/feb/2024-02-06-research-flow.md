@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I&I Research Flow"
+title: "Research Flow"
 date: 2024-02-06
 place: Moscow, Russia
 tags: science
@@ -43,16 +43,16 @@ by [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport) (just 242 page
 If you think you already know LaTeX, 
 read [this short list of its best practices](https://yegor256.github.io/latex-best-practices/main.pdf) 
 and [_Writing for Computer Science_](https://link.springer.com/book/10.1007/978-1-4471-6639-9) 
-by [Justin Zobel](https://scholar.google.com/citations?user=uEHvqE8AAAAJ).
+by [Justin Zobel](https://scholar.google.com/citations?user=uEHvqE8AAAAJ) (just 284 pages).
 
 Now, create a document in [Overleaf](https://overleaf.com), 
 and [share a link](https://www.overleaf.com/learn/how-to/Sharing_a_project#Link_sharing) 
 with me so that I can also edit the project. Make your skeleton look like 
-this (you should also create an empty `main.bib` file in the Overleaf folder):
+this (you should also [create](https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf) 
+an empty `main.bib` file too):
 
 ```tex
 \documentclass[sigplan,nonacm,anonymous,review]{acmart}
-\settopmatter{printfolios=false,printccs=false,printacmref=false}
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
 \title{My article}
@@ -67,10 +67,6 @@ This paper is about something new.
 \maketitle
 \section{Introduction}
 Hello, world!
-\section{Method}
-\section{Results}
-\section{Discussion}
-\section{Conclusion}
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{main}
 \end{document}
