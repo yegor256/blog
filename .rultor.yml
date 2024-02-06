@@ -1,5 +1,5 @@
 docker:
-  image: yegor256/blog-image:0.0.6
+  directory: .
 assets:
   secrets.yml: "yegor256/home#assets/blog/secrets.yml"
   chatgpt-key.txt: "yegor256/home#assets/blog/chatgpt-key.txt"
