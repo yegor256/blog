@@ -23,6 +23,7 @@ excerpt_separator: <!--more-->
 exclude:
   - README.md
   - LICENSE.txt
+  - Dockerfile
   - Gemfile.lock
   - Gemfile
   - Rakefile
@@ -30,6 +31,7 @@ exclude:
   - id_rsa.enc
   - s3cfg.enc
   - uml
+  - action.yml
   - node_modules
 
 plugins:

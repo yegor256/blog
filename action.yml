@@ -1,0 +1,15 @@
+---
+name: cam-action
+description: 'Run full cycle with one repository'
+branding:
+  icon: alert-triangle
+  color: orange
+runs:
+  using: docker
+  image: Dockerfile
+  entrypoint: /bin/bash
+  args:
+    - '--login'
+    - '-c'
+    - 'bundle update && bundle exec rake'
+
