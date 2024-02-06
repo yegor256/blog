@@ -14,9 +14,9 @@ keywords:
   - research simple workflow
   - research step by step
   - research paper how to
-image: /images/2024/02/...
+image: /images/2024/02/respublica-shkid.jpg
 jb_picture:
-  caption: ...
+  caption: Республика Шкид (1966) by Геннадий Полока
 ---
 
 Say, you are student and I'm your teacher. Your task is to do an experiment or a study and 
