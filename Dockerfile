@@ -49,7 +49,6 @@ RUN unzip /tmp/woff.zip -d _sfnt2woff && \
   cp sfnt2woff /usr/local/bin/ && \
   sfnt2woff --version
 
-RUN npm install -g cssshrink@0.0.5 && \
-  cssshrink --version
+RUN npm install -g cssshrink@0.0.5
 
 RUN /bin/bash -l -c "gem update --system && gem install jgd -v 1.13.0"

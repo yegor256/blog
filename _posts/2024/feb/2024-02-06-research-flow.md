@@ -99,3 +99,12 @@ Before we start, please put a date on each of the steps mentioned above and send
 me the entire work plan. It's better to meet every milestone as a disciplined student; 
 otherwise, the risk of failure will be larger.
 
+I believe that you, the reader of this blog post, are an honest and motivated 
+student who not only cares about achieving a passing grade but also 
+values contributing to computer science. However, not every student fits this description. 
+Surprisingly, some may lack motivation or diligence. To prioritize the enthusiastic 
+and dedicated students who require most of my attention, I may halt a research 
+project when I discern a lack of genuine commitment. The use of 
+[ChatGPT]({% pst 2023/dec/2023-12-26-defend-me-against-chatgpt %}), 
+plagiarism, and negligence may lead to an unfavorable assessment of your work. 
+I strongly advise avoiding them.
