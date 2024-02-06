@@ -93,9 +93,12 @@ particular order:
 Every step produces a few new paragraphs to the LaTeX document.
 In [this blog post]({% pst 2022/aug/2022-08-24-research-paper-template %}) 
 you may find some recommendations for each of the steps.
-
 I strongly recommend not to continue to the next step, unless the previous
 one is discussed and approved. Doing so may lead to larger frustration on your
 side, when you write almost the entire paper and we both realize that the 
 whole piece must be re-written and experiments must be re-done.
+
+Before we start, put a date on each of the steps mentioned above and send
+me the entire "work plan." It's better to meet every milestone, as a good
+disciplined student, otherwise the risk of failure will be larger.
 
