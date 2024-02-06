@@ -11,5 +11,5 @@ runs:
   args:
     - '--login'
     - '-c'
-    - 'bundle update && bundle exec rake'
+    - 'ruby -v && bundle update && bundle exec rake'
 
