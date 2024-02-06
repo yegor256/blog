@@ -5,9 +5,8 @@ date: 2024-02-06
 place: Moscow, Russia
 tags: science
 description: |
-  This is a very simplified description of a very simple research
-  workflow, which I try to use with my students in their research
-  course and diploma works.
+  This is a highly simplified description of a straightforward research workflow 
+  that I employ with my students in their research courses and diploma projects.
 keywords:
   - research workflow
   - how to do a research
@@ -19,34 +18,37 @@ jb_picture:
   caption: Республика Шкид (1966) by Геннадий Полока
 ---
 
-Say, you are student and I'm your teacher. Your task is to do an experiment or a study and 
-then write a research paper about it. You can do it on your own and then present
-me the result in the end. Sometimes it may work, but most probably it won't.
-I will have many comments, suggestions and plain simple disagreements with your
-research questions, results, or conclusions. Just like in software engineering,
-waterfall approach is not an effective one. Instead, an _incremental and iterative_ workflow
-may give way better results: you make a small step forward, we discuss, you re-write,
-we agree, and you make the next step. The ultimate objective is to write a paper
-that will be published in a good journal or presented at a decent conference.
+Say, you are a student, and I'm your [teacher]({% pst 2021/dec/2021-12-01-teaching %}). 
+Your task is to conduct 
+an experiment or a study and then write a research paper about it. 
+You can do it on your own and then present me with the results in the end. 
+Sometimes it may work, but most probably it won't. I will have many comments, 
+suggestions, and plain simple disagreements with your research questions, results, 
+or conclusions. Just like in software engineering, the [Waterfall](https://en.wikipedia.org/wiki/Waterfall_model) approach 
+is not an effective one. Instead, an _incremental and iterative_ workflow 
+may yield way better results: you take a small step forward, 
+we discuss it, you rewrite, we agree, and you take the next step. 
+The ultimate objective is to write a paper that will be published in 
+a good journal or presented at a [decent conference]({% pst 2021/apr/2021-04-14-how-we-organized-iccq %}). 
 Well, yes, a passing grade is also an objective.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-Since the goal is a research paper, your first step is to create a skeleton of it. 
-In LaTeX. If you don't know LaTeX yet, read 
-[_LaTeX: A Document Preparation System_](https://www.amazon.com/LaTeX-Document-Preparation-System-2nd/dp/0201529831) book 
-of [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport) (just 242 pages). 
-If you think you already know
-LaTeX, read [this short list of its best practices](https://yegor256.github.io/latex-best-practices/main.pdf)
-and [_Writing for Computer Science_](https://link.springer.com/book/10.1007/978-1-4471-6639-9) book of 
-[Justin Zobel](https://scholar.google.com/citations?user=uEHvqE8AAAAJ).
+Since the goal is a research paper, your first step is to create 
+a skeleton of it in LaTeX. If you don't know LaTeX yet, 
+read [_LaTeX: A Document Preparation System_](https://www.amazon.com/LaTeX-Document-Preparation-System-2nd/dp/0201529831) 
+by [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport) (just 242 pages). 
+If you think you already know LaTeX, 
+read [this short list of its best practices](https://yegor256.github.io/latex-best-practices/main.pdf) 
+and [_Writing for Computer Science_](https://link.springer.com/book/10.1007/978-1-4471-6639-9) 
+by [Justin Zobel](https://scholar.google.com/citations?user=uEHvqE8AAAAJ).
 
-Now, create a document in [Overleaf](https://overleaf.com), and 
-[share a link](https://www.overleaf.com/learn/how-to/Sharing_a_project#Link_sharing) with me, so that
-I can also edit the project. Make your skeleton to look like this (you should also create an empty `main.bib` file
-in the Overleaf folder):
+Now, create a document in [Overleaf](https://overleaf.com), 
+and [share a link](https://www.overleaf.com/learn/how-to/Sharing_a_project#Link_sharing) 
+with me so that I can also edit the project. Make your skeleton look like 
+this (you should also create an empty `main.bib` file in the Overleaf folder):
 
 ```tex
 \documentclass[sigplan,nonacm,anonymous,review]{acmart}
@@ -74,9 +76,8 @@ Hello, world!
 \end{document}
 ```
 
-Now you are ready to do the research, incrementally demonstrating results,
-which I will criticize and either approve or ask you to re-work, in this 
-particular order:
+Now, you are ready to begin your research incrementally, 
+and I will review each step in the following order:
 
   1. Research Questions
   1. Research Method --- [how to?]({% pst 2023/oct/2023-10-11-method-of-research %})
@@ -90,15 +91,15 @@ particular order:
   1. Abstract
   1. Title
 
-Every step produces a few new paragraphs to the LaTeX document.
-In [this blog post]({% pst 2022/aug/2022-08-24-research-paper-template %}) 
-you may find some recommendations for each of the steps.
-I strongly recommend not to continue to the next step, unless the previous
-one is discussed and approved. Doing so may lead to larger frustration on your
-side, when you write almost the entire paper and we both realize that the 
-whole piece must be re-written and experiments must be re-done.
+Each step produces a few new paragraphs in the LaTeX document. 
+In [this blog post]({% pst 2022/aug/2022-08-24-research-paper-template %}), 
+you can find recommendations for each of the steps. I strongly advise against 
+moving on to the next step unless the previous one is discussed and approved. 
+Doing so may result in greater frustration on your part when you've 
+written almost the entire paper, and we both realize that the 
+whole piece must be rewritten, and experiments must be redone.
 
-Before we start, put a date on each of the steps mentioned above and send
-me the entire "work plan." It's better to meet every milestone, as a good
-disciplined student, otherwise the risk of failure will be larger.
+Before we start, please put a date on each of the steps mentioned above and send 
+me the entire work plan. It's better to meet every milestone as a disciplined student; 
+otherwise, the risk of failure will be larger.
 
