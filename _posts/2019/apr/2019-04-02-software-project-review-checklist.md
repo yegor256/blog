@@ -33,7 +33,7 @@ Here is a short summary of what a report from a reviewer must include.
 {% jb_picture_body %}
 
 I tried to touch on this subject in a few recent talks:
-[Make Customers Trust You](https://youtu.be/oiNI2jF46h0) at [BDMSummit 2017](http://bdmsummit.com/yegor-bugayenko-2017s/),
+[Make Customers Trust You](https://youtu.be/oiNI2jF46h0) at BDMSummit 2017,
 [How to Be Honest and Keep a Client](https://youtu.be/Rip_04Bv3Jk) at [PMCon Kharkiv 2017](http://pmcon.dev-pro.net/),
 and
 [How to Avoid Outsourcing Disaster](https://www.youtube.com/watch?v=DLk_5BmgTVk) at [Kyiv Outsourcing Forum 2017](http://outsourceforum.org/).

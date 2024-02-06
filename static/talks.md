@@ -589,7 +589,7 @@ Will be glad to visit again
 <span class="venue-rate orange">C+</span>
 <img src="https://i.ytimg.com/vi/oiNI2jF46h0/mqdefault.jpg" class="past-talk" alt="BDMSummit 2017 Summer"/>
 **Make Customers Trust You**;
-[BDMSummit 2017](http://bdmsummit.com/yegor-bugayenko-2017s/);
+BDMSummit 2017;
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 17 June 2017;
 [video](https://youtu.be/oiNI2jF46h0),
