@@ -37,11 +37,13 @@ Well, yes, a passing grade is also an objective.
 Since the goal is a research paper, your first step is to create a skeleton of it. 
 In LaTeX. If you don't know LaTeX yet, read 
 [_LaTeX: A Document Preparation System_](https://www.amazon.com/LaTeX-Document-Preparation-System-2nd/dp/0201529831) book 
-by [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport) (just 242 pages). 
+of [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport) (just 242 pages). 
 If you think you already know
-LaTeX, read [this short list of its best practices](https://yegor256.github.io/latex-best-practices/main.pdf).
+LaTeX, read [this short list of its best practices](https://yegor256.github.io/latex-best-practices/main.pdf)
+and [_Writing for Computer Science_](https://link.springer.com/book/10.1007/978-1-4471-6639-9) book of 
+[Justin Zobel](https://scholar.google.com/citations?user=uEHvqE8AAAAJ).
 
-Create a document in [Overleaf](https://overleaf.com), and 
+Now, create a document in [Overleaf](https://overleaf.com), and 
 [share a link](https://www.overleaf.com/learn/how-to/Sharing_a_project#Link_sharing) with me, so that
 I can also edit the project. Make your skeleton to look like this (you should also create an empty `main.bib` file
 in the Overleaf folder):
@@ -72,8 +74,8 @@ Hello, world!
 \end{document}
 ```
 
-Now you are ready to do the research, incrementally demonstrating your results to me,
-which I will criticize and then either approve or ask you to re-work, in this 
+Now you are ready to do the research, incrementally demonstrating results,
+which I will criticize and either approve or ask you to re-work, in this 
 particular order:
 
   1. Research Questions
@@ -95,5 +97,5 @@ you may find some recommendations for each of the steps.
 I strongly recommend not to continue to the next step, unless the previous
 one is discussed and approved. Doing so may lead to larger frustration on your
 side, when you write almost the entire paper and we both realize that the 
-entire piece must be re-written and experiments must be re-done.
+whole piece must be re-written and experiments must be re-done.
 
