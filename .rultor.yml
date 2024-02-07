@@ -7,7 +7,6 @@ assets:
   id_rsa.pub: "yegor256/home#assets/blog/id_rsa.pub"
 install: |
   bundle install --no-color
-  sudo npm install -g eslint@8.44.0
 merge:
   script: |
     LC_ALL=en_US.UTF-8 bundle exec rake

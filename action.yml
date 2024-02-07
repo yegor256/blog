@@ -1,6 +1,6 @@
 ---
-name: cam-action
-description: 'Run full cycle with one repository'
+name: blog-action
+description: 'Build Jekyll website'
 branding:
   icon: alert-triangle
   color: orange
@@ -11,5 +11,5 @@ runs:
   args:
     - '--login'
     - '-c'
-    - 'rvm default 3.2.2 && source /usr/local/rvm/scripts/rvm && ruby -v && gem install tiktoken_ruby && gem list -d tiktoken_ruby && bundle update && bundle exec rake'
+    - 'rvm default 3.2.2 && source /usr/local/rvm/scripts/rvm && ruby -v && bundle update && bundle exec rake'
 

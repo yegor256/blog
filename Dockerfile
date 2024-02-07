@@ -21,8 +21,8 @@ LABEL Description="yegor256.com" Vendor="Yegor Bugayenko" Version="1.0"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN sudo apt-get -y update --fix-missing && \
-  sudo apt-get -y install aspell aspell-en graphviz gnuplot s3cmd fontforge liblapack-dev cmake libxml2-utils shellcheck plantuml && \
+RUN apt-get -y update --fix-missing && \
+  apt-get -y install aspell aspell-en graphviz gnuplot s3cmd fontforge liblapack-dev cmake libxml2-utils shellcheck plantuml && \
   plantuml -version && \
   aspell --version && \
   fontforge --version && \
@@ -30,7 +30,7 @@ RUN sudo apt-get -y update --fix-missing && \
   cmake --version && \
   shellcheck --version
 
-RUN sudo npm install -g eslint && \
+RUN npm install -g eslint@8.44.0 && \
   eslint --version
 
 RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 && \
@@ -41,7 +41,7 @@ RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 && \
   make install && \
   tidy --version
 
-RUN sudo apt-get install -y woff2
+RUN apt-get install -y woff2
 COPY _docker/woff.zip /tmp/woff.zip
 RUN unzip /tmp/woff.zip -d _sfnt2woff && \
   cd _sfnt2woff && \
