@@ -39,14 +39,14 @@ plugins:
   - jekyll-git-hash
   - jekyll-paginate
   - jekyll-plantuml
-  # - jekyll-shorts
+  - jekyll-shorts
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-chatgpt-translate
   # - jekyll-related-posts
 
 shorts:
-  permalink: :year:month:day.html
+  permalink: :year:month:day:letter.html
 
 chatgpt-translate:
   threshold: 64

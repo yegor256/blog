@@ -79,6 +79,10 @@ module Jekyll
       true
     end
 
+    def modified_time
+      Time.now
+    end
+
     def write(_dest)
       FileUtils.mkdir_p File.dirname(path)
       xml = Nokogiri::HTML(@html)
