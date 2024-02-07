@@ -2522,6 +2522,7 @@ disabled
 disadvantage
 disagree
 disagreed
+disagreements
 disagrees
 disallow
 disallows
@@ -2536,6 +2537,7 @@ disaster
 disasters
 disbelief
 disc
+discern
 discharge
 discharged
 disciplinary
@@ -4017,6 +4019,7 @@ half-measures
 half-page
 hall
 halloween
+halt
 hamburgers
 hamcrest
 hammer
@@ -7481,6 +7484,7 @@ redhat
 redirect
 redirected
 rediscovered
+redone
 reduce
 reduced
 redundancy
@@ -7796,6 +7800,7 @@ rewarding
 rewards
 rework
 rewrite
+rewritten
 rex
 ReXSL
 reynolds
@@ -9662,6 +9667,7 @@ unevenly
 unexpected
 unexplained
 unfair
+unfavorable
 unfeasible
 unfinished
 unfixable
@@ -10288,6 +10294,7 @@ yes
 yesterday
 yet
 yevgeny
+yield
 ying
 yml
 yoga

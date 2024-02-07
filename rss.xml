@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2024-01-15T13:52:14+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Defend Me Against ChatGPT</title><link href="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html" rel="alternate" type="text/html" title="Defend Me Against ChatGPT" /><published>2023-12-26T00:00:00+00:00</published><updated>2023-12-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt</id><content type="html" xml:base="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html"><![CDATA[<p>I do enjoy <a href="https://en.wikipedia.org/wiki/ChatGPT">ChatGPT</a> a lot. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2024-02-07T01:15:38+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Research Flow</title><link href="https://www.yegor256.com/2024/02/06/research-flow.html" rel="alternate" type="text/html" title="Research Flow" /><published>2024-02-06T00:00:00+00:00</published><updated>2024-02-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/02/06/research-flow</id><content type="html" xml:base="https://www.yegor256.com/2024/02/06/research-flow.html"><![CDATA[<p>Say, you are a student, and I’m your <a href="/2021/12/01/teaching.html">teacher</a>. 
+Your task is to conduct 
+an experiment or a study and then write a research paper about it. 
+You can do it on your own and then present me with the results in the end. 
+Sometimes it may work, but most probably it won’t. I will have many comments, 
+suggestions, and plain simple disagreements with your research questions, results, 
+or conclusions. Just like in software engineering, the <a href="https://en.wikipedia.org/wiki/Waterfall_model">Waterfall</a> approach 
+is not an effective one. Instead, an <em>incremental and iterative</em> workflow 
+may yield way better results: you take a small step forward, 
+we discuss it, you rewrite, we agree, and you take the next step. 
+The ultimate objective is to write a paper that will be published in 
+a good journal or presented at a <a href="/2021/04/14/how-we-organized-iccq.html">decent conference</a>. 
+Well, yes, a passing grade is also an objective.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Республика Шкид (1966) by Геннадий Полока" src="/images/2024/02/respublica-shkid.jpg" longdesc="#0f65f369" /><figcaption id="0f65f369">Республика Шкид (1966) by Геннадий Полока</figcaption></figure>
+
+<p>Since the goal is a research paper, your first step is to create 
+a skeleton of it in LaTeX. If you don’t know LaTeX yet, 
+read <a href="https://www.amazon.com/LaTeX-Document-Preparation-System-2nd/dp/0201529831"><em>LaTeX: A Document Preparation System</em></a> 
+by <a href="https://en.wikipedia.org/wiki/Leslie_Lamport">Leslie Lamport</a> (just 242 pages). 
+If you think you already know LaTeX, 
+read <a href="https://yegor256.github.io/latex-best-practices/main.pdf">this short list of its best practices</a> 
+and <a href="https://link.springer.com/book/10.1007/978-1-4471-6639-9"><em>Writing for Computer Science</em></a> 
+by <a href="https://scholar.google.com/citations?user=uEHvqE8AAAAJ">Justin Zobel</a> (just 284 pages).</p>
+
+<p>Now, create a document in <a href="https://overleaf.com">Overleaf</a>, 
+and <a href="https://www.overleaf.com/learn/how-to/Sharing_a_project#Link_sharing">share a link</a> 
+with me so that I can also edit the project. Make your skeleton look like 
+this (you should also <a href="https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf">create</a> 
+an empty <code class="language-plaintext highlighter-rouge">main.bib</code> file too):</p>
+
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="na">[sigplan,nonacm,anonymous,review]</span><span class="p">{</span>acmart<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[utf8]</span><span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>natbib<span class="p">}</span>
+<span class="k">\title</span><span class="p">{</span>My article<span class="p">}</span>
+<span class="k">\author</span><span class="p">{</span>John Doe<span class="p">}</span>
+<span class="k">\orcid</span><span class="p">{</span>0000-0001-0000-0000<span class="p">}</span>
+<span class="k">\email</span><span class="p">{</span>your email<span class="p">}</span>
+<span class="k">\affiliation</span><span class="p">{</span><span class="k">\institution</span><span class="p">{</span>University<span class="p">}</span><span class="k">\city</span><span class="p">{</span>City<span class="p">}</span><span class="k">\country</span><span class="p">{</span>Country<span class="p">}}</span>
+<span class="nt">\begin{abstract}</span>
+This paper is about something new.
+<span class="nt">\end{abstract}</span>
+<span class="nt">\begin{document}</span>
+<span class="k">\maketitle</span>
+<span class="k">\section</span><span class="p">{</span>Introduction<span class="p">}</span>
+Hello, world!
+<span class="k">\bibliographystyle</span><span class="p">{</span>ACM-Reference-Format<span class="p">}</span>
+<span class="k">\bibliography</span><span class="p">{</span>main<span class="p">}</span>
+<span class="nt">\end{document}</span>
+</code></pre></div></div>
+
+<p>Now, you are ready to begin your research incrementally, 
+and I will review each step in the following order:</p>
+
+<ol>
+  <li>Research Questions</li>
+  <li>Research Method — <a href="/2023/10/11/method-of-research.html">how to?</a></li>
+  <li>Preliminary Experiments</li>
+  <li>Related Work — <a href="/2023/09/29/how-to-write-related-work-section.html">how to?</a></li>
+  <li>Results — <a href="/2023/12/11/results-and-discussion.html">how to?</a></li>
+  <li>Limitations</li>
+  <li>Discussion — <a href="/2023/12/11/results-and-discussion.html">how to?</a></li>
+  <li>Conclusion</li>
+  <li>Introduction</li>
+  <li>Abstract</li>
+  <li>Title</li>
+</ol>
+
+<p>Each step produces a few new paragraphs in the LaTeX document. 
+In <a href="/2022/08/24/research-paper-template.html">this blog post</a>, 
+you can find recommendations for each of the steps. I strongly advise against 
+moving on to the next step unless the previous one is discussed and approved. 
+Doing so may result in greater frustration on your part when you’ve 
+written almost the entire paper, and we both realize that the 
+whole piece must be rewritten, and experiments must be redone.</p>
+
+<p>Before we start, please put a date on each of the steps mentioned above and send 
+me the entire work plan. It’s better to meet every milestone as a disciplined student; 
+otherwise, the risk of failure will be larger.</p>
+
+<p>I believe that you, the reader of this blog post, are an honest and motivated 
+student who not only cares about achieving a passing grade but also 
+values contributing to computer science. However, not every student fits this description. 
+Surprisingly, some may lack motivation or diligence. To prioritize the enthusiastic 
+and dedicated students who require most of my attention, I may halt a research 
+project when I discern a lack of genuine commitment. The use of 
+<a href="/2023/12/26/defend-me-against-chatgpt.html">ChatGPT</a>, 
+plagiarism, and negligence may lead to an unfavorable assessment of your work. 
+I strongly advise avoiding them.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[This is a highly simplified description of a straightforward research workflow that I employ with my students in their research courses and diploma projects.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/02/respublica-shkid.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/02/respublica-shkid.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Defend Me Against ChatGPT</title><link href="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html" rel="alternate" type="text/html" title="Defend Me Against ChatGPT" /><published>2023-12-26T00:00:00+00:00</published><updated>2023-12-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt</id><content type="html" xml:base="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html"><![CDATA[<p>I do enjoy <a href="https://en.wikipedia.org/wiki/ChatGPT">ChatGPT</a> a lot. 
 The blog post you’re reading now was written by me and
 then given to ChatGPT to fix its grammar and polish the writing style. Until
 recently, since 2014, when I wrote my <a href="/2014/04/06/introduction.html">first blog post</a>, 
@@ -916,133 +1006,4 @@ in order to check what style violations are still there:</p>
 <p><a href="https://ctan.org/pkg/bibcop">In CTAN</a>, you can find full PDF documentation.</p>
 
 <p>You are welcome to suggest additional style checkers, 
-via <a href="https://github.com/yegor256/bibcop">GitHub issues</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="latex" /><summary type="html"><![CDATA[By the quality of the 'References' section some people may judge the quality of your research paper; bibcop helps you keep everything clean.]]></summary></entry><entry><title type="html">Robots vs. Programmers</title><link href="https://www.yegor256.com/2023/08/29/ai-for-software-engineering.html" rel="alternate" type="text/html" title="Robots vs. Programmers" /><published>2023-08-29T00:00:00+00:00</published><updated>2023-08-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/08/29/ai-for-software-engineering</id><content type="html" xml:base="https://www.yegor256.com/2023/08/29/ai-for-software-engineering.html"><![CDATA[<p>The <a href="https://venturebeat.com/ai/openai-debuts-chatgpt-and-gpt-3-5-series-as-gpt-4-rumors-fly/">release</a> 
-of <a href="https://chat.openai.com/">ChatGPT</a> 3.5 has changed everything for us programmers. 
-Even though most of us (including me) don’t understand how it works, 
-some of us use it more frequently than Stack Overflow, Google, and IDE built-in features. 
-I believe this is just the beginning. Even though, only <a href="https://www.githubnext.com">Microsoft</a> 
-knows what will happen next, let me try to make a humble prediction too. 
-Below, I list what I believe robots (with Generative AI on board) will do in the future.
-The further into the future, the lower on the list.
-I tried not to repeat what <a href="https://www.githubnext.com">GitHubNext</a> is already saying.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Blade Runner (1982) by Ridley Scott" src="/images/2023/08/blade-runner.jpg" longdesc="#19d07357" /><figcaption id="19d07357">Blade Runner (1982) by Ridley Scott</figcaption></figure>
-
-<p><strong>Report Bugs</strong>. They will go through the codebase, analyze the code, and maybe
-  even try to run some tests, then submit bug reports when problems are
-  obvious. They will also submit bug reports when they find code that is hard
-  to understand, improperly documented, not covered by automated tests, or has security vulnerabilities.
-  Additionally, they will report when they see that the code is not following
-  conventions or best practices. They will write their reports so nicely and
-  provide so many technical details and supplementary links that programmers
-  will prefer the reports from robots much more than reports from humans.</p>
-
-<p><strong>Review Pull Requests</strong>. They will examine the pull requests submitted to the
-  repository (either by humans or robots) and review them by making comments on
-  certain lines of code, either criticizing the quality of the code and/or
-  suggesting better alternatives. They will keep track of the suggestions made
-  earlier and will insist where necessary. In the end, the authors of the pull
-  requests won’t even know who is reviewing them: a human or a robot.</p>
-
-<aside class="youtube">
-        <a href="https://www.youtube.com/watch?v=gHznfuhRR60"><div class="box">
-        <img src="https://i.ytimg.com/vi/gHznfuhRR60/mqdefault.jpg" alt="YouTube video #gHznfuhRR60" />
-        <div class="play"><i class="icon icon-play"></i></div>
-        </div></a>
-        <div>AIIN&#39;23: Robots vs. Programmers, How soon will computers fire us?;
-        7 September 2023.</div></aside>
-
-<p><strong>Refactor</strong>. From a huge collection of well-known micro-refactorings, they will
-  select the few most important at any given moment and will submit pull
-  requests with the changes. They won’t alter the functionality of the code or
-  make massive modifications. Instead, they will improve the quality of the
-  code in small increments, making it easy for us humans to merge their
-  suggested changes. They won’t change too much, so we won’t feel managed by
-  robots, but we will be. Slowly and incrementally, they will improve the
-  codebase, making it more readable, maintainable, and better understood …
-  by other robots.</p>
-
-<p><strong>Backlog Prioritization</strong>. They will sort tasks and tickets into their
-  appropriate milestones, determining which ones are of higher priority. They
-  will decide which bug should be fixed first and which feature request is more
-  important than others. Utilizing historical data, current team velocity, and
-  other relevant metrics, they will create a prioritized backlog that aligns
-  with both short-term objectives and long-term goals.</p>
-
-<p><strong>Refine Bug Reports</strong>. They will examine already reported bugs and refine them,
-  providing supplementary information, explaining the code to which the bug
-  refers, and suggesting code snippets that could potentially reproduce the
-  bug. They will do the work that most programmers are too lazy to do: properly
-  explain the bug in order to help its fixer.</p>
-
-<p><strong>Document Source Code</strong>. They will find places in the code that are hard to
-  comprehend, such as complex functions, large classes, and big data
-  structures. They will generate documentation blocks and then submit pull
-  requests with them. Humans will be happy to accept these, since documenting
-  someone else’s code is a routine and boring part of work. Moreover, keeping
-  the documentation in sync with the source code is one of the areas where our
-  human negligence is most visible.</p>
-
-<p><strong>Fix Bugs</strong>. According to the code they already see in the codebase and the
-  list of bugs reported in issues, they will generate some fixes and submit
-  them as new pull requests. They will explain what the fixes are doing, why
-  the improvement is made in this or that way, how critical the fix is, and
-  also suggest possible alternatives. We will simply merge them.</p>
-
-<p><strong>Formalize Requirements</strong>. They will examine the codebase and the comments
-  where we discuss it, and will derive a formal definition of the requirements
-  we implement. Then, they will formulate the requirements using Use Case
-  diagrams, Requirement Matrix, or even informal textual documents like README
-  or Wiki. They will keep these documents up to date throughout the entire
-  lifecycle of the codebase—something we humans are often too lazy to do.</p>
-
-<p><strong>Onboard</strong>: 
-  They will assist in the onboarding process of new developers, 
-  guiding them through the codebase, explaining architectural decisions, 
-  and offering personalized tutorials. They will also help us understand
-  certain code blocks by providing interactive guidance.</p>
-
-<p><strong>Analyze Technical Debt</strong>
-  They could analyze the codebase to identify areas where technical debt is 
-  accumulating and suggest steps to mitigate it before it becomes problematic.
-  They will submit tickets where the biggest debt territories will be
-  identified and improvements suggested.</p>
-
-<p><strong>Cleanup Documentation</strong>.
-  They will reformat the doc blocks that we humans write for our classes
-  and methods, and then submit pull requests with the changes. 
-  Formatting the documentation correctly, using HTML, Markdown, Doxia,
-  and many other formats, is a boring work where we humans fall short.</p>
-
-<p><strong>Suggest New Features</strong>. They will examine already implemented functionality
-  and will suggest additional features, submitting tickets. They will explain
-  the reasons behind such new feature requests, find proper justification, and
-  provide examples of how users will interact with the new functionality.</p>
-
-<p><strong>Document Architecture</strong>. They will observe the codebase and then update the
-  documentation about the architecture it implements. This is something
-  programmers usually forget to do, or simply don’t know how to do right. The
-  robots will use UML or perhaps less formal instruments to document the
-  architecture, thus making the entire product easier to maintain.</p>
-
-<p><strong>Estimate</strong>. They will estimate the complexity of every bug report or feature
-  request in staff-hours, calendar days, or maybe even in lines of code. This
-  information will help the team make planning decisions.</p>
-
-<p><strong>Predict</strong>. By examining events in a repository, they will spot anomalies in
-  our human behavior, such as changes in the mood of programmers in the
-  comments, spikes in the intensity of commits, failures in CI/CD pipelines,
-  and so on. They will be able to predict larger troubles before it’s too late.
-  They will predict and then suggest corrective and preventive actions,
-  submitting tickets with management or technical suggestions.</p>
-
-<p><strong>Appraise</strong>. They will observe the activity of every programmer and will
-  appraise their productivity. The results will be published directly to GitHub
-  issues or perhaps sent to project managers by email. In the end,
-  they will decide who of us humans are more valuable to their projects.</p>
-
-<p>I’m thankful to ChatGPT for helping me build this list.</p>
-
-<p>What do you think <del>I</del> we missed?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><category term="programming" /><summary type="html"><![CDATA[Robots will likely revolutionize software engineering ranging from code reviews and bug fixing to automated refactoring, backlog prioritization, and employee appraisals.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/08/blade-runner.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+via <a href="https://github.com/yegor256/bibcop">GitHub issues</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="latex" /><summary type="html"><![CDATA[By the quality of the 'References' section some people may judge the quality of your research paper; bibcop helps you keep everything clean.]]></summary></entry></feed>
