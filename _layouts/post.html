@@ -122,7 +122,7 @@ amp: true
           <pre style="color:#053c5e;">@misc&#123;bugayenko{{ page.date | date: "%Y" }}blog{{ page.date | date: "%m%d" }},
   author = &#123;Bugayenko, Yegor&#125;,
   title = &#123;&#123;{{ page.title | replace:'&','\&' | replace:'#','\#' | replace:'_','\_' }}&#125;&#125;,
-  howpublished = &#123;\url&#123;{{ site.url }}{{ page.url }}&#125;&#125;,
+  howpublished = &#123;\url&#123;{{ site.url }}{{ page.short-url }}&#125;&#125;,
   year = &#123;{{ page.date | date: "%Y" }}&#125;,
   month = &#123;{{ page.date | date: "%B" }}&#125;,
   note = &#123;[Online; accessed {{ 'now' | date: "%d-%m-%Y" }}]&#125;

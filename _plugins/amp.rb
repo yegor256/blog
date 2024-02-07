@@ -26,50 +26,6 @@ require 'fastimage'
 # Jekyll module
 module Jekyll
   # The class
-  class AmpPage < Page
-    def initialize(site, doc)
-      super(site, site.source, File.dirname(doc.relative_path), doc.basename)
-    end
-  end
-
-  # The class
-  class AmpFile < StaticFile
-    def initialize(site, path, html)
-      super(site, site.dest, '_site', path)
-      xml = Nokogiri::HTML(html)
-      xml.xpath('//body//figure[@class="highlight"]').each do |f|
-        f.before("<pre>#{f.xpath('pre//text()')}</pre>")
-      end
-      xml.xpath('//body//figure[@class="jb_picture"]').each do |f|
-        src = f.xpath('img/@src').to_s
-        alt = f.xpath('figcaption/text()').to_s
-        width, height = Jekyll.image_size(src)
-        raise "Can't calculate size of image: #{src}" unless width
-        f.before("<amp-img src='#{CGI.escapeHTML(src)}' alt='#{CGI.escapeHTML(alt)}' height='#{height}' width='#{width}' layout='responsive'></amp-img>")
-      end
-      xml.xpath('//comment()').remove
-      xml.xpath('//@style').remove
-      xml.xpath('//body//iframe').remove
-      xml.xpath('//body//script').remove
-      xml.xpath('//body//form').remove
-      xml.xpath('//body//figure').remove
-      xml.xpath('//body//figcaption').remove
-      xml.xpath('//body//img').remove
-      xml.xpath('//body//svg').remove
-      xml.xpath('//body//aside').remove
-      @html = xml.to_html
-        .gsub(%r{<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">}, '')
-      write(site.dest)
-    end
-
-    def write(_dest)
-      FileUtils.mkdir_p File.dirname(path)
-      File.write(path, @html)
-      true
-    end
-  end
-
-  # The class
   class AmpGenerator < Generator
     priority :low
     def generate(site)
@@ -102,6 +58,55 @@ module Jekyll
         total += 1
       end
       puts "#{total} AMP pages generated in #{(Time.now - start).round(2)}s"
+    end
+  end
+
+  # The class
+  class AmpPage < Page
+    def initialize(site, doc)
+      super(site, site.source, File.dirname(doc.relative_path), doc.basename)
+    end
+  end
+
+  # The class
+  class AmpFile < StaticFile
+    def initialize(site, path, html)
+      super(site, site.dest, '', path)
+      @html = html
+    end
+
+    def modified?
+      true
+    end
+
+    def write(_dest)
+      FileUtils.mkdir_p File.dirname(path)
+      xml = Nokogiri::HTML(@html)
+      xml.xpath('//body//figure[@class="highlight"]').each do |f|
+        f.before("<pre>#{f.xpath('pre//text()')}</pre>")
+      end
+      xml.xpath('//body//figure[@class="jb_picture"]').each do |f|
+        src = f.xpath('img/@src').to_s
+        alt = f.xpath('figcaption/text()').to_s
+        width, height = Jekyll.image_size(src)
+        raise "Can't calculate size of image: #{src}" unless width
+        f.before("<amp-img src='#{CGI.escapeHTML(src)}' alt='#{CGI.escapeHTML(alt)}' height='#{height}' width='#{width}' layout='responsive'></amp-img>")
+      end
+      xml.xpath('//comment()').remove
+      xml.xpath('//@style').remove
+      xml.xpath('//body//iframe').remove
+      xml.xpath('//body//script').remove
+      xml.xpath('//body//form').remove
+      xml.xpath('//body//figure').remove
+      xml.xpath('//body//figcaption').remove
+      xml.xpath('//body//img').remove
+      xml.xpath('//body//svg').remove
+      xml.xpath('//body//aside').remove
+      content = xml.to_html
+        .gsub(%r{<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">}, '')
+      File.write(path, content)
+      Jekyll.logger.debug("AMP written to #{path}")
+      true
     end
   end
 

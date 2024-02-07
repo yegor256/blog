@@ -5,7 +5,7 @@ author:
   name: "Yegor Bugayenko"
   email: yegor256@gmail.com
 description: "Yegor Bugayenko"
-copyright: "(c) Yegor Bugayenko, 2014-2021"
+copyright: "(c) Yegor Bugayenko, 2014-2024"
 encoding: utf-8
 timezone: America/San_Francisco
 
@@ -39,10 +39,14 @@ plugins:
   - jekyll-git-hash
   - jekyll-paginate
   - jekyll-plantuml
+  # - jekyll-shorts
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-chatgpt-translate
   # - jekyll-related-posts
+
+shorts:
+  permalink: :year:month:day.html
 
 chatgpt-translate:
   threshold: 64
