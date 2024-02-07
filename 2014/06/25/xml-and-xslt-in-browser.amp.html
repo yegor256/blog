@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>XML+XSLT in a Browser</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/06/25/xml-and-xslt-in-browser.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/06/25/xml-and-xslt-in-browser.html"
+        },
+        "headline": "XML+XSLT in a Browser",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2014-06-25",
+        "dateModified": "2014-06-25",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "XML+XSLT is a useful combination for web interfaces
+and RESTful API-s at the same time. This article explains
+how it works and argues in favor of its use.
+",
+        "keywords": ["web framework", "java web framework", "rexsl framework", "xml xsl web page", "xml xsl html web", "xml xslt web framework", "xml xslt java web framework", "xslt java web framework"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/06/25/xml-and-xslt-in-browser.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>25 June 2014</p>
+      <h1>XML+XSLT in a Browser</h1>
+      <p><a href="https://en.wikipedia.org/wiki/Separation_of_presentation_and_content">Separating data and their presentation</a>
+is a great concept. Take HTML and CSS for example. HTML is supposed to have pure data and
+CSS is supposed to format that data in order to make it readable by a human. Years ago,
+that was probably the intention of HTML/CSS, but in reality it doesn’t work like that.
+Mostly because CSS is not powerful enough.</p>
+
+<p>We still have to format our data using HTML tags, while
+<a href="/2014/06/26/sass-in-java-webapp.html">CSS</a>
+can help slightly with positioning and decorating.</p>
+
+<p>On the other hand, XML with <a href="https://en.wikipedia.org/wiki/XSLT">XSLT</a>
+implements perfectly the idea of separating data and presentation. XML documents,
+like HTML, are supposed to contain data only without any information about
+positioning or formatting. XSL stylesheets position and decorate the data.
+XSL is a much more powerful language. That’s why it’s possible to avoid
+any formatting inside XML.</p>
+
+<p>The latest versions of Chrome, Safari, Firefox and IE all support
+this mechanism. When a browser retrieves an XML document from a server,
+and the document has an XSL stylesheet <a href="https://www.w3.org/TR/xml-stylesheet/">associated</a>
+with it—the browser transforms XML into HTML on-fly.</p>
+
+
+
+<h2 id="working-example">Working Example</h2>
+
+<p>Let’s review a simple Java web application that works
+this way. It is using <a href="https://www.takes.org">Takes Framework</a>
+that makes this mechanism possible. In the next post, I’ll explain
+how ReXSL works. For now, though, let’s focus on the idea of delivering
+bare data in XML and formatting it with an XSL stylesheet.</p>
+
+<p>Open <a href="https://www.stateful.co">https://www.stateful.co</a>—it is
+a collection of stateful web primitives, explained in the
+<a href="/2014/05/18/cloud-autoincrement-counters.html">Atomic Counters at Stateful.co</a> article.</p>
+
+<p>Open it in Chrome or Safari. When you do, you should
+see a normal web page with a logo, some text, some links, a footer, etc.
+Now check its sources (I assume you know how to do this).</p>
+
+<p>This is approximately what you will see
+(I assume you understand XML, if not, start learning it immediately):</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;</span>
+<span class="nt">&lt;page</span> <span class="na">date=</span><span class="s">"2014-06-15T15:30:49.521Z"</span> <span class="na">ip=</span><span class="s">"10.168.29.135"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;menu&gt;</span>home<span class="nt">&lt;/menu&gt;</span>
+  <span class="nt">&lt;documentation&gt;</span>.. some text here ..<span class="nt">&lt;/documentation&gt;</span>
+  <span class="nt">&lt;version&gt;</span>
+    <span class="nt">&lt;name&gt;</span>1.4<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;revision&gt;</span>5c7b5af<span class="nt">&lt;/revision&gt;</span>
+    <span class="nt">&lt;date&gt;</span>2014-05-29 07:58<span class="nt">&lt;/date&gt;</span>
+  <span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;links&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"..."</span> <span class="na">rel=</span><span class="s">"rexsl:google"</span> <span class="na">type=</span><span class="s">"text/xml"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"..."</span> <span class="na">rel=</span><span class="s">"rexsl:github"</span> <span class="na">type=</span><span class="s">"text/xml"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"..."</span> <span class="na">rel=</span><span class="s">"rexsl:facebook"</span> <span class="na">type=</span><span class="s">"text/xml"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/links&gt;</span>
+  <span class="nt">&lt;millis&gt;</span>70<span class="nt">&lt;/millis&gt;</span>
+<span class="nt">&lt;/page&gt;</span>
+</code></pre></div></div>
+
+<p>As you see, it is a proper XML document with attributes,
+elements and data. It contains absolutely no information about how
+its elements have to be presented to an end-user. Actually,
+this document is more suitable for machine parsing instead of reading by a human.</p>
+
+<p>The document contains data, which is important for its requester.
+It’s up to the requester on how to render the data or to not render it at all.</p>
+
+<p>Its second line <a href="https://www.w3.org/TR/xml-stylesheet/">associates</a>
+the document with the XSL stylesheet <code class="language-plaintext highlighter-rouge">/xsl/index.xsl</code> that
+is loaded by the browser separately:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml-stylesheet type='text/xsl' href='/xsl/index.xsl'?&gt;</span>
+</code></pre></div></div>
+
+<p>Open developer tools in Chrome and you will see that right
+after the page is loaded, the browser loads the XSL stylesheet
+and then all other resources including a few CSS stylesheets,
+jQuery and an SVG logo:</p>
+
+
+
+<p><code class="language-plaintext highlighter-rouge">index.xsl</code> includes <code class="language-plaintext highlighter-rouge">layout.xsl</code>, that’s why it is loaded right after.</p>
+
+<p>Let’s consider an example of <code class="language-plaintext highlighter-rouge">index.xsl</code> (in reality
+it is much more complex, check <a href="https://github.com/sttc/stateful/blob/master/src/main/webapp/xsl/layout.xsl"><code class="language-plaintext highlighter-rouge">layout.xsl</code></a>.
+For example:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;xsl:stylesheet</span> <span class="na">version=</span><span class="s">"2.0"</span>
+  <span class="na">xmlns:xsl=</span><span class="s">"https://www.w3.org/1999/XSL/Transform"</span>
+  <span class="na">xmlns=</span><span class="s">"https://www.w3.org/1999/xhtml"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;xsl:template</span> <span class="na">match=</span><span class="s">"page"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;html&gt;</span>
+      <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
+          Current version of the application is
+          <span class="nt">&lt;xsl:value-of</span> <span class="na">select=</span><span class="s">"version/name"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;/html&gt;</span>
+  <span class="nt">&lt;/xsl:template&gt;</span>
+<span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</code></pre></div></div>
+
+<p>I think it’s obvious how the HTML page will look like
+after applying this XSL stylesheet to our XML document.</p>
+
+<p>For me, this XSL looks clean and easy to understand. However,
+I often hear people say that XSLT is a hard-to-understand programming language.
+I don’t find it hard to understand at all. Of course, I’m not using
+all of its features. But, for simple page rendering, all I need
+to know are a few simple commands and the principle of XML transformation.</p>
+
+<h2 id="why-not-a-templating-engine">Why Not a Templating Engine?</h2>
+
+<p>Now, why is this approach better than all that widely use Java templating engines, including
+<a href="https://en.wikipedia.org/wiki/JavaServer_Pages">JSP</a>,
+<a href="https://en.wikipedia.org/wiki/JavaServer_Faces">JSF</a>,
+<a href="http://velocity.apache.org/engine/devel/">Velocity</a>,
+<a href="http://freemarker.org/">FreeMarker</a>,
+<a href="http://tiles.apache.org/">Tiles</a>, etc?</p>
+
+<p>Well, I see a number of reasons. But, the most important are:</p>
+
+<ol>
+  <li>
+    <p><strong>Web UI and API are same pages</strong>.
+    There is no need to develop separate pages for RESTful API—Web user interface, being accessed by a computer, is an API.
+    In my experience, this leads to massive avoidance of code duplication.</p>
+  </li>
+  <li>
+    <p><strong>XSL is testable by itself without a server</strong>.
+    In order to test how our web site will look with certain data,
+    we just create a new XML document with necessary test data,
+    associate it with an XSL and open it in a browser. We can also
+    modify XML and refresh the page in browser. This makes the work
+    of HTML/CSS designer much easier and independent of programmers.</p>
+  </li>
+  <li>
+    <p><strong>XSL is a powerful functional language</strong>.
+    Compared with all other templating engines, which look mostly like
+    workarounds, XSL is a complete and well-designed environment.
+    Writing XSL (after you get used to its syntax and programming concepts)
+    is a pleasure in itself. You’re not injecting instructions into
+    a HTML document (like in JSP and all others). Instead, you are
+    programming transformation of data into presentation—a different mindset and much better feeling.</p>
+  </li>
+  <li>
+    <p><strong>XML output is perfectly testable</strong>.
+    A controller in MVC that generates an XML document with all data
+    required for the XSL stylesheet can easily be tested in a single unit
+    test using simple XPath expressions. Testing of a controller that injects
+    data into a templating engine is a much more complex operation—even impossible sometimes.
+    I’m also writing in PHP and Ruby. They have exactly the same problems—even though their templating engines are much more powerful
+    due to the interpretation nature of the languages.</p>
+  </li>
+</ol>
+
+<h2 id="is-it-fully-supported">Is It Fully Supported?</h2>
+
+<p>Everything would be great if all browsers would support XML+XSL rendering.
+However, this is far from being true. Only the latest versions of modern
+browsers support XSL. Check <a href="http://greenbytes.de/tech/tc/xslt/">this comparison</a>
+done by Julian Reschke. Besides that, XSLT 2.0 is
+<a href="http://stackoverflow.com/questions/6282340/which-browsers-support-xslt-2-0-already">not supported</a> at all.</p>
+
+<p>There is a workaround, though. We can understand which browser
+is making a request (via its <a href="https://en.wikipedia.org/wiki/User_agent"><code class="language-plaintext highlighter-rouge">User-Agent</code></a> HTTP header)
+and transform XML into HTML on the server side. Thus, for modern browsers that support XSL,
+we will deliver XML and for all others—HTML.</p>
+
+<p>This is exactly how <a href="https://github.com/yegor256/rexsl">ReXSL framework</a> works.
+Open <a href="https://www.stateful.co">https://www.stateful.co</a> in Internet Explorer
+and you will see an HTML document, not an XML document as is the case with Chrome.</p>
+
+<p>BTW, see how all this is implemented:
+<a href="/2015/06/25/xml-data-xsl-views-takes-framework.html">XML Data and XSL Views in Takes Framework</a>.</p>
+
+<p>Read this one, it continues the discussion of this subject:
+<a href="/2014/09/09/restful-web-sites.html">RESTful API and a Web Site in the Same URL</a></p>
+
+    </article>
+  </body>
+</html>

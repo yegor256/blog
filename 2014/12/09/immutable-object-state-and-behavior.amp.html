@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>How an Immutable Object Can Have State and Behavior?</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/12/09/immutable-object-state-and-behavior.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/12/09/immutable-object-state-and-behavior.html"
+        },
+        "headline": "How an Immutable Object Can Have State and Behavior?",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2014/12/once-upon-a-time-in-the-west.png",
+          "height": 578,
+          "width": 1300
+        },
+        "datePublished": "2014-12-09",
+        "dateModified": "2014-12-09",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Object state and behavior are two very different things,
+and confusing the two often leads to incorrect design.
+",
+        "keywords": ["object state", "object state behavior", "object state behavior identity", "object state behavior and methods", "object behavior model", "object attributes", "immutable object state"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/12/09/immutable-object-state-and-behavior.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>9 December 2014</p>
+      <h1>How an Immutable Object Can Have State and Behavior?</h1>
+      <p>I often hear this argument against
+<a href="/2014/06/09/objects-should-be-immutable.html">immutable objects</a>:
+“Yes, they are useful when the state doesn’t change. However, in
+our case, we deal with frequently changing objects. We simply
+can’t afford to create a new <code class="language-plaintext highlighter-rouge">document</code> every time we just
+need to change its <code class="language-plaintext highlighter-rouge">title</code>.” Here is where I disagree: object
+title is <strong>not a state</strong> of a document, if you need to change it frequently.
+Instead, it is a document’s <strong>behavior</strong>. A <code class="language-plaintext highlighter-rouge">document</code> can and must be
+<a href="/2016/09/07/gradients-of-immutability.html">immutable</a>,
+if it is a <a href="/2014/11/20/seven-virtues-of-good-object.html">good object</a>,
+even when its title is changed frequently. Let me explain how.</p>
+
+
+
+<amp-img src="/images/2014/12/once-upon-a-time-in-the-west.png" alt="Once Upon a Time in the West (1968) by Sergio Leone" height="578" width="1300" layout="responsive"></amp-img>
+
+<h2 id="identity-state-and-behavior">Identity, State, and Behavior</h2>
+
+<p>Basically, there are three elements in every
+<a href="/2016/07/14/who-is-object.html">object</a>:
+identity, state, and behavior. <em>Identity</em> is what distinguishes our <code class="language-plaintext highlighter-rouge">document</code>
+from other objects, <em>state</em> is what a document
+knows about itself (a.k.a. “encapsulated knowledge”), and
+<em>behavior</em> is what a document can do for us on request.
+For example, this is a mutable document:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Document</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+  <span class="nc">Document</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getTitle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">setTitle</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">text</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"doc #%d about '%s'"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Let’s try to use this mutable object:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Document</span> <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">(</span><span class="mi">50</span><span class="o">);</span>
+<span class="n">first</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">"How to grill a sandwich"</span><span class="o">);</span>
+<span class="nc">Document</span> <span class="n">second</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">(</span><span class="mi">50</span><span class="o">);</span>
+<span class="n">second</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">"How to grill a sandwich"</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">first</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">second</span><span class="o">))</span> <span class="o">{</span> <span class="c1">// FALSE</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+    <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s is equal to %s"</span><span class="o">,</span> <span class="n">first</span><span class="o">,</span> <span class="n">second</span><span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Here, we’re creating two objects and then modifying their encapsulated
+states. Obviously, <code class="language-plaintext highlighter-rouge">first.equals(second)</code> will return <code class="language-plaintext highlighter-rouge">false</code> because
+the two objects have different identities, even though they encapsulate the
+same state.</p>
+
+
+
+<p>Method <code class="language-plaintext highlighter-rouge">toString()</code> exposes the document’s behavior—the document can
+convert itself to a string.</p>
+
+<p>In order to modify a document’s title, we just call its <code class="language-plaintext highlighter-rouge">setTitle()</code>
+once again:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">first</span><span class="o">.</span><span class="na">setTitle</span><span class="o">(</span><span class="s">"How to cook pasta"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Simply put, we can reuse the object many times, modifying its
+internal state. It is fast and convenient, isn’t it? Fast, yes.
+Convenient, not really. Read on.</p>
+
+<h2 id="immutable-objects-have-no-identity">Immutable Objects Have No Identity</h2>
+
+<p>As I’ve <a href="/2014/11/20/seven-virtues-of-good-object.html">mentioned before</a>,
+immutability is one of the virtues of a good
+object, and a very important one. A good object is immutable, and good
+software contains only immutable objects. The main difference between
+immutable and mutable objects is that
+an immutable one doesn’t have an identity and its state never changes.
+Here is an immutable variant of the same document:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">Document</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+  <span class="nc">Document</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">,</span> <span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">text</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Document</span> <span class="nf">title</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Document</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">,</span> <span class="n">text</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">doc</span> <span class="k">instanceof</span> <span class="nc">Document</span>
+      <span class="o">&amp;&amp;</span> <span class="nc">Document</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">doc</span><span class="o">).</span><span class="na">id</span> <span class="o">==</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span>
+      <span class="o">&amp;&amp;</span> <span class="nc">Document</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">doc</span><span class="o">).</span><span class="na">title</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"doc #%d about '%s'"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This document is immutable, and its state (<code class="language-plaintext highlighter-rouge">id</code> ad <code class="language-plaintext highlighter-rouge">title</code>) is its identity. Let’s
+see how we can use this immutable class
+(by the way, I’m using <a href="https://aspects.jcabi.com/annotation-immutable.html"><code class="language-plaintext highlighter-rouge">@Immutable</code></a> annotation
+from <a href="https://aspects.jcabi.com">jcabi-aspects</a>):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Document</span> <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">(</span><span class="mi">50</span><span class="o">,</span> <span class="s">"How to grill a sandwich"</span><span class="o">);</span>
+<span class="nc">Document</span> <span class="n">second</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">(</span><span class="mi">50</span><span class="o">,</span> <span class="s">"How to grill a sandwich"</span><span class="o">);</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">first</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">second</span><span class="o">))</span> <span class="o">{</span> <span class="c1">// TRUE</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+    <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%s is equal to %s"</span><span class="o">,</span> <span class="n">first</span><span class="o">,</span> <span class="n">second</span><span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>We can’t modify a document any more. When we need to change the title,
+we have to create a new document:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Document</span> <span class="n">first</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Document</span><span class="o">(</span><span class="mi">50</span><span class="o">,</span> <span class="s">"How to grill a sandwich"</span><span class="o">);</span>
+<span class="n">first</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="na">title</span><span class="o">(</span><span class="s">"How to cook pasta"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Every time we want to modify its encapsulated state, we have to modify
+its identity too, because there is no identity. State is the identity.
+Look at the code of the <code class="language-plaintext highlighter-rouge">equals()</code> method above—it compares documents
+by their IDs and titles. Now ID+title of a document is its identity!</p>
+
+<h2 id="what-about-frequent-changes">What About Frequent Changes?</h2>
+
+<p>Now I’m getting to the question we started with: What about performance
+and convenience? We don’t want to change the entire document every time we
+have to modify its title. If the document is big enough, that would be
+a huge obligation. Moreover, if an immutable object encapsulates other immutable
+objects, we have to change the entire hierarchy when modifying even a single
+string in one of them.</p>
+
+
+
+<p>The answer is simple. A document’s title should not be part of its <strong>state</strong>.
+Instead, the title should be its <strong>behavior</strong>. For example, consider this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">Document</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+  <span class="nc">Document</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// read title from storage</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">title</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// save text to storage</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">doc</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">doc</span> <span class="k">instanceof</span> <span class="nc">Document</span>
+      <span class="o">&amp;&amp;</span> <span class="nc">Document</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">doc</span><span class="o">).</span><span class="na">id</span> <span class="o">==</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"doc #%d about '%s'"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">id</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Conceptually speaking, this document is acting as a proxy of a real-life
+document that has a title stored somewhere—in a file, for example. This is
+what a good object should do—be a proxy of a real-life entity.
+The document exposes two features: reading the title and saving the title. Here is
+how its <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interface</a>
+would look like:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">interface</span> <span class="nc">Document</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">();</span>
+  <span class="kt">void</span> <span class="nf">title</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">title()</code> reads the title of the document and returns it as a <code class="language-plaintext highlighter-rouge">String</code>,
+and <code class="language-plaintext highlighter-rouge">title(String)</code> saves it back into the document. Imagine a real
+paper document with a title. You ask an object to read that title from
+the paper or to erase an existing one and write new text over it. This
+paper is a “copy” utilized in these methods.</p>
+
+<p>Now we can make frequent changes to the immutable document, and the
+document stays the same. It doesn’t stop being immutable, since it’s
+state (<code class="language-plaintext highlighter-rouge">id</code>) is not changed. It is the same document, even though we
+change its title, because the title is not a state of the document. It
+is something in the real world, outside of the document. The document
+is just a proxy between us and that “something.” Reading and writing
+the title <em>are behaviors</em> of the document, not its state.</p>
+
+<h2 id="mutable-memory">Mutable Memory</h2>
+
+<p>The only question we still have unanswered is what is that “copy”
+and what happens if we need to keep the title of the document in memory?</p>
+
+<p>Let’s look at it from an “object thinking” point of view. We have a <code class="language-plaintext highlighter-rouge">document</code>
+object, which <a href="/2014/11/20/seven-virtues-of-good-object.html">is supposed to represent</a> a real-life entity in an
+object-oriented world. If such an entity is a file, we can easily
+implement <code class="language-plaintext highlighter-rouge">title()</code> methods. If such an entity is an Amazon S3 object,
+we also implement title reading and writing methods easily, keeping the
+object immutable. If such an entity is an HTTP page, we
+have no issues in the implementation of title reading or writing, keeping the object immutable.
+We have no issues as long as a real-world document exists and has its
+own identity. Our title reading and writing methods will communicate with that
+real-world document and extract or update its title.</p>
+
+
+
+<p>Problems arise when such an entity doesn’t exist in a real world. In that
+case, we need to create a mutable object property called <code class="language-plaintext highlighter-rouge">title</code>, read it via
+<code class="language-plaintext highlighter-rouge">title()</code>, and modify it via <code class="language-plaintext highlighter-rouge">title(String)</code>. But an object is immutable,
+so we can’t have a mutable property in it—by definition! What do we do?</p>
+
+<p>Think.</p>
+
+<p>How could it be that our object doesn’t represent a real-world entity?
+Remember, the <em>real world</em> is everything around the living environment of an object.
+Is it possible that an object doesn’t represent anyone and acts
+on its own? No, it’s not possible. Every object is a representative of
+a real-world entity. So, who does it represent if we want to keep <code class="language-plaintext highlighter-rouge">title</code> inside
+it and we don’t have any file or HTTP page behind the object?</p>
+
+
+
+<p>It represents <em>computer memory</em>.</p>
+
+<p>The title of immutable document #50, “How to grill a sandwich,”
+is stored in the memory, taking up 23 bytes of space. The document
+should know where those bytes are stored, and it should be able to read them
+and replace them with something else. Those 23 bytes are the real-world
+entity that the object represents. The bytes have nothing to do with
+the state of the object. They are a <em>mutable</em> real-world entity, similar
+to a file, HTTP page, or an Amazon S3 object.</p>
+
+<p>Unfortunately, Java (and many other modern languages) do not allow direct
+access to computer memory. This is how we would design our class if such
+direct access was possible:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">Document</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">id</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Memory</span> <span class="n">memory</span><span class="o">;</span>
+  <span class="nc">Document</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">memory</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Memory</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">memory</span><span class="o">.</span><span class="na">read</span><span class="o">());</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">title</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">memory</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">text</span><span class="o">.</span><span class="na">getBytes</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>That <code class="language-plaintext highlighter-rouge">Memory</code> class would be implemented by JDK natively, and all other
+classes would be immutable. The class <code class="language-plaintext highlighter-rouge">Memory</code> would have direct access
+to the memory heap and would be responsible for
+<a href="https://en.wikipedia.org/wiki/C_dynamic_memory_allocation"><code class="language-plaintext highlighter-rouge">malloc</code> and <code class="language-plaintext highlighter-rouge">free</code></a>
+operations on the operating system level.
+Having such a class would allow us to make all Java classes immutable,
+including <code class="language-plaintext highlighter-rouge">StringBuffer</code>, <code class="language-plaintext highlighter-rouge">ByteArrayOutputStream</code>, etc.</p>
+
+
+
+<p>The <code class="language-plaintext highlighter-rouge">Memory</code> class would explicitly emphasize the mission of an object
+in a software program, which is to be a <em>data animator</em>. An object is not
+holding data; it is animating it. The data exists somewhere, and it is
+<a href="/2016/07/06/data-transfer-object.html">anemic</a>,
+static, motionless, stationary, etc. The data is <strong>dead</strong>
+while the object is <strong>alive</strong>. The role of an object is to make a piece of data
+alive, to <em>animate</em> it but not to become a piece of data. An object needs some
+knowledge in order to gain access to that dead piece of data. An object
+may need a database unique key, an HTTP address, a file name, or
+a memory address in order to find the data and animate it. But an
+object should never think of itself as data.</p>
+
+<h2 id="what-is-the-practical-solution">What Is the Practical Solution?</h2>
+
+
+
+<p>Unfortunately, we don’t have such a memory-representing class
+in Java, Ruby, JavaScript, Python, PHP, and many other high-level languages.
+It looks like language designers didn’t get the idea of
+alive objects vs. dead data, which is sad. We’re forced to mix
+data with object states using the same language constructs:
+object variables and properties.
+Maybe someday we’ll have that <code class="language-plaintext highlighter-rouge">Memory</code> class in Java and other languages,
+but until then, we have a few options.</p>
+
+<p><strong>Use C++</strong>.
+In C++ and similar low-level languages, it is possible to access memory
+directly and deal with in-memory data the same way we deal with
+in-file or in-HTTP data. In C++, we can create that <code class="language-plaintext highlighter-rouge">Memory</code> class
+and use it exactly the way we explained above.</p>
+
+<p><strong>Use Arrays</strong>.
+In Java, an array is a data structure with a unique property—it can be modified while being declared as <code class="language-plaintext highlighter-rouge">final</code>. You can use
+an array of bytes as a mutable data structure inside an immutable object.
+It’s a surrogate solution that conceptually resembles the <code class="language-plaintext highlighter-rouge">Memory</code> class
+but is much more primitive.</p>
+
+
+
+<p><strong>Avoid In-Memory Data</strong>.
+Try to avoid in-memory data as much as possible. In some domains, it is
+easy to do; for example, in web apps, file processing, I/O adapters, etc.
+However, in other domains, it is much easier said than done. For example,
+in games, data manipulation algorithms, and GUI, most of the objects animate
+in-memory data mostly because memory is the only resource they have.
+In that case, without the <code class="language-plaintext highlighter-rouge">Memory</code> class, you end up with mutable objects :(
+There is no workaround.</p>
+
+<p>To summarize, don’t forget that an object is an <strong>animator</strong> of data. It is using
+its encapsulated knowledge in order to reach the data. No matter where
+the data is stored—in a file, in HTTP, or in memory—it is
+conceptually very different from an object state, even though they may
+look very similar.</p>
+
+<p>A good object is an immutable animator of mutable data. Even though it
+is immutable and data is mutable, it is alive and data is dead
+in the scope of the object’s living environment.</p>
+
+    </article>
+  </body>
+</html>

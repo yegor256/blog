@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>A Compound Name Is a Code Smell</title>
+    <link rel="canonical" href="https://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html"
+        },
+        "headline": "A Compound Name Is a Code Smell",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2015/01/meaning-of-life-every-sperm.png",
+          "height": 675,
+          "width": 1200
+        },
+        "datePublished": "2015-01-12",
+        "dateModified": "2015-01-12",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "A variable name that consists of several words is a code
+smell because it indicates a variable scope that's too big.
+",
+        "keywords": ["variable naming convention", "variable name", "naming convention", "composite variable name", "long variable name"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>12 January 2015</p>
+      <h1>A Compound Name Is a Code Smell</h1>
+      <p>Do you name variables like <code class="language-plaintext highlighter-rouge">textLength</code>, <code class="language-plaintext highlighter-rouge">table_name</code>, or <code class="language-plaintext highlighter-rouge">current-user-email</code>?
+All three are compound names that consist of more than one word. Even though
+they look more descriptive than <code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">length</code>, or <code class="language-plaintext highlighter-rouge">email</code>, I would strongly
+recommend avoiding them. I believe a variable name that is more complex than a noun
+is a code smell. Why? Because we usually give a variable a compound name when its scope
+is so big and complex that a simple noun would sound ambiguous.
+And a big, complex scope is an obvious code smell.</p>
+
+
+
+<amp-img src="/images/2015/01/meaning-of-life-every-sperm.png" alt="The Meaning of Life (1983) by Terry Jones and Terry Gilliam" height="675" width="1200" layout="responsive"></amp-img>
+
+<p>The scope of a variable is the place where it is visible, like a method, for example. Look
+at this Ruby class:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CSV</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">csvFileName</span><span class="p">)</span>
+    <span class="vi">@fileName</span> <span class="o">=</span> <span class="n">csvFileName</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">readRecords</span><span class="p">()</span>
+    <span class="no">File</span><span class="p">.</span><span class="nf">readLines</span><span class="p">(</span><span class="vi">@fileName</span><span class="p">).</span><span class="nf">map</span> <span class="o">|</span><span class="n">csvLine</span><span class="o">|</span>
+      <span class="n">csvLine</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>The visible scope of variable <code class="language-plaintext highlighter-rouge">csvFileName</code> is method <code class="language-plaintext highlighter-rouge">initialize()</code>, which
+is a constructor of the class <code class="language-plaintext highlighter-rouge">CSV</code>. Why does it need a compound name
+that consists of three words? Isn’t it already clear that a single-argument
+constructor of class <code class="language-plaintext highlighter-rouge">CSV</code> expects the name of a file with
+comma-separated values? I would rename it to <code class="language-plaintext highlighter-rouge">file</code>.</p>
+
+<p>Next, the scope of <code class="language-plaintext highlighter-rouge">@fileName</code> is the entire <code class="language-plaintext highlighter-rouge">CSV</code> class. Renaming a single
+variable in the class to just <code class="language-plaintext highlighter-rouge">@file</code> won’t introduce
+any confusion. It’s still clear what file we’re dealing with.
+The same situation exists with the <code class="language-plaintext highlighter-rouge">csvLine</code> variable. It is clear that we’re
+dealing with CSV lines here. The <code class="language-plaintext highlighter-rouge">csv</code> prefix is just a redundancy.
+Here is how I would refactor the class:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CSV</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="vi">@file</span> <span class="o">=</span> <span class="n">file</span>
+  <span class="k">end</span>
+  <span class="k">def</span> <span class="nf">records</span><span class="p">()</span>
+    <span class="no">File</span><span class="p">.</span><span class="nf">readLines</span><span class="p">(</span><span class="vi">@file</span><span class="p">).</span><span class="nf">map</span> <span class="o">|</span><span class="n">line</span><span class="o">|</span>
+      <span class="n">line</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Now it looks clear and concise.</p>
+
+<p>If you can’t perform such a refactoring, it means your scope is too
+big and/or too complex. An ideal method should deal with up to five variables,
+and an ideal class should encapsulate up to five properties.</p>
+
+<p>If we have five variables, can’t we find five nouns to name them?</p>
+
+<p>Adam and Eve didn’t have second names. They were unique in Eden,
+as were many other characters in the Old Testament. Second and middle
+names were invented later in order to resolve ambiguity. To keep
+your methods and classes clean and solid, and to prevent ambiguity, try to give your variables
+and methods unique single-word names, just like Adam and Eve were named
+by you know who.</p>
+
+<p>PS. Also, <a href="/2015/09/01/redundant-variables-are-evil.html">redundant variables</a>
+are evil as well.</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">What do you think about function and variable naming in this Ruby code?<br><br>def total_words_in_file(file_name) {<br>  text_file_content = <a href="https://t.co/u2RHVnNqB3">https://t.co/u2RHVnNqB3</a>(file_name)<br>  return text_file_content.split(' ').count<br>}</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1117419548582531074?ref_src=twsrc%5Etfw">April 14, 2019</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

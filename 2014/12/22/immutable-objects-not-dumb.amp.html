@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Immutable Objects Are Not Dumb</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/12/22/immutable-objects-not-dumb.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/12/22/immutable-objects-not-dumb.html"
+        },
+        "headline": "Immutable Objects Are Not Dumb",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2014/12/usual-suspects-kobayashi.png",
+          "height": 508,
+          "width": 1200
+        },
+        "datePublished": "2014-12-22",
+        "dateModified": "2014-12-22",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Immutable objects are not the same as passive data structures
+without setters, despite a very common mis-belief.
+",
+        "keywords": ["immutable objects", "immutable objects advantages", "immutable objects in java", "immutable objects in java example", "immutable objects are thread safe"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/12/22/immutable-objects-not-dumb.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>22 December 2014</p>
+      <h1>Immutable Objects Are Not Dumb</h1>
+      <p>After a few recent posts about immutability, including
+<a href="/2014/06/09/objects-should-be-immutable.html">Objects Should Be Immutable</a> and
+<a href="/2014/12/09/immutable-object-state-and-behavior.html">How an Immutable Object Can Have State and Behavior?</a>,
+I was surprised by the number of comments saying that I badly misunderstood
+the idea. Most of those comments stated that an immutable object must always behave
+the same way—that is what immutability is about. What kind of immutability
+is it, if a method returns different results each time we call it?
+This is not how well-known immutable classes behave. Take, for example, <code class="language-plaintext highlighter-rouge">String</code>, <code class="language-plaintext highlighter-rouge">BigInteger</code>,
+<code class="language-plaintext highlighter-rouge">Locale</code>, <code class="language-plaintext highlighter-rouge">URI</code>, <code class="language-plaintext highlighter-rouge">URL</code>, <code class="language-plaintext highlighter-rouge">Inet4Address</code>, <code class="language-plaintext highlighter-rouge">UUID</code>, or wrapper classes for primitives, like <code class="language-plaintext highlighter-rouge">Double</code> and
+<code class="language-plaintext highlighter-rouge">Integer</code>. Other comments argued against
+<a href="/2014/11/20/seven-virtues-of-good-object.html">the very definition</a>
+of an immutable object as a representative of a mutable real-world entity. How
+could an immutable object represent a mutable entity? Huh?</p>
+
+
+
+<amp-img src="/images/2014/12/usual-suspects-kobayashi.png" alt="The Usual Suspects (1995) by Bryan Singer" height="508" width="1200" layout="responsive"></amp-img>
+
+
+
+<p>I’m very surprised. This post is going to clarify the definition of an immutable
+<a href="/2016/07/14/who-is-object.html">object</a>.
+First, here is a quick answer. How can an immutable object represent a mutable entity?
+Look at an immutable class,
+<a href="http://docs.oracle.com/javase/7/docs/api/java/io/File.html"><code class="language-plaintext highlighter-rouge">File</code></a>,
+and its methods, for example <code class="language-plaintext highlighter-rouge">length()</code> and <code class="language-plaintext highlighter-rouge">delete()</code>. The class is immutable, according
+to Oracle documentation, and its methods may return different values each time
+we call them. An object of class <code class="language-plaintext highlighter-rouge">File</code>, being perfectly immutable,
+represents a mutable real-world entity, a file on disk.</p>
+
+
+
+<p>In <a href="/2014/06/09/objects-should-be-immutable.html">this post</a>, I said
+that “an object is immutable if its state can’t be modified after it is created.”
+This definition is not mine; it’s taken from
+<a href="https://amzn.to/2c7sVS1">Java Concurrency in Practice by Goetz et al.</a>, Section 3.4
+(by the way, I highly recommend you read it). Now look at this class
+(I’m using <a href="https://http.jcabi.com">jcabi-http</a> to read and write over HTTP):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Immutable</span>
+<span class="kd">class</span> <span class="nc">Page</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="no">URI</span> <span class="n">uri</span><span class="o">;</span>
+  <span class="nc">Page</span><span class="o">(</span><span class="no">URI</span> <span class="n">addr</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">uri</span> <span class="o">=</span> <span class="n">addr</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">load</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">JdkRequest</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">fetch</span><span class="o">().</span><span class="na">body</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">String</span> <span class="n">content</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">JdkRequest</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">uri</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"PUT"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">body</span><span class="o">().</span><span class="na">set</span><span class="o">(</span><span class="n">content</span><span class="o">).</span><span class="na">back</span><span class="o">()</span>
+      <span class="o">.</span><span class="na">fetch</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>What is the “state” in this class? That’s right, <code class="language-plaintext highlighter-rouge">this.uri</code> is the state. It
+uniquely identifies every object of this class, and it is not modifiable. Thus,
+the class makes only immutable objects. And each object represents a
+mutable entity of the real world, a web page with a URI.</p>
+
+<p>There is no contradiction in this situation. The class is perfectly immutable,
+while the web page it represents is mutable.</p>
+
+
+
+<p>Why do most programmers I have talked to believe that
+if an underlying entity is mutable, an object is mutable too? I think the
+answer is simple—they think that objects are
+data structures with methods. That’s why, from this point of view,
+an immutable object is a data structure that never changes.</p>
+
+<p>This is where the fallacy is coming from—an object is
+<strong>not a data structure</strong>. It is a living organism representing
+a real-world entity inside the object’s living environment (a computer program).
+It does encapsulate some data, which helps to locate the entity in the real world. The encapsulated
+data is the <strong>coordinates</strong> of the entity being represented. In the case
+of <code class="language-plaintext highlighter-rouge">String</code> or <code class="language-plaintext highlighter-rouge">URL</code>, the coordinates are the same as the
+entity itself, but this is just an isolated incident, not a generic rule.</p>
+
+
+
+<p>An immutable object is not a data structure that doesn’t change, even
+though <code class="language-plaintext highlighter-rouge">String</code>, <code class="language-plaintext highlighter-rouge">BigInteger</code>, and <code class="language-plaintext highlighter-rouge">URL</code> look like one. An object is immutable
+if and only if it doesn’t change the coordinates of the real-world entity
+it represents. In the <code class="language-plaintext highlighter-rouge">Page</code> class above, this means that an object of
+the class, once instantiated, will never change <code class="language-plaintext highlighter-rouge">this.uri</code>. It will
+always point to the same web page, no matter what.</p>
+
+<p>And the object doesn’t guarantee anything about the behavior of that web page. The page
+is a dynamic creature of a real world, living its own life. Our object
+can’t promise anything about the page. The only thing it promises is that
+it will always stay loyal to that page—it will never forget or change
+its coordinates.</p>
+
+<p>Conceptually speaking, immutability means loyalty, that’s all.</p>
+
+    </article>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Flexibility Equates to Lower Quality</title>
+    <link rel="canonical" href="https://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality.html"
+        },
+        "headline": "Flexibility Equates to Lower Quality",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2017/04/scarface.jpg",
+          "height": 545,
+          "width": 1280
+        },
+        "datePublished": "2017-04-11",
+        "dateModified": "2017-04-11",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "The more options a programmer has to implement
+a feature in a programming language, the lower the
+overall quality of the product will be.
+",
+        "keywords": ["quality", "programming language quality", "syntactic sugar", "rubocop", "checkstyle"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2017/04/11/flexibility-equates-lower-quality.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>11 April 2017</p>
+      <h1>Flexibility Equates to Lower Quality</h1>
+      <p>There are two opposing mindsets: “If it works, it’s good” vs.
+“If it’s good, it works;” or “Make it work” vs. “Make it right.”
+I’m talking about the software source code. I’ve been hearing this
+almost every day in blog comments: Why do we need all those <em>new</em> OOP
+principles if our code works just fine without them? What is the
+point of introducing a new way, which is supposed to be “better,”
+if the existing, traditional, semi-object, semi-procedural, not-so-perfect
+approach <em>just works</em>?</p>
+
+
+
+<amp-img src="/images/2017/04/scarface.jpg" alt="Scarface (1983) by Brian De Palma" height="545" width="1280" layout="responsive"></amp-img>
+
+<p>Let’s try to think bigger. And not just about object-oriented programming, but
+in general about software development. There are many examples of the
+“just works” mentality.</p>
+
+<p>Take Perl, a programming language famous
+for its ability to do anything in three different ways. This means that
+there is no one “right” way. I’m not a Perl expert; that’s why I’ll have you
+look at this Ruby code instead:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span>
+  <span class="n">m</span> <span class="o">=</span> <span class="s1">'Hello!'</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>We can rewrite it like this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">m</span> <span class="o">=</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span>
+  <span class="s1">'Hello!'</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Or this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">m</span> <span class="o">=</span> <span class="s1">'Hello!'</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span>
+</code></pre></div></div>
+
+<p>And one more:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">m</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="p">?</span> <span class="s1">'Hello'</span> <span class="p">:</span> <span class="kp">nil</span>
+</code></pre></div></div>
+
+<p>Which one is “right?” Are there any Perl developers? Can you suggest
+some other way to achieve the same result?</p>
+
+<p>Not surprisingly, in Java (a stricter language than Ruby),
+there is only one way to do it:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">m</span> <span class="o">=</span> <span class="s2">"Hello!"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Well, I guess I’m wrong; there are two, actually. Here is the second one:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="n">m</span> <span class="o">=</span> <span class="s2">"Hello!"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>What does this variety of options give us, as programmers? I guess the answer
+seriously depends on what we, the programmers, are doing with the code:
+writing or reading it. Also, it depends on our
+<a href="/2014/10/26/hacker-vs-programmer-mentality.html">attitude</a> toward the
+software we’re creating; we either
+<em>own</em> it (hacker mentality) or
+<em>build</em> it (designer mentality).</p>
+
+<p>If we’re <em>writing</em> it, and we love to think about ourselves as code owners, we
+definitely will need that arsenal of
+<a href="https://en.wikipedia.org/wiki/Syntactic_sugar">syntactic sugar</a> weapons. We need them to prove to ourselves
+that we’re smart and, of course, to show off in front of our friends and
+that soulless Ruby interpreter.</p>
+
+<p>On the other hand, if we’re designers and happen to <em>read</em> the code that is
+full of sugar, which “just works,” we’ll be very annoyed and
+frustrated. Well, maybe I have to speak for myself, but I definitely will be.</p>
+
+
+
+<p>This overly-sugared Ruby syntax is a perfect example of “works vs. good”
+positioning. Ruby philosophy is this: It doesn’t matter how you write it, as long
+as it works. Java philosophy is different; it’s much closer to:
+Make it right and it will work.
+The <a href="https://en.wikipedia.org/wiki/Strong_and_weak_typing">weak</a>
+and
+<a href="https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information">dynamic</a>
+typing in Ruby vs. the strong and
+<a href="https://en.wikipedia.org/wiki/Type_system#Static_type_checking">static</a>
+one in Java also prove my point.</p>
+
+<p>In general, I believe that the more flexible the programming language is, the
+lower the <em>maintainability</em>—the key quality characteristic—of the code it produces.
+Simply put, higher quality comes from simpler languages.</p>
+
+<p>The same is true for the entire software development: The more restrictions
+we put on programmers and the fewer options they have for their
+“syntax creativity,” the higher the quality of the software they write.
+Static analyzers like
+<a href="http://checkstyle.sourceforge.net/">Checkstyle</a> for Java or
+<a href="https://github.com/bbatsov/rubocop">Rubocop</a> for Ruby attempt
+to solve that problem and prohibit us from using certain language features,
+but they lag far behind. We are very “creative.”</p>
+
+<p>Now, let’s get back to the original OOP question:
+Why do we need to improve anything if it works the way it is?
+Here is the answer: Modern OOP (as in Java, Ruby, and C++)
+doesn’t produce quality code because it doesn’t have a strong
+and properly restricted paradigm. It just has too many “features,”
+which were mostly introduced by C++ and remained there for our
+mutual “convenience.”</p>
+
+<p>They indeed work, but the maintainability of the software we produce
+is very low. Well, it’s way lower than it could be, if our “creativity”
+would be restricted.</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">An ability to implement the same thing in a few different ways (a.k.a. "syntax sugar") makes a programming language ...</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1076767928715038720?ref_src=twsrc%5Etfw">December 23, 2018</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

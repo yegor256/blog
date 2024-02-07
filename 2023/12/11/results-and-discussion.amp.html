@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Results and Discussion: Facts and Interpretation</title>
+    <link rel="canonical" href="https://www.yegor256.com/2023/12/11/results-and-discussion.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2023/12/11/results-and-discussion.html"
+        },
+        "headline": "Results and Discussion: Facts and Interpretation",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2023/12/mulholland-drive.jpg",
+          "height": 1027,
+          "width": 1920
+        },
+        "datePublished": "2023-12-11",
+        "dateModified": "2023-12-11",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Two very important sections of a research paper must
+present the data collected and the interpretations made.
+",
+        "keywords": ["discussion section", "results section", "results and discussion", "scientific writing", "interpretation of data"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2023/12/11/results-and-discussion.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>11 December 2023</p>
+      <h1>Results and Discussion: Facts and Interpretation</h1>
+      <p>Almost every <a href="https://en.wikipedia.org/wiki/Empirical_research">empirical research</a> 
+paper contains two essential sections: <em>Results</em>
+and <em>Discussion</em>. The former presents the facts collected through the research
+<a href="/2023/10/11/method-of-research.html">method</a>, 
+while the latter interprets them to answer the research questions. When
+interpreting the data, you must address the most obvious concerns that readers
+may have. For example, in the Results section, you might state: “85% of
+respondents refused to participate in our survey” (this is a <em>fact</em>). Then, in
+the Discussion section, you might say: “We believe that programmers are
+innately lazy and irresponsible” (this is an <em>interpretation</em>). You might also
+add, “Perhaps not all of them were lazy, but just busy.” While the Results
+section leaves no room for doubt, summarizing findings “as is,” the Discussion
+section engages in an open <em>debate</em> with an imaginative reader.</p>
+
+
+
+<amp-img src="/images/2023/12/mulholland-drive.jpg" alt="Mulholland Drive (2001) by David Lynch" height="1027" width="1920" layout="responsive"></amp-img>
+
+<p>In the <a href="/2023/10/11/method-of-research.html">Method</a> section, 
+you’ve already explained how you collected, processed, and analyzed the data. 
+Now, in the <strong>Results</strong> section, you present the actual data collected and generated. 
+The simpler the method of data representation, the better. Thus, in order of 
+preference (with the last being your last choice):</p>
+
+<ul>
+  <li>Plain text</li>
+  <li>Lists (<code class="language-plaintext highlighter-rouge">\begin{itemize}</code>)</li>
+  <li>Table (<code class="language-plaintext highlighter-rouge">\begin{tabular}</code>)</li>
+  <li>Graphs and diagrams (<code class="language-plaintext highlighter-rouge">\begin{figure}</code>)</li>
+</ul>
+
+<p>If the data is too extensive to show in the paper, you can store it 
+in a GitHub repository and mention its address in the Results section. For example:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\section{Results}
+
+We contacted 135 programmers from three 
+software companies: ACME Inc, Google, and
+Amazon. We asked them kindly to answer
+a short questionnaire of just 128 questions.
+115 people refused, which is 85%.
+The full list of those who refused, along with 
+their names and home addresses, 
+is published in GitHub repository\footnote{
+  \url{https://github.com/...}}.
+</code></pre></div></div>
+
+<p>In the <a href="/2023/10/11/method-of-research.html">Method</a> section, 
+you posed several <em>Research Questions</em>. Now, in the <strong>Discussion</strong> section, 
+you answer them using the data you’ve just presented in the Results. 
+This is the time for an opinionated interpretation of the data: be brave and direct, yet careful.</p>
+
+<p>When you’ve answered the Research Questions, you initiate a debate 
+with your readers, imagining them asking difficult and important questions. 
+The answers you provide are your speculation, imagination, improvisation, etc. 
+Also, through the Q&amp;A format, you acknowledge the limitations of your 
+research and suggest potential future research topics.</p>
+
+<p>Consider these questions (re-phrase them for your own context):</p>
+
+<ul>
+  <li>Why are these results important?</li>
+  <li>Why has no one discovered this before?</li>
+  <li>Is it possible that we made a mistake?</li>
+  <li>How else could the data be interpreted?</li>
+  <li>What’s next?</li>
+</ul>
+
+<p>I suggest dedicating exactly one paragraph per question, starting 
+with a bold-faced formulation of it, followed by your answer to 
+your imagined opponent. Here’s an example:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\section{Discussion}
+
+\textbf{RQ1: How many programmers are lazy?}
+Since 85% of our respondents refused to complete
+our short questionnaire, we strongly believe 
+that most programmers are lazy.
+
+\textbf{RQ2: Why are programmers lazy?}
+Since the majority of programmers refused to complete
+the 128-question questionnaire, we believe
+they become lazy when confronted with a number
+that is a power of two.
+
+\textbf{Is it possible that programmers are 
+just busy?} Yes, it's possible, but highly
+unlikely, as \citet{x2019} previously found 
+that programmers spend 90% of their office time 
+reading jokes on the internet.
+</code></pre></div></div>
+
+<p>The more you overlook in the Discussion section, the greater the chance of your
+paper being rejected. Reviewers are often knowledgeable individuals with many
+years of experience in the field; they will certainly have concerns about your
+Method, Results, and answers to the Research Questions. If you don’t address
+these concerns explicitly in the Discussion section, they may think you are
+either concealing the research’s weaknesses or are not astute enough to
+recognize them. In either case, it could lead to a rejection of your paper.</p>
+
+<hr>
+
+<p>You may find inspiration in these papers 
+(use <a href="https://scholar.google.com/">Google Scholar</a> to download their PDFs):</p>
+
+<ul>
+  <li>Zhaowei Zhang et al., <em>Diet Code Is Healthy: Simplifying Programs for Pre-trained Models of Code</em>, ESEC/FSE 2022</li>
+  <li>Norman Peitek et al., <em>Correlates of Programmer Efficacy and Their Link to Experience: A Combined EEG and Eye-Tracking Study</em>, ESEC/FSE 2022</li>
+</ul>
+
+<hr>
+
+<p>These opinions might also be helpful:</p>
+
+<ul>
+  <li>
+<a href="https://goldbio.com/articles/article/Guide-to-results-and-discussion-section">Guide to Writing the Results and Discussion Sections of a Scientific Article</a>
+by <a href="https://www.linkedin.com/in/tyasning-kroemer/">Tyasning Kroemer</a>
+</li>
+  <li>
+<a href="https://healthprofessions.udmercy.edu/academics/na/agm/htresult.htm">How to write the Results and Discussion</a>
+by Michael P. Dosch</li>
+  <li>
+<a href="https://plos.org/resource/how-to-write-conclusions/">How to Write Discussions and Conclusions</a>
+by PLOS</li>
+  <li>
+<a href="https://libguides.usc.edu/writingguide/discussion">The Discussion</a>
+by USC Libraries</li>
+  <li>
+<a href="https://jivasquez.files.wordpress.com/2016/06/discussion.pdf">Fourteen Steps to Writing an Effective Discussion Section</a>
+by Paul Kretchmer</li>
+  <li>
+<a href="https://www.sjsu.edu/writingcenter/docs/handouts/Discussion%20Section%20for%20Research%20Papers.pdf">Discussion Section for Research Papers</a>
+by Rowan Dunton</li>
+  <li>
+<a href="https://www.uvm.edu/sites/default/files/Graduate-Writing-Center/GWC%20Guides/Genres/Science_Writing_Results_Discussion.pdf">Distinguishing between Results and Discussion</a>
+by University of Vermont</li>
+</ul>
+
+
+    </article>
+  </body>
+</html>

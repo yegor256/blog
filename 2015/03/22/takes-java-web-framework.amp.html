@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Java Web App Architecture In Takes Framework</title>
+    <link rel="canonical" href="https://www.yegor256.com/2015/03/22/takes-java-web-framework.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2015/03/22/takes-java-web-framework.html"
+        },
+        "headline": "Java Web App Architecture In Takes Framework",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2015/03/godfather-shooting-scene.jpg",
+          "height": 583,
+          "width": 1000
+        },
+        "datePublished": "2015-03-22",
+        "dateModified": "2015-03-22",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Takes is a pure object-oriented and immutable
+Java web framework that turns the design and development
+of web applications into a pleasant and fun process.
+",
+        "keywords": ["java web framework", "java web development framework", "best java web framework", "object-oriented java web framework", "java web app framework"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2015/03/22/takes-java-web-framework.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>22 March 2015</p>
+      <h1>Java Web App Architecture In Takes Framework</h1>
+      <p>I used to utilize Servlets, JSP, JAX-RS, Spring Framework, Play Framework,
+JSF with Facelets, and a bit of Spark Framework. All of these solutions,
+in my humble opinion, are very far from being object-oriented and elegant.
+They all are full of static methods, un-testable data structures, and
+dirty hacks. So about a month ago, I decided to create my own Java web
+framework. I put a few basic principles into its foundation: 1) No
+<a href="/2014/05/13/why-null-is-bad.html">NULLs</a>,
+2) no public <a href="/2014/05/05/oop-alternative-to-utility-classes.html">static</a> methods, 3) no
+<a href="/2014/06/09/objects-should-be-immutable.html">mutable</a>
+classes, and 4) no class casting, reflection,
+and <a href="/2015/04/02/class-casting-is-anti-pattern.html"><code class="language-plaintext highlighter-rouge">instanceof</code></a>
+operators. These four basic principles should guarantee
+clean code and transparent architecture. That’s how the
+<a href="https://www.takes.org">Takes</a> framework was born.
+Let’s see what was created and how it works.</p>
+
+
+
+<amp-img src="/images/2015/03/godfather-shooting-scene.jpg" alt="Making of The Godfather (1972) by Francis Ford Coppola" height="583" width="1000" layout="responsive"></amp-img>
+
+<h2 id="java-web-architecture-in-a-nutshell">Java Web Architecture in a Nutshell</h2>
+
+<p>This is how I understand a web application architecture and its
+components, in simple terms.</p>
+
+
+
+<p>First, to create a web server, we should create
+a new <a href="https://en.wikipedia.org/wiki/Network_socket">network socket</a>,
+that accepts connections on a certain <a href="https://en.wikipedia.org/wiki/Port_%28computer_networking%29">TCP port</a>.
+Usually it is 80, but I’m going to use 8080 for testing purposes.
+This is done in Java with the <a href="http://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html"><code class="language-plaintext highlighter-rouge">ServerSocket</code></a> class:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.net.ServerSocket</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">ServerSocket</span> <span class="n">server</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ServerSocket</span><span class="o">(</span><span class="mi">8080</span><span class="o">);</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>That’s enough to start a web server. Now, the socket is ready and listening
+on port 8080. When someone opens <code class="language-plaintext highlighter-rouge">http://localhost:8080</code> in their browser,
+the connection will be established and the browser will spin its waiting
+wheel forever. Compile this snippet and try. We just built a simple web
+server without the use of any frameworks. We’re not doing anything with
+incoming connections yet, but we’re not rejecting them either. All of them
+are being lined up inside that <code class="language-plaintext highlighter-rouge">server</code> object. It’s being done in a background
+thread; that’s why we need to put that <code class="language-plaintext highlighter-rouge">while(true)</code> in afterward. Without this endless pause,
+the app will finish its execution immediately and the server socket will
+shut down.</p>
+
+<p>The next step is to accept the incoming connections. In Java, that’s done through
+a blocking call to the <code class="language-plaintext highlighter-rouge">accept()</code> method:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">Socket</span> <span class="n">socket</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="na">accept</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>The method is blocking its thread and waiting until a new connection arrives. As
+soon as that happens, it returns an instance of <code class="language-plaintext highlighter-rouge">Socket</code>. In order to accept
+the next connection, we should call <code class="language-plaintext highlighter-rouge">accept()</code> again. So basically, our
+web server should work like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">ServerSocket</span> <span class="n">server</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ServerSocket</span><span class="o">(</span><span class="mi">8080</span><span class="o">);</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kd">final</span> <span class="nc">Socket</span> <span class="n">socket</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="na">accept</span><span class="o">();</span>
+      <span class="c1">// 1. Read HTTP request from the socket</span>
+      <span class="c1">// 2. Prepare an HTTP response</span>
+      <span class="c1">// 3. Send HTTP response to the socket</span>
+      <span class="c1">// 4. Close the socket</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>It’s an endless cycle that accepts a new connection, understands it,
+creates a response, returns the response, and accepts a new connection again.
+HTTP protocol is stateless, which means the server should not
+remember what happened in any previous connection. All it cares about is
+the incoming HTTP request in this particular connection.</p>
+
+<p>The HTTP request is coming from the input stream of the socket and looks like
+a multi-line block of text. This is what you would see if you read
+an input stream of the socket:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">BufferedReader</span> <span class="n">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BufferedReader</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">InputStreamReader</span><span class="o">(</span><span class="n">socket</span><span class="o">.</span><span class="na">getInputStream</span><span class="o">())</span>
+<span class="o">);</span>
+<span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="nc">String</span> <span class="n">line</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="na">readLine</span><span class="o">();</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">line</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">())</span> <span class="o">{</span>
+    <span class="k">break</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>You will see something like this:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET / HTTP/1.1
+Host: localhost:8080
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8,ru;q=0.6,uk;q=0.4
+</code></pre></div></div>
+
+<p>The client (the Google Chrome browser, for example) passes this text into the
+connection established. It connects to port 8080 at <code class="language-plaintext highlighter-rouge">localhost</code>, and as soon
+as the connection is ready, it immediately sends this text into it, then waits
+for a response.</p>
+
+<p>Our job is to create an HTTP response using the information we get in the
+request. If our server is very primitive, we can basically ignore all the
+information in the request and just return “Hello, world!” to all requests
+(I’m using
+<a href="https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/IOUtils.html"><code class="language-plaintext highlighter-rouge">IOUtils</code></a>
+for simplicity):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.net.Socket</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.net.ServerSocket</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.apache.commons.io.IOUtils</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">ServerSocket</span> <span class="n">server</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ServerSocket</span><span class="o">(</span><span class="mi">8080</span><span class="o">);</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">try</span> <span class="o">(</span><span class="kd">final</span> <span class="nc">Socket</span> <span class="n">socket</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="na">accept</span><span class="o">())</span> <span class="o">{</span>
+        <span class="nc">IOUtils</span><span class="o">.</span><span class="na">copy</span><span class="o">(</span>
+          <span class="nc">IOUtils</span><span class="o">.</span><span class="na">toInputStream</span><span class="o">(</span><span class="s">"HTTP/1.1 200 OK\r\n\r\nHello, world!"</span><span class="o">),</span>
+          <span class="n">socket</span><span class="o">.</span><span class="na">getOutputStream</span><span class="o">()</span>
+        <span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>That’s it. The server is ready. Try to compile and run it. Point your browser
+to <code class="language-plaintext highlighter-rouge">http://localhost:8080</code>, and you will see <code class="language-plaintext highlighter-rouge">Hello, world!</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>javac <span class="nt">-cp</span> commons-io.jar Foo.java
+<span class="nv">$ </span>java <span class="nt">-cp</span> commons-io.jar:. Foo &amp;
+<span class="nv">$ </span>curl http://localhost:8080 <span class="nt">-v</span>
+<span class="k">*</span> Rebuilt URL to: http://localhost:8080/
+<span class="k">*</span> Connected to localhost <span class="o">(</span>::1<span class="o">)</span> port 8080 <span class="o">(</span><span class="c">#0)</span>
+<span class="o">&gt;</span> GET / HTTP/1.1
+<span class="o">&gt;</span> User-Agent: curl/7.37.1
+<span class="o">&gt;</span> Host: localhost:8080
+<span class="o">&gt;</span> Accept: <span class="k">*</span>/<span class="k">*</span>
+<span class="o">&gt;</span>
+&lt; HTTP/1.1 200 OK
+<span class="k">*</span> no chunk, no close, no size. Assume close to signal end
+&lt;
+<span class="k">*</span> Closing connection 0
+Hello, world!
+</code></pre></div></div>
+
+<p>That’s all you need to build a web server. Now let’s discuss how to make
+it object-oriented and composable. Let’s try to see how the <a href="https://www.takes.org">Takes</a>
+framework was built.</p>
+
+<h2 id="routingdispatching">Routing/Dispatching</h2>
+
+<p>Routing/dispatching is combined with response printing in Takes. All you
+need to do to create a working web application is to create a single
+class that implements
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Take.html"><code class="language-plaintext highlighter-rouge">Take</code></a> interface:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.takes.Request</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.takes.Take</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkFoo</span> <span class="kd">implements</span> <span class="nc">Take</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Response</span> <span class="nf">route</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Request</span> <span class="n">request</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">RsText</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>And now it’s time to start a server:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.takes.http.Exit</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.takes.http.FtBasic</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">FtBasic</span><span class="o">(</span><span class="k">new</span> <span class="nc">TkFoo</span><span class="o">(),</span> <span class="mi">8080</span><span class="o">).</span><span class="na">start</span><span class="o">(</span><span class="nc">Exit</span><span class="o">.</span><span class="na">NEVER</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html"><code class="language-plaintext highlighter-rouge">FtBasic</code></a>
+class does the exact same socket manipulations explained
+above. It starts a server socket on port 8080 and dispatches all incoming
+connections through an instance of <code class="language-plaintext highlighter-rouge">TkFoo</code> that we are giving to its constructor.
+It does this dispatching in an endless cycle, checking every second whether
+it’s time to stop with an instance of
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/Exit.html"><code class="language-plaintext highlighter-rouge">Exit</code></a>.
+Obviously, <code class="language-plaintext highlighter-rouge">Exit.NEVER</code> always responds with, “Don’t stop, please.”</p>
+
+<h2 id="http-request">HTTP Request</h2>
+
+<p>Now let’s see what’s inside the HTTP request arriving at <code class="language-plaintext highlighter-rouge">TkFoo</code> and what
+we can get out of it. This is how the
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code class="language-plaintext highlighter-rouge">Request</code></a>
+interface is defined in <a href="https://www.takes.org">Takes</a>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Request</span> <span class="o">{</span>
+  <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">head</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">;</span>
+  <span class="nc">InputStream</span> <span class="nf">body</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The request is divided into two parts: the head and the body. The head
+contains all lines that go before the empty line that starts
+a body, according to HTTP specification in
+<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html">RFC 2616</a>. There are many useful
+decorators for <code class="language-plaintext highlighter-rouge">Request</code> in the framework. For example, <code class="language-plaintext highlighter-rouge">RqMethod</code> will
+help you get the method name from the first line of the header:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">String</span> <span class="n">method</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RqMethod</span><span class="o">(</span><span class="n">request</span><span class="o">).</span><span class="na">method</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">RqHref</code> will help extract the query part and parse it. For example,
+this is the request:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">GET</span> <span class="o">/</span><span class="n">user</span><span class="o">?</span><span class="n">id</span><span class="o">=</span><span class="mi">123</span> <span class="no">HTTP</span><span class="o">/</span><span class="mf">1.1</span>
+<span class="nl">Host:</span> <span class="n">www</span><span class="o">.</span><span class="na">example</span><span class="o">.</span><span class="na">com</span>
+</code></pre></div></div>
+
+<p>This code will extract that <code class="language-plaintext highlighter-rouge">123</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">RqHref</span><span class="o">(</span><span class="n">request</span><span class="o">).</span><span class="na">href</span><span class="o">().</span><span class="na">param</span><span class="o">(</span><span class="s">"id"</span><span class="o">).</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">RqPrint</code> can get the entire request or its body printed as a <code class="language-plaintext highlighter-rouge">String</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">String</span> <span class="n">body</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RqPrint</span><span class="o">(</span><span class="n">request</span><span class="o">).</span><span class="na">printBody</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>The idea here is to keep the <code class="language-plaintext highlighter-rouge">Request</code> interface simple and provide
+this request parsing functionality to its decorators. This approach helps the
+framework keep classes small and cohesive. Each decorator is very
+small and solid, doing exactly one thing. All of these decorators
+are in the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/package-summary.html"><code class="language-plaintext highlighter-rouge">org.takes.rq</code></a> package.
+As you already probably understand, the <code class="language-plaintext highlighter-rouge">Rq</code> prefix stands for <code class="language-plaintext highlighter-rouge">Request</code>.</p>
+
+<h2 id="first-real-web-app">First Real Web App</h2>
+
+<p>Let’s create our first real web application, which will do something
+useful. I would recommend starting with an <code class="language-plaintext highlighter-rouge">Entry</code> class, which is
+required by Java to start an app from the command line:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.takes.http.Exit</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.takes.http.FtCli</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">Entry</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">FtCli</span><span class="o">(</span><span class="k">new</span> <span class="nc">TkApp</span><span class="o">(),</span> <span class="n">args</span><span class="o">).</span><span class="na">start</span><span class="o">(</span><span class="nc">Exit</span><span class="o">.</span><span class="na">NEVER</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This class contains just a single <code class="language-plaintext highlighter-rouge">main()</code> static method that will be
+called by JVM when the app starts from the command line. As you see, it
+instantiates <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtCli.html"><code class="language-plaintext highlighter-rouge">FtCli</code></a>,
+giving it an instance of class <code class="language-plaintext highlighter-rouge">TkApp</code> and command
+line arguments. We’ll create the <code class="language-plaintext highlighter-rouge">TkApp</code> class in a second. <code class="language-plaintext highlighter-rouge">FtCli</code>
+(translates to “front-end with command line interface”) makes an instance
+of the same <code class="language-plaintext highlighter-rouge">FtBasic</code>, wrapping it into a few useful decorators and configuring
+it according to command line arguments. For example, <code class="language-plaintext highlighter-rouge">--port=8080</code> will
+be converted into a <code class="language-plaintext highlighter-rouge">8080</code> port number and passed as a second argument of
+the <code class="language-plaintext highlighter-rouge">FtBasic</code> constructor.</p>
+
+<p>The web application itself is called <code class="language-plaintext highlighter-rouge">TkApp</code> and extends <code class="language-plaintext highlighter-rouge">TsWrap</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.takes.Take</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.takes.facets.fork.FkRegex</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.takes.facets.fork.TkFork</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.takes.tk.TkWrap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.takes.tk.TkClasspath</span><span class="o">;</span>
+<span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkApp</span> <span class="kd">extends</span> <span class="nc">TkWrap</span> <span class="o">{</span>
+  <span class="nc">TkApp</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">(</span><span class="nc">TkApp</span><span class="o">.</span><span class="na">make</span><span class="o">());</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Take</span> <span class="nf">make</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TkFork</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">FkRegex</span><span class="o">(</span><span class="s">"/robots.txt"</span><span class="o">,</span> <span class="s">""</span><span class="o">),</span>
+      <span class="k">new</span> <span class="nf">FkRegex</span><span class="o">(</span><span class="s">"/css/.*"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TkClasspath</span><span class="o">()),</span>
+      <span class="k">new</span> <span class="nf">FkRegex</span><span class="o">(</span><span class="s">"/"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TkIndex</span><span class="o">())</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>We’ll discuss this <code class="language-plaintext highlighter-rouge">TkFork</code> class in a minute.</p>
+
+<p>If you’re using Maven, this is the <code class="language-plaintext highlighter-rouge">pom.xml</code> you should start with:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0"?&gt;</span>
+<span class="nt">&lt;project</span> <span class="na">xmlns=</span><span class="s">"https://maven.apache.org/POM/4.0.0"</span>
+  <span class="na">xmlns:xsi=</span><span class="s">"https://www.w3.org/2001/XMLSchema-instance"</span>
+  <span class="na">xsi:schemaLocation=</span><span class="s">"https://maven.apache.org/POM/4.0.0
+    https://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>foo<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>foo<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+      <span class="nt">&lt;groupId&gt;</span>org.takes<span class="nt">&lt;/groupId&gt;</span>
+      <span class="nt">&lt;artifactId&gt;</span>takes<span class="nt">&lt;/artifactId&gt;</span>
+      <span class="nt">&lt;version&gt;</span>0.9<span class="nt">&lt;/version&gt;</span> <span class="c">&lt;!-- check the latest in Maven Central --&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+  <span class="nt">&lt;/dependencies&gt;</span>
+  <span class="nt">&lt;build&gt;</span>
+    <span class="nt">&lt;finalName&gt;</span>foo<span class="nt">&lt;/finalName&gt;</span>
+    <span class="nt">&lt;plugins&gt;</span>
+      <span class="nt">&lt;plugin&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>maven-dependency-plugin<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;executions&gt;</span>
+          <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+              <span class="nt">&lt;goal&gt;</span>copy-dependencies<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+            <span class="nt">&lt;configuration&gt;</span>
+              <span class="nt">&lt;outputDirectory&gt;</span>${project.build.directory}/deps<span class="nt">&lt;/outputDirectory&gt;</span>
+            <span class="nt">&lt;/configuration&gt;</span>
+          <span class="nt">&lt;/execution&gt;</span>
+        <span class="nt">&lt;/executions&gt;</span>
+      <span class="nt">&lt;/plugin&gt;</span>
+    <span class="nt">&lt;/plugins&gt;</span>
+  <span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></div>
+
+<p>Running <code class="language-plaintext highlighter-rouge">mvn clean package</code> should build a <code class="language-plaintext highlighter-rouge">foo.jar</code> file in <code class="language-plaintext highlighter-rouge">target</code> directory
+and a collection of all JAR dependencies in <code class="language-plaintext highlighter-rouge">target/deps</code>. Now you
+can run the app from the command line:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>mvn clean package
+<span class="nv">$ </span>java <span class="nt">-Dfile</span>.encoding<span class="o">=</span>UTF-8 <span class="se">\</span>
+  <span class="nt">-cp</span> ./target/foo.jar:./target/deps/<span class="k">*</span> foo.Entry <span class="nt">--port</span><span class="o">=</span>8080
+</code></pre></div></div>
+
+<p>The application is ready, and you can deploy it to, say, Heroku. Just
+create a <code class="language-plaintext highlighter-rouge">Procfile</code> file in the root of the repository and push the repo
+to Heroku. This is what <code class="language-plaintext highlighter-rouge">Procfile</code> should look like:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>web: java -Dfile.encoding=UTF-8 \
+  -cp target/foo.jar:target/deps/* \
+  foo.Entry --port=${PORT}
+</code></pre></div></div>
+
+<h2 id="tkfork"><code class="language-plaintext highlighter-rouge">TkFork</code></h2>
+
+<p>This <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/TkFork.html"><code class="language-plaintext highlighter-rouge">TkFork</code></a>
+class seems to be one of the core elements of the framework. It
+helps route an incoming HTTP request to the right <em>take</em>. Its logic is very
+simple, and there are just a few lines of code inside it. It encapsulates
+a collection of “forks,” which are instances of the
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/facets/fork/Fork.html"><code class="language-plaintext highlighter-rouge">Fork</code></a> interface:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Fork</span> <span class="o">{</span>
+  <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Response</span><span class="o">&gt;</span> <span class="nf">route</span><span class="o">(</span><span class="nc">Request</span> <span class="n">req</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Its only <code class="language-plaintext highlighter-rouge">route()</code> method either returns an empty iterator or an iterator
+with a single <code class="language-plaintext highlighter-rouge">Response</code>. <code class="language-plaintext highlighter-rouge">TkFork</code> goes through all forks, calling their
+<code class="language-plaintext highlighter-rouge">route()</code> methods until one of them returns a response. Once that happens,
+<code class="language-plaintext highlighter-rouge">TkFork</code> returns this response to the caller, which is
+<a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtBasic.html"><code class="language-plaintext highlighter-rouge">FtBasic</code></a>.</p>
+
+<p>Let’s create a simple fork ourselves now. For example, we want to show
+the status of the application when the <code class="language-plaintext highlighter-rouge">/status</code> URL is requested. Here is
+the code:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkApp</span> <span class="kd">extends</span> <span class="nc">TkWrap</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Take</span> <span class="nf">make</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TkFork</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Fork</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Response</span><span class="o">&gt;</span> <span class="nf">route</span><span class="o">(</span><span class="nc">Request</span> <span class="n">req</span><span class="o">)</span> <span class="o">{</span>
+          <span class="kd">final</span> <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Response</span><span class="o">&gt;</span> <span class="n">responses</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="mi">1</span><span class="o">);</span>
+          <span class="k">if</span> <span class="o">(</span><span class="k">new</span> <span class="nc">RqHref</span><span class="o">(</span><span class="n">req</span><span class="o">).</span><span class="na">href</span><span class="o">().</span><span class="na">path</span><span class="o">().</span><span class="na">equals</span><span class="o">(</span><span class="s">"/status"</span><span class="o">))</span> <span class="o">{</span>
+            <span class="n">responses</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="nc">TkStatus</span><span class="o">());</span>
+          <span class="o">}</span>
+          <span class="k">return</span> <span class="n">responses</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>I believe the logic here is clear. We either return an empty iterator
+or an iterator with an instance of <code class="language-plaintext highlighter-rouge">TkStatus</code> inside. If an empty
+iterator is returned, <code class="language-plaintext highlighter-rouge">TkFork</code> will try to find another fork in the
+collection that actually gets an instance of <code class="language-plaintext highlighter-rouge">Response</code>.
+By the way, if nothing is found and all forks return empty iterators,
+<code class="language-plaintext highlighter-rouge">TkFork</code> will throw a “Page not found” exception.</p>
+
+<p>This exact logic is implemented by an out-of-the-box fork called <code class="language-plaintext highlighter-rouge">FkRegex</code>,
+which attempts to match a request URI path with the regular expression
+provided:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkApp</span> <span class="kd">extends</span> <span class="nc">TkWrap</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Take</span> <span class="nf">make</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TkFork</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">FkRegex</span><span class="o">(</span><span class="s">"/status"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TkStatus</span><span class="o">())</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>We can compose a multi-level structure of <code class="language-plaintext highlighter-rouge">TkFork</code> classes; for example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkApp</span> <span class="kd">extends</span> <span class="nc">TsWrap</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Take</span> <span class="nf">make</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TkFork</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">FkRegex</span><span class="o">(</span>
+        <span class="s">"/status"</span><span class="o">,</span>
+        <span class="k">new</span> <span class="nf">TkFork</span><span class="o">(</span>
+          <span class="k">new</span> <span class="nf">FkParams</span><span class="o">(</span><span class="s">"f"</span><span class="o">,</span> <span class="s">"json"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TkStatusJSON</span><span class="o">()),</span>
+          <span class="k">new</span> <span class="nf">FkParams</span><span class="o">(</span><span class="s">"f"</span><span class="o">,</span> <span class="s">"xml"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TkStatusXML</span><span class="o">())</span>
+        <span class="o">)</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Again, I believe it’s obvious. The instance of <code class="language-plaintext highlighter-rouge">FkRegex</code> will ask an
+encapsulated instance of <code class="language-plaintext highlighter-rouge">TkFork</code> to return a response, and it will try to
+fetch it from one that <code class="language-plaintext highlighter-rouge">FkParams</code> encapsulated. If the HTTP query is
+<code class="language-plaintext highlighter-rouge">/status?f=xml</code>, an instance of <code class="language-plaintext highlighter-rouge">TkStatusXML</code> will be returned.</p>
+
+<h2 id="http-response">HTTP Response</h2>
+
+<p>Now let’s discuss the structure of the HTTP response and its object-oriented
+abstraction, <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Response.html"><code class="language-plaintext highlighter-rouge">Response</code></a>.
+This is how the interface looks:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Response</span> <span class="o">{</span>
+  <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">head</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">;</span>
+  <span class="nc">InputStream</span> <span class="nf">body</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Looks very similar to the <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html"><code class="language-plaintext highlighter-rouge">Request</code></a>,
+doesn’t it? Well, it’s identical, mostly because the structure of the HTTP request and
+response is almost identical. The only difference is the first line.</p>
+
+<p>There is a collection of useful decorators that help in response building. They
+are <a href="/2015/02/26/composable-decorators.html">composable</a>,
+which makes them very convenient. For example, if you want to build a response
+that contains an HTML page, you compose them like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkIndex</span> <span class="kd">implements</span> <span class="nc">Take</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Response</span> <span class="nf">act</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">RsWithStatus</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">RsWithType</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">RsWithBody</span><span class="o">(</span><span class="s">"&lt;html&gt;Hello, world!&lt;/html&gt;"</span><span class="o">),</span>
+        <span class="s">"text/html"</span>
+      <span class="o">),</span>
+      <span class="mi">200</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>In this example, the decorator <code class="language-plaintext highlighter-rouge">RsWithBody</code>
+creates a response with a body but with no headers at all. Then,
+<code class="language-plaintext highlighter-rouge">RsWithType</code> adds the header <code class="language-plaintext highlighter-rouge">Content-Type: text/html</code> to it. Then, <code class="language-plaintext highlighter-rouge">RsWithStatus</code>
+makes sure the first line of the response contains <code class="language-plaintext highlighter-rouge">HTTP/1.1 200 OK</code>.</p>
+
+<p>You can create your own decorators that can reuse existing ones. Take a look
+at how it’s done in <a href="https://github.com/yegor256/rultor/blob/1.50.2/src/main/java/com/rultor/web/RsPage.java"><code class="language-plaintext highlighter-rouge">RsPage</code></a>
+from rultor.com.</p>
+
+<h2 id="how-about-templates">How About Templates?</h2>
+
+<p>Returning simple “Hello, world” pages is not a big problem, as we can see. But
+what about more complex output like HTML pages, <a href="/2015/11/16/json-vs-xml.html">XML</a>
+documents, JSON
+data sets, etc? There are a few convenient <code class="language-plaintext highlighter-rouge">Response</code> decorators that
+enable all of that. Let’s start with <a href="http://velocity.apache.org">Velocity</a>,
+a simple templating engine. Well, it’s not that simple. It’s rather powerful,
+but I would suggest to use it in simple situations only. Here is how it
+works:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkIndex</span> <span class="kd">implements</span> <span class="nc">Take</span> <span class="o">{</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Response</span> <span class="nf">act</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">RsVelocity</span><span class="o">(</span><span class="s">"Hello, ${name}"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"Jeffrey"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The <a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/rs/RsVelocity.html"><code class="language-plaintext highlighter-rouge">RsVelocity</code></a> constructor
+accepts a single argument that has to be a Velocity template. Then, you call
+the <code class="language-plaintext highlighter-rouge">with()</code> method, injecting data into the Velocity context. When it’s time
+to render the HTTP response, <code class="language-plaintext highlighter-rouge">RsVelocity</code> will “evaluate” the template
+against the context configured. Again, I would recommend you use
+this templating approach only for simple outputs.</p>
+
+<p>For more complex HTML documents, I would recommend you use XML/XSLT
+in combination with Xembly. I explained this idea in a few previous posts:
+<a href="/2014/06/25/xml-and-xslt-in-browser.html">XML+XSLT in a Browser</a>
+and <a href="/2014/09/09/restful-web-sites.html">RESTful API and a Web Site in the Same URL</a>.
+It is simple and powerful—Java generates XML output and the XSLT
+processor transforms it into HTML documents. This is how we separate
+representation from data. The XSL stylesheet is a “view” and <code class="language-plaintext highlighter-rouge">TkIndex</code> is a “controller,”
+in terms of <a href="/2016/12/13/mvc-vs-oop.html">MVC</a>.</p>
+
+<p>I’ll write a separate article about templating with Xembly and XSL very soon.</p>
+
+<p>In the meantime, we’ll create decorators for <a href="https://en.wikipedia.org/wiki/Facelets">JSF/Facelets</a>
+and <a href="https://en.wikipedia.org/wiki/JavaServer_Pages">JSP</a> rendering
+in Takes. If you’re interested in helping, please fork the framework
+and submit your pull requests.</p>
+
+<h2 id="what-about-persistence">What About Persistence?</h2>
+
+<p>Now, a question that comes up is what to do with persistent entities, like databases,
+in-memory structures, network connections, etc. My suggestion is to
+initialize them inside the <code class="language-plaintext highlighter-rouge">Entry</code> class and pass them as arguments into
+the <code class="language-plaintext highlighter-rouge">TkApp</code> constructor. Then, the <code class="language-plaintext highlighter-rouge">TkApp</code> will pass them into the
+constructors of custom <em>takes</em>.</p>
+
+<p>For example, we have a PostgreSQL database that contains
+some table data that we need to render. Here is how I would
+initialize a connection to it in the <code class="language-plaintext highlighter-rouge">Entry</code> class (I’m using
+a <a href="https://www.jolbox.com/">BoneCP</a> connection pool):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">Entry</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">FtCli</span><span class="o">(</span><span class="k">new</span> <span class="nc">TkApp</span><span class="o">(</span><span class="nc">Entry</span><span class="o">.</span><span class="na">postgres</span><span class="o">()),</span> <span class="n">args</span><span class="o">).</span><span class="na">start</span><span class="o">(</span><span class="nc">Exit</span><span class="o">.</span><span class="na">NEVER</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Source</span> <span class="nf">postgres</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">BoneCPDataSource</span> <span class="n">src</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BoneCPDataSource</span><span class="o">();</span>
+    <span class="n">src</span><span class="o">.</span><span class="na">setDriverClass</span><span class="o">(</span><span class="s">"org.postgresql.Driver"</span><span class="o">);</span>
+    <span class="n">src</span><span class="o">.</span><span class="na">setJdbcUrl</span><span class="o">(</span><span class="s">"jdbc:postgresql://localhost/db"</span><span class="o">);</span>
+    <span class="n">src</span><span class="o">.</span><span class="na">setUser</span><span class="o">(</span><span class="s">"root"</span><span class="o">);</span>
+    <span class="n">src</span><span class="o">.</span><span class="na">setPassword</span><span class="o">(</span><span class="s">"super-secret-password"</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">src</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Now, the constructor of <code class="language-plaintext highlighter-rouge">TkApp</code> must accept a single argument of type
+<code class="language-plaintext highlighter-rouge">java.sql.Source</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkApp</span> <span class="kd">extends</span> <span class="nc">TkWrap</span> <span class="o">{</span>
+  <span class="nc">TkApp</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Source</span> <span class="n">source</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">(</span><span class="nc">TkApp</span><span class="o">.</span><span class="na">make</span><span class="o">(</span><span class="n">source</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">Take</span> <span class="nf">make</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Source</span> <span class="n">source</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TkFork</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">FkRegex</span><span class="o">(</span><span class="s">"/"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">TkIndex</span><span class="o">(</span><span class="n">source</span><span class="o">))</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Class <code class="language-plaintext highlighter-rouge">TkIndex</code> also accepts a single argument of class <code class="language-plaintext highlighter-rouge">Source</code>. I believe
+you know what to do with it inside <code class="language-plaintext highlighter-rouge">TkIndex</code> in order to fetch the SQL
+table data and convert it into HTML. The point here is that the dependency
+must be injected into the application (instance of class <code class="language-plaintext highlighter-rouge">TkApp</code>) at the
+moment of its instantiation. This is a pure and clean dependency injection
+mechanism, which is absolutely container-free. Read more about it in
+<a href="/2014/10/03/di-containers-are-evil.html">Dependency Injection Containers Are Code Polluters</a>.</p>
+
+<h2 id="unit-testing">Unit Testing</h2>
+
+<p>Since every class is immutable and all dependencies are injected only
+through constructors, unit testing is extremely easy. Let’s say we want
+to test <code class="language-plaintext highlighter-rouge">TkStatus</code>, which is supposed to return an HTML response
+(I’m using <a href="http://junit.org/">JUnit 4</a> and <a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a>):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hamcrest.MatcherAssert</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.hamcrest.Matchers</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkIndexTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">returnsHtmlPage</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="nc">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">RsPrint</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">TkStatus</span><span class="o">().</span><span class="na">act</span><span class="o">(</span><span class="k">new</span> <span class="nc">RqFake</span><span class="o">())</span>
+      <span class="o">).</span><span class="na">printBody</span><span class="o">(),</span>
+      <span class="nc">Matchers</span><span class="o">.</span><span class="na">equalsTo</span><span class="o">(</span><span class="s">"&lt;html&gt;Hello, world!&lt;/html&gt;"</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Also, we can start the entire application or any individual <em>take</em> in a
+test HTTP server and test its behavior via a real TCP socket; for example
+(I’m using <a href="https://http.jcabi.com">jcabi-http</a> to make an HTTP request and check the output):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">TkIndexTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">returnsHtmlPage</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">FtRemote</span><span class="o">(</span><span class="k">new</span> <span class="nc">TkIndex</span><span class="o">()).</span><span class="na">exec</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nc">FtRemote</span><span class="o">.</span><span class="na">Script</span><span class="o">()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">exec</span><span class="o">(</span><span class="kd">final</span> <span class="no">URI</span> <span class="n">home</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+          <span class="k">new</span> <span class="nf">JdkRequest</span><span class="o">(</span><span class="n">home</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">fetch</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">as</span><span class="o">(</span><span class="nc">RestResponse</span><span class="o">.</span><span class="na">class</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">assertStatus</span><span class="o">(</span><span class="nc">HttpURLConnection</span><span class="o">.</span><span class="na">HTTP_OK</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">assertBody</span><span class="o">(</span><span class="nc">Matchers</span><span class="o">.</span><span class="na">containsString</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">));</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><a href="http://static.javadoc.io/org.takes/takes/1.1/org/takes/http/FtRemote.html"><code class="language-plaintext highlighter-rouge">FtRemote</code></a>
+starts a test web server at a random TCP port and calls the
+<code class="language-plaintext highlighter-rouge">exec()</code> method at the provided instance of <code class="language-plaintext highlighter-rouge">FtRemote.Script</code>. The first
+argument of this method is a URI of the just-started web server homepage.</p>
+
+<p>The architecture of Takes framework is very modular and composable. Any
+individual <em>take</em> can be tested as a standalone component, absolutely
+independent from the framework and other <em>takes</em>.</p>
+
+<h2 id="why-the-name">Why the Name?</h2>
+
+<p>That’s the question I’ve been hearing rather often. The idea is simple, and it
+originates from the movie business. When a movie is made, the crew shoots many <em>takes</em> in order
+to capture the reality and put it on film. Each capture is called a <em>take</em>.</p>
+
+<p>In other words, a <em>take</em> is like a snapshot of the reality.</p>
+
+<p>The same applies to this framework. Each instance of <code class="language-plaintext highlighter-rouge">Take</code> represents
+a reality at one particular moment in time. This reality is then sent to the
+user in the form of a <code class="language-plaintext highlighter-rouge">Response</code>.</p>
+
+<p>PS. There are a few words about authentication:
+<a href="/2015/05/18/cookie-based-authentication.html">How Cookie-Based Authentication Works in the Takes Framework</a>.</p>
+
+<p>PPS. There are a few real web systems, which you may
+be interested to take a look at. They all are using
+Takes Framework and their code is open:
+<a href="https://github.com/yegor256/rultor">rultor.com</a>,
+<a href="/2016/03/30/jare-instant-free-cdn.html">jare.io</a>,
+<a href="/2016/03/15/wring-dispatcher-github-notifications.html">wring.io</a>.</p>
+
+    </article>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Smaller Try-Blocks Are Better</title>
+    <link rel="canonical" href="https://www.yegor256.com/2022/09/08/smaller-try-blocks.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2022/09/08/smaller-try-blocks.html"
+        },
+        "headline": "Smaller Try-Blocks Are Better",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2022/09/the-rum-diary.jpg",
+          "height": 900,
+          "width": 1600
+        },
+        "datePublished": "2022-09-08",
+        "dateModified": "2022-09-08",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Large try-blocks in try/catch statements are a common
+practice, because we try to avoid polluting the code
+with catch blocks; it's a bad tendency.
+",
+        "keywords": ["try catch", "oop try catch", "exception handling oop", "try block", "try catch exceptions"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2022/09/08/smaller-try-blocks.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>8 September 2022</p>
+      <h1>Smaller Try-Blocks Are Better</h1>
+      <p>It often happens, <a href="/2015/07/28/checked-vs-unchecked-exceptions.html">especially</a>
+in Java, that a few places in the method
+are potential exception originators. Usually, we make a large method-size
+<code class="language-plaintext highlighter-rouge">try</code> block with a single <code class="language-plaintext highlighter-rouge">catch</code> at the bottom. We catch all
+the exceptions, usually even using
+<a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/catch-multiple.html">grouping</a>.
+This helps us minimize the noise, which is the exception catching.
+However, such large <code class="language-plaintext highlighter-rouge">try</code> blocks jeopardize maintainability: we are unable
+to provide proper <a href="/2015/12/01/rethrow-exceptions.html">error context</a>
+inside <code class="language-plaintext highlighter-rouge">catch</code> blocks.</p>
+
+
+
+<amp-img src="/images/2022/09/the-rum-diary.jpg" alt="The Rum Diary (2011) by Bruce Robinson" height="900" width="1600" layout="responsive"></amp-img>
+
+<p>What do you think is wrong with this Java method
+(aside from using <code class="language-plaintext highlighter-rouge">System.out</code> instead of an injected dependency)?:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Files</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.Path</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.regex.Pattern</span><span class="o">;</span>
+
+<span class="kt">void</span> <span class="nf">grep</span><span class="o">(</span><span class="nc">Path</span> <span class="n">file</span><span class="o">,</span> <span class="nc">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">line</span> <span class="o">:</span> <span class="nc">Files</span><span class="o">.</span><span class="na">readAllLines</span><span class="o">(</span><span class="n">file</span><span class="o">))</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">regex</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">matches</span><span class="o">())</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>I believe that its try/catch block is too big. The <code class="language-plaintext highlighter-rouge">IOException</code> may only be
+thrown by the <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#readAllLines-java.nio.file.Path-"><code class="language-plaintext highlighter-rouge">readAllLines</code></a>
+static method, but the block covers a few other method calls
+and statements. This code would be better:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">grep</span><span class="o">(</span><span class="nc">Path</span> <span class="n">file</span><span class="o">,</span> <span class="nc">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">String</span><span class="o">[]</span> <span class="n">lines</span><span class="o">;</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">readAllLines</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">line</span> <span class="o">:</span> <span class="n">lines</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">regex</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">matches</span><span class="o">())</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Now the try/catch block covers exactly the place where the exception
+may originate. Nothing else!</p>
+
+<p>Why are smaller try-blocks better? Because they allow more
+focused error reporting with more detailed context. For example, the
+second snippet can be re-written as follows:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">grep</span><span class="o">(</span><span class="nc">Path</span> <span class="n">file</span><span class="o">,</span> <span class="nc">Pattern</span> <span class="n">regex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">String</span><span class="o">[]</span> <span class="n">lines</span><span class="o">;</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">readAllLines</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span>
+      <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+        <span class="s">"Failed to read all lines from %s"</span><span class="o">,</span>
+        <span class="n">file</span>
+      <span class="o">),</span>
+      <span class="n">ex</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">line</span> <span class="o">:</span> <span class="n">lines</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">regex</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">line</span><span class="o">).</span><span class="na">matches</span><span class="o">())</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Can we do the same with the first snippet? We could, but the
+error message would be inaccurate, because the block covers too much.</p>
+
+    </article>
+  </body>
+</html>

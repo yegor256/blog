@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Eight Levels of Communication Maturity</title>
+    <link rel="canonical" href="https://www.yegor256.com/2016/08/23/communication-maturity.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2016/08/23/communication-maturity.html"
+        },
+        "headline": "Eight Levels of Communication Maturity",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2016/08/schizopolis.jpg",
+          "height": 465,
+          "width": 853
+        },
+        "datePublished": "2016-08-23",
+        "dateModified": "2016-08-23",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Chats, emails, phone calls, mailing lists, issue
+tracking systems, face-to-face meetings, and other
+communication instruments for a software project.
+",
+        "keywords": ["meetings", "slack project management", "skype meetings", "github", "bitbucket"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2016/08/23/communication-maturity.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>23 August 2016</p>
+      <h1>Eight Levels of Communication Maturity</h1>
+      <p>Each software team organizes its communications in its own
+specific way. Some use Slack, Trello, or GitHub; others just sit together
+in the same room. There are many methods and tools. I believe
+it’s possible to rank them by the amount of <em>damage</em> they cause
+to your project. This is the list of all of them I’m aware of at the moment.</p>
+
+
+
+<amp-img src="/images/2016/08/schizopolis.jpg" alt="Schizopolis (1996) by Steven Soderbergh" height="465" width="853" layout="responsive"></amp-img>
+
+<p>The damage I’m talking about is caused mostly by the distance between these communication
+channels and project artifacts. The farther away people stay from documents,
+the bigger the risk of <a href="/2014/10/07/stop-chatting-start-coding.html">losing information</a>.
+And lost information is the first source of trouble in any project.</p>
+
+<p>Here is the list; it starts with the most damaging communication means
+and goes down to the most <em>mature</em> and professional ones, which cause the
+least amount of trouble:</p>
+
+<ul>
+  <li>
+    <p><strong>Coffee Breaks</strong>.
+This is the most dangerous thing—you can never
+keep track of them, you won’t know what they were about, and there
+is no “search” button anywhere. Everything you say standing next
+to that coffee machine will be lost. Nothing will be converted
+to project artifacts.</p>
+  </li>
+  <li>
+    <p><strong>Phone Calls</strong>.
+A bit better than coffee breaks but still a big issue. Phone calls
+are completely untraceable. Information you
+exchange on those calls is gone forever. Well, you can record them,
+but searching through phone call records is a tough task that nobody will
+do, ever.</p>
+  </li>
+  <li>
+    <p><strong>Meetings</strong>.
+This is the next step after coffee breaks, because there is some structure
+and minutes. Meetings can be recorded (both on and offline), with their results filed somewhere
+and decisions documented. In reality, none of that will actually happen.
+Meetings will just kill your time and your sponsor’s money.</p>
+  </li>
+  <li>
+    <p><strong>Emails</strong>.
+If you can put some formality into emails and discipline all participants,
+your email history may be considered a project artifact in itself. How
+organized and easily browseable will that artifact be? That’s a good question.
+In most cases, it will just be a mess.</p>
+  </li>
+  <li>
+    <p><strong>Mailing Lists</strong>.
+They are better than emails, because some software is archiving them and
+making them available and browseable. But it will be difficult to find where
+exactly what topic was discussed, where decisions were made and why,
+who suggested what, etc.</p>
+  </li>
+  <li>
+    <p><strong>Slack</strong>.
+There are many similar alternatives that are basically online chats.
+The main problem with all of them is that it’s difficult to categorize
+such a chat, group messages together, or find something later. It’s merely a flow
+of information that becomes useless just a few days after. Of course,
+if you really want to find something there, it’s possible. But the quality
+of such a “document” is very low.</p>
+  </li>
+  <li>
+    <p><strong>Trello</strong>.
+By Trello I mean any task/ticket tracking system—they are great instruments
+to immediately turn conversations and discussions into project artifacts.
+You don’t need to document anything; it’s already there. The problem is
+that they are still rather far away from the main project artifact:
+the source code with its commits, merge conflicts, build logs, etc.</p>
+  </li>
+  <li>
+    <p><strong>GitHub</strong>.
+This is the best instrument you can use. It integrates communications
+with the product itself. The code you write and the discussions you
+have around it are literally in the same place.</p>
+  </li>
+</ul>
+
+<p>Which one of these is your project using right now? I would strongly recommend
+you stay away from communication channels at the top of this list.</p>
+
+    </article>
+  </body>
+</html>

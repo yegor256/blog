@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Prefixed Naming</title>
+    <link rel="canonical" href="https://www.yegor256.com/2020/03/03/prefixed-naming.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2020/03/03/prefixed-naming.html"
+        },
+        "headline": "Prefixed Naming",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2020/03/buffalo-66.jpg",
+          "height": 1023,
+          "width": 1900
+        },
+        "datePublished": "2020-03-03",
+        "dateModified": "2020-03-03",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Using prefixes in class names in order to locate
+them easily in a large type hierarchy seems to be
+an effective naming convention.
+",
+        "keywords": ["class names", "class naming", "oop naming", "best naming in oop", "java class names"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2020/03/03/prefixed-naming.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>3 March 2020</p>
+      <h1>Prefixed Naming</h1>
+      <p>If you look at the source code of
+<a href="https://github.com/yegor256/takes">Takes</a> or
+<a href="https://github.com/yegor256/cactoos">Cactoos</a> for the first time,
+you most probably, like many others, will be triggered by the naming
+convention, which implies that most class names have two-letter prefixes:
+<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/http/BkSafe.html"><code class="language-plaintext highlighter-rouge">BkSafe</code></a>,
+<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rq/RqFake.html"><code class="language-plaintext highlighter-rouge">RqFake</code></a>,
+<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rs/RsWithStatus.html"><code class="language-plaintext highlighter-rouge">RsWithStatus</code></a>,
+<a href="https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/tk/TkGzip.html"><code class="language-plaintext highlighter-rouge">TkGzip</code></a>,
+and so on. To be honest,
+I haven’t seen a single Java developer who would be comfortable with this
+convention at first sight. I have, however, seen many who are in love with it
+now. This article is for those who are interested in moving from the
+first category to the second one.</p>
+
+
+
+<amp-img src="/images/2020/03/buffalo-66.jpg" alt="Buffalo'66 (1998) by Vincent Gallo" height="1023" width="1900" layout="responsive"></amp-img>
+
+<p>Any software package, module, library, or framework of a decent size has
+a large amount of classes. Well, it <a href="/2017/02/28/too-many-classes.html">has to have</a>.
+If it doesn’t, there is definitely a problem with its design.
+So there’s always a problem of how to name those classes. The easiest and most
+obvious approach is the one used in Java and its flagship framework
+<a href="https://spring.io/">Spring</a>:
+make class names as descriptive and as long as possible. Here are
+<a href="https://gist.github.com/thom-nic/2c74ed4075569da0f80b">some examples</a>:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ObjectFactoryCreatingFactoryBean</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SimpleBeanFactoryAwareAspectInstanceFactory</code></li>
+  <li><code class="language-plaintext highlighter-rouge">TransactionAwarePersistenceManagerFactoryProxy</code></li>
+  <li><code class="language-plaintext highlighter-rouge">AbstractAnnotationConfigDispatcherServletInitializer</code></li>
+</ul>
+
+<p>This is garbage, isn’t it?</p>
+
+<p>A much more sophisticated and time-consuming way of naming classes is
+by the <a href="https://en.wikipedia.org/wiki/Domain-driven_design">DDD paradigm</a>,
+which suggests using <em>nouns</em> after <em>entities</em> in the real world, like port, car,
+book, story, user, socket, and so on. Identifying the right entities
+is a big challenge for a software architect. A bad one would just resort
+to <code class="language-plaintext highlighter-rouge">ConnectionFactoryUtils</code> or <code class="language-plaintext highlighter-rouge">DefaultListableBeanFactory</code> and call it a day.
+A more professional one may spend hours or days, but will eventually come up with
+something more <em>domain-driven</em>.</p>
+
+<p>Let’s assume you are the latter and you managed to find the right nouns.
+How many of them will be out there in your domain? A few dozen, I believe. Even
+if the application is rather complex, you won’t have more than 30 entities
+in its problem domain. However, as was <a href="/2017/02/28/too-many-classes.html">mentioned above</a>,
+the amount of
+classes will be much larger, sometimes over a thousand or more. Thus, the
+second problem you will face is how to name classes which are
+“entities with specifiers.” For example, you have a port and also a random port
+and a TCP port, and a port already closed, and a port not yet opened, and so on.</p>
+
+<p>There will be nouns with <em>adjectives</em>: random port, closed port, opened port,
+TCP port, broken port, and so on. How do you name those classes? Maybe, as simply
+as this: <code class="language-plaintext highlighter-rouge">RandomPort</code>, <code class="language-plaintext highlighter-rouge">OpenedPort</code>, <code class="language-plaintext highlighter-rouge">ClosedPort</code>, <code class="language-plaintext highlighter-rouge">TcpPort</code>.
+Maybe, but I think it’s better to turn the common <code class="language-plaintext highlighter-rouge">Port</code> part into a common prefix <code class="language-plaintext highlighter-rouge">Pt</code>
+for all classes:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">PtRandom</code></li>
+  <li><code class="language-plaintext highlighter-rouge">PtOpened</code></li>
+  <li><code class="language-plaintext highlighter-rouge">PtClosed</code></li>
+  <li><code class="language-plaintext highlighter-rouge">PtTcp</code></li>
+</ul>
+
+<p>The only disadvantage of this approach is that newcomers may have no idea
+what the <code class="language-plaintext highlighter-rouge">Pt</code> prefix means. Indeed, it may take some time (a few minutes) to learn it. However,
+the advantage is greater: once you learn all the prefixes that exist
+in the application (and there will be just a few of them, since the amount
+of entities in the domain is pretty limited), you can immediately understand
+which part of the type hierarchy the class belongs to (this one is from
+<a href="https://github.com/yegor256/takes">Takes</a>):</p>
+
+<p><object data="/uml/c415b43f6d14c18e66db32e9d5d6e8b2.svg" type="image/svg+xml" class="plantuml"></object></p>
+
+<p>Once you see the <code class="language-plaintext highlighter-rouge">Rq</code> prefix you immediately understand that you are dealing with
+an implementation of the
+<a href="https://www.javadoc.io/doc/org.takes/takes/latest/org/takes/Request.html"><code class="language-plaintext highlighter-rouge">org.takes.Request</code></a> interface. Not the
+<a href="https://docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html"><code class="language-plaintext highlighter-rouge">ServletRequest</code></a>
+from <a href="https://en.wikipedia.org/wiki/Java_servlet">JDK</a>,
+not <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/HttpRequest.html"><code class="language-plaintext highlighter-rouge">HttpRequest</code></a>
+from Spring,
+and not <a href="https://square.github.io/okhttp/3.x/okhttp/okhttp3/Request.html"><code class="language-plaintext highlighter-rouge">Request</code></a>
+from <a href="https://square.github.io/okhttp/">OkHttp</a>.
+You know that it’s the <code class="language-plaintext highlighter-rouge">Request</code> from Takes!</p>
+
+<p>Thus, by using short prefixes instead of nouns we add clarity to the code.
+We remove the noise of repeated usage of the same noun over and over again and
+make referencing easier. Each prefix is a unique locator of a class in
+the type hierarchy.</p>
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">Which class name you would use: SynchronizedDatabaseConnection or SncConn?</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1239065472491978752?ref_src=twsrc%5Etfw">March 15, 2020</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

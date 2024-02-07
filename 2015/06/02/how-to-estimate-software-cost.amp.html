@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>How Much For This Software?</title>
+    <link rel="canonical" href="https://www.yegor256.com/2015/06/02/how-to-estimate-software-cost.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2015/06/02/how-to-estimate-software-cost.html"
+        },
+        "headline": "How Much For This Software?",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2015/06/interstate-60.jpg",
+          "height": 637,
+          "width": 1200
+        },
+        "datePublished": "2015-06-02",
+        "dateModified": "2015-06-02",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "The very attempt to estimate a software project
+has fundamental flaws and can't be done right; instead,
+we should estimate different parameters.
+",
+        "keywords": ["software estimate", "software cost estimate", "how to estimate software cost", "software estimate template", "software estimation techniques", "software estimation tools"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2015/06/02/how-to-estimate-software-cost.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>2 June 2015</p>
+      <h1>How Much For This Software?</h1>
+      <p>“Here is the specification; how much will it cost to create this software?”
+I hear this almost every day from
+<a href="/2015/01/26/happy-boss-false-objective.html">clients</a>
+of <a href="https://www.zerocracy.com">Zerocracy</a>
+and prospects that are planning to become our clients and
+<a href="/2015/10/27/outsourcing-doesnt-work.html">outsource</a> the software
+development to us. My best answer is “<em>I don’t know; it depends.</em>”
+Sounds like a strange response for someone who claims
+he knows what he is doing, doesn’t it? “Here is the 20-page
+<a href="/2015/11/10/ten-mistakes-in-specs.html">specification</a>
+that explains all the features of the product; how come you can’t estimate
+the cost?” I can, but I won’t. Here is why.</p>
+
+
+
+<amp-img src="/images/2015/06/interstate-60.jpg" alt="Interstate 60: Episodes of the Road (2002) by Bob Gale" height="637" width="1200" layout="responsive"></amp-img>
+
+<p>Let me ask you something else: <em>Why do you need an estimate?</em>
+Yes, I mean it—why do you ask me how much it will cost
+to develop the software for you? I can tell you why.</p>
+
+<p>Because you don’t <a href="/2017/11/21/trust-pay-lose.html">trust</a> me.</p>
+
+
+
+<p>And obviously you have good reasons for that, simply because we both
+know that a software product is something that can stay in development forever
+and never be finished. Look at YouTube, for example. How much do you think
+it would take to create a website like this, where users are able to
+upload their videos and then stream them? A few days for a good web developer.
+Will it stream video? Yes, it will. Will it be ready to compete with YouTube?
+No, it won’t. Add a few hundred developers to the team, a few years, and a
+few million dollars, and even then you will be behind YouTube. Simply because
+it’s a never-ending process. Any software, no matter how big or good it is,
+always needs more and more improvements and bug fixes.</p>
+
+
+
+<p>Thus, when you ask me how much it will cost to create a system similar
+to YouTube, according to your specifications, my honest and accurate answer
+should be: “<em>All of your money, and it won’t be enough.</em>” Will you
+sign a contract and
+<a href="/2015/10/27/outsourcing-doesnt-work.html">outsource</a>
+the project to me after that answer? No, you won’t.
+That’s why I have to lie and promise something like “three months and $40,000.”
+Why would you trust me? If you’re smart enough, you won’t.</p>
+
+<p>My point is that no matter what I promise you, I will be wrong. Terribly wrong.</p>
+
+<p>What is the solution? What do you do? I totally understand that you
+do need a number to make your plans and secure the money.
+You need to choose the right
+<a href="/2015/10/27/outsourcing-doesnt-work.html">software outsourcing</a>
+partner, and you need to know what to expect and when, but …</p>
+
+<p>You’re asking the <em>wrong question</em>!</p>
+
+<p>This question has only one valid answer, and it’s the answer nobody
+will ever give you—the development will take forever and will
+consume all your money. All other answers are simply a lie.</p>
+
+<p>I’m sorry if I’ve delivered bad news to you.</p>
+
+<p>But let’s get back to the original problem: Why are you asking
+me how much it will take to develop the software if you know it’s a
+never-ending process and there is basically no limit? Because you
+want to make sure your $40,000 will be used the right way and will
+produce the maximum it can produce. To get this assurance from me, you’re
+asking for an estimate. I’m telling you that your software will be ready
+for $40K, and you sleep well. Until the moment you realize you’ve been
+fooled. By your own self.</p>
+
+
+
+<p>Your concern is perfectly valid. You want to spend no more than $40K, and you want
+to get a product that will help you achieve your business goals. For example,
+you want to get into the market and acquire your first few thousand users. In other words,
+your biggest worry is that your dollars will be turned into the right amount
+of the right software.</p>
+
+<p>Any software team can consume your $40K, but each team will produce a different
+<em>amount</em> of software with different <em>quality</em>.</p>
+
+<p>My point is that instead of asking how much a software project will cost, you should
+ask <a href="/2016/01/19/how-expensive-is-outsourcing.html">how much software</a>
+we can create for each dollar you give us and what
+quality will it be.</p>
+
+<p>Basically, don’t ask us to estimate how much gas it will take to get
+to the finish line, because there is no finish line. Instead, ask us
+how much we charge per gallon and how many gallons we consume per mile.</p>
+
+<p>Different teams use different metrics to measure their results
+(to be honest, most of them don’t use any). We, at
+<a href="https://www.zerocracy.com">Zerocracy</a>, use
+<a href="/2014/11/14/hits-of-code.html">hits of code</a>,
+bugs, pull requests, test coverage, and a few other metrics
+as measurable indicators of <em>quantity and quality</em>. We know exactly how much
+software we can produce for each $100 you pay us.</p>
+
+<p>Collect those numbers from other teams and compare them. Also, make sure
+you can control these numbers during the course of the project. That’s the
+guarantee you’re looking for. Now you know what you’re buying and how
+much you’re paying for it. In other words, like I said above, having these
+numbers in front of you will assure you that your money is producing
+the maximum <em>amount</em> of software it can produce, at the highest <em>quality</em>.</p>
+
+<p>The only question left is how you can know you’re buying
+the <em>right</em> software. In other words, you know how much
+we charge per gallon and how many gallons we use per mile, but
+how do you know we’re driving in the right direction and not making
+too many circles or detours?</p>
+
+<p>There is only one mechanism to guarantee that: regular checkpoints.
+You should ask us whether we deliver the software in small and regular
+increments, and whether we allow you to conduct regular
+<a href="/2014/12/18/independent-technical-reviews.html">independent reviews</a>
+of our progress. Also, make sure we prioritize our technical goals,
+use milestones, versionalize releases, publish release notes, etc.
+Make sure that in the course of our journey, you are able to control
+the progress and make corrections.</p>
+
+<p>To summarize, this is wrong (because there is no “there”):</p>
+
+<blockquote>
+  <p>Hey driver, how much will it cost to get there?</p>
+</blockquote>
+
+<p>And this is right:</p>
+
+<blockquote>
+  <p>Hey driver, how much do you charge per mile, and do you have a map?</p>
+</blockquote>
+
+<p>Hope I’ve made my point clear.</p>
+
+    </article>
+  </body>
+</html>

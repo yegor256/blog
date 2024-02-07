@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Don't Use Java Assertions</title>
+    <link rel="canonical" href="https://www.yegor256.com/2016/06/17/dont-use-java-assertions.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2016/06/17/dont-use-java-assertions.html"
+        },
+        "headline": "Don't Use Java Assertions",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2016/06/natural-born-killers.jpg",
+          "height": 672,
+          "width": 1200
+        },
+        "datePublished": "2016-06-17",
+        "dateModified": "2016-06-17",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Assertions are an outdated and flawed feature in Java
+(and some other languages) that I would not recommend you use.
+",
+        "keywords": ["assertions or exceptions", "assertion or exception", "exceptions over assertions", "throw exception not assertion", "assertions java"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2016/06/17/dont-use-java-assertions.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>17 June 2016</p>
+      <h1>Don't Use Java Assertions</h1>
+      <p>There are basically two ways to validate a situation in Java and complain
+when something unexpected happens. It’s either an exception
+or an assertion. Technically, they are almost the same, but there are some
+small differences. I believe that exceptions are the right way to go
+in all situations and assertions should never be used. Here’s why.</p>
+
+
+
+<amp-img src="/images/2016/06/natural-born-killers.jpg" alt="Natural Born Killers (1994) by Oliver Stone" height="672" width="1200" layout="responsive"></amp-img>
+
+<p>Let’s see what happens when an assertion is triggered. Say that this
+is our code:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">assert</span> <span class="kc">true</span> <span class="o">==</span> <span class="kc">false</span> <span class="o">:</span> <span class="s">"There is a problem"</span><span class="o">;</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Save this code to <code class="language-plaintext highlighter-rouge">Main.java</code> and compile:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>javac Main.java
+</code></pre></div></div>
+
+<p>Then run it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>java Main
+Hello, world!
+</code></pre></div></div>
+
+<p>The assertion wasn’t triggered. It was ignored. Now run it with an
+<code class="language-plaintext highlighter-rouge">-enableassertions</code> flag:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>java <span class="nt">-enableassertions</span> Main
+Exception <span class="k">in </span>thread <span class="s2">"main"</span> java.lang.AssertionError: There is a problem
+  at Main.main<span class="o">(</span>Main.java:3<span class="o">)</span>
+</code></pre></div></div>
+
+<p>This is the first difference between exceptions and assertions. Exceptions
+will always be thrown, while assertions are not enabled by default. They are
+supposed to be turned on during testing and turned off in production.
+The assertion caused the runtime exception
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/AssertionError.html"><code class="language-plaintext highlighter-rouge">AssertionError</code></a>. But hold on; it’s
+not a <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/RuntimeException.html"><code class="language-plaintext highlighter-rouge">RuntimeException</code></a>. It extends
+<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Error.html"><code class="language-plaintext highlighter-rouge">Error</code></a> class,
+which extends <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html"><code class="language-plaintext highlighter-rouge">Throwable</code></a>.
+This is the second difference. I don’t know of any other differences.</p>
+
+<p>I would recommend <em>not</em> to use assertions … ever. Simply because I strongly
+believe in the <a href="/2015/08/25/fail-fast.html">Fail Fast</a>
+approach. I think bugs must be visible not only
+during testing but also in production. Moreover, I believe making
+bugs visible in production is very important if you want to achieve a high-quality product.</p>
+
+<p>Thus, no assertions. They are simply a flawed and outdated feature in Java
+(and some other languages).</p>
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">Do you use assertions? <a href="https://twitter.com/hashtag/java?src=hash&amp;ref_src=twsrc%5Etfw">#java</a></p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1241658061183475712?ref_src=twsrc%5Etfw">March 22, 2020</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

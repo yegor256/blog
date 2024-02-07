@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Get Rid of Java Static Loggers</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/05/23/avoid-java-static-logger.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/05/23/avoid-java-static-logger.html"
+        },
+        "headline": "Get Rid of Java Static Loggers",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2014-05-23",
+        "dateModified": "2014-05-23",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Using static logger is a very common practice in Java,
+which pollutes the code and is a noise, which can
+easily be eliminated by using jcabi-log
+",
+        "keywords": ["java logging", "java static logger", "java slf4j", "java log4j", "java util logging", "java static logger property", "simple logging java"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/05/23/avoid-java-static-logger.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>23 May 2014</p>
+      <h1>Get Rid of Java Static Loggers</h1>
+      <p>This is a very common practice in Java
+(using <a href="https://www.slf4j.org/apidocs/org/slf4j/LoggerFactory.html"><code class="language-plaintext highlighter-rouge">LoggerFactory</code></a>
+from <a href="https://www.slf4j.org/">slf4j</a>):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.slf4j.LoggerFactory</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Logger</span> <span class="no">LOGGER</span> <span class="o">=</span>
+    <span class="nc">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="nc">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">String</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// save the file</span>
+    <span class="k">if</span> <span class="o">(</span><span class="nc">Foo</span><span class="o">.</span><span class="na">LOGGER</span><span class="o">.</span><span class="na">isInfoEnabled</span><span class="o">())</span> <span class="o">{</span>
+      <span class="nc">Foo</span><span class="o">.</span><span class="na">LOGGER</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"file {} saved successfuly"</span><span class="o">,</span> <span class="n">file</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>What’s wrong with it? Code duplication.</p>
+
+
+
+<p>This static <code class="language-plaintext highlighter-rouge">LOGGER</code> property has to be declared in every class
+where logging is required. Just a few lines of code, but
+this is pure noise, as I see it.</p>
+
+
+
+<p>To make life easier, I created a library about two years
+ago, <a href="https://log.jcabi.com">jcabi-log</a>, which has a convenient
+utility class <a href="https://log.jcabi.com/apidocs-0.12.2/com/jcabi/log/Logger.html"><code class="language-plaintext highlighter-rouge">Logger</code></a>
+(yes, I know that <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes are evil</a>).</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.log.Logger</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">String</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// save the file</span>
+    <span class="nc">Logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="s">"file %s saved successfuly"</span><span class="o">,</span> <span class="n">file</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This looks much cleaner to me and does exactly
+the same—sends a single log line to the SLF4J
+logging facility. Besides, it check automatically whether a given logging
+level is enabled (for performance optimization) and formats the
+given string using <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html"><code class="language-plaintext highlighter-rouge">Formatter</code></a>
+(same as <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#format%28java.lang.String,+java.lang.Object...%29"><code class="language-plaintext highlighter-rouge">String.format()</code></a>).</p>
+
+<p>For convenience, there are also a number of “<a href="https://log.jcabi.com/decors.html">decors</a>”
+implemented in the library.</p>
+
+<p>The library ships as a JAR dependency in
+<a href="https://repo1.maven.org/maven2/com/jcabi/jcabi-log">Maven Central</a>
+(get its latest versions in <a href="http://search.maven.org/">Maven Central</a>):</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>jcabi-log<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
+
+    </article>
+  </body>
+</html>

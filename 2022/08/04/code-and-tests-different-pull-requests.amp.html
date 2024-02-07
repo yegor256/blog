@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>The Code and Its Tests in Different Pull Requests</title>
+    <link rel="canonical" href="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html"
+        },
+        "headline": "The Code and Its Tests in Different Pull Requests",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2022/06/mafioso.jpg",
+          "height": 675,
+          "width": 1200
+        },
+        "datePublished": "2022-08-04",
+        "dateModified": "2022-08-04",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Always submit changes to the code in a separate pull request
+from the changes to its unit tests, in another pull request.
+",
+        "keywords": ["test driven development", "tests pull request", "rules of pull requests", "quality of testing", "safety net"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2022/08/04/code-and-tests-different-pull-requests.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>4 August 2022</p>
+      <h1>The Code and Its Tests in Different Pull Requests</h1>
+      <p>I suggested this idea a few weeks ago
+<a href="https://twitter.com/yegor256/status/1525758255225528320">on Twitter</a>
+and got mostly negative reactions. That’s why I wrote this blog post, to elaborate on the
+subject in an attempt to convince you. Here is the rule I’m suggesting:
+always submit changes to the code separately from the changes to
+its unit tests. Simply put, in one pull request you modify the tests, maybe
+marking some of them as “disabled.” You merge this pull request and then
+make the second one, modifying the code and most probably
+removing the “disabled” markers from the tests. You don’t touch the
+body of the tests in the second pull request.</p>
+
+
+
+<amp-img src="/images/2022/06/mafioso.jpg" alt="Mafioso (1962) by Alberto Lattuada" height="675" width="1200" layout="responsive"></amp-img>
+
+<p>It may look like a contradiction of the principles of
+<a href="/2017/03/24/tdd-that-works.html">TDD</a>.
+However, to me this approach looks like an extreme application of TDD, not a violation
+of it. First we merge the tests, which most probably will break the build, since
+the functionality that they test is not present yet. In order to avoid the broken
+state of the build we disable the new tests that we added and the tests that we modified.
+In <a href="https://junit.org/junit5/docs/current/user-guide/">JUnit 5</a>, for example, we do this with
+<a href="https://junit.org/junit5/docs/5.0.0-M2/api/org/junit/jupiter/api/Disabled.html"><code class="language-plaintext highlighter-rouge">@Disabled</code></a> annotation.</p>
+
+<p>Reviewers validate the changes you make, asking themselves these questions:
+“Do we really need this new functionality?
+Does it conflict with the existing functionality?
+Does it make sense to test new functionality this particular way?”
+They don’t think about <em>how</em> the functionality will be implemented, they
+only care about the <em>requirements</em> you impose in your tests against the
+product. The reviewers act more or less as requirements engineers at this stage.
+They validate the <em>intent</em>, not the <em>realization</em> of it.</p>
+
+<p>Then, in the second pull request, you modify the code without touching the tests.
+Now, reviewers can rest assured that you haven’t changed the requirements just to make
+them more suitable for your implementation. In other words, they know that you didn’t <em>cheat</em>.
+Since you didn’t touch the tests, it’s a guarantee for reviewers that requirements
+remain stable and you only modify the implementation. Speaking business language,
+you don’t change the <em>contract</em> if/when you understand that you can’t deliver
+what was <em>promised</em>.</p>
+
+<p>Moreover, when you modify the tests only, without touching the code, it’s much
+easier for the reviewers to understand whether or not your changes truly belong to the
+problem you are supposed to be solving. We programmers tend to make a typical mistake:
+we make changes to the code, some tests fail, we fix the tests … no matter whether
+they are “our” tests or not. We simply make the tests pass regardless of <em>why</em> they fail.
+Instead of <em>listening</em> to them, we shut them up. Later, the reviewers may not understand
+why some tests were modified. Especially if a pull request is big. They will most
+probably blindly trust you and merge the pull request.</p>
+
+<p>That’s why separating tests from code is a solution. First, the tests get modified
+and the reviewers will pay attention only to the scope of tests. They will easily
+catch you if the changes are too broad and are not related to the problem you
+are solving. Then the code gets modified and reviewers don’t need to worry about
+tests at all. They don’t pay attention to them, they only review the implementation.
+They know that you can’t break the tests since the build pipeline
+won’t allow you to do this.</p>
+
+<p>What do you think now? Does it make sense?</p>
+
+    </article>
+  </body>
+</html>

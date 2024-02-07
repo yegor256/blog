@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>The Double-Blind Review Is What Makes Decisions Fair</title>
+    <link rel="canonical" href="https://www.yegor256.com/2023/08/15/decision-making-process.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2023/08/15/decision-making-process.html"
+        },
+        "headline": "The Double-Blind Review Is What Makes Decisions Fair",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2023/08/the-return.jpg",
+          "height": 554,
+          "width": 1024
+        },
+        "datePublished": "2023-08-15",
+        "dateModified": "2023-08-15",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "If your team practices decision making meetings I have a better idea
+for you: establish a review board with the principles of 
+anonymity and authorship.
+",
+        "keywords": ["review meetings", "decision making meeting", "anonimyous reviews", "team decision making", "consensus"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2023/08/15/decision-making-process.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>15 August 2023</p>
+      <h1>The Double-Blind Review Is What Makes Decisions Fair</h1>
+      <p>How does your team review ideas, project proposals, or paper drafts?
+Imagine I’m on your team and I need a budget allocated to a new project. 
+I craft a proposal, elucidate the motivation, assess the risks, develop a plan, 
+and then what? Do I create a PowerPoint presentation, present to my teammates 
+for half an hour, answer their questions for another half hour, hear their honest 
+feedback, after which they vote and a decision is made? If this is how 
+things are organized within your team, you risk stifling creativity and motivation.</p>
+
+
+
+<amp-img src="/images/2023/08/the-return.jpg" alt="Возвращение (2003) by Andrey Zvyagintsev" height="554" width="1024" layout="responsive"></amp-img>
+
+<p>There are several problems with this fairly typical decision-making process 
+in software teams or companies (with the most critical ones listed last):</p>
+
+<ul>
+  <li>
+    <p><strong>Overload</strong>.
+  Regardless of how crucial your proposal is, many meeting attendees have their own priorities. 
+  You cannot expect them to concentrate fully on your idea or actively engage 
+  in the discussion. Furthermore, some might just be lazy by nature.</p>
+  </li>
+  <li>
+    <p><strong>Incompetence</strong>.
+  No matter how talented your teammates are, expecting them to grasp 
+  every detail of your proposal in just thirty minutes and then evaluate 
+  it both objectively and professionally is unrealistic. It’s more likely 
+  they’ll base their judgments on personal feelings towards you.</p>
+  </li>
+  <li>
+    <p><strong>Friendship</strong>.
+  The decision-makers at the meeting are your colleagues. It’s challenging 
+  for them to provide unbiased and candid feedback since they don’t want 
+  to risk upsetting a friend. Very few can maintain both 
+  honesty and friendship—it’s a rare quality.</p>
+  </li>
+  <li>
+    <p><strong>Jealousy</strong>.
+  Since you’re presenting a proposal, it inherently becomes a contest for resources. 
+  You’re seeking either a project budget or a reallocation of team efforts. 
+  This puts you in opposition to others at the meeting. Many attendees might 
+  resent your initiative, even subconsciously attempting to thwart you.</p>
+  </li>
+  <li>
+    <p><strong>Fear</strong>.
+  If you’re the one presenting today, someone else might be in your 
+  shoes tomorrow. The same individuals critiquing your idea today 
+  might face similar scrutiny tomorrow. As much as we aim for professionalism, 
+  the urge for revenge can be strong, making candid feedback risky.</p>
+  </li>
+</ul>
+
+<p>Considering these factors, it’s logical to presume that at the end of such 
+meetings—especially if the decision goes against you—you might feel frustrated. 
+You might view your team as lacking competence and feel that your talents 
+go unrecognized. Best-case scenario: you decide not to present any new proposals. 
+Worst-case: you begin seeking out a new team.</p>
+
+<p>The issue isn’t necessarily with the team (they all are more or less the same) 
+or your proposal (we all make mistakes). The crux of the problem lies in the 
+decision-making process itself. Traditional meetings might not be the best avenue. 
+Instead, I propose the following approach:</p>
+
+<ul>
+  <li>There is a review board of 10+ members and a secretary;</li>
+  <li>Proposals are submitted directly to the secretary;</li>
+  <li>The secretary randomly selects three board reviewers;</li>
+  <li>Each reviewer evaluates the proposal in writing;</li>
+  <li>Reviewers aren’t aware of the author’s identity;</li>
+  <li>They then submit their written feedback to the secretary;</li>
+  <li>A decision is made if 2+ reviewers endorse the proposal;</li>
+  <li>The secretary informs you of the verdict;</li>
+  <li>You don’t know the names of reviewers.</li>
+</ul>
+
+<p>This method introduces two vital elements that can enhance the objectivity 
+of decisions and increase proposal authors’ satisfaction: <em>anonymity</em> and <em>authorship</em>. 
+On one hand, reviewers can offer genuine feedback without fear of backlash, 
+knowing their identity remains confidential. Conversely, since their feedback 
+is documented, they’re incentivized to remain professional and objective. 
+Not knowing the author ensures decisions aren’t influenced by personal relationships.</p>
+
+<p>Moreover, this system can elevate the <em>quality of proposals</em>. As authors 
+can’t verbally elaborate during meetings, they’re compelled to articulate 
+their ideas comprehensively in writing. The standard of feedback might 
+also improve, particularly if the secretary mandates specific criteria 
+for review summaries, as opposed to vague remarks.</p>
+
+<p>A very similar review mechanism is practiced by <a href="/2021/04/14/how-we-organized-iccq.html">scientific conferences</a>. 
+When you submit a paper to one, they don’t organize a meeting where you present it in an attempt 
+to persuade them to accept your work. Instead, they ask you to 
+<a href="https://www.journals.elsevier.com/social-science-and-medicine/policies/double-blind-peer-review-guidelines">double-blind</a> 
+your paper and then they send it to a few, more or less, randomly selected reviewers. 
+When your paper is rejected (or accepted), you receive a detailed summary of the reasons, 
+along with suggestions on how to improve it. If the conference is of a high level 
+and its reviewers are doing their job correctly, you will be 
+satisfied even in the case of rejection.</p>
+
+<p>In conclusion, the suggested process can lead to superior decision 
+quality and boost the motivation of those proposing ideas. Even if some suggestions 
+are declined, they’re more likely to return to the review board with renewed proposals.</p>
+
+
+    </article>
+  </body>
+</html>

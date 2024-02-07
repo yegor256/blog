@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Command Line Default Options in Linearized Plain Text</title>
+    <link rel="canonical" href="https://www.yegor256.com/2022/07/20/command-line-defaults.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2022/07/20/command-line-defaults.html"
+        },
+        "headline": "Command Line Default Options in Linearized Plain Text",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2022/07/the-trotsky.jpg",
+          "height": 675,
+          "width": 1200
+        },
+        "datePublished": "2022-07-20",
+        "dateModified": "2022-07-20",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Where to put default configuration parameters for
+a command line tool? It has to be a JSON or YAML
+config file? Neither. Just plain text.
+",
+        "keywords": ["command line", "configure command line", "default options command line", "cli defaults", "command line tool defaults"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2022/07/20/command-line-defaults.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>20 July 2022</p>
+      <h1>Command Line Default Options in Linearized Plain Text</h1>
+      
+
+<p><a href="/2017/08/29/xcop.html">A few years ago</a>
+I created <a href="https://github.com/yegor256/xcop">xcop</a>,
+a simple command line tool that
+can check the style of an XML file. It’s similar to
+<a href="https://checkstyle.sourceforge.io">Checkstyle</a> (for Java) and
+<a href="https://pypi.org/project/pep8/">Pep8</a> (for Python),
+but for XML. It’s pretty easy to use <code class="language-plaintext highlighter-rouge">xcop</code>: just run it with a few command
+line arguments and it returns the list of errors found in your XML file, if there are any. However,
+some of the arguments may be convenient to have as defaults and instead of
+passing them through the command line on every execution, we could store them in some configuration file.
+The question is: What is the best format for this file?
+<a href="https://en.wikipedia.org/wiki/YAML">YAML</a>,
+<a href="https://en.wikipedia.org/wiki/JSON">JSON</a>, or
+<a href="https://en.wikipedia.org/wiki/TOML">TOML</a>?
+None of them! I suggest plain text.</p>
+
+
+
+<amp-img src="/images/2022/07/the-trotsky.jpg" alt="The Trotsky (2009) by Jacob Tierney" height="675" width="1200" layout="responsive"></amp-img>
+
+<p>Let’s say, you want <code class="language-plaintext highlighter-rouge">xcop</code> to check all <code class="language-plaintext highlighter-rouge">*.xml</code> files in your repository,
+but ignore XML files in the <code class="language-plaintext highlighter-rouge">.idea/</code> directory. You also want to make sure
+all XML files have a license in their preamble. This is how you would
+call <code class="language-plaintext highlighter-rouge">xcop</code>:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xcop --include '*.xml' --exclude '.idea/**' \
+  --license LICENSE.txt
+</code></pre></div></div>
+
+<p>You have to use this set of arguments everywhere you call <code class="language-plaintext highlighter-rouge">xcop</code>:
+in the build script, in the CI/CD pipeline, and on your laptop when you check
+that everything is correct. What some of us sometimes do is create a new
+Bash file called <code class="language-plaintext highlighter-rouge">run_xcop.sh</code> with exactly this single command.</p>
+
+<p>I suggest a better solution. You can create a <code class="language-plaintext highlighter-rouge">.xcop</code>
+plain text file in the root of the repository and put all
+the required “default” command line options there, one per line:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--include=*.xml
+--exclude=.idea/**
+--license=LICENSE.txt
+</code></pre></div></div>
+
+<p>Now, you can call the tool just like this:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ xcop
+</code></pre></div></div>
+
+<p>It will find the <code class="language-plaintext highlighter-rouge">.xcop</code> file and will read all lines from it, treating
+each of them as command line arguments. It will basically <em>concatenate</em>
+what is provided in the command line with what is found in the file
+with defaults.</p>
+
+<p>I believe this approach is much better than YAML, JSON, XML, TOML, INI,
+and other configuration formats simply because it doesn’t require us
+users to learn two formats: one for command line options, another one
+for the configuration file. We learn just one and use it interchangeably
+either when we call the tool “manually” or when we configure its
+behavior in the file with defaults.</p>
+
+<p>By the way, it’s possible to configure the behavior of <code class="language-plaintext highlighter-rouge">xcop</code> globally
+creating the file <code class="language-plaintext highlighter-rouge">~/.xcop</code> (in the home directory of the user). The
+defaults from this file will also be concatenated with the ones provided
+in the command line and with the ones found in the local <code class="language-plaintext highlighter-rouge">.xcop</code> file.</p>
+
+<p>I designed a few of my other command line tools using the same principle,
+including
+<a href="https://github.com/yegor256/pdd">pdd</a>,
+<a href="https://github.com/yegor256/texqc">texqc</a>,
+and
+<a href="https://github.com/yegor256/texsc">texsc</a>.</p>
+
+    </article>
+  </body>
+</html>

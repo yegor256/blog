@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Object-Oriented DynamoDB API</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/04/14/jcabi-dynamo-java-api-of-aws-dynamodb.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/04/14/jcabi-dynamo-java-api-of-aws-dynamodb.html"
+        },
+        "headline": "Object-Oriented DynamoDB API",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2014-04-14",
+        "dateModified": "2014-04-14",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "I created jcabi-dynamo a few months ago to make AWS SDK more object oriented;
+the article explains why jcabi-dynamo is better than bare Amazon SDK
+",
+        "keywords": ["dynamodb", "dynamodb java", "java dynamodb example", "java dynamodb query", "java dynamodb client", "java dynamodb query example"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/04/14/jcabi-dynamo-java-api-of-aws-dynamodb.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>14 April 2014</p>
+      <h1>Object-Oriented DynamoDB API</h1>
+      
+
+<p>I’m a big fan of cloud computing in general and of
+<a href="http://aws.amazon.com/">Amazon Web Services</a> in particular. I honestly believe that in a
+few years big providers will host all, or almost all, computing and storage
+resources. When this is the case, we won’t have to worry too much anymore about
+downtime, backups and system administrators.
+<a href="http://aws.amazon.com/dynamodb/">DynamoDB</a> is one of the steps towards this
+future.</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">This looks cool - jcabi-dynamo - a <a href="https://twitter.com/hashtag/Java?src=hash&amp;ref_src=twsrc%5Etfw">#Java</a> Object layer atop the <a href="https://twitter.com/hashtag/DynamoDB?src=hash&amp;ref_src=twsrc%5Etfw">#DynamoDB</a> SDK - <a href="http://t.co/khRFR2joKX">http://t.co/khRFR2joKX</a> <a href="https://twitter.com/hashtag/aws?src=hash&amp;ref_src=twsrc%5Etfw">#aws</a></p>— Jeff Barr ☁️ (@jeffbarr) <a href="https://twitter.com/jeffbarr/status/380813867971915777?ref_src=twsrc%5Etfw">September 19, 2013</a>
+</blockquote>
+
+
+
+
+<p>DynamoDB is a <a href="https://en.wikipedia.org/wiki/NoSQL">NoSQL</a> database accessible
+through <a href="https://en.wikipedia.org/wiki/Representational_state_transfer">RESTful</a>
+JSON API. Its design is relatively simple. There are tables, which basically
+are collections of data structures, or in AWS terminology, “items.”</p>
+
+<p>Every item has a mandatory “hash,” an optional “range” and a number of other
+optional attributes. For instance, take the example table <code class="language-plaintext highlighter-rouge">depts</code>:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------+--------+---------------------------+
+| dept | worker | Attributes                |
++------+--------+---------------------------+
+| 205  | Jeff   | job="manager", sex="male" |
+| 205  | Bob    | age=43, city="Chicago"    |
+| 398  | Alice  | age=27, job="architect"   |
++------+--------+---------------------------+
+</code></pre></div></div>
+
+<p>For Java, Amazon provides an
+<a href="https://aws.amazon.com/documentation/sdkforjava/">SDK</a>, which mirrors all
+RESTful calls to Java methods. The SDK works fine, but is designed in a pure
+<a href="https://en.wikipedia.org/wiki/Procedural_programming">procedural</a> style.</p>
+
+<p>Let’s say we want to add a new item to the table above. RESTful call
+<a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html"><code class="language-plaintext highlighter-rouge">putItem</code></a>
+looks like (in essence):</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>putItem:
+  tableName: depts
+  item:
+    dept: 435
+    worker: "William"
+    job: "programmer"
+</code></pre></div></div>
+
+<p>This is what the Amazon server needs to know in order to create a new item in
+the table. This is how you’re supposed to make this call through the AWS Java
+SDK:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">PutItemRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PutItemRequest</span><span class="o">();</span>
+<span class="n">request</span><span class="o">.</span><span class="na">setTableName</span><span class="o">(</span><span class="s">"depts"</span><span class="o">);</span>
+<span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">AttributeValue</span><span class="o">&gt;</span> <span class="n">attributes</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
+<span class="n">attributes</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"dept"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">AttributeValue</span><span class="o">(</span><span class="mi">435</span><span class="o">));</span>
+<span class="n">attributes</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"worker"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">AttributeValue</span><span class="o">(</span><span class="s">"William"</span><span class="o">));</span>
+<span class="n">attributes</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"job"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">AttributeValue</span><span class="o">(</span><span class="err">"</span><span class="n">programmer</span><span class="o">));</span>
+<span class="n">request</span><span class="o">.</span><span class="na">setItem</span><span class="o">(</span><span class="n">attributes</span><span class="o">);</span>
+<span class="nc">AmazonDynamoDB</span> <span class="n">aws</span> <span class="o">=</span> <span class="c1">// instantiate it with credentials</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="n">aws</span><span class="o">.</span><span class="na">putItem</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+  <span class="n">aws</span><span class="o">.</span><span class="na">shutdown</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The above script works fine, but there is one major drawback—it is not
+object oriented. It is a perfect example of an imperative <a href="https://en.wikipedia.org/wiki/Procedural_programming">procedural
+programming</a>.</p>
+
+<p>To allow you to compare, let me show what I’ve done with
+<a href="https://dynamo.jcabi.com">jcabi-dynamo</a>. Here is my code, which does exactly the
+same thing, but in an
+<a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented</a> way:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Region</span> <span class="n">region</span> <span class="o">=</span> <span class="c1">// instantiate it with credentials</span>
+<span class="nc">Table</span> <span class="n">table</span> <span class="o">=</span> <span class="n">region</span><span class="o">.</span><span class="na">table</span><span class="o">(</span><span class="s">"depts"</span><span class="o">);</span>
+<span class="nc">Item</span> <span class="n">item</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="na">put</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">Attributes</span><span class="o">()</span>
+    <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"dept"</span><span class="o">,</span> <span class="mi">435</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"worker"</span><span class="o">,</span> <span class="s">"William"</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"job"</span><span class="o">,</span> <span class="s">"programmer"</span><span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
+
+<p>My code is not only shorter, but it also employs
+<a href="/2016/11/21/naked-data.html">encapsulation</a> and separates
+responsibilities of classes.
+<a href="https://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Table.html"><code class="language-plaintext highlighter-rouge">Table</code></a>
+class (actually it is an interface internally implemented by a class)
+encapsulates information about the table, while
+<a href="https://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html"><code class="language-plaintext highlighter-rouge">Item</code></a>
+encapsulates item details.</p>
+
+<p>We can pass an <code class="language-plaintext highlighter-rouge">item</code> as an argument to another method and all DynamoDB related
+implementation details will be hidden from it. For example, somewhere later in
+the code:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">sayHello</span><span class="o">(</span><span class="nc">Item</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Hello, "</span> <span class="o">+</span> <span class="n">item</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"worker"</span><span class="o">));</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>In this script, we don’t know anything about DynamoDB or how to deal with its
+RESTful API. We interact solely with an instance of
+<a href="https://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html"><code class="language-plaintext highlighter-rouge">Item</code></a> class.</p>
+
+<p>By the way, all public entities in <a href="https://dynamo.jcabi.com">jcabi-dynamo</a> are
+Java interfaces. Thanks to that, you can test and mock the library completely
+(but I would recommend to use
+<a href="/2014/05/01/dynamodb-local-maven-plugin.html">DynamoDB Local</a>
+and create integration tests).</p>
+
+<p>Let’s consider a more complex example, which would take a page of code if we
+were to use a bare AWS SDK. Let’s say that we want to remove all workers from
+our table who work as architects:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Region</span> <span class="n">region</span> <span class="o">=</span> <span class="c1">// instantiate it with credentials</span>
+<span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Item</span><span class="o">&gt;</span> <span class="n">workers</span> <span class="o">=</span> <span class="n">region</span><span class="o">.</span><span class="na">table</span><span class="o">(</span><span class="s">"depts"</span><span class="o">).</span><span class="na">frame</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">where</span><span class="o">(</span><span class="s">"job"</span><span class="o">,</span> <span class="nc">Condition</span><span class="o">.</span><span class="na">equalTo</span><span class="o">(</span><span class="s">"architect"</span><span class="o">));</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">workers</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+  <span class="n">workers</span><span class="o">.</span><span class="na">remove</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p><a href="https://dynamo.jcabi.com">jcabi-dynamo</a> has saved a lot of code lines in a few
+of my projects. You can see it in action at
+<a href="https://github.com/rultor/rultor/tree/rultor-0.2/rultor-users/src/main/java/com/rultor/users">rultor-users</a>.</p>
+
+<p>The library ships as a JAR dependency in <a href="https://repo1.maven.org/maven2/com/jcabi/jcabi-dynamo">Maven
+Central</a>
+(get its latest versions from <a href="http://search.maven.org/">Maven Central</a>):</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.jcabi<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>jcabi-dynamo<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
+
+    </article>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Tacit, a CSS Framework Without Classes</title>
+    <link rel="canonical" href="https://www.yegor256.com/2015/04/13/tacit-css-framework-for-dummies.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2015/04/13/tacit-css-framework-for-dummies.html"
+        },
+        "headline": "Tacit, a CSS Framework Without Classes",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2015-04-13",
+        "dateModified": "2015-04-13",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Tacit is an open source CSS framework without a single
+class, which makes it very easy to use and learn.
+",
+        "keywords": ["css framework", "css framework comparison", "css framework responsive", "css framework for web apps", "css framework vs custom"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2015/04/13/tacit-css-framework-for-dummies.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>13 April 2015</p>
+      <h1>Tacit, a CSS Framework Without Classes</h1>
+      <p>I’ve been using <a href="http://getbootstrap.com/">Bootstrap</a>
+for more than two years in multiple projects,
+and my frustration has been building. First of all, it’s too massive for
+a small web app. Second, it is not fully self-sufficient; no matter
+how much you follow its principles of design, you end up with your
+own CSS styles anyway. Third, and most importantly, its internal
+design is messy. Having all this in mind, I created
+<a href="https://github.com/yegor256/tacit"><strong>tacit</strong></a>, my own CSS framework,
+which immediately received positive feedback on
+<a href="https://news.ycombinator.com/item?id=9345271">Hacker News</a>.</p>
+
+
+
+<p><em>Tacit</em>, according to Google, means “understood or implied without being stated.”
+That’s exactly the idea of the <a href="https://github.com/yegor256/tacit">framework</a>.
+It doesn’t have a single
+CSS class and can be applied to any valid HTML5 document. For example, you
+have an HTML document:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Subscribe<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Are you interested in learning more?<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;form&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Email:<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"email"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Subscribe<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>This is how it looks in Safari:</p>
+
+
+
+<p>Now, I add <code class="language-plaintext highlighter-rouge">tacit.min.css</code> to it:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Subscribe<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span>
+      <span class="na">href=</span><span class="s">"http://yegor256.github.io/tacit/tacit.min.css"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+      <span class="nt">&lt;p&gt;</span>Are you interested in learning more?<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;form&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Email:<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Subscribe<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/form&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>This is how it looks in the same Safari browser:</p>
+
+
+
+<p>I hope you got the idea. The HTML itself wasn’t changed at all. All CSS
+styles are applied to standard HTML elements. Unlike many other CSS frameworks,
+in Tacit you don’t have to mention CSS classes in the HTML document. The HTML
+stays clean and only exposes the data in a pure HTML5 way.</p>
+
+<p>The HTML document is still readable and usable, but it doesn’t have the
+good-looking-graphics component. Tacit adds that component in a non-intrusive
+manner.</p>
+
+
+
+<p>Of course, in many projects, the default layout features of Tacit won’t
+be enough. In most cases, I still have to add my own CSS classes and inline
+styles. But Tacit gives me an adequate foundation to start from. It solves
+most of the problems associated with responsiveness of forms, appearance of
+form controls, tables, fonts, and colors.</p>
+
+<p>Tacit allows me to focus on functionality from the first day of a project. And
+the functionality immediately looks attractive. I have tried many other
+frameworks, including <a href="http://getbootstrap.com/">Bootstrap</a>,
+<a href="http://imperavi.com/kube/">Kube</a>, and
+<a href="http://purecss.io/">Pure</a>. None of them are designed with this concept in mind.
+They all put CSS in front of HTML. In all of them, CSS is the most important
+element of web design, while HTML is something that assists.</p>
+
+<p>Tacit takes a different approach. In Tacit, HTML is king while CSS is a supportive
+element that only makes data look better.</p>
+
+<p>Enjoy!</p>
+
+    </article>
+  </body>
+</html>

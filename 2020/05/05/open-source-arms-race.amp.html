@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Open Source Arms Race</title>
+    <link rel="canonical" href="https://www.yegor256.com/2020/05/05/open-source-arms-race.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2020/05/05/open-source-arms-race.html"
+        },
+        "headline": "Open Source Arms Race",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2020/05/filth.jpg",
+          "height": 758,
+          "width": 1140
+        },
+        "datePublished": "2020-05-05",
+        "dateModified": "2020-05-05",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Why are large enterprises like Google, Microsoft, and IBM
+massively donating to open source projects and opening
+their own code?
+",
+        "keywords": ["google open source", "ibm open source", "open source", "why open source", "profit open source"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2020/05/05/open-source-arms-race.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>5 May 2020</p>
+      <h1>Open Source Arms Race</h1>
+      <p>Some companies massively invest in open source software projects,
+while others still remain skeptical and stay away from this trend.
+What’s in it for those philanthropists, like Google, IBM or Microsoft?
+Why spend money on something that doesn’t belong to them and
+is shared among all of us developers? Don’t they understand that
+the code they write may be used by their competitors? It seems they
+do understand, but can’t do anything about it.</p>
+
+
+
+<amp-img src="/images/2020/05/filth.jpg" alt="Filth (2013) by Jon S. Baird" height="758" width="1140" layout="responsive"></amp-img>
+
+<p>As David Mytton
+<a href="https://www.infoworld.com/article/3028600/whats-the-real-reason-microsoft-and-google-are-releasing-open-source.html">noted</a>,
+individuals release open source projects out of altruism,
+while companies have real, strategic reasons hidden behind
+the warm and fuzzy glow of open source. We don’t mean just using
+open source products, which is what every business
+<a href="https://thenewstack.io/survey-open-source-programs-are-a-best-practice-among-large-companies/">does</a>
+nowadays, but building them so that everybody can use them, for free.</p>
+
+<p>First, let’s see exactly how,
+among <a href="https://opensource.com/article/19/4/ways-support-sustain-open-source">other methods</a>,
+companies invest in open source:</p>
+
+<ul>
+  <li>
+    <p><strong>Committers</strong>.
+Google, for example, encourages its employees to
+open their code, and even has an
+<a href="https://opensource.google/docs/releasing/approval/">approval procedure</a> for it.
+It seems that others do something similar.
+Some recently published <a href="https://www.infoworld.com/article/3253948/who-really-contributes-to-open-source.html">research</a>
+demonstrates that thousands (!) of employees from
+<a href="https://github.com/microsoft">Microsoft</a> (4.3k visible GitHub contributors),
+<a href="https://github.com/IBM">IBM</a> (2.3k),
+<a href="https://github.com/google">Google</a> (1.2k),
+and
+<a href="https://www.zdnet.com/article/its-an-open-source-world-78-percent-of-companies-run-open-source-software/">others</a>
+actively contribute to their GitHub-hosted repositories.
+In other words, being paid by Google these people write
+code that doesn’t belong to Google.</p>
+  </li>
+  <li>
+    <p><strong>Events</strong>.
+Aside from
+<a href="https://cloud.withgoogle.com/next/sf/">Google Cloud Next</a>,
+<a href="https://reinvent.awsevents.com/">AWS re:Invent</a>, and
+<a href="https://www.microsoft.com/en-us/ignite">Microsoft Ignite</a>,
+which are pure promotional events, tech giants sponsor
+community-driven conferences, like
+<a href="https://docker.events.cube365.net/docker/dockercon/">DockerCon</a>,
+<a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/">KubeCon</a>,
+<a href="https://fosdem.org/2020/">FOSDEM</a>,
+and so on.</p>
+  </li>
+  <li>
+    <p><strong>Foundations</strong>.
+<a href="https://www.apache.org/foundation/thanks">Apache</a>,
+<a href="https://www.linuxfoundation.org/membership/members/">Linux</a>,
+<a href="https://www.eclipse.org/membership/exploreMembership.php#allmembers">Eclipse</a>,
+<a href="https://www.gnome.org/foundation/">GNOME</a>,
+<a href="https://opensource.org/sponsors">OSI</a>
+and <a href="https://opensource.com/resources/organizations">others</a>
+are sponsored by Google, IBM, Huawei, Microsoft, Oracle, and others.</p>
+  </li>
+  <li>
+    <p><strong>Acquisitions</strong>.
+They <a href="https://techcrunch.com/2019/01/12/how-open-source-software-took-over-the-world/">acquire</a>
+startups that make open source products,
+e.g.
+<a href="https://github.com/RedHatOfficial">RedHat</a>
+  (acquired by IBM for <a href="https://www.technologyreview.com/the-download/612353/ibms-34-billion-purchase-of-red-hat-is-a-mega-bet-on-a-coding-revolution/?via=indexdotco">$32b</a>),
+<a href="https://github.com/mongodb/mongo">MongoDB</a>
+  (<a href="https://www.marketwatch.com/story/mongodb-shares-rally-above-already-elevated-ipo-price-2017-10-19">$4b</a>),
+<a href="https://github.com/docker">Docker</a>
+  (<a href="https://venturebeat.com/2015/06/13/docker-now-valued-at-1b-paid-someone-799-for-its-logo-on-99designs/">$1b</a>),
+<a href="https://github.com/elastic">Elastic</a>
+  (<a href="https://techcrunch.com/2018/10/05/search-company-elastic-pops-90-on-nyse-after-raising-252m-at-a-2-5b-market-cap-in-its-ipo/">$6b</a>),
+<a href="https://github.com/ansible/ansible">Ansible</a>
+  (<a href="http://venturebeat.com/2015/10/15/source-red-hat-is-buying-ansible-for-more-than-100m/">$100m</a>),
+<a href="https://github.com/mysql">MySQL</a>
+  (<a href="https://techcrunch.com/2008/01/16/sun-picks-up-mysql-for-1-billion-open-source-is-a-legitimate-business-model/">$1b</a>),
+<a href="https://github.com/nginx/nginx">Nginx</a>
+  (<a href="https://techcrunch.com/2019/03/11/f5-acquires-nginx-for-670m-to-move-into-open-source-multi-cloud-services/">$670m</a>),
+and <a href="https://index.co/market/open-source/acquisitions">so on</a>.
+The market is <a href="https://a16z.com/open-source-from-community-to-commercialization/">booming</a>, by the way.</p>
+  </li>
+  <li>
+    <p><strong>Donations</strong>.
+Google, for example, <a href="https://opensource.google/docs/growing/funding/">donates</a> to
+  <a href="https://github.com/fastlane/fastlane">Fastlane</a>
+  and
+  <a href="https://github.com/kubernetes/kubernetes">Kubernetes</a>;
+IBM <a href="https://www.ibm.com/opensource/">donates</a> to
+  <a href="https://xomino.com/2015/06/18/ibm-is-a-platinum-sponsor-of-the-new-node-js-foundation/">Node.js</a>
+  and
+  <a href="https://conferences.oreilly.com/tensorflow/tf-ca-2019/public/schedule/detail/81284">TensorFlow</a>;
+Amazon sponsors
+  <a href="https://aws.amazon.com/blogs/opensource/aws-sponsorship-of-the-rust-project/">Rust</a>;
+and <a href="https://github.com/ossfriendly/open-source-supporters">so on</a>.</p>
+  </li>
+</ul>
+
+<p>Next, the question is how this helps Google and others make their
+business more profitable. For example, how is Google Cloud Platform planning
+to beat Amazon AWS using open source as a weapon? Here is how,
+among <a href="https://simplabs.com/blog/2019/11/11/why-companies-invest-in-oss/">other reasons</a>:</p>
+
+<ul>
+  <li>
+    <p><strong>Selling</strong>.
+The products they sponsor gather large communities of users,
+who know how to work with them. Some of those users are decision-making
+people. For example, <a href="https://cloud.google.com/kubernetes-engine/">Google’s Container Engine</a>
+is a hosted version of
+<a href="https://github.com/kubernetes/kubernetes">Kubernetes</a>, an open source product.
+Kubernetes users, when they need
+a hosted version of it, will most likely become Google customers.
+<a href="https://github.com/tensorflow/tensorflow">TensorFlow</a>,
+yet another example, also runs on <a href="https://cloud.google.com/tensorflow-enterprise">Google Cloud Platform</a>.</p>
+  </li>
+  <li>
+    <p><strong>Influencing</strong>.
+In the modern software development world open source is the key media, where
+programmers learn new ideas, design principles, and architectural solutions.
+They listen to open source projects, because they trust them much more
+than they trust Google, IBM or Microsoft. Tech companies are smart, but their
+decisions are based on monetary reasons, while open source projects
+are much freer to do what is right, instead of what is profitable.
+And programmers usually get very skeptical when open projects are acquired
+by large enterprises, like
+<a href="https://www.reddit.com/r/linux/comments/2e2c1o/what_do_we_hate_oracle_for/">Java by Oracle</a>
+or <a href="https://www.theverge.com/2018/6/18/17474284/microsoft-github-acquisition-developer-reaction">GitHub by Microsoft</a>
+(not really an open source story, but very close).
+Thus, for companies it’s much wiser to sponsor open source and stay behind the curtain
+rather than talking directly to developers through corporate media
+like <a href="https://docs.microsoft.com/en-us/">MSDN</a> or <a href="https://developer.oracle.com/">OPN</a>.</p>
+  </li>
+  <li>
+    <p><strong>Branding</strong>.
+Being part of open source is a direct contribution to the public
+image of a company. Google is no longer an
+<a href="https://www.theverge.com/2019/9/9/20857440/google-antitrust-investigation-attorneys-general-advertising-search">Ad-selling monopoly</a>,
+with <a href="https://www.androidauthority.com/googles-reputation-is-becoming-its-biggest-problem-1055381/">questionable reputation</a>,
+but one of the largest software <a href="https://ssir.org/articles/entry/open_source_software_is_philanthropy">philanthropists</a>.
+Microsoft is <a href="https://www.businessinsider.de/international/microsoft-reputation-institute-soaring-research-2019-11/?r=US&amp;IR=T">catching up</a>
+with its massive <a href="https://www.techrepublic.com/article/whats-really-behind-microsofts-love-of-open-source/">code opening</a>
+and the <a href="https://blogs.microsoft.com/blog/2018/10/26/microsoft-completes-github-acquisition/">purchase</a> of GitHub.</p>
+  </li>
+</ul>
+
+
+
+<ul>
+  <li>
+    <p><strong>Retaining</strong>.
+Being an active participant of a visible open source software product
+is a great <a href="https://opensource.com/article/19/11/why-contribute-open-source-software">intrinsic motivator</a>
+for the best software engineers.
+When your company is involved in open source business, you
+are much more loyal and interested in staying longer with the company.
+I can’t prove this assertion, but it’s my personal observation.</p>
+  </li>
+  <li>
+    <p><strong>Training</strong>.
+It’s <a href="https://www.wired.com/insights/2013/11/open-source-a-platform-for-innovation/">no secret</a>
+that the <a href="https://www.techrepublic.com/article/the-best-open-source-innovations-of-the-last-decade/">best technologies</a>
+nowadays are being created
+in open source projects by people contributing for free
+(they get their salaries somewhere else). It’s also a
+<a href="https://hackernoon.com/how-to-become-the-best-programmer-in-the-world-ef9f584c81fa">well-known fact</a>
+that in order to be a better engineer one has to work with the best.
+Open source projects are <a href="https://www.techrepublic.com/article/10-tips-for-becoming-a-better-programmer/">exactly</a>
+the best place to meet more experienced and very often more talented programmers,
+and learn from them. Companies, by sending people there, boost
+their skills without doing any internal training programs.</p>
+  </li>
+</ul>
+
+<p>Thus, it seems that open source is a very powerful instrument
+in the war for tech markets and for talent. Smart companies develop their open source
+muscles, earning reputation and acquiring our trust. I predict
+this trend not only to continue but also to escalate. We programmers
+are their driving force; they need us
+as users, promoters, influencers, and makers of the products.</p>
+
+<p>They were <a href="https://hbswk.hbs.edu/item/microsoft-vs-open-source-who-will-win">not paying attention</a>
+to the open source territory for ages
+and <a href="https://www.computerworld.com/article/3144063/open-source-has-won-and-microsoft-has-surrendered.html">now</a>
+they are fighting for it, trying to acquire the largest pieces.</p>
+
+<p>We software developers are the territory!</p>
+
+<p>Thus, if you are a coder, make your own project now.
+Sooner or later Google will knock on the door and offer
+you a big check, just to do it earlier than Microsoft.</p>
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">Why don't you have your own super popular <a href="https://twitter.com/hashtag/opensource?src=hash&amp;ref_src=twsrc%5Etfw">#opensource</a> product yet?</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1338048990907076609?ref_src=twsrc%5Etfw">December 13, 2020</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

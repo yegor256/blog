@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Please, Don't Improvise</title>
+    <link rel="canonical" href="https://www.yegor256.com/2019/05/21/dont-improvise.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2019/05/21/dont-improvise.html"
+        },
+        "headline": "Please, Don't Improvise",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2019/05/big-eyes.jpg",
+          "height": 709,
+          "width": 1325
+        },
+        "datePublished": "2019-05-21",
+        "dateModified": "2019-05-21",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Getting a programmer to create a good looking user interface
+is an impossible mission; however there are a few simple
+rules that I, a programmer, follow to make my UIs look good enough.
+",
+        "keywords": ["programmer designer paradox", "ui design for programmer", "ui programmer", "simple ui", "ui principles"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2019/05/21/dont-improvise.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>21 May 2019</p>
+      <h1>Please, Don't Improvise</h1>
+      <p>We all know what happens when a programmer decides how a web site
+or a mobile app should look. It ends up looking ugly. And why is that? I don’t know exactly,
+but my best bet is on the <a href="https://www.linkedin.com/pulse/left-brain-vs-right-brain-developers-warren-gwartney/">left-brained nature</a>
+of programmers, who mostly are rigid and logical mathematicians. UI design, to the contrary,
+requires creativity and intuition, which reside in the right side of our brain.
+Some <a href="https://www.fastcompany.com/3029364/this-is-your-brain-on-code-according-to-functional-mri-imaging">recent studies</a>
+are skeptical about that, but my personal experience tells me that you should never expect
+a programmer to make a user interface right.
+Moreover, <em>I’m</em> one of those programmers: No matter what I draw, it’s either
+<a href="/paintings.html">black-and-white</a>, or ugly.
+But I still have to design my <a href="/pets.html">pet projects</a>.
+Here is a list of the top lessons I learned for myself, which help me survive
+with my left-sided brain.</p>
+
+
+
+<amp-img src="/images/2019/05/big-eyes.jpg" alt="Big Eyes (2014) by Tim Burton" height="709" width="1325" layout="responsive"></amp-img>
+
+<p><strong>Leaders</strong>.
+I look at the things that big and famous companies are doing. I check the websites
+I’m using every day to see what is “good” in modern web design:
+<a href="https://stackoverflow.com">stackoverflow</a>,
+<a href="https://github.com">github</a>,
+<a href="https://www.apple.com">apple</a>,
+<a href="https://www.amazon.com">amazon</a>,
+<a href="https://www.craigslist.org/">craigslist</a> (no kidding), etc.
+I actually pay attention to fewer than ten websites.
+They make buttons flat? I make them flat. They make fonts larger? I make
+fonts larger. They make the background white, I make it white too.
+I just copy them. They know better anyway.</p>
+
+<p><strong>Frameworks</strong>.
+There are <a href="https://github.com/troxler/awesome-css-frameworks">many</a> of them for
+the web. I tend to pick the simplest one and use it. Well, I even created my own one
+a few years ago: <a href="/2015/04/13/tacit-css-framework-for-dummies.html"><em>Tacit, a CSS Framework Without Classes</em></a>.
+I always try to “design” as little as possible and follow the
+conventions forced by the framework’s authors. If they want me to have my
+buttons blue, they will be blue. I don’t try to be creative but just follow
+the rules of the frameworks I use.</p>
+
+<p><strong>Defaults</strong>.
+There is always a big temptation to align the content “nicely,”
+centering it or placing it in some multi-column grids. I try not to do
+that, despite the temptation. I just don’t know how to do it right,
+which is why the content “flows” from the top to the bottom, element
+by element, aligned <em>left</em>. Well, unless it’s a set of tabular data.
+Sometimes there is also a temptation to add or remove spacing between
+elements, either via an extra <code class="language-plaintext highlighter-rouge">&lt;br/&gt;</code> or a <code class="language-plaintext highlighter-rouge">margin</code>. I don’t do this.
+The elements will be placed the way my framework places them by default.</p>
+
+<p><strong>Colors</strong>.
+Choosing the right colors is a huge problem for me—I don’t know how to do that right.
+I don’t know which red matches which green. That’s why I use
+<a href="https://coolors.co/app">Coolors</a>. I just click “space” multiple times and they
+offer me a combination of five colors, which match each
+other. I find the most attractive combination and call it a day. Five colors
+are always enough for any web app.</p>
+
+<p><strong>Bold, Italic, Underscore, and All Caps</strong>.
+It’s simple—don’t use them. Never. Well,
+<a href="https://practicaltypography.com/bold-or-italic.html">as little as possible</a>.
+You definitely shouldn’t use them in order to make a visual element more visible. You’ve got
+fonts for that. If you want your caption to catch the eye, make the
+font larger. But don’t use italic, bold, or, God forbid, all caps. I use
+them sometimes, very rarely, but only in order to
+<a href="https://en.wikipedia.org/wiki/Emphasis_%28typography%29">emphasize</a>
+a word in a sentence.</p>
+
+<p><strong>Fonts</strong>.
+I try to stick to defaults, which are
+<a href="https://en.wikipedia.org/wiki/Serif">Serif</a>,
+<a href="https://en.wikipedia.org/wiki/Sans-serif">Sans-serif</a>,
+and <a href="https://en.wikipedia.org/wiki/Monospaced_font">Monospace</a>.
+If I can’t, I use <a href="https://fonts.google.com/">Google Fonts</a>,
+but very carefully. Of course, I use one font per system.
+Do I know which two fonts are compatible? I don’t. Do you?
+Don’t even try to make that decision right. Just one font and
+<a href="https://www.quora.com/How-many-different-fonts-should-you-use-in-your-website">that’s it</a>.
+And I always try to make them as large as possible. This seems to be a
+<a href="https://blog.marvelapp.com/body-text-small/">trend</a>
+now, most probably because screens are getting bigger.</p>
+
+<p><strong>Images</strong>.
+I do everything I can to avoid them, to be honest. I always attempt to
+replace them with text or <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters">Unicode symbols</a>,
+if necessary. When it’s absolutely necessary, I use
+<a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> vector graphics.
+PNG/JPEG raster-graphics is my last resort.</p>
+
+<p><strong>Artists</strong>.
+I pay absolutely no attention to what modern web artists are doing.
+They create beautiful things, but I don’t even need to know about them.
+They only annoy me, because I can’t create anything similar. When someone
+shows me a website with new CSS tricks, I close it immediately. This is not for
+me. My CSS has to be as <em>short</em> and <em>primitive</em> as possible.</p>
+
+<p><strong>Compliance</strong>.
+W3C has a number of validators for
+<a href="https://validator.w3.org/">HTML</a> and
+<a href="https://jigsaw.w3.org/css-validator/">CSS</a>, which can tell what’s
+wrong with a website, statically analyzing it. This is similar to what
+<a href="http://checkstyle.sourceforge.net/">Checkstyle</a>
+does for our Java code. I rely on their recommendations, always.
+Sometimes they sound too strict, but they tell me what the expectations are
+of those who know web design way better than I do.  In HTML5,
+for example, we are supposed to have <code class="language-plaintext highlighter-rouge">&lt;thead&gt;</code> in our <code class="language-plaintext highlighter-rouge">&lt;table&gt;</code>, or the <code class="language-plaintext highlighter-rouge">alt</code> attribute
+in all <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> elements. I always try to follow these and other rules.</p>
+
+<p><strong>Responsive</strong>.
+The design has to be <a href="https://en.wikipedia.org/wiki/Responsive_web_design">mobile friendly</a>.
+Always.</p>
+
+<hr>
+
+<p>To summarize, I would suggest: don’t improvise, don’t try to be
+creative, don’t think that you understand what is beautiful and what’s not.
+You don’t. Me neither. Just be as <em>minimalistic</em> and <em>traditional</em> as possible
+and you will do yourself and your users a big favor.</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">How to make a UI look yummy? <a href="https://twitter.com/hashtag/graphicdesigning?src=hash&amp;ref_src=twsrc%5Etfw">#graphicdesigning</a></p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1132522579674173441?ref_src=twsrc%5Etfw">May 26, 2019</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

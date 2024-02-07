@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>How We Run as a Non-Root Inside Docker Container</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/08/29/docker-non-root.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/08/29/docker-non-root.html"
+        },
+        "headline": "How We Run as a Non-Root Inside Docker Container",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2014-08-29",
+        "dateModified": "2014-08-29",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "By default, docker container starts a process inside
+as a root user. In rultor.com we change it to a custom
+user, read how
+",
+        "keywords": ["docker non-root", "docker without sudo", "docker non-root user", "running app inside Docker as non-root user", "running docker entirely as non-root"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/08/29/docker-non-root.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>29 August 2014</p>
+      <h1>How We Run as a Non-Root Inside Docker Container</h1>
+      <p>Docker starts a process inside its container as a “root” user. In some
+cases, this is not convenient though. For example, <code class="language-plaintext highlighter-rouge">initdb</code> from PostgreSQL doesn’t like to
+be started as root and will fail. In <a href="https://www.rultor.com">rultor.com</a>,
+a DevOps team assistant,
+<a href="/2014/07/29/docker-in-rultor.html">we’re using Docker</a>
+as a virtualization technology for every build we run.</p>
+
+<p>Here is how we change the user inside a running container, right
+after it is started.</p>
+
+
+
+<p>First, this is how we start a new Docker container:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker run <span class="nt">-i</span> <span class="nt">-t</span> <span class="nt">--rm</span> <span class="nt">-v</span> <span class="s2">"</span><span class="si">$(</span><span class="nb">pwd</span><span class="si">)</span><span class="s2">:/main"</span> <span class="se">\</span>
+  yegor256/rultor /main/entry.sh
+</code></pre></div></div>
+
+<p>There are two files in the current directory: <code class="language-plaintext highlighter-rouge">entry.sh</code> and <code class="language-plaintext highlighter-rouge">script.sh</code>.
+<code class="language-plaintext highlighter-rouge">entry.sh</code> is the file being executed by Docker on start,
+and it contains the following:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+adduser <span class="nt">--disabled-password</span> <span class="nt">--gecos</span> <span class="s1">''</span> r
+adduser r <span class="nb">sudo
+echo</span> <span class="s1">'%sudo ALL=(ALL) NOPASSWD:ALL'</span> <span class="o">&gt;&gt;</span> /etc/sudoers
+su <span class="nt">-m</span> r <span class="nt">-c</span> /home/r/script.sh
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">script.sh</code> will be executed as a user <code class="language-plaintext highlighter-rouge">r</code> inside the container. And this
+<code class="language-plaintext highlighter-rouge">r</code> user will have <code class="language-plaintext highlighter-rouge">sudo</code> permissions. This is exactly what all projects,
+managing their DevOps procedures with <a href="https://www.rultor.com">rultor.com</a>, need.</p>
+
+    </article>
+  </body>
+</html>

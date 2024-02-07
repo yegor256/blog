@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>SIMBA: Simplified Management By Artifacts</title>
+    <link rel="canonical" href="https://www.yegor256.com/2021/09/09/simba.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2021/09/09/simba.html"
+        },
+        "headline": "SIMBA: Simplified Management By Artifacts",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2021/09/lion-king.jpg",
+          "height": 728,
+          "width": 1294
+        },
+        "datePublished": "2021-09-09",
+        "dateModified": "2021-09-09",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Here is a quick summary of a very simple management
+framework, which I've used in my teams for the last two years.
+",
+        "keywords": ["management", "goal setting", "reporting", "management reports", "planning"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2021/09/09/simba.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>9 September 2021</p>
+      <h1>SIMBA: Simplified Management By Artifacts</h1>
+      <p>Here is a very simple management framework, which we have used in 
+our teams for the last two years. We came to it experimentally,
+trying to merge some Agile principles, 
+<a href="https://en.wikipedia.org/wiki/Project_Management_Body_of_Knowledge">PMBOK</a> ideas, and
+common sense. Our experience so far is positive, even though
+the proposed rules of work are not really about 
+<a href="/2016/05/24/who-is-project-manager.html">project management</a>, 
+but more about keeping an eye on the situation and making sure
+it’s not falling apart. This is the best most 
+<a href="/2015/07/21/hourly-pay-modern-slavery.html">modern teams</a> 
+can afford anyway.</p>
+
+
+
+<amp-img src="/images/2021/09/lion-king.jpg" alt="Lion King (2019) by Jon Favreau" height="728" width="1294" layout="responsive"></amp-img>
+
+<p>Each group has a Team Coordinator (TC), who is usually not the most
+knowledgeable expert, but someone with good organizational
+skills and strong self-discipline. TC is responsible for 
+four cornerstone elements of our management framework: 
+1) Plan, 2) Monday Reports, 3) Weekly Calls, and 4) Demos.</p>
+
+<h2 id="plan">Plan</h2>
+
+
+
+<p>Our Plan is a very simple text document visible for everybody in the
+team, usually in Google Docs, and editable by the TC only. 
+It is a primitive version of a 
+<a href="https://en.wikipedia.org/wiki/Work_breakdown_structure">Work Breakdown Structure (WBS)</a>
+married with a 
+<a href="https://en.wikipedia.org/wiki/Gantt_chart">Gantt Chart</a>,
+where each line is a tangible artifact, like a file, a document,
+a software module, a PDF report, and so on. Tasks are not welcome
+in the Plan, only artifacts. An example:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Requirements v1 [Jeff+Bill, 25-Aug, 80%]
+- Dataset with 500+ files [Anna+Jeff, 3-Sep, 100%]
+- XYZ module deployed [John+Jeff, 14-Sep, 50%]
+- Database redesign [Bill+Mary, 27-Sep, 20%]
+- ABC package released [Jeff+Mary, 1-Oct, 0%]
+- Report on data analysis [Jeff+Anna, 5-Oct, 10%]
+</code></pre></div></div>
+
+<p>Each artifact has 1) an owner and 2) a reviewer. 
+In the first artifact “<em>Requirements v1</em>” the owner is Jeff and 
+the reviewer is Bill. Jeff will make sure the requirements
+are delivered, and Bill will check them and confirm. 
+The owners may not necessarily
+be primary contributors to their artifacts, but they are responsible for
+keeping the delivery status under control. 
+Simply put, when an artifact is delivered on time, we <em>reward</em>
+the owner; when the delivery is missed, we also <em>blame</em> (I know, most of you
+don’t like this word) the owner.</p>
+
+
+
+<p>Each artifact has a planned delivery date. The dates may
+change as often as necessary, but at any moment of time
+the Plan has to have dates defined for <em>all</em> artifacts.
+The list is reverse sorted by dates.</p>
+
+<p>Each artifact has a subjectively measured status of completion,
+like “80%” for the first artifact above. The TC collects this
+information from reviewers, not owners.</p>
+
+<p>No more than three artifacts may be owned by one person 
+and no more than four may be reviewed. Thus, anyone
+is allowed to keep no more than seven artifacts under control.</p>
+
+<h2 id="monday-reports">Monday Reports</h2>
+
+
+
+<p>Each Monday morning, the TC sends a report by email
+to all team sponsors: a plain-text email without
+any attachments or fancy formatting. All stakeholders,
+including all team members, are CC-ed too.
+An example:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>From: Team Coordinator
+To: Big Boss
+CC: Programmer #1, Programmer #2, Friend #1, etc.
+Subject: WEEK13 Dataset, Requirements, XYZ 
+
+Hi all,
+
+Last week achievements:
+- Added 100 new files to the Dataset [100%]
+- Fixed the deployment of XYZ [50%]
+- Refined the requirements [80%]
+Next week plans:
+- To publish ABC package draft
+- To review first draft of the report
+Risks:
+- The server is weak, we may fail the delivery
+  of the dataset, report milestone will be missed.
+
+Bye.
+</code></pre></div></div>
+
+<p>The <strong>subject</strong> of the email starts with the <code class="language-plaintext highlighter-rouge">WEEK13</code>, where
+13 is the number of the previous calendar week 
+in the current year. By the way, 
+there are <a href="https://en.wikipedia.org/wiki/ISO_week_date">52 weeks</a> 
+in almost every year.
+The <code class="language-plaintext highlighter-rouge">WEEK</code> part makes report emails easily searchable in the inbox.
+There is also a comma-separated list of the most important topics of the report,
+to give the reader a quick impression about the results being reported.</p>
+
+<p>Each <strong>achievement</strong> of the last week starts with a verb or a past
+tense, like “fixed,” “added,” “refined” etc. After the verb
+the artifact is mentioned, which we contributed to. At the end 
+of each line there is a progress status, subjectively measured
+by the author of the report. There should be no more than seven
+achievement points, no matter how big the team is nor how detailed
+the Plan. The report must not tell the full story, but only 
+highlight what’s most important.</p>
+
+
+
+<p>Wherever possible, each achievement item must be supplemented
+with a link leading to a pull request, or a file, or a document.
+There has to be something traceable and verifiable: the readers
+of the report must be able to find all necessary details for
+each item without asking its owner or the author of the report.</p>
+
+<p>Each <strong>task</strong> for a new week starts with a verb in the infinitive
+form, like “to publish” or “to review” and then, of course,
+the artifact is mentioned. There should be no more than seven
+tasks in the list.</p>
+
+<p>Each <strong>risk</strong>, in <a href="/2019/05/14/cause-risk-effect.html">Cause-Risk-Effect format</a>, 
+is an opportunity for the reporter to protect the team:
+the more people knew about risks, the harder it will be to blame
+the team for failures, which are inevitable.</p>
+
+<h2 id="weekly-calls">Weekly Calls</h2>
+
+
+
+<p>Every week at the same time and day, 
+we make a 30-minute Zoom status call: everybody participates.
+We look at the Plan and discuss whether our work is still on track.
+We ask each other:</p>
+
+<ul>
+  <li>Will all artifacts delivered mean success?</li>
+  <li>Did we break down the scope correctly?</li>
+  <li>What did we miss in our Plan?</li>
+  <li>Are all owners committed to the their dates and scopes?</li>
+  <li>Are there any risks overlooked?</li>
+</ul>
+
+<p>We <em>don’t</em> use status calls for reporting. This is what we have
+Monday Reports for.</p>
+
+<p>All decisions we make at status calls we call Meeting Minutes and send by email to everybody (or post in our Telegram group chat).</p>
+
+<h2 id="demos">Demos</h2>
+
+
+
+<p>Almost every week we ask some artifact owner to demonstrate his or her
+results at a one-hour “demo” Zoom call. Usually it happens when
+the delivery date is approaching and an owner is ready to 
+show something complete. However, demo calls are also very useful
+to collect opinions when an artifact is still in progress.</p>
+
+<p>It’s the responsibility of a TC to make regular demo calls weekly,
+inviting owners of the most important artifacts.</p>
+
+<p>All status calls and demo calls are recorded and posted into 
+a private list on YouTube, where all team members can watch them
+later.</p>
+
+    </article>
+  </body>
+</html>

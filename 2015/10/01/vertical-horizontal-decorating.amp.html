@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Vertical and Horizontal Decorating</title>
+    <link rel="canonical" href="https://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html"
+        },
+        "headline": "Vertical and Horizontal Decorating",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2015/10/the-apartment.jpg",
+          "height": 727,
+          "width": 1107
+        },
+        "datePublished": "2015-10-01",
+        "dateModified": "2015-10-01",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Decorators are used to extend object functionality
+without changing their interfaces, and there are two
+approaches: horizontal and vertical.
+",
+        "keywords": ["composable decorators", "decorator pattern", "decorator pattern java", "decorator java", "encapsulation"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2015/10/01/vertical-horizontal-decorating.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>1 October 2015</p>
+      <h1>Vertical and Horizontal Decorating</h1>
+      <p>A <a href="https://en.wikipedia.org/wiki/Decorator_pattern">decorator pattern</a>
+is one of the best ways to add features to an object
+without changing its interface. I use
+<a href="/2015/02/26/composable-decorators.html">composable decorators</a>
+quite often and always question myself as to how to design them right
+when the list of features must be configurable.
+I’m not sure I have the right answer, but here is
+some food for thought.</p>
+
+
+
+<amp-img src="/images/2015/10/the-apartment.jpg" alt="The Apartment (1960) by Billy Wilder" height="727" width="1107" layout="responsive"></amp-img>
+
+<p>Let’s say I have a list of numbers:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Numbers</span> <span class="o">{</span>
+  <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="nf">iterate</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Now I want to create a list that will only have odd, unique, positive, and sorted numbers.
+The first approach is <strong>vertical</strong> (I just made this name up):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Numbers</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Sorted</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">Unique</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">Odds</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Positive</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">ArrayNumbers</span><span class="o">(</span>
+          <span class="k">new</span> <span class="nc">Integer</span><span class="o">[]</span> <span class="o">{</span>
+            <span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">78</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="o">-</span><span class="mi">34</span><span class="o">,</span> <span class="mi">98</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span>
+          <span class="o">}</span>
+        <span class="o">)</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
+
+<p>The second approach is <strong>horizontal</strong> (again, a name I made up):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Numbers</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Modified</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">ArrayNumbers</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nc">Integer</span><span class="o">[]</span> <span class="o">{</span>
+      <span class="o">-</span><span class="mi">1</span><span class="o">,</span> <span class="mi">78</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="o">-</span><span class="mi">34</span><span class="o">,</span> <span class="mi">98</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span>
+    <span class="o">}</span>
+  <span class="o">),</span>
+  <span class="k">new</span> <span class="nc">Diff</span><span class="o">[]</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">Positive</span><span class="o">(),</span>
+    <span class="k">new</span> <span class="nf">Odds</span><span class="o">(),</span>
+    <span class="k">new</span> <span class="nf">Unique</span><span class="o">(),</span>
+    <span class="k">new</span> <span class="nf">Sorted</span><span class="o">(),</span>
+  <span class="o">}</span>
+<span class="o">);</span>
+</code></pre></div></div>
+
+<p>See the difference? The first approach decorates <code class="language-plaintext highlighter-rouge">ArrayNumbers</code> “vertically,”
+adding functionality through the composable decorators <code class="language-plaintext highlighter-rouge">Positive</code>, <code class="language-plaintext highlighter-rouge">Odds</code>,
+<code class="language-plaintext highlighter-rouge">Unique</code>, and <code class="language-plaintext highlighter-rouge">Sorted</code>.</p>
+
+<p>The second approach introduces the new interface <code class="language-plaintext highlighter-rouge">Diff</code>, which implements
+the core functionality of iterating numbers through instances of
+<code class="language-plaintext highlighter-rouge">Positive</code>, <code class="language-plaintext highlighter-rouge">Odds</code>, <code class="language-plaintext highlighter-rouge">Unique</code>, and <code class="language-plaintext highlighter-rouge">Sorted</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Diff</span> <span class="o">{</span>
+  <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="nf">apply</span><span class="o">(</span><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">origin</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>For the user of <code class="language-plaintext highlighter-rouge">numbers</code>, both approaches are the same. The difference is
+only in the design. Which one is better and when? It seems that
+vertical decorating is easier to implement and is more suitable for
+smaller objects that expose just a few methods.</p>
+
+<p>As for my experience, I always tend to start with vertical decorating since it’s
+easier to implement but eventually migrate to a horizontal one when the
+number of decorators starts to grow.</p>
+
+    </article>
+  </body>
+</html>

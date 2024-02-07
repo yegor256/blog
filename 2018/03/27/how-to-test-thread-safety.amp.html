@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>How I Test My Java Classes for Thread-Safety</title>
+    <link rel="canonical" href="https://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html"
+        },
+        "headline": "How I Test My Java Classes for Thread-Safety",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2018/03/scent-of-a-woman.jpg",
+          "height": 748,
+          "width": 1330
+        },
+        "datePublished": "2018-03-27",
+        "dateModified": "2018-03-27",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Thread-safety is a very important and critical
+quality of some Java objects; here is how it can
+be tested with the help of Cactoos RunInThreads class.
+",
+        "keywords": ["thread safety", "test thread safety", "how to test thread safety", "thread conflicts", "thread safety bugs"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2018/03/27/how-to-test-thread-safety.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>27 March 2018</p>
+      <h1>How I Test My Java Classes for Thread-Safety</h1>
+      <p>I touched on this problem in <a href="https://www.youtube.com/watch?v=rC17YwowURQ">one of my recent webinars</a>,
+now it’s time to explain it in writing. Thread-safety is an important
+quality of classes in languages/platforms like Java, where we frequently share
+objects between threads. The issues caused by lack of thread-safety
+are very difficult to debug, since they are sporadic and almost impossible
+to reproduce on purpose. How do you test your objects to make sure
+they are thread-safe? Here is how I’m doing it.</p>
+
+
+
+<amp-img src="/images/2018/03/scent-of-a-woman.jpg" alt="Scent of a Woman (1992) by Martin Brest" height="748" width="1330" layout="responsive"></amp-img>
+
+<p>Let us say there is a simple in-memory bookshelf:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span>
+    <span class="k">new</span> <span class="nc">ConcurrentHashMap</span><span class="o">&lt;&gt;();</span>
+  <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">Integer</span> <span class="n">next</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">map</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">next</span><span class="o">,</span> <span class="n">title</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">next</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">(</span><span class="kt">int</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">map</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>First, we put a book there and the bookshelf returns its ID. Then we can
+read the title of the book by its ID:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Books</span> <span class="n">books</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Books</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="s">"Elegant Objects"</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+<span class="k">assert</span> <span class="n">books</span><span class="o">.</span><span class="na">title</span><span class="o">(</span><span class="n">id</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>The class seems to be thread-safe, since we are using the thread-safe
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html"><code class="language-plaintext highlighter-rouge">ConcurrentHashMap</code></a>
+instead of a more primitive and non-thread-safe
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><code class="language-plaintext highlighter-rouge">HashMap</code></a>,
+right? Let’s try to test it:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BooksTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addsAndRetrieves</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Books</span> <span class="n">books</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Books</span><span class="o">();</span>
+    <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="s">"Elegant Objects"</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+    <span class="k">assert</span> <span class="n">books</span><span class="o">.</span><span class="na">title</span><span class="o">(</span><span class="n">id</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The test passes, but it’s just a one-thread test. Let’s try to do the
+same manipulation from a few parallel threads (I’m using
+<a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a>):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BooksTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addsAndRetrieves</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Books</span> <span class="n">books</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Books</span><span class="o">();</span>
+    <span class="kt">int</span> <span class="n">threads</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+    <span class="nc">ExecutorService</span> <span class="n">service</span> <span class="o">=</span>
+      <span class="nc">Executors</span><span class="o">.</span><span class="na">newFixedThreadPool</span><span class="o">(</span><span class="n">threads</span><span class="o">);</span>
+    <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Future</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;&gt;</span> <span class="n">futures</span> <span class="o">=</span>
+      <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">threads</span><span class="o">);</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">threads</span><span class="o">;</span> <span class="o">++</span><span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"Book #%d"</span><span class="o">,</span> <span class="n">t</span><span class="o">);</span>
+      <span class="n">futures</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">service</span><span class="o">.</span><span class="na">submit</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">)));</span>
+    <span class="o">}</span>
+    <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">ids</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;&gt;();</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">Future</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">f</span> <span class="o">:</span> <span class="n">futures</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">ids</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+    <span class="o">}</span>
+    <span class="n">assertThat</span><span class="o">(</span><span class="n">ids</span><span class="o">.</span><span class="na">size</span><span class="o">(),</span> <span class="n">equalTo</span><span class="o">(</span><span class="n">threads</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>First, I create a pool of threads via
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Executors.html"><code class="language-plaintext highlighter-rouge">Executors</code></a>.
+Then I submit ten objects of type
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Callable.html"><code class="language-plaintext highlighter-rouge">Callable</code></a> via
+<code class="language-plaintext highlighter-rouge">submit()</code>. Each of them will add a new
+unique book to the bookshelf. All of them will be executed, in some
+unpredictable order, by some of those ten threads from the pool.</p>
+
+
+
+<p>Then I fetch the results of their executors through the list of objects
+of type
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Future.html"><code class="language-plaintext highlighter-rouge">Future</code></a>.
+Finally, I calculate the amount of unique book IDs
+created. If the number is 10, there were no conflicts. I’m using the
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/Set.html"><code class="language-plaintext highlighter-rouge">Set</code></a>
+collection in order to make sure the list of IDs contains only
+unique elements.</p>
+
+<p>The test passes on my laptop. However, it’s not strong enough. The problem
+here is that it’s not really testing the <code class="language-plaintext highlighter-rouge">Books</code> from multiple parallel threads.
+The time that passes between our calls to <code class="language-plaintext highlighter-rouge">submit()</code> is large enough to finish
+the execution of <code class="language-plaintext highlighter-rouge">books.add()</code>. That’s why in reality only one thread
+will run at the same time. We can check that by modifying the code a bit:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">AtomicBoolean</span> <span class="n">running</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AtomicBoolean</span><span class="o">();</span>
+<span class="nc">AtomicInteger</span> <span class="n">overlaps</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AtomicInteger</span><span class="o">();</span>
+<span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Future</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;&gt;</span> <span class="n">futures</span> <span class="o">=</span>
+  <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">threads</span><span class="o">);</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">threads</span><span class="o">;</span> <span class="o">++</span><span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"Book #%d"</span><span class="o">,</span> <span class="n">t</span><span class="o">);</span>
+  <span class="n">futures</span><span class="o">.</span><span class="na">add</span><span class="o">(</span>
+    <span class="n">service</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span>
+      <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">running</span><span class="o">.</span><span class="na">get</span><span class="o">())</span> <span class="o">{</span>
+          <span class="n">overlaps</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="n">running</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+        <span class="n">running</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+<span class="n">assertThat</span><span class="o">(</span><span class="n">overlaps</span><span class="o">.</span><span class="na">get</span><span class="o">(),</span> <span class="n">greaterThan</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
+</code></pre></div></div>
+
+<p>With this code I’m trying to see how often threads overlap each other and
+do something in parallel. This never happens and <code class="language-plaintext highlighter-rouge">overlaps</code> is equal to zero.
+Thus our test is not really testing anything yet. It just adds ten
+books to the bookshelf one by one. If I increase the amount of threads to
+1000, they start to overlap sometimes. But we want them to overlap even
+when there’s a small number of them.
+To solve that we need to use
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/CountDownLatch.html"><code class="language-plaintext highlighter-rouge">CountDownLatch</code></a>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">CountDownLatch</span> <span class="n">latch</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CountDownLatch</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+<span class="nc">AtomicBoolean</span> <span class="n">running</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AtomicBoolean</span><span class="o">();</span>
+<span class="nc">AtomicInteger</span> <span class="n">overlaps</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AtomicInteger</span><span class="o">();</span>
+<span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">Future</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;&gt;</span> <span class="n">futures</span> <span class="o">=</span>
+  <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">threads</span><span class="o">);</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">threads</span><span class="o">;</span> <span class="o">++</span><span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"Book #%d"</span><span class="o">,</span> <span class="n">t</span><span class="o">);</span>
+  <span class="n">futures</span><span class="o">.</span><span class="na">add</span><span class="o">(</span>
+    <span class="n">service</span><span class="o">.</span><span class="na">submit</span><span class="o">(</span>
+      <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="n">latch</span><span class="o">.</span><span class="na">await</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">running</span><span class="o">.</span><span class="na">get</span><span class="o">())</span> <span class="o">{</span>
+          <span class="n">overlaps</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="n">running</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+        <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+        <span class="n">running</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">id</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+<span class="n">latch</span><span class="o">.</span><span class="na">countDown</span><span class="o">();</span>
+<span class="nc">Set</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">ids</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;&gt;();</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">Future</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">f</span> <span class="o">:</span> <span class="n">futures</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">ids</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">f</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+<span class="o">}</span>
+<span class="n">assertThat</span><span class="o">(</span><span class="n">overlaps</span><span class="o">.</span><span class="na">get</span><span class="o">(),</span> <span class="n">greaterThan</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
+</code></pre></div></div>
+
+<p>Now each thread, before touching the books, waits for the permission
+given by <code class="language-plaintext highlighter-rouge">latch</code>. When we submit them all via <code class="language-plaintext highlighter-rouge">submit()</code> they stay on hold
+and wait. Then we release the latch with <code class="language-plaintext highlighter-rouge">countDown()</code> and they all start
+to go, simultaneously. Now, on my laptop, <code class="language-plaintext highlighter-rouge">overlaps</code> is equal to 3-5 even when <code class="language-plaintext highlighter-rouge">threads</code>
+is 10.</p>
+
+<p>And that last <code class="language-plaintext highlighter-rouge">assertThat()</code> crashes now! I’m not getting 10 book IDs,
+as I was before. It’s 7-9, but never 10. The class, apparently, is not thread-safe!</p>
+
+<p>But before we fix the class, let’s make our test simpler. Let’s use
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/matchers/RunsInThreads.html"><code class="language-plaintext highlighter-rouge">RunInThreads</code></a>
+(renamed to just <a href="https://www.javadoc.io/doc/org.cactoos/cactoos/latest/org/cactoos/experimental/Threads.html"><code class="language-plaintext highlighter-rouge">Threads</code></a> in the recent version)
+from <a href="https://www.cactoos.org">Cactoos</a>, which does exactly the same as we’ve done above,
+but under the hood:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">BooksTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addsAndRetrieves</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Books</span> <span class="n">books</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Books</span><span class="o">();</span>
+    <span class="nc">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
+      <span class="n">t</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+          <span class="s">"Book #%d"</span><span class="o">,</span> <span class="n">t</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">()</span>
+        <span class="o">);</span>
+        <span class="kt">int</span> <span class="n">id</span> <span class="o">=</span> <span class="n">books</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">books</span><span class="o">.</span><span class="na">title</span><span class="o">(</span><span class="n">id</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+      <span class="o">},</span>
+      <span class="k">new</span> <span class="nc">RunsInThreads</span><span class="o">&lt;&gt;(</span><span class="k">new</span> <span class="nc">AtomicInteger</span><span class="o">(),</span> <span class="mi">10</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+
+
+<p>The first argument of <code class="language-plaintext highlighter-rouge">assertThat()</code> is an instance of
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/Func.html"><code class="language-plaintext highlighter-rouge">Func</code></a>
+(a functional interface), accepting an
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html"><code class="language-plaintext highlighter-rouge">AtomicInteger</code></a>
+(the first argument of <code class="language-plaintext highlighter-rouge">RunsInThreads</code>) and returning <code class="language-plaintext highlighter-rouge">Boolean</code>. This function will
+be executed on 10 parallel thread, using the same latch-based approach
+as demonstrated above.</p>
+
+<p>This <code class="language-plaintext highlighter-rouge">RunInThreads</code> seems to be compact and convenient, I’m using it
+in a few projects already.</p>
+
+<p>By the way, in order to make <code class="language-plaintext highlighter-rouge">Books</code> thread-safe we just need to add
+<code class="language-plaintext highlighter-rouge">synchronized</code> to its method <code class="language-plaintext highlighter-rouge">add()</code>. Or maybe you can suggest a better
+solution?</p>
+
+<p>P.S. I learned all this from <a href="https://amzn.to/2c7sVS1">Java Concurrency in Practice</a>
+by Goetz et al.</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">Do you create unit tests to prove that your classes are thread-safe?</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1028678871187640329?ref_src=twsrc%5Etfw">August 12, 2018</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

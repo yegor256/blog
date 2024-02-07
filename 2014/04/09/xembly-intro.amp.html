@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Xembly, an Assembly for XML</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/04/09/xembly-intro.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/04/09/xembly-intro.html"
+        },
+        "headline": "Xembly, an Assembly for XML",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2014-04-09",
+        "dateModified": "2014-04-09",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Xembly is an imperative language for XML data and schema manipulations
+that makes XML building much easier and convenient
+",
+        "keywords": ["xml", "xsl", "xembly", "assembly for xml", "xml modification", "xml manipulation", "xpath"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/04/09/xembly-intro.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>9 April 2014</p>
+      <h1>Xembly, an Assembly for XML</h1>
+      
+
+<p>I use XML in almost every one of my projects. And, despite all the fuss about
+JSON/YAML, I honestly
+<a href="/2015/11/16/json-vs-xml.html">believe</a>
+that XML is one of the greatest languages ever
+invented. Also, I believe that the beauty of XML reveals itself when used in
+combination with related technologies.</p>
+
+<p>For example, you can expose your data in XML and render it for the end-user
+using <a href="https://www.w3.org/Style/XSL/">XSL stylesheet</a>.</p>
+
+
+
+<p>Another example would be when you validate the same data, before rendering, to
+ensure that the structure is correct. You can do this with the
+<a href="https://www.w3.org/TR/xmlschema11-1/">XSD</a> schema. Alternatively, you can pick
+specific data elements from the entire document by using
+<a href="https://www.w3.org/TR/xpath/">XPath</a> queries.</p>
+
+<p>Essentially, these three technologies, XSL, XSD schema and XPath, are what makes
+XML so powerful.</p>
+
+<p>However, there can be times when XML falls short. For instance, imagine you have
+an existing document that needs to be modified just slightly. For example, let’s
+use the following:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;accounts&gt;</span>
+  [...]
+  <span class="nt">&lt;acc</span> <span class="na">id=</span><span class="s">'34'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Jeffrey<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;balance&gt;</span>305<span class="nt">&lt;/balance&gt;</span>
+  <span class="nt">&lt;/acc&gt;</span>
+  <span class="nt">&lt;acc</span> <span class="na">id=</span><span class="s">'35'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Walter<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;balance&gt;</span>50090<span class="nt">&lt;/balance&gt;</span>
+  <span class="nt">&lt;/acc&gt;</span>
+  [...]
+<span class="nt">&lt;/accounts&gt;</span>
+</code></pre></div></div>
+
+<p>The above code represents a list of accounts. Each account has its own <code class="language-plaintext highlighter-rouge">id</code> and several
+child elements. In our example, we need to find the account belonging to <code class="language-plaintext highlighter-rouge">Jeffrey</code>
+and increase its balance by <code class="language-plaintext highlighter-rouge">500</code>. How would we do this?</p>
+
+<p>Well, there are a few possible solutions:</p>
+
+<ul>
+  <li>SAX-parse the document, change the balance and save the stream;</li>
+  <li>DOM-parse it, find the element with XPath, change the value and then print it;</li>
+  <li>apply a parametrized XSL stylesheet;</li>
+  <li>apply XQuery small script to make changes</li>
+</ul>
+
+<p>All of these methods have their own drawbacks. However, all of them have one particular problem in common—they are very verbose. With each of the above methods, you need at least a page of code to perform this rather simple operation. Furthermore,  if the logic of the operation becomes more complex, the amount of needed code grows much faster than you may expect.</p>
+
+<p>Simply put, XML lacks a tool for primitive data manipulations within
+a document. Perhaps, it is this shortcoming that makes XML unpopular with some.</p>
+
+<p>Anyway, here is a tool I created a few month ago: <a href="https://www.xembly.org">Xembly</a>.
+It is an imperative language with a few simple directives and resembles <a href="https://en.wikipedia.org/wiki/Assembly_language">Assembly</a>
+in style. Thus, the name - Xembly. With Xembly, there are no loops, conditions or variables - just a sequence of directives with arguments.</p>
+
+<p>Let’s create a simple example. Say, for instance, we want to add a new account number <code class="language-plaintext highlighter-rouge">36</code>
+to our list document. The code would look like:</p>
+
+<pre><code class="language-asm">XPATH '/accounts';
+ADD 'account';
+ATTR 'id', '36';
+ADD 'name';
+SET 'Donny';
+UP;
+ADD 'balance';
+SET '3400';
+</code></pre>
+
+<p>The above should be intuitively clear, but I’ll explain just in case. First, the <code class="language-plaintext highlighter-rouge">XPATH</code> directive points us
+to the element found by the “/accounts” XPath query. This will be our root element. We assume here that
+it exists in the document. Therefore, if it is absent, our Xembly script will
+fail with a runtime exception.</p>
+
+<p>Next, the <code class="language-plaintext highlighter-rouge">ADD</code> directive on line 2 creates a new XML element without any children
+or attributes. Then, the <code class="language-plaintext highlighter-rouge">ATTR</code> directive sets an attribute for this element. The code then adds
+the new child element <code class="language-plaintext highlighter-rouge">name</code> and sets its text value to <code class="language-plaintext highlighter-rouge">"Donny"</code> using the <code class="language-plaintext highlighter-rouge">SET</code> directive. Finally, we move our pointer back to <code class="language-plaintext highlighter-rouge">account</code> element using <code class="language-plaintext highlighter-rouge">UP</code>, add the <code class="language-plaintext highlighter-rouge">balance</code> child element and set its value to <code class="language-plaintext highlighter-rouge">"3400"</code>.</p>
+
+<p>Our balance changing task can be expressed in Xembly with the following code:</p>
+
+<pre><code class="language-asm">XPATH '/accounts/account[name="Jeffrey"]/balance';
+XSET '. + 500';
+</code></pre>
+
+<p>The <code class="language-plaintext highlighter-rouge">XSET</code> directive sets the element text value, similar to <code class="language-plaintext highlighter-rouge">SET</code>, but
+calculates it beforehand using the provided XPath expression <code class="language-plaintext highlighter-rouge">. + 500</code>.</p>
+
+<p>Xembly performs all manipulations through DOM. Consequently, Xembly can be
+implemented inside any language that has a built-in DOM implementation.</p>
+
+<p>In the meantime, there is only one implementation of Xembly language—in Java. Here is how
+<a href="/2015/03/26/jaxb-vs-xembly.html">it works</a>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Directive</span><span class="o">&gt;</span> <span class="n">directives</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Directives</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">xpath</span><span class="o">(</span><span class="s">"/accounts"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"account"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">attr</span><span class="o">(</span><span class="s">"id"</span><span class="o">,</span> <span class="s">"36"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"name"</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">"Donny"</span><span class="o">).</span><span class="na">up</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"balance"</span><span class="o">).</span><span class="na">set</span><span class="o">(</span><span class="s">"3400"</span><span class="o">);</span>
+<span class="k">new</span> <span class="nf">Xembler</span><span class="o">(</span><span class="n">directives</span><span class="o">).</span><span class="na">apply</span><span class="o">(</span><span class="n">document</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>In this snippet, I’m using a supplementary script builder, <code class="language-plaintext highlighter-rouge">Directives</code>, which
+enables generation of directives in a
+<a href="/2018/03/13/fluent-interfaces.html">fluent</a> way. Then, I use <code class="language-plaintext highlighter-rouge">Xembler</code> class,
+which is similar to “assembler,” to apply all specified directives
+to the <code class="language-plaintext highlighter-rouge">document</code> object of class <code class="language-plaintext highlighter-rouge">org.w3c.dom.Document</code>.</p>
+
+<p>Additionally, Xembly can be used to build XML documents from scratch and as a replacement for traditional DOM building. A quick example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">Xembler</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">Directives</span><span class="o">().</span><span class="na">add</span><span class="o">(</span><span class="s">"html"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"head"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"title"</span><span class="o">)</span>
+      <span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">)</span>
+  <span class="o">).</span><span class="na">xml</span><span class="o">()</span>
+<span class="o">);</span>
+</code></pre></div></div>
+
+<p>The above snippet produces the following output:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>For me, this appears to be more simple and compact.</p>
+
+<p>As usual, your bug reports and suggestions are always welcomed. Please send to
+<a href="https://github.com/yegor256/xembly/issues">GitHub issues</a>.</p>
+
+    </article>
+  </body>
+</html>

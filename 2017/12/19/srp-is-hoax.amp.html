@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>SRP is a Hoax</title>
+    <link rel="canonical" href="https://www.yegor256.com/2017/12/19/srp-is-hoax.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2017/12/19/srp-is-hoax.html"
+        },
+        "headline": "SRP is a Hoax",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2017/12/the-thomas-crown-affair.jpg",
+          "height": 539,
+          "width": 1280
+        },
+        "datePublished": "2017-12-19",
+        "dateModified": "2017-12-19",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "The single responsibility principle is very popular among
+object-oriented programmers, but how practical and
+valid is it really?
+",
+        "keywords": ["srp", "single responsibility principle", "srp is fake", "srp java", "srp oop"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2017/12/19/srp-is-hoax.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>19 December 2017</p>
+      <h1>SRP is a Hoax</h1>
+      <p>The <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility Principle</a>,
+according to <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Robert Martin</a>’s
+<a href="https://amzn.to/2m7LmaA">Clean Code</a>,
+means that “a class should have only one reason to change.”
+Let’s try to decrypt this rather vague statement and see how it
+helps us design better object-oriented software. If it does.</p>
+
+
+
+<amp-img src="/images/2017/12/the-thomas-crown-affair.jpg" alt="The Thomas Crown Affair (1999) by John McTiernan" height="539" width="1280" layout="responsive"></amp-img>
+
+<p>I mentioned SRP once in <a href="/2017/03/28/solid.html">my post about SOLID</a>,
+saying that it doesn’t really help programmers understand the good old
+“<a href="https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29">high cohesion</a>”
+concept, which was introduced by
+<a href="https://en.wikipedia.org/wiki/Larry_Constantine">Larry Constantine</a>
+back in 1974. Now let’s see it by example and analyze how we can
+improve a class, with the SRP in mind, and whether it will become
+<a href="/2014/11/20/seven-virtues-of-good-object.html">more object-oriented</a>.</p>
+
+<p>Let’s try the class <a href="https://github.com/jcabi/jcabi-s3/blob/0.18/src/main/java/com/jcabi/s3/AwsOcket.java"><code class="language-plaintext highlighter-rouge">AwsOcket</code></a>
+from <a href="http://s3.jcabi.com">jcabi-s3</a> (I’ve simplified the code):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">AwsOcket</span> <span class="o">{</span>
+  <span class="kt">boolean</span> <span class="nf">exists</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">read</span><span class="o">(</span><span class="kd">final</span> <span class="nc">OutputStream</span> <span class="n">output</span><span class="o">)</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
+  <span class="kt">void</span> <span class="nf">write</span><span class="o">(</span><span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">input</span><span class="o">)</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Correct me if I’m wrong, but according to SRP this class is responsible for
+too many things:
+1) checking the existence of an object in AWS S3,
+2) reading its content, and
+3) modifying its content.
+Right? It’s not a good design and it must be changed.</p>
+
+<p>In order to change it and make it responsible for just one thing we must introduce
+a getter, which will return an AWS client and then create three new classes:
+<code class="language-plaintext highlighter-rouge">ExistenceChecker</code>, <code class="language-plaintext highlighter-rouge">ContentReader</code>, and <code class="language-plaintext highlighter-rouge">ContentWriter</code>. They will check,
+read, and write. Now, in order to read the content and print it to the
+console I’m currently doing this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">ocket</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+  <span class="n">ocket</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Tomorrow, if I refactor the class, I will be doing this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="k">new</span> <span class="nc">ExistenceChecker</span><span class="o">(</span><span class="n">ocket</span><span class="o">.</span><span class="na">aws</span><span class="o">()).</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+  <span class="k">new</span> <span class="nf">ContentReader</span><span class="o">(</span><span class="n">ocket</span><span class="o">.</span><span class="na">aws</span><span class="o">()).</span><span class="na">read</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Aside from the fact that these checkers, readers, and writers are not really
+classes, but pure holders of procedures, the usage of this <code class="language-plaintext highlighter-rouge">ocket</code> turns
+into a nightmare. We can’t really know anymore what will happen with it
+when we pass it somewhere. We can’t, for example, guarantee that the content
+that is coming from it is decrypted or decoded on the fly. We simply can’t
+decorate it. It is not an object anymore, but a holder of an AWS client,
+which is used by some other classes somewhere.</p>
+
+<p>Yes, now it is responsible for only one thing: encapsulating the reference
+to the AWS client. It is a perfect class as far as SRP is concerned. But it
+is not an object anymore.</p>
+
+<p>The same will happen with any class if you apply the SRP principle to its
+full extent: it will become a holder of data or of other objects, with a
+collection of setters and getters on top of them. Maybe with one extra
+method in addition to those.</p>
+
+
+
+<p>My point is that SRP is a wrong idea.</p>
+
+<p>Making classes small and cohesive is a good
+idea, but making them responsible “for one thing” is a misleading simplification
+of a “high cohesion” concept. It only turns them into dumb carriers of something
+else, instead of being encapsulators and decorators of smaller entities, to
+construct bigger ones.</p>
+
+<p>In our fight for this fake SRP idea we lose a much more important principle,
+which really is about true object-oriented programming and thinking:
+encapsulation. It is much less important how many things an object is
+responsible for than how tightly it protects the entities it encapsulates.
+A monster object with a hundred methods is much less of a problem than a DTO with five pairs of
+getters and setters! This is because a DTO spreads the problem all over the code,
+where we can’t even find it, while the monster object is always right in front
+of us and we can always refactor it into smaller pieces.</p>
+
+<p>Encapsulation comes first, size goes next, if ever.</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">What do you think about the Single Responsibility Principle (SRP)? <a href="https://twitter.com/hashtag/oop?src=hash&amp;ref_src=twsrc%5Etfw">#oop</a> <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1036247379140399104?ref_src=twsrc%5Etfw">September 2, 2018</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

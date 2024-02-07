@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Self-Managing vs. Manager-Free Organizations</title>
+    <link rel="canonical" href="https://www.yegor256.com/2020/12/22/self-managing-orgs.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2020/12/22/self-managing-orgs.html"
+        },
+        "headline": "Self-Managing vs. Manager-Free Organizations",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2020/12/loro.jpg",
+          "height": 1012,
+          "width": 1800
+        },
+        "datePublished": "2020-12-22",
+        "dateModified": "2020-12-22",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Self-managing organizations mean nothing practical
+but a chaos on all levels; there is a much
+better solution for management incompetence.
+",
+        "keywords": ["appraisal", "performance appraisal", "self-managing organizations", "self-management", "management"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2020/12/22/self-managing-orgs.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>22 December 2020</p>
+      <h1>Self-Managing vs. Manager-Free Organizations</h1>
+      <p>We are in trouble. On the one hand, most managers are weak and incompetent.
+Their mistakes destroy our <a href="/2017/09/19/what-motivates-me.html">motivation</a>,
+decrease productivity, and lead to business failures.
+As a result, many of us believe that managers are evil.
+On the other hand, there is a new idea that self-managing organizations are
+the future. Its proponents are trying to convince us that chaos is
+better than management mistakes. They want us to believe that subordination,
+hierarchy, <a href="/2016/09/27/command-control-innovate.html">control</a>,
+and order are new bad words to be prohibited in a respectful society.
+We must stop them!</p>
+
+
+
+<amp-img src="/images/2020/12/loro.jpg" alt="Loro (2018) by Paolo Sorrentino" height="1012" width="1800" layout="responsive"></amp-img>
+
+<p>Self-managing organization are, as some researchers
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0191308517300059">believe</a>,
+post-bureaucratic, humanistic, democratic, and even
+<a href="/2016/02/18/holacracy-autocracy.html">holacratic</a>.
+<a href="https://frankmartela.com/about-the-author/">Frank Martela</a>
+<a href="https://jorgdesign.springeropen.com/articles/10.1186/s41469-019-0062-9">says</a>
+that self-management is “an <em>ideal</em> type of organizational form.”
+The idea is trendy, especially after the publication
+of <a href="https://amzn.to/3mgxt7k">Reinventing Organizations</a> by Frederic Laloux.
+However, “calling it a novel phenomenon is utter nonsense,”
+<a href="https://corporate-rebels.com/reinventing-the-wheel/">according</a> to
+<a href="https://twitter.com/joost_minnaar">Joost Minnaar</a>—the idea has been known for decades.</p>
+
+
+
+<p>My first question is: what exactly was wrong with
+bureaucratic, un-humanistic, and non-democratic management?
+<a href="https://en.wikipedia.org/wiki/James_R._Barker">James R. Barker</a>
+made it clear <a href="https://www.jstor.org/stable/pdf/2393374.pdf">a long time ago</a>:
+“workers in a self-managing team will experience day-to-day work life in vastly
+different ways than workers in a traditional management system. Instead
+of being told what to do by a supervisor, self-managing workers must
+gather and synthesize information, act on it, and take collective
+responsibility for those actions.”</p>
+
+<p>Sounds <a href="https://medium.com/culturati/2f23c298c79b">very attractive</a>.
+Nobody tells us what to do anymore! We just look around,
+gather information, synthesize more information, and “act!” (whatever that means).
+Of course, we must not forget that money somehow arrives in our bank accounts
+every two weeks—this component of the old un-humanistic bureaucratic management model
+we don’t want to get rid of, I believe. Right, Mr. Barker?</p>
+
+<p>Seriously, who in a self-managing organization makes these decisions:</p>
+
+<ul>
+  <li>An employee asks for a raise</li>
+  <li>An employee gets lazy and must be fired</li>
+  <li>An employee needs a budget for a new project</li>
+  <li>A project must be terminated</li>
+  <li>A new employee needs to be hired</li>
+</ul>
+
+<p>Simply put, who resolves monetary and performance appraisal conflicts, and how?
+All together by “raising their thumb”
+as <a href="https://medium.com/percolab-droplets/generative-decision-making-process-cf0b131c5ac4">Generative Decision Making</a> suggests?
+Thumb-raising will work for low-caliber questions like which
+kind of coffee we should order for the office next week or what the
+best color is for our new t-shirts. However, more important strategic decisions
+may only be made by those who are ready to pay for mistakes: managers.</p>
+
+<p>In a traditional hierarchical organization, everybody has a manager, who
+is responsible for answering these questions. This is what managers are for:
+to concentrate authority and responsibility. This is what levels of management
+are for: to decompose larger authority and responsibility into
+smaller pieces, delegating them to lower-level personnel. I believe, I don’t need
+to explain this essential wisdom: it’s the fundamentals of management.
+Right, <a href="https://en.wikipedia.org/wiki/Peter_Drucker">Mr. Drucker</a>?</p>
+
+<p>However, despite the feeling that self-management adepts are not practitioners but
+liberal propagandists (trying to declare freedom to everybody without giving
+any practically possible scenarios),
+there is one idea I do share with them: managers are evil.
+Pay attention: managers, not management! There is a big difference.</p>
+
+<p>Let’s get back to the problem definition once again: We don’t like being
+told what to do. However, is this really the problem or is there something deeper
+that we are missing? Let’s see, what are the most popular issues with management that people
+complain about (I got them from
+<a href="https://www.inc.com/marcel-schwantes/8-mistakes-managers-make-according-to-their-employees.html">Inc</a>
+and
+<a href="https://www.monster.co.uk/advertise-a-job/hr-resources/workforce-management-and-planning/management-skills/what-are-the-most-common-management-mistakes/">Monster</a>):</p>
+
+<ul>
+  <li>They micromanage</li>
+  <li>They don’t listen</li>
+  <li>They don’t value us</li>
+  <li>They don’t provide feedback</li>
+  <li>They don’t motivate</li>
+  <li>They don’t set goals</li>
+  <li>They don’t delegate</li>
+  <li>They don’t explain</li>
+</ul>
+
+<p>The list may be much longer, but I think that the root cause of all of them
+is the same: managers make <em>appraisal mistakes</em>. As all other people, managers
+can’t always be objective. Instead, they are very biased and subjective. We say that they
+don’t listen. This is our perception. They do listen, but they don’t
+appraise us right, based on the information we deliver. They do listen, but they
+don’t call us genius. What do we say? They don’t listen! They don’t motivate, we say, but
+in reality they just don’t give us what we think we deserve. They don’t value us?
+The same story: we just feel unappreciated. We feel they micromanage? They just
+don’t appreciate the results we deliver without micromanagement, we stop
+delivering anything, and they resort to micromanagement.
+The root cause always is the same: appraisal mistakes.</p>
+
+<p>What can we do to fix this?
+We should take the appraisal job away from managers! This is how we solve the problem.
+People must not decide whose performance is better, because they can’t do it
+right and this leads to all the other problems. If managers stop appraising us,
+they will turn into leaders, mentors, teachers, experts, gurus, decision makers,
+and everybody else, who we don’t hate. We hate <em>appraisers</em>, because they make
+mistakes about our performance and kill our motivation. We won’t hate them
+at all, if there is a <em>system</em>, which is based on
+<a href="/2020/06/23/individual-performance-metrics.html"><em>metrics</em></a>,
+which judge our results.</p>
+
+<p>What self-managing adepts are offering is to destroy the entire management
+system and replace it with chaos (or something very close to it).
+They seem to not understand where the real problem is. They just don’t like
+“being told what to do” and to fix this they suggest getting rid
+of what our civilization has been building for thousands of years:
+responsibility delegation through subordination (aka “management”).
+They meet incompetent management that doesn’t appreciate them enough and
+start crying and blaming everybody with the word “manager” in their job titles.
+In other words, to cure the tumor they want to kill the patient.</p>
+
+<p>Let me reiterate: The evolution of management is needed! We are not happy
+with what we have now: most managers are incompetent. However, the solution is not
+self-managing but manager-less organizations. We need objective metrics,
+automated <a href="/2018/03/21/zerocracy-announcement.html">tools</a> (maybe with AI) to replace
+<a href="/2016/05/24/who-is-project-manager.html">managers</a>
+as our appraisers.</p>
+
+
+    </article>
+  </body>
+</html>

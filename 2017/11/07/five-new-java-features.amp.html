@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Five Features to Make Java Even Better</title>
+    <link rel="canonical" href="https://www.yegor256.com/2017/11/07/five-new-java-features.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2017/11/07/five-new-java-features.html"
+        },
+        "headline": "Five Features to Make Java Even Better",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2017/11/idiocracy.jpg",
+          "height": 689,
+          "width": 1280
+        },
+        "datePublished": "2017-11-07",
+        "dateModified": "2017-11-07",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Even though Java is a great language, it obviously could
+be better; there are a number of areas where I see
+room for improvement.
+",
+        "keywords": ["java dto", "java data classes", "data classes in java", "data structures in java", "java getters setters"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2017/11/07/five-new-java-features.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>7 November 2017</p>
+      <h1>Five Features to Make Java Even Better</h1>
+      <p>I stumbled upon <a href="http://cr.openjdk.java.net/~briangoetz/amber/datum.html">this proposal</a>
+by <a href="https://twitter.com/BrianGoetz">Brian Goetz</a>
+for data classes in Java, and immediately
+realized that I too have a few ideas about how to make Java better
+as a language. I actually have many of them, but this is a short list of the five most
+important.</p>
+
+
+
+<amp-img src="/images/2017/11/idiocracy.jpg" alt="Idiocracy (2006) by Mike Judge" height="689" width="1280" layout="responsive"></amp-img>
+
+<p><strong>Global Variables</strong>.
+There are <a href="https://en.wikipedia.org/wiki/Singleton_pattern">Singletons</a>
+in Java,
+which, as we all know, are nothing but
+<a href="https://en.wikipedia.org/wiki/Global_variable">global variables</a>.
+Wouldn’t it be great to enable global variables in Java and get rid of
+Singletons. PHP, JavaScript, Ruby and many other languages
+have them, why doesn’t Java? Look at this code:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">User</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="nc">User</span> <span class="no">INSTANCE</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nf">User</span><span class="o">()</span> <span class="o">{}</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="nc">User</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">synchronized</span> <span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="nc">User</span><span class="o">.</span><span class="na">INSTANCE</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nc">User</span><span class="o">.</span><span class="na">INSTANCE</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">User</span><span class="o">();</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="nc">User</span><span class="o">.</span><span class="na">INSTANCE</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// return user's name</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Then, to access it we have to use:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">name</span> <span class="o">=</span> <span class="nc">User</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getName</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>This is a Singleton. See how verbose it is?
+We can simply replace it with a global variable (<code class="language-plaintext highlighter-rouge">global</code> is the keyword
+I’m suggesting we use):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">global</span> <span class="nc">User</span> <span class="n">user</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>And then:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">user</span><span class="o">.</span><span class="na">getName</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>Much less code to write, and way easier to read!</p>
+
+<h2 id="global-functions-and-namespaces">Global Functions and Namespaces</h2>
+
+<p>To group static methods together we create
+<a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>,
+where we have to define private constructors to prevent their instantiation.
+Also, we have to remember which particular utility class a static method is in.
+It’s just extra hassle. I’m suggesting we add global functions
+to Java and optional “namespaces” to group them. Take a look at this
+utility class:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">TextUtils</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nf">TextUtils</span><span class="o">()</span> <span class="o">{}</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">trim</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">text</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="s">""</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="na">trim</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Now look at this global function with a namespace:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">namespace</span> <span class="nc">TextUtils</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">trim</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">text</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="s">""</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="na">trim</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>My point is that since we are already using classes as collections
+of functions, let’s make it more convenient. In some applications we
+won’t even need namespaces, just global functions, like in C and C++.</p>
+
+<h2 id="full-access-to-private-attributes-and-methods">Full Access to Private Attributes and Methods</h2>
+
+<p>In order to access a private attribute or a method of an object from outside we
+have to use the <a href="https://docs.oracle.com/javase/tutorial/reflect/">Reflection API</a>.
+It’s not particularly difficult, but it does take a few lines
+of code, which are not so easy to read and understand:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Point</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">x</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">y</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="nc">Point</span> <span class="n">point</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Point</span><span class="o">();</span>
+<span class="nc">Field</span> <span class="n">field</span> <span class="o">=</span> <span class="n">point</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getDeclaredField</span><span class="o">(</span><span class="s">"x"</span><span class="o">);</span>
+<span class="n">field</span><span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">field</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">point</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>I’m suggesting we allow any object to access any of the attributes and methods
+of another object:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Point</span> <span class="n">point</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Point</span><span class="o">();</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">point</span><span class="o">.</span><span class="na">x</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>Of course, if they are private, the compiler will issue a warning.
+At compile time you simply ignore the warning and move on. If you really care
+about encapsulation, pay attention to the warning and do something else. But
+in most cases programmers will ignore it, since they would happily use
+the Reflection API anyway.</p>
+
+<h2 id="null-by-default">NULL by Default</h2>
+
+<p>It would be convenient to let us call constructors and methods with an
+incomplete set of arguments. The arguments we don’t provide will be set
+to <code class="language-plaintext highlighter-rouge">null</code> by default. Also, when a method has to return something, but
+there is no <code class="language-plaintext highlighter-rouge">return</code> statement, Java should return <code class="language-plaintext highlighter-rouge">null</code>. This is almost exactly how
+it works in PHP, Ruby, and many other languages. I believe
+it would be a convenient feature for Java <del>monkeys</del> developers too.</p>
+
+<p>We won’t need to define so many methods when some of the arguments are optional.
+<a href="https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html">Method overloading</a>
+is very verbose and difficult to understand. Instead, we
+should have one method with a long list of arguments. Some of them will be
+provided by the caller, others will be set to <code class="language-plaintext highlighter-rouge">null</code>. The method will
+decide what to do, for example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">,</span> <span class="nc">String</span> <span class="n">encoding</span><span class="o">)</span> <span class="o">{</span>
+ <span class="k">if</span> <span class="o">(</span><span class="n">encoding</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+   <span class="n">encoding</span> <span class="o">=</span> <span class="s">"UTF-8"</span><span class="o">;</span>
+ <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Then we just call either <code class="language-plaintext highlighter-rouge">save(f)</code> or <code class="language-plaintext highlighter-rouge">save(f, "UTF-16")</code>. The method will
+understand what we mean. We can also make it even more convenient, like it’s
+done in Ruby, providing method arguments by names:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">save</span><span class="o">(</span><span class="nl">file:</span> <span class="n">f</span><span class="o">,</span> <span class="nl">encoding:</span> <span class="s">"UTF-16"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Also, when there is nothing to return, the method must return <code class="language-plaintext highlighter-rouge">null</code> by default.
+Writing <code class="language-plaintext highlighter-rouge">return null</code> is just a waste of a code line and doesn’t really
+improve readability. Take a look:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="nf">load</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
+ <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+   <span class="k">return</span> <span class="nf">read_the_content</span><span class="o">();</span>
+ <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>It’s obvious from this code that if the file exists, the method loads
+and returns its content. If not, it returns <code class="language-plaintext highlighter-rouge">null</code>, which will be a good
+indicator for the caller that something is not right and the content
+of the file is not available.</p>
+
+<h2 id="getters-and-setters">Getters and Setters</h2>
+
+<p>I think it’s only obvious that we need this feature: every private attribute
+must automatically have
+<a href="/2014/09/16/getters-and-setters-are-evil.html">a setter and a getter</a>.
+There should be no need
+to create them, Java will provide them out-of-the-box, just like
+<a href="https://kotlinlang.org/docs/reference/properties.html">Kotlin</a>
+and <a href="https://www.rubyist.net/~slagell/ruby/accessors.html">Ruby</a> do.
+What is the point of having an attribute if there are no getters and setters
+to read it and to modify it, right?</p>
+
+<p>With this new feature we’ll no longer need the help of
+<a href="https://projectlombok.org/features/GetterSetter">Lombok</a>,
+or <a href="https://www.jetbrains.com/help/idea/generating-getters-and-setters.html">IntelliJ IDEA</a>.</p>
+
+<hr>
+
+<p>Maybe I should turn my ideas into official proposals to
+<a href="https://jcp.org/en/participation/committee">JCP</a>. What do you think?</p>
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">Programming languages are...</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1398900025145671680?ref_src=twsrc%5Etfw">May 30, 2021</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

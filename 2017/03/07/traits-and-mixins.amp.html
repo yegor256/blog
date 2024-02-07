@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Traits and Mixins Are Not OOP</title>
+    <link rel="canonical" href="https://www.yegor256.com/2017/03/07/traits-and-mixins.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2017/03/07/traits-and-mixins.html"
+        },
+        "headline": "Traits and Mixins Are Not OOP",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2014/04/fear-and-loathing-adrenochrome.png",
+          "height": 816,
+          "width": 1920
+        },
+        "datePublished": "2017-03-07",
+        "dateModified": "2017-03-07",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Mixins and traits are becoming popular in OOP, but do
+they really have anything to do with proper object-oriented
+thinking and design?
+",
+        "keywords": ["traits", "oop traits", "mixin oop", "OOP", "trait in programming"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2017/03/07/traits-and-mixins.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>7 March 2017</p>
+      <h1>Traits and Mixins Are Not OOP</h1>
+      <p>Let me say right off the bat that the features we will discuss here are
+pure <em>poison</em> brought to object-oriented programming by those who desperately
+needed a lobotomy, just like David West suggested in his
+<a href="https://amzn.to/2ass77O">Object Thinking</a> book.
+These features have different names, but the most common ones are
+<a href="https://en.wikipedia.org/wiki/Trait_%28computer_programming%29">traits</a> and
+<a href="https://en.wikipedia.org/wiki/Mixin">mixins</a>. I seriously can’t understand
+how we can still call programming object-oriented when it has
+<a href="http://stackoverflow.com/questions/925609/mixins-vs-traits">these features</a>.</p>
+
+
+
+<amp-img src="/images/2014/04/fear-and-loathing-adrenochrome.png" alt="Fear and Loathing in Las Vegas (1998) by Terry Gilliam" height="816" width="1920" layout="responsive"></amp-img>
+
+<p>First, here’s how they work in a nutshell. Let’s use
+<a href="http://phrogz.net/programmingruby/tut_modules.html">Ruby modules</a>
+as a sample implementation. Say that we have a class <code class="language-plaintext highlighter-rouge">Book</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Book</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Now, we want class <code class="language-plaintext highlighter-rouge">Book</code> to use a static method (a procedure) that
+does something useful. We may either define it in a
+<a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility class</a>
+and let <code class="language-plaintext highlighter-rouge">Book</code> call it:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TextUtils</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">caps</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span><span class="p">.</span><span class="nf">split</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:capitalize</span><span class="p">).</span><span class="nf">join</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="k">class</span> <span class="nc">Book</span>
+  <span class="k">def</span> <span class="nf">print</span>
+    <span class="nb">puts</span> <span class="s2">"My title is </span><span class="si">#{</span><span class="no">TextUtils</span><span class="p">.</span><span class="nf">caps</span><span class="p">(</span><span class="vi">@title</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Or we may make it even more “convenient” and <code class="language-plaintext highlighter-rouge">extend</code> our module
+in order to access its methods directly:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">TextModule</span>
+  <span class="k">def</span> <span class="nf">caps</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span><span class="p">.</span><span class="nf">split</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:capitalize</span><span class="p">).</span><span class="nf">join</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="k">class</span> <span class="nc">Book</span>
+  <span class="kp">extend</span> <span class="no">TextModule</span>
+  <span class="k">def</span> <span class="nf">print</span>
+    <span class="nb">puts</span> <span class="s2">"My title is </span><span class="si">#{</span><span class="n">caps</span><span class="p">(</span><span class="vi">@title</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>It seems nice—if you don’t understand the
+<a href="/2014/05/05/oop-alternative-to-utility-classes.html">difference</a>
+between
+<a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">object-oriented programming</a>
+and static methods. Moreover, if we forget
+<a href="/2014/11/20/seven-virtues-of-good-object.html">OOP purity</a>
+for a minute, this approach actually looks less readable to me, even though it has
+fewer characters; it’s difficult to understand where the method
+<code class="language-plaintext highlighter-rouge">caps()</code> is coming from when it’s called just like <code class="language-plaintext highlighter-rouge">#{caps(@title)}</code> instead
+of <code class="language-plaintext highlighter-rouge">#{TextUtils.caps(@title)}</code>. Don’t you think?</p>
+
+<p>Mixins start to play their role better when we <code class="language-plaintext highlighter-rouge">include</code> them. We can
+combine them to construct the behavior of the class we’re looking for. Let’s
+create two mixins. The first one will be called <code class="language-plaintext highlighter-rouge">PlainMixin</code> and will print the title
+of the book the way it is, and the second one will be called <code class="language-plaintext highlighter-rouge">CapsMixin</code> and will
+capitalize what’s already printed:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">CapsMixin</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="k">super</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">split</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:capitalize</span><span class="p">).</span><span class="nf">join</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="k">module</span> <span class="nn">PlainMixin</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="vi">@title</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="k">class</span> <span class="nc">Book</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+  <span class="k">end</span>
+  <span class="kp">include</span> <span class="no">CapsMixin</span><span class="p">,</span> <span class="no">PlainMixin</span>
+  <span class="k">def</span> <span class="nf">print</span>
+    <span class="nb">puts</span> <span class="s2">"My title is </span><span class="si">#{</span><span class="nb">self</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Calling <code class="language-plaintext highlighter-rouge">Book</code> without the included mixin will print its title the way
+it is. Once we add the <code class="language-plaintext highlighter-rouge">include</code> statement, the behavior of <code class="language-plaintext highlighter-rouge">to_s</code> is
+overridden and method <code class="language-plaintext highlighter-rouge">print</code> produces a different result. We can
+combine mixins to produce the required functionality. For example,
+we can add one more, which will
+<a href="http://stackoverflow.com/a/25136035/187141">abbreviate</a> the title to 16 characters:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">AbbrMixin</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="k">super</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="sr">/^(.{16,}?).*$/m</span><span class="p">,</span><span class="s1">'\1...'</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="k">class</span> <span class="nc">Book</span>
+  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="vi">@title</span> <span class="o">=</span> <span class="n">title</span>
+  <span class="k">end</span>
+  <span class="kp">include</span> <span class="no">AbbrMixin</span><span class="p">,</span> <span class="no">CapsMixin</span><span class="p">,</span> <span class="no">PlainMixin</span>
+  <span class="k">def</span> <span class="nf">print</span>
+    <span class="nb">puts</span> <span class="s2">"My title is </span><span class="si">#{</span><span class="nb">self</span><span class="si">}</span><span class="s2">"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>I’m sure you already understand that they both have access to
+the private attribute <code class="language-plaintext highlighter-rouge">@title</code> of class <code class="language-plaintext highlighter-rouge">Book</code>. They actually have
+full access to <em>everything</em> in the class. They literally are
+“pieces of code” that we <em>inject</em> into the class to make it more
+powerful and complex. What’s wrong with this approach?</p>
+
+<p>It’s the same issue as with
+<a href="/2016/04/12/java-annotations-are-evil.html">annotations</a>,
+<a href="/2016/07/06/data-transfer-object.html">DTOs</a>,
+<a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a>,
+and <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>—they
+tear objects apart and place pieces of functionality in places
+where objects don’t see them.</p>
+
+<p>In the case of mixins, the functionality is
+in the Ruby <code class="language-plaintext highlighter-rouge">modules</code>, which make assumptions about the internal structure
+of <code class="language-plaintext highlighter-rouge">Book</code> and further assume that the programmer will still understand what’s in <code class="language-plaintext highlighter-rouge">Book</code> after
+the internal structure changes. Such assumptions completely violate
+the very idea of
+<a href="/2016/11/21/naked-data.html">encapsulation</a>.</p>
+
+<p>Such a tight coupling between mixins and object private structure
+leads to nothing but unmaintainable and difficult to understand code.</p>
+
+<p>The very obvious alternatives to mixins are
+<a href="/2015/02/26/composable-decorators.html">composable decorators</a>.
+Take a look at the example given in the
+<a href="/2015/02/26/composable-decorators.html">article</a>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Text</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AllCapsText</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">TrimmedText</span><span class="o">(</span>
+    <span class="k">new</span> <span class="nf">PrintableText</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">TextInFile</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"/tmp/a.txt"</span><span class="o">))</span>
+    <span class="o">)</span>
+  <span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
+
+<p>Doesn’t it look very similar to what we were doing above with Ruby mixins?</p>
+
+<p>However, unlike mixins, decorators leave objects small and cohesive, layering
+extra functionality on top of them. Mixins do
+the opposite—they make objects more complex and, thanks to that, less
+readable and maintainable.</p>
+
+<p>I honestly believe they are just poison. Whoever invented them
+was a long ways from understanding the philosophy of object-oriented design.</p>
+
+    </article>
+  </body>
+</html>

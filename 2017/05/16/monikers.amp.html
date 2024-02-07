@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Monikers Instead of Variables</title>
+    <link rel="canonical" href="https://www.yegor256.com/2017/05/16/monikers.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2017/05/16/monikers.html"
+        },
+        "headline": "Monikers Instead of Variables",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2017/05/oss-117.jpg",
+          "height": 713,
+          "width": 1268
+        },
+        "datePublished": "2017-05-16",
+        "dateModified": "2017-05-16",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "To make code shorter and more cohesive
+we use unmodifiable values, still calling them
+variables; why so?
+",
+        "keywords": ["variables", "oop", "variables in oop", "no variables", "algorithms in oop"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2017/05/16/monikers.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>16 May 2017</p>
+      <h1>Monikers Instead of Variables</h1>
+      <p>If we agree that all local variables <a href="https://softwareengineering.stackexchange.com/questions/48413">must be</a>
+<code class="language-plaintext highlighter-rouge">final</code>, multiple <code class="language-plaintext highlighter-rouge">return</code>s must be avoided, and
+temporal coupling between statements is evil—we can get
+rid of variables entirely and replace them with <em>inline values</em>
+and their <em>monikers</em>.</p>
+
+
+
+<amp-img src="/images/2017/05/oss-117.jpg" alt="OSS 117: Cairo, Nest of Spies (2006) by Michel Hazanavicius" height="713" width="1268" layout="responsive"></amp-img>
+
+<p>Here is the code from Section 5.10 (<em>Algorithms</em>) of my book
+<a href="https://amzn.to/2pjciUY"><em>Elegant Objects</em></a>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">Secret</span> <span class="n">secret</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Secret</span><span class="o">();</span>
+    <span class="k">new</span> <span class="nf">Farewell</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Attempts</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">VerboseDiff</span><span class="o">(</span>
+          <span class="k">new</span> <span class="nf">Diff</span><span class="o">(</span>
+            <span class="n">secret</span><span class="o">,</span>
+            <span class="k">new</span> <span class="nf">Guess</span><span class="o">()</span>
+          <span class="o">)</span>
+        <span class="o">),</span> <span class="mi">5</span>
+      <span class="o">),</span>
+      <span class="n">secret</span>
+    <span class="o">).</span><span class="na">say</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Pay attention to the variable <code class="language-plaintext highlighter-rouge">secret</code>. It exists here because we
+need its value twice: first, as a constructor argument for the <code class="language-plaintext highlighter-rouge">Diff</code>, second
+as a constructor argument for the <code class="language-plaintext highlighter-rouge">Farewell</code>. We can’t <em>inline</em> the value by
+creating two separate instances of class <code class="language-plaintext highlighter-rouge">Secret</code>, because it really has
+to be the same object—it encapsulates the number that we hide
+from the user in a number-guessing game.</p>
+
+<p>There could be many other situations where a <em>value</em> needs to be used multiple
+times while remaining unmodifiable. Why do we still call these values <em>variables</em> if
+technically they are constants?</p>
+
+<p>I’m suggesting we introduce “monikers” for these values, assigning them
+through the <code class="language-plaintext highlighter-rouge">as</code> keyword. For example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">new</span> <span class="nf">Farewell</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Attempts</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">VerboseDiff</span><span class="o">(</span>
+          <span class="k">new</span> <span class="nf">Diff</span><span class="o">(</span>
+            <span class="k">new</span> <span class="nf">Secret</span><span class="o">()</span> <span class="n">as</span> <span class="n">secret</span><span class="o">,</span>
+            <span class="k">new</span> <span class="nf">Guess</span><span class="o">()</span>
+          <span class="o">)</span>
+        <span class="o">),</span> <span class="mi">5</span>
+      <span class="o">),</span>
+      <span class="n">secret</span>
+    <span class="o">).</span><span class="na">say</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Here <code class="language-plaintext highlighter-rouge">new Secret()</code> is the inlined value and <code class="language-plaintext highlighter-rouge">secret</code> is its <em>moniker</em>, which
+we use a few lines later.</p>
+
+<p>It would be great to have this feature in Java, right?</p>
+
+    </article>
+  </body>
+</html>

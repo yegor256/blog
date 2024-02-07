@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Jare.io, an Instant and Free CDN</title>
+    <link rel="canonical" href="https://www.yegor256.com/2016/03/30/jare-instant-free-cdn.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2016/03/30/jare-instant-free-cdn.html"
+        },
+        "headline": "Jare.io, an Instant and Free CDN",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2016-03-30",
+        "dateModified": "2016-03-30",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "If you want your images, script, or CSS files
+be available via a CDN, use jare.io, an instant
+and free service.
+",
+        "keywords": ["CDN", "simple CDN", "quick CDN", "fast CDN", "free CDN"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2016/03/30/jare-instant-free-cdn.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>30 March 2016</p>
+      <h1>Jare.io, an Instant and Free CDN</h1>
+      
+
+<p>CDN stands for a Content Delivery Network. Technically, it is a bunch
+of servers located in different countries and continents. You give them
+your <code class="language-plaintext highlighter-rouge">logo.gif</code> and they give you a URL, which resolves to a different
+server depending on who is trying to resolve it. As a result, the
+file is always close to the end-user and your website loads much faster
+than without a CDN. Sounds good, but all CDN providers want money
+for their service and usually a rather complex setup and registration
+procedure. My pet project <a href="https://www.jare.io">jare.io</a> is a free
+CDN that is simple to configure. It utilizes AWS CloudFront resources.</p>
+
+
+
+<p>First, let me show how it works and then, if you’re interested in
+the details, I will explain how it’s done internally. Say you have
+this HTML:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"//www.teamed.io/image/logo.svg"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>I want this <code class="language-plaintext highlighter-rouge">logo.svg</code> to be delivered via a CDN. There are two steps.
+First, I register my domain at <a href="https://www.jare.io">jare.io</a>:</p>
+
+
+
+<p>Second, I change my HTML:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"//cf.jare.io/?u=https://www.teamed.io/images/logo.svg"</span><span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<p>That’s it.</p>
+
+<p>Try it with your own resources and you will see how
+much faster they will be loaded.</p>
+
+<p>It’s absolutely free, but I ask you to be reasonable. If your traffic
+is huge, you need your own account in CloudFront or somewhere else. My
+service is for small projects.</p>
+
+<p>Now for more technical details, if you want to know how technically
+this solution works. First, let’s discuss what CDN is and how it works.</p>
+
+<h2 id="url-dns-tcp-http">URL, DNS, TCP, HTTP</h2>
+
+<p>When your browser wants to load an image, it has a <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Locator">URL</a>
+for that, like in the example above. This is the URL: <code class="language-plaintext highlighter-rouge">https://www.teamed.io/image/logo.svg</code>.
+There are three important parts in this address. First is <code class="language-plaintext highlighter-rouge">http</code>, the
+<a href="https://en.wikipedia.org/wiki/Communications_protocol">protocol</a>.
+Second is <code class="language-plaintext highlighter-rouge">www.teamed.io</code>, the <a href="https://en.wikipedia.org/wiki/Host_%28network%29">host</a> name,
+and the tail <code class="language-plaintext highlighter-rouge">/images/logo.svg</code>, which is the
+<a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier#Syntax">path</a>.
+To load the image, the browser has to open a
+<a href="https://en.wikipedia.org/wiki/Network_socket">socket</a>,
+connecting your computer and the server, which has the image. To open a
+socket, the browser needs to know the
+<a href="https://en.wikipedia.org/wiki/IP_address">IP address</a> of the server.</p>
+
+<p>There is no such address in that URL. In order to find the IP address,
+the browser is doing what is called a lookup. It connects to the
+nearest <a href="https://en.wikipedia.org/wiki/Name_server">name server</a>
+and asks “what is the IP address of www.teamed.io?”
+The answer usually contains a single IP address:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nslookup www.teamed.io
+Server:   172.16.0.1
+Address:  172.16.0.1#53
+
+Non-authoritative answer:
+www.teamed.io canonical name = teamed.github.io.
+teamed.github.io  canonical name = github.map.fastly.net.
+Name: github.map.fastly.net
+Address: 199.27.79.133
+</code></pre></div></div>
+
+<p>IP address of <code class="language-plaintext highlighter-rouge">www.teamed.io</code> is <code class="language-plaintext highlighter-rouge">199.27.79.133</code>, at the time of writing.</p>
+
+<p>When the address is known, the browser opens a new socket and sends
+an <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_message">HTTP request</a>
+through it:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /images/logo.svg HTTP/1.1
+Host: www.teamed.io
+Accept: image/*
+</code></pre></div></div>
+
+<p>The server responds with an
+<a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Response_message">HTTP response</a>:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+Content-Type: image/svg+xml
+
+[SVG image content goes here, over 1000 bytes]
+</code></pre></div></div>
+
+<p>That is the <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a>
+image we’re looking for. The browser renders it on the web page
+and that’s it.</p>
+
+<h2 id="the-network-of-edge-servers">The Network of Edge Servers</h2>
+
+<p>So far so good, but if the distance between your browser and that IP address
+is rather large, loading the image will take a lot of time. Well, hundreds
+of milliseconds. Try to load this image, which is located on a server
+that is hosted in Prague, Czech Republic (I’m using <code class="language-plaintext highlighter-rouge">curl</code> as suggested
+<a href="https://josephscott.org/archives/2011/10/timing-details-with-curl/">here</a>):</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -w "@f.txt" -o /dev/null -s \
+  https://www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
+    time_namelookup:  0.005
+       time_connect:  0.376
+   time_pretransfer:  0.377
+ time_starttransfer:  0.566
+                    ----------
+         time_total:  0.567
+</code></pre></div></div>
+
+<p>I’m trying to do it from Palo Alto, California, which is about half a globe
+away from Prague. As you can see, it takes over 500ms. That’s too much, especially
+if a web page contains many images. Overall, page loading may take seconds,
+just because the server is too far away from me. Well, it will inevitably be
+too far away from some users, no matter where we host it. If we host it here
+in California, it will be close enough to me and the image will be loaded
+instantly (less than 50ms). But then it will be too slow for users in Prague.</p>
+
+<p>This problem has no solutions if the server generates images or pages
+on the fly in some unique way and if we can’t install a number of servers
+in different countries and continents. But in most cases, such as our logo example, this is not a problem.
+This logo doesn’t need to be unique for
+each user. It is a very <em>static</em> resource, which needs to be created only once
+and be delivered to everybody, without any changes.</p>
+
+<p>So, how about we install a server somewhere here in California and let
+Californian users connect to it. When a request for <code class="language-plaintext highlighter-rouge">logo.gif</code> comes
+to one of the <em>edge</em> servers, it will connect to the central server
+in Prague and load the file. This will happen only once. After that, the
+edge server will not request the file
+from the central server. It will return it immediately, from its internal cache.</p>
+
+<p>We need to have many edge servers, preferably in all countries where
+our users may be located. The first request will take longer, but all others
+will be much faster because they will be served from the closest edge server.</p>
+
+<p>Now, the question is how the browser will know which edge server is the closest, right?
+We simply trick the domain name resolution process. Depending on who is asking,
+the DNS will give different answers. Let’s take <code class="language-plaintext highlighter-rouge">cf.jare.io</code>, for example (it
+is the name of all edge servers responsible for delivering our content
+in AWS CloudFront, a CNAME for <code class="language-plaintext highlighter-rouge">djk1be5eatcae.cloudfront.net</code>).
+If I’m looking it up from California, I’m getting the following answer:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nslookup cf.jare.io
+Server:   192.168.1.1
+Address:  192.168.1.1#53
+
+Non-authoritative answer:
+cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
+Name: djk1be5eatcae.cloudfront.net
+Address: 54.230.141.211
+</code></pre></div></div>
+
+<p>An edge server with IP address <code class="language-plaintext highlighter-rouge">54.230.141.211</code> is located in
+<a href="https://db-ip.com/54.230.141.211">San Francisco</a>. This
+is rather close to me, less than fifty miles. If I do the same operation
+from a server in Virginia, I get a different response:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ nslookup cf.jare.io
+Server:   172.16.0.23
+Address:  172.16.0.23#53
+
+Non-authoritative answer:
+cf.jare.io  canonical name = djk1be5eatcae.cloudfront.net.
+Name: djk1be5eatcae.cloudfront.net
+Address: 52.85.131.217
+</code></pre></div></div>
+
+<p>An edge server with IP address <code class="language-plaintext highlighter-rouge">52.85.131.217</code> is located in
+<a href="https://db-ip.com/52.85.131.217">Washington</a>, which is far away from
+me, but very close to the server I was making the lookup from.</p>
+
+<p>There are thousands of name servers around the world and all of them
+have different information about where that edge server <code class="language-plaintext highlighter-rouge">cf.jare.io</code>
+is physically located. Depending on who is asking, the answer will be different.</p>
+
+<h2 id="aws-cloudfront">AWS CloudFront</h2>
+
+<p><a href="https://aws.amazon.com/cloudfront/">CloudFront</a> is one of the simplest
+CDN solutions. All you have to do to start delivering your content
+through their edge nodes is to create a “distribution” and configure it.
+A distribution is basically a connector between content origin and
+edge servers:</p>
+
+<p><object data="/uml/b5d40b6498ca48f6d2efc8671dd6d1e6.svg" type="image/svg+xml" class="plantuml"></object></p>
+
+<p>One of edge servers receives an HTTP request. If it already has that
+<code class="language-plaintext highlighter-rouge">logo.svg</code> in its cache, it immediately returns an HTTP response with its
+content inside. If its cache is empty, the edge server makes an HTTP
+request to the central server. This server knows about the “distribution”
+and its configuration. It makes an HTTP connection to the origin server,
+which is <code class="language-plaintext highlighter-rouge">www.teamed.io</code> and asks it to return <code class="language-plaintext highlighter-rouge">logo.svg</code>. When done,
+the image is returned to the edge server, where it is cached.</p>
+
+<p>This looks rather simple, but it’s not free and it’s not that quick to configure.
+You have to create an account with CloudFront, register your credit card
+there, and get an approval. Then you have to create a distribution and configure it.
+You should then create that CNAME in your name server. If you’re doing it
+for a single website, it’s not a big deal. If you have a dozen websites,
+it’s a time consuming operation.</p>
+
+<h2 id="jareio-a-middle-man">Jare.io, a Middle Man</h2>
+
+<p>Jare.io is an extra component in that diagram, which makes your
+life easier:</p>
+
+<p><object data="/uml/aecf8b3862f82e6d5d8d27e948d45c83.svg" type="image/svg+xml" class="plantuml"></object></p>
+
+<p>Jare.io has a “relay,” which acts as an origin server for CloudFront. All
+requests that arrive to <code class="language-plaintext highlighter-rouge">cf.jare.io</code> are dispatched to the relay. The relay
+decides what to do with them. The decision is based on the information
+from the HTTP request URI. For example, the request from the browser
+has this URI path:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/?u=https://www.teamed.io/images/logo.svg
+</code></pre></div></div>
+
+<p>Remember, the request is made to <code class="language-plaintext highlighter-rouge">cf.jare.io</code>, which is the address of
+the edge server. This exact URI arrives at <code class="language-plaintext highlighter-rouge">relay.jare.io</code>. The URI contains
+enough information to make a decision about which file has to be returned.
+The relay makes a new HTTP request to <code class="language-plaintext highlighter-rouge">www.teamed.io</code> and retrieves the image.</p>
+
+<p>The beauty of this solution is that it’s easy. For small websites,
+it is a free and quick CDN.</p>
+
+<p>By the way, when we query the same image through jare.io (and CloudFront),
+it comes back much faster:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -w "@f.txt" -o /dev/null -s \
+  http://cf.jare.io/?u=www.vlada.cz/images/vlada/vlada-ceske-republiky_en.gif
+    time_namelookup:  0.005
+       time_connect:  0.021
+   time_pretransfer:  0.021
+ time_starttransfer:  0.041
+                    ----------
+         time_total:  0.041
+</code></pre></div></div>
+
+<p>Most of the work is done by AWS CloudFront, while jare.io is just a
+relay that makes its configuration more convenient. Besides, it makes
+it free, because jare.io is sponsored by
+<a href="https://www.zerocracy.com">Zerocracy</a>. In other words, my company will
+pay for your usage of CloudFront. I would appreciate if you kept that in
+mind and didn’t use jare.io for traffic-intensive resources.</p>
+
+    </article>
+  </body>
+</html>

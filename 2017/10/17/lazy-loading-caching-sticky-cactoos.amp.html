@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Lazy Loading and Caching via Sticky Cactoos Primitives</title>
+    <link rel="canonical" href="https://www.yegor256.com/2017/10/17/lazy-loading-caching-sticky-cactoos.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2017/10/17/lazy-loading-caching-sticky-cactoos.html"
+        },
+        "headline": "Lazy Loading and Caching via Sticky Cactoos Primitives",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2017/10/reality.jpg",
+          "height": 778,
+          "width": 1828
+        },
+        "datePublished": "2017-10-17",
+        "dateModified": "2017-10-17",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Lazy loading is a popular technique in OOP, which is usually
+done through NULL references; Cactoos offers a better way,
+with the help of a few Java primitives.
+",
+        "keywords": ["java cache", "java lazy loading", "java cache in memory", "java cactoos", "cactoos"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2017/10/17/lazy-loading-caching-sticky-cactoos.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>17 October 2017</p>
+      <h1>Lazy Loading and Caching via Sticky Cactoos Primitives</h1>
+      <p>You obviously know what <a href="https://en.wikipedia.org/wiki/Lazy_loading">lazy loading</a>
+is, right? And you no doubt know about <a href="https://en.wikipedia.org/wiki/Cache_%28computing%29">caching</a>.
+To my knowledge, there is no elegant way in Java to implement either of them. Here
+is what I found out for myself with the help of Cactoos primitives.</p>
+
+
+
+<amp-img src="/images/2017/10/reality.jpg" alt="Reality (2012) by Matteo Garrone" height="778" width="1828" layout="responsive"></amp-img>
+
+<p>Let’s say we need an object that will encrypt some text. Speaking in
+a more object-oriented way, it will encapsulate the text and <em>become</em> its
+encrypted form. Here is how we will use it (let’s create
+<a href="/2017/03/24/tdd-that-works.html">tests first</a>):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">asString</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="nc">Encrypted</span> <span class="n">enc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">EncryptedX</span><span class="o">(</span><span class="s">"Hello, world!"</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">enc</span><span class="o">.</span><span class="na">asString</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>Now let’s implement it, in a very primitive way, with one
+<a href="/2015/05/28/one-primary-constructor.html">primary</a>
+constructor. The encryption mechanism
+will just add <code class="language-plaintext highlighter-rouge">+1</code> to each byte in the incoming data, and will assume that
+the encryption won’t break anything (a very stupid
+assumption, but for the sake of this example it will work):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted1</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">text</span><span class="o">;</span>
+  <span class="nc">Encrypted1</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="n">txt</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">asString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">in</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">getBytes</span><span class="o">();</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">out</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="o">(</span><span class="n">in</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">out</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Looks correct so far? I <a href="https://github.com/yegor256/blog/tree/master/_samples/2017/10/sticky">tested it</a>
+and it works. If the input is <code class="language-plaintext highlighter-rouge">"Hello, world!"</code>,
+the output will be <code class="language-plaintext highlighter-rouge">"Ifmmp-!xpsme\""</code>.</p>
+
+<p>Next, let’s say that we want our class to accept an
+<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html"><code class="language-plaintext highlighter-rouge">InputStream</code></a>
+as well as a
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html"><code class="language-plaintext highlighter-rouge">String</code></a>.
+We want to call it like this, for example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Encrypted</span> <span class="n">enc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Encrypted2</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">FileInputStream</span><span class="o">(</span><span class="s">"/tmp/hello.txt"</span><span class="o">)</span>
+<span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">enc</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>Here is the most obvious implementation, with two
+<a href="/2015/05/28/one-primary-constructor.html">primary</a>
+constructors (again, the implementation is primitive, but works):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted2</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">text</span><span class="o">;</span>
+  <span class="nc">Encrypted2</span><span class="o">(</span><span class="nc">InputStream</span> <span class="n">input</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="nc">ByteArrayOutputStream</span> <span class="n">baos</span> <span class="o">=</span>
+      <span class="k">new</span> <span class="nf">ByteArrayOutputStream</span><span class="o">();</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+      <span class="kt">int</span> <span class="n">one</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">one</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="o">}</span>
+      <span class="n">baos</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">one</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">baos</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">());</span>
+  <span class="o">}</span>
+  <span class="nc">Encrypted2</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="n">txt</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="c1">// asString() is exactly the same as in Encrypted1</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Technically it works, but stream reading is right inside the constructor,
+which is <a href="/2015/05/07/ctors-must-be-code-free.html">bad practice</a>.
+<a href="/2015/05/28/one-primary-constructor.html">Primary</a>
+constructors must not do anything but attribute assignments, while secondary
+ones may only create new objects.</p>
+
+<p>Let’s try to refactor and introduce lazy loading:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted3</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">String</span> <span class="n">text</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">input</span><span class="o">;</span>
+  <span class="nc">Encrypted3</span><span class="o">(</span><span class="nc">InputStream</span> <span class="n">stream</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">input</span> <span class="o">=</span> <span class="n">stream</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">Encrypted3</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="n">txt</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">input</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">asString</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">ByteArrayOutputStream</span> <span class="n">baos</span> <span class="o">=</span>
+        <span class="k">new</span> <span class="nf">ByteArrayOutputStream</span><span class="o">();</span>
+      <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">one</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">one</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+          <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+        <span class="n">baos</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">one</span><span class="o">);</span>
+      <span class="o">}</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">baos</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">());</span>
+    <span class="o">}</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">in</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">getBytes</span><span class="o">();</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">out</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="o">(</span><span class="n">in</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">out</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Works great, but looks ugly. The ugliest part is these two lines of course:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+<span class="k">this</span><span class="o">.</span><span class="na">input</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>They make the object
+<a href="/2014/06/09/objects-should-be-immutable.html">mutable</a>
+and they’re using <a href="/2014/05/13/why-null-is-bad.html">NULL</a>. It’s ugly,
+trust me. Unfortunately, lazy loading and NULL references always come together in
+<a href="https://stackoverflow.com/a/2192271/187141">classic examples</a>.
+However there is a better way to implement it.
+Let’s refactor our class, this time using
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html"><code class="language-plaintext highlighter-rouge">Scalar</code></a>
+from
+<a href="https://www.cactoos.org">Cactoos</a>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted4</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">text</span><span class="o">;</span>
+  <span class="nc">Encrypted4</span><span class="o">(</span><span class="nc">InputStream</span> <span class="n">stream</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span>
+      <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+        <span class="nc">ByteArrayOutputStream</span> <span class="n">baos</span> <span class="o">=</span>
+          <span class="k">new</span> <span class="nf">ByteArrayOutputStream</span><span class="o">();</span>
+        <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+          <span class="kt">int</span> <span class="n">one</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="na">read</span><span class="o">();</span>
+          <span class="k">if</span> <span class="o">(</span><span class="n">one</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">break</span><span class="o">;</span>
+          <span class="o">}</span>
+          <span class="n">baos</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">one</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">baos</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">());</span>
+      <span class="o">}</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">Encrypted4</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">txt</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">Encrypted4</span><span class="o">(</span><span class="nc">Scalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">source</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;&gt;(</span><span class="n">source</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">asString</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">IOException</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">in</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">value</span><span class="o">().</span><span class="na">getBytes</span><span class="o">();</span>
+    <span class="kd">final</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">in</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">out</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="o">(</span><span class="n">in</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="mi">1</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span><span class="n">out</span><span class="o">);</span>
+  <span class="o">}</span>
+</code></pre></div></div>
+
+<p>Now it looks way better. First of all, there is only one primary constructor and
+two secondary ones. Second, the object is
+<a href="/2014/06/09/objects-should-be-immutable.html">immutable</a>.
+Third, there is still a lot
+of room for
+<a href="/2014/11/07/how-immutability-helps.html">improvement</a>:
+we can add more constructors which will accept
+other sources of data, for example
+<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html"><code class="language-plaintext highlighter-rouge">File</code></a> or a byte array.</p>
+
+
+
+<p>In a nutshell, the attribute that is supposed to be loaded in a “lazy” way
+is represented inside an object as a “function”
+(<a href="https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">lambda expression</a> in
+Java 8). Until we touch that attribute, it’s not loaded. Once we need
+to work with it, the function gets executed and we have the result.</p>
+
+<p>There is one problem with this code though. It will read the input stream
+every time we call <code class="language-plaintext highlighter-rouge">asString()</code>, which will obviously not work, since only
+the first time will the stream have the data. On every subsequent call the stream
+will simply be empty. Thus, we need to make sure that <code class="language-plaintext highlighter-rouge">this.text.value()</code>
+executes the encapsulated <code class="language-plaintext highlighter-rouge">Scalar</code> only once. All later calls must return the
+previously calculated value. So we need to <em>cache</em> it. Here is how:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted5</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">text</span><span class="o">;</span>
+  <span class="c1">// same as above in Encrypted4</span>
+  <span class="nc">Encrypted5</span><span class="o">(</span><span class="nc">Scalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">source</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;&gt;(</span>
+      <span class="k">new</span> <span class="nc">StickyScalar</span><span class="o">&lt;&gt;(</span><span class="n">source</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="c1">// same as above in Encrypted4</span>
+</code></pre></div></div>
+
+<p>This <a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html"><code class="language-plaintext highlighter-rouge">StickyScalar</code></a>
+will make sure that only the first call to its method <code class="language-plaintext highlighter-rouge">value()</code>
+will go through to the encapsulated <code class="language-plaintext highlighter-rouge">Scalar</code>. All other calls will receive
+the result of the first call.</p>
+
+<p>The last problem to solve is about concurrency. The code we have above is not
+thread safe. If I create an instance of <code class="language-plaintext highlighter-rouge">Encrypted5</code> and pass it to two threads,
+which call <code class="language-plaintext highlighter-rouge">asString()</code> simultaneously, the result will be unpredictable,
+simply because
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html"><code class="language-plaintext highlighter-rouge">StickyScalar</code></a>
+is not thread-safe. There is another primitive to help us out though, called
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/SyncScalar.html"><code class="language-plaintext highlighter-rouge">SyncScalar</code></a>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Encrypted5</span> <span class="kd">implements</span> <span class="nc">Encrypted</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">text</span><span class="o">;</span>
+  <span class="c1">// same as above in Encrypted4</span>
+  <span class="nc">Encrypted5</span><span class="o">(</span><span class="nc">Scalar</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">source</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">IoCheckedScalar</span><span class="o">&lt;&gt;(</span>
+      <span class="k">new</span> <span class="nc">SyncScalar</span><span class="o">&lt;&gt;(</span>
+        <span class="k">new</span> <span class="nc">StickyScalar</span><span class="o">&lt;&gt;(</span><span class="n">source</span><span class="o">)</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="c1">// same as above in Encrypted4</span>
+</code></pre></div></div>
+
+<p>Now we’re safe and the design is elegant. It includes lazy loading and caching.</p>
+
+<p>I’m using this approach in many projects now and it seems convenient,
+clear, and object-oriented.</p>
+
+    </article>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Trust Them to Get the Job Done, ... Not!</title>
+    <link rel="canonical" href="https://www.yegor256.com/2019/05/28/trust-or-not.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2019/05/28/trust-or-not.html"
+        },
+        "headline": "Trust Them to Get the Job Done, ... Not!",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2019/05/metro-manila.jpg",
+          "height": 842,
+          "width": 1200
+        },
+        "datePublished": "2019-05-28",
+        "dateModified": "2019-05-28",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Treating programmers in a binary way as either trustable or not is a typical
+mistake of a weak manager, which leads to fear and chaos
+in a team.
+",
+        "keywords": ["agile", "punishment", "rewards", "bonuses", "trust"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2019/05/28/trust-or-not.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>28 May 2019</p>
+      <h1>Trust Them to Get the Job Done, ... Not!</h1>
+      <p>There are <a href="/2016/07/11/mistakes-in-agile-manifesto.html">twelve</a>
+principles in the <a href="http://agilemanifesto.org/principles.html">Agile Manifesto</a>.
+The fifth one says: “Build projects around motivated individuals.
+Give them the environment and support they need,
+and trust them to get the job done.”
+I disagree. Strongly. This formula suggests treating people in a binary way: they
+are either motivated and trusted or … what? They have to be let go?
+This mindset is very typical, according to my observations, and leads
+to <a href="/2017/11/21/trust-pay-lose.html">poor management</a> and project failures.
+Instead, our people management must be more <em>iterative</em> and much less <em>rigid</em>.</p>
+
+
+
+<amp-img src="/images/2019/05/metro-manila.jpg" alt="Metro Manila (2013) by Sean Ellis" height="842" width="1200" layout="responsive"></amp-img>
+
+<p>Just a few days ago I posted a <a href="https://www.instagram.com/p/Bx6gJAngsT5/">quote</a> from
+<a href="/code-ahead.html"><em>Code Ahead</em></a>, my recent book about
+software engineering, on Instagram. I’ve got an interesting and very typical
+response from one of my readers (polished a bit):</p>
+
+<blockquote>
+  <p>Why should I get punished in the first place;
+  if my mistake is unforgiven they should fire me, and I believe this
+  is less humiliating than getting punished and then staying with them.</p>
+</blockquote>
+
+<p>This is what I hear almost always when I start talking about rewards and
+punishment in a software team. I hear that it is <em>humiliating</em> and
+programmers should <em>never</em> be punished. Instead, as <a href="https://www.instagram.com/samir.bouazza.2017/">Samir</a>
+suggested, they should be fired when they make
+an <em>unforgiven</em> mistake. Thus, we either trust them 100% or, when a mistake
+happens, we … fire the bloody bastard, he was useless anyway!</p>
+
+<p>Well, maybe this is part of human nature: First we love, then we hate, and
+<a href="https://drhurd.com/2018/04/29/stronger-love-stronger-hate/">the stronger we love, the stronger we hate</a>.
+But what do these emotions have to do with professional
+<a href="/2016/05/24/who-is-project-manager.html">project management</a>?</p>
+
+<p>As <a href="https://en.wikipedia.org/wiki/W._Edwards_Deming">William Edwards Deming</a>
+suggested many years ago, good management is always about a simple
+<a href="https://en.wikipedia.org/wiki/PDCA">Plan-Do-Check-Act</a> cycle.
+No matter what and who we manage, we have to <em>plan</em> first,
+let ourselves and our people <em>do</em> the work, then <em>check</em> what the results look like, comparing
+them with our plans, and finally <em>act</em> according to the findings, correcting
+the plans. Then, we go back to the planning part and the cycle starts
+over again:</p>
+
+
+
+<p>We all know that this is how software has to be developed. Many years ago
+we all realized that a <a href="https://en.wikipedia.org/wiki/Waterfall_model">Waterfall model</a>,
+where everything was planned upfront
+and then implemented according to the plans, which didn’t change during the
+course of the project, was a bad idea. A much better idea is to deliver
+the software <a href="https://en.wikipedia.org/wiki/Incremental_build_model">incrementally</a>,
+making changes to the plans and specifications
+after each iteration. This <a href="https://en.wikipedia.org/wiki/Iterative_and_incremental_development">guarantees</a>
+higher quality, faster reaction to mistakes,
+and a much better predictability. It’s obvious, right?</p>
+
+<p>Why don’t we do the same with people? Why do we motivate them upfront
+and then trust them … until they turn out to be completely <em>untrustworthy</em>?
+Can’t we regularly check
+how they are performing and correct our <em>trust</em> accordingly? Why are they
+either “great” for us or “useless”? Why can’t we grade them after each
+iteration, according to both mistakes <em>and</em> achievements they make?</p>
+
+<p>Let’s see how the formula that Agile suggests can be applied to the
+PDCA continuum:</p>
+
+<ul>
+  <li>Plan: Find individuals and motivate them</li>
+  <li>Do: Trust them and they get the job done</li>
+  <li>Check: —</li>
+  <li>Act: —</li>
+</ul>
+
+<p>It seems that two important pieces are missing. We don’t check whether
+we can still trust them, whether they are still motivated, whether they are
+interested in getting the job done, and whether it’s time to
+<a href="/2015/09/16/how-to-fire-someone-right.html">replace</a>
+some of them.</p>
+
+<p>Why so? What are we afraid of?</p>
+
+<p>Moreover, why do programmers find it humiliating when their results are being
+regularly checked, leading to micro rewards and penalties, while at the same
+time they find it totally OK to be fired for a single “unforgiven” mistake?</p>
+
+<p>I have an answer.</p>
+
+<p>Because their managers are <a href="/2017/08/01/how-to-manage-a-manager.html">weak and stupid</a>,
+in most cases. They simply
+don’t know how to reward and penalize programmers incrementally. They don’t
+know how to measure the progress of people, incrementally. Their control instruments
+are based on guilt and fear: They put programmers together,
+<del>brainwash</del> <a href="/2016/12/06/how-to-pay-programmers-less.html">motivate</a>
+them, and then make them scared of making an unforgivable mistake.</p>
+
+
+
+<p>What exactly that mistake is, nobody really knows—it’s
+a personal decision of a manager. It could be a broken unit test,
+a missed <a href="/2015/07/13/meetings-are-legalized-robbery.html">meeting</a>,
+a rude email, or drinking in the office. The scale is
+very wide and at which point the programmer will be fired, nobody
+knows either. Even the manager can’t explain it. The decision in most cases is
+<a href="/2015/10/06/how-to-be-good-office-slave.html">emotional and personal</a>.</p>
+
+<p>You know that a very typical mistake in scope management is treating
+large tasks with the 0/100 completeness rule: they are either “not even started”
+or “fully complete,” and nothing in the middle. You can do that with
+<a href="/2017/11/28/microtasking.html">small tasks</a>,
+but never with large ones, because it will lead to lack of control
+and much higher risk of more expensive failures. You must break your scope
+into smaller pieces and then apply the 0/100 rule.</p>
+
+<p>The same is true about people. You can’t <a href="/2017/11/21/trust-pay-lose.html">trust</a>
+them 0/100: either you trust
+them fully or you fire them. This is too risky. You have to <em>decompose</em>
+their trustworthiness and their motivation into smaller pieces and deliver your
+satisfaction and frustration incrementally. How do you do that? Via
+<a href="/2018/01/09/micro-budgeting.html">micro-bonuses</a> and
+<a href="/2018/01/09/micro-budgeting.html">micro-penalties</a>.</p>
+
+<p>How else?</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">How to not hire a bad programmer? <a href="https://twitter.com/hashtag/management?src=hash&amp;ref_src=twsrc%5Etfw">#management</a></p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1140200517555146753?ref_src=twsrc%5Etfw">June 16, 2019</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

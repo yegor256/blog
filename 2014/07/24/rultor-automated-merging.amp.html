@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Rultor.com, a Merging Bot</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/07/24/rultor-automated-merging.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/07/24/rultor-automated-merging.html"
+        },
+        "headline": "Rultor.com, a Merging Bot",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2014-07-24",
+        "dateModified": "2014-07-24",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Rultor.com is a bot that talks to you via GitHub
+issue tracking and helps you merge pull requests by
+passing them through a full testing cycle
+",
+        "keywords": ["docker continuous integration", "pre-flight builds", "pre-flight builds docker", "preflight builds", "preflight builds docker", "continuous integration pre-flight builds", "continuous integration preflight builds", "continuous delivery pre-flight builds"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/07/24/rultor-automated-merging.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>24 July 2014</p>
+      <h1>Rultor.com, a Merging Bot</h1>
+      
+
+<p>You get a GitHub pull request. You review it. It looks correct—it’s time
+to merge it into <code class="language-plaintext highlighter-rouge">master</code>. You post a comment in it, asking
+<a href="https://github.com/rultor">@rultor</a> to test and merge. Rultor starts a new
+<a href="https://www.docker.io">Docker</a> container, merges the pull request into <code class="language-plaintext highlighter-rouge">master</code>, runs all tests and, if
+everything looks clean—merges, pushes, and closes the request.</p>
+
+<p>Then, you ask <a href="https://github.com/rultor">@rultor</a> to deploy the current version
+to production environment. It checks out your repository, starts a new Docker
+container, executes your deployment scripts and reports to you right there in
+the GitHub issue.</p>
+
+
+
+<h2 id="why-not-jenkins-or-travis">Why not Jenkins or Travis?</h2>
+
+<p>There are many tools on the market, which automate
+<a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a> and
+continuous delivery (let’s call them DevOps).
+For example, downloadable open source
+<a href="http://jenkins-ci.org/">Jenkins</a> and hosted
+<a href="/2014/07/31/travis-and-rultor.html">Travis</a>
+both perform these tasks. So, why do we need one more?</p>
+
+
+
+<p>Well, there are three very important features that we need for our projects, but
+we can’t find all of them in any of the DevOps tools currently available on the
+market:</p>
+
+<ul>
+  <li>
+    <p><strong>Merging</strong>. We make master branch read-only in our projects,
+as <a href="/2014/07/21/read-only-master-branch.html">this article</a>
+recommends. All changes into master we pass through
+a script that validates them and merges.</p>
+  </li>
+  <li>
+    <p><strong>Docker</strong>. Every build should work in its own
+Docker container, in order to simplify configuration, isolate
+resources and make errors easily reproducible.</p>
+  </li>
+  <li>
+    <p><strong>Tell vs. Trigger</strong>. We need to communicate with DevOps tool
+through commands, right from our issue tracking system (GitHub
+issues, in most projects). All existing DevOps systems trigger
+builds on certain conditions. We need our developers to be able
+to talk to the tool, through human-like commands in the tickets they are working with.</p>
+  </li>
+</ul>
+
+<p>A combination of these three features is what differs
+<a href="https://www.rultor.com">Rultor</a> from all other existing systems.</p>
+
+<h2 id="how-rultor-merges">How Rultor Merges</h2>
+
+<p>Once Rultor finds a <a href="https://doc.rultor.com/basics.html">merge command</a>
+in one of your GitHub pull requests, it does exactly this:</p>
+
+<ol>
+  <li>
+    <p>Reads the <a href="https://doc.rultor.com/reference.html"><code class="language-plaintext highlighter-rouge">.rultor.yml</code></a>
+YAML configuration file from the root directory of your repository.</p>
+  </li>
+  <li>
+    <p>Gets automated build execution command from it, for example <code class="language-plaintext highlighter-rouge">bundle test</code>.</p>
+  </li>
+  <li>
+    <p>Checks out your repository into a temporary directory on one of its servers.</p>
+  </li>
+  <li>
+    <p>Merges pull request into <code class="language-plaintext highlighter-rouge">master</code> branch.</p>
+  </li>
+  <li>
+    <p>Starts a new Docker container and runs <code class="language-plaintext highlighter-rouge">bundle test</code> in it.</p>
+  </li>
+  <li>
+    <p>If everything is fine, pushes modified <code class="language-plaintext highlighter-rouge">master</code> branch to GitHub.</p>
+  </li>
+  <li>
+    <p>Reports back to you, in the GitHub pull request.</p>
+  </li>
+</ol>
+
+<p>You can see it in action, for example, in this pull request:
+<a href="https://github.com/jcabi/jcabi-github/pull/878">jcabi/jcabi-github#878</a>.</p>
+
+    </article>
+  </body>
+</html>

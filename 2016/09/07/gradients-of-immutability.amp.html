@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Gradients of Immutability</title>
+    <link rel="canonical" href="https://www.yegor256.com/2016/09/07/gradients-of-immutability.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2016/09/07/gradients-of-immutability.html"
+        },
+        "headline": "Gradients of Immutability",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2016/09/twelve-monkeys.jpg",
+          "height": 671,
+          "width": 1200
+        },
+        "datePublished": "2016-09-07",
+        "dateModified": "2016-09-07",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "There are a few levels and forms of immutability in
+object-oriented programming, all of which
+can be used when they seem appropriate.
+",
+        "keywords": ["immutability", "immutability java", "immutable list", "immutable object", "immutable object java"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2016/09/07/gradients-of-immutability.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>7 September 2016</p>
+      <h1>Gradients of Immutability</h1>
+      <p>Good objects are immutable, but not necessarily constants.
+I tried to explain it <a href="/2014/06/09/objects-should-be-immutable.html">here</a>,
+<a href="/2014/12/09/immutable-object-state-and-behavior.html">here</a>, and
+<a href="/2014/12/22/immutable-objects-not-dumb.html">here</a>,
+but now it’s time to make another attempt. Actually, the more I think about it,
+the more I realize that immutability is not black or white—there
+are a few more gradients; let’s take a look.</p>
+
+
+
+<amp-img src="/images/2016/09/twelve-monkeys.jpg" alt="Twelve Monkeys (1995) by Terry Gilliam" height="671" width="1200" layout="responsive"></amp-img>
+
+<p>As we agreed <a href="/2016/07/14/who-is-object.html">here</a>,
+an object is a <em>representative</em> of someone else
+(some entity or entities, other object(s), data, memory, files, etc.).
+Let’s examine a number of objects that look exactly the same
+to us but <em>represent</em> different things, then analyze how
+immutable they are and why.</p>
+
+<h2 id="constant">Constant</h2>
+
+<p>This is <em>constant</em>; it doesn’t allow any modifications
+to the encapsulated entity and always returns the same text
+(I’ve skipped constructors for the sake of brevity):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">ttl</span><span class="o">;</span>
+  <span class="nc">Book</span> <span class="nf">rename</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Book</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">ttl</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This is what we usually have in mind when talking about immutable
+objects. Such a class is very close to a
+<a href="https://en.wikipedia.org/wiki/Pure_function">pure function</a>,
+which means that no matter how many times we instantiate it with
+the same initial values, the result of <code class="language-plaintext highlighter-rouge">title()</code> will be the same.</p>
+
+<h2 id="not-a-constant">Not a Constant</h2>
+
+<p>Check out this one:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">ttl</span><span class="o">;</span>
+  <span class="nc">Book</span> <span class="nf">rename</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Book</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"%s (as of %tR)"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">ttl</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The object is still immutable, but it is not a pure
+function anymore because of the method <code class="language-plaintext highlighter-rouge">title()</code>—it returns different values if we call it
+multiple times with at least a one-minute interval. The object
+is immutable; it’s just not a constant anymore.</p>
+
+<h2 id="represented-mutability">Represented Mutability</h2>
+
+<p>How about this one:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Path</span> <span class="n">path</span><span class="o">;</span>
+  <span class="nc">Book</span> <span class="nf">rename</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Files</span><span class="o">.</span><span class="na">write</span><span class="o">(</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">path</span><span class="o">,</span>
+      <span class="n">title</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(),</span>
+      <span class="nc">StandardOpenOption</span><span class="o">.</span><span class="na">CREATE</span>
+    <span class="o">);</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span>
+      <span class="nc">Files</span><span class="o">.</span><span class="na">readAllBytes</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">path</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This <em>immutable</em> object keeps the book title in a file. It’s not a constant,
+because its method <code class="language-plaintext highlighter-rouge">title()</code> may return different values on every
+second call. Moreover, the represented entity (the file) is not a constant.
+We can’t say whether it’s mutable or immutable, as we don’t know how <code class="language-plaintext highlighter-rouge">Files.write()</code>
+is implemented. But we know for sure that it’s not a constant, because it
+accepts change requests.</p>
+
+<h2 id="encapsulated-mutability">Encapsulated Mutability</h2>
+
+<p>An immutable object may not only represent but even
+encapsulate a mutable one. Just like in the
+previous example, a mutable file was encapsulated. Even though it
+was represented by the immutable class <code class="language-plaintext highlighter-rouge">Path</code>, the real file on disk
+was mutable. We can do the same, but in memory:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">StringBuffer</span> <span class="n">buffer</span><span class="o">;</span>
+  <span class="nc">Book</span> <span class="nf">rename</span><span class="o">(</span><span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">setLength</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">title</span><span class="o">);</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">title</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">buffer</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The object is still <em>immutable</em>. Is it
+<a href="/2017/01/17/synchronized-decorators.html">thread-safe</a>? No. Is it a constant?
+No. Is it immutable? Yes. Confused? You bet.</p>
+
+<hr>
+
+
+
+<p>My point is that immutability is not <em>binary</em>; there are many
+forms of it. The most simple one is, of course, a
+constant. Constants are almost the same as pure functions in functional
+programming. But object-oriented programming allows us to take
+a few steps forward and give immutable objects more permissions
+and flexibility. In OOP, we may have many more forms of immutability.</p>
+
+<p>What is common among all these examples is that our objects are
+<em>loyal</em> to the entities they encapsulate. There are no
+<a href="/2014/09/16/getters-and-setters-are-evil.html">setters</a>
+that could change them. All encapsulated objects are <code class="language-plaintext highlighter-rouge">final</code>.</p>
+
+<p>This is the only quality that differentiates mutable objects from
+immutable ones. The latter are always loyal to the entities they
+encapsulate and represent. For all the rest … it depends.</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">What do you think, is it an immutable Java object:<br><br>final class Book {<br>  private final Path p;<br>  public String content() {<br>    return new String(Files.readAllBytes(this.p));<br>  }<br>}</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1097056700517863424?ref_src=twsrc%5Etfw">February 17, 2019</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

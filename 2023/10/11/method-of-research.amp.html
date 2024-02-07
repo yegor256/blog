@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>The Method Section: A Recipe for Research</title>
+    <link rel="canonical" href="https://www.yegor256.com/2023/10/11/method-of-research.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2023/10/11/method-of-research.html"
+        },
+        "headline": "The Method Section: A Recipe for Research",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2023/10/underground.jpg",
+          "height": 692,
+          "width": 1280
+        },
+        "datePublished": "2023-10-11",
+        "dateModified": "2023-10-11",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "The essence of a research paper is the Method section,
+which may be easier to write if you follow a few
+simple principles.
+",
+        "keywords": ["method section", "method of research", "how to write method of research", "method of paper", "method section in paper"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2023/10/11/method-of-research.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>11 October 2023</p>
+      <h1>The Method Section: A Recipe for Research</h1>
+      <p>Every empirical research paper must have a section titled “Method” (or “Methodology,” or “Study Design”). In this section, you describe what was done to obtain the data presented in the following “Results” section. You explain the <em>recipe</em>, which may be replicated later by another researcher, leading to the same (or very similar) results.</p>
+
+
+
+<amp-img src="/images/2023/10/underground.jpg" alt="Underground (1995) by Emir Kusturica" height="692" width="1280" layout="responsive"></amp-img>
+
+<p>The Method section is the essence of the research. Think of it as a recipe: you
+tell the reader what ingredients you used, how you mixed them, and—most
+importantly—why.</p>
+
+<p>You start the section with a paragraph where you state the main <em>objective</em> of the
+research, then break it down into a few 
+<a href="https://en.wikipedia.org/wiki/Research_question"><em>research questions</em></a>.</p>
+
+<p>Then, you explain the <em>procedures</em> of the method (strictly one procedure per paragraph). 
+In each step, you either collected, combined, or generated data. First, you explain what
+you did. Second, you highlight how your procedure contributed to one of the
+research questions. Third, you justify your actions by providing strong enough
+reasons for why you performed these specific manipulations with the data.</p>
+
+<p>Here is a toy sample of the Method section:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\section{Method}
+
+The goal of this study is to understand whether 
+cats love fruits. This leads to the following 
+research questions:   
+\begin{description}
+\item[RQ1] What is a correlation between the color 
+of a cat's fur and its passion for fruits? 
+\item[RQ2] Which fruits are preferred by cats: 
+bananas, apples, or marakujas?
+\end{description}
+
+First, we found 15 cats: 2 white, 3 black, 
+and 10 of mixed color. It is important for RQ1 
+that they are of different colors. We believe 
+that 15 is enough because this is a toy research.
+
+Second, we excluded 5 cats: those who were 
+younger than one year old or older than 8 years 
+old. This was motivated by RQ2; we believe that 
+young and old cats may have difficulty cracking 
+the hard cover of a marakuja.
+
+Third, we gave our cats all three fruits mentioned 
+in RQ2, left them for an hour, and observed their 
+behavior. We believe one hour is enough for a hungry
+cat to make a decision.
+
+All cat owners agreed to have their cats 
+participate in the study. 
+</code></pre></div></div>
+
+<p>At the end of the section, we mentioned that all participants in the experiment
+provided informed consent—this is important if humans (or cats) are involved,
+so don’t forget about it.</p>
+
+<p>In the “Results” section, which follows the Method, you 
+<a href="/2023/12/11/results-and-discussion.html">present</a> the data that
+were collected, combined, or generated (without giving any opinion or
+subjective interpretation of it!). Some of this data may have already been
+mentioned in the Method section, but not the most important details. For
+example, we’ve already said that we found 15 cats, but we didn’t provide their
+names, ages, or breeds—this information goes into the Results, in the form of
+a nicely formatted table. How much “results” to show in the Method and how much
+in the Results is, I believe, a matter of taste.</p>
+
+<p>In the “Discussion” section, which follows the Results, you 
+<a href="/2023/12/11/results-and-discussion.html">engage in a dialogue</a>
+with yourself, questioning the procedures of the Method. This is where
+you are allowed to have an opinion about the data collected, combined, and
+generated. For example, we may discuss whether the results of our research
+are trustworthy enough, taking into account that we only analyzed the behavior
+of just 15 cats, while in the Method, we were absolutely sure that we were doing
+the right thing. In the Discussion, you play the opposite role by doubting
+every single step of the Method, highlighting its weaknesses and limitations.</p>
+
+<hr>
+
+<p>You may find inspiration in these papers 
+(use <a href="https://scholar.google.com/">Google Scholar</a> to download their PDFs):</p>
+
+<ul>
+  <li>Melina Vidoni, <em>Evaluating Unit Testing Practices in R Packages</em>, ICSE 2021</li>
+  <li>Reem S. Alsuhaibani et al., <em>On the Naming of Methods: A Survey of Professional Developers</em>, ICSE 2021</li>
+  <li>Anastasia Ruvimova et al., <em>An Exploratory Study of Productivity in Software Teams</em>, ICSE 2022</li>
+</ul>
+
+<hr>
+
+<p>These opinions might also be helpful:</p>
+
+<ul>
+  <li>
+<a href="https://research.com/research/how-to-write-research-methodology">How to Write Research Methodology</a>
+by <a href="https://scholar.google.com/citations?user=kudrpNsAAAAJ">Imed Bouchrika</a>
+</li>
+  <li>
+<a href="https://www.youtube.com/watch?v=SxKd66g7M1s">Writing the ‘Research Methods’…</a> (video)
+by <a href="https://soc.appstate.edu/faculty-staff/david-russell-phd">David Russell</a>
+</li>
+  <li>
+<a href="https://www.youtube.com/watch?v=jWPul_eifeU">How To Write Methodology…</a> (video)
+by <a href="https://scholar.google.com/citations?user=MR45-AwAAAAJ">Marek Kiczkowiak</a>
+</li>
+  <li>
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6322175/">Formulation of Research Question</a>
+by Simmi K. Ratan</li>
+</ul>
+
+
+    </article>
+  </body>
+</html>

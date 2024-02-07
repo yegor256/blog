@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Paired Brackets</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/10/23/paired-brackets-notation.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/10/23/paired-brackets-notation.html"
+        },
+        "headline": "Paired Brackets",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2014-10-23",
+        "dateModified": "2014-10-23",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Paired Brackets notation makes your object-oriented
+code look beautiful and disciplined, no matter
+how deep the nesting level.
+",
+        "keywords": ["indentation notation", "indentation in java", "indentation in php", "indentation in ruby", "indentation in c++"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/10/23/paired-brackets-notation.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>23 October 2014</p>
+      <h1>Paired Brackets</h1>
+      <p>Here is a notation rule I’m using in Java code:
+<strong>a bracket should either start/end
+a line or be paired on the same line</strong>.</p>
+
+<p>The notation applies universally to any programming language (incl.
+Java, Ruby, Python, C++, PHP, etc.) where brackets are used
+for method/function calls.</p>
+
+<p>Here is how your code will look, if you follow
+this “Paired Brackets” notation:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Foo</span><span class="o">(</span> <span class="c1">// ends the line</span>
+  <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">40</span><span class="o">),</span> <span class="c1">// open/close at the same line</span>
+  <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+    <span class="s">"hello, %s"</span><span class="o">,</span>
+    <span class="k">new</span> <span class="nf">Name</span><span class="o">(</span>
+      <span class="nc">Arrays</span><span class="o">.</span><span class="na">asList</span><span class="o">(</span>
+        <span class="s">"Jeff"</span><span class="o">,</span>
+        <span class="s">"Lebowski"</span>
+      <span class="o">)</span>
+    <span class="o">)</span>
+  <span class="o">)</span> <span class="c1">// starts the line</span>
+<span class="o">);</span>
+</code></pre></div></div>
+
+
+
+<p>Obviously, the line with a closing bracket should start at the same
+indentation level as the line with its opening pair.</p>
+
+<p>This is how your IDE will render the code if you
+follow this notation (IntelliJ IDEA):</p>
+
+
+
+<p>Sublime Text will also appreciate it:</p>
+
+
+
+<p>As you see, those light vertical lines at the left side
+of the code help you to navigate, if you follow the notation.</p>
+
+<p>Those multiple closing brackets may look strange to you
+at the beginning—but give yourself some time and you will
+get used to them.</p>
+
+<h2 id="fluent">Fluent</h2>
+
+<p>This is how I would recommend formatting
+<a href="/2018/03/13/fluent-interfaces.html">fluent</a> method calls
+(this is Java in <a href="https://netbeans.org/">NetBeans</a>):</p>
+
+
+
+<h2 id="arrays">Arrays</h2>
+
+<p>Here is how you format an array in “Paired Brackets” notation
+(this is Ruby in <a href="https://www.jetbrains.com/ruby/">RubyMine</a>):</p>
+
+
+
+<p>As you see, the same principle applies to square and curled brackets.</p>
+
+<h2 id="json">JSON</h2>
+
+<p>The same principle is applicable to
+<a href="/2015/11/16/json-vs-xml.html">JSON</a> formatting. This is
+a small JSON document in <a href="http://panic.com/coda/">Coda 2</a>:</p>
+
+
+
+<h2 id="javascript">JavaScript</h2>
+
+<p>JavaScript should also follow the same principle. This is
+how your <code class="language-plaintext highlighter-rouge">.js</code> code would look in <a href="https://atom.io/">Atom</a>:</p>
+
+
+
+<h2 id="python">Python</h2>
+
+<p>Finally, here is Python in <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>:</p>
+
+
+
+
+    </article>
+  </body>
+</html>

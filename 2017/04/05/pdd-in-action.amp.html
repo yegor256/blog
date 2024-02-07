@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>PDD in Action</title>
+    <link rel="canonical" href="https://www.yegor256.com/2017/04/05/pdd-in-action.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2017/04/05/pdd-in-action.html"
+        },
+        "headline": "PDD in Action",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2017/04/0pdd-screenshot.jpg",
+          "height": 1094,
+          "width": 1666
+        },
+        "datePublished": "2017-04-05",
+        "dateModified": "2017-04-05",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "0pdd.com is a free hosted service that helps
+you automate puzzle-driven development in your
+GitHub projects.
+",
+        "keywords": ["puzzle-driven development", "PDD puzzle-driven development", "0pdd", "GitHub PDD", "zerocracy pdd"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2017/04/05/pdd-in-action.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>5 April 2017</p>
+      <h1>PDD in Action</h1>
+      
+
+<p><a href="/2010/03/04/pdd.html">Puzzle Driven development</a>
+(PDD) is a methodology we’ve been practicing on our teams
+for more than seven years. Using PDD, we delegate the responsibility of
+task decomposition to its performers, eliminating
+the role of a project manager. We’ve been using our proprietary software
+for that. A month ago, we made it public, open source, and free.
+It is available as <a href="https://www.0pdd.com">0pdd</a>—a GitHub-based chat bot.</p>
+
+
+
+<amp-img src="/images/2017/04/0pdd-screenshot.jpg" alt="" height="1094" width="1666" layout="responsive"></amp-img>
+
+<p>Here is how you configure it, in two steps. First, you
+<a href="https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/">grant</a>
+access to <a href="https://github.com/0pdd">@0pdd</a> in GitHub
+(if your repository is private).</p>
+
+<p>Second, you add a <a href="https://help.github.com/articles/about-webhooks/">webhook</a>
+to your GitHub repository: <code class="language-plaintext highlighter-rouge">https://www.0pdd.com/hook/github</code> (with just <code class="language-plaintext highlighter-rouge">push</code> event
+and any content type). I would actually recommend to send GitHub
+notifications through <a href="/2017/09/05/rehttp-http-repeater.html">ReHTTP</a>
+and use this URL for the webhook:
+<code class="language-plaintext highlighter-rouge">http://p.rehttp.net/https://www.0pdd.com/hook/github</code>.</p>
+
+<p>Now, your repository is being watched by <a href="https://www.0pdd.com">0pdd</a>. Every
+time you <code class="language-plaintext highlighter-rouge">git push</code> something new, it does a <code class="language-plaintext highlighter-rouge">git pull</code> and retrieves your changes
+from GitHub. Then it runs <a href="https://github.com/yegor256/pdd">pdd</a>, a command line tool
+that scans the entire code base (only the <a href="https://help.github.com/articles/setting-the-default-branch/"><code class="language-plaintext highlighter-rouge">master</code></a>
+branch) and finds all occurrences of <code class="language-plaintext highlighter-rouge">@todo</code>
+markers.</p>
+
+<p>For all newly found markers, <a href="https://www.0pdd.com">0pdd</a> will submit new
+issues to the GitHub issue-tracking section of your repository.</p>
+
+<p>Also, when you remove markers from your code base,
+<a href="https://www.0pdd.com">0pdd</a> will immediately close issues it created.</p>
+
+
+
+<p>Now, when an issue is assigned to a programmer, we allow him or her
+to <a href="/2015/01/15/how-to-cut-corners.html">cut corners</a>
+and return incomplete code back to the <code class="language-plaintext highlighter-rouge">master</code>. If and when the code is
+not complete, we ask the programmer to leave <code class="language-plaintext highlighter-rouge">@todo</code> markers in the code, called
+“puzzles.” Later, these puzzles will be assigned to other programmers,
+and so on. Eventually, the problem will be fixed when <em>most</em> puzzles are
+resolved.</p>
+
+<p><a href="https://www.0pdd.com">0pdd</a> helps you automate this process and provides
+a summary report of the current situation with all puzzles in the entire
+code base. You can even add a nice badge to your GitHub repo:</p>
+
+<p><a href="https://www.0pdd.com/p?name=yegor256/0pdd"></a></p>
+
+<p>If you click it, you will see the full report of all puzzles
+currently present and previously seen.</p>
+
+<p>This mechanism helps us in many projects. You can use it for free. It’s
+an open source Ruby product; feel free to <a href="https://github.com/yegor256/0pdd">contribute</a>.</p>
+
+    </article>
+  </body>
+</html>

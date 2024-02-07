@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Can Objects Be Friends?</title>
+    <link rel="canonical" href="https://www.yegor256.com/2016/12/20/can-objects-be-friends.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2016/12/20/can-objects-be-friends.html"
+        },
+        "headline": "Can Objects Be Friends?",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2016/12/raging-bull.jpg",
+          "height": 688,
+          "width": 1280
+        },
+        "datePublished": "2016-12-20",
+        "dateModified": "2016-12-20",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Can you have encapsulation with only objects and no naked data?
+The question boils down to how objects can interact without data.
+They can be friends!
+",
+        "keywords": ["encapsulation", "encapsulation friends", "encapsulation trusted objects", "encapsulation meaning", "encapsulation violation"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2016/12/20/can-objects-be-friends.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>20 December 2016</p>
+      <h1>Can Objects Be Friends?</h1>
+      <p>As <a href="/2016/11/21/naked-data.html">discussed before</a>,
+proper encapsulation leads to a complete absence
+of “naked data.” However, the question remains: How can objects
+interact if they can’t exchange data? Eventually we have to expose
+some data in order to let other objects use it, right? Yes, that’s true.
+However, I guess I have a solution that keeps encapsulation in place
+while allowing objects to interact.</p>
+
+
+
+<amp-img src="/images/2016/12/raging-bull.jpg" alt="Raging Bull (1980) by Martin Scorsese" height="688" width="1280" layout="responsive"></amp-img>
+
+<p>Say that this is our object:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Temperature</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">t</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%d C"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>It represents a temperature. The only behavior it exposes is printing
+the temperature in Celsius. We don’t want to expose <code class="language-plaintext highlighter-rouge">t</code>, because
+that will lead to the “<a href="/2016/11/21/naked-data.html">naked data</a>”
+problem. We want to keep <code class="language-plaintext highlighter-rouge">t</code> secret, and that’s a good desire.</p>
+
+<p>Now, we want to have the ability to print temperature in Fahrenheit. The most
+obvious approach would be to introduce another method, <code class="language-plaintext highlighter-rouge">toFahrenheitString()</code>,
+or add a Boolean <a href="/2016/04/19/object-must-not-be-configurable.html">flag</a>
+to the object, which will change the behavior
+of method <code class="language-plaintext highlighter-rouge">toString()</code>, right? Either one of these solutions is better than adding
+a method <code class="language-plaintext highlighter-rouge">getT()</code>, but neither one is perfect.</p>
+
+<p>What if we create this decorator:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">TempFahrenheit</span> <span class="kd">implements</span> <span class="nc">Temperature</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="nc">TempCelsius</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"%d F"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">t</span> <span class="o">*</span> <span class="mf">1.8</span> <span class="o">+</span> <span class="mi">32</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>It should work just great:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Temperature</span> <span class="n">t</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">TempFahrenheit</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">TempCelsius</span><span class="o">(</span><span class="mi">35</span><span class="o">)</span>
+<span class="o">);</span>
+</code></pre></div></div>
+
+<p>The only problem is that it won’t compile in Java, because class
+<code class="language-plaintext highlighter-rouge">TempFahrenheit</code> is not allowed to access private <code class="language-plaintext highlighter-rouge">t</code> in class <code class="language-plaintext highlighter-rouge">TempCelsius</code>.
+And if we make <code class="language-plaintext highlighter-rouge">t</code> public, everybody will be able to read it directly, and we’ll have
+that “naked data” problem—a severe violation of encapsulation.</p>
+
+<p>However, if we allow that access <em>only</em> to one class, everything will be fine.
+Something like this (won’t work in Java; it’s just a concept):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">TempCelsius</span> <span class="o">{</span>
+  <span class="n">trust</span> <span class="nc">TempFahrenheit</span><span class="o">;</span> <span class="c1">// here!</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">t</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%d C"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Since this <code class="language-plaintext highlighter-rouge">trust</code> keyword is placed into the class that allows access,
+we won’t have the “naked data” problem—we will always know exactly which
+objects posses knowledge about <code class="language-plaintext highlighter-rouge">t</code>. When we change
+something about <code class="language-plaintext highlighter-rouge">t</code>, we know exactly where to update the code.</p>
+
+<p>What do you think?</p>
+
+<p>P.S. After discussing this idea below in comments I
+<a href="https://www.yegor256.com/2016/12/20/can-objects-be-friends.html#comment-3068629632">started</a> to think
+that we don’t need that <code class="language-plaintext highlighter-rouge">trust</code> keyword at all. Instead, we should just
+give all decorators access to all private attributes of an object.</p>
+
+    </article>
+  </body>
+</html>

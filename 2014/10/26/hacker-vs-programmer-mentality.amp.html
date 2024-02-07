@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Are You a Hacker or a Designer?</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html"
+        },
+        "headline": "Are You a Hacker or a Designer?",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2014-10-26",
+        "dateModified": "2014-10-26",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Twenty years ago we worried about performance. Now
+it is time to worry about maintainability, even though
+it often compromises performance.
+",
+        "keywords": ["performance vs maintainability", "software performance", "scalability", "maintainability", "readability"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/10/26/hacker-vs-programmer-mentality.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>26 October 2014</p>
+      <h1>Are You a Hacker or a Designer?</h1>
+      <p>Twenty years ago, the best programmer was the one
+capable of fitting an entire application into a 64Kb
+<code class="language-plaintext highlighter-rouge">.COM</code> file. Those who were able to get the most out of
+that poor Intel 80386 were the icons of programming.</p>
+
+<p>That’s because twenty years ago computers were expensive and programmers
+were cheap. That was the time of the “hacker mentality.”
+That time is over. That mentality is not appreciated any more,
+because the market situation is completely opposite.</p>
+
+<p>Today, computers are cheap and programmers are expensive.
+This is the era of the “designer mentality,” when the readability
+of our code is much more important than its performance.</p>
+
+
+
+<h2 id="prices-vs-salaries">Prices vs Salaries</h2>
+
+
+
+<p>Look at this graph. It is a comparison of two trends over the
+last twenty years (1994-2014).
+The first trend falls down and shows how much cheaper
+<a href="https://www.jcmit.com/memoryprice.htm">computer memory</a>
+and <a href="http://ns1758.ca/winch/winchest.html">HDD storage</a>
+have become over the last twenty years.</p>
+
+<p>The second trend demonstrates how much software developers’ salaries
+escalated over the same period. More accurately, they tripled. I didn’t find
+an official report about that, but I’m sure it’s no secret to anyone
+that the salaries of programmers keep growing—$200,000 per year for
+a senior developer is not a dream any more… while twenty years
+ago $60K was the best offer around. I found
+<a href="http://markcunningham91.blogspot.com/2013/05/a-history-of-offers-to-software.html">this article</a>
+very interesting about this very subject.</p>
+
+
+
+<p>Basically, this means that in order to create a PHP website
+in 1994 we had to spend 1000 times more on hardware and three times
+less on programmers than we do now, in 2014. And we’re talking about the
+same stack of technologies here. The same Linux box with an Apache HTTP Server
+inside.</p>
+
+<p>The difference is that in 1994, if our application had performance problems because of
+hardware limitations, we paid $35,000 per each additional gigabyte of RAM, while
+in 2014 we pay $10.</p>
+
+<p>In 1994 it was much more efficient to hire more programmers and ask
+them to <a href="https://en.wikipedia.org/wiki/Program_optimization">optimize</a>
+the code or even rewrite it, instead of buying new hardware. In 2014 the
+situation is exactly the opposite. It is now much cheaper to double the
+size of the server (especially if the server is a virtual cloud one)
+instead of paying salaries for optimizing the software.</p>
+
+<p>In 1994 the best engineers had that “hacker mentality,” while in 2014 the
+“designer mentality” is much more appreciated.</p>
+
+<h2 id="hacker-mentality">Hacker Mentality</h2>
+
+<p>Someone with a hacker mentality would call this
+<a href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a>
+Java method an “elegant code” (would you?):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">f</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span> <span class="k">return</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">2</span><span class="o">?</span><span class="n">f</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">)+</span><span class="n">f</span><span class="o">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="o">):</span><span class="n">n</span><span class="o">;</span> <span class="o">}</span>
+</code></pre></div></div>
+
+<p>I would highlight these qualities of a good
+<a href="https://en.wikipedia.org/wiki/Hacker_%28computer_security%29">hacker</a>:</p>
+
+<ul>
+  <li>uses all known (and unknown) features of a programming language</li>
+  <li>discriminates others as hackers and newbies and codes for hackers</li>
+  <li>gets bored and frustrated by <a href="/2015/10/13/competition-without-rules.html">rules</a> and <a href="/2014/08/13/strict-code-quality-control.html">standards</a>
+</li>
+  <li>doesn’t write unit tests—juniors will write them later</li>
+  <li>enjoys fire-fighting—that’s how his talent manifests</li>
+  <li>prefers talks over <a href="/2015/11/10/ten-mistakes-in-specs.html">docs</a>, since they are much more fun</li>
+  <li>hates to see his code being modified by someone else</li>
+  <li>likes to dedicate himself to one project at a time</li>
+</ul>
+
+
+
+<p>A hacker is a talented individual. He wants to express his
+talent in the software he writes. He enjoys coding and does
+it mostly for fun. I would say, he is married to his code and can’t imagine
+its happy life after an eventual divorce. Code ownership is
+what a hacker is about—he understands himself as an “owner”
+of the code.</p>
+
+<p>When I ask one of my hacker friends—“How will someone understand
+what this code does?” I almost always hear the same answer—“They will ask me!” (usually said very proudly, with a sincere smile).</p>
+
+<h2 id="designer-mentality">Designer Mentality</h2>
+
+<p>Someone with a designer mentality would refactor the code above
+to make it easier to read. He would call this Java function an “elegant code”
+(how about you?):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">fibo</span><span class="o">(</span><span class="kd">final</span> <span class="kt">int</span> <span class="n">pos</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">final</span> <span class="kt">int</span> <span class="n">num</span><span class="o">;</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">pos</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">fibo</span><span class="o">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="n">fibo</span><span class="o">(</span><span class="n">pos</span> <span class="o">-</span> <span class="mi">2</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">pos</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="n">num</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>I think these qualities can be attributed to a good designer:</p>
+
+<ul>
+  <li>tends to use traditional programming techniques</li>
+  <li>assumes everybody is a newbie and writes accordingly</li>
+  <li>enjoys setting rules and following them</li>
+  <li>prefers docs over talks and automation over docs</li>
+  <li>spends most of his coding time on unit tests</li>
+  <li>hates fire-fighting and working over time</li>
+  <li>loves to see his code being modified and refactored</li>
+  <li>works with a few projects at the same time</li>
+</ul>
+
+
+
+<p>A designer is a talented team player. He contributes to the team
+processes, standards, rules, education, and discipline as much as he
+contributes to the source code. He always makes sure that once
+he leaves the project his code and his ideas stay and work.</p>
+
+<p>The highest satisfaction for a good designer
+is to see his code living its own life—being modified, improved,
+refactored and eventually retired. A designer sees himself as a parent
+of the code—once it is old enough to walk and talk, it has
+to live its own life.</p>
+
+<h2 id="the-future">The Future</h2>
+
+<p>If you consider yourself a hacker, I believe it’s time to change. The time of
+hackers is fading out.</p>
+
+<p>In the near future we will probably even stop thinking in terms of “hardware” and will
+run our applications in elastic computational platforms with unlimited
+amounts of memory, CPU power and storage space. We will simply pay
+for resource utilization and almost any performance issue will just add a few extra
+dollars to our monthly bills. We won’t care about optimization any more.</p>
+
+
+
+<p>At the same time, good software engineers will become more and more expensive
+and will charge $500+ per hour just to check out software and give
+a diagnosis. Just like good lawyers or dentists.</p>
+
+<p>That’s why, while developing a new software product, those who pay for it will
+care mostly about its maintainability. Project sponsors will
+understand that the best solution they can get for their money is
+the one that is the most readable, maintainable, and automated.</p>
+
+<p>Not the fastest.</p>
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">Great programmers write code, which is ...</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1262034967271485441?ref_src=twsrc%5Etfw">May 17, 2020</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

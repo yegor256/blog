@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Fully Transparent Donations via Zerocracy</title>
+    <link rel="canonical" href="https://www.yegor256.com/2018/04/03/donations-via-zerocracy.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2018/04/03/donations-via-zerocracy.html"
+        },
+        "headline": "Fully Transparent Donations via Zerocracy",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2018/04/last-tango-in-paris.jpg",
+          "height": 720,
+          "width": 1280
+        },
+        "datePublished": "2018-04-03",
+        "dateModified": "2018-04-03",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Open source projects rarely receive donations, for many
+reasons; Zerocracy transparently simplifies the process
+to attract more donors.
+",
+        "keywords": ["open source donate", "donate open source", "give money to open source", "risk management in software", "software risk management"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2018/04/03/donations-via-zerocracy.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>3 April 2018</p>
+      <h1>Fully Transparent Donations via Zerocracy</h1>
+      <p>Open source is free, as in beer: you write code, nobody pays you. Of course,
+there are <a href="/2015/12/22/why-dont-you-contribute-to-open-source.html">many ways</a>
+to monetize your efforts, but there will be no
+direct cash payments from your users, usually. There are <a href="https://hackernoon.com/why-funding-open-source-is-hard-652b7055569d">ways</a>
+to collect money, which include an obvious “tip jar” button on your GitHub project page.
+The chances anyone will pay
+<a href="https://news.ycombinator.com/item?id=14446516">are low</a> though. In my opinion,
+this is mostly because nobody trusts you enough—they are not sure you will
+use the money to make the product better. Most likely you will just spend it
+and nothing will change. But they want the product, not to make you happier.
+At least that’s what I feel when I see a <a href="https://patreon.com/">Patreon</a> button.</p>
+
+
+
+<amp-img src="/images/2018/04/last-tango-in-paris.jpg" alt="Last Tango in Paris (1972) by Bernardo Bertolucci" height="720" width="1280" layout="responsive"></amp-img>
+
+<p><a href="https://www.zerocracy.com">Zerocracy</a> is a platform that manages programmers remotely.
+Moreover, it’s absolutely <a href="https://www.zerocracy.com/policy.html#23">free</a> for open source projects. Take a
+look at <a href="https://www.cactoos.org">Cactoos</a> or <a href="https://www.takes.org">Takes</a>—they
+are both managed by
+<a href="/2018/03/21/zerocracy-announcement.html">Zerocrat</a>. These projects
+are funded by myself. I add money to Zerocracy out of my pocket and Zerocracy
+<a href="/2018/01/09/micro-budgeting.html">pays</a>
+programmers when they close their <a href="/2017/11/28/microtasking.html">microtasks</a> in GitHub.</p>
+
+
+
+<p>A few days ago someone approached me by email and literally said: “There
+is a bug in your project, I’m happy to pay you for your time if you can come
+up with a solution.” He was ready to donate and wanted me (or us) to solve
+his specific issue. I could just take his money over PayPal and fix the issue,
+but I’m not really an active maintainer of the project he was interested in,
+and I’m busy at the moment.</p>
+
+<p>I realized that the best way would be to take the money,
+break down the problem into pieces, and delegate them to a few programmers,
+just like it usually works in Zerocracy. In other words, I decided to suggest
+he fund the project and then let us use the funds for
+<a href="/2017/11/28/microtasking.html">microtasking</a>,
+keeping the focus on the issue he was interested in.</p>
+
+<p>Moreover, this concept was
+<a href="https://github.com/zerocracy/datum/issues/212">earlier proposed</a>
+by <a href="https://github.com/skapral"><code class="language-plaintext highlighter-rouge">@skapral</code></a>.</p>
+
+<p>He gladly accepted the offer.
+We <a href="https://github.com/zerocracy/farm/issues/866">implemented</a> the functionality in
+<a href="https://www.0crat.com">Zerocrat</a> and he contributed $128 via Stripe.</p>
+
+<p>Now <a href="https://www.zerocracy.com/policy.html#50">anyone</a>
+can give a few dollars to a project, if it’s
+managed by Zerocracy. The contributor will see how those funds are being spent, down to each and every dollar!
+Try, for example, one of these buttons and you will see detailed
+financial reports of each project and will be able to add your funds:</p>
+
+<p>Cactoos.org:<br>
+<a href="https://www.0crat.com/contrib/C63314D6Z"></a></p>
+
+<p>Takes.org:<br>
+<a href="https://www.0crat.com/contrib/C3FFK3YAY"></a></p>
+
+<p>The advantage of this approach, compared to, for example,
+<a href="https://www.bountysource.com/">BountySource</a>, is that the money will
+be distributed in micro-payments and will be fully traceable. I believe
+that this makes a difference for donators—they are interested to see
+how their money is being used.</p>
+
+
+    </article>
+  </body>
+</html>

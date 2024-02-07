@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Are You Still Debugging?</title>
+    <link rel="canonical" href="https://www.yegor256.com/2016/02/09/are-you-still-debugging.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2016/02/09/are-you-still-debugging.html"
+        },
+        "headline": "Are You Still Debugging?",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2016/02/the-revenant.jpg",
+          "height": 675,
+          "width": 1200
+        },
+        "datePublished": "2016-02-09",
+        "dateModified": "2016-02-09",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "The necessity of debugging is an indicator of code problems
+and a great motivator for immediate refactoring
+and unit testing.
+",
+        "keywords": ["debugging", "debugging vs testing", "debugging vs unit testing", "debugging is evil", "stop debugging"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2016/02/09/are-you-still-debugging.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>9 February 2016</p>
+      <h1>Are You Still Debugging?</h1>
+      <p><a href="https://en.wikipedia.org/wiki/Debugging">Debugging</a>
+is “a process of running a program/method interactively,
+breaking execution flow after each statement and showing…” In a nutshell, it is
+a very useful technique … for a bad programmer. Or an old programmer
+who is still writing procedural code in C. Object-oriented programmers
+never debug their code—they write unit tests. My point here
+is that unit testing is a technique that completely replaces debugging.
+If debugging is required, the <em>design is bad</em>.</p>
+
+
+
+<amp-img src="/images/2016/02/the-revenant.jpg" alt="The Revenant (2015) by Alejandro G. Iñárritu" height="675" width="1200" layout="responsive"></amp-img>
+
+<p>Let’s say I’m a <a href="/2014/05/05/oop-alternative-to-utility-classes.html">bad</a>
+imperative procedural programmer, and this is my Java code:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">FileUtils</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">readWords</span><span class="o">(</span><span class="nc">File</span> <span class="n">f</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span>
+      <span class="nc">Files</span><span class="o">.</span><span class="na">readAllBytes</span><span class="o">(</span><span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">f</span><span class="o">)),</span>
+      <span class="s">"UTF-8"</span>
+    <span class="o">);</span>
+    <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">words</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;&gt;();</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">word</span> <span class="o">:</span> <span class="n">text</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">words</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">word</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">words</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This static <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility</a>
+method reads file content and then
+finds all the unique words in it. Pretty simple. However, if
+it doesn’t work, what do we do? Let’s say this is the file:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>We know what we are,
+but know not what we may be.
+</code></pre></div></div>
+
+<p>From it, we get this list of words:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"We"
+"know"
+"what"
+"we"
+"are,\n"
+"but"
+"not"
+"may"
+"be\n"
+</code></pre></div></div>
+
+<p>Now that doesn’t look right to me … so what is the next step? Either the file
+reading doesn’t work correctly or the split is broken. Let’s <em>debug</em>, right?
+Let’s give it a file through an input and go step by step, tracing and watching
+the variables. We’ll find the bug and fix it. But when a similar
+problem shows up, we’ll have to debug again! And that’s what unit testing
+is supposed to <em>prevent</em>.</p>
+
+<p>We’re supposed to create a unit test once, in which the problem is reproduced.
+Then we fix the problem and make sure the test passes. That’s how we save
+our investments in problem solving. We won’t fix it again, because it won’t
+happen again. Our <em>test</em> will prevent it from happening.</p>
+
+
+
+<p>However, all this will work only if it’s easy to create a unit test. If it’s
+difficult, I’ll be too lazy to do it. I will just debug and fix the problem.
+In this particular example, creating a test is a rather expensive procedure.
+What I mean is the complexity of the unit test will be rather high. We have to
+create a temporary file, fill it with data, run the method, and check the results.
+To find out what’s going on and where the bug is, I’ll have to create a number
+of tests. To avoid code duplication, I’ll also have to create some supplementary
+utilities to help me create that temporary file and fill it with data.
+That’s a lot of work. Well, maybe not “a lot,” but way more than a few minutes
+of debugging.</p>
+
+
+
+<p>Thus, if you perceive debugging to be faster and easier, think about the quality
+of your code. I bet it has a lot of opportunities for refactoring, just like
+the code from the example above. Here is how I would modify it. First of all,
+I would turn it into a class, because utility static methods are a
+<a href="/2014/05/05/oop-alternative-to-utility-classes.html">bad practice</a>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Words</span> <span class="kd">implements</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">;</span>
+  <span class="nc">Words</span><span class="o">(</span><span class="nc">File</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">src</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">iterator</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span>
+      <span class="nc">Files</span><span class="o">.</span><span class="na">readAllBytes</span><span class="o">(</span><span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">)),</span>
+      <span class="s">"UTF-8"</span>
+    <span class="o">);</span>
+    <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">words</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;&gt;();</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">word</span> <span class="o">:</span> <span class="n">text</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">words</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">word</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">words</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>It looks better already, but the complexity is still there. Next, I would
+break it down into smaller classes:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Text</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">;</span>
+  <span class="nc">Text</span><span class="o">(</span><span class="nc">File</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">src</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">String</span><span class="o">(</span>
+      <span class="nc">Files</span><span class="o">.</span><span class="na">readAllBytes</span><span class="o">(</span><span class="nc">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">)),</span>
+      <span class="s">"UTF-8"</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">Words</span> <span class="kd">implements</span> <span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">text</span><span class="o">;</span>
+  <span class="nc">Words</span><span class="o">(</span><span class="nc">String</span> <span class="n">txt</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="n">txt</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">iterator</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Set</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">words</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashSet</span><span class="o">&lt;&gt;();</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">word</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">" "</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">words</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">word</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">words</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>What do you think now? Writing a test for the <code class="language-plaintext highlighter-rouge">Words</code> class is a pretty
+trivial task:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">hamcrest</span><span class="o">.</span><span class="na">MatcherAssert</span><span class="o">.*;</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">hamcrest</span><span class="o">.</span><span class="na">Matchers</span><span class="o">.*;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WordsTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">parsesSimpleText</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Words</span><span class="o">(</span><span class="s">"How are you?"</span><span class="o">),</span>
+      <span class="n">hasItems</span><span class="o">(</span><span class="s">"How"</span><span class="o">,</span> <span class="s">"are"</span><span class="o">,</span> <span class="s">"you"</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>How much time did that take? Less than a minute. We don’t need to create
+a temporary file and load it with data, because class <code class="language-plaintext highlighter-rouge">Words</code> doesn’t do
+anything with files. It just parses the incoming string and finds the unique
+words in it. Now it’s easy to fix, since the test is small and we can
+easily create more tests; for example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">hamcrest</span><span class="o">.</span><span class="na">MatcherAssert</span><span class="o">.*;</span>
+<span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">hamcrest</span><span class="o">.</span><span class="na">Matchers</span><span class="o">.*;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WordsTest</span> <span class="o">{</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">parsesSimpleText</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Words</span><span class="o">(</span><span class="s">"How are you?"</span><span class="o">),</span>
+      <span class="n">hasItems</span><span class="o">(</span><span class="s">"How"</span><span class="o">,</span> <span class="s">"are"</span><span class="o">,</span> <span class="s">"you"</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">parsesMultipleLines</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">assertThat</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Words</span><span class="o">(</span><span class="s">"first line\nsecond line\n"</span><span class="o">),</span>
+      <span class="n">hasItems</span><span class="o">(</span><span class="s">"first"</span><span class="o">,</span> <span class="s">"second"</span><span class="o">,</span> <span class="s">"line"</span><span class="o">)</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>My point is that debugging is necessary when the amount of time
+to write a unit test is significantly more than the time it takes to click
+those Trace-In/Trace-Out buttons. And it’s logical. We all are lazy and
+want fast and easy solutions. But debugging burns time and wastes
+energy. It helps us find problems but doesn’t help prevent
+them from reappearing.</p>
+
+<p>Debugging is needed when our code is
+<a href="/2015/02/20/utility-classes-vs-functional-programming.html">procedural</a>
+and algorithmic—when the code is all
+about <em>how</em> the goal should be achieved instead of <em>what</em> the goal is.
+See the examples above again. The first static method is all about
+how we read the file, parse it, and find words. It’s even named <code class="language-plaintext highlighter-rouge">readWords()</code> (a <em>verb</em>).
+To the contrary, the second example is about what will be achieved. It’s either
+the <code class="language-plaintext highlighter-rouge">Text</code> of the file or <code class="language-plaintext highlighter-rouge">Words</code> of the text (both are <em>nouns</em>).</p>
+
+<p>I believe there is no place for debugging in clean object-oriented
+programming. Only unit testing!</p>
+
+    </article>
+  </body>
+</html>

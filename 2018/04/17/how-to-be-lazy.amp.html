@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>How to Be Lazy and Stay Calm</title>
+    <link rel="canonical" href="https://www.yegor256.com/2018/04/17/how-to-be-lazy.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2018/04/17/how-to-be-lazy.html"
+        },
+        "headline": "How to Be Lazy and Stay Calm",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2018/04/sin-city.jpg",
+          "height": 720,
+          "width": 1280
+        },
+        "datePublished": "2018-04-17",
+        "dateModified": "2018-04-17",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Solving technical problems in a large scope which
+is difficult to understand is a very stressful activity;
+I suggest we behave professionally.
+",
+        "keywords": ["lazy", "programming lazy", "lazy and calm", "zerocracy", "noaltruism"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2018/04/17/how-to-be-lazy.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>17 April 2018</p>
+      <h1>How to Be Lazy and Stay Calm</h1>
+      <p>What frustrates me most in my profession of software development
+is the regular necessity to understand large problem scopes before fixing
+small bugs, especially if the code is
+<a href="https://en.wikipedia.org/wiki/Legacy_code">legacy</a> and not mine. Actually,
+it’s even more frustrating when the code <em>is</em> mine. The “deep thinking,” as
+<a href="https://twitter.com/yegor256/status/984759494918987776">they call it</a>,
+which is always required before even a small issue can be resolved, seriously
+turns me away from programming. Or did turn me away. Until I started
+to think differently and encourage myself to be lazy. Here is how.</p>
+
+
+
+<amp-img src="/images/2018/04/sin-city.jpg" alt="Sin City (2005) by Frank Miller" height="720" width="1280" layout="responsive"></amp-img>
+
+<p>I wrote about this a few years ago in this blog post:
+<a href="/2015/01/15/how-to-cut-corners.html">How to Cut Corners and Stay Cool</a>.
+However, in <a href="https://t.me/joinchat/CLxAaQ0xp-g_3WWI3MBr2g">our Telegram group</a>,
+where we talk about <a href="https://www.zerocracy.com">Zerocracy</a>,
+some programmers keep asking me the same
+question over and over again: What should I do when the project is absolutely
+new to me, I have just <a href="/2018/01/09/micro-budgeting.html">30 minutes</a>,
+and the bug is very complex?</p>
+
+
+
+<p>One of the core <a href="https://www.zerocracy.com/toc.html">principles</a> of Zerocracy is
+<a href="https://www.youtube.com/watch?v=vXUwE3FGfpg">#NoAltruism</a>.
+This literally means that
+you should always and only think about yourself and your personal profit. You should
+not try to improve the project, to increase its quality, to fix the code, or to refactor anything…
+unless you are <em>paid</em> for it.</p>
+
+<p>First of all, when the task, which you are going to be paid for, is in front of you and
+you can’t understand how to solve it, <em>don’t</em> blame yourself. You are not
+supposed to be an expert in the legacy code you just opened up.
+Strictly speaking, you are not supposed to be an expert in anything.
+A project, <del>unlike your mom</del>, doesn’t expect you to
+be intelligent or tech-savvy. It needs you to
+<a href="/2017/11/28/microtasking.html">close tickets</a>.</p>
+
+
+
+<p>Who do you blame, if not yourself, when the bug is serious, the
+code is messy, and you have no idea how much time it will take just to
+understand it, let alone fix it? Well, you can blame everybody around you,
+but first of all you should blame the code base itself. How do you blame it?
+You report its low quality by creating new tickets, which may sound
+like this:</p>
+
+<ul>
+  <li>“The class X is not sufficiently documented, I don’t understand how it works.”</li>
+  <li>“The method X is too complex, I don’t know what it does.”</li>
+  <li>“The algorithm X is messy, I can’t figure out what it does.”</li>
+  <li>“The library X is used here, but I don’t understand why you don’t use library Y.”</li>
+  <li>“The rules of class naming are not clear, document them please.”</li>
+  <li>“The principle of data organization is not obvious, document it.”</li>
+</ul>
+
+<p>However, don’t make the mistake many programmers are making when we tell
+them that tickets are the only
+<a href="/2014/10/07/stop-chatting-start-coding.html">right way</a>
+to solve problems. They start asking questions and seeking help in the tickets, just like this:</p>
+
+<ul>
+  <li>“How can I unit test class X, please explain.”</li>
+  <li>“Please help me create class X.”</li>
+  <li>“Where should I put class X, in which package?”</li>
+  <li>“Which library should I use for doing X?”</li>
+</ul>
+
+<p>The project is <a href="/2015/02/16/it-is-not-a-school.html">not a school</a>,
+it’s not interested in making you smarter
+or more of an expert in its code. Nobody will explain anything to <em>you</em>,
+because it’s a waste of money and time. What the project will do instead is
+fix its code base so that it becomes cleaner and more obvious for
+you <em>and everybody else</em>. Thus, never ask for explanation or help, ask for
+documentation and source code fixes.</p>
+
+
+
+<p>What do you do next? You sit and wait, until those tickets are resolved.
+Who will resolve them? You don’t care. That’s a problem for the project manager.
+Maybe he/she will even assign those tickets back to you and it will
+be your problem to resolve them. But if that happens, the scope of work will
+be different for you. You won’t need to fix the bug anymore, you will
+have to document some functionality or refactor some module.</p>
+
+<p>You will have other problems in this new and smaller scope.
+You will create new tickets, blaming everybody around you, and they also
+may come back to you. And so on and so forth. Ultimately, the scope
+of a ticket will be as small as it’s possible to fix in 30 minutes.</p>
+
+<p>See the algorithm? I’m sure you do, but it’s very difficult to apply it to
+real life and real software projects, for a few obvious psychological reasons:</p>
+
+<ul>
+  <li>
+    <p><strong>You are ashamed</strong>.
+You are trained to feel guilty when you are not smart enough.
+What can I say?
+Just <a href="https://www.youtube.com/watch?v=Ow0lr63y4Mw">stop it</a>!</p>
+  </li>
+  <li>
+    <p><strong>You are a <a href="https://en.wikipedia.org/wiki/Perfectionism_%28psychology%29">perfectionist</a></strong>.
+You want to complete the entire ticket, solve the entire problem,
+and understand the entire scope.
+What can I say?
+This won’t be solved while the project continues to pay you
+<a href="/2015/07/21/hourly-pay-modern-slavery.html">by the hour/month</a>.
+Once they start paying for results, this disease will be cured.</p>
+  </li>
+  <li>
+    <p><strong>You have no passion</strong>.
+You just don’t care about the quality of code at all.
+You don’t want it to look clean, you can’t even tell what clean is
+or what messy is. You just want them to pay you by the end
+of the month. In this case you won’t even know what tickets to
+report.
+What can I say?
+I guess you have to try and find another job.
+Maybe a <a href="/2016/01/05/how-to-punish-employees.html">manager</a>?</p>
+  </li>
+  <li>
+    <p><strong>You are afraid</strong>.
+Blaming the project and reporting tickets may look like you
+have a negative attitude towards the code base, and people who
+created it, which is not true. Instead, your attitude is
+<a href="/2014/04/13/bugs-are-welcome.html">positive</a>,
+since you care about it and want it to get better.
+What can I say?
+Make your tickets sound extremely polite and gentle.
+But keep reporting them.</p>
+  </li>
+  <li>
+    <p><strong>You have no time</strong>.
+You have to solve the problem now and you have no time to wait
+for the resolution of those complaints you reported.
+What can I say?
+Blame the management and require more time. Much more time.
+But never blame yourself.</p>
+  </li>
+</ul>
+
+<p>Software development is perfect territory for
+<a href="/2015/01/15/how-to-cut-corners.html">cutting corners</a>,
+being lazy and remaining calm, because our work is often discrete and can
+be very incremental. Very occasionally it might not be possible to blame the project
+and put the ticket on pause until all your complaints are addressed.
+I can’t imagine such a situation though. If you can, please let me know.</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">The source code is too complex, you have to modify it, and you can't understand how it works. Whose fault is it? <a href="https://twitter.com/hashtag/codeahead?src=hash&amp;ref_src=twsrc%5Etfw">#codeahead</a></p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1145222618854887424?ref_src=twsrc%5Etfw">June 30, 2019</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

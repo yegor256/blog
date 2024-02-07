@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>PDD by Roles</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/04/12/puzzle-driven-development-by-roles.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/04/12/puzzle-driven-development-by-roles.html"
+        },
+        "headline": "PDD by Roles",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2014/04/pulp-fiction-mr-wolf-with-cup.png",
+          "height": 668,
+          "width": 1510
+        },
+        "datePublished": "2014-04-12",
+        "dateModified": "2014-04-12",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "The article explains how Puzzle Driven Development
+is seen by people in different project roles,
+specifically system analyst, architect, designer,
+programmer, and tester
+",
+        "keywords": ["puzzle driven development", "software requirements specification", "project planning", "project roles", "distributed programming"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/04/12/puzzle-driven-development-by-roles.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>12 April 2014</p>
+      <h1>PDD by Roles</h1>
+      
+
+<p>In this post, I’ll try to walk you through a project managed
+with the spirit of
+<a href="/2010/03/04/pdd.html">Puzzle Driven Development</a>
+(PDD). As I do this, I will attempt to convey typical points
+of view of various project members.</p>
+
+<p>Basically, there are a few key
+<a href="/2016/07/10/software-project-roles.html">roles</a> in any software team:</p>
+
+<ul>
+  <li>Project Manager—assigns tasks and pays on completion</li>
+  <li>System Analyst—documents the product owner’s ideas</li>
+  <li>Architect—defines how system components interact</li>
+  <li>Designer—implements most complex components</li>
+  <li>Programmer—implements all components</li>
+  <li>Tester—finds and reports bugs</li>
+</ul>
+
+<p>Everybody, except the
+<a href="/2016/05/24/who-is-project-manager.html">project manager</a>,
+affects the project in two
+ways: they fix it and they break it at the same time. Let me explain
+this with a simple example.</p>
+
+
+
+<h2 id="fix-and-break">Fix and Break</h2>
+
+<p>Let’s assume, for the sake of simplicity, that a project is a simple
+software tool written by me for a close friend. I created the
+first draft version 0.0.1 and delivered it to him. For me, the project
+is done. I’ve completed the work, and hopefully will never have to return to it again.</p>
+
+
+
+<p>However, the reality of the project is very different. In just a few hours,
+I receive a call from my friend saying that a he’s found a few bugs in the tool. He is asking me
+to fix them. Now, I can see that the project is not done. In fact, it’s broken.
+It has a few bugs in it, which means a few tasks to complete.</p>
+
+<p>I’m going to fix the project, by removing the bugs. I implement
+a new version of the software, name it 0.0.2 and ship it to my friend. Again, I believe my project is finished. It is fixed and should be closed.</p>
+
+<p>This scenario repeats itself again and again until my friend stops
+calling me. In other words, until he stops breaking my project.</p>
+
+<p>It is obvious that the more my friend breaks my project, the higher
+the <a href="/2017/04/11/flexibility-equates-lower-quality.html">quality</a> of the software delivered ultimately at the end.
+Version 0.0.1 was just a very preliminary version, although I considered it final at
+the time I released it. In a few months, after I learn of and fix
+hundreds of bugs, version 3.5.17 will be much more mature and stable.</p>
+
+<p>This is the result of this “fix and break” approach.</p>
+
+
+
+<p>The diagram shows the relation between time and mess in the project.
+The bugs my friend is reporting to me are breaking the project, increasing
+its instability (or simply its messiness). New versions I release resolve
+the bugs and are fixing the project. Your
+<a href="/2014/04/15/github-guidelines.html">GitHub</a>
+commit dynamics should resemble this graph, for example:</p>
+
+
+
+<p>When the project starts, its messiness is rather low, and then it starts to grow. The messiness then
+reaches its peak and starts to go down.</p>
+
+<h2 id="project-manager">Project Manager</h2>
+
+<p>The job of a project
+<a href="/2015/09/22/micromanagement.html">manager</a>
+is to do as much as possible
+to fix the project. He has to use the sponsor’s time and money in order
+to remove all bugs and inconsistencies and return the project back
+to a “fixed” state.</p>
+
+<amp-img src="/images/2014/04/pulp-fiction-mr-wolf-with-cup.png" alt="Pulp Fiction (1994) by Quentin Tarantino" height="668" width="1510" layout="responsive"></amp-img>
+
+<p>When I say “bugs,” I mean more than just software errors but also:</p>
+
+<ul>
+  <li>unclear or ambiguous <a href="/2015/11/10/ten-mistakes-in-specs.html">requirements</a>
+</li>
+  <li>features not yet implemented</li>
+  <li>functional and non-functional bugs</li>
+  <li>lack of test coverage</li>
+  <li>unresolved <code class="language-plaintext highlighter-rouge">@todo</code> markers</li>
+  <li>lack of risk analysis</li>
+  <li>etc.</li>
+</ul>
+
+<p>The project manager gives me tasks that he wants done in order
+to fix and stabilize the project to return it back to a
+bug-free state.</p>
+
+<p>My job, as a member of a software team, is to help him perform the needed fixes and, at the same time, do my best to break the project!
+In the example with my friend, he was breaking the
+project constantly by reporting bugs to me. This is how he helped both of us
+increase the final quality of the product.</p>
+
+<p>I should do the same and always try to report new bugs when I’m
+working on some feature. I should <strong>fix and break</strong> at the same time.</p>
+
+<p>Now let’s take a closer look at project roles.</p>
+
+<h2 id="system-analyst">System Analyst</h2>
+
+<p>A product owner submits an informal feature request, which usually
+starts with “it would be nice to have…” I’m a system analyst and my
+job is to translate owner’s English into
+<a href="/2015/11/10/ten-mistakes-in-specs.html">formal specifications</a> in the SRS,
+understandable both by programmers and myself. It’s not my responsibility
+to implement the feature.</p>
+
+
+
+<p>My task is complete when a new version of the SRS is signed by the
+Change Control Board. I’m an interpreter for the product owners, translating
+from their language to formal language needed in the SRS document.
+My only customer is the product owner. As soon as she closes the
+feature request, I’ll be paid.</p>
+
+<p>Besides feature requests from product owners, I often receive
+complaints about the quality of the SRS. The document may not be clear
+enough for some team members. Therefore, it’s my job to resolve clarity problems
+and fix the SRS. These team members are also my customers. When they
+close their <a href="/2018/04/24/right-way-to-report-bugs.html">bug reports</a>, I’ll be paid.</p>
+
+<p>In both cases (a feature request or a bug,) I can make changes to the
+SRS immediately - if I have enough time. However, it’s not always
+possible. I can submit a bug and wait for its resolution; but, I don’t
+want to keep my customers waiting.</p>
+
+
+
+<p>This is where puzzle driven development
+helps me. Instead of submitting bug reports, I add
+“<a href="https://en.wikipedia.org/wiki/To_be_announced">TBD</a>” puzzles in
+the SRS document. The puzzles are informal replacements of normally very strict
+formal requirements. They satisfy my customer, since they are in
+plain English, and are understandable by technical people.</p>
+
+<p>Thus, when I don’t have time, I don’t wait. I change the SRS
+using TBD-s at points where I can’t create a proper and formal description of the
+requirements or simply don’t know what to write exactly.</p>
+
+<h2 id="architect">Architect</h2>
+
+<p>Now, I’m the <a href="/2016/07/21/convince-me.html">architect</a>,
+and my task is to implement a requirement, which has been formally specified
+in the SRS. PM is expecting a working feature from me, which I can deliver
+only when the architecture is clear and classes have been designed and implemented.</p>
+
+
+
+<p>Being an architect, I’m responsible for assembling all of the components
+together and making sure they fit. In most cases,
+I’m not creating them myself, but I’m telling everybody how they should
+be created. My work flow of artifacts is the following:</p>
+
+<p><object data="/uml/d892698103dc5669949527a8754c5f26.svg" type="image/svg+xml" class="plantuml"></object></p>
+
+<p>I receive <a href="/2015/11/10/ten-mistakes-in-specs.html">requirements</a>
+from the SRS, produce UML diagrams and
+explain to designers how to create source code according to my diagrams.
+I don’t really care how source code is implemented. I’m more concerned
+with the interaction of components and how well the entire architecture satisfies
+functional and non-functional (!) requirements.</p>
+
+<p>My task will be closed and paid when the system analyst
+changes its state to “implemented” in the SRS. The system analyst is my only
+customer. I have to sell my solution to him. Project manager
+will close my task and pay me when system analyst changes
+the status of the functional requirement from “specified” to “implemented.”</p>
+
+<p>The task sounds big, and I have only half an hour. Obviously,
+puzzle driven development should help me. I will create many tickets and
+puzzles. For example:</p>
+
+<ul>
+  <li>SRS doesn’t explain requirements properly</li>
+  <li>Non-functional requirements are not clear</li>
+  <li>UML diagrams are not clear enough</li>
+  <li>Components are not implemented</li>
+  <li>Build is not automated</li>
+  <li>Continuous integration is not configured</li>
+  <li>Quality of code is not under control</li>
+  <li>Performance testing is not automated</li>
+</ul>
+
+<p>When all of my puzzles are resolved, I can get back to my main task
+and finish feature implementation. Obviously, this may take a long time - days or even weeks.</p>
+
+<p>But, the time cost of the main task is less than an hour.
+What is the point of all this hard work? Well, it’s simple;
+I’ll earn my hours from all the bugs reported.
+From this small half-an-hour task, I will generate many tickets, and every one of them will give me extra cash.</p>
+
+<h2 id="designer-and-programmer">Designer and Programmer</h2>
+
+<p>The only real differences between designer and programmer are the complexity
+of their respective tasks and the hourly rates they receive. Designers usually do more complex
+and higher level implementations, while programmers implement all
+low-level details.</p>
+
+
+
+<p>I’m a programmer and my task is to implement a class or method or to
+fix some functional bug. In most cases, I have only half an hour available.
+And, most tasks are bigger and require more time than that.</p>
+
+<p>Puzzle driven development helps me break my task into smaller sub-tasks.
+I <a href="/2017/03/24/tdd-that-works.html">always</a>
+start with a unit test. In the unit test, I’m trying to
+reproduce a bug or model the feature. When my test fails, I commit
+it and determine the amount of time I have left. If I still have time to make it
+pass—I do it, commit the changes and report to the project manager.</p>
+
+<p>If I don’t have time to implement the fix, I mark pieces of code that
+don’t already have <code class="language-plaintext highlighter-rouge">@todo</code> markers, commit them and report to the
+project manager that I’ve finished.</p>
+
+<p>As you see, I’m fixing the code and breaking it at the same time. I’m fixing
+it with my new unit test, but breaking it with <code class="language-plaintext highlighter-rouge">@todo</code> puzzles.</p>
+
+<p>This is how I help to increase the overall quality of the project - by
+fixing and breaking at the same time.</p>
+
+<h2 id="tester">Tester</h2>
+
+<p>I’m a tester and my primary motivation is to find bugs. This may be
+contradictory to what you’ve heard before; but in <a href="https://www.xdsd.org">XDSD</a>, we plan
+to find a certain amount of bugs at every stage of the project.</p>
+
+
+
+<p>As as a tester, I receive tasks from my project manager. These tasks usually resemble “review feature X and find 10 bugs in it.” The project manager
+needs a certain number of bugs to be found in order to fix the project.
+From his point of view, the project is fixed when, say, 200 bugs have been found. That’s why he asks me to find more.</p>
+
+<p>Thus, to respond to the request, i find bugs to do my part in regard to the “fixing” part
+of the bigger picture. At the same time, though, I can find defects on my own
+and report them. This is the “breaking” part of my mission.</p>
+
+    </article>
+  </body>
+</html>

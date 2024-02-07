@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Object Validation: to Defer or Not?</title>
+    <link rel="canonical" href="https://www.yegor256.com/2018/05/29/object-validation.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2018/05/29/object-validation.html"
+        },
+        "headline": "Object Validation: to Defer or Not?",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2018/05/punching-the-clown.jpg",
+          "height": 720,
+          "width": 1274
+        },
+        "datePublished": "2018-05-29",
+        "dateModified": "2018-05-29",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "There must be no code in object constructors, but
+what about validation of incoming parameters? They
+may be validated, on certain terms.
+",
+        "keywords": ["oop validation", "oop constructor", "validation in constructor", "when validate objects", "validation in oop"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2018/05/29/object-validation.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>29 May 2018</p>
+      <h1>Object Validation: to Defer or Not?</h1>
+      
+
+<p>I <a href="/2015/05/07/ctors-must-be-code-free.html">said earlier</a>
+that constructors must be code-free and do 
+<a href="/2023/08/08/two-step-initialization.html">nothing</a>
+aside from attribute initialization. Since then, the most frequently
+asked <a href="https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622">question</a>
+is: What about validation of arguments? If they are “broken,”
+what is the point of creating an object in an “invalid” state?
+Such an object will fail later, at an unexpected moment. Isn’t it
+better to throw an exception at the very moment of instantiation? To fail fast,
+so to speak? Here is what I think.</p>
+
+
+
+<amp-img src="/images/2018/05/punching-the-clown.jpg" alt="Punching the Clown (2009) by Gregori Viens" height="720" width="1274" layout="responsive"></amp-img>
+
+<p>Let’s start with this Ruby code:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Users</span> <span class="o">{</span>
+  <span class="n">def</span> <span class="nf">initialize</span><span class="o">(</span><span class="n">file</span><span class="o">)</span>
+    <span class="nd">@file</span> <span class="o">=</span> <span class="n">file</span>
+  <span class="n">end</span>
+  <span class="n">def</span> <span class="n">names</span>
+    <span class="nc">File</span><span class="o">.</span><span class="na">readlines</span><span class="o">(</span><span class="nd">@file</span><span class="o">).</span><span class="na">reject</span><span class="o">(&amp;:</span><span class="n">empty</span><span class="o">?)</span>
+  <span class="n">end</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>We can use it to read a list of users from a file:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Users</span><span class="o">.</span><span class="na">new</span><span class="o">(</span><span class="err">'</span><span class="n">all</span><span class="o">-</span><span class="n">users</span><span class="o">.</span><span class="na">txt</span><span class="err">'</span><span class="o">).</span><span class="na">names</span>
+</code></pre></div></div>
+
+<p>There are a number of ways to abuse this class:</p>
+
+<ul>
+  <li>
+    <p>Pass <code class="language-plaintext highlighter-rouge">nil</code> to the ctor instead of a file name;</p>
+  </li>
+  <li>
+    <p>Pass something else, which is not <code class="language-plaintext highlighter-rouge">String</code>;</p>
+  </li>
+  <li>
+    <p>Pass a file that doesn’t exist;</p>
+  </li>
+  <li>
+    <p>Pass a directory instead of a file.</p>
+  </li>
+</ul>
+
+<p>Do you see the difference between these four mistakes we can make?
+Let’s see how our class can protect itself from each of them:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Users</span> <span class="o">{</span>
+  <span class="n">def</span> <span class="nf">initialize</span><span class="o">(</span><span class="n">file</span><span class="o">)</span>
+    <span class="n">raise</span> <span class="s">"File name can't be nil"</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="na">nil</span><span class="o">?</span>
+    <span class="n">raise</span> <span class="err">'</span><span class="nc">Name</span> <span class="n">must</span> <span class="n">be</span> <span class="n">a</span> <span class="nc">String</span><span class="err">'</span> <span class="n">unless</span> <span class="n">file</span><span class="o">.</span><span class="na">is_a</span><span class="o">?(</span><span class="nc">String</span><span class="o">)</span>
+    <span class="nd">@file</span> <span class="o">=</span> <span class="n">file</span>
+  <span class="n">end</span>
+  <span class="n">def</span> <span class="n">names</span>
+    <span class="n">raise</span> <span class="s">"#{@file} is absent"</span> <span class="n">unless</span> <span class="nc">File</span><span class="o">.</span><span class="na">exist</span><span class="o">?(</span><span class="nd">@file</span><span class="o">)</span>
+    <span class="n">raise</span> <span class="s">"#{@file} is not a file"</span> <span class="n">unless</span> <span class="nc">File</span><span class="o">.</span><span class="na">file</span><span class="o">?(</span><span class="nd">@file</span><span class="o">)</span>
+    <span class="nc">File</span><span class="o">.</span><span class="na">readlines</span><span class="o">(</span><span class="nd">@file</span><span class="o">).</span><span class="na">reject</span><span class="o">(&amp;:</span><span class="n">empty</span><span class="o">?)</span>
+  <span class="n">end</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The first two potential mistakes were filtered out
+in the constructor, while the other two—later, in the method.
+Why did I do it this way? Why not put all of them into the constructor?</p>
+
+<p>Because the first two compromise <a href="/2014/12/09/immutable-object-state-and-behavior.html">object state</a>,
+while with the other two—its runtime behavior. You remember that an
+<a href="/2016/07/14/who-is-object.html">object</a> is a representative of
+a set of other objects it encapsulates, called attributes. The object of
+class <code class="language-plaintext highlighter-rouge">Users</code> can’t <em>represent</em> <code class="language-plaintext highlighter-rouge">nil</code> or a number. It can only represent
+a file with a name of type <code class="language-plaintext highlighter-rouge">String</code>. On the other hand, what that file
+contains and whether it really is a file—doesn’t make the state invalid.
+It only causes trouble for the behavior.</p>
+
+<p>Even though the difference may look subtle, it’s obvious. There are
+two phases of interaction with the encapsulated object: <em>connecting</em> and <em>talking</em>.</p>
+
+
+
+<p>First, we encapsulate the <code class="language-plaintext highlighter-rouge">file</code> and want to be sure that it really is
+a file. We are not yet talking to it, we don’t want it to work for us yet,
+we just want to make sure it really <em>is</em> an object that we will be able to talk
+to in the near future. If it’s <code class="language-plaintext highlighter-rouge">nil</code> or a <code class="language-plaintext highlighter-rouge">float</code>, we will have problems
+in the future, for sure. That’s why we raise an exception from the constructor.</p>
+
+<p>Then the second phase is talking, where we delegate control to the object
+and expect it to behave correctly. At this phase we may have other validation
+procedures, in order to make sure our interaction will go smoothly.
+It’s important to mention that these validations are very situational.
+We may call <code class="language-plaintext highlighter-rouge">names()</code> multiple times and every time have a different
+situation with the file on disc. To begin with it may not exist, while in a few seconds
+it will be ready and available for reading.</p>
+
+<p>Ideally, a programming language should provide instruments for the first
+type of validations, for example with <a href="https://en.wikipedia.org/wiki/Strong_and_weak_typing">strict typing</a>.
+In Java, for example,
+we would not need to check the type of <code class="language-plaintext highlighter-rouge">file</code>, the compiler would catch
+that error earlier. In Kotlin we would be able to get rid of the NULL
+check, thanks to their <a href="https://kotlinlang.org/docs/reference/null-safety.html">Null Safety</a> feature.
+Ruby is less powerful than those languages, that’s why we have to validate “manually.”</p>
+
+<p>Thus, to summarize, validating in constructors is <em>not</em> a bad idea, provided
+the validations are <em>not touching the objects</em> but only confirm that they are
+good enough to work with later.</p>
+
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">How an ideal Java class BookInFile should react when this happens:<br><br>Book book = new BookInFile(null /* file name */);<a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a> <a href="https://twitter.com/hashtag/java?src=hash&amp;ref_src=twsrc%5Etfw">#java</a></p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1099590296105639936?ref_src=twsrc%5Etfw">February 24, 2019</a>
+</blockquote>
+
+
+
+    </article>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Operator new() is Toxic</title>
+    <link rel="canonical" href="https://www.yegor256.com/2018/01/02/operator-new-is-toxic.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2018/01/02/operator-new-is-toxic.html"
+        },
+        "headline": "Operator new() is Toxic",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2018/01/the-gift.jpg",
+          "height": 803,
+          "width": 1280
+        },
+        "datePublished": "2018-01-02",
+        "dateModified": "2018-01-02",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Instantiating objects via operator NEW is what we
+have to do in order to have those objects; however, it's
+important where this happens.
+",
+        "keywords": ["operator new", "alan kay about oop", "message oriented programming", "messages oop", "alan kay oop definition"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2018/01/02/operator-new-is-toxic.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>2 January 2018</p>
+      <h1>Operator new() is Toxic</h1>
+      <p>To instantiate objects, in most object-oriented languages,
+including Java, Ruby, and C++, we use operator <code class="language-plaintext highlighter-rouge">new()</code>. Well, unless
+we use static factory methods, which we don’t use because
+<a href="/2017/11/14/static-factory-methods.html">they are evil</a>.
+Even though it looks so easy to make a new object any time we need it,
+I would recommend to be more careful with this rather toxic operator.</p>
+
+
+
+<amp-img src="/images/2018/01/the-gift.jpg" alt="The Gift (2015) by Joel Edgerton" height="803" width="1280" layout="responsive"></amp-img>
+
+<p>I’m sure you understand that the problem with this operator is that
+it couples objects, making testing and reuse very difficult or even impossible.
+Let’s say there is a story in a file that we need to read as a UTF-8 text
+(I’m using
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.25.6/org/cactoos/text/TextOf.html"><code class="language-plaintext highlighter-rouge">TextOf</code></a>
+from <a href="https://www.cactoos.org">Cactoos</a>):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Story</span> <span class="o">{</span>
+  <span class="nc">String</span> <span class="nf">text</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TextOf</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">File</span><span class="o">(</span><span class="s">"/tmp/story.txt"</span><span class="o">)</span>
+    <span class="o">).</span><span class="na">asString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>It seems super simple, but the problem is obvious: class <code class="language-plaintext highlighter-rouge">Story</code> can’t
+be reused. It can only read one particular file. Moreover, testing it
+will be rather difficult, since it reads the content from exactly one place,
+which can’t be changed at all. More formally this problem is known as an
+<em>unbreakable dependency</em>—we can’t break the link between <code class="language-plaintext highlighter-rouge">Story</code>
+and <code class="language-plaintext highlighter-rouge">/tmp/story.txt</code>—they are together forever.</p>
+
+<p>To solve this we need to introduce a constructor and let <code class="language-plaintext highlighter-rouge">Story</code> accept
+the location of the content as an argument:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Story</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">;</span>
+  <span class="nc">Story</span><span class="o">(</span><span class="nc">File</span> <span class="n">f</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">f</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">text</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TextOf</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">).</span><span class="na">asString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Now, each user of the <code class="language-plaintext highlighter-rouge">Story</code> has to know the name of the file:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Story</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"/tmp/story.txt"</span><span class="o">));</span>
+</code></pre></div></div>
+
+<p>It’s not really
+convenient, especially for those users who were using <code class="language-plaintext highlighter-rouge">Story</code> before, knowing
+nothing about the file path. To help them we introduce
+a <a href="/2015/05/28/one-primary-constructor.html">secondary constructor</a>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Story</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">file</span><span class="o">;</span>
+  <span class="nc">Story</span><span class="o">()</span> <span class="o">{</span> <span class="c1">// Here!</span>
+    <span class="k">this</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"/tmp/story.txt"</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="nc">Story</span><span class="o">(</span><span class="nc">File</span> <span class="n">f</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">f</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">text</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TextOf</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">).</span><span class="na">asString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Now we just make an instance through a no-arguments constructor, just like
+we did before:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Story</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>I’m sure you’re well aware of this technique, which is also known
+as <a href="https://martinfowler.com/articles/injection.html">dependency injection</a>.
+I’m actually not saying anything new. What I want you to pay attention to here is
+the location and the amount of <code class="language-plaintext highlighter-rouge">new</code> operators in all three code snippets.</p>
+
+<p>In the first snippet both <code class="language-plaintext highlighter-rouge">new</code> operators are in the method <code class="language-plaintext highlighter-rouge">text()</code>.
+In the second snippet we lost one of them. In the third snippet one operator
+is in the method, while the second one moved up, to the constructor.</p>
+
+<p>Remember this fact and let’s move on.</p>
+
+<p>What if the file is not in UTF-8 encoding but in <a href="https://en.wikipedia.org/wiki/KOI8-R">KOI8-R</a>?
+Class <code class="language-plaintext highlighter-rouge">TextOf</code> and then method <code class="language-plaintext highlighter-rouge">Story.text()</code> will throw an exception.
+However, class <code class="language-plaintext highlighter-rouge">TextOf</code> is capable of reading in any encoding, it just
+needs to have a secondary argument for its constructor:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">TextOf</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">file</span><span class="o">,</span> <span class="s">"KOI8_R"</span><span class="o">).</span><span class="na">asString</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>In order to make <code class="language-plaintext highlighter-rouge">Story</code> capable of using different encodings, we need to
+introduce a few additional secondary constructors and modify its primary
+constructor:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Story</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Text</span> <span class="n">text</span><span class="o">;</span>
+  <span class="nc">Story</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"/tmp/story.txt"</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="nc">Story</span><span class="o">(</span><span class="nc">File</span> <span class="n">f</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="n">f</span><span class="o">,</span> <span class="nc">StandardEncodings</span><span class="o">.</span><span class="na">UTF_8</span><span class="o">);</span>
+  <span class="o">}</span>
+  <span class="nc">Story</span><span class="o">(</span><span class="nc">File</span> <span class="n">f</span><span class="o">,</span> <span class="nc">Encoding</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">(</span><span class="k">new</span> <span class="nc">TextOf</span><span class="o">(</span><span class="n">f</span><span class="o">,</span> <span class="n">e</span><span class="o">));</span>
+  <span class="o">}</span>
+  <span class="nc">Story</span><span class="o">(</span><span class="nc">Text</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">text</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">String</span> <span class="nf">text</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">asString</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>It’s just dependency injection, but pay attention to the locations
+of the operator <code class="language-plaintext highlighter-rouge">new</code>. They are all in the
+constructors now and none of them are left in the method <code class="language-plaintext highlighter-rouge">text()</code>.</p>
+
+<p>The tendency here is obvious to me: the more the <code class="language-plaintext highlighter-rouge">new</code> operators stay in the
+methods, the less reusable and testable is the class.</p>
+
+<p>In other words, operator <code class="language-plaintext highlighter-rouge">new</code> is a rather toxic thing, so try to keep its
+usage to a minimum in your methods. Make sure you instantiate everything
+or almost everything in your secondary constructors.</p>
+
+
+    </article>
+  </body>
+</html>

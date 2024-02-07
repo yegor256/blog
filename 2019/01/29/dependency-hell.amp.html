@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>My Recipe Against Dependency Hell</title>
+    <link rel="canonical" href="https://www.yegor256.com/2019/01/29/dependency-hell.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2019/01/29/dependency-hell.html"
+        },
+        "headline": "My Recipe Against Dependency Hell",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2019/01/sin-noticias-de-dios.jpg",
+          "height": 848,
+          "width": 2006
+        },
+        "datePublished": "2019-01-29",
+        "dateModified": "2019-01-29",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Do you use fixed or dynamic versions for your
+dependencies? I wasn't sure which approach is the
+right one until I found a formula for myself.
+",
+        "keywords": ["dependency hell", "dependency fixed version", "fixed version dependency", "software dependencies", "dependency packages"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2019/01/29/dependency-hell.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>29 January 2019</p>
+      <h1>My Recipe Against Dependency Hell</h1>
+      <p>Do you specify exact versions of your dependencies? I mean, when your
+software package depends on another one, do you write down, in your <code class="language-plaintext highlighter-rouge">pom.xml</code>,
+<code class="language-plaintext highlighter-rouge">Gruntfile</code>, <code class="language-plaintext highlighter-rouge">Gemfile</code>, or what have you, its version as <code class="language-plaintext highlighter-rouge">1.13.5</code> or just
+<code class="language-plaintext highlighter-rouge">1.+</code>? I always <a href="https://twitter.com/yegor256/status/1059856548112068608">thought</a>
+that it was better to use exact version numbers,
+to avoid the so called <a href="https://en.wikipedia.org/wiki/Dependency_hell">dependency hell</a>,
+and <a href="https://blog.danlew.net/2015/09/09/dont-use-dynamic-versions-for-your-dependencies/">I was not alone</a>.
+However, very soon I <a href="https://twitter.com/yegor256/status/1060538705260265474">realized</a>
+that dynamic versions, like <code class="language-plaintext highlighter-rouge">1.+</code>, give more flexibility.
+Just a few weeks ago I realized that neither approach
+is right and found myself a hybrid formula. No surprise, I again saw that
+<a href="https://brock.io/post/repeatable_android_builds/">I wasn’t alone</a>.</p>
+
+
+
+<amp-img src="/images/2019/01/sin-noticias-de-dios.jpg" alt="Sin noticias de Dios (2001) by Agustín Díaz Yanes" height="848" width="2006" layout="responsive"></amp-img>
+
+<p>First, let me explain what’s wrong with fixed dependencies.</p>
+
+<p>Say I create a library X, which depends on, for example, a logging
+facility, which is a third-party library, not mine. Thus my library X has
+a <em>dependency</em>. The logging library has a version number, such as
+<code class="language-plaintext highlighter-rouge">1.13.5</code>. I put this text into the <code class="language-plaintext highlighter-rouge">pom.xml</code> file of X:</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.example<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>log-me<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.13.5<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
+
+<p>Many advocates of fixed dependencies argue that it’s very important
+to stick to the version <code class="language-plaintext highlighter-rouge">1.13.5</code>, instead of using a more flexible dynamic
+one: <code class="language-plaintext highlighter-rouge">1.13)</code> (i.e. any version, provided it is <code class="language-plaintext highlighter-rouge">1.13</code> or newer).
+Why? Because future versions may introduce something that
+will break the build of X. They may change interfaces, rename classes or methods,
+or delete something that I’m using. You never know what the authors of this
+<code class="language-plaintext highlighter-rouge">log-me</code> library might do. That’s why it’s better to hard-wire ourselves to <code class="language-plaintext highlighter-rouge">1.13.5</code> and
+call it a day.</p>
+
+<p>This is true.</p>
+
+<p>But.</p>
+
+<p>What if the library X is used by another library Y, which also depends on
+<code class="language-plaintext highlighter-rouge">log-me</code> but needs version <code class="language-plaintext highlighter-rouge">1.14.1</code>. Boom! There will be a conflict
+in library Y: Maven, the package manager, won’t be able to decide
+which version to use. It will be necessary to resolve the conflict somehow.
+In the case of Maven it’s resolvable, in the case of, for example,
+<a href="https://github.com/ruby/rake">Rake</a>, it’s not (to my knowledge).</p>
+
+
+
+<p>To resolve this problem, library Y will have to explicitly say which version
+has to be used. But it can’t be sure that <code class="language-plaintext highlighter-rouge">1.14.1</code> will work correctly with
+library X. To confirm that it does, it would have to be tested by the authors of library
+X. So the best the creators of library Y can do is to try it and hope
+for the best. With other build tools, like Rake, the authors will have no choice,
+but to ask the authors of library X to upgrade to <code class="language-plaintext highlighter-rouge">1.14.1</code> and release
+a new version. Then, library Y will be able to use library X.</p>
+
+<p>This problem would not exist if library X depended on <code class="language-plaintext highlighter-rouge">1.13</code> instead.
+But, as I mentioned above, in that case its authors would be planting a time bomb—eventually
+one of the future versions will definitely break the build.</p>
+
+<p>So what is the solution?</p>
+
+<p>Here is my formula: If you trust the authors of the library, use dynamic versioning;
+if you don’t, use a fixed version.</p>
+
+<p>What I mean is, do you trust that they are professional enough to think about
+backward compatibility and to follow the principles of <a href="https://semver.org/">semantic versioning</a>?
+If they are careful enough to not delete or modify something
+that may affect future versions without also changing the major number of the version,
+then you can trust them. How do you know who to trust? I don’t trust anyone, except
+my own libraries and a very small number of other libraries which I have reviewed in GitHub and checked
+the quality of their repositories.</p>
+
+<p>Of course, you can’t fully trust anyone, but this is the formula I
+have for myself now. You can see how it works in this
+<a href="https://github.com/zold-io/zold/blob/master/zold.gemspec">Gemfile</a>, for example.
+Pay attention to the version numbers. Those that start with <code class="language-plaintext highlighter-rouge">~&gt;</code> or <code class="language-plaintext highlighter-rouge">&gt;=</code> are dynamic,
+while others are fixed. It’s a hybrid approach, but it works for me.</p>
+
+<p>Maybe it will help you too.</p>
+
+
+    </article>
+  </body>
+</html>

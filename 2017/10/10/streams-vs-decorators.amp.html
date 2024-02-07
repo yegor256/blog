@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Streams vs. Decorators</title>
+    <link rel="canonical" href="https://www.yegor256.com/2017/10/10/streams-vs-decorators.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2017/10/10/streams-vs-decorators.html"
+        },
+        "headline": "Streams vs. Decorators",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2017/10/la-haine.jpg",
+          "height": 694,
+          "width": 1280
+        },
+        "datePublished": "2017-10-10",
+        "dateModified": "2017-10-10",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Streams from Java 8 help us manipulate collections,
+but they ruin the idea of objects; decorators, on the
+other hand, do the same but in an object-oriented way.
+",
+        "keywords": ["streams API", "decorators vs streams", "guava vs streams", "java streams", "streams"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2017/10/10/streams-vs-decorators.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>10 October 2017</p>
+      <h1>Streams vs. Decorators</h1>
+      <p>The <a href="https://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html">Streams API</a>
+was introduced in Java 8, together with
+<a href="http://openjdk.java.net/projects/lambda/">lambda expressions</a>, just a few
+years ago. I, as a disciplined Java adept, tried to use this new feature
+in a few of my projects, for example
+<a href="https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/dynamo/DyUser.java#L85-L88">here</a> and
+<a href="https://github.com/yegor256/wring/blob/0.17.2/src/main/java/io/wring/dynamo/DyEvents.java#L95-L98">here</a>.
+I didn’t really like it and went back to good old decorators. Moreover, I
+created <a href="https://www.cactoos.org">Cactoos</a>, a library of decorators, to replace
+<a href="https://github.com/google/guava">Guava</a>, which is not so good in so many places.</p>
+
+
+
+<amp-img src="/images/2017/10/la-haine.jpg" alt="La Haine (1995) by Mathieu Kassovitz" height="694" width="1280" layout="responsive"></amp-img>
+
+<p>Here is a primitive example. Let’s say we have a collection of measurements
+coming in from some data source, they are all numbers between zero and one:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;</span> <span class="n">probes</span><span class="o">;</span>
+</code></pre></div></div>
+
+<p>Now, we need to show only the first 10 of them, ignoring zeros and ones,
+and re-scaling them to <code class="language-plaintext highlighter-rouge">(0..100)</code>. Sounds like an easy task, right? There
+are three ways to do it: procedural, object-oriented, and the Java 8 way. Let’s
+start with the procedural way:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">Double</span> <span class="n">probe</span> <span class="o">:</span> <span class="n">probes</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">probe</span> <span class="o">==</span> <span class="mf">0.0d</span> <span class="o">||</span> <span class="n">probe</span> <span class="o">==</span> <span class="mf">1.0d</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">continue</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">if</span> <span class="o">(++</span><span class="n">pos</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">break</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+    <span class="s">"Probe #%d: %f"</span><span class="o">,</span> <span class="n">pos</span><span class="o">,</span> <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Why is this a procedural way? Because it’s imperative. Why is it imperative?
+Because it’s procedural. Nah, I’m kidding.</p>
+
+<p>It’s imperative because we’re
+giving instructions to the computer about what data to put where and how to
+iterate through it. We’re not declaring the result, but imperatively
+building it. It works, but it’s not really scalable. We can’t take part of this
+algorithm and apply it to another use case. We can’t really modify it easily,
+for example to take numbers from two sources instead of one, etc.
+It’s procedural. Enough said. Don’t do it this way.</p>
+
+<p>Now, Java 8 gives us the
+<a href="https://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html">Streams API</a>,
+which is supposed to offer a
+functional way to do the same. Let’s try to use it.</p>
+
+<p>First, we need to create an instance of
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html"><code class="language-plaintext highlighter-rouge">Stream</code></a>,
+which
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code class="language-plaintext highlighter-rouge">Iterable</code></a>
+<a href="https://stackoverflow.com/questions/23114015/">doesn’t</a>
+let us obtain directly. Then we use the stream API to do the job:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">StreamSupport</span><span class="o">.</span><span class="na">stream</span><span class="o">(</span><span class="n">probes</span><span class="o">.</span><span class="na">spliterator</span><span class="o">(),</span> <span class="kc">false</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">p</span> <span class="o">-&gt;</span> <span class="n">p</span> <span class="o">==</span> <span class="mf">0.0d</span> <span class="o">||</span> <span class="n">p</span> <span class="o">==</span> <span class="mf">1.0d</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">limit</span><span class="o">(</span><span class="mi">10L</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">forEach</span><span class="o">(</span>
+    <span class="n">probe</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+      <span class="s">"Probe #%d: %f"</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+</code></pre></div></div>
+
+<p>This will work, but will say <code class="language-plaintext highlighter-rouge">Probe #0</code> for all probes, because <code class="language-plaintext highlighter-rouge">forEach()</code>
+doesn’t work with indexes. There is no such thing as <code class="language-plaintext highlighter-rouge">forEachWithIndex()</code>
+in the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html"><code class="language-plaintext highlighter-rouge">Stream</code></a>
+interface as of Java 8 (and Java 9
+<a href="http://download.java.net/java/jdk9/docs/api/java/util/stream/Stream.html">too</a>).
+Here is a <a href="https://stackoverflow.com/a/18552071/187141">workaround</a> with
+an atomic counter:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">AtomicInteger</span> <span class="n">index</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AtomicInteger</span><span class="o">();</span>
+<span class="nc">StreamSupport</span><span class="o">.</span><span class="na">stream</span><span class="o">(</span><span class="n">probes</span><span class="o">.</span><span class="na">spliterator</span><span class="o">(),</span> <span class="kc">false</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">filter</span><span class="o">(</span><span class="n">probe</span> <span class="o">-&gt;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">0.0d</span> <span class="o">&amp;&amp;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">1.0d</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">limit</span><span class="o">(</span><span class="mi">10L</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">forEach</span><span class="o">(</span>
+    <span class="n">probe</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+      <span class="s">"Probe #%d: %f"</span><span class="o">,</span>
+      <span class="n">index</span><span class="o">.</span><span class="na">getAndIncrement</span><span class="o">(),</span>
+      <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+    <span class="o">)</span>
+  <span class="o">);</span>
+</code></pre></div></div>
+
+<p>“What’s wrong with that?” you may ask. First, see how easily we got into
+trouble when we didn’t find the right method in the <code class="language-plaintext highlighter-rouge">Stream</code> interface. We
+immediately fell off the “streaming” paradigm and got back to the
+good old procedural global variable (the counter). Second, we don’t
+really see what’s going on inside those <code class="language-plaintext highlighter-rouge">filter()</code>, <code class="language-plaintext highlighter-rouge">limit()</code>, and <code class="language-plaintext highlighter-rouge">forEach()</code>
+methods. How exactly do they work? The documentation says that this
+approach is “declarative” and each method in the <code class="language-plaintext highlighter-rouge">Stream</code> interface returns
+an instance of some class. What classes are they? We have no idea by
+just looking at this code.</p>
+
+
+
+<p>These two problems are connected. The biggest issue with this streaming API
+is the very interface <code class="language-plaintext highlighter-rouge">Stream</code>—it’s huge. At the time of writing
+there are 43 methods. Forty three, in a single interface! This is against
+each and every
+<a href="/2014/11/20/seven-virtues-of-good-object.html">principle</a>
+of object-oriented programming, starting with
+<a href="/2017/03/28/solid.html">SOLID</a> and then up to more serious
+ones.</p>
+
+<p>What is the object-oriented way to implement the same algorithm? Here
+is how I would do it with <a href="https://www.cactoos.org">Cactoos</a>, which is just a collection of
+<del>primitive</del> simple Java classes:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">And</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nc">Mapped</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">,</span> <span class="nc">Scalar</span><span class="o">&lt;</span><span class="nc">Boolean</span><span class="o">&gt;&gt;(</span>
+    <span class="k">new</span> <span class="nc">Limited</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;(</span>
+      <span class="k">new</span> <span class="nc">Filtered</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;(</span>
+        <span class="n">probes</span><span class="o">,</span>
+        <span class="n">probe</span> <span class="o">-&gt;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">0.0d</span> <span class="o">&amp;&amp;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">1.0d</span>
+      <span class="o">),</span>
+      <span class="mi">10</span>
+    <span class="o">),</span>
+    <span class="n">probe</span> <span class="o">-&gt;</span> <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+        <span class="s">"Probe #%d: %f"</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+      <span class="o">);</span>
+      <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">)</span>
+<span class="o">).</span><span class="na">value</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>Let’s see what’s going on here. First,
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Filtered.html"><code class="language-plaintext highlighter-rouge">Filtered</code></a>
+decorates our iterable <code class="language-plaintext highlighter-rouge">probes</code> to take certain items out of it.
+Notice that <code class="language-plaintext highlighter-rouge">Filtered</code> implements <code class="language-plaintext highlighter-rouge">Iterable</code>. Then
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Limited.html"><code class="language-plaintext highlighter-rouge">Limited</code></a>,
+also being an <code class="language-plaintext highlighter-rouge">Iterable</code>, takes only the first ten items out. Then
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Mapped.html"><code class="language-plaintext highlighter-rouge">Mapped</code></a>
+converts each probe into an instance of
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html"><code class="language-plaintext highlighter-rouge">Scalar&lt;Boolean&gt;</code></a>,
+which does the line printing.</p>
+
+<p>Finally, the instance of <code class="language-plaintext highlighter-rouge">And</code> goes through the list of “scalars” and ask
+each of them to return <code class="language-plaintext highlighter-rouge">boolean</code>. They print the line and return <code class="language-plaintext highlighter-rouge">true</code>. Since
+it’s <code class="language-plaintext highlighter-rouge">true</code>, <code class="language-plaintext highlighter-rouge">And</code> makes the next attempt with the next scalar. Finally,
+its method <code class="language-plaintext highlighter-rouge">value()</code> returns <code class="language-plaintext highlighter-rouge">true</code>.</p>
+
+<p>But wait, there are no indexes. Let’s add them. In order to do that we
+just use another class, called <code class="language-plaintext highlighter-rouge">AndWithIndex</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">AndWithIndex</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nc">Mapped</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">,</span> <span class="nc">Func</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">Boolean</span><span class="o">&gt;&gt;(</span>
+    <span class="k">new</span> <span class="nc">Limited</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;(</span>
+      <span class="k">new</span> <span class="nc">Filtered</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;(</span>
+        <span class="n">probes</span><span class="o">,</span>
+        <span class="n">probe</span> <span class="o">-&gt;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">0.0d</span> <span class="o">&amp;&amp;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">1.0d</span>
+      <span class="o">),</span>
+      <span class="mi">10</span>
+    <span class="o">),</span>
+    <span class="n">probe</span> <span class="o">-&gt;</span> <span class="n">index</span> <span class="o">-&gt;</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+        <span class="s">"Probe #%d: %f"</span><span class="o">,</span> <span class="n">index</span><span class="o">,</span> <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+      <span class="o">);</span>
+      <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">)</span>
+<span class="o">).</span><span class="na">value</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>Instead of <code class="language-plaintext highlighter-rouge">Scalar&lt;Boolean&gt;</code> we now map our probes to
+<a href="http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Func.html"><code class="language-plaintext highlighter-rouge">Func&lt;Integer, Boolean&gt;</code></a>
+to let them accept the index.</p>
+
+<p>The beauty of this approach is that all classes and interfaces are small
+and that’s why they’re very composable. To make an iterable of probes limited
+we decorate it with <code class="language-plaintext highlighter-rouge">Limited</code>; to make it filtered we decorate it with
+<code class="language-plaintext highlighter-rouge">Filtered</code>; to do something else we create a new decorator and use it. We’re
+not stuck to one single interface like <code class="language-plaintext highlighter-rouge">Stream</code>.</p>
+
+<p>The bottom line is that decorators are an object-oriented instrument to
+modify the behavior of collections, while streams is something else which
+I can’t even find the name for.</p>
+
+<p>P.S. By the way, this is how the same algorithm can be implemented
+with the help of Guava’s
+<a href="https://google.github.io/guava/releases/21.0/api/docs/com/google/common/collect/Iterables.html"><code class="language-plaintext highlighter-rouge">Iterables</code></a>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Iterable</span><span class="o">&lt;</span><span class="nc">Double</span><span class="o">&gt;</span> <span class="n">ready</span> <span class="o">=</span> <span class="nc">Iterables</span><span class="o">.</span><span class="na">limit</span><span class="o">(</span>
+  <span class="nc">Iterables</span><span class="o">.</span><span class="na">filter</span><span class="o">(</span>
+    <span class="n">probes</span><span class="o">,</span>
+    <span class="n">probe</span> <span class="o">-&gt;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">0.0d</span> <span class="o">&amp;&amp;</span> <span class="n">probe</span> <span class="o">!=</span> <span class="mf">1.0d</span>
+  <span class="o">),</span>
+  <span class="mi">10</span>
+<span class="o">);</span>
+<span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">Double</span> <span class="n">probe</span> <span class="o">:</span> <span class="n">probes</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span>
+    <span class="s">"Probe #%d: %f"</span><span class="o">,</span> <span class="n">pos</span><span class="o">++,</span> <span class="n">probe</span> <span class="o">*</span> <span class="mf">100.0d</span>
+  <span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This is some weird combination of object-oriented and functional styles.</p>
+
+
+    </article>
+  </body>
+</html>

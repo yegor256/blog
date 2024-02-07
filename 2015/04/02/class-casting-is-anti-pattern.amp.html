@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Class Casting Is a Discriminating Anti-Pattern</title>
+    <link rel="canonical" href="https://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html"
+        },
+        "headline": "Class Casting Is a Discriminating Anti-Pattern",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2015/03/gadkiy-utenok.jpg",
+          "height": 372,
+          "width": 640
+        },
+        "datePublished": "2015-04-02",
+        "dateModified": "2015-04-02",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Type casting and use of the instanceof operator, in particular,
+are terrible anti-patterns that diminish the entire idea
+of object-oriented programming.
+",
+        "keywords": ["class casting", "class casting in java", "instanceof", "type casting in java", "class casting is evil"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2015/04/02/class-casting-is-anti-pattern.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>2 April 2015</p>
+      <h1>Class Casting Is a Discriminating Anti-Pattern</h1>
+      <p>Type casting is a very useful technique when there is no time
+or desire to think and design objects properly. Type casting (or
+class casting) helps us work with provided objects differently,
+based on the class they belong to or the interface they implement. Class
+casting helps us <em>discriminate</em> against the poor objects and <em>segregate</em>
+them by their race, gender, and religion. Can this be a good practice?</p>
+
+
+
+<amp-img src="/images/2015/03/gadkiy-utenok.jpg" alt="Гадкий утенок (1956) by Владимир Дегтярёв" height="372" width="640" layout="responsive"></amp-img>
+
+<p>This is a very typical example of type casting (Google Guava is full
+of it, for example
+<a href="https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111"><code class="language-plaintext highlighter-rouge">Iterables.size()</code></a>):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="nf">sizeOf</span><span class="o">(</span><span class="nc">Iterable</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">items</span> <span class="k">instanceof</span> <span class="nc">Collection</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">size</span> <span class="o">=</span> <span class="nc">Collection</span><span class="o">.</span><span class="na">class</span><span class="o">.</span><span class="na">cast</span><span class="o">(</span><span class="n">items</span><span class="o">).</span><span class="na">size</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="nc">Object</span> <span class="n">item</span> <span class="o">:</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+        <span class="o">++</span><span class="n">size</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This <code class="language-plaintext highlighter-rouge">sizeOf()</code>  method calculates the size of an iterable. However, it
+is smart enough to understand that if <code class="language-plaintext highlighter-rouge">items</code> are also instances of <code class="language-plaintext highlighter-rouge">Collection</code>,
+there is no need to actually iterate them. It would be much faster to
+cast them to <code class="language-plaintext highlighter-rouge">Collection</code> and then call method <code class="language-plaintext highlighter-rouge">size()</code>. Looks logical,
+but what’s wrong with this approach? I see two practical problems.</p>
+
+<p>First, there is a <em>hidden coupling</em> of <code class="language-plaintext highlighter-rouge">sizeOf()</code> and <code class="language-plaintext highlighter-rouge">Collection</code>. This
+coupling is not visible to the clients of <code class="language-plaintext highlighter-rouge">sizeOf()</code>. They don’t know that
+method <code class="language-plaintext highlighter-rouge">sizeOf()</code> relies on interface <code class="language-plaintext highlighter-rouge">Collection</code>. If tomorrow we decide
+to change it, <code class="language-plaintext highlighter-rouge">sizeOf()</code> won’t work. And we’ll be very surprised, since
+its signature says nothing about this dependency. This won’t happen with
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html"><code class="language-plaintext highlighter-rouge">Collection</code></a>, 
+obviously, since it is part of the Java SDK, but with custom
+classes, this may and will happen.</p>
+
+<p>The second problem is an inevitably <em>growing complexity</em> of the <code class="language-plaintext highlighter-rouge">sizeOf()</code> method. The
+more special types it has to treat differently, the more complex it will become.
+This <code class="language-plaintext highlighter-rouge">if/then</code> <a href="/2016/08/10/if-then-else-code-smell.html">forking</a>
+is inevitable, since it has to check all possible
+types and give them special treatment. Such complexity is a result
+of a violation of the <a href="/2017/12/19/srp-is-hoax.html">single responsibility principle</a>. The method is not
+only calculating the size of <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code class="language-plaintext highlighter-rouge">Iterable</code></a> but is also performing type
+casting and forking based on that casting.</p>
+
+<p>What is the alternative? There are a few, but the most obvious
+is <a href="/2023/08/01/method-overloading.html">method overloading</a>
+(not available in semi-OOP languages like Ruby or PHP):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="nf">sizeOf</span><span class="o">(</span><span class="nc">Iterable</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="nc">Object</span> <span class="n">item</span> <span class="o">:</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+      <span class="o">++</span><span class="n">size</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">size</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kt">int</span> <span class="nf">sizeOf</span><span class="o">(</span><span class="nc">Collection</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">items</span><span class="o">.</span><span class="na">size</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Isn’t that more elegant?</p>
+
+<p>Philosophically speaking, type casting is discrimination  against the object
+that comes into the method. The object complies with the contract provided by the
+method signature. It implements the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html"><code class="language-plaintext highlighter-rouge">Iterable</code></a> interface, which
+<a href="/2014/11/20/seven-virtues-of-good-object.html">is a contract</a>,
+and it expects equal treatment with all other objects that come into
+the same method. But the method discriminates objects by their types.
+The method is basically asking the object about its… race. Black
+objects go right while white objects go left. That’s what this <code class="language-plaintext highlighter-rouge">instanceof</code>
+is doing, and that’s what discrimination is all about.</p>
+
+<p>By using <code class="language-plaintext highlighter-rouge">instanceof</code>, the method is segregating incoming objects by the
+certain group they belong to. In this case, there are two groups: collections
+and everybody else. If you are a collection, you get special treatment.
+Even though you abide by the <code class="language-plaintext highlighter-rouge">Iterable</code> contract, we still treat some objects
+specially because they belong to an “elite” group called <code class="language-plaintext highlighter-rouge">Collection</code>.</p>
+
+<p>You may say that <code class="language-plaintext highlighter-rouge">Collection</code> is just another contract that an object may
+comply with. That’s true, but in this case, there should be another door through
+which those who work by that contract should enter. You announced that
+<code class="language-plaintext highlighter-rouge">sizeOf()</code> accepts everybody who works on the <code class="language-plaintext highlighter-rouge">Iterable</code> contract. I am an object,
+and I do what the contract says. I enter the method and expect
+equal treatment with everybody else who comes into the same method.
+But, apparently, once inside the method, I realize that some objects have
+some special privileges. Isn’t that discrimination?</p>
+
+<p>To conclude, I would consider <code class="language-plaintext highlighter-rouge">instanceof</code> and class casting to be
+anti-patterns and code smells. Once you see a need to use them,
+start thinking about refactoring.</p>
+
+    </article>
+  </body>
+</html>

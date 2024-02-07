@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Meetings Are Legalized Robbery</title>
+    <link rel="canonical" href="https://www.yegor256.com/2015/07/13/meetings-are-legalized-robbery.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2015/07/13/meetings-are-legalized-robbery.html"
+        },
+        "headline": "Meetings Are Legalized Robbery",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2015/07/heat.jpg",
+          "height": 675,
+          "width": 1200
+        },
+        "datePublished": "2015-07-13",
+        "dateModified": "2015-07-13",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Meetings are very popular but very ineffective
+instruments of managing work time and creativity;
+here's why.
+",
+        "keywords": ["meetings", "meetings suck", "why meetings suck", "meetings in software team", "how to organize meetings"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2015/07/13/meetings-are-legalized-robbery.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>13 July 2015</p>
+      <h1>Meetings Are Legalized Robbery</h1>
+      <p>Software development is all about creativity, right? It’s an art,
+not a science. As software engineers, we solve complex problems,
+and often our solutions are absolutely not obvious. We experiment,
+innovate, research, and investigate.
+To do all this, we <em>talk</em>.
+We sit together in our meeting rooms, Skype conference calls, or Slack channels;
+we discuss our solutions;
+we ask our coworkers for their opinions;
+and we argue about the best ideas. There’s no doubt meetings are the key component of the modern
+software design discipline … and it’s very <em>sad</em> to see it.</p>
+
+
+
+<amp-img src="/images/2015/07/heat.jpg" alt="Heat (1995) by Michael Mann" height="675" width="1200" layout="responsive"></amp-img>
+
+<p>A good <a href="/2014/10/12/who-is-software-architect.html">software architect</a>,
+as well as a <a href="/2015/09/22/micromanagement.html">good project manager</a>, doesn’t need
+<a href="/2015/01/08/morning-standup-meetings.html">meetings</a>
+and <em>never</em> organizes them.</p>
+
+
+
+<p>Meetings demotivate, waste time, burn money, and degrade quality. But more about
+that later. For now, let’s discuss a proposed alternative.</p>
+
+<p>Say I’m an architect who needs to design the schema for a relational
+database in a new project, and I have a team of five programmers whom I want
+to help me with this design. That’s a very logical and appropriate desire,
+as a good architect always discusses all possible options with available
+team members before making a <a href="/2023/08/15/decision-making-process.html">final decision</a>. 
+So I call a meeting? No!</p>
+
+<h2 id="a-good-architect">A Good Architect</h2>
+
+<p>I ask Jeff, one of our programmers, to create a draft of the DB schema, but I don’t
+actually talk to him about it. I value and respect his time—there’s no need to bother him with this organizational noise, so I just create
+a ticket and assign it to Jeff. When he has time, he creates a draft
+and returns a pull request. I review it and make some comments before he updates
+the branch, and finally
+<a href="/2014/07/24/rultor-automated-merging.html">I merge it</a>.</p>
+
+
+
+<p>Perfect; we have a draft.</p>
+
+<p>At the end of the document, Jeff also listed assumptions, risks, and concerns.
+For example, this is what I got back from him (it’s Markdown, a very
+convenient format for simple technical documents; I highly recommend it):</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Tables
+user (id INT, name VARCHAR, email VARCHAR);
+payment (id INT, date DATETIME, amount INT);
+order (id INT, details VARCHAR, user_id INT FK(user));
+
+## Assumptions
+- All payments will be in whole dollars, no cents.
+- All users will have only one email.
+- There will be no search feature required.
+
+## Risks
+- Order details may not fit into VARCHAR.
+- Foreign keys may not be supported in the DBMS.
+
+## Concerns
+- Would NoSQL be more suitable?
+- What is the DB server we'll use?
+</code></pre></div></div>
+
+<p>I don’t know how much time Jeff would have spent on this document,
+but I just created it in 10 minutes. Of course, it’s a very simple schema
+for a very simple project. But even if Jeff spent an hour
+on it, every minute of that hour is valuable to the project. What I mean
+is that every dollar I pay Jeff for his time is returned to me
+in the form of a text document.</p>
+
+<p>Now I have a draft and I’m taking the next step. I ask
+Monica to take a look at it and suggest changes. Again, it’s another
+hour and I’ve got back a pull request with changes, corrections,
+new assumptions, new risks, and new concerns. I’m not talking to Monica—there is no need for that. She has all the information she needs
+to work with the DB schema. She is a good engineer, and I
+<a href="/2017/11/21/trust-pay-lose.html">trust</a>
+her ability to formulate her opinion in a written format.</p>
+
+<p>There’s no need to sit together in the same room or stand at a whiteboard.
+Monica is smart enough to do this job by herself. She already has
+all the ideas expressed by Jeff in front of her;
+there is no need for her to talk to him either.</p>
+
+
+
+<p>Once I merge her pull request (after a proper review and corrections),
+I have a new version of my <code class="language-plaintext highlighter-rouge">schema.md</code> document.</p>
+
+<p>Moreover, I have a Git history of this document, and I have a history
+of pull requests with comments. This is way better than meeting notes
+or even a meeting video. Anyone who joins the project later will be
+able to understand how we came to the conclusion of using PostgreSQL
+and storing monetary amounts without cents. It’s all there in the Git history
+and GitHub tickets, forever with us.</p>
+
+<p>What if I need more opinions? Or if I’m still not sure the schema is good enough?
+No problem; I ask someone else to review it one more time and
+send me a pull request with changes.
+I can even ask Jeff to do it again after a few iterations with
+other programmers!</p>
+
+<p>Moreover, I can add my own concerns to the document, and on the next iteration,
+ask Jeff to pay attention to and resolve them.</p>
+
+
+
+<p>The more we circle this document, the better it becomes. And every minute
+the project pays for turns into a tangible product: a <em>document</em>
+with a change history!</p>
+
+<p>That’s how a professional architect collects opinions and
+makes complex decisions. Now let’s see what a bad architect would do.</p>
+
+<h2 id="a-bad-architect">A Bad Architect</h2>
+
+<p>I first call a meeting. No, wait; I schedule it in Google Calendar.
+No, wait, wait. First of all, I create an agenda:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Introduction: 10 min
+2. Problem: 15 min
+  - We need a DB schema
+  - Let's choose a server
+3. Opinions: 15 min
+  - Jeff and Monica have experience
+  - Others?
+4. Coffee break: 10 min
+5. Discussion: 30 min
+  - Let's not forget risks
+  - Ask Joe about PostgreSQL
+6. Conclusions: 10 min
+</code></pre></div></div>
+
+<p>I’m sure you know what I’m talking about and you’ve seen these
+agendas from your “architects.” Anyway, my first step is done. I’ve scheduled an
+hour-and-a-half meeting where all programmers will be present. We’ll have fun
+and drink coffee. We’ll discuss the problem, hear all opinions, and find
+the best solution. We’ll document it in that <code class="language-plaintext highlighter-rouge">schema.md</code> and
+get back to our tasks.</p>
+
+<p>Instead of circulating those <em>dry</em> and <em>boring</em> Git documents, we’ll have a
+real human communication with a nice coffee break where we’ll share our
+opinions about the last episode of The Bing Bang Theory. Isn’t that what
+we all like about our <a href="/2015/10/06/how-to-be-good-office-slave.html">office jobs</a> anyway?</p>
+
+
+
+<p>I don’t think so.</p>
+
+<p>I think meetings demotivate, waste time, burn money, and degrade quality.
+Those who organize them either have no idea what they are doing or
+are silently <em>robbing</em> the company they’re working for.</p>
+
+<p>We needed meetings 30 years ago when we didn’t have laptops and GitHub.
+But even then, we had a pen and paper.</p>
+
+<p>I’m talking about meetings that are intended to collect or distribute information,
+discuss or propose something, or find a solution in a <em>technical</em> domain.
+The only <em>valid purpose</em> of meetings is to read <em>body language</em> of the people
+you are dealing with. Politicians, businessmen, poker players,
+shrinks, physicians, etc.—they need meetings because they must
+read our bodies, not just our thoughts.</p>
+
+<p>Do we really care about Monica’s body while we’re designing a DB schema?
+Well, that depends, right? But let’s be serious; we’re not paid for that.</p>
+
+<h2 id="meetings-demotivate">Meetings Demotivate</h2>
+
+<p>The best motivation for a creative person is to see the
+<a href="/2015/07/21/hourly-pay-modern-slavery.html">results</a>
+of his or her creativity. If I’m not mistaken, enjoying the process
+of creativity without any results is an obvious
+sign of mental illness. A healthy and creative person like a software
+engineer, for example, wants to see how his or her efforts are turned
+into something <em>valuable</em> and, preferably, <em>tangible</em>.</p>
+
+<p>Meetings almost never produce anything tangible and rarely something valuable.
+Sometimes we have “minutes”
+of our meetings, but they are just short pieces of paper with a brief
+summary of what we were talking about. Not a real “<em>product</em>” for a
+creative person.</p>
+
+<p>Thus, they demotivate me because I simply don’t see what
+<a href="/2015/07/21/hourly-pay-modern-slavery.html">two hours</a>
+of my life were turned into. We don’t really <em>create</em> anything there,
+we just <em>discuss</em>. Pay attention here; I’m talking about meetings, not about
+collaborative work on something, like in pair programming, for example.</p>
+
+
+
+<p>You may say that some meetings actually produce great ideas, which
+are very tangible results. You may say that only in a direct,
+face-to-face setting could these ideas be born. You may also
+say that many bright technical decisions were invented precisely due
+to a magic synergy of <em>friends</em> thinking in the same direction, at the
+same time, and in the same room. This argument makes sense, but I’ll address that later.</p>
+
+<h2 id="meetings-waste-time">Meetings Waste Time</h2>
+
+<p>I think it’s obvious. For the first few minutes of the meeting, you’re concentrated;
+then you start checking your Twitter feed and doodling. Everybody is doing
+the same—not because we’re <a href="/2018/04/17/how-to-be-lazy.html">lazy</a>
+but because there is <em>no demand</em>
+for our full focus at the meeting.</p>
+
+
+
+<p>While Monica is working with the document, making comments and suggestions, she is
+<a href="/2015/11/21/ringelmann-effect-vs-agile.html">fully concentrated</a>
+on the result—mostly because there is nobody
+else to
+<a href="/2015/02/16/it-is-not-a-school.html">help</a>
+her. She has to deliver that pull request, and I’m waiting for her.
+Her concentration is as high as it would be at the meeting, when someone
+is asking her a direct question and she has to provide a detailed answer.</p>
+
+<p>Her time is optimized for a suitable outcome while everybody else is doing
+something else.</p>
+
+<p>At the meeting, on the other hand, we’re all concentrating sparingly at best. And the longer
+the meeting, the slower we are. Also, the more people who are there,
+the less we care and the more interested we become in our Facebook updates.
+I reckon that’s not much of a surprise to you if you’ve been in the software development
+industry for at least a few months.</p>
+
+<h2 id="meetings-burn-money">Meetings Burn Money</h2>
+
+<p>This aligns closely with the previous conclusion. Meetings are among the biggest budget consumers
+of any type of activity in a project, simply because they pay
+<em>everybody</em> who is sitting in that room or on that Skype conference while the
+result they produce is almost equal to what a single person can deliver.
+Or much less.</p>
+
+<p>Even though this may sound extreme, I have to say that I consider meetings
+a legalized way to <em>rob</em> a project. Most meeting
+organizers (architects, CTOs, CEOs, programmers, etc.) don’t realize that.
+They believe the more they talk, the better engineers they are. And their
+bosses, by mistake, appreciate that sort of activity from their subordinates.</p>
+
+<p>It’s robbery!</p>
+
+<p>I told you to create a draft of a DB schema. Now you’re coming to me
+and asking for a meeting because certain “aspects” are not clear?
+Did you study software engineering anywhere? Do you know how to work
+with technical documents? Are you capable of writing in a way that everybody
+else can understand and respond to you, also in writing? No? Now you want
+the project to not only pay you for the DB schema draft but to also
+pay me for talking to you and for a few other guys to sit next to us and text
+their friends? You basically want to rob the owner of this project.
+No more, no less.</p>
+
+<h2 id="meetings-degrade-quality">Meetings Degrade Quality</h2>
+
+<p>Quality goes up when it is being
+<a href="/2014/08/13/strict-code-quality-control.html">controlled</a>.
+When someone tells me every
+day that my code is buggy and needs improvements, my quality goes up.
+When nobody cares what I do or how good my results are, my quality
+goes <em>down</em>, no matter how self-motivated I am.</p>
+
+
+
+<p>Meetings promote group achievements and
+<a href="/2015/11/21/ringelmann-effect-vs-agile.html">discourage</a>
+individual ones. At the
+end of a meeting, it’s often not clear who exactly suggested a good idea
+and who made the biggest effort. In other words, at the end of a meeting,
+I don’t know how good I am. Am I still the same as a month ago or am I a
+<a href="/2014/10/29/how-much-do-you-cost.html">better</a>
+engineer?</p>
+
+<p>They smile more and ask me “what do you think?” more frequently than last summer;
+that must mean something, right? I’m sure you understand this is
+not the kind of feedback a serious engineer would expect.</p>
+
+<p>A serious software developer wants to produce tangible results and receive
+tangible feedback, like money or
+<a href="/2015/02/09/serious-code-reviewer.html">code reviews</a>.
+I want to know what
+was wrong in my DB schema draft and what I missed. And I want this to be
+documented somewhere. This is what makes me better, and this is how I <em>learn</em>
+and <em>grow</em>.</p>
+
+<h2 id="what-about-the-a-ha-moment">What About the A-ha! Moment?</h2>
+
+<p>Now, what about true creativity or that well-known “a-ha!” moment? Sometimes
+it’s necessary to “think out loud” in order to invent something, right?
+We all know how important a face-to-face interaction could be when we’re
+researching and developing something new. Where would we be without meetings?
+We can’t simply work with documents; we need to talk to each other in order to let our
+ideas out. Isn’t it obvious?</p>
+
+<p>I have only one argument for that. Did Einstein invent his theory
+at a meeting with his colleagues? I don’t think so. And he was solving a much
+bigger problem than a DB schema design.</p>
+
+<hr>
+
+<p>Let me summarize. Meetings are an activity that requires almost no skill,
+while documenting ideas in text and diagrams is a way more difficult
+job to do. So train and discipline yourself to work with documents
+and let juniors enjoy their meetings.</p>
+
+
+    </article>
+  </body>
+</html>

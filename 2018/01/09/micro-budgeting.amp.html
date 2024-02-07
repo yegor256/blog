@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Five Stages of Microbudgeting</title>
+    <link rel="canonical" href="https://www.yegor256.com/2018/01/09/micro-budgeting.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2018/01/09/micro-budgeting.html"
+        },
+        "headline": "Five Stages of Microbudgeting",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2018/01/taxi-driver.jpg",
+          "height": 750,
+          "width": 1440
+        },
+        "datePublished": "2018-01-09",
+        "dateModified": "2018-01-09",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Microtasking means that all tasks are very small in
+scope and in cost; microbudgeting is how those
+tasks are paid.
+",
+        "keywords": ["xdsd budgeting", "fixed budget", "microtasking", "task estimating", "pay per task"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2018/01/09/micro-budgeting.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>9 January 2018</p>
+      <h1>Five Stages of Microbudgeting</h1>
+      <p>Microtasking, which <a href="/2017/11/28/microtasking.html">I explained</a>
+in an earlier post, works only when each task has a very specific reward
+for success and a punishment for failure.
+I <a href="/2014/09/24/why-monetary-awards-dont-work.html">believe</a>
+that the best reward and punishment instrument is money. The budget
+is fixed, the programmer gets it only when the task is completed (reward), no matter
+how much time it costs; if it is not completed, there is no money at all
+(punishment). Pure and simple. However, a logical question arises: how can we
+know upfront what is the right budget?
+Who <a href="/2015/06/02/how-to-estimate-software-cost.html">sets</a> it?</p>
+
+
+
+<amp-img src="/images/2018/01/taxi-driver.jpg" alt="Taxi Driver (1976) by Martin Scorsese" height="750" width="1440" layout="responsive"></amp-img>
+
+<p>When we started to play with microtasking in our projects, in 2009, we were
+asking programmers to estimate each task. It did work, but only with very
+simple and obvious tasks. More complex ones almost always suffered
+from either under-estimating or padding—numbers were either very small
+and task performers were complaining in the end, or they were too big and
+customers were asking for refunds. It was not a manageable situation.</p>
+
+<p>Then, we realized that it would be better if all tasks were rather
+small, with exactly the same budget. We tried to use two hours as a universal
+and fixed estimate. Everything else that didn’t fit—programmers were allowed
+to reject. This model didn’t really work either, because our managers had
+to deal with a very large amount of rejected tasks and didn’t know how to make
+them smaller, since they were not programmers.</p>
+
+
+
+<p>Finally, in March 2010 we found a solution, which was labeled
+<a href="/2010/03/04/pdd.html">Puzzle Driven Development</a> (PDD). According to
+this concept: 1) Any task has a very small fixed budget (we use 30 minutes);
+2) The task performer is allowed to complete only part of the task;
+3) The code that is being returned to <code class="language-plaintext highlighter-rouge">master</code> must include <code class="language-plaintext highlighter-rouge">@todo</code> markers, called “puzzles”;
+4) Puzzles are automatically converted to new tasks.</p>
+
+<p>The beauty of this approach is that the most complicated part of the software
+project management—scope decomposition—is moved to the shoulders
+of those who are the best at it: programmers.</p>
+
+<p>We are using PDD in all our projects now and have even created a public instrument
+for GitHub repositories, which allows anyone to play with PDD at no cost:
+<a href="/2017/04/05/pdd-in-action.html">0pdd.com</a>. This is exactly
+the same tool we are using in our commercial projects.</p>
+
+<p>However, if and when you decide to apply microbudgeting to your project,
+together with PDD, there will be problems. Psychological ones mostly. In my
+experience, people go through five stages when they face microbudgeting
+for the first time:</p>
+
+<ul>
+  <li>
+    <p><strong>Denial</strong>.
+They ask “How is it possible?” and then refuse to hear any explanations.
+There are many reasons why microbudgeting and microtasking may not
+work—you will hear them all. Very often they demand a traditional
+model of payment, especially if they were invited. They just say that
+our model is insane, and if we want to see them work on our projects we have to
+pay for as much time as they spend. Most of them quit.</p>
+  </li>
+  <li>
+    <p><strong>Anger</strong>.
+Some of them decide to try. Thanks to their previous multi-year experience,
+they expect to be
+paid by the end of the day/week/month, no matter what they were doing. Very soon they
+realize that the total income for the first day of work was $0.00, even though
+they were doing something. They get very angry. They call us crooks, fraudsters,
+and many other names. Asking them to read the <a href="http://datum.zerocracy.com/pages/policy.html">policy</a>
+again doesn’t help. They simply can’t believe that we are
+not going to pay them anything, even
+though they were doing something. Most of them quit.</p>
+  </li>
+  <li>
+    <p><strong>Bargaining</strong>.
+Almost everybody at this stage recommends we change the model. They
+explain why it’s not really effective and how great it would be if we
+would pay them the traditional way. They give us examples of their previous
+projects, send references from previous employees, and criticize
+my blog posts. With some of them I try to argue, when their criticism
+is constructive. Most of them quit.</p>
+  </li>
+  <li>
+    <p><strong>Depression</strong>.
+Most programmers are used to doing work because they feel guilty
+if the task is not done or the bug is not fixed. Microbudgeting requires
+a completely opposite attitude: we all are supposed to work because
+we are greedy. Money has to motivate us, not guilt. If there is no money,
+we don’t work. Most people, when they see this new motivational paradigm
+and don’t see the usual guilt, lose coordination and don’t know what to do.
+They can’t really achieve anything, because there is no traditional manager
+standing behind them and pushing them forward. They are supposed to go for
+the money. They don’t, and so they don’t make any money. Most of them quit.</p>
+  </li>
+  <li>
+    <p><strong>Acceptance</strong>.
+Finally, the best of them realize that the model can work if they
+follow the rules, which are very simple: be greedy, selfish, egoistic,
+money-driven, result-oriented, lazy, misanthropic, heartless, and arrogant.
+They accept the fact that they lose, compete, work, and make money only
+when they produce results. They start enjoying meritocracy at its best.</p>
+  </li>
+</ul>
+
+<p>You understand already that the vast majority of those who try to work with us
+can’t really get to the final point—they quit somewhere in the middle.
+Most probably something very similar will happen on your projects too.</p>
+
+<p>What is the solution? I don’t really know.</p>
+
+<p>Statistically speaking, three to five people out of a hundred manage to survive and
+become effective and productive. Thus, to build a team of twenty people
+you will have to screen and try at least 400.</p>
+
+    </article>
+  </body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Java Annotations Are a Big Mistake</title>
+    <link rel="canonical" href="https://www.yegor256.com/2016/04/12/java-annotations-are-evil.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2016/04/12/java-annotations-are-evil.html"
+        },
+        "headline": "Java Annotations Are a Big Mistake",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2016/04/gomorrah.jpg",
+          "height": 852,
+          "width": 1280
+        },
+        "datePublished": "2016-04-12",
+        "dateModified": "2016-04-12",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Even though Java annotations are very popular and
+convenient, they are making Java code less object-oriented
+and more messy.
+",
+        "keywords": ["java annotations", "java annotations example", "java annotations runtime", "java annotations tutorial", "java annotations list"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2016/04/12/java-annotations-are-evil.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>12 April 2016</p>
+      <h1>Java Annotations Are a Big Mistake</h1>
+      <p><a href="https://en.wikipedia.org/wiki/Java_annotation">Annotations</a>
+were introduced in Java 5, and we all got excited. Such a great
+instrument to make code shorter! No more Hibernate/Spring XML configuration
+files! Just annotations, right there in the code where we need them. No more
+<a href="https://en.wikipedia.org/wiki/Marker_interface_pattern">marker interfaces</a>,
+just a <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/annotation/Retention.html">runtime-retained</a>
+<a href="http://stackoverflow.com/questions/4296910/">reflection-discoverable</a> annotation!
+I was excited too. Moreover, I’ve made a few open source libraries which
+use annotations heavily. Take <a href="https://github.com/jcabi/jcabi-aspects">jcabi-aspects</a>,
+for example. However, I’m not excited any more. Moreover, I believe that
+annotations are a big mistake in Java design.</p>
+
+
+
+<amp-img src="/images/2016/04/gomorrah.jpg" alt="Gomorra (2008) by Matteo Garrone" height="852" width="1280" layout="responsive"></amp-img>
+
+
+
+<p>Long story short, there is one big problem with annotations—they encourage us to implement
+<a href="/2014/11/20/seven-virtues-of-good-object.html">object</a>
+functionality <em>outside</em> of an object,
+which is against the very principle of
+<a href="/2016/11/21/naked-data.html">encapsulation</a>.
+The object is not solid any more, since its behavior is not defined entirely by its own
+methods—some of its functionality stays elsewhere. Why is it bad? Let’s
+see in a few examples.</p>
+
+<h2 id="inject"><code class="language-plaintext highlighter-rouge">@Inject</code></h2>
+
+<p>Say we annotate a property with <code class="language-plaintext highlighter-rouge">@Inject</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.inject.Inject</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="nd">@Inject</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="no">DB</span> <span class="n">db</span><span class="o">;</span>
+  <span class="c1">// some methods here, which use this.db</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Then we have an injector that knows what to inject:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Injector</span> <span class="n">injector</span> <span class="o">=</span> <span class="nc">Guice</span><span class="o">.</span><span class="na">createInjector</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">AbstractModule</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">bind</span><span class="o">(</span><span class="no">DB</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">toInstance</span><span class="o">(</span>
+        <span class="k">new</span> <span class="nf">Postgres</span><span class="o">(</span><span class="s">"jdbc:postgresql:5740/main"</span><span class="o">)</span>
+      <span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">);</span>
+</code></pre></div></div>
+
+<p>Now we’re making an instance of class <code class="language-plaintext highlighter-rouge">Books</code> via the container:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Books</span> <span class="n">books</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="nc">Books</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>The class <code class="language-plaintext highlighter-rouge">Books</code> has no idea how and who will inject an instance
+of class <code class="language-plaintext highlighter-rouge">DB</code> into it. This will happen behind the scenes and outside
+of its control. The injection will do it. It may look convenient,
+but this attitude causes a lot of damage to the entire code base. The
+control is lost (not inverted, but lost!). The object is not in charge
+any more. It can’t be responsible for what’s happening to it.</p>
+
+<p>Instead, here is how this should be done:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="no">DB</span> <span class="n">db</span><span class="o">;</span>
+  <span class="nc">Books</span><span class="o">(</span><span class="kd">final</span> <span class="no">DB</span> <span class="n">base</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">db</span> <span class="o">=</span> <span class="n">base</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="c1">// some methods here, which use this.db</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+
+
+<p>This article explains why Dependency Injection containers are
+a wrong idea in the first place:
+<a href="/2014/10/03/di-containers-are-evil.html">Dependency Injection Containers are Code Polluters</a>.
+Annotations basically provoke us to make the containers and use them.
+We move functionality outside of our objects and put it into
+containers, or somewhere else. That’s because we don’t want to duplicate the
+same code over and over again, right? That’s correct, duplication is
+bad, but tearing an object apart is even worse. Way worse. The same is
+true about ORM (JPA/Hibernate), where annotations are being actively used.
+Check this post, it explains what is wrong about ORM:
+<a href="/2014/12/01/orm-offensive-anti-pattern.html">ORM Is an Offensive Anti-Pattern</a>.
+Annotations by themselves are not the key motivator, but they help us
+and encourage us by tearing objects apart and keeping parts in different
+places. They are containers, sessions, managers, controllers, etc.</p>
+
+<h2 id="xmlelement"><code class="language-plaintext highlighter-rouge">@XmlElement</code></h2>
+
+<p>This is how JAXB
+<a href="/2015/03/26/jaxb-vs-xembly.html">works</a>, when you want to convert your
+<a href="https://en.wikipedia.org/wiki/Plain_Old_Java_Object">POJO</a> to XML. First,
+you attach the <code class="language-plaintext highlighter-rouge">@XmlElement</code> annotation to the getter:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlElement</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlRootElement</span><span class="o">;</span>
+<span class="nd">@XmlRootElement</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">Book</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@XmlElement</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getTitle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Then, you create a marshaller and ask it to convert an instance of class
+<code class="language-plaintext highlighter-rouge">Book</code> into XML:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">Book</span> <span class="n">book</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Book</span><span class="o">(</span><span class="s">"0132350882"</span><span class="o">,</span> <span class="s">"Clean Code"</span><span class="o">);</span>
+<span class="kd">final</span> <span class="nc">JAXBContext</span> <span class="n">ctx</span> <span class="o">=</span> <span class="nc">JAXBContext</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="nc">Book</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="kd">final</span> <span class="nc">Marshaller</span> <span class="n">marshaller</span> <span class="o">=</span> <span class="n">ctx</span><span class="o">.</span><span class="na">createMarshaller</span><span class="o">();</span>
+<span class="n">marshaller</span><span class="o">.</span><span class="na">marshal</span><span class="o">(</span><span class="n">book</span><span class="o">,</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">);</span>
+</code></pre></div></div>
+
+
+
+<p>Who is creating the XML? Not the <code class="language-plaintext highlighter-rouge">book</code>. Someone else, outside of the
+class <code class="language-plaintext highlighter-rouge">Book</code>. This is very wrong. Instead, this is how this should have
+been done. First, the class that has no idea about XML:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DefaultBook</span> <span class="kd">implements</span> <span class="nc">Book</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span><span class="o">;</span>
+  <span class="nc">DefaultBook</span><span class="o">(</span><span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getTitle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Then, the
+<a href="/2015/02/26/composable-decorators.html">decorator</a>
+that prints it to the XML:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">XmlBook</span> <span class="kd">implements</span> <span class="nc">Book</span><span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Book</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="nc">XmlBook</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Book</span> <span class="n">book</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">book</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getTitle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">getTitle</span><span class="o">();</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toXML</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
+      <span class="s">"&lt;book&gt;&lt;title&gt;%s&lt;/title&gt;&lt;/book&gt;"</span><span class="o">,</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">getTitle</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Now, in order to <a href="/2016/04/05/printers-instead-of-getters.html">print</a>
+the book in XML we do the following:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">xml</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XmlBook</span><span class="o">(</span>
+  <span class="k">new</span> <span class="nf">DefaultBook</span><span class="o">(</span><span class="s">"Elegant Objects"</span><span class="o">)</span>
+<span class="o">).</span><span class="na">toXML</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>The XML printing functionality is inside <code class="language-plaintext highlighter-rouge">XmlBook</code>. If you don’t like the
+decorator idea, you can move the <code class="language-plaintext highlighter-rouge">toXML()</code> method to the <code class="language-plaintext highlighter-rouge">DefaultBook</code> class. It’s
+not important. What is important is that the functionality always stays
+where it belongs—inside the object. Only the object knows how
+to
+<a href="/2016/04/05/printers-instead-of-getters.html">print itself</a>
+to the XML. Nobody else!</p>
+
+<h2 id="retryonfailure"><code class="language-plaintext highlighter-rouge">@RetryOnFailure</code></h2>
+
+<p>Here is an example
+(from <a href="/2014/08/15/retry-java-method-on-exception.html">my own library</a>):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.aspects.RetryOnFailure</span><span class="o">;</span>
+<span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="nd">@RetryOnFailure</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">load</span><span class="o">(</span><span class="no">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">url</span><span class="o">.</span><span class="na">openConnection</span><span class="o">().</span><span class="na">getContent</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>After compilation, we run a so called
+<a href="/2014/06/01/aop-aspectj-java-method-logging.html">AOP weaver</a>
+that technically turns our code into something like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">load</span><span class="o">(</span><span class="no">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">try</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">_Foo</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// ignore it</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="kd">class</span> <span class="nc">_Foo</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="nc">String</span> <span class="nf">load</span><span class="o">(</span><span class="no">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">url</span><span class="o">.</span><span class="na">openConnection</span><span class="o">().</span><span class="na">getContent</span><span class="o">();</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>I simplified the actual algorithm of retrying a method call on failure, but I’m
+sure you get the idea. <a href="https://www.eclipse.org/aspectj/">AspectJ</a>,
+the <a href="https://en.wikipedia.org/wiki/Aspect-oriented_programming">AOP</a>
+engine, uses
+<a href="https://aspects.jcabi.com/annotation-retryonfailure.html"><code class="language-plaintext highlighter-rouge">@RetryOnFailure</code></a>
+annotation as a signal, informing us that the class
+has to be wrapped into another one. This is happening behind the scenes. We don’t
+see that supplementary class, which implements the retrying algorithm.
+But the bytecode produced by the AspectJ weaver contains a modified
+version of class <code class="language-plaintext highlighter-rouge">Foo</code>.</p>
+
+
+
+<p>That is exactly what is wrong with this approach—we don’t see
+and don’t control the instantiation of that supplementary object. Object
+composition, which is the most important process in object design, is
+hidden somewhere behind the scenes. You may say that we don’t need
+to see it since it’s supplementary. I disagree. We must see how
+our objects are composed. We may not care about how they work, but we
+must see the entire composition process.</p>
+
+<p>A much better design would look like this (instead of annotations):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Foo</span> <span class="n">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FooThatRetries</span><span class="o">(</span><span class="k">new</span> <span class="nc">Foo</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>And then, the implementation of <code class="language-plaintext highlighter-rouge">FooThatRetries</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">FooThatRetries</span> <span class="kd">implements</span> <span class="nc">Foo</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Foo</span> <span class="n">origin</span><span class="o">;</span>
+  <span class="nc">FooThatRetries</span><span class="o">(</span><span class="nc">Foo</span> <span class="n">foo</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">foo</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">load</span><span class="o">(</span><span class="no">URL</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">Retry</span><span class="o">().</span><span class="na">eval</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nc">Retry</span><span class="o">.</span><span class="na">Algorithm</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;()</span> <span class="o">{</span>
+        <span class="nd">@Override</span>
+        <span class="kd">public</span> <span class="nc">String</span> <span class="nf">eval</span><span class="o">()</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="nc">FooThatRetries</span><span class="o">.</span><span class="na">this</span><span class="o">.</span><span class="na">load</span><span class="o">(</span><span class="n">url</span><span class="o">);</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>And now, the implementation of <code class="language-plaintext highlighter-rouge">Retry</code>:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Retry</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="no">T</span> <span class="nf">eval</span><span class="o">(</span><span class="nc">Retry</span><span class="o">.</span><span class="na">Algorithm</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">algo</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">try</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">algo</span><span class="o">.</span><span class="na">eval</span><span class="o">();</span>
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// ignore it</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+  <span class="kd">interface</span> <span class="nc">Algorithm</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="o">{</span>
+    <span class="no">T</span> <span class="nf">eval</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Is the code longer? Yes. Is it cleaner? A lot more. I regret that I
+didn’t understand it two years ago, when I started to work with
+<a href="https://github.com/jcabi/jcabi-aspects">jcabi-aspects</a>.</p>
+
+<hr>
+
+<p>The bottom line is that annotations are bad. Don’t use them. What should be used
+instead? Object <a href="/2015/02/26/composable-decorators.html">composition</a>.</p>
+
+<p>What could be worse than annotations? <a href="/2016/04/19/object-must-not-be-configurable.html">Configurations</a>.
+For example, XML configurations. Spring XML configuration mechanisms is a perfect
+example of terrible design. I’ve said it many times before. Let
+me repeat it again—Spring Framework is one of the worst
+software products in the Java world. If you can stay away from it, you will
+do yourself a big favor.</p>
+
+<p>There should not be any “configurations” in <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>.
+We can’t configure our
+objects if they are real objects. We can only instantiate them. And the
+best method of instantiation is operator <code class="language-plaintext highlighter-rouge">new</code>. This operator is the key
+instrument for an OOP developer. Taking it away from us and giving us
+“configuration mechanisms” is an unforgivable
+<a href="/2015/11/24/imprisonment-for-irresponsible-coding.html">crime</a>.</p>
+
+
+    </article>
+  </body>
+</html>

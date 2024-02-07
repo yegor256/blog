@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Checked vs. Unchecked Exceptions: The Debate Is Not Over</title>
+    <link rel="canonical" href="https://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html"
+        },
+        "headline": "Checked vs. Unchecked Exceptions: The Debate Is Not Over",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2015/07/true-romance.jpg",
+          "height": 496,
+          "width": 1200
+        },
+        "datePublished": "2015-07-28",
+        "dateModified": "2015-07-28",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "While most programmers think checked exceptions in Java
+are a mistake, I'm of the opposite opinion---unchecked
+ones are a mistake.
+",
+        "keywords": ["checked vs unchecked exceptions", "checked vs unchecked exceptions java", "checked vs unchecked exceptions example", "checked vs unchecked exceptions c#", "checked vs unchecked exceptions debate"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2015/07/28/checked-vs-unchecked-exceptions.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>28 July 2015</p>
+      <h1>Checked vs. Unchecked Exceptions: The Debate Is Not Over</h1>
+      <p>Do we need checked exceptions at all? The
+<a href="http://stackoverflow.com/questions/6115896/java-checked-vs-unchecked-exception-explanation">debate</a>
+is over, isn’t it?
+Not for me. While most object-oriented languages don’t have them, and most programmers
+think checked exceptions are a Java mistake, I believe in the
+opposite—unchecked exceptions are the <strong>mistake</strong>. Moreover, I believe
+multiple exception types are a bad idea too.</p>
+
+
+
+<amp-img src="/images/2015/07/true-romance.jpg" alt="True Romance (1993) by Tony Scott" height="496" width="1200" layout="responsive"></amp-img>
+
+<p>Let me first explain how I understand exceptions in object-oriented programming.
+Then I’ll compare my understanding with a “traditional” approach, and
+we’ll discuss the differences. So, my understanding first.</p>
+
+<p>Say there is a method that saves some binary data to a file:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">,</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">data</span><span class="o">)</span>
+  <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+  <span class="c1">// save data to the file</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>When everything goes right, the method just saves the data and returns control.
+When something is wrong, it
+<a href="/2015/12/01/rethrow-exceptions.html">throws</a>
+<code class="language-plaintext highlighter-rouge">Exception</code> and we have to do something
+about it:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+  <span class="n">save</span><span class="o">(</span><span class="n">file</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Sorry, we can't save right now."</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>When a method says it <code class="language-plaintext highlighter-rouge">throws</code> an exception, I understand that the
+method is not <strong>safe</strong>. It may fail sometimes, and it’s my responsibility to
+either 1) handle this failure or 2) declare myself as <strong>unsafe</strong> too.</p>
+
+<p>I know each method is designed with a
+<a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>
+in mind. This is a guarantee to me that if method <code class="language-plaintext highlighter-rouge">save()</code> fails, it means
+the entire saving operation can’t be completed. If I need to know what
+the cause of this failure was, I will <a href="https://en.wikipedia.org/wiki/Exception_chaining">un-chain</a>
+the exception—traverse the stack of chained exceptions and stack traces
+encapsulated in <code class="language-plaintext highlighter-rouge">ex</code>.</p>
+
+<p>I never use exceptions for flow control, which means I <strong>never recover</strong>
+situations where exceptions are thrown. When an exception occurs, I let it float up to the
+highest level of the application. Sometimes I
+<a href="/2015/12/01/rethrow-exceptions.html">rethrow</a>
+it in order to add more semantic information to the chain. That’s why it doesn’t matter
+to me what the cause of the exception thrown by <code class="language-plaintext highlighter-rouge">save()</code> was. I just know
+the method failed. That’s enough for me. Always.</p>
+
+<p>For the same reason, I don’t need to differentiate between different exception
+types. I just don’t need that type of hierarchy. <code class="language-plaintext highlighter-rouge">Exception</code> is enough for me.
+Again, that’s because I don’t use exceptions for flow control.</p>
+
+<p>That’s how I understand exceptions.</p>
+
+<p>According to this paradigm, I would say we must:</p>
+
+<ul>
+  <li>Always use checked exceptions.</li>
+  <li>Never throw/use unchecked exceptions.</li>
+  <li>Use only <code class="language-plaintext highlighter-rouge">Exception</code>, without any sub-types.</li>
+  <li>Always declare one exception type in the <code class="language-plaintext highlighter-rouge">throws</code> block.</li>
+  <li>Never catch without rethrowing; read <a href="/2015/07/09/catch-if-cant-otherwise.html">more about that here</a>.</li>
+</ul>
+
+<p>This paradigm diverges from many other articles I’ve found on this subject.
+Let’s compare and discuss.</p>
+
+<h2 id="runtime-vs-api-exceptions">Runtime vs. API Exceptions</h2>
+
+<p><a href="http://docs.oracle.com/javase/tutorial/essential/exceptions/runtime.html">Oracle says</a>
+some exceptions should be part of API (checked ones) while some are
+runtime exceptions and should not be part of it (unchecked). They will be documented
+in JavaDoc but not in the method signature.</p>
+
+<p>I don’t understand the logic here, and I’m sure Java designers don’t
+understand it either. How and why are some exceptions important while
+others are not? Why do some of them deserve a proper API position
+in the <code class="language-plaintext highlighter-rouge">throws</code> block of the method signature while others don’t? What is the criteria?</p>
+
+<p>I have an answer here, though. By introducing checked and unchecked exceptions, Java
+developers tried to solve the problem of methods that are too complex and messy. When
+a method is too big and does too many things at the same time (violates
+the single responsibility principle), it’s definitely better to let us
+keep some exceptions “hidden” (a.k.a. unchecked).
+But it’s not a real solution. It is only
+a temporary patch that does all of us more harm than good—methods keep
+growing in size and complexity.</p>
+
+<p>Unchecked exceptions are a mistake in Java design, not
+<a href="/2015/10/20/interrupted-exception.html">checked</a> ones.</p>
+
+<p>Hiding the fact that a method may fail at some point is a mistake. That’s
+exactly what unchecked exceptions do.</p>
+
+<p>Instead, we should make this fact visible. When a method does too many
+things, there will be too many points of failure, and the author of the
+method will realize that something is wrong—a method should
+not throw exceptions in so many situations. This will lead to refactoring. The existence of
+unchecked exceptions leads to a mess. By the way, checked exceptions don’t exist
+at all in Ruby, C#, Python, PHP, etc. This means that creators of these
+languages understand
+<a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a> even less than Java authors.</p>
+
+<h2 id="checked-exceptions-are-too-noisy">Checked Exceptions Are Too Noisy</h2>
+
+<p>Another common argument against checked exceptions is that they make our
+code more verbose. We have to put <code class="language-plaintext highlighter-rouge">try/catch</code> everywhere instead of
+staying focused on the main logic. Bozhidar Bozhanov even
+<a href="http://techblog.bozho.net/checked-and-unchecked-exceptions-in-java/">suggests</a>
+a technical solution for this verbosity problem.</p>
+
+<p>Again, I don’t understand this logic. If I want to do something when method
+<code class="language-plaintext highlighter-rouge">save()</code> fails, I catch the exception and handle the situation somehow.
+If I don’t want to do that, I just say my method also <code class="language-plaintext highlighter-rouge">throws</code> and pay no
+attention to exception handling. What is the problem? Where is the verbosity
+coming from?</p>
+
+<p>I have an answer here, too. It’s coming from the existence of unchecked
+exceptions. We simply can’t always ignore failure, because the interfaces
+we’re using don’t allow us to do this. That’s all. For example, class
+<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html"><code class="language-plaintext highlighter-rouge">Runnable</code></a>,
+which is widely used for multi-thread programming, has
+method <code class="language-plaintext highlighter-rouge">run()</code> that is not supposed to throw anything. That’s why we always have
+to catch everything inside the method and rethrow checked
+exceptions as unchecked.</p>
+
+<p>If all methods in all Java
+<a href="/2016/04/26/why-inputstream-design-is-wrong.html">interfaces</a> would be declared either as
+“safe” (<code class="language-plaintext highlighter-rouge">throws</code> nothing) or “unsafe” (<code class="language-plaintext highlighter-rouge">throws Exception</code>), everything would
+become logical and clear. If you want to stay “safe,” take responsibility
+for failure handling. Otherwise, be “unsafe” and let your users worry about
+safety.</p>
+
+<p>No noise, very clean code, and obvious logic.</p>
+
+<h2 id="inappropriately-exposed-implementation-details">Inappropriately Exposed Implementation Details</h2>
+
+<p><a href="https://www.ibm.com/developerworks/library/j-jtp05254/">Some say</a>
+the ability to put a checked exception into <code class="language-plaintext highlighter-rouge">throws</code> in the method
+signature instead of catching it here and rethrowing a new type
+encourages us to have too many irrelevant exception types in method
+signatures. For example, our method <code class="language-plaintext highlighter-rouge">save()</code> may declare that it
+may throw <code class="language-plaintext highlighter-rouge">OutOfMemoryException</code>, even though it seems to have
+nothing to do with memory allocation. But it does allocate some memory, right?
+So such a memory overflow may happen during a file saving operation.</p>
+
+<p>Yet again, I don’t get the logic of this argument.
+If all exceptions are checked, and we don’t have multiple exception types,
+we just throw <code class="language-plaintext highlighter-rouge">Exception</code> everywhere, and that’s it. Why do we need to care
+about the exception type in the first place? If we don’t use exceptions to control
+flow, we won’t do this.</p>
+
+<p>If we really want to make our application memory overflow-resistant, we will
+introduce some memory manager, which will have something like the <code class="language-plaintext highlighter-rouge">bigEnough()</code>
+method, which will tell us whether our heap is big enough for the next
+operation. Using exceptions in such situations is a totally inappropriate approach
+to exception management in OOP.</p>
+
+<h2 id="recoverable-exceptions">Recoverable Exceptions</h2>
+
+<p>Joshua Bloch, in <a href="https://amzn.to/2crH5tW"><em>Effective Java</em></a>,
+says to “use checked exceptions for recoverable conditions and runtime exceptions
+for programming errors.” He means something like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+  <span class="n">save</span><span class="o">(</span><span class="n">file</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// We can't save the file, but it's OK</span>
+  <span class="c1">// Let's move on and do something else</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>How is that any different from a famous anti-pattern called
+<a href="http://c2.com/cgi/wiki?DontUseExceptionsForFlowControl">Don’t Use Exceptions for Flow Control</a>?
+Joshua, with all due respect, you’re wrong. There are no such things
+as recoverable conditions in OOP. An exception indicates that the execution of a
+chain of calls from method to method is broken, and it’s time to go up
+through the chain and stop somewhere. But we never go back again
+after the exception:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>App#run()
+  Data#update()
+    Data#write()
+      File#save() &lt;-- Boom, there's a failure here, so we go up
+</code></pre></div></div>
+
+<p>We can start this chain again, but we don’t go back after <code class="language-plaintext highlighter-rouge">throw</code>. In other
+words, we don’t <strong>do</strong> anything in the <code class="language-plaintext highlighter-rouge">catch</code> block. We only report the problem
+and wrap up execution. We never “recover!”</p>
+
+<hr>
+
+<p>All arguments against checked exceptions demonstrate nothing but
+a serious misunderstanding of object-oriented programming by their authors.
+The mistake in Java and in many other languages is the existence of unchecked
+exceptions, not checked ones.</p>
+
+    </article>
+  </body>
+</html>

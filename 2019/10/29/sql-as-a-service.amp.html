@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>SQL as a Service</title>
+    <link rel="canonical" href="https://www.yegor256.com/2019/10/29/sql-as-a-service.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2019/10/29/sql-as-a-service.html"
+        },
+        "headline": "SQL as a Service",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2019/10/la-dolce-vita.jpg",
+          "height": 720,
+          "width": 1280
+        },
+        "datePublished": "2019-10-29",
+        "dateModified": "2019-10-29",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Even though cloud computing is more than ten years old
+and there are a dozen relational data hosters, we still
+don't have a true relational data service.
+",
+        "keywords": ["sql as a service", "db as a service", "sql in cloud", "sql as service", "data in cloud"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2019/10/29/sql-as-a-service.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>29 October 2019</p>
+      <h1>SQL as a Service</h1>
+      <p>I’ve been thinking about this since 2007, somewhere around the time
+<a href="https://aws.amazon.com/s3/">S3</a>
+was <a href="https://en.wikipedia.org/wiki/Amazon_Web_Services">launched</a> by Amazon.
+I even tried to implement it a few times, but failed right after the
+design phase. I’ve heard about a startup, which tried to do it too,
+but also <a href="https://en.wikipedia.org/wiki/Xeround">failed</a>. I’m still not sure
+whether it’s possible to do, but it could definitely become a best seller in
+the market of cloud data management. Wait, you may say, what about
+Google Cloud SQL, AWS RDS, Microsoft Azure, Heroku PostgreSQL,
+and <a href="https://en.wikipedia.org/wiki/Cloud_database">many others</a>?
+They are not even close to what I mean.</p>
+
+
+
+<amp-img src="/images/2019/10/la-dolce-vita.jpg" alt="La Dolce Vita (1960) by Federico Fellini" height="720" width="1280" layout="responsive"></amp-img>
+
+<p>Let me give you an analogy. Say you want to store a piece of binary data in the cloud. I have two
+solutions for you. The first one is a hosted server
+with <a href="https://en.wikipedia.org/wiki/File_Transfer_Protocol">FTP</a>. You pay
+me $5 per month, I give you FTP access to the server, which has a disk of 100Gb. You
+can upload your files there and download back. Works just fine.
+And I have a second option, which is <a href="https://aws.amazon.com/s3/">AWS S3</a>.
+You can also upload and download
+your data, but via their <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html">API</a>.
+And you <a href="https://aws.amazon.com/s3/pricing/">pay</a> for each API request,
+each byte hosted, and each byte transferred, instead of a monthly fee.
+Which one would you choose?</p>
+
+<p>Obviously, you would go with S3. Why? What is the fundamental difference
+between these two? The key difference is in their <a href="https://en.wikipedia.org/wiki/Service-level_agreement">SLAs</a>:
+The first one with an FTP is a <em>server</em>, the second one is a <em>service</em>.</p>
+
+<p>An FTP server provider guarantees you the availability of computational resources (CPU, disk, bandwidth, etc.),
+while S3 guarantees you the availability of the data. If the disk on the
+FTP server crashes it will be replaced in a timely manner, but the
+data will be lost. If the disk gets full, you will be able to order
+an additional server, but it’s your responsibility not to forget. If the
+disk space is not used, you still pay $5 per month. And so on.</p>
+
+<p>AWS S3 was such a breakthrough in the market, more than ten years ago, precisely
+because of this difference. They added a new <em>service layer</em> on top of the good
+old <a href="https://en.wikipedia.org/wiki/Web_hosting_service">web hosting</a>
+we were all used to. The idea remained the same—it’s still data
+in the cloud, which we upload and download—but the SLA was different. We didn’t
+need to worry anymore about disk overflow, paying too much for unused space,
+regular backups, SSH terminals, and many more things. They just gave us a simple API and
+a promise that the data was there and was safe.</p>
+
+<p>It’s 2019 now and we still don’t have the same for relational data. No matter
+which provider you choose, all they do is give you a machine (or a cluster)
+with MySQL or PostgreSQL installed (or their own version of them) and
+charge you per hour of uptime. They still give you the “good old FTP” without
+an additional service layer on top of it.</p>
+
+<p>This is what I would expect a <em>true</em> relational-data-in-the-cloud SLA to sound like:</p>
+
+<ul>
+  <li>
+    <p><strong>Auto-scale</strong>.
+Don’t make us worry about the amount of resources required to host
+the data. Just charge more for larger data sets and make sure
+our requests come back in a predictable amount of time.</p>
+  </li>
+  <li>
+    <p><strong>Pay-per-data</strong>.
+Make us pay for each SQL request, each byte stored, and
+each byte transferred. How many servers and disks are required to host
+it all—that must not be of our concern.</p>
+  </li>
+  <li>
+    <p><strong>Restricted SQL</strong>.
+The majority of commands in
+<a href="https://dev.mysql.com/doc/refman/8.0/en/sql-syntax.html">MySQL</a> or
+<a href="https://www.postgresql.org/docs/12/sql.html">PostgreSQL</a> dialects are
+not required by the majority of projects. Just give us
+<code class="language-plaintext highlighter-rouge">INSERT</code>, <code class="language-plaintext highlighter-rouge">SELECT</code>, <code class="language-plaintext highlighter-rouge">UPDATE</code>, and <code class="language-plaintext highlighter-rouge">DELETE</code> and call it a day.</p>
+  </li>
+  <li>
+    <p><strong>Indexes</strong>.
+Create them automatically, using the statistics of the SQL queries
+we are making.</p>
+  </li>
+  <li>
+    <p><strong>Schema Versioning</strong>.
+Make it possible to update the schema via something similar to
+<a href="https://www.liquibase.org/">Liquibase</a>: we create a new <code class="language-plaintext highlighter-rouge">ALTER TABLE</code> or <code class="language-plaintext highlighter-rouge">CREATE TABLE</code> script
+and it gets applied to the existing database.</p>
+  </li>
+  <li>
+    <p><strong>Snapshots and Rollbacks</strong>.
+Make it possible to make a snapshot of the data, apply a new schema
+version, and then rollback to one of the previously made snapshots if something
+is wrong.</p>
+  </li>
+</ul>
+
+<p>Is it really so hard to implement?</p>
+
+    </article>
+  </body>
+</html>

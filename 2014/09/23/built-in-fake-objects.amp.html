@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Built-in Fake Objects</title>
+    <link rel="canonical" href="https://www.yegor256.com/2014/09/23/built-in-fake-objects.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2014/09/23/built-in-fake-objects.html"
+        },
+        "headline": "Built-in Fake Objects",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.yegor256.com/images/face-1200x1200.jpg",
+          "height": 1400,
+          "width": 1400
+        },
+        "datePublished": "2014-09-23",
+        "dateModified": "2014-09-23",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "Mocking frameworks is not a good practice and should be your last resort;
+instead, create and ship fake classes together with your code.
+",
+        "keywords": ["mocking is evil", "mocks are evil", "mocking is bad", "mocking frameworks", "best practices of mocking", "java mocking", "java mock framework"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2014/09/23/built-in-fake-objects.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>23 September 2014</p>
+      <h1>Built-in Fake Objects</h1>
+      <p>While mock objects are perfect instruments for unit testing,
+mocking through mock frameworks may turn your unit tests into
+an unmaintainable mess. Thanks to them we often hear that
+“mocking is bad” and “mocking is evil.”</p>
+
+<p>The root cause of this complexity is that our objects
+are too big. They have many methods and these methods
+return other objects, which also have methods. When we pass
+a mock version of such an object as a parameter, we should
+make sure that all of its methods return valid objects.</p>
+
+<p>This leads to inevitable complexity, which turns unit tests
+to <a href="https://news.ycombinator.com/item?id=7353767">waste</a>
+almost impossible to maintain.</p>
+
+
+
+<h2 id="object-hierarchy">Object Hierarchy</h2>
+
+<p>Take the <code class="language-plaintext highlighter-rouge">Region</code> interface from <a href="https://dynamo.jcabi.com">jcabi-dynamo</a> as an example
+(this snippet and all others in this article are simplified, for the
+sake of brevity):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Region</span> <span class="o">{</span>
+  <span class="nc">Table</span> <span class="nf">table</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Its <code class="language-plaintext highlighter-rouge">table()</code> method returns an instance of the <code class="language-plaintext highlighter-rouge">Table</code> interface, which
+has its own methods:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Table</span> <span class="o">{</span>
+  <span class="nc">Frame</span> <span class="nf">frame</span><span class="o">();</span>
+  <span class="nc">Item</span> <span class="nf">put</span><span class="o">(</span><span class="nc">Attributes</span> <span class="n">attrs</span><span class="o">);</span>
+  <span class="nc">Region</span> <span class="nf">region</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Interface <code class="language-plaintext highlighter-rouge">Frame</code>, returned by the <code class="language-plaintext highlighter-rouge">frame()</code> method, also has its
+own methods. And so on.
+In order to create a properly mocked instance of interface <code class="language-plaintext highlighter-rouge">Region</code>,
+one would normally create a dozen other mock objects. With <a href="http://mockito.org">Mockito</a>
+it will look like this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">testMe</span><span class="o">()</span> <span class="o">{</span>
+  <span class="c1">// many more lines here...</span>
+  <span class="nc">Frame</span> <span class="n">frame</span> <span class="o">=</span> <span class="nc">Mockito</span><span class="o">.</span><span class="na">mock</span><span class="o">(</span><span class="nc">Frame</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+  <span class="nc">Mockito</span><span class="o">.</span><span class="na">doReturn</span><span class="o">(...).</span><span class="na">when</span><span class="o">(</span><span class="n">frame</span><span class="o">).</span><span class="na">iterator</span><span class="o">();</span>
+  <span class="nc">Table</span> <span class="n">table</span> <span class="o">=</span> <span class="nc">Mockito</span><span class="o">.</span><span class="na">mock</span><span class="o">(</span><span class="nc">Table</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+  <span class="nc">Mockito</span><span class="o">.</span><span class="na">doReturn</span><span class="o">(</span><span class="n">frame</span><span class="o">).</span><span class="na">when</span><span class="o">(</span><span class="n">table</span><span class="o">).</span><span class="na">frame</span><span class="o">();</span>
+  <span class="nc">Region</span> <span class="n">region</span> <span class="o">=</span> <span class="nc">Mockito</span><span class="o">.</span><span class="na">mock</span><span class="o">(</span><span class="nc">Region</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+  <span class="nc">Mockito</span><span class="o">.</span><span class="na">doReturn</span><span class="o">(</span><span class="n">table</span><span class="o">).</span><span class="na">when</span><span class="o">(</span><span class="n">region</span><span class="o">).</span><span class="na">table</span><span class="o">(</span><span class="nc">Mockito</span><span class="o">.</span><span class="na">anyString</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>And all of this is just a
+<a href="/2015/05/25/unit-test-scaffolding.html">scaffolding</a>
+before the actual testing.</p>
+
+<h2 id="sample-use-case">Sample Use Case</h2>
+
+<p>Let’s say, you’re developing a project that uses jcabi-dynamo for
+managing data in <a href="https://aws.amazon.com/dynamodb/">DynamoDB</a>.
+Your class may look similar to this:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Employee</span> <span class="o">{</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">name</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Region</span> <span class="n">region</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="nf">Employee</span><span class="o">(</span><span class="nc">String</span> <span class="n">empl</span><span class="o">,</span> <span class="nc">Region</span> <span class="n">dynamo</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">empl</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">region</span> <span class="o">=</span> <span class="n">dynamo</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="kd">public</span> <span class="nc">Integer</span> <span class="nf">salary</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">region</span>
+        <span class="o">.</span><span class="na">table</span><span class="o">(</span><span class="s">"employees"</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">frame</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">where</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">iterator</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">next</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"salary"</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">getN</span><span class="o">()</span>
+    <span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>You can imagine how difficult it will be to unit test this class,
+using Mockito, for example. First, we have
+to mock the <code class="language-plaintext highlighter-rouge">Region</code> interface. Then, we have to mock a <code class="language-plaintext highlighter-rouge">Table</code> interface and make sure
+it is returned by the <code class="language-plaintext highlighter-rouge">table()</code> method. Then, we have to mock a <code class="language-plaintext highlighter-rouge">Frame</code> interface, etc.</p>
+
+
+
+<p>The unit test will be much longer than the class itself. Besides that,
+its real purpose, which is to test the retrieval of an employee’s salary, will not
+be obvious to the reader.</p>
+
+<p>Moreover, when we need to test a similar method of a similar class,
+we will need to restart this mocking from scratch. Again, multiple lines of code,
+which will look very similar to what we have already written.</p>
+
+<h2 id="fake-classes">Fake Classes</h2>
+
+<p>The solution is to create fake classes and ship them
+together with real classes. This is what <a href="https://dynamo.jcabi.com">jcabi-dynamo</a>
+is doing. Just look at its <a href="https://dynamo.jcabi.com/apidocs-0.16.1/index.html">JavaDoc</a>.
+There is a package called <code class="language-plaintext highlighter-rouge">com.jcabi.dynamo.mock</code> that contains
+only fake classes, suitable only for unit testing.</p>
+
+<p>Even though their sole purpose is to optimize unit testing, we
+<a href="/2014/08/19/how-to-release-to-maven-central.html">ship them</a>
+together with production code, in the same JAR package.</p>
+
+<p>This is what a test will look like, when a fake class <code class="language-plaintext highlighter-rouge">MkRegion</code> is used:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">EmployeeTest</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">canFetchSalaryFromDynamoDb</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nc">Region</span> <span class="n">region</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">MkRegion</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">H2Data</span><span class="o">().</span><span class="na">with</span><span class="o">(</span>
+        <span class="s">"employees"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">String</span><span class="o">[]</span> <span class="o">{</span><span class="s">"name"</span><span class="o">},</span>
+        <span class="k">new</span> <span class="nc">String</span><span class="o">[]</span> <span class="o">{</span><span class="s">"salary"</span><span class="o">}</span>
+      <span class="o">)</span>
+    <span class="o">);</span>
+    <span class="n">region</span><span class="o">.</span><span class="na">table</span><span class="o">(</span><span class="s">"employees"</span><span class="o">).</span><span class="na">put</span><span class="o">(</span>
+      <span class="k">new</span> <span class="nf">Attributes</span><span class="o">()</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"name"</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"salary"</span><span class="o">,</span> <span class="k">new</span> <span class="nc">AttributeValue</span><span class="o">().</span><span class="na">withN</span><span class="o">(</span><span class="mi">50000</span><span class="o">))</span>
+    <span class="o">);</span>
+    <span class="nc">Employee</span> <span class="n">emp</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Employee</span><span class="o">(</span><span class="s">"Jeff"</span><span class="o">,</span> <span class="n">region</span><span class="o">);</span>
+    <span class="n">assertThat</span><span class="o">(</span><span class="n">emp</span><span class="o">.</span><span class="na">salary</span><span class="o">(),</span> <span class="n">equalTo</span><span class="o">(</span><span class="mi">50000</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This test looks obvious to me. First, we create a fake DynamoDB region,
+which works on top of <code class="language-plaintext highlighter-rouge">H2Data</code> storage (in-memory H2 database). The storage
+will be ready for a single <code class="language-plaintext highlighter-rouge">employees</code> table with a hash key <code class="language-plaintext highlighter-rouge">name</code> and
+a single <code class="language-plaintext highlighter-rouge">salary</code> attribute.</p>
+
+
+
+<p>Then, we put a record into the table, with a hash <code class="language-plaintext highlighter-rouge">Jeff</code> and a salary
+<code class="language-plaintext highlighter-rouge">50000</code>.</p>
+
+<p>Finally, we create an instance of class <code class="language-plaintext highlighter-rouge">Employee</code> and check how it
+fetches the salary from DynamoDB.</p>
+
+<p>I’m currently doing the same thing in almost every open source library I’m working with.
+I’m creating a collection of fake classes, that simplify testing
+inside the library and for its users.</p>
+
+<p>BTW, a great article on the same subject:
+<a href="http://nedbatchelder.com/blog/201206/tldw_stop_mocking_start_testing.html">tl;dw: Stop mocking, start testing</a>
+by Ned Batchelder.</p>
+
+<p>PS. Check this out, on a very similar subject:
+<a href="/2014/04/18/jcabi-http-server-mocking.html">Mocking of HTTP Server in Java</a>.</p>
+
+    </article>
+  </body>
+</html>
