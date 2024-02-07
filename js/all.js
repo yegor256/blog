@@ -10,7 +10,7 @@ if (typeof($) != 'undefined') {
       return num;
     }
     if ($('.buttons').css('display') !== 'none') {
-      $('.button').click(
+      $('.button[href!='#']').click(
         function (event) {
           event.preventDefault();
           var $this = $(this);
