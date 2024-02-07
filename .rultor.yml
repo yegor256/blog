@@ -6,6 +6,7 @@ assets:
   id_rsa: "yegor256/home#assets/blog/id_rsa"
   id_rsa.pub: "yegor256/home#assets/blog/id_rsa.pub"
 install: |
+  bundle lock --no-color
   bundle install --no-color
 merge:
   script: |
