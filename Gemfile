@@ -31,7 +31,7 @@ gem 'jekyll-plantuml', '1.4.2'
 gem 'jekyll-redirect-from', '0.16.0'
 gem 'jekyll-sass', '1.1.0'
 gem 'jekyll-sass-converter', '3.0.0'
-gem 'jekyll-shorts', '0.0.9'
+gem 'jekyll-shorts', '0.0.10'
 gem 'jekyll-sitemap', '1.4.0'
 # gem 'jekyll-related-posts'
 
