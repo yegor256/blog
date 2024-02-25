@@ -46,6 +46,8 @@ You most probably have seen it on buildings which are being
 constructed or reconstructed.
 The red one in the picture is the safety net.
 
+> Unit Tests provide a safety net of regression tests and validation tests so that you can refactor and integrate effectively. As they say at the circus; never work without a net! -- [eXtreme Programming](http://www.extremeprogramming.org/rules/unittests.html)
+
 If construction workers accidentally fall down
 or drop their tools, they won't die and won't kill anyone on the ground.
 Does this knowledge help them work more effectively? I believe it does. I didn't
