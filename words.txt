@@ -1407,6 +1407,7 @@ CircleCI
 circles
 circulating
 circumstances
+circus
 citation
 citations
 cite
@@ -7529,6 +7530,7 @@ registers
 registrar
 registration
 registrations
+regression
 regret
 regrets
 regular
