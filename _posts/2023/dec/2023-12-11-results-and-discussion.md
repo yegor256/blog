@@ -123,6 +123,7 @@ You may find inspiration in these papers
 
   * Zhaowei Zhang et al., _Diet Code Is Healthy: Simplifying Programs for Pre-trained Models of Code_, ESEC/FSE 2022
   * Norman Peitek et al., _Correlates of Programmer Efficacy and Their Link to Experience: A Combined EEG and Eye-Tracking Study_, ESEC/FSE 2022
+  * Jennifer Bauer et al., _Indentation: Simply a Matter of Style or Support for Program Comprehension?_, ICPC 2019
 
 <hr/>
 
