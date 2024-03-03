@@ -38,7 +38,7 @@ servers, like Jenkins.
 aggregates a few quality checkers, configures them to a maximum
 strict mode, and breaks your build if any of them fail.
 
-{% badge http://img.qulice.com/logo.svg 128 https://www.qulice.com %}
+{% badge https://www.qulice.com/logo.svg 128 https://www.qulice.com %}
 
 Seriously. There are
 [over 130 checks](http://checkstyle.sourceforge.net/checks.html) in Checkstyle,
