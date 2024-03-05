@@ -254,6 +254,7 @@ also
 alsuhaibani
 altcoins
 alter
+altered
 alternative
 alternatively
 alternatives
@@ -745,6 +746,7 @@ bastard
 bat
 batchelder
 bathroom
+bauer
 bay
 bazaar
 bcba
@@ -1606,7 +1608,6 @@ comedian
 comes
 comfort
 comfortable
-comfortably
 coming
 comma-separated
 command
@@ -1715,6 +1716,7 @@ composite
 composition
 compound
 comprehend
+comprehension
 comprehensive
 comprehensively
 compress
@@ -4309,6 +4311,7 @@ ICCQ
 ice
 icloud
 icons
+ICPC
 ICSE
 id
 IDE
@@ -4468,6 +4471,7 @@ incubator
 incurred
 indeed
 indefinitely
+indentation
 independent
 independently
 index
@@ -4860,6 +4864,7 @@ jeffrey
 jekyll
 jemielniak
 jenkins
+jennifer
 jeopardize
 JEP
 jeremy
@@ -6697,6 +6702,7 @@ phew
 phew-ed
 philanthropists
 philippe
+phillip
 philosophical
 philosophically
 philosophy
@@ -6787,6 +6793,7 @@ planting
 platform
 platform-specific
 platforms
+plauger
 play
 playboy
 played
@@ -7293,7 +7300,6 @@ quiet
 quietly
 quit
 quite
-quitting
 quiz
 qulice
 qulice's
@@ -8134,7 +8140,6 @@ self-discipline
 self-disciplined
 self-documented
 self-esteem
-self-explainable
 self-humiliation
 self-improvement
 self-management
@@ -9667,6 +9672,7 @@ undoubtedly
 unethical
 unevenly
 unexpected
+unexpectedly
 unexplained
 unfair
 unfavorable
