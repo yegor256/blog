@@ -139,15 +139,15 @@ More about it in this article:
 Founded 25-Jun-2017.
 -->
 
-{% badge //www.wring.io/images/logo.svg 70 https://www.wring.io %}
+<!-- {% badge //www.wring.io/images/logo.svg 70 https://www.wring.io %} -->
 
-[Wring.io](https://www.wring.io) is a smart inbox for GitHub (and other, in the future)
+<!-- [Wring.io](https://www.wring.io) is a smart inbox for GitHub (and other, in the future)
 notifications we can't parse in our email inbox, because there are too many of them.
 I use this system every day to filter hundreds of notifications GitHub is sending me.
 More about it in this article:
 [Wring.io, a Dispatcher of GitHub Notifications]({% pst 2016/mar/2016-03-15-wring-dispatcher-github-notifications %}).
 <br/>
-Founded 21-Feb-2016.
+Founded 21-Feb-2016. -->
 
 {% badge //github.com/yegor256/tacit/raw/master/tacit_logo.png 70 https://github.com/yegor256/tacit %}
 
