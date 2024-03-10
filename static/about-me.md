@@ -117,7 +117,9 @@ and
 
 Ah, one more thing. I'm a big fan of good movies, so here's
 [my list]({% pst 2014/apr/2014-04-06-movies-for-thanasis %}) of the ones
-I would recommend you watch. Also, here is my list of favorite
+I would recommend you watch. Sometimes, I even make [films](/films.html).
+
+Here is my list of favorite
 [fiction](/fiction.html) and [non-fiction](/non-fiction.html) books.
 
 By the way, I'm also an amateur artist,
