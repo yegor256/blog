@@ -83,7 +83,7 @@ and I will review each step in the following order:
   1. Limitations
   1. Discussion --- [how to?]({% pst 2023/dec/2023-12-11-results-and-discussion %})
   1. Conclusion
-  1. Introduction
+  1. Introduction --- [how to?]({% pst 2022/aug/2022-08-24-research-paper-template %})
   1. Abstract
   1. Title
 
