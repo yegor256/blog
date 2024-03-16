@@ -226,9 +226,9 @@ the questions I'd recommend you answer in your
 
 Here is the text I
 [use](https://blog.github.com/2016-02-17-issue-and-pull-request-templates/) in all my projects:
-[`ISSUE_TEMPLATE.md`](https://github.com/yegor256/takes/blob/master/.github/ISSUE_TEMPLATE.md)
+[`ISSUE_TEMPLATE.md`](https://github.com/yegor256/takes/blob/14d1d4f6c398a5f8ff08d958fc86f4413dcc7778/.github/ISSUE_TEMPLATE.md)
 and
-[`PULL_REQUEST_TEMPLATE.md`](https://github.com/yegor256/takes/blob/master/.github/PULL_REQUEST_TEMPLATE.md).
+[`PULL_REQUEST_TEMPLATE.md`](https://github.com/yegor256/takes/blob/14d1d4f6c398a5f8ff08d958fc86f4413dcc7778/.github/PULL_REQUEST_TEMPLATE.md).
 
 ## Quality Wall
 
