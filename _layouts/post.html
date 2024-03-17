@@ -124,7 +124,7 @@ amp: true
   title = &#123;&#123;{{ page.title | replace:'&','\&' | replace:'#','\#' | replace:'_','\_' }}&#125;&#125;,
   howpublished = &#123;\url&#123;{{ site.url }}{{ page.short-url }}&#125;&#125;,
   year = &#123;{{ page.date | date: "%Y" }}&#125;,
-  month = &#123;{{ page.date | date: "%B" }}&#125;,
+  month = &#123;{{ page.date | date: "%b" | downcase }}&#125;,
   note = &#123;[Online; accessed {{ 'now' | date: "%d-%m-%Y" }}]&#125;
 &#125;</pre></div>
         {{ content }}
