@@ -35,7 +35,7 @@ and [Deployment Script vs. Rultor]({% pst 2014/sep/2014-09-11-deployment-script-
 <br/>
 Founded 5-Jun-2013.
 
-{% badge https://camo.githubusercontent.com/21b0e8be23deb3c2743027b82fda3af26c04ebfbb43faf5fc73c01b66607f8bf/687474703a2f2f696d672e71756c6963652e636f6d2f6c6f676f2e737667 140 https://www.qulice.com %}
+{% badge https://www.qulice.com/logo.svg 140 https://www.qulice.com %}
 
 [Qulice](https://www.qulice.com) is a aggregate of a few popular and powerful
 style checkers for Java, in particular Checkstyle and PMD. Qulice not only makes it
