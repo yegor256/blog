@@ -15,8 +15,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-FROM yegor256/rultor-image:1.22.0
-MAINTAINER Yegor Bugayenko <yegor256@gmail.com>
+FROM yegor256/rultor-image:1.23.1
 LABEL Description="yegor256.com" Vendor="Yegor Bugayenko" Version="1.0"
 
 ENV DEBIAN_FRONTEND=noninteractive
