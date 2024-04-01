@@ -33,15 +33,16 @@ mostly the courses about software development and project management.
 As much as it's possible, I'm trying to video-record all lectures.
 Most lectures are in English, but some of them are in Russian too.
 
-<img src="http://img.youtube.com/vi/N1SOZ-vKgzQ/maxresdefault.jpg" class="lecture"/>
+<img src="http://img.youtube.com/vi/jYeZuaLt7nI/maxresdefault.jpg" class="lecture"/>
 Jan 2024<br/>
 **Open Source Best Practices**<br/>
 in [Innopolis University](https://innopolis.university/) (Kazan, Russia)<br/>
-8 lectures:
+8 lectures: in progress...
 [slides](https://github.com/yegor256/osbp),
-[videos](...)
+[videos](https://www.youtube.com/playlist?list=PLaIsQH4uc08zjutyoBOtoa6fnxzrCQK2Q)
 {: .lecture}
 
+<img src="http://img.youtube.com/vi/q9Gr2xguP5I/maxresdefault.jpg" class="lecture"/>
 Sep 2023<br/>
 **Software Quality Metrics**<br/>
 in [HSE University](https://www.hse.ru/en/) (Moscow, Russia)<br/>
