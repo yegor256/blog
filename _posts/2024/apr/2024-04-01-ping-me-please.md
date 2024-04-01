@@ -5,7 +5,9 @@ date: 2024-04-01
 place: Moscow, Russia
 tags: mood
 description: |
-  ...
+  Distributed teams communicate asynchronously, causing delays
+  in responses; frequent pinging can alleviate frustration
+  in open-source projects.
 keywords:
   - code review
   - open source
@@ -34,19 +36,19 @@ time you need an answer or attention to be paid to your code.
 
 There are four basic scenarios:
 
-- You submitted a new issue.
+- You submitted a _new issue_.
   Post a message asking the project architect to pay attention.
   Otherwise, the owner of the backlog may miss your issue, and it will not be resolved for a long time.
 
-- You sent a new pull request.
+- You sent a _new pull request_.
   Post a message right in the PR, asking the architect to review it.
   Otherwise, the architect may simply miss the pull request, and it will stay in the "waiting for review" state for a long time.
 
-- You made changes in a pull request after code reviewers asked you.
+- You made _changes_ in a pull request after code reviewers asked you.
   Post a message asking them to look at your code again.
   Otherwise, they may never see the changes you just made.
 
-- You post any message in an issue or a pull request.
+- You post any _message_ in an issue or a pull request.
   [Start it]({% pst 2020/jul/2020-07-29-open-source-etiquette %}) with the nickname of the person you are talking to.
   Otherwise, the person who should help you may not receive a notification about your message, and it will be missed.
 
