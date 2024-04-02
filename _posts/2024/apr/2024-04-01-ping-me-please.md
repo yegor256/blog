@@ -14,9 +14,9 @@ keywords:
   - programming team
   - collaborative programming
   - communications in github
-image: /images/2024/04/
+image: /images/2024/04/10th-and-wolf.jpg
 jb_picture:
-  caption: ...
+  caption: 10th & Wolf (2006) by Bobby Moresco
 ---
 
 There is a big difference between distributed and colocated teams: the
