@@ -558,6 +558,7 @@ AST
 ASTs
 astute
 asylum
+asynchronous
 at
 ate
 athletes
@@ -746,6 +747,7 @@ bastard
 bat
 batchelder
 bathroom
+batler
 bauer
 bay
 bazaar
@@ -1586,6 +1588,7 @@ collectors
 collects
 college
 collisions
+collocated
 colloquy
 colon
 color
@@ -2015,6 +2018,7 @@ covers
 COVID-
 cow
 cowards
+coworker's
 coworkers
 cozy
 CPU
@@ -9051,6 +9055,7 @@ synchronization
 synchronize
 synchronized
 synchronizeddatabaseconnection
+synchronous
 syncposition
 syncscalar
 synergy

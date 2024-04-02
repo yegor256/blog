@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2024-04-01T06:18:37+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Research Flow</title><link href="https://www.yegor256.com/2024/02/06/research-flow.html" rel="alternate" type="text/html" title="Research Flow" /><published>2024-02-06T00:00:00+00:00</published><updated>2024-02-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/02/06/research-flow</id><content type="html" xml:base="https://www.yegor256.com/2024/02/06/research-flow.html"><![CDATA[<p>Say, you are a student, and I’m your <a href="/2021/12/01/teaching.html">teacher</a>. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2024-04-02T10:33:08+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Ping Me, Please!</title><link href="https://www.yegor256.com/2024/04/01/ping-me-please.html" rel="alternate" type="text/html" title="Ping Me, Please!" /><published>2024-04-01T00:00:00+00:00</published><updated>2024-04-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/04/01/ping-me-please</id><content type="html" xml:base="https://www.yegor256.com/2024/04/01/ping-me-please.html"><![CDATA[<p>There is a big difference between distributed and collocated teams: the
+communication in distributed teams is asynchronous, which essentially
+means that when you ask something, a response doesn’t arrive
+immediately. Moreover, it may never arrive. This can be very
+uncomfortable for those who are used to the office work setup, where
+most communications are synchronous: any question is answered
+immediately, one way or another. In open-source repositories,
+everything is asynchronous. Here is a simple rule that may help you
+decrease the level of frustration in GitHub projects: ping them every
+time you need an answer or attention to be paid to your code.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="10th &amp; Wolf (2006) by Bobby Moresco" src="/images/2024/04/10th-and-wolf.jpg" longdesc="#4569e6d3" /><figcaption id="4569e6d3">10th &amp; Wolf (2006) by Bobby Moresco</figcaption></figure>
+
+<p>There are four basic scenarios:</p>
+
+<ul>
+  <li>
+    <p>You submitted a <em>new issue</em>.
+Post a message asking the project architect to pay attention.
+Otherwise, the owner of the backlog may miss your issue, and it will not be resolved for a long time.</p>
+  </li>
+  <li>
+    <p>You sent a <em>new pull request</em>.
+Post a message right in the PR, asking the architect to review it.
+Otherwise, the architect may simply miss the pull request, and it will stay in the “waiting for review” state for a long time.</p>
+  </li>
+  <li>
+    <p>You made <em>changes</em> in a pull request after code reviewers asked you.
+Post a message asking them to look at your code again.
+Otherwise, they may never see the changes you just made.</p>
+  </li>
+  <li>
+    <p>You post any <em>message</em> in an issue or a pull request.
+<a href="/2020/07/29/open-source-etiquette.html">Start it</a> with the nickname of the person you are talking to.
+Otherwise, the person who should help you may not receive a notification about your message, and it will be missed.</p>
+  </li>
+</ul>
+
+<p>Also, listen to what Ben Batler from GitHub <a href="https://ben.balter.com/2014/11/06/rules-of-communicating-at-github/">said once</a>:
+You essentially <em>never</em> “walk over” to a coworker’s desk, virtual or otherwise.
+Whenever possible, prefer issues and chat over “just in time” communications.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[Distributed teams communicate asynchronously, causing delays in responses; frequent pinging can alleviate frustration in open-source projects.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/04/10th-and-wolf.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/04/10th-and-wolf.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Research Flow</title><link href="https://www.yegor256.com/2024/02/06/research-flow.html" rel="alternate" type="text/html" title="Research Flow" /><published>2024-02-06T00:00:00+00:00</published><updated>2024-02-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/02/06/research-flow</id><content type="html" xml:base="https://www.yegor256.com/2024/02/06/research-flow.html"><![CDATA[<p>Say, you are a student, and I’m your <a href="/2021/12/01/teaching.html">teacher</a>. 
 Your task is to conduct 
 an experiment or a study and then write a research paper about it. 
 You can do it on your own and then present me with the results in the end. 
@@ -880,131 +922,4 @@ them right, they will work for you with enthusiasm unmatched by any other
 employee.</p>
 
 <p>Strengthening ties with the academic world will unquestionably reinforce your
-position within your company.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html"><![CDATA[What is the recipe of success in a big technical organization? Aside from the usual butt-kissing, what may guarantee career growth?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/09/eight-and-half.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/09/eight-and-half.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Bibcop: Style Checker for BibTeX</title><link href="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html" rel="alternate" type="text/html" title="Bibcop: Style Checker for BibTeX" /><published>2023-09-05T00:00:00+00:00</published><updated>2023-09-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files</id><content type="html" xml:base="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html"><![CDATA[<p>Almost every document you may write in 
-<a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> format will
-have a list of references at the end. Most likely, you will
-use <a href="https://www.ctan.org/pkg/bibtex">BibTeX</a> 
-or <a href="https://www.ctan.org/pkg/biblatex">BibLaTeX</a> 
-to print this list of references in a nicely formatted way.
-It is also highly probable that your <code class="language-plaintext highlighter-rouge">.bib</code> file will contain
-many typographic, stylistic, and logical mistakes. I’m fairly
-certain that you won’t find the time to identify and correct them.
-As a result, the “References” section in your paper may appear sloppy.
-I suggest using the <a href="https://www.ctan.org/pkg/bibcop"><code class="language-plaintext highlighter-rouge">bibcop</code></a> 
-package, which identifies mistakes in the <code class="language-plaintext highlighter-rouge">.bib</code> file 
-and auto-fixes some of them.</p>
-
-<!--more-->
-
-<p>Here is a practical example. Let’s say, you want to 
-cite a famous paper about transformers. First, you find it in
-<a href="https://scholar.google.com/">Google Scholar</a> and click “Cite”:</p>
-
-<figure class="picture"><img src="/images/2023/09/bibcop-scholar.png" style="width:600px;max-width:100%;" alt="picture" /></figure>
-
-<p>Then, you put this “bib” item into your <code class="language-plaintext highlighter-rouge">main.bib</code> file:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@article</span><span class="o">{</span><span class="n">vaswani2017attention</span><span class="o">,</span>
-  <span class="n">title</span><span class="o">={</span><span class="nc">Attention</span> <span class="n">is</span> <span class="n">all</span> <span class="n">you</span> <span class="n">need</span><span class="o">},</span>
-  <span class="n">author</span><span class="o">={</span><span class="nc">Vaswani</span><span class="o">,</span> <span class="nc">Ashish</span> <span class="n">and</span> <span class="nc">Shazeer</span><span class="o">,</span> <span class="nc">Noam</span> <span class="n">and</span> 
-    <span class="nc">Parmar</span><span class="o">,</span> <span class="nc">Niki</span> <span class="n">and</span> <span class="nc">Uszkoreit</span><span class="o">,</span> <span class="nc">Jakob</span> <span class="n">and</span> <span class="nc">Jones</span><span class="o">,</span> <span class="nc">Llion</span> <span class="n">and</span> 
-    <span class="nc">Gomez</span><span class="o">,</span> <span class="nc">Aidan</span> <span class="no">N</span> <span class="n">and</span> <span class="nc">Kaiser</span><span class="o">,</span> <span class="o">{</span><span class="err">\</span><span class="no">L</span><span class="o">}</span><span class="n">ukasz</span> <span class="n">and</span> <span class="nc">Polosukhin</span><span class="o">,</span> <span class="nc">Illia</span><span class="o">},</span>
-  <span class="n">journal</span><span class="o">={</span><span class="nc">Advances</span> <span class="n">in</span> <span class="n">neural</span> <span class="n">information</span> <span class="n">processing</span> <span class="n">systems</span><span class="o">},</span>
-  <span class="n">volume</span><span class="o">={</span><span class="mi">30</span><span class="o">},</span>
-  <span class="n">year</span><span class="o">={</span><span class="mi">2017</span><span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Then, you write something like this in your paper:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">\</span><span class="n">documentclass</span><span class="o">{</span><span class="n">article</span><span class="o">}</span>
-<span class="err">\</span><span class="n">usepackage</span><span class="o">[</span><span class="n">maxbibnames</span><span class="o">=</span><span class="mi">9</span><span class="o">]{</span><span class="n">biblatex</span><span class="o">}</span>
-<span class="err">\</span><span class="n">addbibresource</span><span class="o">{</span><span class="n">main</span><span class="o">.</span><span class="na">bib</span><span class="o">}</span>
-<span class="err">\</span><span class="n">begin</span><span class="o">{</span><span class="n">document</span><span class="o">}</span>
-<span class="nc">Transformers</span><span class="o">~</span><span class="err">\</span><span class="n">cite</span><span class="o">{</span><span class="n">vaswani2017attention</span><span class="o">}</span> 
-<span class="n">changed</span> <span class="n">everything</span><span class="o">!</span>
-<span class="err">\</span><span class="n">printbibliography</span>
-<span class="err">\</span><span class="n">end</span><span class="o">{</span><span class="n">document</span><span class="o">}</span>
-</code></pre></div></div>
-
-<p>This is what you will get:</p>
-
-<figure class="picture"><img src="/images/2023/09/bibcop-before.png" style="width:600px;max-width:100%;" alt="picture" /></figure>
-
-<p>Looks more or less fine. 
-However, if you go to <a href="https://proceedings.neurips.cc/paper_files/paper/2017">the website</a> 
-of the publisher of this article, you will see that:</p>
-
-<ul>
-  <li>The name of <a href="https://proceedings.neurips.cc/">the journal</a> is typed with first letters capitalized in all major words,</li>
-  <li>The title of the paper is also capitalized,</li>
-  <li>The middle name of “Aidan N. Gomez” has a trailing dot.</li>
-</ul>
-
-<p>In other words, Google Scholar gave you the citation with a few typographic
-mistakes. While not fatal, the quality of the “References” section 
-can sometimes be seen as reflective of the quality of the paper as a whole. 
-Simply put, negligence is not forgivable when dealing with information about other authors. 
-We must be accurate down to every letter and every dot.</p>
-
-<p>By including <code class="language-plaintext highlighter-rouge">bibcop</code> package to the document, the problem may be solved.
-First, you install it (I assume, you are using <a href="https://tug.org/texlive/">TeX Live</a>):</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>tlmgr <span class="nb">install </span>bibcop
-</code></pre></div></div>
-
-<p>Then, you add this to your document, right before the <code class="language-plaintext highlighter-rouge">\addbibresource</code> command:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">...</span>
-<span class="err">\</span><span class="n">usepackage</span><span class="o">{</span><span class="n">bibcop</span><span class="o">}</span>
-<span class="err">\</span><span class="n">addbibresource</span><span class="o">{</span><span class="n">main</span><span class="o">.</span><span class="na">bib</span><span class="o">}</span>
-<span class="o">...</span>
-</code></pre></div></div>
-
-<p>When you compile the document, the following warnings will be printed
-to the console, together with other logs:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Package bibcop Warning: A shortened name must have 
-  a tailing dot in the 6th 'author', as in 'Knuth, Donald E.', 
-  in the 'vaswani2017attention' entry.
-Package bibcop Warning: All major words in the 'title' 
-  must be capitalized, while the 2nd word 'is' is not, 
-  in the 'vaswani2017attention' entry.
-Package bibcop Warning: A mandatory 'doi' tag for '@article' 
-  is missing among (author, journal, title, volume, year), 
-  in the 'vaswani2017attention' entry.
-Package bibcop Warning: The 'title' must be wrapped 
-  in double curled brackets, 
-  in the 'vaswani2017attention' entry.
-</code></pre></div></div>
-
-<p>You fix them all in the <code class="language-plaintext highlighter-rouge">main.bib</code> file and recompile the document:</p>
-
-<figure class="picture"><img src="/images/2023/09/bibcop-after.png" style="width:600px;max-width:100%;" alt="picture" /></figure>
-
-<p>This one looks much better to me 
-(especially with the <a href="https://en.wikipedia.org/wiki/Digital_object_identifier">DOI</a>, which 
-was not provided by Google Scholar).</p>
-
-<p>By the way, some formatting problems may be auto-fixed by bibcop.
-You can use it from the command line, assuming you have your
-<code class="language-plaintext highlighter-rouge">main.bib</code> file in the current directory:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bibcop <span class="nt">--fix</span> <span class="nt">--in-place</span> main.bib
-</code></pre></div></div>
-
-<p>This command will make as many fixes as possible. 
-Then, you can run <code class="language-plaintext highlighter-rouge">bibcop</code> again, from the command line, 
-in order to check what style violations are still there:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bibcop main.bib
-</code></pre></div></div>
-
-<p>This will print the same errors as you saw earlier in the LaTeX log.</p>
-
-<hr />
-
-<p><a href="https://ctan.org/pkg/bibcop">In CTAN</a>, you can find full PDF documentation.</p>
-
-<p>You are welcome to suggest additional style checkers, 
-via <a href="https://github.com/yegor256/bibcop">GitHub issues</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="latex" /><summary type="html"><![CDATA[By the quality of the 'References' section some people may judge the quality of your research paper; bibcop helps you keep everything clean.]]></summary></entry></feed>
+position within your company.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html"><![CDATA[What is the recipe of success in a big technical organization? Aside from the usual butt-kissing, what may guarantee career growth?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/09/eight-and-half.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/09/eight-and-half.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
