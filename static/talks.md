@@ -125,6 +125,19 @@ and
 
 I was also seen at [these events](/seen.html).
 
+### 2024
+
+<span class="venue-rate green">B+</span>
+<img src="https://i.ytimg.com/vi/VZDBG-BInWo/mqdefault.jpg" class="past-talk" alt="ITPurpleConf 2024"/>
+**Далеко ли до Стэнфорда**;
+[ITPurpleConf 2024](https://fpmiconf.ru/);
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
+16 March 2024.
+Very well organized event for students, in MIPT. I enjoyed being
+there and hope that they will continue organizing it every year.
+[video](https://www.youtube.com/watch?v=gVZDBG-BInWo).
+{: .talk-event}
+
 ### 2023
 
 <span class="venue-rate green">B+</span>

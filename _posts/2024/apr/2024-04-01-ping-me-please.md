@@ -3,7 +3,7 @@ layout: post
 title: "Ping Me, Please!"
 date: 2024-04-01
 place: Moscow, Russia
-tags: mood
+tags: mood oss
 description: |
   Distributed teams communicate asynchronously, causing delays
   in responses; frequent pinging can alleviate frustration
