@@ -19,7 +19,7 @@ jb_picture:
   caption: 10th & Wolf (2006) by Bobby Moresco
 ---
 
-There is a big difference between distributed and colocated teams: the
+There is a big difference between distributed and collocated teams: the
 communication in distributed teams is asynchronous, which essentially
 means that when you ask something, a response doesn't arrive
 immediately. Moreover, it may never arrive. This can be very
