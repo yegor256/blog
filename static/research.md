@@ -13,10 +13,6 @@ keywords:
   - academic papers
   - yegor bugayenko
   - yegor256 papers
-style: |
-  p.topic strong {
-    display: block;
-  }
 ---
 
 {% badge /images/andreea/academic-writing.svg 200 %}
@@ -29,140 +25,15 @@ You can find me in
 and [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor) too.
 I'm also a co-organizer of [ICCQ](https://www.iccq.ru/).
 
-If you are a student and looking for a research topic for your diploma, 
-pick one of the following and text me in Telegram: [@yegor256](https://t.me/yegor256). 
-I will help you to do the research and may also play a role of your scientific advisor.
+If you are a student and looking for a research topic for your diploma, or
+just want to an interesting R&D project, pick one of the research question
+from one of the lists above, and then text me [in Telegram](https://t.me/yegor256),
+we will discuss:
 
-<hr/>
-
-**Jumps Elimination in OOP** 
-Recently, we developed [DeJump](https://github.com/objectionary/dejump),
-an automated tool that modifies programs written in [EOLANG](https://www.eolang.org),
-our own object-oriented language, such that "jumping objects" (GOTO, BREAK, and CONTINUE)
-are replaced with recursion or other declarative mechanisms. A research paper
-about the tool was recently accepted at a computer science conference ([CSAI'23](https://www.csai.org/)).
-However, even though the tool exists, it has not been tested with a larger amount of
-source code, and it needs a few important improvements in its algorithm.
-Thus, we suggest creating the second version of the tool, with the required improvements
-and testing it with larger blocks of code, in order to demonstrate its effectiveness.
-A new research paper is expected to be written and published.
-{: .topic}
-
-**SLR of Object Models** 
-There is a famous [λ-calculus](https://en.wikipedia.org/wiki/Lambda_calculus) that underlies functional programming languages,
-like Haskell or Scala. At the same time, for object-oriented programming languages,
-more than one calculus has been introduced over the last thirty years, such as
-[Object-Z](https://en.wikipedia.org/wiki/Object-Z) and 
-[VDM](https://link.springer.com/chapter/10.1007/3-540-17654-3_14). 
-However, most modern object-oriented languages, such as
-Java 18+ or Swift, may not be fully formalized with the help of said calculi.
-There are certain limitations in every calculus. In 2021, we made an attempt
-to conduct a detailed analysis of existing object-oriented formal models in the form of a
-Systematic Literature Review ([SLR](https://www.tu.berlin/en/wm/bibliothek/research-teaching/systematic-literature-reviews/description-of-the-systematic-literature-review-method)). 
-Unfortunately, we didn't have enough time
-to study each calculus deeply enough, which is why we stopped the research project.
-Now, we suggest continuing this work, researching existing models,
-and publishing a full academic paper. This paper, if published in a reputable journal or conference,
-could become a significant contribution to the theoretical sector of
-object-oriented programming.
-{: .topic}
-
-**Algorithmization of Object-Oriented Programs Written in EO** 
-[EOLANG](https://www.eolang.org), our experimental strictly object-oriented programming language,
-is very effective for modeling objects and their relationships.
-However, it falls short when programming algorithms and mathematics, because the code
-tends to run much slower than its procedural counterparts written in C++ or Rust. We suggest
-creating a code optimization tool, which will identify blocks of code inside
-EO programs that can be translated to Rust to enhance performance.
-Thus, we aim to develop a tool that inserts native code blocks into the original EO program,
-bridging two programming paradigms—object-oriented in EO and procedural in Rust—by
-connecting them both ways through the [JNI](https://en.wikipedia.org/wiki/Java_Native_Interface) 
-interface. The main challenge lies in pinpointing the most suitable code blocks;
-their introduction should increase the overall program performance while considering
-the additional overhead introduced by JNI roundtrips.
-{: .topic}
-
-**ChatGPT in Backlog Prioritization**
-There is an existing open-source tool, created more than five years ago,
-that assists GitHub programmers in decomposing their tasks into smaller ones and
-automatically creating sub-tasks: [0pdd](https://www.0pdd.com). 
-We aim to enhance this tool with Machine Learning,
-enabling it to prioritize tasks more effectively. Additionally, we want
-to integrate [ChatGPT](https://www.chatgpt.com) into the tool to automatically estimate the value of each task
-and suggest fast-tracks for those implementing tasks. We have already
-made a theoretical attempt to identify an effective solution and have published our findings 
-in the [IEEE Access journal](https://ieeexplore.ieee.org/abstract/document/10220100). 
-Now, implementing these findings in practice and incorporating
-ChatGPT could represent a significant contribution to computer science
-and provide invaluable assistance to hundreds of GitHub programmers.
-{: .topic}
-
-**ChatGPT for GitHub Anomalies Detection** 
-The quality of source code and the discipline of repository maintenance
-play a crucial role in the success of a software product. However, there is
-no automated tool on the market that appraises the quality of an entire
-repository and generates recommendations for its maintainers, with a focus
-on architectural issues and process flaws. In 2021, we attempted to create
-such a tool and even [published](https://dl.acm.org/doi/abs/10.1145/3524842.3528517) some theoretical
-findings in this direction. However, we didn’t employ ChatGPT,
-as it didn't exist at that time. Now, we believe it would be beneficial
-to combine our project analysis algorithm with the capabilities of LLM,
-to generate the most effective and useful advice for software teams.
-{: .topic}
-
-**Analysis of Heap Performance in Different OSs** 
-The heap is the primary storage for variable-sized memory blocks in modern
-operating systems and virtual machines. Allocating a slice of bytes in
-the heap and then releasing it back is a time-consuming operation,
-requiring several hundred CPU cycles. However, the exact number of cycles it
-takes to allocate and free memory chunks in different virtual machines and OSs
-remains unclear. We suggest studying this subject, performing experiments
-on a sufficiently large number of testing platforms, summarizing and analyzing
-the results, and then publishing a research paper. Such an analysis might assist
-creators of programming languages and compilers in making better design decisions.
-{: .topic}
-
-**Encapsulation Strategy in Design Patterns** 
-In object-oriented programming,
-many design patterns are recommended for use. It's commonly believed that if
-programmers adhere to these patterns in their code, the code quality will
-improve due to clearer design. We hypothesize that most design patterns
-emphasize the encapsulation of behaviors rather than data. In other words,
-the objects participating in design patterns are typically "dataless"
-objects. We propose studying this subject through a Systematic Literature
-Review (SLR) of existing literature on design patterns, aiming to either
-confirm or refute our hypothesis. The results of our research might be useful
-for compiler and programming language designers, prompting them to treat
-objects differently if they are dataless.
-{: .topic}
-
-**Study Programmers' Preferences for Object Extensions** 
-In object-oriented programming, additional functionality can be added to classes
-using inheritance, decoration, composition, or by simply expanding existing
-classes with new code or methods. It is commonly believed that most
-programmers, especially those with over 10 years of practical coding
-experience, prefer decoration or composition, as these methods typically result
-in superior design. To validate this assumption, we propose conducting a survey
-among a sizeable group of programmers. We'll present them with various code
-snippets and ask them to choose a method for modifications. The findings from
-our research might offer insights to designers of new programming languages
-about programmers' perceptions of OOP.
-{: .topic}
-
-**Cost of OOP in Different Languages** 
-[Earlier studies](https://downloads.hindawi.com/journals/sp/1999/464598.pdf) 
-by various researchers and practitioners have indicated that
-object-oriented programming features, such as encapsulation and polymorphism,
-are more performance-intensive compared to their procedural counterparts
-(like static methods and global variables). However, a direct comparison
-between programming languages has not been undertaken. We propose such a
-comparison to determine in which object-oriented programming language
-programmers incur the highest performance cost for using the object paradigm.
-The results of this research might assist other researchers in better
-understanding the practical usability of object-oriented programming.
-{: .topic}
-
-<hr/>
+  * [OSBP](https://gist.github.com/yegor256/7907d47b44ca6e048430bb0fcccf8fd0)
+  * [POOP](https://gist.github.com/yegor256/9c7ac9fbd45469a08eb68cfe09d451c3)
+  * [SQM](https://gist.github.com/yegor256/3dde3560d26ba1d7b1d2a91dbe118a12)
+  * [PMBA](https://gist.github.com/yegor256/3d04cb381d3df26aa99e965e20cf11ef)
 
 A few more topics you can find in [objectionary/ideas](https://github.com/objectionary/ideas) repository,
 they are all related to [EOLANG](https://www.eolang.org).
