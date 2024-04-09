@@ -26,21 +26,22 @@ and [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor) too.
 I'm also a co-organizer of [ICCQ](https://www.iccq.ru/).
 
 If you are a student and looking for a research topic for your diploma, or
-just want to an interesting R&D project, pick one of the research question
-from one of the lists above, and then text me [in Telegram](https://t.me/yegor256),
+just want to do an interesting R&D project, pick one of the research question
+from one of the lists below, and then text me [in Telegram](https://t.me/yegor256),
 we will discuss:
 
   * [OSBP](https://gist.github.com/yegor256/7907d47b44ca6e048430bb0fcccf8fd0)
-  * [POOP](https://gist.github.com/yegor256/9c7ac9fbd45469a08eb68cfe09d451c3)
+  * [PainOfOOP](https://gist.github.com/yegor256/9c7ac9fbd45469a08eb68cfe09d451c3)
   * [SQM](https://gist.github.com/yegor256/3dde3560d26ba1d7b1d2a91dbe118a12)
   * [PMBA](https://gist.github.com/yegor256/3d04cb381d3df26aa99e965e20cf11ef)
 
-A few more topics you can find in [objectionary/ideas](https://github.com/objectionary/ideas) repository,
+A few more topics you can find in the [objectionary/ideas](https://github.com/objectionary/ideas) repository,
 they are all related to [EOLANG](https://www.eolang.org).
 
 You may also pick one of our open source projects, and extend it with
 a new feature, presenting this work as engineering+science:
 
+  * [cam](https://github.com/yegor256/cam) (Bash, Python)
   * [rultor](https://github.com/yegor256/rultor) (Java, Docker, AWS, XSL)
   * [qulice](https://github.com/yegor256/qulice) (Java, AST, XML)
   * [takes](https://github.com/yegor256/takes) (Java, HTTP)
