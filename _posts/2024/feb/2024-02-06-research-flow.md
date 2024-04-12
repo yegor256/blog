@@ -47,30 +47,13 @@ by [Justin Zobel](https://scholar.google.com/citations?user=uEHvqE8AAAAJ) (just 
 
 Now, create a document in [Overleaf](https://overleaf.com), 
 and [share a link](https://www.overleaf.com/learn/how-to/Sharing_a_project#Link_sharing) 
-with me so that I can also edit the project. Make your skeleton look like 
-this (you should also [create](https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf) 
+with me so that I can also edit the project. Use one of the following templates
+(you should also [create](https://www.overleaf.com/learn/how-to/Using_bibliographies_on_Overleaf)
 an empty `main.bib` file too):
-
-```tex
-\documentclass[sigplan,nonacm,anonymous,review]{acmart}
-\usepackage[utf8]{inputenc}
-\usepackage{natbib}
-\title{My article}
-\author{John Doe}
-\orcid{0000-0001-0000-0000}
-\email{your email}
-\affiliation{\institution{University}\city{City}\country{Country}}
-\begin{abstract}
-This paper is about something new.
-\end{abstract}
-\begin{document}
-\maketitle
-\section{Introduction}
-Hello, world!
-\bibliographystyle{ACM-Reference-Format}
-\bibliography{main}
-\end{document}
-```
+[ACM](https://gist.github.com/yegor256/aa6215039cf687e4353c61385f23dd6c) (preferred),
+[IEEE](https://gist.github.com/yegor256/58b289432d9ca13a6fd5946c77d8bd48),
+and
+[Springer](https://gist.github.com/yegor256/905c0a1eac18eb6839a192b37f0816e4).
 
 Now, you are ready to begin your research incrementally, 
 and I will review each step in the following order:
