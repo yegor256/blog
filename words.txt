@@ -8670,6 +8670,7 @@ spreadsheet
 spreadsheets
 spring
 spring-based
+springer
 sprint
 sprintf
 sprints
