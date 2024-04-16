@@ -48,7 +48,8 @@ preference (with the last being your last choice):
   * Graphs and diagrams (`\begin{figure}`)
 
 If the data is too extensive to show in the paper, you can store it 
-in a GitHub repository and mention its address in the Results section. For example:
+in a GitHub repository, create a [Zenodo](https://zenodo.org) artifact,
+and mention its address in the Results section. For example:
 
 ```text
 \section{Results}
@@ -60,8 +61,8 @@ a short questionnaire of just 128 questions.
 115 people refused, which is 85%.
 The full list of those who refused, along with 
 their names and home addresses, 
-is published in GitHub repository\footnote{
-  \url{https://github.com/...}}.
+is published in Zenodo\footnote{
+  \url{https://zenodo.com/...}}.
 ```
 
 In the [Method]({% pst 2023/oct/2023-10-11-method-of-research %}) section, 

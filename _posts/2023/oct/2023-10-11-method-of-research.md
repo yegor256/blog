@@ -37,6 +37,9 @@ you did. Second, you highlight how your procedure contributed to one of the
 research questions. Third, you justify your actions by providing strong enough
 reasons for why you performed these specific manipulations with the data.
 
+Use past tense
+[only](https://www.scribbr.com/frequently-asked-questions/tense-methods-section/).
+
 Here is a toy sample of the Method section:
 
 ``` 
