@@ -78,7 +78,7 @@ cats with fruits to increase their happiness and
 prolong their lives has not been studied yet.
 ```
 
-Note the use of the word "however" in the last sentence of each paragraph. 
+Note the use of the word "_however_" in the last sentence of each paragraph.
 It highlights gaps in existing research that your study aims to fill. 
 The final paragraph confirms your awareness that your research is unique. 
 While you might be mistaken, explicitly stating your unawareness would make it an honest mistake.

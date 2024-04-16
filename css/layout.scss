@@ -427,6 +427,7 @@ figure {
   position: relative;
 
   figcaption {
+    background-color: darken($grey, 30%);
     bottom: 1em;
     color: silver;
     font-size: .8em;
