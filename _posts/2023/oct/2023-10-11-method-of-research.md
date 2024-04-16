@@ -19,15 +19,13 @@ jb_picture:
   caption: Underground (1995) by Emir Kusturica
 ---
 
-Every empirical research paper must have a section titled "Method" (or "Methodology," or "Study Design"). In this section, you describe what was done to obtain the data presented in the following "Results" section. You explain the _recipe_, which may be replicated later by another researcher, leading to the same (or very similar) results.
+Every empirical research paper must have a section titled "Method" (or "Methodology," or "Study Design"). In this section, you describe what was done to obtain the data presented in the following "Results" section. You explain the _recipe_, which may be replicated later by another researcher, leading to the same (or very similar) results. You
+tell the reader what ingredients you used, how you mixed them, and---most
+importantly---why.
 
 <!--more-->
 
 {% jb_picture_body %}
-
-The Method section is the essence of the research. Think of it as a recipe: you
-tell the reader what ingredients you used, how you mixed them, and---most
-importantly---why.
 
 You start the section with a paragraph where you state the main _objective_ of the
 research, then break it down into a few 
