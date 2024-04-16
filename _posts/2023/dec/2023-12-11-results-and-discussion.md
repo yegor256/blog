@@ -81,6 +81,7 @@ Consider these questions (re-phrase them for your own context):
   * Why are these results important?
   * Why has no one discovered this before?
   * Is it possible that we made a mistake?
+  * What data have we missed?
   * How else could the data be interpreted?
   * What's next?
 
