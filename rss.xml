@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2024-04-14T16:24:06+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Ping Me, Please!</title><link href="https://www.yegor256.com/2024/04/01/ping-me-please.html" rel="alternate" type="text/html" title="Ping Me, Please!" /><published>2024-04-01T00:00:00+00:00</published><updated>2024-04-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/04/01/ping-me-please</id><content type="html" xml:base="https://www.yegor256.com/2024/04/01/ping-me-please.html"><![CDATA[<p>There is a big difference between distributed and collocated teams: the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2024-04-16T03:41:21+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Ping Me, Please!</title><link href="https://www.yegor256.com/2024/04/01/ping-me-please.html" rel="alternate" type="text/html" title="Ping Me, Please!" /><published>2024-04-01T00:00:00+00:00</published><updated>2024-04-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/04/01/ping-me-please</id><content type="html" xml:base="https://www.yegor256.com/2024/04/01/ping-me-please.html"><![CDATA[<p>There is a big difference between distributed and collocated teams: the
 communication in distributed teams is asynchronous, which essentially
 means that when you ask something, a response doesn’t arrive
 immediately. Moreover, it may never arrive. This can be very
@@ -338,7 +338,8 @@ preference (with the last being your last choice):</p>
 </ul>
 
 <p>If the data is too extensive to show in the paper, you can store it 
-in a GitHub repository and mention its address in the Results section. For example:</p>
+in a GitHub repository, create a <a href="https://zenodo.org">Zenodo</a> artifact,
+and mention its address in the Results section. For example:</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\section{Results}
 
@@ -349,8 +350,8 @@ a short questionnaire of just 128 questions.
 115 people refused, which is 85%.
 The full list of those who refused, along with 
 their names and home addresses, 
-is published in GitHub repository\footnote{
-  \url{https://github.com/...}}.
+is published in Zenodo\footnote{
+  \url{https://zenodo.com/...}}.
 </code></pre></div></div>
 
 <p>In the <a href="/2023/10/11/method-of-research.html">Method</a> section, 
@@ -370,6 +371,7 @@ research and suggest potential future research topics.</p>
   <li>Why are these results important?</li>
   <li>Why has no one discovered this before?</li>
   <li>Is it possible that we made a mistake?</li>
+  <li>What data have we missed?</li>
   <li>How else could the data be interpreted?</li>
   <li>What’s next?</li>
 </ul>
@@ -610,15 +612,13 @@ must break to form new lines. By injecting linebreaks into the body of
 a paragraph, you express distrust in the document formatting software,
 be it an HTML browser, a LaTeX compiler, or a Javadoc generator. In the end,
 it looks ugly, because we are <a href="/2019/05/21/dont-improvise.html">much worse designers</a> 
-than the creators of LaTeX or browsers.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[Explicit line breaks inside a paragraph is a very annoying typography mistake, which I strongly recommend to avoid.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/11/pret-a-porter.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/11/pret-a-porter.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Method Section: A Recipe for Research</title><link href="https://www.yegor256.com/2023/10/11/method-of-research.html" rel="alternate" type="text/html" title="The Method Section: A Recipe for Research" /><published>2023-10-11T00:00:00+00:00</published><updated>2023-10-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/10/11/method-of-research</id><content type="html" xml:base="https://www.yegor256.com/2023/10/11/method-of-research.html"><![CDATA[<p>Every empirical research paper must have a section titled “Method” (or “Methodology,” or “Study Design”). In this section, you describe what was done to obtain the data presented in the following “Results” section. You explain the <em>recipe</em>, which may be replicated later by another researcher, leading to the same (or very similar) results.</p>
+than the creators of LaTeX or browsers.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[Explicit line breaks inside a paragraph is a very annoying typography mistake, which I strongly recommend to avoid.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/11/pret-a-porter.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/11/pret-a-porter.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Method Section: A Recipe for Research</title><link href="https://www.yegor256.com/2023/10/11/method-of-research.html" rel="alternate" type="text/html" title="The Method Section: A Recipe for Research" /><published>2023-10-11T00:00:00+00:00</published><updated>2023-10-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/10/11/method-of-research</id><content type="html" xml:base="https://www.yegor256.com/2023/10/11/method-of-research.html"><![CDATA[<p>Every empirical research paper must have a section titled “Method” (or “Methodology,” or “Study Design”). In this section, you describe what was done to obtain the data presented in the following “Results” section. You explain the <em>recipe</em>, which may be replicated later by another researcher, leading to the same (or very similar) results. You
+tell the reader what ingredients you used, how you mixed them, and—most
+importantly—why.</p>
 
 <!--more-->
 
 <figure class="jb_picture"><img itemprop="image" alt="Underground (1995) by Emir Kusturica" src="/images/2023/10/underground.jpg" longdesc="#952f1bf5" /><figcaption id="952f1bf5">Underground (1995) by Emir Kusturica</figcaption></figure>
-
-<p>The Method section is the essence of the research. Think of it as a recipe: you
-tell the reader what ingredients you used, how you mixed them, and—most
-importantly—why.</p>
 
 <p>You start the section with a paragraph where you state the main <em>objective</em> of the
 research, then break it down into a few 
@@ -629,6 +629,9 @@ In each step, you either collected, combined, or generated data. First, you expl
 you did. Second, you highlight how your procedure contributed to one of the
 research questions. Third, you justify your actions by providing strong enough
 reasons for why you performed these specific manipulations with the data.</p>
+
+<p>Use past tense
+<a href="https://www.scribbr.com/frequently-asked-questions/tense-methods-section/">only</a>.</p>
 
 <p>Here is a toy sample of the Method section:</p>
 
@@ -773,7 +776,7 @@ cats with fruits to increase their happiness and
 prolong their lives has not been studied yet.
 </code></pre></div></div>
 
-<p>Note the use of the word “however” in the last sentence of each paragraph. 
+<p>Note the use of the word “<em>however</em>” in the last sentence of each paragraph.
 It highlights gaps in existing research that your study aims to fill. 
 The final paragraph confirms your awareness that your research is unique. 
 While you might be mistaken, explicitly stating your unawareness would make it an honest mistake.</p>
