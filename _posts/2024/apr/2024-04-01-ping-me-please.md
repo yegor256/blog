@@ -55,3 +55,4 @@ There are four basic scenarios:
 Also, listen to what Ben Batler from GitHub [said once](https://ben.balter.com/2014/11/06/rules-of-communicating-at-github/):
 You essentially _never_ "walk over" to a coworker's desk, virtual or otherwise.
 Whenever possible, prefer issues and chat over "just in time" communications.
+Simply put, don't text me in Telegram.
