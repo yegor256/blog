@@ -59,10 +59,18 @@ software companies: ACME Inc, Google, and
 Amazon. We asked them kindly to answer
 a short questionnaire of just 128 questions.
 115 people refused, which is 85%.
-The full list of those who refused, along with 
-their names and home addresses, 
-is published in Zenodo\footnote{
-  \url{https://zenodo.com/...}}.
+```
+
+Don't forget to create a new GitHub repository with all the data that you collected
+during the research: CSV files, scripts, survey answers, and so on. When
+the repository is ready, publish it to Zenodo
+([this is how](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)),
+and then cite it:
+
+```text
+The full list of those who refused, along with
+their names and home addresses,
+is published in Zenodo: \url{https://zenodo.com/...}.
 ```
 
 In the [Method]({% pst 2023/oct/2023-10-11-method-of-research %}) section, 
