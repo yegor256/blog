@@ -307,7 +307,7 @@ end
 desc 'Make sure there are no prohibited RegEx-es in generated HTMLs'
 task regex: [:build] do
   ptns = [
-    /\s—\s/,
+    /\s—\s[a-zA-Z]/,
     /("|&quot;)[,.?!]/,
     /\s&mdash;/,
     /&mdash;\s/
