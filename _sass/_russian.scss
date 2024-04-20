@@ -5,10 +5,6 @@ $gray: #d3d3d3;
   font-family: 'Ponomar Unicode';
 }
 
-.photo {
-  border: 4px solid $red;
-}
-
 .quote {
   font-size: 1.4em;
 
@@ -17,9 +13,4 @@ $gray: #d3d3d3;
     font-size: .8em;
     text-align: right;
   }
-}
-
-.jekyll-chatgpt-translate {
-  color: $gray;
-  font-size: 80%;
 }
