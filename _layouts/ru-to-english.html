@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<section itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div class="wrapper">
+    <main>
+      <article class="main" itemprop="articleBody" style="font-family: sans-serif; font-size: 0.9em; line-height: 1.2em;">
+        <p style="color: #C42C00;">The following text is a <em>partial</em> translation of the
+          <a href='{{ site.url }}{{ page.chatgpt-translate.original-url }}'>original Russian article</a>,
+          performed by <a href="https://chat.openai.com/">ChatGPT</a> ({{ page.chatgpt-translate.model }})
+          and <a href="https://github.com/yegor256/jekyll-chatgpt-translate">this Jekyll plugin</a>:
+        </p>
+        <p><strong>&ldquo;{{ page.title }}&rdquo;</strong></p>
+        {{ content }}
+      </article>
+    </main>
+  </div>
+  <div class="wrapper">
+    <footer class="footer">
+      <p>
+        &copy;
+        <span itemscope="" itemprop="copyrightHolder" itemtype="http://schema.org/Person">
+          <span itemprop="name">Yegor Bugayenko</span>
+        </span>,
+        2014-<span itemprop="copyrightYear">2023</span>
+      </p>
+    </footer>
+  </div>
+</section>
