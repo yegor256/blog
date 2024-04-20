@@ -1,7 +1,3 @@
----
----
-@charset 'utf-8';
-
 $red: #c42c00;
 $gray: #d3d3d3;
 
@@ -15,6 +11,7 @@ $gray: #d3d3d3;
 
 .quote {
   font-size: 1.4em;
+
   span {
     display: block;
     font-size: .8em;
