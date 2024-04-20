@@ -31,9 +31,9 @@ jb_picture:
 И как думаете, куда именно и когда сбежит
 [Гройсман](https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%BE%D0%B9%D1%81%D0%BC%D0%B0%D0%BD,_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%BE%D0%B2%D0%B8%D1%87)?
 
-{% jb_picture_body %}
-
 <!--more-->
+
+{% jb_picture_body %}
 
 Меня не столько интересуют эти ребята, сменяющие один другого
 и [стремительно обогащающиеся](http://obozrevatel.com/crime/12693-volonter-yatsenyuk-otprazdnoval-svoj-pervyij-milliard-v-krugu-pomoschnikov.htm),

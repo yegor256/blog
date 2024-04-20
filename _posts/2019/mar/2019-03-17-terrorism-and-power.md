@@ -29,9 +29,9 @@ jb_picture:
 сейчас интересно другое: почему подобные события привлекают наше внимание и внимание наших лидеров?
 Только ли в силу своего трагизма или есть другие причины?
 
-{% jb_picture_body %}
-
 <!--more-->
+
+{% jb_picture_body %}
 
 Сначала для справки
 [немного статистики](http://death-life.ru/prochie-voprosy/43-skolko-lyudey-umiraet-v-den-god-minutu-sekundu-v-mire-rossii-moskve.html):

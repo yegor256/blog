@@ -24,9 +24,9 @@ jb_picture:
 [этот популизм](http://www.ntv.ru/novosti/1617794/)
 с украинским языком. Зачем Вы это делаете, Михаил?
 
-{% jb_picture_body %}
-
 <!--more-->
+
+{% jb_picture_body %}
 
 Я понимаю, зачем этим занимались
 [Азаров](http://lurkmore.to/%D0%90%D0%B7%D0%B0%D1%80%D0%BE%D0%B2),

@@ -39,9 +39,9 @@ jb_picture:
 [был лишен](http://korrespondent.net/ukraine/3872223-saakashvyly-lyshyly-ukraynskoho-hrazhdanstva)
 украинского гражданства.
 
-{% jb_picture_body %}
-
 <!--more-->
+
+{% jb_picture_body %}
 
 Что это было? Чему именно, длиною в два с половиной года, мы стали свитеделями?
 Опытный грузинский политик и революционер, которому Грузия обязана своими

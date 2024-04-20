@@ -28,9 +28,9 @@ jb_picture:
 Лев Гумилев, неизменным объединяющим посылом для них является:
 "мы &mdash; такие-то, а все прочие &mdash; другие".
 
-{% jb_picture_body %}
-
 <!--more-->
+
+{% jb_picture_body %}
 
 По [словам](http://anthropology.ru/en/text/parcvaniya-vv/o-sushchnosti-nacii-i-nacionalizma)
 Вахушти Парцвания образование и существование разных наций &mdash;

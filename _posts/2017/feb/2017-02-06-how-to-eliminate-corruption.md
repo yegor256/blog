@@ -29,9 +29,9 @@ jb_picture:
 какие-то [проверенные](http://www.jk.ru/analiticheskaja-informatsija/antikorruptsionnyjj-kontrol-v-nekotorykh-gosudarstvakh-mira/)
 способы?
 
-{% jb_picture_body %}
-
 <!--more-->
+
+{% jb_picture_body %}
 
 По словам [Роберта Клитгаарда](https://en.wikipedia.org/wiki/Robert_Klitgaard),
 известного своими исследованиями природы этого явления,

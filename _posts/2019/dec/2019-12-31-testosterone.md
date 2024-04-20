@@ -29,9 +29,9 @@ jb_picture:
 а расстояние между полами сокращается.
 Возникает два вопроса: почему это происходит и кому это выгодно?
 
-{% jb_picture_body %}
-
 <!--more-->
+
+{% jb_picture_body %}
 
 На первый вопрос [пытаются](https://www.peptidebio.ru/informaciya/stati/problema-veka-ponizhennyj-testosteron-u-muzhchin.html)
 ответить некоторые ученые,
