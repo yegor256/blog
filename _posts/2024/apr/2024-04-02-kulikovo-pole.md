@@ -15,8 +15,9 @@ keywords:
 image: /images/2024/04/peresvet-i-chelubej.jpg
 jb_picture:
   caption: Поединок Пересвета с Челубеем, Михаил Авилов
+stylesheets:
+  - https://slavonic.github.io/css/fonts.css
 style: |
-  @import("https://slavonic.github.io/css/fonts.css");
   .ponomar {
     font-family: 'Ponomar Unicode';
   }
