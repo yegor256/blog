@@ -51,7 +51,7 @@ jb_picture:
 Или это личный конфликт между двумя [давними друзьями](http://vesti-ukr.com/odessa/131930-poroshenko-ja-byl-avtoritetom-dlja-saakashvili),
 который перерос в политическое противостояние и поражение одного из них, более
 слабого и
-[плохо]({% post_url 2016/nov/2016-11-28-saakashvili-speaks-ukrainian %})
+[плохо]({% pst 2016/nov/2016-11-28-saakashvili-speaks-ukrainian %})
 говорящего по-украински?
 
 Ни то, ни другое.
@@ -68,7 +68,7 @@ jb_picture:
 Саакашвили в своем "[прощальном](http://korrespondent.net/ukraine/politics/3872309-saakashvyly-poroshenko-vy-perestupyly-chertu)"
 обращении. Не сводит с ним никто счеты.
 Это не личное. Только бизнес &mdash;
-[коррупция]({% post_url 2017/feb/2017-02-06-how-to-eliminate-corruption %}), на которой
+[коррупция]({% pst 2017/feb/2017-02-06-how-to-eliminate-corruption %}), на которой
 построена и держится вся страна последние двадцать пять лет, борется за
 свое выживание.
 

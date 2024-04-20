@@ -355,7 +355,7 @@ task :snippets do
   done 'All snippets are compact enough'
 end
 
-desc 'Make sure there are no orphan articles'
+desc 'Make sure there are no orphan articles (nobody cites them)'
 task orphans: [:build] do
   links = all_links
     .select { |a| a.start_with? 'https://www.yegor256.com/' }

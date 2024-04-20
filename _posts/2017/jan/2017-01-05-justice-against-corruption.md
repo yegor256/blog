@@ -42,7 +42,7 @@ jb_picture:
 
 Я шучу. Безусловно, никакого гнева народа здесь нет, просто баланс
 сил изменился, и к власти пришли другие бандиты, которые сводят счеты и
-[отбирают собственность]({% post_url 2016/dec/2016-12-19-privatbank-nationalization %}).
+[отбирают собственность]({% pst 2016/dec/2016-12-19-privatbank-nationalization %}).
 
 Однако, интересна реакция народа на заявления адвокатов. Например, вот
 что [заявил](http://asn.in.ua/ru/news/news/80353-advokat-kurchenko-zajavil-otvod-sledstvennomu-sude.html)
