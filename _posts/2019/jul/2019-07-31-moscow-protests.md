@@ -7,11 +7,11 @@ description: |
   как бунт народа против деспотизма власти, если бы не
   была так очевидна совершенно другая их природа.
 place: Москва, Россия
-tags: протесты
+tags: протест
 keywords:
   - россия
   - протесты
-  - путин
+  - власть
 image: /images/2019/07/lyubov-sobol.jpg
 jb_picture:
   caption: YouTube
