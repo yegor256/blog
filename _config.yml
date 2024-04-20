@@ -68,12 +68,12 @@ chatgpt-translate:
       only: russian
       source: ru
       language: en
-      permalink: en/:year-:month-:day-:slug.html
+      permalink: en/:year/:month/:day/:slug.html
     -
       only: russian
       source: ru
       language: zh
-      permalink: zh/:year-:month-:day-:slug.html
+      permalink: zh/:year/:month/:day/:slug.html
 
 # see https://github.com/alfanick/jekyll-related-posts
 related:
