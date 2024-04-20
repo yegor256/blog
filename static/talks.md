@@ -138,6 +138,18 @@ there and hope that they will continue organizing it every year.
 [video](https://www.youtube.com/watch?v=gVZDBG-BInWo).
 {: .talk-event}
 
+<span class="venue-rate green">B</span>
+<img src="https://i.ytimg.com/vi/wO0pQWOX-Lk/mqdefault.jpg" class="past-talk" alt="ProIT Fest 2024"/>
+**Добро пожаловать в RnD**;
+[ProIT Fest 2024](https://proitfest.ru/);
+<span class="city">St. Petersburg</span>, <span class="country">Russia</span>;
+10 February 2024.
+I enjoyed the event and the audience. Would be great to attend it some time again.
+Maybe the location and the quality of sound/video recording may be improved
+in the next events.
+[video](https://www.youtube.com/watch?v=wO0pQWOX-Lk).
+{: .talk-event}
+
 ### 2023
 
 <span class="venue-rate green">B+</span>
