@@ -34,4 +34,3 @@ runs:
       && bundle lock
       && bundle update
       && bundle exec rake
-
