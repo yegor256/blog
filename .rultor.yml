@@ -1,3 +1,21 @@
+# Copyright (c) 2014-2024 Yegor Bugayenko
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the 'Software'), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so. The Software doesn't include files with .md extension.
+# That files you are not allowed to copy, distribute, modify, publish, or sell.
+#
+# THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+---
 docker:
   directory: repo
 assets:
@@ -18,10 +36,17 @@ deploy:
     mkdir ~/.ssh
     mv ../id_rsa ../id_rsa.pub ~/.ssh
     chmod -R 600 ~/.ssh/*
-    echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" > ~/.ssh/config
+    (
+      echo "Host *"
+      echo "  StrictHostKeyChecking no"
+      echo "  UserKnownHostsFile=/dev/null"
+    ) > ~/.ssh/config
     git config --global user.email "rultor@yegor256.com"
     git config --global user.name "Rultor"
-    echo -e "chatgpt-translate:\n  api_key_file: $(pwd)/../chatgpt-key.txt" > _config-deploy.yml
+    (
+      echo "chatgpt-translate:"
+      echo "  api_key_file: $(pwd)/../chatgpt-key.txt"
+    ) > _config-deploy.yml
     LC_ALL=en_US.UTF-8 jgd
 
     rvm default 2.7.6 && source /usr/local/rvm/scripts/rvm
@@ -30,6 +55,9 @@ deploy:
     "$(pwd)/_glyphs/compile.sh" /tmp/icons
     git checkout gh-pages
     git pull
-    for e in svg ttf woff eot css; do cp /tmp/icons/icons.${e} css; git add css/icons.${e}; done
+    for e in svg ttf woff eot css; do
+      cp /tmp/icons/icons.${e} css
+      git add css/icons.${e}
+    done
     git commit -am 'new glyphs' || echo no changes in glyphs
     git push origin gh-pages

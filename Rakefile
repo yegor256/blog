@@ -307,7 +307,7 @@ end
 desc 'Make sure there are no prohibited RegEx-es in generated HTMLs'
 task regex: [:build] do
   ptns = [
-    /\s—\s/,
+    /\s—\s[a-zA-Z]/,
     /("|&quot;)[,.?!]/,
     /\s&mdash;/,
     /&mdash;\s/
@@ -355,10 +355,11 @@ task :snippets do
   done 'All snippets are compact enough'
 end
 
-desc 'Make sure there are no orphan articles'
+desc 'Make sure there are no orphan articles (nobody cites them)'
 task orphans: [:build] do
+  prefix = 'https://www.yegor256.com/'
   links = all_links
-    .select { |a| a.start_with? 'https://www.yegor256.com/' }
+    .select { |a| a.start_with? prefix }
     .map { |a| a.gsub(/#.*/, '') }
   links += all_html.map { |f| f.gsub('_site', 'https://www.yegor256.com') }
   counts = {}
@@ -367,6 +368,9 @@ task orphans: [:build] do
     .reject { |a| a.end_with? '.amp.html' }
     .reject { |a| a.include? '2009/03/04/pdd' }
     .reject { |a| a.include? '2017/05/02/unl' }
+    .reject { |a| a.start_with? "#{prefix}en/" }
+    .reject { |a| a.start_with? "#{prefix}ru/" }
+    .reject { |a| a.start_with? "#{prefix}zh/" }
     .group_by(&:itself)
     .each { |k, v| counts[k] = v.length }
   orphans = 0

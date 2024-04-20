@@ -29,7 +29,7 @@ use [no annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}),
 and so on. We, the EO adepts, claim many things, but not so many people
 believe us. Those non-believers [say](/testimonials.html)
 that we are trolls,
-[at best]({% post_url 2020/may/2020-05-13-career-killer %}).
+[at best]({% pst 2020/may/2020-05-13-career-killer %}).
 Their main argument is: everybody works differently,
 why should we listen to you? I have no answer for them... well I had no answer, until I
 created [jPeek](https://www.jpeek.org) and started researching object _cohesion_.
