@@ -36,17 +36,10 @@ deploy:
     mkdir ~/.ssh
     mv ../id_rsa ../id_rsa.pub ~/.ssh
     chmod -R 600 ~/.ssh/*
-    (
-      echo "Host *"
-      echo "  StrictHostKeyChecking no"
-      echo "  UserKnownHostsFile=/dev/null"
-    ) > ~/.ssh/config
+    echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" > ~/.ssh/config
     git config --global user.email "rultor@yegor256.com"
     git config --global user.name "Rultor"
-    (
-      echo "chatgpt-translate:"
-      echo "  api_key_file: $(pwd)/../chatgpt-key.txt"
-    ) > _config-deploy.yml
+    echo -e "chatgpt-translate:\n  api_key_file: $(pwd)/../chatgpt-key.txt" > _config-deploy.yml
     LC_ALL=en_US.UTF-8 jgd
 
     rvm default 2.7.6 && source /usr/local/rvm/scripts/rvm
@@ -55,9 +48,6 @@ deploy:
     "$(pwd)/_glyphs/compile.sh" /tmp/icons
     git checkout gh-pages
     git pull
-    for e in svg ttf woff eot css; do
-      cp /tmp/icons/icons.${e} css
-      git add css/icons.${e}
-    done
+    for e in svg ttf woff eot css; do cp "/tmp/icons/icons.${e}" css; git add "css/icons.${e}"; done
     git commit -am 'new glyphs' || echo no changes in glyphs
     git push origin gh-pages

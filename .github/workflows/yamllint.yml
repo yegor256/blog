@@ -34,3 +34,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ibiqlik/action-yamllint@v3
+        with:
+          config_file: .yamllint.yml
