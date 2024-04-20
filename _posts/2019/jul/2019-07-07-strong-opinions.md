@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2019-07-07
 title: "Пропаганда &quot;За!&quot;"
 description: |

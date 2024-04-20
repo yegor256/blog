@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-01-16
 title: "Кто ты, украинский стартапер?"
 description: |

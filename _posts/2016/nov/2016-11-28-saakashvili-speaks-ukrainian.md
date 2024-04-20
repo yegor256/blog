@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2016-11-28
 title: "Зачем Саакашвили говорит по украински?"
 description: |

@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-06-29
 title: "Лагерные активисты"
 description: |

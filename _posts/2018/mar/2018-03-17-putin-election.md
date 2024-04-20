@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2018-03-17
 title: "Что сделал Путин, чтобы завтра победить"
 description: |

@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2018-01-10
 title: "План Даллеса, Версия 2.0"
 description: |

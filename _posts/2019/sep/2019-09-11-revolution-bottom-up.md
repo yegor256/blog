@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2019-09-15
 title: "Майданом по бездорожью и коррупции!"
 description: |

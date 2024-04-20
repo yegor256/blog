@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2019-02-16
 title: "Калиброванная демократия"
 description: |

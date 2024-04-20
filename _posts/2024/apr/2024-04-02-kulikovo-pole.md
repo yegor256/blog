@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2024-04-02
 title: "Куликовы поля"
 description: |

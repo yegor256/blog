@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2023-08-27
 title: "Война за иммигранта"
 description: |

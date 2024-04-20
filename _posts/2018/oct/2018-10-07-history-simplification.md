@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2018-10-07
 title: "Ветер истории"
 description: |

@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2016-12-19
 title: "Отжали, Игорь Валерьевич?"
 description: |

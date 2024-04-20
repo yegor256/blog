@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2016-12-19
 title: "А вам не стыдно голосовать?"
 description: |

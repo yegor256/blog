@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2020-03-29
 title: "Что общего у Деда Мороза и коронавируса?"
 description: |

@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2020-11-21
 title: "Четыре века якобы свободы"
 description: |

@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2023-09-17
 title: "Турбулентность, Made in Ukraine"
 description: |

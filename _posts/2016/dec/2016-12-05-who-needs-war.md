@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2016-12-05
 title: "Кому нужна война"
 description: |

@@ -65,12 +65,12 @@ chatgpt-translate:
       language: ru
       permalink: ru/:year/:month/:day/:slug.html
     -
-      only: ru-post
+      only: russian
       source: ru
       language: en
       permalink: en/:year-:month-:day-:slug.html
     -
-      only: ru-post
+      only: russian
       source: ru
       language: zh
       permalink: zh/:year-:month-:day-:slug.html

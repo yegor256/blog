@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2019-01-13
 title: "Государство как услуга. Почему нет? Потому что."
 description: |

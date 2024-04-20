@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2020-05-02
 title: "Первая Мировая Истерия"
 description: |

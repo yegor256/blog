@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-01-02
 title: "Честный бюджет от продажных депутатов"
 description: |

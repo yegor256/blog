@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2016-12-22
 title: "А не террористы ли мы с вами?"
 description: |

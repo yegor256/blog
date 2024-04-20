@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-04-24
 title: "Мы не рабы, рабы не мы"
 description: |

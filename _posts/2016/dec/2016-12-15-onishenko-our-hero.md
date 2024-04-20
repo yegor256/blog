@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2016-12-15
 title: "Онищенко наш герой"
 description: |

@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-03-02
 title: "245 лет сепаратизма, от Вашингтона до Захарченко"
 description: |

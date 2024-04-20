@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2016-12-12
 title: "Путин пришел, порядок навел"
 description: |

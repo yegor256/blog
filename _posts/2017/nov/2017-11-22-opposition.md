@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-11-22
 title: "В оппозиции к народу"
 description: |

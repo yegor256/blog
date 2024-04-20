@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2016-12-26
 title: "Что бы я спросил у Путина"
 description: |

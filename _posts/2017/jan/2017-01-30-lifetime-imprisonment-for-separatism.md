@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-01-30
 title: "Почему за сепаратизм дают пожизненное?"
 description: |

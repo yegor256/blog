@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2019-12-31
 title: "Кому мешает наш тестостерон"
 description: |

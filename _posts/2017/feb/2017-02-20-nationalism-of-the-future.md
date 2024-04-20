@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-02-20
 title: "Национализм будущего"
 description: |

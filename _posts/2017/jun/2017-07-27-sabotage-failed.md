@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-07-27
 title: "Саботажника Саакашвили геть!"
 description: |

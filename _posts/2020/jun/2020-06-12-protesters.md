@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2020-06-12
 title: "Расизм на страже мирового капитала"
 description: |

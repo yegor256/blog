@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-01-05
 title: "Прав был Глеб Жеглов?"
 description: |

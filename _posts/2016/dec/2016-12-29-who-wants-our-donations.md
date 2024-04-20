@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2016-12-29
 title: "Кому помогают наши пожертвования"
 description: |

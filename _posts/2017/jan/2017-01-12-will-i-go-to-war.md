@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-01-12
 title: "Пойду ли я воевать?"
 description: |

@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2023-10-01
 title: "Не такой как все!"
 description: |

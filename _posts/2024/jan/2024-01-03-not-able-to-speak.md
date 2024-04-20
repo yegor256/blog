@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2024-01-03
 title: "I can't speak"
 description: |

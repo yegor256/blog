@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2018-01-03
 title: "План &quot;Фиктивная Оппозиция&quot;"
 description: |

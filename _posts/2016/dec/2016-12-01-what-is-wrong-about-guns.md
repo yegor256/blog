@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2016-12-01
 title: "Кому мешает мой пистолет?"
 description: |

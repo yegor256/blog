@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2016-12-08
 title: "Волки и овцы украинской люстрации"
 description: |

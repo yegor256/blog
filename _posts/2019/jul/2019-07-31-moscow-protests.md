@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2019-07-31
 title: "Бунт или смена власти?"
 description: |

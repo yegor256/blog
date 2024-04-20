@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2019-04-28
 title: "Справедливость из Пензы"
 description: |

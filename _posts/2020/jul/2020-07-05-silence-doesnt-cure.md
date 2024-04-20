@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2020-07-05
 title: "Исцеление молчанием?"
 description: |

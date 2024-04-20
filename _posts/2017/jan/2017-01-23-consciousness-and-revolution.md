@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-01-23
 title: "Совесть в балаклавах"
 description: |

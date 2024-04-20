@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2019-03-17
 title: "Терроризм и власть"
 description: |

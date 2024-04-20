@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-10-24
 title: "Моя ли это страна?"
 description: |

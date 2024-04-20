@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-10-30
 title: "Кнут и пряник для украинского&nbsp;языка"
 description: |

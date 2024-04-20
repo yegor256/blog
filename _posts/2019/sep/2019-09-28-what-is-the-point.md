@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2019-09-28
 title: "Зачем?"
 description: |

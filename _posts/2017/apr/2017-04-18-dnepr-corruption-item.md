@@ -1,5 +1,5 @@
 ---
-layout: ru-post
+layout: russian
 date: 2017-04-18
 title: "Почему я не выступлю на ITEM"
 description: |
