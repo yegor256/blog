@@ -1,4 +1,180 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2024-04-16T03:41:21+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Ping Me, Please!</title><link href="https://www.yegor256.com/2024/04/01/ping-me-please.html" rel="alternate" type="text/html" title="Ping Me, Please!" /><published>2024-04-01T00:00:00+00:00</published><updated>2024-04-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/04/01/ping-me-please</id><content type="html" xml:base="https://www.yegor256.com/2024/04/01/ping-me-please.html"><![CDATA[<p>There is a big difference between distributed and collocated teams: the
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2024-04-20T14:18:29+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Куликовы поля</title><link href="https://www.yegor256.com/2024/04/02/kulikovo-pole.html" rel="alternate" type="text/html" title="Куликовы поля" /><published>2024-04-02T00:00:00+00:00</published><updated>2024-04-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/04/02/kulikovo-pole</id><content type="html" xml:base="https://www.yegor256.com/2024/04/02/kulikovo-pole.html"><![CDATA[<p>Я не историк и даже в школе историю не любил. Не любил, но верил,
+что так все и было: и <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0%D1%8F_%D1%84%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F">Французская революция</a>, и <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%B8%D0%B5_%D0%A1%D0%BF%D0%B0%D1%80%D1%82%D0%B0%D0%BA%D0%B0">восстание Спартака</a>,
+и война <a href="атилла">Аттилы</a> с Римом, и охоты на мамонтов с последующими иллюстрациями
+на стенах древних пещер. Все это было именно так, как рассказывали
+нам учителя истории (они в моем детстве почему-то часто менялись).
+Позже, когда появился Internet, я узнал о <a href="https://chronologia.org/">Новой Хронологии</a> и стал
+скептиком — перестал верить на слово тому, что говорят историки. Стал в любом
+описании событий прошлого искать альтернативные версии. Еще позже
+я узнал, что это называется <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B7%D0%B0%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B0">конспирологией</a> и в порядочном обществе
+осуждается, <a href="https://ru.wikipedia.org/wiki/Transhumanism_Inc.">Пелевин</a> не даст соврать.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Поединок Пересвета с Челубеем, Михаил Авилов" src="/images/2024/04/peresvet-i-chelubej.jpg" longdesc="#516b4ef8" /><figcaption id="516b4ef8">Поединок Пересвета с Челубеем, Михаил Авилов</figcaption></figure>
+
+<p>Спрашивается, можем ли мы достоверно утверждать, что именно происходило, скажем,
+шесть веков назад, когда ни Instagram ни даже <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BD%D0%B8%D0%B3%D0%BE%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D0%B0%D0%BD%D0%B8%D0%B5">книгопечатания</a> еще не существовало?
+Достоверно не можем. Можем лишь предполагать, какие события могли произойти,
+опираясь на имеющиеся в нашем распоряжении артефакты
+и учитывая возможность их фальсификации. Чем артефактов меньше и чем они старше, тем
+больше возможностей совершить ошибку. А ошибки совершаются, и часто.</p>
+
+<p>Например, до недавнего времени считалось, что
+<a href="https://ru.wikipedia.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD_%D0%93%D1%80%D0%BE%D0%B7%D0%BD%D1%8B%D0%B9">Иван Грозный</a> убил своего сына, ударив тяжелым царским посохом по голове.
+Откуда нам это было <a href="https://histrf.ru/read/articles/gibiel-nasliednika-mogh-li-ivan-groznyi-ubit-starshiegho-syna">известно</a>?
+Через пять лет после якобы убийства,
+<a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%81%D1%81%D0%B5%D0%B2%D0%B8%D0%BD%D0%BE,_%D0%90%D0%BD%D1%82%D0%BE%D0%BD%D0%B8%D0%BE">Антонио Поссевино</a>, папский легат и секретарь ордена <a href="https://ru.wikipedia.org/wiki/%D0%98%D0%B5%D0%B7%D1%83%D0%B8%D1%82">иезуитов</a>,
+опубликовал трактат <a href="http://moscowstate.ru/possevino-a-istoricheskie-sochineniya-o-rossii-xvi-v-moskoviya-livoniya-i-dr/">“Московия”</a>,
+в котором и описал события, о которых якобы имел точные сведения.
+Затем, через тридцать лет, когда у власти уже была <a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D0%BE%D0%B2%D1%8B">династия Романовых</a>, эту версию
+повторили, например, в <a href="http://lib.pushkinskijdom.ru/Default.aspx?tabid=10940">“Хронографе”</a> 1617 года.
+Еще через двести лет, <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%B0%D0%BC%D0%B7%D0%B8%D0%BD,_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B8%D1%87">Карамзин Николай Михайлович</a> в своей
+<a href="https://ru.wikipedia.org/wiki/%D0%98%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F_%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B0_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B3%D0%BE">“Истории Государства Российского”</a>
+пересказал версию легата, а еще через полвека
+<a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BF%D0%B8%D0%BD,_%D0%98%D0%BB%D1%8C%D1%8F_%D0%95%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D0%B8%D1%87">Иван Репин</a> написал свою <a href="https://ru.wikipedia.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD_%D0%93%D1%80%D0%BE%D0%B7%D0%BD%D1%8B%D0%B9_%D0%B8_%D1%81%D1%8B%D0%BD_%D0%B5%D0%B3%D0%BE_%D0%98%D0%B2%D0%B0%D0%BD_16_%D0%BD%D0%BE%D1%8F%D0%B1%D1%80%D1%8F_1581_%D0%B3%D0%BE%D0%B4%D0%B0">известную картину</a>.
+Однако, в 1963 году, гробница царя и его семьи
+<a href="https://cyberleninka.ru/article/n/a-byl-li-ubit-syn-tsarya-ivana-iv-groznogo/viewer">была вскрыта</a>
+и очевидных признаков убийства обнаружено не было: в волосах царевича не было крови.
+Более того, были обнаружены признаки отравления, но не сына, а всей семьи.
+Таким образом, версия об убийстве, в которую верил весь мир более четырех веков,
+оказалсь лишь выдумкой итальянца закрепленной Карамзиным.</p>
+
+<aside class="quote">
+Если из истории убрать всю ложь, то совершенно не факт, что там останется одна только правда, может совсем ничего не остаться.
+<span><a href="https://ru.wikiquote.org/wiki/%D0%A1%D1%82%D0%B0%D0%BD%D0%B8%D1%81%D0%BB%D0%B0%D0%B2_%D0%95%D0%B6%D0%B8_%D0%9B%D0%B5%D1%86">Станислав Ежи Лец</a></span>
+</aside>
+
+<p>Однако, не стоит поспешно обвинять Карамзина. Попытайтесь поставить себя на его место.
+Ведь если взглянуть на ситуацию с его точки зрения: какой-то Иван Грозный, два
+с половиной века назад, убил кого-то, или нет — разве это имеет принципиальное
+значение? Задача была поставлена, заказчик ждал выполнения, а зарплата
+была <a href="https://www.bbc.com/russian/features-38030502">внушительной</a>.
+Так почему бы не написать, что убийство имело место, особенно если
+есть “первоисточник”, на который можно опереться? Пусть потомки рассудят,
+если им это будет важно: они могут провести эксгумацию, сопоставить
+факты, написать диссертации. “По крайней мере, я никого не убивал”, — так,
+вероятно, размышлял Николай Михайлович, задумываясь о том, соответствует ли
+истине рассказ того итальянца, о правдивости которого он не имел
+представления.</p>
+
+<p>А если бы Карамзин пожелал докопаться до истины, не обращая внимания на возможную
+потерю гонорара, какие бы методы и инструменты он мог использовать? Каковы
+доступные историкам средства для выявления правды? Ещё более важный вопрос
+касается точности каждого из этих инструментов: какова их погрешность? Можно
+предположить, что арсенал методов у историков похож на тот, что используют
+криминалисты: на основе косвенных и прямых доказательств необходимо воссоздать
+образ событий, стараясь обеспечить согласованность улик. Также стоит принимать
+в расчёт показания свидетелей, при этом учитывая степень их заинтересованности
+в определённой интерпретации событий.</p>
+
+<p>После завершения работы криминалистов следователь объединяет все собранные
+улики, реконструирует картину произошедшего и направляет материалы в суд, где
+обе стороны получают возможность высказаться. С одной стороны, адвокаты ищут
+неточности в собранных данных, стараясь убедить суд в том, что предложенная
+реконструкция событий неверна — например, что Иван Грозный не убивал своего
+сына. С другой стороны, прокурор усиливает доводы в пользу правдоподобности
+своей версии событий. В итоге суд формирует своё, субъективное мнение о
+случившемся и выносит вердикт. Этот процесс является частью судебного права,
+представляющего собой механизм установления истины в правовом государстве.
+Наличие доступной всем гражданам судебной системы — несомненный признак
+развитого общества. К этой мысли мы ещё вернёмся через минуту.</p>
+
+<p>Пока же, от времен Ивана IV перейдем к ещё более древним эпохам и к событию,
+предположительно, случившемуся двумя столетиями ранее:
+грандиозному сражению 8-го сентября 1380-го года между народным ополчением
+<a href="https://ru.wikipedia.org/wiki/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87_%D0%94%D0%BE%D0%BD%D1%81%D0%BA%D0%BE%D0%B9">Дмитрия Донского</a> и ордынским войском <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BC%D0%B0%D0%B9">хана Мамая</a>,
+с огромным количеством жертв, сыгравшему поворотную роль в русской истории,
+и позднее названному <a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%BB%D0%B8%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B1%D0%B8%D1%82%D0%B2%D0%B0">Куликовской битвой</a>.
+Несмотря на то, что сам факт массового кровопролития не вызывает сомнений среди историков,
+убедительно доказать, где именно это произошло, до сих пор
+<a href="https://histrf.ru/read/articles/zagadki-kulikova-polya">проблематично</a>.</p>
+
+<p>Действительно, как можно восстановить координаты поля,
+на котором случилась кровавая сеча шесть веков тому назад? Где оно, <a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%BB%D0%B8%D0%BA%D0%BE%D0%B2%D0%BE_%D0%BF%D0%BE%D0%BB%D0%B5">поле</a> это?
+Наверное, можно снова попытаться опереться на воспоминания “итальянцев-очевидцев”,
+но в то время не было ни атласов автомобильных дорог, ни Google Maps,
+да и параллели с меридианами еще не придумали. Даже если у битвы были очевидцы
+владеющие письмом, могли бы они описать координаты места так,
+чтобы сегодня их можно было бы найти на Яндекс Картах?</p>
+
+<p><img src="/images/2024/04/zadonshina.png" style="width:100%;" /></p>
+
+<p>Умением письма кое-кто тогда как раз владел. Некто Софоний Рязанец.
+Он написал книгу <a href="https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B4%D0%BE%D0%BD%D1%89%D0%B8%D0%BD%D0%B0">Задонщина</a>,
+как <a href="http://lib2.pushkinskijdom.ru/Media/Default/PDF/TODRL/12_tom/Nazarevskii/Nazarevskii.pdf">считается</a>, еще при жизни Дмитрия, в которой
+<a href="http://drevne-rus-lit.niv.ru/drevne-rus-lit/text/zadonschina/zadonschina-original.htm">рассказал</a>
+о месте встречи православного князя с татарским темником
+следующее: “<span class="ponomar">проли́тсѧ крóви наречьке напрѧде</span>” где-то
+“<span class="ponomar">между дóном и́ непрóм</span>” (на фото <a href="https://lib-fond.ru/lib-rgb/310/f-310-632/#image-169">Ундольский список</a>, страница 185, выделение мое).
+Считается, что Софоний — наиболее достоверный свидетель тех событий, а значит
+нужно искать на карте упомяную речку, где-то рядом будет и поле.
+Вот только карты Руси XIV века с названиями мелких рек у нас нет.</p>
+
+<p>А если бы такая карта была, я бы искал речку “Напряду”, где-то между
+<a href="https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BD">Доном</a> и <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%BD%D0%B5%D0%BF%D1%80">Днепром</a>.
+Однако, <a href="http://www.drevne.ru/lib/zadon_o.htm">в переводе</a>
+почему-то эта фраза звучит так: “пролится крови на речьке Непрядве!”.
+Как именно историки из “<span class="ponomar">напрѧда</span>” сделали “Непрядва”, мне сложно судить.
+Очевидно, что такой перевод вносит некоторую погрешность в ход
+дальнейшего расследования по нахождению места проведения битвы.
+Однако, это лингвистическое допущение ничуть не смутило <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D1%87%D0%B0%D0%B5%D0%B2,_%D0%A1%D1%82%D0%B5%D0%BF%D0%B0%D0%BD_%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B5%D0%B2%D0%B8%D1%87">Степана Нечаева</a>, который
+в 1848 году обнаружил речку <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D0%BF%D1%80%D1%8F%D0%B4%D0%B2%D0%B0">Непрядву</a> на землях своего имения, предложил
+называть одно из своих полей <a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%BB%D0%B8%D0%BA%D0%BE%D0%B2%D0%BE_%D0%BF%D0%BE%D0%BB%D0%B5">Куликовым</a>, и стал собирать средства на <a href="https://kulpole.ru/places/memorial-na-krasnom-holme">памятник</a>.
+Ему наверняка позавидовал, например, владелец речки <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D0%B2%D0%BB%D1%8F_(%D0%91%D1%80%D1%8F%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)">Навля</a> (Брянская область),
+тоже подходящей названием под древнюю летопись, но инициатива уже была перехвачена.</p>
+
+<p>Почти полтора века эта версия многих устраивала, до тех пор пока уже в наше время
+математик <a href="https://ru.wikipedia.org/wiki/%D0%A4%D0%BE%D0%BC%D0%B5%D0%BD%D0%BA%D0%BE,_%D0%90%D0%BD%D0%B0%D1%82%D0%BE%D0%BB%D0%B8%D0%B9_%D0%A2%D0%B8%D0%BC%D0%BE%D1%84%D0%B5%D0%B5%D0%B2%D0%B8%D1%87">Анатолий Фоменко</a> с коллегами, в рамках работы над
+<a href="https://chronologia.org/">Новой Хрологией</a>,
+не <a href="https://chronologia.org/seven4_1/0601.html">предложили</a> перенести Куликово поле в центр нынешней Москвы, аргументируя это в основном
+1) большей целесообразностью, с военной точки зрения, такого расположения в те времена,
+2) почти полной <a href="https://www.ras.ru/digest/showdnews.aspx?id=44e0aa5d-b0d0-47fa-af88-a791b39f0598&amp;print=1">бесплодностью</a>
+раскопков в имении Нечаева,
+3) множественными захоронениями погибших воинов,
+<a href="https://govoritmoskva.ru/news/120432/">обнаруженными</a> на территории Сретенки (район Москвы)
+и
+4) обнаружением практически всех географических названий (а их много!),
+упоминаемых в источниках по Куликовской битве, на территории Москвы.
+Например, по их мнению, речка в Москве, известная нам сегодня под именем
+<a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D0%B0%D1%8F">Напрудная</a>, и есть та самая речка “<span class="ponomar">Напрѧда</span>”.</p>
+
+<p>Можно сказать, что и версия Нечаева и версия Фоменко или одинаково достоверны
+или одинаково недостоверны: и в том и в другом случае
+оригинальное название реки не соответствует ее современному названию.
+Однако, на мой взгляд, противоречий в версии Нечаева больше, хотя бы
+потому, что раскопки не дали никаких значимых результатов.
+Однако, историческое научное сообщество решило не воспринимать команду Фоменко
+всерьез и даже слова его версии на суде истории не давать.
+Например, русскоязычные страницы Wikipedia, посвященные <a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%BB%D0%B8%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B1%D0%B8%D1%82%D0%B2%D0%B0">Куликовой битве</a> и
+<a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%BB%D0%B8%D0%BA%D0%BE%D0%B2%D0%BE_%D0%BF%D0%BE%D0%BB%D0%B5">Куликовому полю</a> не упоминают Новую Хронологию вообще.</p>
+
+<p>Сейчас речь не о том, где на самом деле находится Куликово поле. Меня, да и вас,
+уважаемые читатели, это напрямую никак не касается, и
+установление истины жизнь нашу никак не изменит.
+Однако, задумайтесь, в развитом ли обществе мы живем, если альтернативные версии исторических
+событий не имеют права на голос в “суде”? И дело даже не в государстве, не в Wikipedia,
+не в учебниках истории. Дело в нас с вами. Способны ли мы беспристрастно
+анализировать работы историков, критиковать их, спорить с ними, опровергать
+их версии, но при этом уважать их? Уважать их так, как справедливый судья в равной мере
+уважает как прокурора, так и адвоката. Или в нашей голове есть место
+только для одного “канонического” Куликова поля?</p>
+
+<p>Позвольте закончить свою мысль одной поучительной историей.
+Несколько месяцев назад мне повезло иметь возможность пообщаться с
+<a href="https://www.youtube.com/watch?v=Ijy8_3efUuo">Анатолием Тимофеевичем Фоменко</a> и
+<a href="https://www.youtube.com/watch?v=4-9MmyBP7gA">Глебом Владимировичем Носовским</a> на своем
+YouTube канале, в формате интервью. Мы говорили в основном о <a href="https://chronologia.org/">Новой Хронологии</a>,
+о их взгляде на историю и о сложностях, с которыми сталкиваются
+авторы альтернативных взглядов на нее. Через некоторое время после публикации обоих видео роликов
+я пригласил на интервью другого ученого, доктора технических наук, и получил
+отказ. Привожу его полностью:</p>
+
+<p><img src="/images/2024/04/refusal.png" style="width:100%; border: 1px solid gray;" /></p>
+
+<p>Мне было стыдно читать это письмо. Стыдно за наших ученых.</p>
+
+<p>У меня все.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="конспирология" /><summary type="html"><![CDATA[Великая битва на Куликовом поле произошла в 1380-м году, до сих пор точно не известно, где именно, это случилось, но альтернативные версии категорически отвергаются. Почему?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/04/peresvet-i-chelubej.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/04/peresvet-i-chelubej.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ping Me, Please!</title><link href="https://www.yegor256.com/2024/04/01/ping-me-please.html" rel="alternate" type="text/html" title="Ping Me, Please!" /><published>2024-04-01T00:00:00+00:00</published><updated>2024-04-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/04/01/ping-me-please</id><content type="html" xml:base="https://www.yegor256.com/2024/04/01/ping-me-please.html"><![CDATA[<p>There is a big difference between distributed and collocated teams: the
 communication in distributed teams is asynchronous, which essentially
 means that when you ask something, a response doesn’t arrive
 immediately. Moreover, it may never arrive. This can be very
@@ -40,7 +216,8 @@ Otherwise, the person who should help you may not receive a notification about y
 
 <p>Also, listen to what Ben Batler from GitHub <a href="https://ben.balter.com/2014/11/06/rules-of-communicating-at-github/">said once</a>:
 You essentially <em>never</em> “walk over” to a coworker’s desk, virtual or otherwise.
-Whenever possible, prefer issues and chat over “just in time” communications.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="oss" /><summary type="html"><![CDATA[Distributed teams communicate asynchronously, causing delays in responses; frequent pinging can alleviate frustration in open-source projects.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/04/10th-and-wolf.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/04/10th-and-wolf.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Research Flow</title><link href="https://www.yegor256.com/2024/02/06/research-flow.html" rel="alternate" type="text/html" title="Research Flow" /><published>2024-02-06T00:00:00+00:00</published><updated>2024-02-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/02/06/research-flow</id><content type="html" xml:base="https://www.yegor256.com/2024/02/06/research-flow.html"><![CDATA[<p>Say, you are a student, and I’m your <a href="/2021/12/01/teaching.html">teacher</a>. 
+Whenever possible, prefer issues and chat over “just in time” communications.
+Simply put, don’t text me in Telegram.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="oss" /><summary type="html"><![CDATA[Distributed teams communicate asynchronously, causing delays in responses; frequent pinging can alleviate frustration in open-source projects.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/04/10th-and-wolf.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/04/10th-and-wolf.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Research Flow</title><link href="https://www.yegor256.com/2024/02/06/research-flow.html" rel="alternate" type="text/html" title="Research Flow" /><published>2024-02-06T00:00:00+00:00</published><updated>2024-02-06T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/02/06/research-flow</id><content type="html" xml:base="https://www.yegor256.com/2024/02/06/research-flow.html"><![CDATA[<p>Say, you are a student, and I’m your <a href="/2021/12/01/teaching.html">teacher</a>. 
 Your task is to conduct 
 an experiment or a study and then write a research paper about it. 
 You can do it on your own and then present me with the results in the end. 
@@ -114,7 +291,71 @@ and dedicated students who require most of my attention, I may halt a research
 project when I discern a lack of genuine commitment. The use of 
 <a href="/2023/12/26/defend-me-against-chatgpt.html">ChatGPT</a>, 
 plagiarism, and negligence may lead to an unfavorable assessment of your work. 
-I strongly advise avoiding them.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[This is a highly simplified description of a straightforward research workflow that I employ with my students in their research courses and diploma projects.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/02/respublica-shkid.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/02/respublica-shkid.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Defend Me Against ChatGPT</title><link href="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html" rel="alternate" type="text/html" title="Defend Me Against ChatGPT" /><published>2023-12-26T00:00:00+00:00</published><updated>2023-12-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt</id><content type="html" xml:base="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html"><![CDATA[<p>I do enjoy <a href="https://en.wikipedia.org/wiki/ChatGPT">ChatGPT</a> a lot. 
+I strongly advise avoiding them.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[This is a highly simplified description of a straightforward research workflow that I employ with my students in their research courses and diploma projects.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/02/respublica-shkid.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/02/respublica-shkid.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">I can’t speak</title><link href="https://www.yegor256.com/2024/01/03/not-able-to-speak.html" rel="alternate" type="text/html" title="I can’t speak" /><published>2024-01-03T00:00:00+00:00</published><updated>2024-01-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/01/03/not-able-to-speak</id><content type="html" xml:base="https://www.yegor256.com/2024/01/03/not-able-to-speak.html"><![CDATA[<p>Уже несколько лет мы проводим в России <a href="https://www.iccq.ru/">научную конференцию</a>, 
+приглашая в ее программный комитет ученых со всего мира. 
+Последние два года, 
+<a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BD%D0%BA%D1%86%D0%B8%D0%B8_%D0%B2_%D1%81%D0%B2%D1%8F%D0%B7%D0%B8_%D1%81%D0%BE_%D0%B2%D1%82%D0%BE%D1%80%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC_%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B8_%D0%BD%D0%B0_%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%83">по понятным причинам</a>, 
+отказов много, особенно от западноевропейских ученых. Однако,
+интересно вот что: если раньше отказы содержали субъективный негатив вроде 
+“I don’t want to participate in a Russian conference” (я <em>не хочу</em> участвовать в российской конференции), 
+то последнее время они все звучат примерно так: “I can’t speak at your event” (я <em>не могу</em> выступать у вас на мероприятии).
+При всем уважении к драматизму ситуации, мне все же интересно, понимают ли уважаемые ученые, 
+что те свободы, которыми так гордится европейская цивилизация, несовместимы с выражением “I can’t speak”,
+особенно из уст людей науки?</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="BBC" src="/images/2024/01/silence.jpg" longdesc="#114aeb82" /><figcaption id="114aeb82">BBC</figcaption></figure>
+
+<p>Последнее письмо я получил вчера:</p>
+
+<p><img src="/images/2024/01/letter.png" alt="letter" /></p>
+
+<p>И таких писем много, все в подобном стиле: я, мол, и рад бы, да не пускают,
+мешают, ограничивают и вовсе запрещают. Вот еще одно:</p>
+
+<p><img src="/images/2024/01/letter2.png" alt="letter" /></p>
+
+<p>И это пишут не торговцы подержанными автомобилями, которым не разрешают
+провозить через границу старые тойоты. Это пишут ученые, многие из которых помнят и 
+<a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D1%80%D0%BB%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%82%D0%B5%D0%BD%D0%B0">Берлинскую стену</a>,
+и 
+<a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B6%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D0%B5%D1%81%D0%BD%D0%B0">Пражскую весну</a>.
+Они понимают, что такое свобода слова. Не могут не понимать.</p>
+
+<p>Многие из них наверняка помнят цензуру времен <a href="https://ru.wikipedia.org/wiki/%D0%A5%D0%BE%D0%BB%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%B2%D0%BE%D0%B9%D0%BD%D0%B0">Холодной войны</a>, 
+когда каждую статью, перед тем как опубликовать
+на конференции в лагере идеологического противника, нужно было согласовывать с 
+<a href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BD%D0%B7%D1%83%D1%80%D0%B0_%D0%B2_%D0%A1%D0%A1%D0%A1%D0%A0">соответствующими органами</a>.
+Однако, даже во времена 
+<a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B4%D1%80%D0%BE%D0%BF%D0%BE%D0%B2,_%D0%AE%D1%80%D0%B8%D0%B9_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87">Андропова</a> 
+нельзя было представить, чтобы всем без разбора ученым было запрещено 
+публиковать свои статьи и выступать на всех конференциях в стране “врага”.</p>
+
+<p>Ученые всегда, даже во времена 
+<a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D0%B8%D0%B1%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B8%D0%B7%D0%B8%D1%81">Карибского кризиса</a>, 
+<a href="https://ru.wikipedia.org/wiki/%D0%90%D1%84%D0%B3%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D0%BE%D0%B9%D0%BD%D0%B0_(1979%E2%80%941989)">Афганского конфликта</a>, 
+<a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B2%D0%BE_%D0%92%D1%8C%D0%B5%D1%82%D0%BD%D0%B0%D0%BC%D0%B5">Вьетнамской</a> и 
+<a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D0%BE%D0%B9%D0%BD%D0%B0">Корейских</a> войн,
+были выше политики. Например, в 1977-м году в Новосибирске <a href="http://ershov.iis.nsk.su/ru/node/793556">состоялась</a> 
+конференция <a href="https://en.wikipedia.org/wiki/International_Federation_for_Information_Processing">IFIP</a> 
+посвященная “Построению качественного программного обеспечения”, на которой выступали (очно!)
+<a href="https://en.wikipedia.org/wiki/David_Parnas">David Parnas</a>,
+<a href="https://en.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a>,
+<a href="https://en.wikipedia.org/wiki/Tony_Hoare">Tony Hoare</a>,
+<a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger Dijkstra</a>
+и
+<a href="https://en.wikipedia.org/wiki/Peter_G._Neumann">Peter Neumann</a>.
+И все это на фоне куда более жесткого идеологического противостояния, чем сейчас.</p>
+
+<p>По всей видимости, в те времена люди у власти понимали, что наука и техника — это 
+наше общее, всего человечества, движение вперед, а пули и бомбы — назад.
+Видимо, они понимали, что изоляция ученых вредит сразу обеим сторонам — и тем, кого изолируют, 
+и тем, кто изолирует, автоматически оказываясь в изоляции. Очень жаль, что люди власти в современной Европе
+этого не понимают.</p>
+
+<p>Более же всего тревожит молчаливая покорность ученых, которые “can’t speak”,
+и которые наверняка понимают, к чему их и нас всех это приведет.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="свобода" /><category term="америка" /><category term="демократия" /><summary type="html"><![CDATA[То, что западноевропейским ученым запрещают выступать на конференциях в России безусловно огорчает, но более всего настораживает их на это реакция.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/01/silence.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/01/silence.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Defend Me Against ChatGPT</title><link href="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html" rel="alternate" type="text/html" title="Defend Me Against ChatGPT" /><published>2023-12-26T00:00:00+00:00</published><updated>2023-12-26T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt</id><content type="html" xml:base="https://www.yegor256.com/2023/12/26/defend-me-against-chatgpt.html"><![CDATA[<p>I do enjoy <a href="https://en.wikipedia.org/wiki/ChatGPT">ChatGPT</a> a lot. 
 The blog post you’re reading now was written by me and
 then given to ChatGPT to fix its grammar and polish the writing style. Until
 recently, since 2014, when I wrote my <a href="/2014/04/06/introduction.html">first blog post</a>, 
@@ -348,10 +589,17 @@ software companies: ACME Inc, Google, and
 Amazon. We asked them kindly to answer
 a short questionnaire of just 128 questions.
 115 people refused, which is 85%.
-The full list of those who refused, along with 
-their names and home addresses, 
-is published in Zenodo\footnote{
-  \url{https://zenodo.com/...}}.
+</code></pre></div></div>
+
+<p>Don’t forget to create a new GitHub repository with all the data that you collected
+during the research: CSV files, scripts, survey answers, and so on. When
+the repository is ready, publish it to Zenodo
+(<a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">this is how</a>),
+and then cite it:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The full list of those who refused, along with
+their names and home addresses,
+is published in Zenodo: \url{https://zenodo.com/...}.
 </code></pre></div></div>
 
 <p>In the <a href="/2023/10/11/method-of-research.html">Method</a> section, 
@@ -715,198 +963,4 @@ by <a href="https://soc.appstate.edu/faculty-staff/david-russell-phd">David Russ
 by <a href="https://scholar.google.com/citations?user=MR45-AwAAAAJ">Marek Kiczkowiak</a></li>
   <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6322175/">Formulation of Research Question</a>
 by Simmi K. Ratan</li>
-</ul>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[The essence of a research paper is the Method section, which may be easier to write if you follow a few simple principles.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/10/underground.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/10/underground.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Related Work: A Critical Taxonomy of Prior Art</title><link href="https://www.yegor256.com/2023/09/29/how-to-write-related-work-section.html" rel="alternate" type="text/html" title="Related Work: A Critical Taxonomy of Prior Art" /><published>2023-09-29T00:00:00+00:00</published><updated>2023-09-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/09/29/how-to-write-related-work-section</id><content type="html" xml:base="https://www.yegor256.com/2023/09/29/how-to-write-related-work-section.html"><![CDATA[<p>In almost any research paper, it is mandatory to have a section titled “Related Work”
-(<a href="https://english.stackexchange.com/questions/55898/related-work-or-related-works">or “Related Works”</a>), 
-where you refer to the results previously obtained by other
-authors or yourself. By including this section in your paper, you are not only paying
-respect to those who laid the foundation for your results, but also motivating and guiding
-your readers. Most of them may not be aware of existing studies or
-the importance of the problem you are solving. You must put these guys into
-<a href="/2018/10/16/dont-make-me-guess.html">context</a>.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Mean Streets (1973) by Martin Scorsese" src="/images/2023/09/mean-streets.jpg" longdesc="#39399260" /><figcaption id="39399260">Mean Streets (1973) by Martin Scorsese</figcaption></figure>
-
-<p>As far as I understand it, a well-crafted “Related Work” section should convey the following <em>message</em>:</p>
-
-<ul>
-  <li>Not only you believe that the problem is important,</li>
-  <li>Previous studies have either overlooked or failed to solve it, and</li>
-  <li>Your research is not a mere replication of someone else’s work.</li>
-</ul>
-
-<p>Before diving in, let’s clarify that the “Related Work” section 
-<a href="https://academia.stackexchange.com/questions/157842">is not</a> the place 
-to explain foundational concepts like 
-<a href="https://en.wikipedia.org/wiki/Deep_learning">Deep Learning</a> or 
-<a href="https://en.wikipedia.org/wiki/Dataflow_architecture">Dataflow Architecture</a>. 
-That’s what the “<a href="https://scientific-publishing.webshop.elsevier.com/manuscript-preparation/what-background-study-and-how-should-it-be-written/">Background</a>” section is for. 
-In “Related Work,” it’s assumed that the reader is already familiar with the subject matter.</p>
-
-<p>To effectively communicate the three-fold message, create a <em>taxonomy</em> of existing studies. 
-In simple terms, classify them. For instance, if your paper focuses on a new type 
-of cat food designed to extend feline longevity and improve happiness, 
-your “Related Work” section might look like this:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>There are three categories of research related to our 
-study: cat food, cat happiness, and cat lifespan.
-
-Earlier studies [2, 13, 8] have suggested that 
-cat food containing meat [21], potato [11], and 
-fish [7] results in complaints in only 7.5% of all 
-cases. However, no experiments have been conducted 
-with food made from fruits.
-
-The happiness of cats and other pets has been 
-studied by Johnson [22] and Dickson [17]. They 
-identified a strong correlation between the mood 
-of a pet's owner and the mood of the pet. However, 
-they did not investigate the effect of food on cat 
-happiness.
-
-It has been observed [15, 18] that cats live 
-longer when they consume food with fewer carbohydrates 
-and more protein. However, these experiments were 
-conducted with cats living in only one city, which
-limits the applicability of these studies.
-
-To the best of our knowledge, the method of feeding 
-cats with fruits to increase their happiness and 
-prolong their lives has not been studied yet.
-</code></pre></div></div>
-
-<p>Note the use of the word “<em>however</em>” in the last sentence of each paragraph.
-It highlights gaps in existing research that your study aims to fill. 
-The final paragraph confirms your awareness that your research is unique. 
-While you might be mistaken, explicitly stating your unawareness would make it an honest mistake.</p>
-
-<p>In this toy example, we’ve categorized all relevant prior work into 
-three groups. We’ve cited key papers in each category and summarized 
-their findings relevant to our study. We’ve also highlighted areas 
-that our research will address, emphasizing its novelty.</p>
-
-<p>When gathering references for the “Related Work” section, you’ll likely 
-encounter many papers worth mentioning. How do you decide which to cite? 
-Consider the following factors:</p>
-
-<ul>
-  <li>Relevance: The closer it is to your topic, the better.</li>
-  <li>Citations: Opt for papers that are cited more frequently.</li>
-  <li>Venue: Consult <a href="https://www.scimagojr.com/journalrank.php">journal rankings</a> and <a href="http://portal.core.edu.au/conf-ranks/">conference rankings</a> to choose the most reputable sources.</li>
-</ul>
-
-<p>Lastly, <a href="https://scholar.google.com">Google Scholar</a> is the best place
-for finding prior work. If you can’t access a PDF version of a paper, try the Telegram bot: 
-<a href="https://t.me/scihubbot">@scihubbot</a>.</p>
-
-<hr />
-
-<p>These articles and books might also be helpful:</p>
-
-<ul>
-  <li><a href="https://www.youtube.com/watch?v=tBud5yewkkc&amp;t=19s">How to write a Related Work…</a> (video) 
-by <a href="https://scholar.google.com/citations?user=cZ5pY9wAAAAJ">Simone Silvestrini</a></li>
-  <li><a href="https://www.youtube.com/watch?v=rk_jgtdJOD0">Literature Review: Step by Step…</a> (video)
-by <a href="https://scholar.google.com/citations?user=W03REUoAAAAJ">David Stuckler</a></li>
-  <li><a href="http://slowsearching.blogspot.com/2014/11/a-formula-for-academic-papers-related.html">A Formula for Academic Papers: Related Work</a> 
-by <a href="https://scholar.google.com/citations?user=F5Ik84MAAAAJ">Jaime Teevan</a></li>
-  <li><a href="http://lucalongo.eu/howtowritearesearchpaper.html">How to write a research paper in science</a> 
-by <a href="https://scholar.google.com/citations?user=oBqRuY8AAAAJ">Luca Longo</a></li>
-  <li><a href="https://sites.umiacs.umd.edu/elm/2019/02/22/writing-the-literature-review/">Writing the Literature Review</a>
-by <a href="https://scholar.google.com/citations?user=LoQXe24AAAAJ">Niklas Elmqvist</a></li>
-  <li><a href="http://steveharoz.com/blog/2015/related-work-section/">Why I Don’t Write a “Related Work” Section</a>
-by <a href="https://scholar.google.com/citations?user=OcKUn3gAAAAJ">Steve Haroz</a></li>
-  <li><a href="https://dl.acm.org/doi/10.1145/165854.165934">How to get a paper accepted at OOPSLA</a> 
-by Kent Beck et al.</li>
-  <li><a href="https://lemire.me/blog/rules-to-write-a-good-research-paper/">Write good papers</a>
-by <a href="https://scholar.google.com/citations?user=q1ja-G8AAAAJ">Daniel Lemire</a></li>
-  <li><a href="https://cs.dartmouth.edu/~wjarosz/writing.md.html">Common mistakes in technical writing</a>
-by <a href="https://scholar.google.com/citations?user=vrjL9p0AAAAJ">Wojciech Jarosz</a></li>
-  <li><a href="https://spie.org/samples/9781510619142.pdf">How to Write a Good Scientific Paper</a>
-by <a href="https://scholar.google.com/citations?hl=en&amp;user=kMsXV0oAAAAJ">Chris A. Mack</a></li>
-  <li><a href="https://link.springer.com/book/10.1007/978-1-4471-6639-9">Writing for Computer Science</a> 
-by <a href="https://scholar.google.com/citations?hl=en&amp;user=uEHvqE8AAAAJ">Justin Zobel</a></li>
-</ul>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[In every reseach paper, the "Related Work" section is one of the most important and probably the most difficult to write.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/09/mean-streets.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/09/mean-streets.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Five Ingredients of Tech Career</title><link href="https://www.yegor256.com/2023/09/19/five-ingredients-career.html" rel="alternate" type="text/html" title="Five Ingredients of Tech Career" /><published>2023-09-19T00:00:00+00:00</published><updated>2023-09-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/09/19/five-ingredients-career</id><content type="html" xml:base="https://www.yegor256.com/2023/09/19/five-ingredients-career.html"><![CDATA[<p>A friend of mine recently asked me what five things he should do in order to
-grow his technical career in a big company. He is not interested in being a big
-manager, or a CEO. Rather, he wants to be a software expert, an architect, an
-owner of a technology, and eventually a “Fellow.” I’m not sure I was qualified
-to give such advice, but I did anyway. This is what I told him. Maybe this will
-also work for you.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="8½ (1963) by Federico Fellini" src="/images/2023/09/eight-and-half.jpg" longdesc="#39678366" /><figcaption id="39678366">8½ (1963) by Federico Fellini</figcaption></figure>
-
-<h2 id="boredom">Boredom</h2>
-
-<p>Stay focused on one problem for many years. I literally mean
-a “problem”—something that bothers people now but will stop bothering them
-when you solve it. Ideally, first and foremost, it should bother you
-personally. If you can’t specify in one sentence what the meaning of your
-office life is—you don’t have a problem to solve. Find one.</p>
-
-<p>A strong multi-year focus on one particular problem will most likely lead to a
-rather boring office life. People around you will be switching projects,
-accepting offers from crypto-startups, changing technologies, programming
-languages, and teams. You, unlike them, will remain focused on one thing for
-years and years. Imagine how boring it will look to them and to yourself. So be
-it. Accept it.</p>
-
-<p>Moreover, if you don’t see significant results (and you won’t for years!),
-you’ll be tempted to switch to something else, where the outcomes seem more
-promising. Don’t.</p>
-
-<p>Even when you change companies, remain loyal to the problem you chose as “yours”
-years ago. Don’t betray it. It’s yours. Your lifetime mission is to solve it.
-Who cares which company you are in? A company is just a temporary sponsor of
-your mission.</p>
-
-<h2 id="enemies">Enemies</h2>
-
-<p>The problem must be as monumental as finding a cure for cancer. Ensure it’s
-bigger than your team, your company, and even your lifespan. The
-word “ambitious” certainly fits: it must be an ambitious idea. How do you know
-it’s big and ambitious enough? Count your enemies. If you have many of
-them—which could include your bosses, colleagues, spouse, and, of course,
-your haters on Twitter—you have a solid case. Conversely, if everyone loves
-your idea and supports you, your challenge might not be big enough.</p>
-
-<p>Think about it: If it is big enough, many people have already tried to solve it.
-They failed. Naturally, they would love to see you fail too. If you don’t, it
-could dent their self-respect. It’s basic psychology.</p>
-
-<h2 id="patrons">Patrons</h2>
-
-<p>The more enemies, the better! However, you should have a few allies. I’m
-referring to high-level technical people, like a CTO, VP of Technology, Chief
-Architect, or Fellow. They might not be technically competent in your
-particular domain, but that doesn’t matter. Strive to establish an information
-channel between you and them, and periodically share updates. Keep them
-informed about your progress and occasionally seek their advice. They will
-shield you from most of the attacks your enemies might launch.</p>
-
-<h2 id="friends">Friends</h2>
-
-<p>To clarify, it’s impossible to ascend in a human hierarchy on your own, no
-matter how bright you are. You need a cadre of supporters within the
-company—individuals who back you unconditionally. A few are sufficient. They
-must be personally loyal to you. If you leave the company, they should follow
-you without hesitation.</p>
-
-<p>It would be ideal for all of these friends to be part of your team. However,
-that’s not always feasible. Similarly, it would be wonderful if all these
-friends were technically competent, but that’s not always the case. In
-contrast, loyalty doesn’t often coincide with expertise. Having a friend who is
-both loyal and intelligent is a luxury.</p>
-
-<h2 id="students">Students</h2>
-
-<p>Finally, maintain a connection with the younger generation that’s succeeding
-us—students. Engage with them, learn from them, and ensure you understand
-their needs and aspirations. They represent the industry’s future. If you treat
-them right, they will work for you with enthusiasm unmatched by any other
-employee.</p>
-
-<p>Strengthening ties with the academic world will unquestionably reinforce your
-position within your company.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html"><![CDATA[What is the recipe of success in a big technical organization? Aside from the usual butt-kissing, what may guarantee career growth?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/09/eight-and-half.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/09/eight-and-half.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</ul>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[The essence of a research paper is the Method section, which may be easier to write if you follow a few simple principles.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/10/underground.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/10/underground.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
