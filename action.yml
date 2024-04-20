@@ -28,5 +28,10 @@ runs:
   args:
     - '--login'
     - '-c'
-    - 'rvm default 3.2.2 && source /usr/local/rvm/scripts/rvm && bundle lock && bundle update && bundle exec rake'
+    - |
+      rvm default 3.2.2
+      && source /usr/local/rvm/scripts/rvm
+      && bundle lock
+      && bundle update
+      && bundle exec rake
 
