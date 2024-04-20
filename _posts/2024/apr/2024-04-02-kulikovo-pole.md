@@ -15,6 +15,11 @@ keywords:
 image: /images/2024/04/peresvet-i-chelubej.jpg
 jb_picture:
   caption: Поединок Пересвета с Челубеем, Михаил Авилов
+style: |
+  @import("https://slavonic.github.io/css/fonts.css");
+  .ponomar {
+    font-family: 'Ponomar Unicode';
+  }
 ---
 
 Я не историк и даже в школе историю не любил. Не любил, но верил,
