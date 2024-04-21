@@ -59,6 +59,7 @@ end
 def all_html
   Dir['_site/**/*.html']
     .reject { |f| f.end_with?('.amp.html') }
+    .reject { |f| f.start_with?('_site/en/') }
     .reject { |f| f.start_with?('_site/zh/') }
     .reject { |f| f.start_with?('_site/ru/') }
 end
@@ -368,9 +369,6 @@ task orphans: [:build] do
     .reject { |a| a.end_with? '.amp.html' }
     .reject { |a| a.include? '2009/03/04/pdd' }
     .reject { |a| a.include? '2017/05/02/unl' }
-    .reject { |a| a.start_with? "#{prefix}en/" }
-    .reject { |a| a.start_with? "#{prefix}ru/" }
-    .reject { |a| a.start_with? "#{prefix}zh/" }
     .group_by(&:itself)
     .each { |k, v| counts[k] = v.length }
   orphans = 0
