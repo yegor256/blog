@@ -29,7 +29,8 @@ importantly---why.
 
 You start the section with a paragraph where you state the main _objective_ of the
 research, then break it down into a few 
-[_research questions_](https://en.wikipedia.org/wiki/Research_question).
+[_research questions_](https://en.wikipedia.org/wiki/Research_question) (RQs),
+which are question-mark-ending sentences.
 
 Then, you explain the _procedures_ of the method (strictly one procedure per paragraph). 
 In each step, you either collected, combined, or generated data. First, you explain what
