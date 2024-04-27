@@ -63,13 +63,13 @@ that 15 is enough because this is a toy research.
 
 Second, we excluded 5 cats: those who were 
 younger than one year old or older than 8 years 
-old. This was motivated by RQ2; we believe that 
+old. This was motivated by RQ2; we decided that
 young and old cats may have difficulty cracking 
 the hard cover of a marakuja.
 
 Third, we gave our cats all three fruits mentioned 
 in RQ2, left them for an hour, and observed their 
-behavior. We believe one hour is enough for a hungry
+behavior. One hour was enough for a hungry
 cat to make a decision.
 
 All cat owners agreed to have their cats 
