@@ -92,6 +92,7 @@ if (typeof($) != 'undefined') {
           url: 'https://vk.com/share.php?act=count&url=' + eurl
         });
       }
+      /*
       if ($('.count-hackernews').length) {
         $.ajax({
           dataType: 'json',
@@ -111,6 +112,7 @@ if (typeof($) != 'undefined') {
           }
         });
       }
+      */
     }
     $('h2').each(
       function (idx, element) {
