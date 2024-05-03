@@ -211,10 +211,6 @@ layout: compress
     </div>
     <script src="//code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="/js/all.js?{{ site.data['hash'] }}"></script>
-    {% if jekyll.environment == "production" %}
-      <script>var disqus_shortname = 'yegor256';</script>
-      <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>
-    {% endif %}
     {% if page.script %}
       <script>
         {{ page.script }}

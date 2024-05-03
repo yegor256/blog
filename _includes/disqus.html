@@ -1,3 +1,8 @@
+{% if jekyll.environment == "production" %}
+  <script>var disqus_shortname = '{{ include.shortname }}';</script>
+  <script id="dsq-count-scr" src="//{{ include.shortname }}.disqus.com/count.js" async="async"></script>
+{% endif %}
+
 <div class="disqus" role="complementary" aria-hidden="true">
   <p class="disqus_hint" >
     Please, use <a href="https://help.disqus.com/commenting/what-html-tags-are-allowed-within-comments">syntax highlighting</a>
