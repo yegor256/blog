@@ -113,3 +113,7 @@ Sort by:
 {{ site.posts | yb_tagged_list }}
 </div>
 
+{% if jekyll.environment == "production" %}
+  <script>var disqus_shortname = 'yegor256';</script>
+  <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>
+{% endif %}
