@@ -118,40 +118,10 @@ layout: default
     </main>
   </div>
 
-  <div class="disqus" role="complementary">
-    <div id="disqus_thread" class="disqus-thread"></div>
-    <script>
-      var disqus_config = function () {
-        this.page.url = document.location.href.split('?')[0].split('#')[0];
-        this.page.identifier = this.page.url;
-      };
-      (function() {
-        var d = document, s = d.createElement('script');
-        s.src = '//yegor256-com.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>
-      <div>
-        <p class="red">
-          JavaScript is disabled in your browser,
-          that's why you can't see comments under this post.
-        </p>
-      </div>
-    </noscript>
-  </div>
+  {% include related.html %}
 
-  <div class="wrapper">
-    <footer class="footer">
-      <p>
-        &copy;
-        <span itemscope="" itemprop="copyrightHolder" itemtype="http://schema.org/Person">
-          <span itemprop="name">Егор Бугаенко</span>
-        </span>,
-        2014-<span itemprop="copyrightYear">2023</span>
-      </p>
-    </footer>
-  </div>
+  {% include disqus.html shortname="ru-yegor256-com" %}
+
+  {% include footer.html %}
 
 </section>
