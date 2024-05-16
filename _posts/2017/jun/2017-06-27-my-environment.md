@@ -28,17 +28,14 @@ for someone.
 
 {% jb_picture_body %}
 
+The page was most recently updated on the 16th of May, 2024.
+
 <img src="/images/2017/06/env-macbook.jpg" class="env-ico" alt="icon"/><br/>
-[MacBook Pro](https://www.apple.com/macbook-pro/)
-Retina, 15-inch, [Late 2013](https://support.apple.com/kb/sp690?locale=en_US),
-2.3GHz/16Gb/512Gb ($2,900) with MacOS Sierra. I bought it over
-three years ago and don't want to replace with a new one, simply
-because [rumors are](https://blog.devteam.space/new-macbook-pro-is-not-a-laptop-for-developers-anymore-d0d4b1b8b7de)
-its quality is very low. My smartphone is
-[iPhone&nbsp;6s](https://www.apple.com/shop/buy-iphone/iphone6s).
-For video and podcast recording I'm using [Zoom&nbsp;H6](https://amzn.to/2tjPebw)
+[MacBook M2 Pro](https://www.apple.com/macbook-pro/)
+16-inch, 32Gb/2Tb (~$4,000). My smartphone is iPhone&nbsp;14&nbsp;Max.
+For video and podcast recording I'm using Zoom&nbsp;H1
 together with
-[Movo LV4-O2](https://amzn.to/2tkdA4G) microphone,
+Cannon M50 and R10 cameras,
 [Sennheiser HD 380 PRO](https://amzn.to/2ienJf9) headphones, and
 [SLIK Sprint 150](https://amzn.to/2xy2ivL) tripod.
 
@@ -136,11 +133,13 @@ for post-processing of [Shift-M](/shift-m.html) episodes.
 for long-term planning. I put my long-term plans there and open
 them once a month. I definitely should use this software more frequently.
 
+<!--
 <img src="/images/2017/06/env-tower.jpg" class="env-ico" alt="icon"/><br/>
 [Tower](https://www.git-tower.com/) ($79)
 for visual [Git](https://git-scm.com/) manipulations. Even though I'm using Git
 from the command line only, this tool helps me time to time when I need
 to go through the history and find out where exactly I broke something.
+-->
 
 <img src="/images/2017/06/env-transmit.jpg" class="env-ico" alt="icon"/><br/>
 [Transmit](https://panic.com/transmit/) ($34)
@@ -150,6 +149,7 @@ for FTP and AWS S3 file management.
 [OBS Studio](https://obsproject.com/) (free)
 for webinars and video recording.
 
+<!--
 <img src="/images/2017/06/env-mtorrent.jpg" class="env-ico" alt="icon"/><br/>
 [µTorrent](https://www.utorrent.com/) (free)
 for stealing movies. I find them mostly at
@@ -158,6 +158,7 @@ for stealing movies. I find them mostly at
 I do realize that stealing is a bad thing and I'm actually strongly
 against piracy, but most movies are either too expensive or not
 available for purchase.
+--->
 
 <img src="/images/2017/06/env-vlc.jpg" class="env-ico" alt="icon"/><br/>
 [VLC](https://www.videolan.org/vlc/index.html) (free)
@@ -197,11 +198,13 @@ everything that is already "history" to my personal
 <img src="/images/2017/06/env-skype.jpg" class="env-ico" alt="icon"/>
 <img src="/images/2017/06/env-slack.jpg" class="env-ico" alt="icon"/>
 <img src="/images/2017/06/env-colloquy.jpg" class="env-ico" alt="icon"/><br/>
-[Telegram](https://telegram.org/),
-[Viber](https://www.viber.com/en/),
+[Telegram](https://telegram.org/)
+<!-- [Viber](https://www.viber.com/en/), -->
+and
 [WhatsApp](https://www.whatsapp.com/),
-[Messenger](https://www.messenger.com/), and
-[Skype](https://www.skype.com/en/) (all free, in order of preference)
+<!-- [Messenger](https://www.messenger.com/), -->
+<!-- [Skype](https://www.skype.com/en/) -->
+(all free, in order of preference)
 for P2P messaging.
 [Slack](https://slack.com/) for business messaging sometimes.
 [Colloquy](http://colloquy.info/) for IRC messaging when I need it.
