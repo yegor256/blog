@@ -46,7 +46,7 @@ in [Innopolis University](https://innopolis.university/) (Kazan, Russia)<br/>
 Sep 2023<br/>
 **Software Quality Metrics**<br/>
 in [HSE University](https://www.hse.ru/en/) (Moscow, Russia)<br/>
-24 lectures: in progress...
+24 lectures:
 [slides](https://github.com/yegor256/sqm),
 [videos](https://www.youtube.com/playlist?list=PLaIsQH4uc08xyXRhhYPHh-Yam2kEwNaLl)
 {: .lecture}
