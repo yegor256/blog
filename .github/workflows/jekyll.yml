@@ -31,5 +31,5 @@ jobs:
   jekyll:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      - uses: actions/checkout@b80ff79f1755d06ba70441c368a6fe801f5f3a62
       - uses: yegor256/blog@master
