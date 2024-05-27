@@ -10,6 +10,7 @@ abnormal
 about
 above
 above-average
+above-the-market
 absence
 absent
 absolute
@@ -38,6 +39,7 @@ accidental
 accidentally
 accompanied
 accomplish
+accordance
 according
 accordingly
 account
@@ -150,7 +152,10 @@ advice
 advise
 adviser
 advocate
+advocates
 adwords
+AE
+AF
 affairs
 affect
 affected
@@ -518,6 +523,7 @@ aspell
 aspirations
 ass
 assemble
+assembled
 assembling
 assembly
 assert
@@ -536,6 +542,7 @@ assigned
 assignee
 assigning
 assignment
+assignments
 assigns
 assist
 assistance
@@ -556,6 +563,7 @@ assurance
 assure
 assured
 AST
+astonishing
 ASTs
 astute
 asylum
@@ -612,6 +620,7 @@ audience
 audio
 audit
 auditor
+auditors
 augmented
 august
 australia
@@ -963,6 +972,7 @@ booming
 boost
 boosted
 booster
+boosting
 boosts
 boot
 bootstrap
@@ -1031,6 +1041,7 @@ brexit
 brian
 bribe
 brick-and-mortar
+bricks
 bridge
 brief
 briefly
@@ -1097,6 +1108,7 @@ built
 built-in
 bukharov
 bulb
+bulding
 bullet
 bullet-fast
 bullshit
@@ -1182,6 +1194,7 @@ camera-ready
 cameras
 campaign
 campaigns
+campuses
 can
 can't
 cancel
@@ -1195,6 +1208,7 @@ candidate
 candidate's
 candidates
 cannes
+cannon
 cannot
 canvas
 cap
@@ -1280,6 +1294,7 @@ celebrate
 celebrating
 celebrations
 cell
+cement
 cent
 center
 centered
@@ -1480,6 +1495,7 @@ client
 client's
 client-side
 clients
+clients'
 cliff
 climate
 clipper
@@ -1928,6 +1944,7 @@ conventions
 conversation
 conversations
 conversely
+conversion
 convert
 converted
 converter
@@ -1994,6 +2011,7 @@ cost
 cost-efficient
 cost-of-shipment
 costs
+costs-vs-results
 could
 couldn't
 count
@@ -2031,6 +2049,7 @@ covered
 covering
 coverity
 covers
+coveted
 COVID-
 cow
 cowards
@@ -2099,6 +2118,7 @@ crowd
 crowded
 crucial
 crucially
+crucify
 CRUD
 cruel
 cruisecontrol
@@ -2295,6 +2315,7 @@ decrypting
 dedicate
 dedicated
 deduce
+deducted
 deem
 deep
 deeper
@@ -2472,6 +2493,7 @@ devop
 devops
 devopsdays
 devoxx
+DEVs
 dhh
 DI
 diagnose
@@ -2628,6 +2650,8 @@ dissatisfaction
 dissatisfied
 disservice
 distance
+distant
+distantly
 distasteful
 distilled
 distinguish
@@ -2891,10 +2915,12 @@ einstein
 einstein's
 eisenberg
 either
+eject
 EJU
 el
 elaborate
 elastic
+election
 electric
 electrician
 electricity
@@ -3048,6 +3074,7 @@ entertaining
 enthusiasm
 enthusiastic
 enthusiastically
+enthusiasts
 entire
 entirely
 entirety
@@ -3079,6 +3106,7 @@ eo-runtime
 EO-SOURCES
 EOapp
 eolang
+EPAM
 epidemic
 episode
 episodes
@@ -3594,6 +3622,8 @@ fooutils
 for
 for-each
 forbid
+forbidding
+forbids
 force
 force-based
 forced
@@ -3664,6 +3694,7 @@ founder
 founder's
 founders
 founders'
+founding
 four
 four-page
 fourteen
@@ -3693,6 +3724,7 @@ freeing
 freelance
 freelancer
 freelancers
+freelancing
 freely
 freeman
 freemarker
@@ -3734,6 +3766,7 @@ full-hearted
 full-purpose
 full-speed
 full-time
+full-timers
 fully
 fun
 func
@@ -3759,9 +3792,11 @@ fuss
 future
 fuzzy
 gain
+gained
 gains
 gallon
 gallons
+gallup
 gamblers
 gambling
 game
@@ -3844,7 +3879,6 @@ getters-and-setters
 getting
 gettitle
 gh-pages
-GHz
 giancarlo
 giang
 giant
@@ -3910,6 +3944,7 @@ good-looking-graphics
 good-natured
 goodness
 goodreads
+goof
 google
 google's
 google-killer
@@ -3968,6 +4003,7 @@ greetings
 GreetingsITCase
 greetingstest
 grep
+grew
 grids
 griggs
 grocery
@@ -4255,6 +4291,7 @@ hooligans
 hope
 hopefully
 hoping
+horizon
 horizontal
 horizontally
 horrible
@@ -5061,6 +5098,7 @@ kings
 kirkman
 kiss
 kissed
+kit
 kitchen
 kite
 kitties
@@ -5126,6 +5164,7 @@ lamport
 land
 landed
 lands
+landscape
 lane
 lanes
 lang
@@ -5189,6 +5228,7 @@ leaning
 learn
 learned
 learning
+learnings
 learns
 lease
 least
@@ -5314,6 +5354,7 @@ live
 lived
 lives
 living
+ll
 ller
 LLM
 load
@@ -5395,6 +5436,7 @@ loving
 low
 low-caliber
 low-cohesion
+low-cost
 low-level
 low-quality
 lower
@@ -5415,8 +5457,8 @@ lunch
 lunches
 lurk
 lutz
+luxoft
 luxury
-LV
 lying
 lyrics
 m'aimes
@@ -5579,6 +5621,7 @@ matthew
 mature
 matures
 maturity
+mautz
 maven
 maven-compiler-plugin
 maven-dependency-plugin
@@ -5730,18 +5773,20 @@ micro-refactorings
 micro-step
 micro-tasking
 micro-tasks
+microbudget
 microbudgeting
 micromanage
 micromanagement
 micromanager
 micromanages
-microphone
 microphones
 microscope
 microservice
 microservices
 microsoft
 microsystems
+microtask
+microtaskers
 microtasking
 microtasks
 microvesting
@@ -5763,6 +5808,7 @@ milestone-based
 milestones
 military
 military-style
+millennial
 million
 millionaire
 millionaires
@@ -5798,6 +5844,7 @@ mirrors
 misaligned
 misalignment
 misanthropic
+misbalance
 miscellaneous
 mischling
 misconception
@@ -5889,6 +5936,7 @@ monitors
 monkey
 monkey-feeding
 monkeys
+mono-tech
 monolithic
 monopoly
 monorepo
@@ -5935,11 +5983,11 @@ mouth
 mouths
 move
 moved
+movers
 moves
 movie
 movies
 moving
-movo
 mph
 mr
 mr-barry
@@ -5959,6 +6007,7 @@ mulcahy
 muller
 multi-billion-dollar
 multi-column
+multi-dimensional
 multi-factor
 multi-million-dollar
 multi-national
@@ -6309,6 +6358,7 @@ offline
 offline-qr-code
 offset
 offshore
+offshoring
 often
 oh
 oil
@@ -6323,6 +6373,7 @@ olive
 ology
 olympic
 on
+on-boarding
 on-fly
 on-premise
 on-site
@@ -6473,6 +6524,7 @@ outsource
 outsourced
 outsourcer
 outsourcers
+outsources
 outsourcing
 outstaffers
 outstaffing
@@ -6503,6 +6555,7 @@ overlooked
 overly
 overly-paid
 overly-sugared
+overplay
 overrate
 overridden
 override
@@ -6626,6 +6679,7 @@ patch
 patches
 patching
 patent
+patent-pending
 patents
 path
 paths
@@ -6643,7 +6697,11 @@ paulo
 pause
 pauses
 pay
+pay-by-hour
+pay-by-result
+pay-by-time
 pay-per-data
+pay-per-result
 pay-rate
 payable
 payback
@@ -6653,6 +6711,7 @@ paying
 payment
 payments
 payout
+payouts
 paypal
 payroll
 pays
@@ -6676,6 +6735,7 @@ peet's
 peitek
 pen
 penalize
+penalizes
 penalties
 penalty
 penetrate
@@ -7152,6 +7212,7 @@ product's
 productincatalog
 production
 productive
+productively
 productivity
 products
 prof
@@ -7301,6 +7362,7 @@ punishments
 puppies
 purchase
 purchased
+purchases
 pure
 purely
 purest
@@ -7429,11 +7491,13 @@ RDF
 rdquo
 RDS
 re
+re-charge
 re-define
 re-deploy
 re-design
 re-designed
 re-do
+re-estimate
 re-estimated
 re-format
 re-iterate
@@ -7579,8 +7643,11 @@ refreshment
 refrigerator
 refund
 refunds
+refusal
+refusals
 refuse
 refused
+refusing
 regard
 regarding
 regardless
@@ -7759,7 +7826,9 @@ reserved
 reserves
 reservoir
 reset
+reshaping
 reside
+residual
 resignation
 resist
 resistance
@@ -7818,7 +7887,6 @@ retaining
 retention
 rethink
 rethrow
-retina
 retire
 retired
 retirement
@@ -7869,6 +7937,7 @@ rewritten
 rex
 ReXSL
 reynolds
+rfp
 RGBColor
 RHVnNqB
 rich
@@ -7901,6 +7970,7 @@ ritchie
 ritual
 road
 road-side
+roadblock
 roadmap
 roads
 rob
@@ -7932,8 +8002,10 @@ roommate
 rooms
 root
 ror
+rose
 rotate
 rotating
+rotations
 roughly
 round
 route
@@ -8248,6 +8320,7 @@ sensitive
 sent
 sentence
 sentences
+sentiments
 sentry
 sep
 separate
@@ -8406,7 +8479,6 @@ side
 side-effect
 sides
 sidewalk
-sierra
 sigh
 sight
 sign
@@ -8514,6 +8586,7 @@ skyrocket
 skyrocketing
 SLA
 slack
+slade
 SLAs
 slashes
 slave
@@ -8954,6 +9027,7 @@ styling
 stylistic
 sub
 sub-module
+sub-projects
 sub-tasks
 sub-team
 subconsciously
@@ -9172,6 +9246,7 @@ target
 TAs
 task
 tasked
+tasking
 tasks
 tasneem
 taste
@@ -9183,6 +9258,7 @@ tax
 taxes
 taxi
 taxonomy
+tb
 TBD
 TBD-s
 TC
@@ -9221,6 +9297,7 @@ tee
 teeinput
 teeinputstream
 teevan
+telecommuters
 telecommuting
 telegram
 television
@@ -9539,6 +9616,7 @@ transformations
 transformed
 transformers
 transforms
+transition
 translate
 translated
 translates
@@ -9596,6 +9674,7 @@ troublemaker
 troublemakers
 troubles
 troubling
+truck
 true
 true-OOP
 truly
@@ -9812,6 +9891,7 @@ unreliability
 unreliable
 unresolved
 unsafe
+unsatisfied
 unsolvable
 unspile
 unstable
@@ -9876,6 +9956,7 @@ useless
 user
 user's
 user-agent
+user-facing
 user-targeted
 users
 uses
@@ -9931,6 +10012,7 @@ variations
 varies
 variety
 various
+vary
 vast
 vastly
 vatavuk
@@ -9984,7 +10066,6 @@ vet
 vexor
 via
 viable
-viber
 vice
 victim
 victimize
@@ -10228,6 +10309,7 @@ winner
 winners
 winning
 wins
+wipro
 wired
 wiring
 wisdom
@@ -10271,6 +10353,7 @@ worker
 workers
 workflow
 working
+workload
 workplace
 workplaces
 works
@@ -10311,6 +10394,7 @@ ws
 ws-
 WSDL
 WTF
+WTS
 wulf
 WWII
 www
@@ -10397,6 +10481,7 @@ yourkit
 yours
 yourself
 youtube
+youtube-
 ypshenychka
 yukl
 yummy

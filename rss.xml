@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2024-05-03T02:28:48+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Куликовы поля</title><link href="https://www.yegor256.com/2024/04/02/kulikovo-pole.html" rel="alternate" type="text/html" title="Куликовы поля" /><published>2024-04-02T00:00:00+00:00</published><updated>2024-04-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/04/02/kulikovo-pole</id><content type="html" xml:base="https://www.yegor256.com/2024/04/02/kulikovo-pole.html"><![CDATA[<p>Я не историк и даже в школе историю не любил. Не любил, но верил,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2024-05-27T01:17:31+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Онлайн хулиганы</title><link href="https://www.yegor256.com/2024/05/27/freedom-of-speech-vs-intelligence.html" rel="alternate" type="text/html" title="Онлайн хулиганы" /><published>2024-05-27T00:00:00+00:00</published><updated>2024-05-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/05/27/freedom-of-speech-vs-intelligence</id><content type="html" xml:base="https://www.yegor256.com/2024/05/27/freedom-of-speech-vs-intelligence.html"><![CDATA[<p>А знаете, какое самое популярное по числу просмотров видео на YouTube?
+Вот <a href="https://www.youtube.com/watch?v=XqZsoesa55w">это</a>.
+14 миллиардов просмотров за менее чем семь лет. И таких видео
+<a href="https://en.wikipedia.org/wiki/List_of_most-liked_YouTube_videos">много</a>. Задаюсь
+вопросом, о чем эта песня? Чему она учит? Какой вообще в ней смысл? С моей
+точки зрения, сформированной когда-то давно сказками
+<a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%BB%D0%BA%D0%BE%D0%B2,_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87">Сергея Михалкова</a>,
+<a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D1%88%D0%B0%D0%BA,_%D0%A1%D0%B0%D0%BC%D1%83%D0%B8%D0%BB_%D0%AF%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2%D0%B8%D1%87">Самуила Маршака</a> и
+<a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D1%82%D0%BE,_%D0%90%D0%B3%D0%BD%D0%B8%D1%8F_%D0%9B%D1%8C%D0%B2%D0%BE%D0%B2%D0%BD%D0%B0">Агнии Барто</a>, в этой песне смысла нет.
+Но ведь он должен быть, раз её посмотрели и оценили по достоинству сотни
+миллионов родителей и детей! Нет, не должен. Всё просто: что сейчас нравится миллионам, то и
+является эталоном качества. Но ведь так было не всегда.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Babyshark by Pinkfong" src="/images/2024/05/babyshark.jpg" longdesc="#4e17762b" /><figcaption id="4e17762b">Babyshark by Pinkfong</figcaption></figure>
+
+<p>Ещё несколько десятков лет назад, ни интернета, ни YouTube не существовало, а
+все средства массовой информации имели редакторов или даже редакционные
+коллективы, которые решали, что публиковать и доносить до зрителя, а что сразу
+в корзину. Более того, ещё раньше существовали страны, в которых на
+государственном уровне свирепствовала <a href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BD%D0%B7%D1%83%D1%80%D0%B0">цензура</a>, которая не только в
+корзину отправляла негодный материал, но и автора в лагеря.</p>
+
+<p>К счастью, скажете вы, те времена прошли. Наступило не просто время торжества
+свободы слова, но и время почти абсолютной бесполезности редакторов и цензоров.
+Несколько лет назад я испытал это на себе.
+<a href="/2018/11/20/journalism.html">Дело было так</a>. Я написал техническую
+<a href="/2018/03/06/speed-vs-quality.html">статью</a>
+и отправил её в одно онлайн-издание. Мне отказали, объяснив почему. Я
+отправил в другое издание, где мне тоже отказали, при этом назвав причину,
+которая полностью противоречила первому отказу. Редакторы советовали исправить
+статью в противоположных направлениях. В итоге я опубликовал статью у себя на
+блоге, выступил с ней на <a href="https://youtu.be/55mwAbuDrV8">конференции</a>,
+и получил куда больше просмотров
+и лайков, чем, наверное, мог бы собрать в одном из этих уважаемых изданий.</p>
+
+<p>Полагаю, что если бы подобные события происходили на 50 лет раньше,
+я бы не смог опубликовать свои мысли, не удовлетворив строгих требований одного из редакторов. Меня бы
+ограничила цензура. Более того, если бы я опубликовал свою статью
+самостоятельно методом так называемого <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BC%D0%B8%D0%B7%D0%B4%D0%B0%D1%82">самиздата</a>, то до лагерей было бы рукой
+подать (как минимум строгого выговора мне было бы не избежать). Казалось бы,
+какие ужасные времена остались в прошлом, и как прекрасно, что теперь нет ни
+цензуры, ни редколлегий, а есть интернет! Это только на первый взгляд.</p>
+
+<p>Как я её понимаю, задачей цензуры является не столько ограничение творческих
+порывов авторов, сколько защита всех остальных граждан от последствий этих
+порывов. Ровно как полиция наказывает хулиганов не потому, что хочет причинить
+им вред, а для того, чтобы защитить окружающих. Видео ролики, подобные тому, с
+просмотра которого мы начали эту статью, и есть, по моему мнению, самое настоящее
+онлайн-хулиганство.</p>
+
+<p>Вы скажете, но ведь люди-то довольны. Они же смотрят, ставят лайки,
+подписываются на YouTube-каналы. Какое же это хулиганство, если большинство в
+восторге и показывает этот контент своим детям, а те, надо полагать, водят
+пальцем по экрану и мычат от удовольствия? В том-то и дело, что последствия
+бытового хулиганства нам очевидны и неприятны: ни разбитые окна, ни запах в
+лифте, ни надписи на стенах в подъезде абсолютному большинству не по душе.
+Последствия же онлайн-хулиганства куда более трагические, но при этом менее
+очевидные для большинства: у населения снижается интеллект и
+пропадает тяга к прекрасному. Это страшнее запаха в подъезде.</p>
+
+<p>Но виноваты в этом не авторы этой незатейливой песенки и прочего подобного
+контента, которым заполнен YouTube! Они лишь делают свою работу, стараясь
+соответствовать запросам общества. Но вот если 50 лет назад интересы общества
+были представлены строгим редактором журнала <a href="https://ru.wikipedia.org/wiki/%D0%AE%D0%BD%D0%BE%D1%81%D1%82%D1%8C_(%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB)">“Юность”</a> и художественным советом
+фестиваля <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%81%D0%BD%D1%8F_%D0%B3%D0%BE%D0%B4%D0%B0">“Песня года”</a>, то теперь интересы общества представляет YouTube,
+который выражает их через количество лайков. Что бы автор ни создал, он
+вынужден подстраиваться под вкусы толпы, которая безусловно с огромным
+восторгом будет воспринимать нецензурную лексику, шутки ниже пояса, да и просто
+во всех смыслах порнографию.</p>
+
+<p>Поскольку средний человек не способен отличить онлайн-хулиганов от достойных авторов,
+авторы вынуждены хулиганить, чтобы заслужить лайки (а значит, заработать
+гонорар). Любимая нами свобода слова, которую уважаемая нами фирма Google
+(владелец YouTube) защищает, позволяя размещать у себя контент практически
+любого качества и содержания, и есть главный виновник и провокатор
+онлайн-хулиганства.</p>
+
+<p>Дописываю эту статью, находясь в Китае. Пару дней назад беседовал с одним
+знакомым китайцем, и он рассказал, что на их онлайн-видео платформах существует
+<a href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BD%D0%B7%D1%83%D1%80%D0%B0_%D0%B2_%D0%9A%D0%B8%D1%82%D0%B0%D0%B5">строгая цензура</a>. Запрещено выкладывать всё, что по мнению правительства не
+соответствует моральному облику строителя <del>коммунизма</del> здорового общества. И
+конечно, запрещены любые видео ролики политического характера. Может быть,
+такие ограничения имеют смысл, учитывая всё сказанное выше?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="свобода" /><summary type="html"><![CDATA[Свобода слова помогает авторам быть услышанным, но при этом провоцирует и делает невозможным наказания онлайн хулиганов, в которых неизбежно превращаются авторы, стараясь заработать лайки.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/05/babyshark.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/05/babyshark.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Куликовы поля</title><link href="https://www.yegor256.com/2024/04/02/kulikovo-pole.html" rel="alternate" type="text/html" title="Куликовы поля" /><published>2024-04-02T00:00:00+00:00</published><updated>2024-04-02T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/04/02/kulikovo-pole</id><content type="html" xml:base="https://www.yegor256.com/2024/04/02/kulikovo-pole.html"><![CDATA[<p>Я не историк и даже в школе историю не любил. Не любил, но верил,
 что так все и было: и <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0%D1%8F_%D1%84%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%B0%D1%8F_%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D1%8F">Французская революция</a>, и <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%B8%D0%B5_%D0%A1%D0%BF%D0%B0%D1%80%D1%82%D0%B0%D0%BA%D0%B0">восстание Спартака</a>,
 и война <a href="атилла">Аттилы</a> с Римом, и охоты на мамонтов с последующими иллюстрациями
 на стенах древних пещер. Все это было именно так, как рассказывали
@@ -860,108 +944,4 @@ must break to form new lines. By injecting linebreaks into the body of
 a paragraph, you express distrust in the document formatting software,
 be it an HTML browser, a LaTeX compiler, or a Javadoc generator. In the end,
 it looks ugly, because we are <a href="/2019/05/21/dont-improvise.html">much worse designers</a> 
-than the creators of LaTeX or browsers.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[Explicit line breaks inside a paragraph is a very annoying typography mistake, which I strongly recommend to avoid.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/11/pret-a-porter.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/11/pret-a-porter.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Method Section: A Recipe for Research</title><link href="https://www.yegor256.com/2023/10/11/method-of-research.html" rel="alternate" type="text/html" title="The Method Section: A Recipe for Research" /><published>2023-10-11T00:00:00+00:00</published><updated>2023-10-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2023/10/11/method-of-research</id><content type="html" xml:base="https://www.yegor256.com/2023/10/11/method-of-research.html"><![CDATA[<p>Every empirical research paper must have a section titled “Method” (or “Methodology,” or “Study Design”). In this section, you describe what was done to obtain the data presented in the following “Results” section. You explain the <em>recipe</em>, which may be replicated later by another researcher, leading to the same (or very similar) results. You
-tell the reader what ingredients you used, how you mixed them, and—most
-importantly—why.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Underground (1995) by Emir Kusturica" src="/images/2023/10/underground.jpg" longdesc="#952f1bf5" /><figcaption id="952f1bf5">Underground (1995) by Emir Kusturica</figcaption></figure>
-
-<p>You start the section with a paragraph where you state the main <em>objective</em> of the
-research, then break it down into a few 
-<a href="https://en.wikipedia.org/wiki/Research_question"><em>research questions</em></a> (RQs),
-which are question-mark-ending sentences.</p>
-
-<p>Then, you explain the <em>procedures</em> of the method (strictly one procedure per paragraph). 
-In each step, you either collected, combined, or generated data. First, you explain what
-you did. Second, you highlight how your procedure contributed to one of the
-research questions. Third, you justify your actions by providing strong enough
-reasons for why you performed these specific manipulations with the data.</p>
-
-<p>Use past tense
-<a href="https://www.scribbr.com/frequently-asked-questions/tense-methods-section/">only</a>.</p>
-
-<p>Here is a toy sample of the Method section:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\section{Method}
-
-The goal of this study is to understand whether 
-cats love fruits. This leads to the following 
-research questions:   
-\begin{description}
-\item[RQ1] What is a correlation between the color 
-of a cat's fur and its passion for fruits? 
-\item[RQ2] Which fruits are preferred by cats: 
-bananas, apples, or marakujas?
-\end{description}
-
-First, we found 15 cats: 2 white, 3 black, 
-and 10 of mixed color. It is important for RQ1 
-that they are of different colors. We believe 
-that 15 is enough because this is a toy research.
-
-Second, we excluded 5 cats: those who were 
-younger than one year old or older than 8 years 
-old. This was motivated by RQ2; we decided that
-young and old cats may have difficulty cracking 
-the hard cover of a marakuja.
-
-Third, we gave our cats all three fruits mentioned 
-in RQ2, left them for an hour, and observed their 
-behavior. One hour was enough for a hungry
-cat to make a decision.
-
-All cat owners agreed to have their cats 
-participate in the study. 
-</code></pre></div></div>
-
-<p>At the end of the section, we mentioned that all participants in the experiment
-provided informed consent—this is important if humans (or cats) are involved,
-so don’t forget about it.</p>
-
-<p>In the “Results” section, which follows the Method, you 
-<a href="/2023/12/11/results-and-discussion.html">present</a> the data that
-were collected, combined, or generated (without giving any opinion or
-subjective interpretation of it!). Some of this data may have already been
-mentioned in the Method section, but not the most important details. For
-example, we’ve already said that we found 15 cats, but we didn’t provide their
-names, ages, or breeds—this information goes into the Results, in the form of
-a nicely formatted table. How much “results” to show in the Method and how much
-in the Results is, I believe, a matter of taste.</p>
-
-<p>In the “Discussion” section, which follows the Results, you 
-<a href="/2023/12/11/results-and-discussion.html">engage in a dialogue</a>
-with yourself, questioning the procedures of the Method. This is where
-you are allowed to have an opinion about the data collected, combined, and
-generated. For example, we may discuss whether the results of our research
-are trustworthy enough, taking into account that we only analyzed the behavior
-of just 15 cats, while in the Method, we were absolutely sure that we were doing
-the right thing. In the Discussion, you play the opposite role by doubting
-every single step of the Method, highlighting its weaknesses and limitations.</p>
-
-<hr />
-
-<p>You may find inspiration in these papers 
-(use <a href="https://scholar.google.com/">Google Scholar</a> to download their PDFs):</p>
-
-<ul>
-  <li>Melina Vidoni, <em>Evaluating Unit Testing Practices in R Packages</em>, ICSE 2021</li>
-  <li>Reem S. Alsuhaibani et al., <em>On the Naming of Methods: A Survey of Professional Developers</em>, ICSE 2021</li>
-  <li>Anastasia Ruvimova et al., <em>An Exploratory Study of Productivity in Software Teams</em>, ICSE 2022</li>
-</ul>
-
-<hr />
-
-<p>These opinions might also be helpful:</p>
-
-<ul>
-  <li><a href="https://research.com/research/how-to-write-research-methodology">How to Write Research Methodology</a>
-by <a href="https://scholar.google.com/citations?user=kudrpNsAAAAJ">Imed Bouchrika</a></li>
-  <li><a href="https://www.youtube.com/watch?v=SxKd66g7M1s">Writing the ‘Research Methods’…</a> (video)
-by <a href="https://soc.appstate.edu/faculty-staff/david-russell-phd">David Russell</a></li>
-  <li><a href="https://www.youtube.com/watch?v=jWPul_eifeU">How To Write Methodology…</a> (video)
-by <a href="https://scholar.google.com/citations?user=MR45-AwAAAAJ">Marek Kiczkowiak</a></li>
-  <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6322175/">Formulation of Research Question</a>
-by Simmi K. Ratan</li>
-</ul>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="science" /><summary type="html"><![CDATA[The essence of a research paper is the Method section, which may be easier to write if you follow a few simple principles.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/10/underground.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/10/underground.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+than the creators of LaTeX or browsers.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[Explicit line breaks inside a paragraph is a very annoying typography mistake, which I strongly recommend to avoid.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2023/11/pret-a-porter.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2023/11/pret-a-porter.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
