@@ -39,3 +39,4 @@ jobs:
             **/*.cls
           ignore: >-
             js/snowflakes.min.js
+            _samples/**
