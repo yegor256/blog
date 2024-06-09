@@ -16,19 +16,24 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 ---
-name: yamllint
+name: copyrights
 'on':
   push:
-    branches:
-      - master
   pull_request:
-    branches:
-      - master
 jobs:
-  yamllint:
+  copyrights:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - uses: ibiqlik/action-yamllint@v3
+      - uses: yegor256/copyrights-action@0.0.4
         with:
-          config_file: .yamllint.yml
+          globs: >-
+            **/LICENSE.txt
+            **/*.sh
+            **/*.rb
+            **/*.scss
+            **/*.js
+            **/*.yml
+            **/*.xml
+            **/*.tex
+            **/*.cls
