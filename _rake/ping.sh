@@ -34,7 +34,7 @@ function ping_uri {
     -H 'Accept-Encoding: gzip, deflate' \
     -H 'Cache-Control: max-age=0' \
     --retry 4 \
-    --write-out '%{http_code} %{url_effective}\n' $1
+    --write-out '%{http_code} %{url_effective}\n' "$1"
 }
 export -f ping_uri
 

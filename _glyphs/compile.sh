@@ -30,5 +30,5 @@ fontcustom compile "${dir}" \
   "--output=${target}" \
   --font-name=icons --templates=css --no-hash --force --autowidth --debug
 
-cat "${target}/icons.css" | sed -E "s|\"./icons([^\"]+)\"|\"https://www.yegor256.com/css/icons\1?$(date +%s)\"|g" > "${target}/icons.css"
+sed -E "s|\"./icons([^\"]+)\"|\"https://www.yegor256.com/css/icons\1?$(date +%s)\"|g" < "${target}/icons.css" > "${target}/icons.css"
 
