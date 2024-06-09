@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What Is a Patent Claim?"
+title: "Patents and Their Claims"
 date: 2024-06-09
 place: Moscow, Russia
 tags: business
@@ -43,7 +43,7 @@ for a period of three years. Since then, [over 3.5 million patents](https://www.
 have been issued by different _patent offices_ around the globe to respected
 inventors.
 
-**Who is a [patent office](https://en.wikipedia.org/wiki/Patent_office)?**
+**What is a [patent office](https://en.wikipedia.org/wiki/Patent_office)?**
 It's a security organization funded by a government:
 [USPTO](https://www.uspto.gov/) in the United States,
 [EPO](https://www.epo.org/en) in the European Union,
@@ -103,9 +103,9 @@ $3,760 in 7 years,
 $7,700 in 11 years.
 Not cheap, huh?
 
-Now, the breadth. Consider two _patent claims_:
+Now, the breadth. Consider three _patent claims_:
 
-* "An apparatus comprising a file reader; a file writer; and a compressor."
+* "An apparatus consisting of a file reader; a file writer; and a compressor."
 * "A file compressing method comprising
   a reader of JPEG files;
   a probability distribution calculator;
@@ -113,6 +113,10 @@ Now, the breadth. Consider two _patent claims_:
   a bla-bla-bla optimizer;
   an intermediate storage;
   a writer of JPEG files."
+* "A Lempel–Ziv based data compression method comprising:
+  converting input stream into ψ-tokens;
+  reducing redundancy via Prishvin Ω(x) factorials;
+  serializing through Turgenev 𝛾-extremums."
 
 The first claim is much broader: it probably covers all possible file compressing
 software tools ever created. Such a broad patent claim won't even be
@@ -120,6 +124,10 @@ software tools ever created. Such a broad patent claim won't even be
 by USPTO if you file it. They will do a quick search of _prior art_ (other
 patents previously issued) and reject you on the basis of a lack of
 [_novelty_](https://en.wikipedia.org/wiki/Novelty_%28patent%29).
+The second claim is narrower, but still pretty broad, since the architecture
+of other existing compressors may be very similar to the described one.
+The third claim is the most narrow and the most specific (although, have
+absolutely no sense, it is made up).
 
 **How to write a good patent claim?**
 There is no such thing as an objectively [good claim](https://support.lens.org/knowledge-base/what-are-claims/),
@@ -135,17 +143,19 @@ you write the claim. At least its first version.
 There is a more or less strict structure of a claim:
 preamble, transitional phrase, and body:
 
-| 1) Preamble | 2) Transitional Phrase | 3) Body |
+| Preamble | Transitional Phrase | Body |
 | --- | --- | --- |
-| An apparatus | comprising | a file reader; a file writer; and a compressor. |
+| An apparatus | consisting of | a file reader; a file writer; and a compressor. |
 | A file compressing method | comprising | a reader of JPEG files; a probability distribution calculator; a discrete transformer; a bla-bla-bla optimizer; an intermediate storage; a writer of JPEG files. |
+| A Lempel–Ziv based data compression method | comprising | converting input stream into ψ-tokens, reducing redundancy via Prishvin Ω(x) factorials, serializing through Turgenev 𝛾-extremums. |
 
 The [preamble](https://www.wilmerhale.com/insights/publications/patent-claim-preambles-july-16-2003)
 must position your invention among all other devices
 and methods in the prior art. The "an apparatus" preamble is very broad:
 it could mean any device in the world, even not only
 from the computing domain. The "a file compressing method" preamble
-is much narrower.
+is much narrower, while "a Lempel–Ziv based data compression method" is the
+most narrow one, with almost no ambiguity for the interpretation.
 
 The body of a [patent claim](https://ocpatentlawyer.com/basics-writing-claim-patent-application/)
 must iterate the elements that constitute
