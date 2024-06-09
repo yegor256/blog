@@ -88,6 +88,11 @@ description: |
         <p>
           <img alt="JCabi logo" src="//www.jcabi.com/logo-square.svg" style="height:150px;float:right;margin-left:1em"/>
         </p>
+      {% elsif page.tag == 'business' %}
+        <h1>{{ page.posts.size }} Posts About Business and Startups</h1>
+        <p>
+          <img alt="Business logo" src="/images/icons/business.svg" style="height:128px;float:right;margin-left:1em"/>
+        </p>
       {% elsif page.tag == 'zerocracy' %}
         <h1>{{ page.posts.size }} Posts About Zerocracy&trade;</h1>
         <p>

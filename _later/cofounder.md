@@ -3,7 +3,7 @@ layout: post
 title: "Do You Really Need a Co-Founder?"
 date: 2016-06-20
 place: Palo Alto, CA
-tags: startups
+tags: business
 description: |
   Getting a co-founder on board seems to be an easy
   process, but very few of us actually understand

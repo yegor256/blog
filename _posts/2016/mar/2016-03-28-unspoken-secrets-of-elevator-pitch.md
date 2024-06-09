@@ -3,7 +3,7 @@ layout: post
 title: "Unspoken Secrets of an Elevator Pitch"
 date: 2016-03-28
 place: Palo Alto, CA
-tags: startup sarcasm
+tags: business sarcasm
 description: |
   The quality of your elevator pitch is the key
   success factor for your startup, so listen to this

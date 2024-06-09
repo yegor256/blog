@@ -111,6 +111,8 @@ module Yegor
         "<img src='/images/icons/pdd-white.svg' alt='PDD'/>"
       when 'oss'
         "<img src='/images/icons/github-white.svg' alt='GitHub'/>"
+      when 'business'
+        "<img src='/images/icons/business-white.svg' alt='Business'/>"
       when 'aws'
         "<img src='/images/icons/aws-white.svg' alt='Amazon Web Services'/>"
       when 'rultor'

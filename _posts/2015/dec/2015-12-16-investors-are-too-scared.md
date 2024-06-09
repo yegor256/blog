@@ -3,7 +3,7 @@ layout: post
 title: "Investors Are Too Scared"
 date: 2015-12-16
 place: Palo Alto, CA
-tags: startup
+tags: business
 description: |
   Angel seed investors are usually afraid of too
   many things. Good startups are in trouble because
