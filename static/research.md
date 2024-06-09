@@ -41,6 +41,7 @@ they are all related to [EOLANG](https://www.eolang.org).
 You may also pick one of our open source projects, and extend it with
 a new feature, presenting this work as engineering+science:
 
+  * [eo](https://github.com/objectionary/eo) (Java)
   * [cam](https://github.com/yegor256/cam) (Bash, Python)
   * [rultor](https://github.com/yegor256/rultor) (Java, Docker, AWS, XSL)
   * [qulice](https://github.com/yegor256/qulice) (Java, AST, XML)
