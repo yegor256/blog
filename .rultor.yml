@@ -30,6 +30,7 @@ merge:
   script: |
     LC_ALL=en_US.UTF-8 bundle exec rake
 deploy:
+  # yamllint disable rule:line-length
   script: |
     export JEKYLL_ENV=production
     LC_ALL=en_US.UTF-8 bundle exec rake
