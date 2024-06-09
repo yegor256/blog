@@ -39,4 +39,4 @@ function ping_uri {
 export -f ping_uri
 
 cmd="ping_uri \"\$0\" >> \"${report}\"; echo \"\$0\";"
-cat "${links}" | xargs -P 10 -n 1 /bin/bash -c "${cmd}"
+xargs -P 10 -n 1 /bin/bash -c "${cmd}" < "${links}"
