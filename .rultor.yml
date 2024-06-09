@@ -45,7 +45,7 @@ deploy:
 
     rvm default 2.7.6 && source /usr/local/rvm/scripts/rvm
     ruby -v
-    gem install ffi -v 1.17.0
+    gem install ffi -v 1.16.3
     gem install fontcustom -v 2.0.0
     fontcustom --version
     "$(pwd)/_glyphs/compile.sh" /tmp/icons
