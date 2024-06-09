@@ -37,3 +37,5 @@ jobs:
             **/*.xml
             **/*.tex
             **/*.cls
+          ignore: >-
+            js/snowflakes.min.js
