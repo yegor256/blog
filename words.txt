@@ -394,6 +394,7 @@ API-s
 APIs
 apologize
 app
+apparatus
 apparently
 appeal
 appear
@@ -603,6 +604,7 @@ attentively
 attitude
 attitude-changing
 attitudes
+attorney
 attorneys
 ATTR
 attract
@@ -904,6 +906,7 @@ bitcoin
 bitcoins
 bits
 bjarne
+bla-bla-bla
 black
 black-and-white
 blackberry
@@ -1028,6 +1031,7 @@ branding
 brave
 brazil
 breach
+breadth
 break
 breakdown
 breakfast
@@ -1066,6 +1070,7 @@ browser
 browsers
 browsing
 bruce
+brunelleschi
 brutti
 bruvik
 BSc
@@ -1112,6 +1117,7 @@ bulding
 bullet
 bullet-fast
 bullshit
+bully
 bullying
 bummer
 bump
@@ -1533,6 +1539,7 @@ clutters
 CMMI
 cmple
 CNAME
+CNIPA
 CNL
 CNN
 co
@@ -1754,7 +1761,11 @@ comprehension
 comprehensive
 comprehensively
 compress
+compressing
 compression
+compressor
+compressors
+comprising
 compromat
 compromise
 compromised
@@ -1856,6 +1867,7 @@ considers
 consist
 consistency
 consistent
+consisting
 consists
 console
 conspiracy
@@ -2486,6 +2498,7 @@ developers'
 developing
 development
 device
+devices
 devil
 devious
 devise
@@ -3110,6 +3123,7 @@ EPAM
 epidemic
 episode
 episodes
+EPO
 EPUB
 eq
 equal
@@ -3344,6 +3358,7 @@ facility
 facing
 fact
 factor
+factorials
 factories
 factoring
 factors
@@ -3486,6 +3501,7 @@ fileutils
 filewithdata
 filing
 filipe
+filippo
 fill
 fille
 filled
@@ -3640,6 +3656,7 @@ foremost
 foresee
 forever
 forget
+forgets
 forgive
 forgiveness
 forgot
@@ -3764,6 +3781,7 @@ full
 full-blown
 full-hearted
 full-purpose
+full-scale
 full-speed
 full-time
 full-timers
@@ -3852,6 +3870,7 @@ generic
 generics
 generous
 genetically
+geneva
 genius
 gentle
 gentleman
@@ -3911,6 +3930,7 @@ glass
 glenford
 global
 globally
+globe
 glogin
 glossaries
 glossary
@@ -4596,6 +4616,7 @@ informing
 informs
 infrastructure
 infringe
+infringed
 infringement
 ingredient
 ingredients
@@ -4815,6 +4836,7 @@ IP
 ipads
 iphone
 IPO
+IPOS
 IPv
 IRC
 ironic
@@ -4851,6 +4873,7 @@ it's
 IT-
 italian
 italic
+italy
 ITCase
 item
 itemize
@@ -5255,6 +5278,7 @@ legible
 legit
 lemire
 lemmas
+lempel
 len
 lending
 length
@@ -5299,6 +5323,7 @@ lifelong
 lifespan
 lifestyle
 lifetime
+lifetimes
 light
 light-weight
 lighter
@@ -5349,6 +5374,7 @@ literal
 literally
 literals
 literature
+litigation
 little
 live
 lived
@@ -5475,6 +5501,7 @@ macports
 macquarie
 macro-tasking
 made
+mafia
 magazine
 magazines
 magic
@@ -6078,8 +6105,10 @@ naming
 nan
 nancy
 napkin
+narrow
 narrow-minded
 narrow-skilled
+narrower
 NASA
 nashorn
 nat
@@ -6220,6 +6249,7 @@ non-intrusive
 non-IT
 non-local
 non-native
+non-obvious
 non-professional
 non-routine
 non-stop
@@ -6738,6 +6768,7 @@ penalize
 penalizes
 penalties
 penalty
+pending
 penetrate
 pennies
 pens
@@ -7160,6 +7191,7 @@ prioritized
 prioritizes
 prioritizing
 priority
+prishvin
 prism
 private
 privately
@@ -7615,6 +7647,7 @@ rediscovered
 redone
 reduce
 reduced
+reducing
 redundancy
 redundant
 reem
@@ -7642,6 +7675,7 @@ reformat
 refreshment
 refrigerator
 refund
+refunded
 refunds
 refusal
 refusals
@@ -7875,6 +7909,7 @@ restrictions
 restroom
 restructure
 restructuring
+resubmit
 result
 result-oriented
 resulted
@@ -7924,6 +7959,7 @@ reviewing
 reviews
 revoke
 revolution
+revolutionary
 revolver
 reward
 reward-and-punishment
@@ -8003,6 +8039,7 @@ rooms
 root
 ror
 rose
+rospatent
 rotate
 rotating
 rotations
@@ -8343,6 +8380,7 @@ serialization
 serialize
 serialized
 serializers
+serializing
 series
 serif
 serious
@@ -8529,6 +8567,7 @@ since
 sincere
 sincerely
 sing
+singapore
 singer
 singing
 single
@@ -9177,6 +9216,7 @@ swimming
 switch
 switched
 switching
+switzerland
 syllabus
 symbol
 symbols
@@ -9447,6 +9487,7 @@ three
 three-bedroom
 three-fold
 three-month
+three-year
 threecopies
 threshold
 throttling
@@ -9614,9 +9655,11 @@ transformation
 transformational
 transformations
 transformed
+transformer
 transformers
 transforms
 transition
+transitional
 translate
 translated
 translates
@@ -9702,6 +9745,7 @@ tumor
 tuned
 tunes
 tunnel
+turgenev
 turn
 turnarounds
 turned
@@ -10309,6 +10353,7 @@ winner
 winners
 winning
 wins
+WIPO
 wipro
 wired
 wiring
@@ -10510,6 +10555,7 @@ zi
 zilles
 zillow
 ZIP
+ziv
 ziyavakhobov
 ziyavuddin
 zobel

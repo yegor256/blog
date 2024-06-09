@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Patents and Their Claims</title>
+    <link rel="canonical" href="https://www.yegor256.com/2024/06/09/patent-claim.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2024/06/09/patent-claim.html"
+        },
+        "headline": "Patents and Their Claims",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2024/06/and-justice-for-all.jpg",
+          "height": 720,
+          "width": 1280
+        },
+        "datePublished": "2024-06-09",
+        "dateModified": "2024-06-09",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "If you are a programer, then even if a lawyer may help you write
+a patent application, your job is to prepare a proper
+patent claim, making its breadth right on.
+",
+        "keywords": ["patent claim", "patent breadth", "patent length", "patent infrigement", "patent litigation"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2024/06/09/patent-claim.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>9 June 2024</p>
+      <h1>Patents and Their Claims</h1>
+      <p>If you, like me, are not a patent attorney and don’t understand patent law,
+but your boss asks you to turn your recently written piece of code into
+a patent, read on. The boss most probably won’t ask you to write the entire
+patent. Instead, he will ask you to prepare a quick summary of the invention
+(usually, a few slides) and then a hired lawyer will turn it into
+a full-scale patent application. If you understand the purpose of patents,
+the mechanics of patent offices, and the format of a patent claim, you will
+do just fine.</p>
+
+
+
+<amp-img src="/images/2024/06/and-justice-for-all.jpg" alt="And Justice for All (1979) by Norman Jewison" height="720" width="1280" layout="responsive"></amp-img>
+
+<p><strong>What are patents for?</strong>
+Initially invented as a tool to encourage innocent inventors,
+they are currently used mostly as a <a href="https://en.wikipedia.org/wiki/Patent_war">weapon</a>
+either to bully larger organizations or
+to defend them against bullying. It all started in Italy in 1474,
+when a three-year “grant” <a href="https://guides.slv.vic.gov.au/patents/history">was given</a>
+to Filippo Brunelleschi for “some machine or kind of ship,”
+for a period of three years. Since then, <a href="https://www.wipo.int/en/ipfactsandfigures/patents">over 3.5 million patents</a>
+have been issued by different <em>patent offices</em> around the globe to respected
+inventors.</p>
+
+<p><strong>What is a <a href="https://en.wikipedia.org/wiki/Patent_office">patent office</a>?</strong>
+It’s a security organization funded by a government:
+<a href="https://www.uspto.gov/">USPTO</a> in the United States,
+<a href="https://www.epo.org/en">EPO</a> in the European Union,
+<a href="https://english.cnipa.gov.cn/">CNIPA</a> in China,
+<a href="https://rospatent.gov.ru/en">Rospatent</a> in Russia,
+<a href="https://www.ipos.gov.sg/">IPOS</a> in Singapore,
+and a <a href="https://en.wikipedia.org/wiki/Patent_office">few dozen</a> in other countries.
+Also, there is
+<a href="https://www.wipo.int/portal/en/index.html">WIPO</a> in Geneva (Switzerland) that
+coordinates the work of all other POs, so far.
+They protect you if you pay them (no surprise it all started in Italy!)</p>
+
+<p>Let’s say you invent a new file compression algorithm and
+you don’t want anyone to use it without your permission. First, you pay
+<a href="https://www.uspto.gov/learning-and-resources/fees-and-payment/uspto-fee-schedule">$320</a>
+to USPTO and submit an application. Then, in a few months, they assign your application
+a number and call it “pending.” Then, you wait for about <a href="https://www.uspto.gov/dashboard/patents/pendency.html">3.5 years</a>
+until they reply back with a decision: either you get a patent, you get nothing,
+or they ask you to refine the application (most common case).
+You make the changes, resubmit, they criticize, you resubmit, … and eventually
+they issue a patent.</p>
+
+<p><strong>Now what?</strong>
+Your company publishes a press release, informs all investors, you
+make a Facebook post so that your mom can be proud of you,
+and in a few days everybody forgets about it. Because nobody cares. Until
+the <em>litigation</em> day comes: your company finds out that another company is
+also compressing files using the same algorithm. Or, the other way around:
+they find out that the algorithm you invented is actually the algorithm they
+have been quietly using for years. You both meet in a
+<a href="https://en.wikipedia.org/wiki/Patent_court">patent court</a>.
+The USPTO will be there too, since you paid them earlier.</p>
+
+<p>If your opponent <em>does not</em> have a patent, the judge will ask them to prove
+that their compression algorithm was publicly available prior to your
+application. If they provide such proof, your patent will be
+<a href="https://en.wikipedia.org/wiki/Patent_infringement"><em>infringed</em></a>—you will lose
+it, your $320 won’t be refunded, and you will pay everything you made over the last
+few years to the opponent.</p>
+
+<p>If your opponent <em>does</em> have a patent, you will have to prove that your
+patent is older and <em>broader</em>. USPTO attorneys most probably won’t try to help you,
+since they won’t be on your side, but simply a mediator between both of you
+(<a href="https://en.wikipedia.org/wiki/Apple_Inc._v._Samsung_Electronics_Co.">Apple vs. Samsung</a>
+litigation is a good example of such a patent war). If you win,
+their patent will be infringed and you will get all the profit they managed
+to collect over the last years. Big win!</p>
+
+<p><strong>What is patent breadth?</strong>
+First, let’s discuss what is its <em>length</em>. You may be surprised,
+but patents have pretty short lifetimes.
+If you don’t extend a patent, it will expire in just <em>three years</em>. If you do want to
+extend it, you must pay USPTO <a href="https://www.uspto.gov/patents/basics/manage">again</a>
+and much more than you paid the first time:
+<a href="https://www.uspto.gov/patents/basics/manage">$2,000</a> in 3 years,
+$3,760 in 7 years,
+$7,700 in 11 years.
+Not cheap, huh?</p>
+
+<p>Now, the breadth. Consider three <em>patent claims</em>:</p>
+
+<ul>
+  <li>“An apparatus consisting of a file reader; a file writer; and a compressor.”</li>
+  <li>“A file compressing method comprising
+a reader of JPEG files;
+a probability distribution calculator;
+a discrete transformer;
+a bla-bla-bla optimizer;
+an intermediate storage;
+a writer of JPEG files.”</li>
+  <li>“A Lempel–Ziv based data compression method comprising:
+converting input stream into ψ-tokens;
+reducing redundancy via Prishvin Ω(x) factorials;
+serializing through Turgenev 𝛾-extremums.”</li>
+</ul>
+
+<p>The first claim is much broader: it probably covers all possible file compressing
+software tools ever created. Such a broad patent claim won’t even be
+<a href="https://en.wikipedia.org/wiki/Patentability">accepted</a>
+by USPTO if you file it. They will do a quick search of <em>prior art</em> (other
+patents previously issued) and reject you on the basis of a lack of
+<a href="https://en.wikipedia.org/wiki/Novelty_%28patent%29"><em>novelty</em></a>.
+The second claim is narrower, but still pretty broad, since the architecture
+of other existing compressors may be very similar to the described one.
+The third claim is the most narrow and the most specific (although, have
+absolutely no sense, it is made up).</p>
+
+<p><strong>How to write a good patent claim?</strong>
+There is no such thing as an objectively <a href="https://support.lens.org/knowledge-base/what-are-claims/">good claim</a>,
+since it depends on the
+situation in the market. If the territory of innovation is not yet developed
+and you are a pioneer, a broader and shorter (by the length in years, not the
+number of words) patent is better. If you are making a small improvement
+to a well-developed prior art, better make the patent narrower and longer.</p>
+
+<p>A <em>patent claim</em> is the key element of a patent application. While the rest
+of the document may be written by a patent attorney, I strongly suggest
+you write the claim. At least its first version.
+There is a more or less strict structure of a claim:
+preamble, transitional phrase, and body:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Preamble</th>
+      <th>Transitional Phrase</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>An apparatus</td>
+      <td>consisting of</td>
+      <td>a file reader; a file writer; and a compressor.</td>
+    </tr>
+    <tr>
+      <td>A file compressing method</td>
+      <td>comprising</td>
+      <td>a reader of JPEG files; a probability distribution calculator; a discrete transformer; a bla-bla-bla optimizer; an intermediate storage; a writer of JPEG files.</td>
+    </tr>
+    <tr>
+      <td>A Lempel–Ziv based data compression method</td>
+      <td>comprising</td>
+      <td>converting input stream into ψ-tokens, reducing redundancy via Prishvin Ω(x) factorials, serializing through Turgenev 𝛾-extremums.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <a href="https://www.wilmerhale.com/insights/publications/patent-claim-preambles-july-16-2003">preamble</a>
+must position your invention among all other devices
+and methods in the prior art. The “an apparatus” preamble is very broad:
+it could mean any device in the world, even not only
+from the computing domain. The “a file compressing method” preamble
+is much narrower, while “a Lempel–Ziv based data compression method” is the
+most narrow one, with almost no ambiguity for the interpretation.</p>
+
+<p>The body of a <a href="https://ocpatentlawyer.com/basics-writing-claim-patent-application/">patent claim</a>
+must iterate the elements that constitute
+the invention. The fewer elements you include in this list, the broader
+the patent will be. The broader the patent, the easier to infringe. Well, unless
+you invent something revolutionary new. On the other hand, the more elements,
+the narrower the patent, the weaker it is as a weapon. It will be very hard
+to use a narrow patent in a patent litigation.</p>
+
+<p>The claim must also be <a href="https://en.wikipedia.org/wiki/Inventive_step_and_non-obviousness"><em>non-obvious</em></a>,
+meaning that your invention has to be
+an adequate distance beyond or above the state of the art. Say, a new file
+format is invented for graphic images and you submit a patent application
+for a ZIP compressor that can also compress files in this new format.
+If there is no novelty in the compression algorithm itself, such a patent
+would be considered obvious since it’s not far away from prior art: existing
+ZIP compressors can deal with this file format, even though they don’t know
+about it yet.</p>
+
+<p><strong>How do you decide?</strong>
+It is your responsibility as a patent author to decide how broad
+and how long your patent must be. Then, a patent attorney will help you turn your
+patent claim into a patent application (charging a
+<a href="https://patentattorneyworldwide.com/us/much-patent-attorney-us-charges-stage-getting-patent/">few thousand dollars</a>
+along the way), and then, hopefully, the litigation day will come and you will win
+a lot of money. Most probably this will never happen and the patent will
+remain a nice badge on your CV and your company’s website.</p>
+
+<p>By the way, it is important to remember that if you want to get similar protection
+in another country, you will have to pay their patent office separately.
+Just like you pay every time a different mafia boss for protection when
+you want to work in the territories they control.</p>
+
+    </article>
+  </body>
+</html>
