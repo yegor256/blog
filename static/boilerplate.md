@@ -58,8 +58,8 @@ Best speeches:
 YouTube channel:<br/>
 https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q
 
-Twitter:<br/>
-[yegor256](https://twitter.com/yegor256)
+X:<br/>
+[yegor256](https://x.com/yegor256)
 
 Instagram:<br/>
 [yegor256](https://instagram.com/yegor256)
@@ -73,9 +73,11 @@ LinkedIn:<br/>
 Current location (to travel from):<br/>
 Moscow, Russia
 
+<!--
 Postal address:<br/>
 555 Bryant Str, Ste 470,<br/>
 Palo Alto, CA 94301, USA.
+-->
 
 Telegram:<br/>
 [@yegor256](https://t.me/yegor256)
