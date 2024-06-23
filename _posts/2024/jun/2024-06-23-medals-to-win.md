@@ -3,7 +3,7 @@ layout: post
 title: "Win the Medals While Young"
 date: 2024-06-23
 place: Moscow, Russia
-tags: business
+tags: career
 description: |
   Chasing money early in your career is like shooting yourself
   in the foot. Aim for exclusive achievements instead. This list
@@ -75,7 +75,7 @@ make some money while working on them. The money may be, and will be, smaller
 than what your friends are getting. Don't pay attention to this. Eventually,
 you will get even. Big time.
 
-BTW, I borrowed the idea of "medals" from Alexander Panin, the founder of
+BTW, I borrowed the idea of "medals" from Alexander Panov, the founder of
 [Neiry](https://neiry.ru/about-us), who I had a chance to
 [video-interview](https://www.youtube.com/watch?v=wKWt9l9Ll4U) recently
 (watch the video, he
