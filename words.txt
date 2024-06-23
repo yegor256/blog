@@ -1,3 +1,4 @@
+a-class
 a-ha
 aaron
 abandon
@@ -219,6 +220,7 @@ alan
 alcohol
 alert
 alerts
+alexander
 alexey
 algorithm
 algorithm-writing
@@ -684,6 +686,7 @@ awareness
 away
 AWeber
 awesome
+awesome-
 awesome-risks
 aws
 axioms
@@ -1628,6 +1631,7 @@ collisions
 collocated
 colloquy
 colon
+colonel
 color
 colorize
 colorizejs
@@ -2845,6 +2849,7 @@ DynamoDB
 dynamodb-local
 dynos
 dytalk
+DZone
 e-books
 each
 eager
@@ -4082,6 +4087,7 @@ guys
 gym
 habit
 habits
+habr
 hackathon
 hacker
 hackers
@@ -4228,6 +4234,7 @@ hero-driven
 heroes
 heroku
 herself
+hesitant
 hesitate
 hesitation
 hetzel
@@ -5055,6 +5062,7 @@ justify
 justin
 JVM
 kafka
+kaggle
 kaicode
 kalanick
 kamil-sabbagh
@@ -5298,6 +5306,7 @@ letters
 letting
 level
 levels
+leverage
 levinson's
 lexer
 liability
@@ -5818,6 +5827,7 @@ microtasking
 microtasks
 microvesting
 middle
+middle-level
 middleman
 middlemen
 middlewoman
@@ -6152,6 +6162,7 @@ negotiation
 negotiations
 negotiator
 neighbors
+neiry
 neither
 nerves
 nervous
@@ -6310,6 +6321,7 @@ nutch-default
 nutch-in-java
 nutshell
 NYSE
+o'reilly
 OAuth
 obey
 obeyed
@@ -6496,6 +6508,7 @@ orders
 ordinary
 oredev
 org
+org-team
 organic
 organism
 organisms
@@ -6505,6 +6518,7 @@ organizational
 organizations
 organize
 organized
+organizer
 organizers
 organizes
 organizing
@@ -6640,6 +6654,7 @@ palette
 palo
 panel
 panic
+panin
 pantone
 pantonecolor
 pants
@@ -7915,6 +7930,7 @@ result-oriented
 resulted
 results
 results-based
+resumania
 resume
 resumes
 retain
@@ -8373,6 +8389,7 @@ sequences
 sequential
 sequentially
 seratch
+sergeant
 sergei
 sergey
 sergio
@@ -8877,6 +8894,7 @@ staffing
 stage
 stages
 staging
+stake
 stakeholder
 stakeholders
 stale
@@ -10117,6 +10135,7 @@ victims
 victor
 victory
 video
+video-interview
 video-recorded
 videos
 vidoni
