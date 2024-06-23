@@ -6654,7 +6654,7 @@ palette
 palo
 panel
 panic
-panin
+panov
 pantone
 pantonecolor
 pants
