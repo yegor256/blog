@@ -2,7 +2,7 @@
 layout: post
 title: "Date/Time Printing Can Be Elegant Too"
 date: 2019-09-27
-place: St.Petersburg, Russia
+place: St. Petersburg, Russia
 tags: oop java
 description: |
   Printing and parsing dates in Java is the territory of horror,
