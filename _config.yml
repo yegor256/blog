@@ -39,6 +39,9 @@ paginate: 16
 paginate_path: "p/:num"
 excerpt_separator: <!--more-->
 exclude:
+  - _posts
+  - shift-m
+  - static
   - README.md
   - LICENSE.txt
   - Dockerfile
