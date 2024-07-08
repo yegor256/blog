@@ -44,7 +44,9 @@ in different programming languages and their SDKs:
 |---|---|
 | [Node](https://nodejs.org/api/fs.html#fsexistssyncpath) | `fs.existsSync('a.txt')` |
 |---|---|
-| [Python](https://docs.python.org/3/library/os.path.html) | `os.path.exists("a.txt")` |
+| [Python](https://docs.python.org/3/library/os.path.html#os.path.exists) | `os.path.exists("a.txt")` |
+|---|---|
+| [Python (3.4+)](https://docs.python.org/3/library/pathlib.html#pathlib.Path) | `pathlib.Path("a.txt").exists()` |
 |---|---|
 | [Ruby](https://ruby-doc.org/core-2.5.1/File.html#method-c-exist-3F) | `File.exist?("a.txt")` |
 |---|---|
