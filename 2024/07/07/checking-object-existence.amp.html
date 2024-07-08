@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>File.exists or Files.fileExists?</title>
+    <link rel="canonical" href="https://www.yegor256.com/2024/07/07/checking-object-existence.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2024/07/07/checking-object-existence.html"
+        },
+        "headline": "File.exists or Files.fileExists?",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2024/07/capote.jpg",
+          "height": 1028,
+          "width": 1815
+        },
+        "datePublished": "2024-07-07",
+        "dateModified": "2024-07-07",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "You either instantiate an object first and then check
+its qualities, or you check the quality and only then
+make an object; which way is better?
+",
+        "keywords": ["object consistency", "existence of object", "object qualities", "constructor", "object constructor"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2024/07/07/checking-object-existence.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>7 July 2024</p>
+      <h1>File.exists or Files.fileExists?</h1>
+      <p>How would you design a class that abstracts, say, a file on a disk with certain
+properties? Let’s say you need to be able to check whether the file exists on
+the disk or has already been deleted. Would you create an object first and then
+call the <code class="language-plaintext highlighter-rouge">exists()</code> method on it, or would you call <code class="language-plaintext highlighter-rouge">Disk.fileExists()</code> first
+and only then, if <code class="language-plaintext highlighter-rouge">TRUE</code> is returned, make an instance of the <code class="language-plaintext highlighter-rouge">File</code> class and
+continue working with it? This may sound like a matter of taste, but it’s not
+that simple.</p>
+
+
+
+<amp-img src="/images/2024/07/capote.jpg" alt="Capote (2005) by Bennett Miller" height="1028" width="1815" layout="responsive"></amp-img>
+
+<p>Let’s see how we can check whether a file exists on the disk or not
+in different programming languages and their SDKs:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Language</th>
+      <th>How to check if file exists?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://docs.oracle.com/javase%2F7%2Fdocs%2Fapi%2F%2F/java/io/File.html#exists%28%29">JDK 7</a></td>
+      <td><code class="language-plaintext highlighter-rouge">Files.get("a.txt").exists()</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#exists-java.nio.file.Path-java.nio.file.LinkOption...-">JDK 8</a></td>
+      <td><code class="language-plaintext highlighter-rouge">Files.exists(Path.get("a.txt"))</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.file.exists?view=net-8.0">.Net</a></td>
+      <td><code class="language-plaintext highlighter-rouge">File.Exists("a.txt")</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><a href="https://nodejs.org/api/fs.html#fsexistssyncpath">Node</a></td>
+      <td><code class="language-plaintext highlighter-rouge">fs.existsSync('a.txt')</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><a href="https://docs.python.org/3/library/os.path.html">Python</a></td>
+      <td><code class="language-plaintext highlighter-rouge">os.path.exists("a.txt")</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><a href="https://ruby-doc.org/core-2.5.1/File.html#method-c-exist-3F">Ruby</a></td>
+      <td><code class="language-plaintext highlighter-rouge">File.exist?("a.txt")</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><a href="https://perldoc.perl.org/functions/-X">Perl</a></td>
+      <td><code class="language-plaintext highlighter-rouge">if -e "a.txt"</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><a href="https://www.php.net/manual/en/function.file-exists.php">PHP</a></td>
+      <td><code class="language-plaintext highlighter-rouge">file_exists('a.txt')</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Smalltalk</td>
+      <td><code class="language-plaintext highlighter-rouge">(File name: 'a.txt') exists ifTrue: ...</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>There are basically two different design decisions: either you make a <code class="language-plaintext highlighter-rouge">File</code>
+object first, then ask it for its existence on the disk, or you ask the disk
+whether the file is there and only after that you make an instance of the
+<code class="language-plaintext highlighter-rouge">File</code> class. Which design is better? Let’s forget for a moment that static
+methods are evil and imagine that <code class="language-plaintext highlighter-rouge">Files</code> is not a
+<a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility class</a>, but an
+abstraction of a disk. How would you design the <code class="language-plaintext highlighter-rouge">exists()</code> method if you were
+the designer of a new SDK for a new programming language?</p>
+
+<p>To answer this question, we must answer a more fundamental one: what is the
+message an SDK would be sending to a programmer by placing the <code class="language-plaintext highlighter-rouge">exists
+()</code> method either on the <code class="language-plaintext highlighter-rouge">File</code> or on the <code class="language-plaintext highlighter-rouge">Disk</code>?</p>
+
+<p>This may sound like a trivial and cosmetic issue to an experienced programmer,
+but let me convince you that it’s not. Consider the design of a list of payment
+bills in a database. A bill may either be “paid” or “not yet paid,” which a
+programmer may check through the <code class="language-plaintext highlighter-rouge">paid()</code> method. The first design choice is
+this (it’s Java):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Bill</span> <span class="n">b</span> <span class="o">=</span> <span class="n">bills</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">42</span><span class="o">)</span>
+<span class="k">if</span> <span class="o">(</span><span class="n">b</span><span class="o">.</span><span class="na">paid</span><span class="o">())</span> <span class="o">{</span>
+  <span class="c1">// do something</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The second choice would be the following:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">bills</span><span class="o">.</span><span class="na">paid</span><span class="o">(</span><span class="mi">42</span><span class="o">))</span> <span class="o">{</span>
+  <span class="c1">// do something</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>What is the message in the first snippet? I believe it’s the following: “A bill
+may either be paid or not.” What is the message in the second design option?
+It’s this: “If a bill exists, it is paid.” In other words, in the first
+snippet, two qualities of a bill (“I exist” and “I’m paid”) co-exist, while in
+the second snippet they are merged into one (“I’m paid”).</p>
+
+<p>At the persistence layer, this dichotomy of qualities may mean either a nullable
+column <code class="language-plaintext highlighter-rouge">paid</code> in an SQL-database table or one with the <code class="language-plaintext highlighter-rouge">NOT NULL</code> constraint.
+The first snippet may return a <code class="language-plaintext highlighter-rouge">bill</code> object that exists in the database as a
+row, but the <code class="language-plaintext highlighter-rouge">paid</code> column is set to <code class="language-plaintext highlighter-rouge">NULL</code>. A programmer who uses your design
+can easily grasp the idea of the “being paid” status of a bill: it’s not the
+same as the status of its existence. A programmer must first get the bill and
+only then check its payment status. A programmer would also expect two points
+of possible failure—a bill may be absent, or a bill may not be
+paid—throwing different exceptions or returning different types of results.</p>
+
+<p>As you see, this issue is not cosmetic but very much existential: the design of
+the methods of a <code class="language-plaintext highlighter-rouge">Bill</code> or <code class="language-plaintext highlighter-rouge">Bills</code> helps programmers understand on what terms
+the bills exist.</p>
+
+<p>Now, the answer to the original question about the <code class="language-plaintext highlighter-rouge">exists()</code> method of a file
+is easy to find. Locating a file on a disk is the first task, which checks
+whether the name of the file is correct and the file may potentially exist on
+the disk:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Here, an exception may be raised if,</span>
+<span class="c1">// for example, the name of the file is</span>
+<span class="c1">// wrong or simply a NULL.</span>
+<span class="nc">File</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"a.txt"</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>Then, the existence of the file,
+at this particular moment, on the disk, is checked:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Here, an exception may be raised if,</span>
+<span class="c1">// for example, the disk is not mount or</span>
+<span class="c1">// the permissions are not sufficient for</span>
+<span class="c1">// checking the existence of the file.</span>
+<span class="kt">boolean</span> <span class="n">e</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="na">exists</span><span class="o">();</span>
+</code></pre></div></div>
+
+<p>We may now conclude that how Python, JS, Ruby, and many others let us check the
+existence of a file on the disk is wrong. JDK 6 was right, but the inventors of
+JDK 8 ruined it (most probably for the sake of performance).</p>
+
+<p>By the way, there are many more
+<a href="https://rosettacode.org/wiki/Check_that_file_exists">examples</a> of
+different “file checking” design decisions in many other programming
+languages.</p>
+
+    </article>
+  </body>
+</html>

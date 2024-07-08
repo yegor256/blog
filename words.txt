@@ -19,6 +19,7 @@ absolutely
 abstract
 abstraction
 abstractions
+abstracts
 abuse
 abusers
 abusing
