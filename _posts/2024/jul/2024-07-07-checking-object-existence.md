@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "File.exists or Files.fileExists?"
+title: "Files.fileExists or file.exists?"
 date: 2024-07-07
 place: St. Petersburg, Russia
 tags: oop
