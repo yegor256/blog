@@ -132,7 +132,7 @@ boolean e = f.exists();
 ```
 
 We may now conclude that how Python, JS, Ruby, and many others let us check the
-existence of a file on the disk is wrong. JDK 6 was right, but the inventors of
+existence of a file on the disk is wrong. JDK 7 was right, but the inventors of
 JDK 8 ruined it (most probably for the sake of performance).
 
 By the way, there are many more
