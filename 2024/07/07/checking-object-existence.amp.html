@@ -3,7 +3,7 @@
   <head>
 
     <meta charset="utf-8">
-    <title>File.exists or Files.fileExists?</title>
+    <title>Files.fileExists or file.exists?</title>
     <link rel="canonical" href="https://www.yegor256.com/2024/07/07/checking-object-existence.html">
     <link rel="icon" type="image/png" href="/favicon.ico">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -15,7 +15,7 @@
           "@type": "WebPage",
           "@id": "https://www.yegor256.com/2024/07/07/checking-object-existence.html"
         },
-        "headline": "File.exists or Files.fileExists?",
+        "headline": "Files.fileExists or file.exists?",
         "image": {
           "@type": "ImageObject",
           "url": "/images/2024/07/capote.jpg",
@@ -74,7 +74,7 @@ make an object; which way is better?
         <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
       </p>
       <p>Yegor Bugayenko<br>7 July 2024</p>
-      <h1>File.exists or Files.fileExists?</h1>
+      <h1>Files.fileExists or file.exists?</h1>
       <p>How would you design a class that abstracts, say, a file on a disk with certain
 properties? Let’s say you need to be able to check whether the file exists on
 the disk or has already been deleted. Would you create an object first and then
@@ -123,8 +123,14 @@ in different programming languages and their SDKs:</p>
   </tbody>
   <tbody>
     <tr>
-      <td><a href="https://docs.python.org/3/library/os.path.html">Python</a></td>
+      <td><a href="https://docs.python.org/3/library/os.path.html#os.path.exists">Python</a></td>
       <td><code class="language-plaintext highlighter-rouge">os.path.exists("a.txt")</code></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Python (3.4+)</a></td>
+      <td><code class="language-plaintext highlighter-rouge">pathlib.Path("a.txt").exists()</code></td>
     </tr>
   </tbody>
   <tbody>
@@ -227,7 +233,7 @@ at this particular moment, on the disk, is checked:</p>
 </code></pre></div></div>
 
 <p>We may now conclude that how Python, JS, Ruby, and many others let us check the
-existence of a file on the disk is wrong. JDK 6 was right, but the inventors of
+existence of a file on the disk is wrong. JDK 7 was right, but the inventors of
 JDK 8 ruined it (most probably for the sake of performance).</p>
 
 <p>By the way, there are many more
