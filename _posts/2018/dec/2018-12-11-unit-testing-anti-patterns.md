@@ -175,6 +175,10 @@ in the code will never be discovered by this test. It was probably created after
 implementation was finished, so the author of this test couldn't know whether the test
 actually tests something.
 
+{"name='Guardian'}
+**Guardian**.
+A test that asserts that something **doesn't** happen. For example, `CachableTest` verifies zero interaction with `HttpClient`. It creates a dangerous situation, because it's hard to make a test fail (because removing `when` clause and even removing all logic won't make a test fail) and thus, hard to verify whether a test is not a liar<sup>4</sup>.
+
 Useful links:
 
   1. [_Spock: Up and Running_](https://amzn.to/2BaAKRB) by Rob Fletcher
