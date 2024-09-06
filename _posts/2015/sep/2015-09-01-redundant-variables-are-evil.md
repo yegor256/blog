@@ -85,3 +85,7 @@ P.S. "Avoid temporary variables. The fewer temporary variables in a program,
 the less chance there is that one will not be properly initialized,
 or that one will be altered unexpectedly before it is
 used."---_The Elements of Programming Style_, Brian Kernighan and Phillip James Plauger, 1974.
+
+P.P.S. You may find [this study](https://ieeexplore.ieee.org/abstract/document/5332232)
+by Raymond Buse et al. relevant: they found out that the biggest negative
+impact on Java code readability has the number of identifiers used in the code.
