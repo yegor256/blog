@@ -37,7 +37,7 @@ Most lectures are in English, but some of them are in Russian too.
 Jan 2024<br/>
 **Open Source Best Practices**<br/>
 in [Innopolis University](https://innopolis.university/) (Kazan, Russia)<br/>
-8 lectures: in progress...
+8 lectures:
 [slides](https://github.com/yegor256/osbp),
 [videos](https://www.youtube.com/playlist?list=PLaIsQH4uc08zjutyoBOtoa6fnxzrCQK2Q)
 {: .lecture}
