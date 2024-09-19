@@ -193,7 +193,7 @@ definitely not the first. A lot about
 this subject has already been published by very respected authors, including
 [OrmHate](https://martinfowler.com/bliki/OrmHate.html) by Martin Fowler (not against ORM, but worth mentioning anyway),
 [Object-Relational Mapping Is the Vietnam of Computer Science](http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/) by Jeff Atwood,
-[The Vietnam of Computer Science](http://blogs.tedneward.com/post/the-vietnam-of-computer-science/) by Ted Neward,
+[The Vietnam of Computer Science](https://web.archive.org/web/20220823105749/http://blogs.tedneward.com/post/the-vietnam-of-computer-science/) by Ted Neward,
 [ORM Is an Anti-Pattern](http://seldo.com/weblog/2011/08/11/orm_is_an_antipattern) by Laurie Voss,
 and many others.
 
