@@ -48,6 +48,17 @@ article {
       border-bottom: 1px solid $grey;
     }
   }
+
+  .footnotes {
+    font-size: 0.8em;
+    line-height: 1em;
+
+    ol {
+      color: $grey;
+      margin-top: 4em;
+      padding-left: 1em;
+    }
+  }
 }
 
 .jekyll-chatgpt-translate {

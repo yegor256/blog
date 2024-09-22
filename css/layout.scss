@@ -19,6 +19,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+@use "sass:color";
+
 @import 'disqus';
 @import 'defs';
 @import 'fonts';
@@ -446,7 +448,7 @@ figure {
   position: relative;
 
   figcaption {
-    background-color: darken($grey, 30%);
+    background-color: color.adjust($grey, $lightness: -30%);
     bottom: 1em;
     color: silver;
     font-size: .8em;
