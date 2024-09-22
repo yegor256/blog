@@ -448,7 +448,7 @@ figure {
   position: relative;
 
   figcaption {
-    background-color: color.adjust($grey, $lightness: -30%);
+    background-color: $lightgrey;
     bottom: 1em;
     color: silver;
     font-size: .8em;
