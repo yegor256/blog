@@ -19,7 +19,7 @@ keywords:
 {% badge /images/about/yegor-speaking.jpg 300 %}
 
 I'm Yegor Bugayenko (Russian:
-<span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р Буга&#x435;&#x301;нко</span>),
+<span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р Ге&#x43E;&#x301;ргиевич Буга&#x435;&#x301;нко</span>),
 a programmer, founder, investor, and philanthropist.
 
 Update: Since September 2019 I'm a Director of System Programming Laboratory
