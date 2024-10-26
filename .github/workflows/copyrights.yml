@@ -19,7 +19,11 @@
 name: copyrights
 'on':
   push:
+    branches:
+      - master
   pull_request:
+    branches:
+      - master
 jobs:
   copyrights:
     runs-on: ubuntu-24.04
