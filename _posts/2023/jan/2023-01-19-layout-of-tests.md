@@ -302,7 +302,7 @@ src/
 ```
 
 Pay attention to the test `FactoryOfPhrasesTest.` It tests the "fake" object `FactoryOfPhrases,`
-which is part of the live classes collection. The factory of phases is shipped together
+which is part of the live classes collection. The factory of phrases is shipped together
 with all other classes. Therefore, it can be used by other projects and not only for test
 purposes.
 
