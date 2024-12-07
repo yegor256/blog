@@ -44,7 +44,7 @@ and
 [COSMIC](https://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 
 I am a **programmer**, I [write](https://github.com/yegor256)
-mostly in Java, but also in Ruby, PHP, and JavaScript (watch [this](https://www.youtube.com/watch?v=cGcCcxx4xrg)).
+mostly in Java, but also in Ruby, Rust, and JavaScript (watch [this](https://www.youtube.com/watch?v=cGcCcxx4xrg)).
 I'm the founder and lead architect of
 [Zold](https://www.zold.io),
 [Cactoos](https://www.cactoos.org),
