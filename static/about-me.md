@@ -43,9 +43,9 @@ Besides that, I'm a proud holder of
 and
 [COSMIC](https://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 
-I am a **programmer**, I [write](https://github.com/yegor256)
+I am a **programmer**, [writing](https://github.com/yegor256)
 mostly in Java, but also in Ruby, Rust, and JavaScript (watch [this](https://www.youtube.com/watch?v=cGcCcxx4xrg)).
-I'm the founder and lead architect of
+Also, a founder and lead architect of
 [Zold](https://www.zold.io),
 [Cactoos](https://www.cactoos.org),
 [Takes](https://www.takes.org),
@@ -55,9 +55,9 @@ You can sponsor me on [GitHub](https://github.com/sponsors/yegor256).
 Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
 about software engineering, and a detailed description of
 [my work environment]({% pst 2017/jun/2017-06-27-my-environment %}).
-I'm an Oracle Certified Master and Java EE 6 Enterprise Architect
+Also, an Oracle Certified Master and Java EE 6 Enterprise Architect
 ([OCMEA](/pdf/certifications/OCMJEA-Feb11.pdf)).
-Besides that, I'm a proud holder of
+Besides that, a proud holder of
 [ZCE](/pdf/certifications/PHP5-Jul08.pdf),
 [ZFCE](/pdf/certifications/ZFCE-Oct09.pdf), and
 [OCUP](/pdf/certifications/OCUP-Sep08.pdf) certifications.
@@ -66,27 +66,27 @@ called [Elegant Objects](/elegant-objects.html), plus
 [a few other books](/books.html),
 and founded [a movement for better OOP](https://elegantobjects.org).
 
-I was an **investor** at [SeedRamp.com](https://www.seedramp.com), I've
-made a few investments, but I've got no results yet.
+I was an **investor** at [SeedRamp.com](https://www.seedramp.com),
+where I've made a few investments, but haven't got any results as of yet.
 
-I am a **philanthropist**, I donate a few thousand dollars every year (started in 2015)
-to the best open source project at the time, which I pick myself out of about a hundred in
-a more or less fair [competition](/award.html).
+I am a **philanthropist**, donating a few thousand dollars
+every year (started in 2015) to the best open source project at the time,
+which we pick out of about a few hundreds in
+a more or less fair [competition](https://www.kaicode.org).
 
 I'm also a bit of a [scientist](/papers.html):
 [Scopus](https://www.scopus.com/authid/detail.uri?authorId=30367443600),
 [Google Scholar](https://scholar.google.com/citations?user=cYmXh60AAAAJ),
 [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor).
-Occasionally I teach in
+Occasionally teaching in
 [HSE University](https://www.hse.ru/org/persons/776430466) (Moscow, Russia) 
 and in
 [Innopolis University](https://innopolis.university/en/) (Kazan, Russia).
 
-Here is [my resume](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume.tex&command=pdflatex&trackId=1520158941887)
-and its longer and [boring version](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume-boring.tex&command=pdflatex&trackId=1520166474432).
+Here is [my resume][cv] and its longer and [boring version][cv-boring].
 
 Once a month, I send a summary email of my writing activity. If
-you're interested in knowing what's going on here, I can add you to my
+you're interested in knowing what's going on here, you can join the
 mailing list. Just give me your email address and briefly explain who you are
 and why you're interested (I'm trying to avoid anonymous
 subscribers).
@@ -152,3 +152,6 @@ BTW, if you wonder why 256, the answer is simple---this is my
 [FIDOnet](https://en.wikipedia.org/wiki/FidoNet) node ID back from 1995.
 I was [2:464/256](http://nodehist.fidonet.org.ua/?address=2%3A464%2F256) over there, and this
 is where my network presence has started.
+
+[cv]: https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume.tex&command=pdflatex&trackId=1520158941887
+[cv-boring]: https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume-boring.tex&command=pdflatex&trackId=1520166474432
