@@ -22,7 +22,7 @@ I'm Yegor Bugayenko (Russian:
 <span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р Ге&#x43E;&#x301;ргиевич Буга&#x435;&#x301;нко</span>),
 a programmer, founder, investor, and philanthropist.
 
-Update: Since September 2019 I'm a Director of System Programming Laboratory
+Update: Since September 2019, I'm a Director of System Programming Laboratory
 in [Huawei](https://www.huawei.com)
 [RRI](https://career.huawei.ru/rri/).
 
