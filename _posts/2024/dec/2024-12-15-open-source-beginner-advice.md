@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An Advice for Open Source First Time Contributors"
+title: "Advice for First-Time Open Source Contributors"
 date: 2024-12-15
 place: Moscow, Russia
 tags: oss
@@ -14,9 +14,9 @@ keywords:
   - success in open source
   - github success
   - how to contribute to open source
-image: /images/2024/12/...
+image: /images/2024/12/white-sun.jpg
 jb_picture:
-  caption:
+  caption: Белое слонце пустыни (1970) by Владимира Мотыль
 ---
 
 My [first attempt][jersey] to contribute to an open source repository was a
@@ -61,7 +61,8 @@ faster—especially if you are just a beginner making your first pull requests.
   told their code is bad. Thus, investing time in reviewing a large pull
   request from a new contributor is risky. At the same time, it's sad to see
   potentially good code end up in the trash. Do everyone a favor and start
-  small---less than 50 hits-of-code per pull request. This approach will lead to
+  small---less than 50 [hits-of-code]({% pst 2014/nov/2014-11-14-hits-of-code %})
+  per pull request. This approach will lead to
   higher-quality reviews and faster merges.
 
 **Pick Easiest Problems**. Not sure what to contribute? Scan their backlog of
