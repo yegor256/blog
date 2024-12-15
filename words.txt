@@ -1,5 +1,6 @@
 a-class
 a-ha
+aa
 aaron
 abandon
 abdul
@@ -384,6 +385,7 @@ anymore
 anyone
 anyone's
 anything
+anytime
 anyway
 anywhere
 AOP
@@ -797,6 +799,7 @@ beck's
 become
 becomes
 becoming
+bed
 been
 beer
 beers
@@ -806,6 +809,7 @@ beforehand
 beg
 begging
 begin
+beginner
 beginning
 begins
 behalf
@@ -927,6 +931,7 @@ blaming
 blank
 blindly
 bloat
+blob
 bloch
 block
 blockchain
@@ -1002,6 +1007,7 @@ bother
 bothered
 bothering
 bothers
+bots
 bottleneck
 bottom
 bouchrika
@@ -1294,6 +1300,7 @@ cause-risk-effect-plan
 caused
 causes
 causing
+cb
 CC
 CC-ing
 CCs
@@ -1410,6 +1417,7 @@ cheerful
 cheering
 cheerleader
 cheerleaders
+cheers
 chef
 cherry-picked
 chess
@@ -2002,6 +2010,7 @@ copying
 copyleft
 copyright
 core
+core-common
 corey
 corner
 corners
@@ -2206,6 +2215,7 @@ cybersecurity
 cycle
 cycles
 cycling
+czerwonka
 d-s
 dablup
 dad
@@ -2703,6 +2713,7 @@ diving
 divorce
 divorces
 djk
+dl
 DNA
 DNS
 do
@@ -2729,6 +2740,7 @@ doesn't
 dog
 dogmatic
 dogs
+doi
 doing
 dollar
 dollars
@@ -2883,6 +2895,7 @@ ebay
 EC
 eckel
 eclipse
+eclipse-ee
 ECMAScript
 eco-friendly
 eco-manager
@@ -3013,6 +3026,7 @@ employing
 employment
 employs
 empty
+emulate
 en
 enable
 enables
@@ -3445,6 +3459,7 @@ features
 featuring
 feb
 february
+fec
 fed
 federer
 fee
@@ -3469,6 +3484,7 @@ females
 feminine
 feminist
 feminists
+ferreira
 festival
 fetch
 fetches
@@ -3615,6 +3631,7 @@ fly
 flyer
 flying
 flyweight
+fnxzrCQK
 focus
 focused
 focuses
@@ -3638,6 +3655,7 @@ food
 foods
 fool
 fooled
+fooling
 foot
 footer
 footest
@@ -3775,6 +3793,7 @@ frivolous
 from
 front
 front-end
+fruit
 frustrate
 frustrated
 frustrates
@@ -3937,6 +3956,7 @@ glad
 gladly
 glance
 glass
+glassfish
 glenford
 global
 globally
@@ -4260,6 +4280,7 @@ high
 high-level
 high-quality
 higher
+higher-quality
 highest
 highlight
 highlighted
@@ -4435,6 +4456,7 @@ idiots
 idx
 IE
 IEEE
+ieeexplore
 if
 if-then-else
 iff
@@ -4682,6 +4704,7 @@ INSERT
 inside
 insights
 insist
+insisting
 insists
 inspect
 inspection
@@ -4902,6 +4925,7 @@ iterators
 iterm
 its
 itself
+iu
 IV
 ivan
 jack
@@ -4981,6 +5005,7 @@ JEP
 jeremy
 jerry
 jersey
+jersey-wiki
 jetbrains
 jew
 jewish
@@ -5479,6 +5504,7 @@ low
 low-caliber
 low-cohesion
 low-cost
+low-hanging
 low-level
 low-quality
 lower
@@ -5854,6 +5880,7 @@ milestones
 military
 military-style
 millennial
+miller
 million
 millionaire
 millionaires
@@ -6193,6 +6220,7 @@ nevertheless
 new
 newbie
 newbies
+newcomer
 newcomers
 newer
 newly
@@ -6545,6 +6573,9 @@ ORM
 orthodox
 orthogonal
 OS
+osbp
+osbp-github
+osbp-youtube
 oscar
 oscars
 OSI
@@ -6738,6 +6769,7 @@ patent-pending
 patents
 path
 paths
+pathtemplatetest
 patience
 patient
 patreon
@@ -6834,6 +6866,7 @@ permissions
 permit
 persisted
 persistence
+persistent
 persisting
 persists
 person
@@ -6953,6 +6986,7 @@ plagues
 plain
 plainmixin
 plaintiff
+PLaIsQH
 plan
 plan-do-check-act
 planet
@@ -6971,6 +7005,7 @@ player
 player'
 players
 playing
+playlist
 plays
 playstation
 PLDI
@@ -7003,6 +7038,7 @@ podcast
 poetry
 point
 pointer
+pointing
 pointless
 points
 poison
@@ -7038,6 +7074,7 @@ ponzi
 POO
 pool
 poor
+poor-quality
 poorly
 pope
 popular
@@ -7502,6 +7539,7 @@ raises
 raising
 rake
 RAM
+raman
 ran
 random
 randomized
@@ -7880,6 +7918,7 @@ researchr
 resell
 resemble
 resent
+resentful
 resentment
 reserve
 reserved
@@ -8217,6 +8256,7 @@ scalable
 scalar
 scale
 scam
+scan
 scandal
 scandals
 scans
@@ -10594,6 +10634,7 @@ ZIP
 ziv
 ziyavakhobov
 ziyavuddin
+zjutyoBOtoa
 zobel
 zold
 zombie
