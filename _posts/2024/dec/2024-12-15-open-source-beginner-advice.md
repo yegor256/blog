@@ -16,7 +16,7 @@ keywords:
   - how to contribute to open source
 image: /images/2024/12/white-sun.jpg
 jb_picture:
-  caption: Белое слонце пустыни (1970) by Владимира Мотыль
+  caption: Белое слонце пустыни (1970) by Владимир Мотыль
 ---
 
 My [first attempt][jersey] to contribute to an open source repository was a
