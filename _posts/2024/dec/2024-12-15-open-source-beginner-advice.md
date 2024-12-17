@@ -85,7 +85,8 @@ faster—especially if you are just a beginner making your first pull requests.
 
 **Look Like a Human**. Your pull request looks suspicious because you are a
   stranger. In the age of AI, some pull requests might be coming from bots, and
-  this trend will only grow. You must prove you're a trustworthy human being:
+  this trend will only grow. You must prove you're a
+  [trustworthy]({% pst 2020/jul/2020-07-29-open-source-etiquette %}) human being:
   set a decent avatar, put your real name in your profile, fill in all the
   required fields, and so forth.
 
@@ -111,7 +112,8 @@ faster—especially if you are just a beginner making your first pull requests.
   the first [negative][ferreira2021shut] comment. Keep insisting that your pull request deserves a
   merge. Pay attention to what they say, not how they say it. In the end, you
   want to get your code through. You don't want to become their friend; you
-  want your code to be merged.
+  want your code to be merged. Read about
+  [open source etiquette]({% pst 2020/jul/2020-07-29-open-source-etiquette %}) too.
 
 <hr/>
 

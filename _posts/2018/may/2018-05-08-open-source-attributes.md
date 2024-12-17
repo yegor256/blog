@@ -50,7 +50,8 @@ famous piece [_The Cathedral and the Bazaar_](https://amzn.to/2FKF9tv),
 It's the responsibility of the software product's author to help
 those "good" programmers to reuse the code. Coding, testing, debugging,
 and making sure "it works on my laptop" is one thing. Making it readable and reusable
-is a totally different piece of work, which may take much more time.
+is a totally different piece of work, which may take
+[much more]({% pst 2024/dec/2024-12-15-open-source-beginner-advice %}) time.
 
 As [Karl Fogel](https://en.wikipedia.org/wiki/Karl_Fogel)
 said in [_Producing Open Source Software_](https://amzn.to/2jyMrrF):
