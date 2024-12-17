@@ -184,7 +184,8 @@ project at all.
 ## 5. Report When It Is Broken
 
 I think it is obvious, but I will reiterate: Every bug has
-to be reproducible. Every time you [report a bug]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}), you should explain
+to be reproducible. Every time you
+[report a bug]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}), you should explain
 how exactly the product is broken. Yes, it is your job to prove that the
 software doesn't work as intended, or is not documented properly, or
 doesn't satisfy the
@@ -196,7 +197,8 @@ a task, a question, or a suggestion, should be formatted in this way. By
 submitting it, you're asking the project to move from point A to point B. Something
 is not right at point A, and it will be much better for all of us to be
 at that point B. So it's obvious that you have to explain where these points
-A and B are. It is highly desirable if you can explain how to get there---how to reproduce a problem and how to fix it.
+A and B are. It is highly desirable if you can explain
+how to get there---how to reproduce a problem and how to fix it.
 
 {% quote Your job, as a ticket reporter, is to draw that line from point A to point B. %}
 
