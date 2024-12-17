@@ -86,8 +86,9 @@ When you make some changes to the branch and want your pull request to be
 reviewed again: post a message explicitly asking your reviewer to take another look.
 When you submit a pull request, post a message into it addressing it to the
 architect of the project: ask them to review the PR.
-And so on. Don't expect them to watch your activity. They have other things to do.
-It's your responsibility to ping them.
+And [so on]({% pst 2024/apr/2024-04-01-ping-me-please %}).
+Don't expect them to watch your activity. They have other things to do.
+It's your responsibility to [ping them]({% pst 2024/apr/2024-04-01-ping-me-please %}).
 
 **Make Descriptive [Commits](https://git-scm.com/docs/git-commit)**.
 The style of formatting Git commit messages (I'm sure you are using Git) is usually
