@@ -52,7 +52,8 @@ resolution, only these two characters have formal roles.
 
 The responsibility of the ticket reporter is to _defend the problem_. When I
 [report a bug]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}),
-I have to insist that it exists---this is my job. Others
+I have to [insist]({% pst 2020/jul/2020-07-29-open-source-etiquette %})
+that it exists---this is my job. Others
 may tell me that I'm wrong and the bug is not there. They may tell
 me that they can't reproduce it. They may say that my description of
 a task is too _vague_ and nobody understands it. There may be many issues
@@ -64,7 +65,8 @@ the ticket. However, until the ticket is closed, I'm its guardian angel.
 
 On the other hand, the responsibility of the ticket solver is to
 _defend the solution_. When a ticket is assigned to me and I have to resolve it,
-my job is to convince the reporter that my solution is good enough. He may
+my job is to [convince]({% pst 2020/jul/2020-07-29-open-source-etiquette %})
+the reporter that my solution is good enough. He may
 tell me that my solution is not sufficient, not the most efficient, or
 incomplete. My job is to insist that I'm right and he is wrong. Well, of course,
 in a reasonable way. And in order to create a solution that will be
@@ -163,7 +165,8 @@ All we need in a ticket is a solution(s).
 {% quote Don't pollute the air with generic opinions. %}
 
 If you think the ticket should be closed because the introduced solution
-is good enough, address your comment to the ticket reporter. And start
+is good enough, [address]({% pst 2024/apr/2024-04-01-ping-me-please %})
+your comment to the ticket reporter. And start
 it with "@jeff, I think the solution you've got already is good enough, because..."
 This way, you will help the assigned to close the ticket and move on.
 
