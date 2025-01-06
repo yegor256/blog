@@ -46,7 +46,7 @@ module Jekyll
         else
           payload['image_width'] = 1400
           payload['image_height'] = 1400
-          payload['image_src'] = 'https://www.yegor256.com/images/face-1200x1200.jpg'
+          payload['image_src'] = 'https://www.yegor256.com/images/face-1024x1024.jpg'
         end
         page.render(
           { 'post' => Layout.new(site, site.source, '_layouts/amp.html') },

@@ -76,7 +76,7 @@
 
 \newcommand\ybPrintPhoto{%
   \begin{textblock}{2.4}[1,0](14,1.5){
-    \includegraphics[width=\textwidth]{../images/face-1200x1200.jpg}
+    \includegraphics[width=\textwidth]{../images/face-1024x1024.jpg}
   }\end{textblock}
 }
 
