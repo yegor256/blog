@@ -6,7 +6,7 @@ description: |
   open source projects I'm working with in Zerocracy,
   my software development company
 permalink: best.html
-image: /images/about/yegor-speaking.jpg
+image: /images/about/yegor-full-size.jpg
 keywords:
   - java blog
   - java

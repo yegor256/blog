@@ -16,7 +16,7 @@ nospell: true
 image: /images/andreea/yegor-is-presenting.png
 ---
 
-{% badge /images/about/yegor-speaking.jpg 300 %}
+{% badge /images/about/yegor-full-size.jpg 300 %}
 
 [**Yegor Bugayenko**](/) is a famous software development expert, a book writer,
 a blogger, a conference speaker, and a CEO of [Zerocracy](https://www.zerocracy.com), AI software company.
