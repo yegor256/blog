@@ -16,7 +16,7 @@ keywords:
   - project management blog
 ---
 
-{% badge /images/about/yegor-full-size.jpg 300 %}
+{% badge /images/about/yegor-speaking.jpg 300 %}
 
 I'm Yegor Bugayenko (Russian:
 <span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р Ге&#x43E;&#x301;ргиевич Буга&#x435;&#x301;нко</span>),
