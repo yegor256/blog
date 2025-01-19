@@ -15,9 +15,9 @@ keywords:
   - quotes about software testing
 ---
 
-{% badge /images/2014/08/art-of-software-testing.png 96 https://amzn.to/1Y3qAbN %}
+{% badge /images/2014/08/art-of-software-testing.png 96 https://jttu.net/myers2012art %}
 
-"[The Art of Software Testing"](https://amzn.to/1Y3qAbN)"
+"[The Art of Software Testing"](https://jttu.net/myers2012art)"
 by Glenford J. Myers, Tom Badgett and Corey Sandler is one of
 my favorite books concerning testing and software engineering in
 general. In this article, I will provide an overview of the book, as well as

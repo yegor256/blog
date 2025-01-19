@@ -53,7 +53,7 @@ So please. Calm down and try to understand while I try to explain.
 
 ## Existing Arguments
 
-{% badge /images/2014/09/object-thinking-by-david-west.png 96 https://amzn.to/266oJr4 %}
+{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
 
 There are a few arguments against "accessors"
 (another name for getters ~~and setters~~), in an object-oriented world.

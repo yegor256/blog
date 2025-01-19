@@ -101,7 +101,7 @@ that the product is ready to be shipped. Then, ship it, consciously
 understanding that it still has an unlimited amount of not yet discovered
 bugs.
 
-{% badge /images/2015/04/book-object-thinking.jpg 96 https://amzn.to/266oJr4 %}
+{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
 
 David West in
 [Object Thinking](https://amzn.to/266oJr4)

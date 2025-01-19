@@ -24,8 +24,8 @@ just update this post in the future when I stumble upon something else that's de
 
 Note that I tried to put the most important books at the top of the list.
 
-{% badge /images/2015/04/book-object-thinking.jpg 96 https://amzn.to/266oJr4 %}
-[**Object Thinking**](https://amzn.to/266oJr4)
+{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
+[**Object Thinking**](https://jttu.net/west2004object)
 by David West.
 This is the best book I've read about object-oriented
 programming, and it totally changed my understanding of it. I would
@@ -33,8 +33,8 @@ recommend you read it a few times. But before reading, try to forget everything
 you've heard about programming in the past. Try to start from scratch. Maybe it will
 work for you too.
 
-{% badge /images/2015/04/book-pmp-rita.jpg 96 https://amzn.to/266pAYB %}
-[**PMP Exam Prep, Eighth Edition: Rita's Course in a Book for Passing the PMP Exam**](https://amzn.to/266pAYB)
+{% badge /images/2015/04/book-pmp-rita.jpg 96 https://jttu.net/rita2009pmp %}
+[**PMP Exam Prep, Eighth Edition: Rita's Course in a Book for Passing the PMP Exam**](https://jttu.net/rita2009pmp)
 by Rita Mulcahy.
 This book is my favorite for project management. Even though it's about the
 PMI approach and PMBOK in particular, it is a must-read for everyone who
@@ -42,8 +42,8 @@ is interested in management. Ignore the PMBOK specifics and focus on
 the philosophy of project management and the role of
 [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}) in it.
 
-{% badge /images/2015/04/book-art-of-testing.jpg 96 https://amzn.to/1Y3qAbN %}
-[**The Art of Software Testing**](https://amzn.to/1Y3qAbN)
+{% badge /images/2015/04/book-art-of-testing.jpg 96 https://jttu.net/myers2012art %}
+[**The Art of Software Testing**](https://jttu.net/myers2012art)
 by Glenford J. Myers et al.
 You can read my short review of this book [here]({% pst 2014/aug/2014-08-22-art-of-software-testing %}).
 The book perfectly explains the philosophy of testing and destroys
