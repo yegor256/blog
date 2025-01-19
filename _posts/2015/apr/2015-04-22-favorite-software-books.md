@@ -33,7 +33,7 @@ recommend you read it a few times. But before reading, try to forget everything
 you've heard about programming in the past. Try to start from scratch. Maybe it will
 work for you too.
 
-{% badge /images/2015/04/book-pmp-rita.jpg 96 https://jttu.net/rita2009pmp %}
+{% badge https://yegor256.github.io/bibliography/book-covers/rita2009pmp.jpg 96 https://jttu.net/rita2009pmp %}
 [**PMP Exam Prep, Eighth Edition: Rita's Course in a Book for Passing the PMP Exam**](https://jttu.net/rita2009pmp)
 by Rita Mulcahy.
 This book is my favorite for project management. Even though it's about the
