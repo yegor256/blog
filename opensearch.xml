@@ -29,7 +29,7 @@ SOFTWARE.
   <LongName>Yegor's Blog About Computers</LongName>
   <Image height="128" width="128" type="image/png">https://www.yegor256.com/favicon.ico</Image>
   <Developer>Yegor Bugayenko</Developer>
-  <Attribution>Copyright 2014-2023, Yegor Bugayenko, All Rights Reserved</Attribution>
+  <Attribution>Copyright 2014-2025, Yegor Bugayenko, All Rights Reserved</Attribution>
   <Query role="example" searchTerms="java"/>
   <SyndicationRight>open</SyndicationRight>
   <AdultContent>false</AdultContent>
