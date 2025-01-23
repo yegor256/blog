@@ -66,4 +66,3 @@ Finished processing dependencies for requs-pygment==0.1
 
 It's done. Now I run `jekyll build` and my syntax
 is highlighted according to the custom rules I specified in the lexer.
-

@@ -221,7 +221,7 @@ to do in order to implement those plans.
 <br/>
 Founded 12-Apr-2019.
 
-<!-- 
+<!--
 Others (less stable or successful):
 [jpeek](https://github.com/yegor256/jpeek),
 [xcop](https://github.com/yegor256/xcop),

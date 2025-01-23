@@ -248,4 +248,3 @@ gives for the `spring-boot-project/spring-boot` sub-module in Spring Boot
 When Qulice says that everything is clean, I consider the code base fully
 ready for maintenance and modifications. At this point the refactoring
 is done.
-

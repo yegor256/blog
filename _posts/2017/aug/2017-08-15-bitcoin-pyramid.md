@@ -104,4 +104,3 @@ Why the police are still closing their eyes to what Coinbase is doing,
 I simply can't understand. Maybe because NYSE and A16Z are among their
 [long list](https://www.crunchbase.com/organization/coinbase/investors)
 of investors?
-

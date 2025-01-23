@@ -105,5 +105,3 @@ Pay attention to the version numbers. Those that start with `~>` or `>=` are dyn
 while others are fixed. It's a hybrid approach, but it works for me.
 
 Maybe it will help you too.
-
-

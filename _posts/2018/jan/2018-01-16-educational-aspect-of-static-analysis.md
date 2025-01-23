@@ -85,4 +85,3 @@ them were designed especially for the object-oriented philosophy
 
 Thus, simply put, we don't want you to go through the static analysis phase easily.
 We want you to suffer in order to learn.
-

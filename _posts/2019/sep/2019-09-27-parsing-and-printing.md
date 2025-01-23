@@ -318,5 +318,3 @@ both replaceable and polymorphic.
 Maybe someone will be interested in creating an open source
 date and time printing and parsing library for Java with these
 principles in mind?
-
-

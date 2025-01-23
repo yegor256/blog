@@ -161,4 +161,3 @@ return a quick summary of it. The distance metric will tell us exactly that:
 how many times, and by how much, we violated the principle of loose coupling.
 
 Would you be interested in creating such an analyzer for, say, Java code?
-

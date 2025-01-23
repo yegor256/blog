@@ -68,4 +68,3 @@ project unless you are absolutely sure they make sense.
 Never submit bugs that don't exist in master, but only in your branches,
 like it was done [here](https://github.com/yegor256/jpeek/issues/128);
 instead, use PDD or [cut corners]({% pst 2015/jan/2015-01-15-how-to-cut-corners %}).
-

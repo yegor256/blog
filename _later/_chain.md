@@ -87,17 +87,3 @@ final class Payments implements Items<Payment> {
   }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-

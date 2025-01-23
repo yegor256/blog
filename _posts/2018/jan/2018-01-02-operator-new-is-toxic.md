@@ -158,6 +158,3 @@ methods, the less reusable and testable is the class.
 In other words, operator `new` is a rather toxic thing, so try to keep its
 usage to a minimum in your methods. Make sure you instantiate everything
 or almost everything in your secondary constructors.
-
-
-

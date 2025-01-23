@@ -30,4 +30,3 @@ Time. -- long requests
 Brevity. -- short error messages, or no logs at all
 
 Dependencies.
-

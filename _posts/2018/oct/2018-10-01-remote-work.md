@@ -52,4 +52,3 @@ development cost [was reduced](https://www.yegor256.com/2014/04/11/cost-of-loc.h
 received over 50% more money for their working time.
 The idea was to make programmers motivated and interested in their tasks,
 let them be their own bosses---and it proved to work just great.
-

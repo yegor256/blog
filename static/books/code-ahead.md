@@ -96,4 +96,3 @@ I finally found the right name for this book: "Code Ahead." It is derived
 from "think ahead," with a focus on code and coders. The book will
 explain what I think has to be done in any software project to make
 the lifetime of the software longer.
-

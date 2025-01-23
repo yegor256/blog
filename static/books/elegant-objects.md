@@ -826,4 +826,3 @@ of the ideas were taken from the articles previously published on the blog.
 <div class="book-event">&nbsp;</div>
 Jul 5, 2015:
 I started to write it.
-

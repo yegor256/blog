@@ -138,4 +138,3 @@ to be nice, I would say that it is very unsafe. But _not_ being nice is obviousl
 a solution either, because anyone asking this question clearly wants to be nice.
 Thus, the only solution I managed to find is a personal
 code of conduct, which helps me be effective and not stressed at the same time.
-

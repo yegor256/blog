@@ -48,5 +48,3 @@ Everything is clear, cash is cash. But that's rarely the case. In most startups
 founders and co-founders have no cash. All they have is their time, which
 they are ready spend on building that house/startup. And that's where
 the situation becomes more complicated and leads to ugly conflicts.
-
-

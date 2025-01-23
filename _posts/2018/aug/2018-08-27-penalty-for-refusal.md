@@ -61,5 +61,3 @@ unreliability.
 Thus, even though we don't blame you for refusals, we want to know who is
 refusing more frequently, in order to make our management decisions.
 Sounds fair?
-
-

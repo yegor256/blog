@@ -38,4 +38,3 @@ The team is excited.
 It's always difficult to innovate.
 
 It's a tough season for our business.
-

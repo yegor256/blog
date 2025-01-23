@@ -117,4 +117,3 @@ likely won't have these skills.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">A fellow programmer asks you to explain how the class, which you created some time ago, works. What do you do? <a href="https://twitter.com/hashtag/sociotech?src=hash&amp;ref_src=twsrc%5Etfw">#sociotech</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/985439928430538752?ref_src=twsrc%5Etfw">April 15, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-

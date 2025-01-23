@@ -134,4 +134,3 @@ String url = Manifests.read("Pgsql");
 ```
 
 If you know of any other useful purposes for `MANIFEST.MF`, let me know.
-

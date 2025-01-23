@@ -19,7 +19,7 @@ jb_picture:
   caption: Берегись автомобиля (1966) by Эльдар Рязанов
 ---
 
-I'm helping [organize]({% pst 2021/apr/2021-04-14-how-we-organized-iccq %}) 
+I'm helping [organize]({% pst 2021/apr/2021-04-14-how-we-organized-iccq %})
 the [ICCQ conference](https://www.iccq.ru) this year for the fourth time, with the
 in-cooperation support of the IEEE Computer Society. Based on this short-term
 experience, I can assert that reviewing research papers is a skill that even some
@@ -33,7 +33,7 @@ to review an academic research paper (thus mostly helping other newbies).
 
 {% jb_picture_body %}
 
-Structure your review as a plain text of _five_ paragraphs, 
+Structure your review as a plain text of _five_ paragraphs,
 each answering one question:
 
   1. How did you understand the thesis of the paper?
@@ -63,7 +63,7 @@ good research paper may have (most important at the top):
   * The paper is well-organized.
   * The paper is well-written with clear and concise language.
 
-Next, highlight the **major** inconsistencies. This list of typical 
+Next, highlight the **major** inconsistencies. This list of typical
 mistakes may help you (the most severe ones are at the top):
 
   * Certain parts of the paper are obvious [plagiarism](https://en.wikipedia.org/wiki/Plagiarism).
@@ -108,8 +108,8 @@ sometimes an unfortunate side effect. Try to minimize it.
 Here is a toy example:
 
 ```text
-In their research, the authors claim that all programmers 
-are lazy and selfish creatures, grounding their conclusion 
+In their research, the authors claim that all programmers
+are lazy and selfish creatures, grounding their conclusion
 on a survey of 150 respondents.
 
 Pros:
@@ -126,8 +126,8 @@ Minor cons:
   - Typos and broken English here and there.
   - The font in most figures is too small.
 
-Even though the subject of the research is important, 
-I believe this paper is not yet ready for publication 
+Even though the subject of the research is important,
+I believe this paper is not yet ready for publication
 and requires significant rework.
 
 [1] Dean et al., Programmers Are Super Lazy, 2022

@@ -101,4 +101,3 @@ how your `.js` code would look in [Atom](https://atom.io/):
 Finally, here is Python in [PyCharm](https://www.jetbrains.com/pycharm/):
 
 {% figure /images/2014/10/pycharm-python-indentation.png 852 %}
-

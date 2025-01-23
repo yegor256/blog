@@ -154,4 +154,3 @@ the console will see the string.
 
 Thus, we have objects, but we don't have methods.
 There are only attributes representing other objects.
-

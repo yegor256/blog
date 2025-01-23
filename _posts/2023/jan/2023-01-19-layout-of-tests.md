@@ -19,12 +19,12 @@ jb_picture:
   caption: Мимино (1977) by Георгий Данелия
 ---
 
-I don't know what programming language you use, but my experience 
-of recent coding in Java, Ruby, JavaScript, PHP, Python, C++, and Rust tells 
-me that the principle, which I will try to convince you to adhere 
-to---is universal for all languages. It's about the naming of test files. 
-It may look to you like a question of low importance, but let me try 
-to demonstrate that it's not. How do you name your files with test classes? How many 
+I don't know what programming language you use, but my experience
+of recent coding in Java, Ruby, JavaScript, PHP, Python, C++, and Rust tells
+me that the principle, which I will try to convince you to adhere
+to---is universal for all languages. It's about the naming of test files.
+It may look to you like a question of low importance, but let me try
+to demonstrate that it's not. How do you name your files with test classes? How many
 of them do you create in the src/test/java directory? Where do you place
 a class that is used only in a test but is not a test by itself? To most of these
 questions, the answer most of you would give is "Whatever!"
@@ -34,31 +34,31 @@ So let's try to find a better answer.
 
 {% jb_picture_body %}
 
-The primary purpose of my unit tests is to help me code. They are the 
-[safety net]({% pst 2022/jul/2022-07-05-safety-net %})---they 
-catch me when I make a mistake. For example, let's say I go back and edit a few files that I 
+The primary purpose of my unit tests is to help me code. They are the
+[safety net]({% pst 2022/jul/2022-07-05-safety-net %})---they
+catch me when I make a mistake. For example, let's say I go back and edit a few files that I
 edited a few years ago and, of course, I do it wrong this time. Then, I run all 500 unit tests
-in the project, and ... ten of them turn red. Pay attention, I don't say "fail" because, 
-just like a safety net around a building, failed tests are the tests 
+in the project, and ... ten of them turn red. Pay attention, I don't say "fail" because,
+just like a safety net around a building, failed tests are the tests
 that didn't catch a falling hammer and didn't spot a bug just introduced.
 Thus, 490 of them _failed_, but ten of them _succeeded_.
 
 
 ## Assertions
 
-Next, I scratch my head and think---what exactly did I do wrong? Which 
-file did I break? I just changed a few dozen code lines. Where exactly was the 
-mistake? In order to find out, I read the output of the tests. I expect 
-the messages they print to the console to be descriptive enough to 
-help me understand the problem. I don't want to revert all my changes 
-and start from scratch, right? I want to quickly jump to the line with 
-the bug, fix it, rerun all 500 tests, see all of them green, 
+Next, I scratch my head and think---what exactly did I do wrong? Which
+file did I break? I just changed a few dozen code lines. Where exactly was the
+mistake? In order to find out, I read the output of the tests. I expect
+the messages they print to the console to be descriptive enough to
+help me understand the problem. I don't want to revert all my changes
+and start from scratch, right? I want to quickly jump to the line with
+the bug, fix it, rerun all 500 tests, see all of them green,
 commit my changes and call it a day.
 
-Needless to say, descriptive messages of test assertions 
+Needless to say, descriptive messages of test assertions
 and proper naming of test methods are the recipe for success.
-Let's consider simple object Phrases, where we add 
-a few English phrases, and it magically understands which 
+Let's consider simple object Phrases, where we add
+a few English phrases, and it magically understands which
 of them are greetings (obviously, using ML).
 For such a class, this Java/JUnit5 test would be very bad:
 
@@ -119,10 +119,10 @@ The name of the test class is my last hope.
 ## Very Long Test Classes
 
 What if a test class gets too long? It may have a few dozen or more test methods. We don't
-want a class to be too big, right? Wrong! A test class is not a class. It's not even 
+want a class to be too big, right? Wrong! A test class is not a class. It's not even
 a utility class. It's a container for test scripts. It's called a class because
-Java (and many other languages) do not have alternative code 
-organization instruments. So don't worry about your test classes getting excessively long. 5000 lines of code 
+Java (and many other languages) do not have alternative code
+organization instruments. So don't worry about your test classes getting excessively long. 5000 lines of code
 in a test class is _not a problem_ at all. Again, because it's not a class, it's only
 a collection of test scripts.
 
@@ -330,12 +330,12 @@ verify
 ```
 
 First, the resources needed for integration testing are acquired
-at the `pre-integration-test` phase. For example, a test instance of MySQL 
-database may be started. Then, the tests with `ITCase` are executed at the ‘integration-test' phase. The 
-result of their execution is ignored for now but only recorded in a file. 
+at the `pre-integration-test` phase. For example, a test instance of MySQL
+database may be started. Then, the tests with `ITCase` are executed at the ‘integration-test' phase. The
+result of their execution is ignored for now but only recorded in a file.
 Then, the resources are released at the `post-integration-test` phase.
-For example, the MySQL server is shut down. Finally, at the `verify` phase, 
-the results of the tests are verified, and the build fails if 
+For example, the MySQL server is shut down. Finally, at the `verify` phase,
+the results of the tests are verified, and the build fails if
 some of them are not green.
 
 I keep `ITCase` files together with `Test` files only when they are
@@ -375,4 +375,3 @@ annotated with `@Test` (in the case of Java).
 Then, there is the second rule:
 a package with tests may only have classes with `Test` or `ITCase` suffices
 that map one-to-one to live classes and nothing else.
-

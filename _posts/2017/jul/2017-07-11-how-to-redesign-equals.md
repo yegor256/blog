@@ -192,4 +192,3 @@ need to do in order to become comparable is to implement `Digitizable` and
 This approach is actually very close to the
 [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
 I described earlier.
-

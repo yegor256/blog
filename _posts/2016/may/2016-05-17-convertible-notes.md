@@ -229,4 +229,3 @@ in your bank account. Most likely there will be nothing, so don't worry.
 There are other less usual or less important elements of convertible notes, which
 you most likely won't ever see or should not worry about, like pro-data rights,
 for example. Just focus on the things listed above and you will be good.
-

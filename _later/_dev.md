@@ -140,5 +140,3 @@ team is to put the next release to
 That's it. You will be a tech-savvy product owner if you have all these
 questions answered and you understand the answers. You will waste your
 $150,000 much more wisely.
-
-

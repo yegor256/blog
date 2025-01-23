@@ -19,9 +19,9 @@ jb_picture:
   caption: Huge in France (2019) by Gad Elmaleh et al.
 ---
 
-Making constructors pre-process the arguments before 
-encapsulating them seems to be 
-[bad practice]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}). 
+Making constructors pre-process the arguments before
+encapsulating them seems to be
+[bad practice]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}).
 However, very often it's necessary to do exactly that: perform some manipulations
 with the objects provided as arguments and only then assign
 them to the attributes of the constructed object. For this purpose
@@ -49,7 +49,7 @@ The only constructor expects a list of titles, which is being
 encapsulated as `this.titles` for some future use. It's also protected against
 any accidental modifications, through the JDK decorator at
 [`unmodifiableList`](https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#unmodifiableList-java.util.List-).
-So far, so good. Now, we want to make our class a bit smarter 
+So far, so good. Now, we want to make our class a bit smarter
 and let it accept not only the `List` but an array of strings:
 
 ```java
@@ -68,11 +68,11 @@ class Books {
 }
 ```
 
-What's wrong with this code? Those of you who have read my earlier 
-[blog posts about OOP](/tag/oop.html) most definitely know the answer. First, 
-there are two primary constructors, which is another 
-[bad practice]({% pst 2015/may/2015-05-28-one-primary-constructor %}). 
-Second, there is code in the second constructor, which is also a 
+What's wrong with this code? Those of you who have read my earlier
+[blog posts about OOP](/tag/oop.html) most definitely know the answer. First,
+there are two primary constructors, which is another
+[bad practice]({% pst 2015/may/2015-05-28-one-primary-constructor %}).
+Second, there is code in the second constructor, which is also a
 [bad idea]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %}).
 
 Here is how I usually refactor this code, to solve both mentioned problems:
@@ -123,5 +123,5 @@ class ToList<T> implements List<T> {
 ```
 
 [`ListOf`](https://www.javadoc.io/static/org.cactoos/cactoos/0.50/org/cactoos/list/ListOf.html)
-from [Cactoos](https://www.cactoos.org) is a perfect example 
+from [Cactoos](https://www.cactoos.org) is a perfect example
 of such a prestructor.

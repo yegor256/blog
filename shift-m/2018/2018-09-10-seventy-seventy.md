@@ -101,4 +101,3 @@ image: /images/andreea/podcast.png
 [01:02:00] Yegor: Okay, so that was the discussion. That's the new format. I think it was interesting, because all your questions helped me to explain my thoughts and give some examples of my personal experience, of my personal life, personal business life. So see you next time, on the next episode. Thanks everybody. Bye-bye.
 
 [01:02:20] Olga: Yeah, thanks a lot. Bye-bye.
-

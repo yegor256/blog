@@ -98,4 +98,3 @@ They are [hackers]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %})
 not designers or [architects]({% pst 2018/jun/2018-06-26-are-you-an-architect %}).
 
 Honestly, I feel sorry when I lose them.
-

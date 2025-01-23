@@ -113,4 +113,3 @@ In the end, programmers control management, not the other way around.
 or rotating programmers, but few teams, especially co-located ones,
 can afford it. If your team can't, just try to keep your turnover high
 enough to prevent the appearance of _heroes_ (a.k.a. subject matter experts).
-

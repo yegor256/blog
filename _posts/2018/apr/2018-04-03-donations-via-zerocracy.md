@@ -85,5 +85,3 @@ The advantage of this approach, compared to, for example,
 be distributed in micro-payments and will be fully traceable. I believe
 that this makes a difference for donators---they are interested to see
 how their money is being used.
-
-

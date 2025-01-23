@@ -107,7 +107,7 @@ This is how you can truly join our community:
     and
     [@painofoop](https://t.me/painofoop) (for juniors);
 
-  * Write a blog about OOP, like 
+  * Write a blog about OOP, like
     [@skapral](https://www.pragmaticobjects.com/) (the link is dead, hopefully not forever)
     and [@g4s8](https://g4s8.wtf/) are doing;
 

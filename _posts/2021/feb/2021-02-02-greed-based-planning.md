@@ -87,4 +87,3 @@ has to be based on their own selfish reasons.
 What's left for you is just to put their decisions into one
 document and see when the project will be completed and how
 many bonuses you have to prepare to pay at the end.
-

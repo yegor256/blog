@@ -19,16 +19,16 @@ jb_picture:
   caption: The Kominsky Method (2018-) by Chuck Lorre
 ---
 
-The time of objectivity is fading out. 
+The time of objectivity is fading out.
 [Meritocracy]({% pst 2018/jan/2018-01-09-micro-budgeting %}) is now a rude word.
-[Metrics]({% pst 2020/jun/2020-06-23-individual-performance-metrics %}) 
+[Metrics]({% pst 2020/jun/2020-06-23-individual-performance-metrics %})
 in management will soon be considered as harassment.
 Productivity is [already](/shift-m/2020/44.html) a false objective.
 It's time to start taking advantage of this era of nonsense.
 The era of impostors is coming!
 Don't miss the opportunity to become a great one.
 Here is a quick summary of key techniques to make you highly successful in any argument
-you may have in your 
+you may have in your
 [flat democratic organizations of the future]({% pst 2020/dec/2020-12-22-self-managing-orgs %})
 without any skills, knowledge, education, or real achievements.
 Just pure love and emotions.
@@ -94,7 +94,7 @@ They must know that by doing so they will immediately become
 behavior.
 
 They must understand that real experts are very fragile and can easily
-be offended. They must learn the lesson: 
+be offended. They must learn the lesson:
 doubting the opinion of an expert is simply rude.
 The best they can do with you, an expert, is to tell you how
 great you are and how much they respect your contribution. Anything

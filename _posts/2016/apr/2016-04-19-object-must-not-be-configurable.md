@@ -362,4 +362,3 @@ hope it's readable and I managed to convey the idea. Now we have five
 classes, each of which is rather small, easy to read and easy to reuse.
 
 Just follow the rule: never make classes configurable!
-

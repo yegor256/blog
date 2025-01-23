@@ -18,10 +18,10 @@ jb_picture:
   caption: Mulholland Drive (2001) by David Lynch
 ---
 
-Almost every [empirical research](https://en.wikipedia.org/wiki/Empirical_research) 
+Almost every [empirical research](https://en.wikipedia.org/wiki/Empirical_research)
 paper contains two essential sections: _Results_
 and _Discussion_. The former presents the facts collected through the research
-[method]({% pst 2023/oct/2023-10-11-method-of-research %}), 
+[method]({% pst 2023/oct/2023-10-11-method-of-research %}),
 while the latter interprets them to answer the research questions. When
 interpreting the data, you must address the most obvious concerns that readers
 may have. For example, in the Results section, you might state: "85% of
@@ -36,10 +36,10 @@ section engages in an open _debate_ with an imaginative reader.
 
 {% jb_picture_body %}
 
-In the [Method]({% pst 2023/oct/2023-10-11-method-of-research %}) section, 
-you've already explained how you collected, processed, and analyzed the data. 
-Now, in the **Results** section, you present the actual data collected and generated. 
-The simpler the method of data representation, the better. Thus, in order of 
+In the [Method]({% pst 2023/oct/2023-10-11-method-of-research %}) section,
+you've already explained how you collected, processed, and analyzed the data.
+Now, in the **Results** section, you present the actual data collected and generated.
+The simpler the method of data representation, the better. Thus, in order of
 preference (with the last being your last choice):
 
   * Plain text
@@ -47,14 +47,14 @@ preference (with the last being your last choice):
   * Table (`\begin{tabular}`)
   * Graphs and diagrams (`\begin{figure}`)
 
-If the data is too extensive to show in the paper, you can store it 
+If the data is too extensive to show in the paper, you can store it
 in a GitHub repository, create a [Zenodo](https://zenodo.org) artifact,
 and mention its address in the Results section. For example:
 
 ```text
 \section{Results}
 
-We contacted 135 programmers from three 
+We contacted 135 programmers from three
 software companies: ACME Inc, Google, and
 Amazon. We asked them kindly to answer
 a short questionnaire of just 128 questions.
@@ -73,15 +73,15 @@ their names and home addresses,
 is published in Zenodo: \url{https://zenodo.com/...}.
 ```
 
-In the [Method]({% pst 2023/oct/2023-10-11-method-of-research %}) section, 
-you posed several _Research Questions_. Now, in the **Discussion** section, 
-you answer them using the data you've just presented in the Results. 
+In the [Method]({% pst 2023/oct/2023-10-11-method-of-research %}) section,
+you posed several _Research Questions_. Now, in the **Discussion** section,
+you answer them using the data you've just presented in the Results.
 This is the time for an opinionated interpretation of the data: be brave and direct, yet careful.
 
-When you've answered the Research Questions, you initiate a debate 
-with your readers, imagining them asking difficult and important questions. 
-The answers you provide are your speculation, imagination, improvisation, etc. 
-Also, through the Q&A format, you acknowledge the limitations of your 
+When you've answered the Research Questions, you initiate a debate
+with your readers, imagining them asking difficult and important questions.
+The answers you provide are your speculation, imagination, improvisation, etc.
+Also, through the Q&A format, you acknowledge the limitations of your
 research and suggest potential future research topics.
 
 Consider these questions (re-phrase them for your own context):
@@ -93,8 +93,8 @@ Consider these questions (re-phrase them for your own context):
   * How else could the data be interpreted?
   * What's next?
 
-I suggest dedicating exactly one paragraph per question, starting 
-with a bold-faced formulation of it, followed by your answer to 
+I suggest dedicating exactly one paragraph per question, starting
+with a bold-faced formulation of it, followed by your answer to
 your imagined opponent. Here's an example:
 
 ```text
@@ -102,7 +102,7 @@ your imagined opponent. Here's an example:
 
 \textbf{RQ1: How many programmers are lazy?}
 Since 85% of our respondents refused to complete
-our short questionnaire, we strongly believe 
+our short questionnaire, we strongly believe
 that most programmers are lazy.
 
 \textbf{RQ2: Why are programmers lazy?}
@@ -111,10 +111,10 @@ the 128-question questionnaire, we believe
 they become lazy when confronted with a number
 that is a power of two.
 
-\textbf{Is it possible that programmers are 
+\textbf{Is it possible that programmers are
 just busy?} Yes, it's possible, but highly
-unlikely, as \citet{x2019} previously found 
-that programmers spend 90% of their office time 
+unlikely, as \citet{x2019} previously found
+that programmers spend 90% of their office time
 reading jokes on the internet.
 ```
 
@@ -128,7 +128,7 @@ recognize them. In either case, it could lead to a rejection of your paper.
 
 <hr/>
 
-You may find inspiration in these papers 
+You may find inspiration in these papers
 (use [Google Scholar](https://scholar.google.com/) to download their PDFs):
 
   * Zhaowei Zhang et al., _Diet Code Is Healthy: Simplifying Programs for Pre-trained Models of Code_, ESEC/FSE 2022
@@ -153,4 +153,3 @@ These opinions might also be helpful:
     by Rowan Dunton
   * [Distinguishing between Results and Discussion](https://www.uvm.edu/sites/default/files/Graduate-Writing-Center/GWC%20Guides/Genres/Science_Writing_Results_Discussion.pdf)
     by University of Vermont
-

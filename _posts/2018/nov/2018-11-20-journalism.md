@@ -84,4 +84,3 @@ and I ~~spam~~ send them my articles via [Mailanes]({% pst 2018/oct/2018-10-30-m
 It seems they don't deserve a better attitude.
 
 Sadly.
-

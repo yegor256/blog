@@ -53,7 +53,7 @@ years ago. Don't betray it. It's yours. Your lifetime mission is to solve it.
 Who cares which company you are in? A company is just a temporary sponsor of
 your mission.
 
-## Enemies 
+## Enemies
 
 The problem must be as monumental as finding a cure for cancer. Ensure it's
 bigger than your team, your company, and even your lifespan. The
@@ -101,4 +101,3 @@ employee.
 
 Strengthening ties with the academic world will unquestionably reinforce your
 position within your company.
-

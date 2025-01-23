@@ -28,7 +28,7 @@ style: |
 
 {% badge /images/andreea/podcast.svg 200 %}
 
-It's a podcast about project management and software engineering. 
+It's a podcast about project management and software engineering.
 If you want to be a guest or know a good guest, please email to
 [podcast@yegor256.com](mailto:podcast@yegor256.com).
 This is the [RSS](http://feeds.soundcloud.com/users/soundcloud:users:92341909/sounds.rss).
@@ -290,4 +290,3 @@ Recent episodes:
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Face of Yegor Bugayenko"/><br/>
 &#35;1: [Why Distributed Teams Fail?](/podcast/2017/1.html)<br/>
 5 June 2017; 53 min.
-

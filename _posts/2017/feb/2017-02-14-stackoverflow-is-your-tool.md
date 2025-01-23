@@ -119,4 +119,3 @@ I've earned the majority of my reputation a few years ago, so now I'm mostly get
 for the answers and questions I've posted earlier. However, I keep using
 Stack Overflow as I code,
 [every day](http://stackexchange.com/users/63162/yegor256?tab=activity).
-

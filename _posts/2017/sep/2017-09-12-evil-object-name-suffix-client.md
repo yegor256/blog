@@ -119,7 +119,7 @@ The consequences depend on the situation, but these are the most probable:
   * **Extendability issues**.
   Needless to say, it's almost impossible to
   [decorate]({% pst 2015/feb/2015-02-26-composable-decorators %}) a client
-  object when it has 160+ methods and [keeps on growing]({% pst 2014/nov/2014-11-07-how-immutability-helps %}). 
+  object when it has 160+ methods and [keeps on growing]({% pst 2014/nov/2014-11-07-how-immutability-helps %}).
   The only possible
   way to add new functionality to it is by creating new methods. Eventually
   we get a [monster class](https://en.wikipedia.org/wiki/God_object)
@@ -157,4 +157,3 @@ of object-oriented clients without "client" objects:
 [jcabi-dynamo](https://dynamo.jcabi.com),
 [jcabi-s3](http://s3.jcabi.com),
 or [jcabi-simpledb](https://simpledb.jcabi.com).
-

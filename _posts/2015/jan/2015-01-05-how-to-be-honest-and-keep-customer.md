@@ -239,4 +239,3 @@ with each client, and improve your management
 process and your principles of work. Hiding source code is not
 professional and makes you look bad in the eyes of your clients and
 the entire industry.
-

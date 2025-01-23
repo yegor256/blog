@@ -19,11 +19,11 @@ jb_picture:
   caption: Game of Thrones (2011–2019) by David Benioff
 ---
 
-For each accepted explanation of a phenomenon, there may be an extremely 
-large, perhaps even incomprehensible, number of possible and 
+For each accepted explanation of a phenomenon, there may be an extremely
+large, perhaps even incomprehensible, number of possible and
 more complex alternatives. The principle of parsimony, also known
-as [Occam's razor](https://en.wikipedia.org/wiki/Occam's_razor), 
-suggests we prefer the simplest one. For example, 
+as [Occam's razor](https://en.wikipedia.org/wiki/Occam's_razor),
+suggests we prefer the simplest one. For example,
 "I can't open the door and can't attend the meeting" is a description
 of a problem, which could be reduced to "I can't open the door"
 without losing any information, which might be important for those
@@ -45,19 +45,19 @@ a := a + 5 - 3
 a := a / 3
 print a
 
-It doesn't work as expected. It prints 4, 
+It doesn't work as expected. It prints 4,
 but it should print 3.
 ```
 
-Now I have to investigate and find out which operator is broken: 
+Now I have to investigate and find out which operator is broken:
 maybe the addition doesn't work, or maybe
 the assignment, or the division. I don't know, and I have to
-[debug/test]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}) 
+[debug/test]({% pst 2016/feb/2016-02-09-are-you-still-debugging %})
 in order to find out... Me. Not you. Why not you?
 
 {% youtube jiEJnLBowHc %}
 
-The more I work with bug reports, the more I believe that 
+The more I work with bug reports, the more I believe that
 this must be your job as a bug reporter,
 to play with the code and do the best you can to make your snippet as
 short as it can be to represent the defect.
@@ -73,19 +73,19 @@ a := 7
 a := a - 3
 print a
 
-It doesn't work as expected. It prints 7, 
+It doesn't work as expected. It prints 7,
 but it should print 4.
 ```
 
-Here, you've _reduced_ the scope of the defect to a much smaller one. 
-You did your "home work" and found out that only one 
+Here, you've _reduced_ the scope of the defect to a much smaller one.
+You did your "home work" and found out that only one
 particular operator in my programming language is broken: the
 subtraction. You saved my time and increased the chance of your
 bug report being fixed sooner rather than later.
 
-In general, I believe that this bug optimization work 
+In general, I believe that this bug optimization work
 must be done by reporters, not product owners.
-I would even say that this might be a valid bug rejection reason: 
+I would even say that this might be a valid bug rejection reason:
 the report is not the simplest possible one.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">If a bug report is messy or overly complex, who should clean it up before we start fixing it?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1528370540628566018?ref_src=twsrc%5Etfw">May 22, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -54,8 +54,8 @@ tests.
 
 {:name='happy'}
 **Happy Path**.
-The tests stay on happy paths (i.e. expected results, e.g. 18 years old) 
-without testing for boundaries and exceptions (e.g. -2 years old). 
+The tests stay on happy paths (i.e. expected results, e.g. 18 years old)
+without testing for boundaries and exceptions (e.g. -2 years old).
 
 {:name='poke'}
 **Slow Poke**<sup>3</sup>.

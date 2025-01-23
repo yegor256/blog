@@ -242,5 +242,3 @@ for (Double probe : probes) {
 ```
 
 This is some weird combination of object-oriented and functional styles.
-
-

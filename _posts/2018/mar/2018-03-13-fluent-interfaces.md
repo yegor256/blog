@@ -189,4 +189,3 @@ to do that if I know that the changes I introduce
 are isolated and easy to test.
 
 Thus, no fluent interfaces anymore from me, only objects and decorators.
-

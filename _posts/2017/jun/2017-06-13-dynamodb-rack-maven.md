@@ -183,4 +183,3 @@ In a nutshell:
     Maven and it stops DynamoDB Local.
 
 That's it.
-

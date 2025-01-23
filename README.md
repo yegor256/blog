@@ -19,7 +19,7 @@ You are welcome to submit corrections to this blog. In order to do that,
 you will need [Ruby](https://www.ruby-lang.org/en/) 3.0+,
 [Bundler](https://bundler.io/),
 Woff2,
-and [PlantUML](http://plantuml.com/) installed. 
+and [PlantUML](http://plantuml.com/) installed.
 Then, run this:
 
 ```bash

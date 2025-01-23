@@ -25,7 +25,7 @@ Java, in just a few lines, using [`jcabi-ssh`](https://ssh.jcabi.com):
 String hello = new Shell.Plain(
   new SSH(
     "ssh.example.com", 22,
-    "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+    "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
   )
 ).exec("echo 'Hello, world!'");
 ```
@@ -42,7 +42,7 @@ and then read back its grepped content:
 ```xml
 Shell shell = new SSH(
   "ssh.example.com", 22,
-  "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+  "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
 );
 File file = new File("/tmp/data.txt");
 new Shell.Safe(shell).exec(
@@ -83,7 +83,7 @@ want to duplicate `if/throw` in many places of your code.
 Shell ssh = new Shell.Safe(
   new SSH(
     "ssh.example.com", 22,
-    "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+    "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
   )
 );
 ```
@@ -100,7 +100,7 @@ Shell ssh = new Shell.Verbose(
   new Shell.Safe(
     new SSH(
       "ssh.example.com", 22,
-      "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+      "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
     )
   )
 );

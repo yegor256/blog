@@ -270,4 +270,3 @@ So, it's way more about a title for him, rather that just his actual responsibil
 Yes, the money question [again]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}).
 A good architect is expensive.
 If he is not, he is not a good architect.
-

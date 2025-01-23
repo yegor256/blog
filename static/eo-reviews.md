@@ -50,4 +50,3 @@ Co-founder of [DevTernity](http://devternity.com/):<br/>
 [Anton Chernousov](https://www.amazon.com/gp/customer-reviews/R1PLMTYQ0BP6XM/),
 Founder of [The Art of Programming](https://theartofprogramming.podbean.com/):<br/>
 "It is one of the best books if you have a lot of experience in different projects."
-

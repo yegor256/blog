@@ -67,4 +67,3 @@ or three pages.
 
 I suggest applying this principle to every piece of content
 you write: try to squeeze it into _one_.
-

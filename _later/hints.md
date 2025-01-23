@@ -29,5 +29,3 @@ don't expect quality, make reviews and submit bugs
 accept incomplete changes, use PDD
 
 set quality bar as high as you can
-
-

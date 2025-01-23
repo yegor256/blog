@@ -142,4 +142,3 @@ Squaremouth: Employees make their pitch, and a majority vote is required for app
 
 
 <!--more-->
-

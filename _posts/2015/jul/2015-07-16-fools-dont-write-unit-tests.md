@@ -70,7 +70,7 @@ to do with time or budget. Such a programmer just doesn't know how to use
 object-oriented programming tools, like
 [encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}),
 [inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}), polymorphism,
-interfaces, [method overloading]({% pst 2023/aug/2023-08-01-method-overloading %}), 
+interfaces, [method overloading]({% pst 2023/aug/2023-08-01-method-overloading %}),
 etc. It's not about time or budget; it's about
 skills and discipline.
 

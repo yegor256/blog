@@ -207,4 +207,3 @@ I consider unethical, like corruption, gambling, crime, etc.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What motivates you best of all? <a href="https://twitter.com/hashtag/motivation?src=hash&amp;ref_src=twsrc%5Etfw">#motivation</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1003355914555002881?ref_src=twsrc%5Etfw">June 3, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-

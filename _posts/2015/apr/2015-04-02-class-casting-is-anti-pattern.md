@@ -61,7 +61,7 @@ coupling is not visible to the clients of `sizeOf()`. They don't know that
 method `sizeOf()` relies on interface `Collection`. If tomorrow we decide
 to change it, `sizeOf()` won't work. And we'll be very surprised, since
 its signature says nothing about this dependency. This won't happen with
-[`Collection`](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html), 
+[`Collection`](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html),
 obviously, since it is part of the Java SDK, but with custom
 classes, this may and will happen.
 

@@ -135,4 +135,3 @@ agree to follow it:
 The biggest benefit we get when this principle is applied to our tests
 is that they become declarative and object-oriented, instead of being
 algorithmic, imperative, and procedural.
-

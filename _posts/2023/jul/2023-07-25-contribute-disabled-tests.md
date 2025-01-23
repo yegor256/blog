@@ -5,8 +5,8 @@ date: 2023-07-25
 place: Kazan, Russia
 tags: pdd testing
 description: |
-  Instead of merely submitting bug reports, it can often be more efficient 
-  to contribute a pull request, complete with a disabled unit test 
+  Instead of merely submitting bug reports, it can often be more efficient
+  to contribute a pull request, complete with a disabled unit test
   and a detailed description of the problem.
 keywords:
   - pull request
@@ -19,7 +19,7 @@ jb_picture:
   caption: Dead or Alive (1999) by Takashi Miike
 ---
 
-When you find a bug in an open-source library that you use, 
+When you find a bug in an open-source library that you use,
 [what do you do]({% pst 2018/jul/2018-07-24-bugs-or-pull-requests %})?
 You submit a GitHub issue (or whatever ticket tracking system they use).
 In the issue, you describe the problem in the best possible way, preferably
@@ -33,8 +33,8 @@ in a pull request: send them the bug in the form of a disabled unit test.
 
 {% jb_picture_body %}
 
-Say, there is a Rust library that provides a `fibo()` function that 
-calculates a [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_sequence), 
+Say, there is a Rust library that provides a `fibo()` function that
+calculates a [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_sequence),
 which you can use this way:
 
 ```rust
@@ -47,10 +47,10 @@ You run it and it prints `17711`, which is mistakenly the 22nd Fibonacci number,
 not the 23rd. It is definitely a bug. You submit a ticket, saying something like this:
 
 ```
-I'm trying to use your library to calculate 
-a Fibonacci  number, but for some reason, I'm 
-getting a wrong result:  the 23rd number your 
-library returns is 17711, while I'm expecting 
+I'm trying to use your library to calculate
+a Fibonacci  number, but for some reason, I'm
+getting a wrong result:  the 23rd number your
+library returns is 17711, while I'm expecting
 the number 28657. Please check and fix.
 ```
 
@@ -62,15 +62,15 @@ let x = fibo(23);
 assert_eq!(28657, x);
 ```
 
-Then, if they are [disciplined]({% pst 2017/mar/2017-03-24-tdd-that-works %}) 
+Then, if they are [disciplined]({% pst 2017/mar/2017-03-24-tdd-that-works %})
 programmers, a new unit test will be created and the
-`fibo()` function will be fixed. Moreover, if they are 
-[very disciplined]({% pst 2022/aug/2022-08-04-code-and-tests-different-pull-requests %}) programmers, 
+`fibo()` function will be fixed. Moreover, if they are
+[very disciplined]({% pst 2022/aug/2022-08-04-code-and-tests-different-pull-requests %}) programmers,
 they will submit the test in a separate pull request, disabling it. Then, in
 the second pull request, they will make a fix.
 
 Why can't you help them and skip the issue submission step? Just make the
-first pull request yourself, with the disabled test inside and a 
+first pull request yourself, with the disabled test inside and a
 ["puzzle"]({% pst 2010/mar/2010-03-04-pdd %}) added to it:
 
 ```rust
@@ -96,9 +96,9 @@ creating a bug report, as it will be created automatically by
 
 {% badge https://www.jcabi.com/logo-square.svg 48 https://http.jcabi.com %}
 
-BTW, this blog post was motivated by [this pull request](https://github.com/jcabi/jcabi-xml/pull/212) 
+BTW, this blog post was motivated by [this pull request](https://github.com/jcabi/jcabi-xml/pull/212)
 in the [jcabi/jcabi-xml](https://github.com/jcabi/jcabi-xml) library, where a disabled
 unit test was added to the code base specifically to reproduce the bug. In addition to
-the test, a puzzle was added, which led to a [new ticket](https://github.com/jcabi/jcabi-xml/issues/213), 
-a [new pull request](https://github.com/jcabi/jcabi-xml/pull/214), 
+the test, a puzzle was added, which led to a [new ticket](https://github.com/jcabi/jcabi-xml/issues/213),
+a [new pull request](https://github.com/jcabi/jcabi-xml/pull/214),
 and finally a [new release](https://github.com/jcabi/jcabi-xml/releases/tag/0.28.0) of the library.

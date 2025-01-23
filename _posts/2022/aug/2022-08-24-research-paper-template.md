@@ -65,7 +65,7 @@ on Introduction, Results, and Discussion.
 
 ## Introduction
 
-[Answer](https://goldbio.com/articles/article/how-to-write-introduction-section) 
+[Answer](https://goldbio.com/articles/article/how-to-write-introduction-section)
 these questions in this particular order:
 
   * What is going on in your field of study?

@@ -5,8 +5,8 @@ date: 2023-12-26
 place: Moscow, Russia
 tags: ai science
 description: |
-  If students are permitted to use ChatGPT as a paper-writing aid, 
-  teachers must possess a tool to detect the presence of 
+  If students are permitted to use ChatGPT as a paper-writing aid,
+  teachers must possess a tool to detect the presence of
   generative AI in their texts.
 keywords:
   - ChatGPT is a threat
@@ -19,13 +19,13 @@ jb_picture:
   caption: Terminator (1984) by James Cameron
 ---
 
-I do enjoy [ChatGPT](https://en.wikipedia.org/wiki/ChatGPT) a lot. 
+I do enjoy [ChatGPT](https://en.wikipedia.org/wiki/ChatGPT) a lot.
 The blog post you're reading now was written by me and
 then given to ChatGPT to fix its grammar and polish the writing style. Until
-recently, since 2014, when I wrote my [first blog post]({% pst 2014/apr/2014-04-06-introduction %}), 
+recently, since 2014, when I wrote my [first blog post]({% pst 2014/apr/2014-04-06-introduction %}),
 I used the service of a
-few proofreaders, who charged me $20-40 per hour to rewrite 
-[all of my 350+ texts](/contents.html). 
+few proofreaders, who charged me $20-40 per hour to rewrite
+[all of my 350+ texts](/contents.html).
 Now, I pay a few dollars a month to [OpenAI](https://openai.com/). However, while the value of
 this generative AI is obvious, I also experience serious harm from ChatGPT,
 especially when reading papers written by my students with its help.
@@ -38,7 +38,7 @@ Should students be allowed to use ChatGPT when they write their coursework,
 diplomas, and research papers?
 [Nature](https://www.nature.com/articles/d41586-023-03507-3),
 [The Wall Street Journal](https://www.wsj.com/tech/ai/teachers-ai-classroom-schools-678d7d84),
-[The New York Times](https://www.nytimes.com/2023/02/02/learning/students-chatgpt.html), 
+[The New York Times](https://www.nytimes.com/2023/02/02/learning/students-chatgpt.html),
 and
 [MIT Technology Review](https://www.technologyreview.com/2023/04/06/1071059/chatgpt-change-not-destroy-education-openai/)
 believe that despite all the risks, we have no other choice: students will use
@@ -57,13 +57,13 @@ But it's not the threat I worry about. I'm much more concerned about the quality
 of feedback teachers will provide to students equipped with ChatGPT or a
 similar paper-writing robot. My relatively [short experience]({% pst 2021/dec/2021-12-01-teaching %}) in teaching
 (just [three years](/teaching.html)) tells me that the biggest challenge in teaching is quickly
-_dividing_ students into smart+enthusiastic (20%) and 
+_dividing_ students into smart+enthusiastic (20%) and
 [unmotivated](https://www.gcu.edu/blog/teaching-school-administration/myth-unmotivated-students) (80%), before
 the latter category entirely exhausts me, and I classify _all_ students
 as "pointless waste of time" and give everybody an "A" just to get rid of
 them.
 
-When students write papers by themselves, without the help of 
+When students write papers by themselves, without the help of
 [generative AI](https://en.wikipedia.org/wiki/Generative_artificial_intelligence),
 they make mistakes that are easy to spot: the grammar is wrong, the structure
 is messy, the logic of the discussion is weak, and so on. Lazy and/or
@@ -88,7 +88,6 @@ invest my time in. In the end, the students who really need my time don't get
 it, ... thanks to ChatGPT.
 
 Thus, I see ChatGPT as a big threat to the education process and believe that
-very soon, tools that [validate texts](https://foundation.mozilla.org/en/blog/how-to-tell-chat-gpt-generated-text/) 
+very soon, tools that [validate texts](https://foundation.mozilla.org/en/blog/how-to-tell-chat-gpt-generated-text/)
 for the presence of generative AI in them
 will become powerful enough to _defend_ me from ChatGPT.
-

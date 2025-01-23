@@ -211,4 +211,3 @@ stays small, while the complexity of "media" objects is unlimited.
 My point here is simple---no
 [getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 just printers!
-

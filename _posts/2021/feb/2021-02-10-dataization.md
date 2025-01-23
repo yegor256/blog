@@ -149,6 +149,3 @@ Thus, we construct objects first, either through _abstraction_ (declaring new
 abstract objects) or through _application_ (making copies of abstract
 objects). Next, we dataize one of the objects and the entire composition
 of objects starts to "live," trying to turn itself into data.
-
-
-

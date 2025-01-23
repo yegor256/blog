@@ -79,7 +79,7 @@ I'm also a bit of a [scientist](/papers.html):
 [Google Scholar](https://scholar.google.com/citations?user=cYmXh60AAAAJ),
 [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor).
 Occasionally teaching in
-[HSE University](https://www.hse.ru/org/persons/776430466) (Moscow, Russia) 
+[HSE University](https://www.hse.ru/org/persons/776430466) (Moscow, Russia)
 and in
 [Innopolis University](https://innopolis.university/en/) (Kazan, Russia).
 
@@ -139,8 +139,8 @@ Here is my SO flair:
   width="208" height="58" alt="StackExchange flair for yegor256"/>
 </a>
 
-<!-- 
-This is my <span style="background-color:#053c5e;color:white;">blue</span> (`#053c5e`). 
+<!--
+This is my <span style="background-color:#053c5e;color:white;">blue</span> (`#053c5e`).
 -->
 
 I also contributed to the development of
@@ -148,7 +148,7 @@ I also contributed to the development of
 
 Full list of my [certifications](https://github.com/yegor256/blog/tree/master/pdf/certifications).
 
-BTW, if you wonder why 256, the answer is simple---this is my 
+BTW, if you wonder why 256, the answer is simple---this is my
 [FIDOnet](https://en.wikipedia.org/wiki/FidoNet) node ID back from 1995.
 I was [2:464/256](http://nodehist.fidonet.org.ua/?address=2%3A464%2F256) over there, and this
 is where my network presence has started.

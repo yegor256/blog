@@ -99,4 +99,3 @@ The bottom line is that our best programmers close 30-minute micro
 tasks in 4-5 days each. Zerocrat assigns them many tasks at the same time,
 in accordance with section [§3](http://www.zerocracy.com/policy.html#3),
 expecting each programmer to close from six to eight tasks per day.
-

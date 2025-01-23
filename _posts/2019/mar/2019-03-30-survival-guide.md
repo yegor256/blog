@@ -131,4 +131,3 @@ Right after the prototype is ready, make sure your product is being released
 at least every day. Make sure you can release it yourself, without any
 assistance of the architect. Insist that the architect configures the
 delivery pipeline and give it to your control.
-

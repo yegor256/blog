@@ -182,4 +182,3 @@ deal with resources that may [leak](https://en.wikipedia.org/wiki/Resource_leak)
 Even though Java doesn't have it out of the box we can implement it
 via [try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) and
 [`Closeable`](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html).
-

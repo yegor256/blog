@@ -22,4 +22,3 @@ image: /images/andreea/podcast.png
 
 The blog post I'm discussing is here:
 [How to Pay Programmers Less?]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})
-

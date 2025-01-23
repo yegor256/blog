@@ -451,5 +451,3 @@ Age: Over 1 year
 - global functions
 
 Score: 4/10
-
-

@@ -164,4 +164,3 @@ Having that in mind, we can easily conclude that methods like `setUp()` or
 any shared variables in test classes are _evil_. They must not be used
 and simply must not exist. I think that their invention in JUnit caused
 a lot of harm to Java code.
-

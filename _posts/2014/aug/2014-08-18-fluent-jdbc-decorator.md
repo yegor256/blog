@@ -96,4 +96,3 @@ new JdbcSession(source)
 
 In this example we're executing three SQL statements one by one, leaving
 connection (and transaction) open until `commit()` is called.
-

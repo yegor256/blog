@@ -21,12 +21,12 @@ jb_picture:
 [Reflective programming](https://en.wikipedia.org/wiki/Reflective_programming) (or reflection) happens
 when your code changes itself on the fly. For example, a method of a class, when we call it,
 among other things adds a new method to the class
-(also known as [monkey patching](https://en.wikipedia.org/wiki/Monkey_patch)). 
+(also known as [monkey patching](https://en.wikipedia.org/wiki/Monkey_patch)).
 Java, Python, PHP, JavaScript, you name it---they
-all have this "powerful" feature. What's 
-[wrong](https://softwareengineering.stackexchange.com/questions/193526) with it? 
-Well, it's 
-[slow](https://mattwarren.org/2016/12/14/Why-is-Reflection-slow/), 
+all have this "powerful" feature. What's
+[wrong](https://softwareengineering.stackexchange.com/questions/193526) with it?
+Well, it's
+[slow](https://mattwarren.org/2016/12/14/Why-is-Reflection-slow/),
 [dangerous](https://owasp.org/www-community/vulnerabilities/Unsafe_use_of_Reflection),
 and hard to read and debug.
 But all that is nothing compared with the _coupling_ it introduces to the code.

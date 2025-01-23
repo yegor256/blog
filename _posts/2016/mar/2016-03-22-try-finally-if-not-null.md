@@ -95,4 +95,3 @@ is justified is where we're using third-party APIs or JDK. They may return
 `null` sometimes because... well, their design is bad. We have
 no other option but to do `if(x==null)`. But that's it. No other places
 are good for `null`.
-

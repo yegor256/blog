@@ -299,4 +299,3 @@ Hugo Messer Podcast
 [48:40] **Yegor**: All right. Thanks. See you. Bye bye
 
 [48:45] **Hugo**: Bye bye.
-

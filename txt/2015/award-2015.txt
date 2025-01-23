@@ -1846,4 +1846,3 @@ SVGKit/SVGKit
 - didn't find release automation & documentation
 - didn't find code coverage control
 - didn't find static analysis
-

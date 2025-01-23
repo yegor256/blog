@@ -130,4 +130,3 @@ Nazi war crimes---so Joseph Goebbels built a _fake_ reality for us.
 We don't want to know about the true principles of management---so Ridley Scott built fake ones for us.
 
 Think about it.
-

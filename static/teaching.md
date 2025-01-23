@@ -2,7 +2,7 @@
 layout: static
 title: "Teaching"
 description: |
-  This is a full list of courses and lectures 
+  This is a full list of courses and lectures
   I was teaching in universities over the last few years.
 permalink: teaching.html
 keywords:
@@ -94,4 +94,3 @@ in [Innopolis University](https://innopolis.university/) (Kazan, Russia)<br/>
 [slides](https://github.com/yegor256/ssd16),
 [videos](https://www.youtube.com/playlist?list=PLaIsQH4uc08woJKRAA7mmjs9fU0jeKjjM)
 {: .lecture}
-

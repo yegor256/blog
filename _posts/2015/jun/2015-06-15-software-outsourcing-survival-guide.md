@@ -197,4 +197,3 @@ a new cloud hosting solution, new deployment tools. They are doing this
 for their own purposes, not to help the project. Don't fall for this. Insist
 that they use what they have experience with, at least at the MVP stage. Promise them
 freedom to experiment, but later, when the MVP is launched.
-

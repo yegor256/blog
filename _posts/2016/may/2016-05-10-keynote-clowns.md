@@ -100,5 +100,3 @@ interesting content. As far as I understand, conference organizers are just too
 lazy to do that. It's just easier to buy a "proven" clown.
 
 It's sad.
-
-

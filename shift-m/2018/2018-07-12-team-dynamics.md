@@ -201,5 +201,3 @@ His Twitter: [@mkrigsman](https://twitter.com/mkrigsman)
 [Yegor] Thank you. Bye-bye.
 
 [Michael] Have a good day. Bye-bye.
-
-

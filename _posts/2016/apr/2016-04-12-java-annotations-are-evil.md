@@ -338,4 +338,3 @@ best method of instantiation is operator `new`. This operator is the key
 instrument for an OOP developer. Taking it away from us and giving us
 "configuration mechanisms" is an unforgivable
 [crime]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}).
-

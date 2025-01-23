@@ -202,7 +202,7 @@ inventors enabled static methods.
 
 ## 4. He Is Immutable
 
-A good object should never change his encapsulated 
+A good object should never change his encapsulated
 [state]({% pst 2014/dec/2014-12-09-immutable-object-state-and-behavior %}).
 Remember, an object is a representative of a real-life entity, and this
 entity should stay the same through the entire life of the object. In other

@@ -117,4 +117,3 @@ I walk away. As [Paul Graham](https://www.paulgraham.com/startupmistakes.html), 
 who they started a company with." I don't want to start a business with
 those who are scared of a prenup. I know that in that case
 the divorce will be ugly.
-

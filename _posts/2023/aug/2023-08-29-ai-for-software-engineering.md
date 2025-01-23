@@ -5,15 +5,15 @@ date: 2023-08-29
 place: Moscow, Russia
 tags: ai programming
 description: |
-  Robots will likely revolutionize software engineering ranging 
-  from code reviews and bug fixing to automated refactoring, 
+  Robots will likely revolutionize software engineering ranging
+  from code reviews and bug fixing to automated refactoring,
   backlog prioritization, and employee appraisals.
 keywords:
   - AI for SE
   - AI for coding
   - ChatGPT for programmers
   - ChatGPT for coding
-  - AI for programming  
+  - AI for programming
 image: /images/2023/08/blade-runner.jpg
 jb_picture:
   caption: Blade Runner (1982) by Ridley Scott
@@ -25,15 +25,15 @@ republished:
     url: https://cacm.acm.org/blogs/blog-cacm/276029-how-soon-ai-will-start-firing-programmers/fulltext
 ---
 
-The [release](https://venturebeat.com/ai/openai-debuts-chatgpt-and-gpt-3-5-series-as-gpt-4-rumors-fly/) 
-of [ChatGPT](https://chat.openai.com/) 3.5 has changed everything for us programmers. 
-Even though most of us (including me) don't understand how it works, 
-some of us use it more frequently than Stack Overflow, Google, and IDE built-in features. 
-I believe this is just the beginning. Even though, only [Microsoft](https://www.githubnext.com) 
-knows what will happen next, let me try to make a humble prediction too. 
+The [release](https://venturebeat.com/ai/openai-debuts-chatgpt-and-gpt-3-5-series-as-gpt-4-rumors-fly/)
+of [ChatGPT](https://chat.openai.com/) 3.5 has changed everything for us programmers.
+Even though most of us (including me) don't understand how it works,
+some of us use it more frequently than Stack Overflow, Google, and IDE built-in features.
+I believe this is just the beginning. Even though, only [Microsoft](https://www.githubnext.com)
+knows what will happen next, let me try to make a humble prediction too.
 Below, I list what I believe robots (with Generative AI on board) will do in the future.
 The further into the future, the lower on the list.
-I tried not to repeat what [GitHubNext](https://www.githubnext.com) is already saying. 
+I tried not to repeat what [GitHubNext](https://www.githubnext.com) is already saying.
 
 <!--more-->
 
@@ -101,21 +101,21 @@ I tried not to repeat what [GitHubNext](https://www.githubnext.com) is already s
   or Wiki. They will keep these documents up to date throughout the entire
   lifecycle of the codebase---something we humans are often too lazy to do.
 
-**Onboard**: 
-  They will assist in the onboarding process of new developers, 
-  guiding them through the codebase, explaining architectural decisions, 
+**Onboard**:
+  They will assist in the onboarding process of new developers,
+  guiding them through the codebase, explaining architectural decisions,
   and offering personalized tutorials. They will also help us understand
   certain code blocks by providing interactive guidance.
 
 **Analyze Technical Debt**
-  They could analyze the codebase to identify areas where technical debt is 
+  They could analyze the codebase to identify areas where technical debt is
   accumulating and suggest steps to mitigate it before it becomes problematic.
   They will submit tickets where the biggest debt territories will be
   identified and improvements suggested.
 
 **Cleanup Documentation**.
   They will reformat the doc blocks that we humans write for our classes
-  and methods, and then submit pull requests with the changes. 
+  and methods, and then submit pull requests with the changes.
   Formatting the documentation correctly, using HTML, Markdown, Doxia,
   and many other formats, is a boring work where we humans fall short.
 
@@ -149,4 +149,3 @@ I tried not to repeat what [GitHubNext](https://www.githubnext.com) is already s
 I'm thankful to ChatGPT for helping me build this list.
 
 What do you think ~~I~~ we missed?
-

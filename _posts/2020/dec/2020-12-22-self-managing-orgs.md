@@ -152,4 +152,3 @@ self-managing but manager-less organizations. We need objective metrics,
 automated [tools]({% pst 2018/mar/2018-03-21-zerocracy-announcement %}) (maybe with AI) to replace
 [managers]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 as our appraisers.
-

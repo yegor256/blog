@@ -5,8 +5,8 @@ date: 2023-11-28
 place: Moscow, Russia
 tags: science
 description: |
-  When conducting a survey to ascertain people's 
-  feelings about a topic, it is more effective 
+  When conducting a survey to ascertain people's
+  feelings about a topic, it is more effective
   to use indirect questioning.
 keywords:
   - research questionnaire
@@ -73,7 +73,7 @@ _responsibilities_ onto them. Our role is to determine if they enjoy their offic
 space. We should observe their behavior, symptoms, and reactions to draw
 conclusions. Simply asking, "Do you feel comfortable?" suggests a lazy or
 inexperienced interviewer.
-Responding to such a _generic_ question, respondents will have to put together 
+Responding to such a _generic_ question, respondents will have to put together
 their entire experience of being in the office, analyze it, make some
 conclusions, and then summarize them for us---this is the work we researchers have to do,
 not our interviewees.
@@ -81,17 +81,17 @@ not our interviewees.
 Consider this revised questionnaire:
 
 ```text
-Q4: With a looming strict deadline, where would you 
+Q4: With a looming strict deadline, where would you
 prefer to work on a critical software module?
   - At home
   - In a café
   - In the office
-Q5: When did you last feel exhausted at the end of 
+Q5: When did you last feel exhausted at the end of
 an office day?
   - A few days ago
   - A few weeks ago
   - Don't remember
-Q6: How would you rate the office coffee 
+Q6: How would you rate the office coffee
 machine's quality?
   - Excellent
   - It's OK
@@ -114,7 +114,7 @@ more honest responses.
 
 When the list of questions is ready, you can draw a table in your
 research paper, listing all questions on a vertical axis and possible
-answers on the horizontal one. Under each answer you mention the 
+answers on the horizontal one. Under each answer you mention the
 impact it makes to one of your research questions, for example:
 
 |   | A<sub>1</sub> | A<sub>2</sub> | A<sub>3</sub> |
@@ -127,5 +127,5 @@ impact it makes to one of your research questions, for example:
 |---|---|---|---|
 
 This table clearly explains to readers of your research, why did you
-ask these questions and how the responses provided by the 
+ask these questions and how the responses provided by the
 respondents helped you answer your research questions.
