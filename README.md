@@ -9,7 +9,8 @@
 [![My Twitter](https://img.shields.io/badge/Twitter-follow-active?logo=twitter)](https://twitter.com/intent/follow?screen_name=yegor256)
 [![My Telegram](https://img.shields.io/badge/Telegram-subscribe-active?logo=telegram)](https://t.me/yegor256news)
 
-This repository contains the sources of my blog: [www.yegor256.com](https://www.yegor256.com)
+This repository contains the sources of my
+blog: [www.yegor256.com](https://www.yegor256.com)
 (the backup URL is [this one](https://yegor256.github.io/blog)).
 
 My book [_256 Bloghacks_](https://www.yegor256.com/256-bloghacks.html)
@@ -23,18 +24,19 @@ and [PlantUML](http://plantuml.com/) installed.
 Then, run this:
 
 ```bash
-$ bundle update
-$ bundle exec jekyll serve
+bundle update
+bundle exec jekyll serve
 ```
 
 In a few minutes of building you should be able to see the blog
-at `http://localhost:4000`. Make your changes and refresh the page in the browser.
+at `http://localhost:4000`. Make your changes and refresh
+the page in the browser.
 If everything is fine, submit a pull request.
 
 If it doesn't work (for some reason), do it via Docker:
 
 ```bash
-$ docker build . -t blog
-$ docker run -it --rm -v "$(pwd):/b" -p 4000:4000 blog \
+docker build . -t blog
+docker run -it --rm -v "$(pwd):/b" -p 4000:4000 blog \
   'cd /b && bundle lock && bundle update && bundle exec jekyll serve --trace --host=0.0.0.0'
 ```
