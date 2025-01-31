@@ -38,8 +38,8 @@
             "height": 512
           }
         },
-        "description": "Instead of merely submitting bug reports, it can often be more efficient 
-to contribute a pull request, complete with a disabled unit test 
+        "description": "Instead of merely submitting bug reports, it can often be more efficient
+to contribute a pull request, complete with a disabled unit test
 and a detailed description of the problem.
 ",
         "keywords": ["pull request", "unit test", "bug report", "bug tracking", "puzzle driven development"]
@@ -75,7 +75,7 @@ and a detailed description of the problem.
       </p>
       <p>Yegor Bugayenko<br>25 July 2023</p>
       <h1>A Disabled Test In Lieu of a Bug Report</h1>
-      <p>When you find a bug in an open-source library that you use, 
+      <p>When you find a bug in an open-source library that you use,
 <a href="/2018/07/24/bugs-or-pull-requests.html">what do you do</a>?
 You submit a GitHub issue (or whatever ticket tracking system they use).
 In the issue, you describe the problem in the best possible way, preferably
@@ -89,8 +89,8 @@ in a pull request: send them the bug in the form of a disabled unit test.</p>
 
 <amp-img src="/images/2023/07/dead-or-alive.jpg" alt="Dead or Alive (1999) by Takashi Miike" height="770" width="1438" layout="responsive"></amp-img>
 
-<p>Say, there is a Rust library that provides a <code class="language-plaintext highlighter-rouge">fibo()</code> function that 
-calculates a <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci number</a>, 
+<p>Say, there is a Rust library that provides a <code class="language-plaintext highlighter-rouge">fibo()</code> function that
+calculates a <a href="https://en.wikipedia.org/wiki/Fibonacci_sequence">Fibonacci number</a>,
 which you can use this way:</p>
 
 <div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">let</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">23</span><span class="p">;</span>
@@ -101,10 +101,10 @@ which you can use this way:</p>
 <p>You run it and it prints <code class="language-plaintext highlighter-rouge">17711</code>, which is mistakenly the 22nd Fibonacci number,
 not the 23rd. It is definitely a bug. You submit a ticket, saying something like this:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I'm trying to use your library to calculate 
-a Fibonacci  number, but for some reason, I'm 
-getting a wrong result:  the 23rd number your 
-library returns is 17711, while I'm expecting 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I'm trying to use your library to calculate
+a Fibonacci  number, but for some reason, I'm
+getting a wrong result:  the 23rd number your
+library returns is 17711, while I'm expecting
 the number 28657. Please check and fix.
 </code></pre></div></div>
 
@@ -115,15 +115,15 @@ you will probably add this code to the ticket:</p>
 <span class="nd">assert_eq!</span><span class="p">(</span><span class="mi">28657</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p>Then, if they are <a href="/2017/03/24/tdd-that-works.html">disciplined</a> 
+<p>Then, if they are <a href="/2017/03/24/tdd-that-works.html">disciplined</a>
 programmers, a new unit test will be created and the
-<code class="language-plaintext highlighter-rouge">fibo()</code> function will be fixed. Moreover, if they are 
-<a href="/2022/08/04/code-and-tests-different-pull-requests.html">very disciplined</a> programmers, 
+<code class="language-plaintext highlighter-rouge">fibo()</code> function will be fixed. Moreover, if they are
+<a href="/2022/08/04/code-and-tests-different-pull-requests.html">very disciplined</a> programmers,
 they will submit the test in a separate pull request, disabling it. Then, in
 the second pull request, they will make a fix.</p>
 
 <p>Why can’t you help them and skip the issue submission step? Just make the
-first pull request yourself, with the disabled test inside and a 
+first pull request yourself, with the disabled test inside and a
 <a href="/2010/03/04/pdd.html">“puzzle”</a> added to it:</p>
 
 <div class="language-rust highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// @todo #42 This test is disabled because the</span>
@@ -148,11 +148,11 @@ creating a bug report, as it will be created automatically by
 
 
 
-<p>BTW, this blog post was motivated by <a href="https://github.com/jcabi/jcabi-xml/pull/212">this pull request</a> 
+<p>BTW, this blog post was motivated by <a href="https://github.com/jcabi/jcabi-xml/pull/212">this pull request</a>
 in the <a href="https://github.com/jcabi/jcabi-xml">jcabi/jcabi-xml</a> library, where a disabled
 unit test was added to the code base specifically to reproduce the bug. In addition to
-the test, a puzzle was added, which led to a <a href="https://github.com/jcabi/jcabi-xml/issues/213">new ticket</a>, 
-a <a href="https://github.com/jcabi/jcabi-xml/pull/214">new pull request</a>, 
+the test, a puzzle was added, which led to a <a href="https://github.com/jcabi/jcabi-xml/issues/213">new ticket</a>,
+a <a href="https://github.com/jcabi/jcabi-xml/pull/214">new pull request</a>,
 and finally a <a href="https://github.com/jcabi/jcabi-xml/releases/tag/0.28.0">new release</a> of the library.</p>
 
     </article>

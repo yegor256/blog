@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-Copyright (c) 2014-2024 Yegor Bugayenko
+Copyright (c) 2014-2025 Yegor Bugayenko
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the 'Software'), to deal
@@ -29,7 +29,7 @@ SOFTWARE.
   <LongName>Yegor's Blog About Computers</LongName>
   <Image height="128" width="128" type="image/png">https://www.yegor256.com/favicon.ico</Image>
   <Developer>Yegor Bugayenko</Developer>
-  <Attribution>Copyright 2014-2023, Yegor Bugayenko, All Rights Reserved</Attribution>
+  <Attribution>Copyright 2014-2025, Yegor Bugayenko, All Rights Reserved</Attribution>
   <Query role="example" searchTerms="java"/>
   <SyndicationRight>open</SyndicationRight>
   <AdultContent>false</AdultContent>

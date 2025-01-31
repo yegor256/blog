@@ -75,11 +75,11 @@ possible.
       </p>
       <p>Yegor Bugayenko<br>29 March 2022</p>
       <h1>Bugs Occam's Razor</h1>
-      <p>For each accepted explanation of a phenomenon, there may be an extremely 
-large, perhaps even incomprehensible, number of possible and 
+      <p>For each accepted explanation of a phenomenon, there may be an extremely
+large, perhaps even incomprehensible, number of possible and
 more complex alternatives. The principle of parsimony, also known
-as <a href="https://en.wikipedia.org/wiki/Occam's_razor">Occam’s razor</a>, 
-suggests we prefer the simplest one. For example, 
+as <a href="https://en.wikipedia.org/wiki/Occam's_razor">Occam’s razor</a>,
+suggests we prefer the simplest one. For example,
 “I can’t open the door and can’t attend the meeting” is a description
 of a problem, which could be reduced to “I can’t open the door”
 without losing any information, which might be important for those
@@ -100,19 +100,19 @@ a := a + 5 - 3
 a := a / 3
 print a
 
-It doesn't work as expected. It prints 4, 
+It doesn't work as expected. It prints 4,
 but it should print 3.
 </code></pre></div></div>
 
-<p>Now I have to investigate and find out which operator is broken: 
+<p>Now I have to investigate and find out which operator is broken:
 maybe the addition doesn’t work, or maybe
 the assignment, or the division. I don’t know, and I have to
-<a href="/2016/02/09/are-you-still-debugging.html">debug/test</a> 
+<a href="/2016/02/09/are-you-still-debugging.html">debug/test</a>
 in order to find out… Me. Not you. Why not you?</p>
 
 
 
-<p>The more I work with bug reports, the more I believe that 
+<p>The more I work with bug reports, the more I believe that
 this must be your job as a bug reporter,
 to play with the code and do the best you can to make your snippet as
 short as it can be to represent the defect.</p>
@@ -127,19 +127,19 @@ a := 7
 a := a - 3
 print a
 
-It doesn't work as expected. It prints 7, 
+It doesn't work as expected. It prints 7,
 but it should print 4.
 </code></pre></div></div>
 
-<p>Here, you’ve <em>reduced</em> the scope of the defect to a much smaller one. 
-You did your “home work” and found out that only one 
+<p>Here, you’ve <em>reduced</em> the scope of the defect to a much smaller one.
+You did your “home work” and found out that only one
 particular operator in my programming language is broken: the
 subtraction. You saved my time and increased the chance of your
 bug report being fixed sooner rather than later.</p>
 
-<p>In general, I believe that this bug optimization work 
+<p>In general, I believe that this bug optimization work
 must be done by reporters, not product owners.
-I would even say that this might be a valid bug rejection reason: 
+I would even say that this might be a valid bug rejection reason:
 the report is not the simplest possible one.</p>
 
 <blockquote class="twitter-tweet">

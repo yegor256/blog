@@ -789,4 +789,3 @@ SORRY, PLEASE, CHECK IT BY YOURSELF
 - even though the code is rather clean I didn’t find static analysis
 - test code coverage is not under control
 - there are no GitHub releases
-

@@ -78,26 +78,26 @@ modification.
       
 
 <p>Since the time of Kernighan and Ritchie we share binary code in
-libraries. You need to print some text with <a href="https://en.wikipedia.org/wiki/Printf_format_string"><code class="language-plaintext highlighter-rouge">printf()</code></a> in C++? 
+libraries. You need to print some text with <a href="https://en.wikipedia.org/wiki/Printf_format_string"><code class="language-plaintext highlighter-rouge">printf()</code></a> in C++?
 You get <a href="https://en.wikipedia.org/wiki/Glibc">libc</a> library with
 <a href="https://stackoverflow.com/a/33188344/187141">700+</a> other functions inside.
 You need to copy a Java stream?
-You get <a href="https://commons.apache.org/proper/commons-io/">Apache Commons IO</a> with 
-<a href="https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html#copy-java.io.InputStream-java.io.OutputStream-"><code class="language-plaintext highlighter-rouge">copy()</code></a> and 
-<a href="https://commons.apache.org/proper/commons-io/apidocs/index.html">140+</a> 
+You get <a href="https://commons.apache.org/proper/commons-io/">Apache Commons IO</a> with
+<a href="https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/IOUtils.html#copy-java.io.InputStream-java.io.OutputStream-"><code class="language-plaintext highlighter-rouge">copy()</code></a> and
+<a href="https://commons.apache.org/proper/commons-io/apidocs/index.html">140+</a>
 other methods and classes.
 The same happens in all languages I’m aware of, like Ruby, Python, JavaScript, PHP:
 you need an object, or a class, or a function, or a method—you have to add
-the entire library to your build. 
+the entire library to your build.
 Wouldn’t it be more elegant to deal with individual objects instead?</p>
 
 
 
 <amp-img src="/images/2021/10/maend-and-hons.jpg" alt="Mænd &amp;amp; høns (2015) by Anders Thomas Jensen" height="1214" width="1821" layout="responsive"></amp-img>
 
-<p>The idea is not new and not mine. 
+<p>The idea is not new and not mine.
 I got it from the book <a href="https://amzn.to/266oJr4">Object Thinking</a>
-by David West, where he suggested creating an <em>Objectionary</em> (page 306), 
+by David West, where he suggested creating an <em>Objectionary</em> (page 306),
 a “combination of dictionary and object factory,” with the following properties:</p>
 
 <ul>
@@ -113,11 +113,11 @@ a “combination of dictionary and object factory,” with the following propert
 <p>Seventeen years later (the book was published in 2004), we implemented the idea
 on top of <a href="https://www.eolang.org">EO</a>, our new programming language.
 The language is intentionally much simpler than Java or C++.
-You can read its more or less formal description 
+You can read its more or less formal description
 <a href="https://arxiv.org/abs/2111.13384">here</a>.</p>
 
-<p>To turn an EO program into an executable entity and release it to 
-the <a href="https://www.objectionary.com">Objectionary</a>, 
+<p>To turn an EO program into an executable entity and release it to
+the <a href="https://www.objectionary.com">Objectionary</a>,
 one has to go through the following mandatory steps,
 assuming the JVM is used as a target platform
 (the steps marked with 🌵 are implemented by our
@@ -175,13 +175,13 @@ assuming the JVM is used as a target platform
 
 <p>It is an iterative process, which loops over and over
 again until all required <code class="language-plaintext highlighter-rouge">.eo</code> objects are parsed and their atoms are present
-as <code class="language-plaintext highlighter-rouge">.class</code> files. 
+as <code class="language-plaintext highlighter-rouge">.class</code> files.
 Then, all <code class="language-plaintext highlighter-rouge">.xmir</code> files are transpiled to <code class="language-plaintext highlighter-rouge">.java</code> and then compiled
 to <code class="language-plaintext highlighter-rouge">.class</code> binaries. Then, tested, packaged, and deployed to Maven Central. Then,
-merged to the <code class="language-plaintext highlighter-rouge">master</code> branch of <a href="https://www.objectionary.com">Objectionary</a>, 
+merged to the <code class="language-plaintext highlighter-rouge">master</code> branch of <a href="https://www.objectionary.com">Objectionary</a>,
 via a pull request.</p>
 
-<p>The first part of the algorithm can be automated with 
+<p>The first part of the algorithm can be automated with
 <a href="https://github.com/cqfn/eo">our Maven plugin</a>, simply by placing <code class="language-plaintext highlighter-rouge">.eo</code> sources
 in <code class="language-plaintext highlighter-rouge">src/main/eo/</code> and adding this to <code class="language-plaintext highlighter-rouge">pom.xml</code>:</p>
 
@@ -213,13 +213,13 @@ in <code class="language-plaintext highlighter-rouge">src/main/eo/</code> and ad
 </code></pre></div></div>
 
 <p>The <code class="language-plaintext highlighter-rouge">register</code> goal will scan the <code class="language-plaintext highlighter-rouge">src/main/eo/</code> directory, find all
-<code class="language-plaintext highlighter-rouge">.eo</code> sources, and “register” them in a special CSV catalog at 
+<code class="language-plaintext highlighter-rouge">.eo</code> sources, and “register” them in a special CSV catalog at
 <code class="language-plaintext highlighter-rouge">target/eo-foreigns.csv</code>. Next, the <code class="language-plaintext highlighter-rouge">assemble</code> goal will call
 the following goals: <code class="language-plaintext highlighter-rouge">parse</code>, <code class="language-plaintext highlighter-rouge">optimize</code>, <code class="language-plaintext highlighter-rouge">discover</code>, <code class="language-plaintext highlighter-rouge">pull</code>, and
 <code class="language-plaintext highlighter-rouge">resolve</code>. All these goals use the CSV catalog when they parse, optimize,
 pull and so on.</p>
 
-<p>When all of them are done, <code class="language-plaintext highlighter-rouge">assemble</code> checks the catalog: 
+<p>When all of them are done, <code class="language-plaintext highlighter-rouge">assemble</code> checks the catalog:
 do any <code class="language-plaintext highlighter-rouge">.eo</code> files still require parsing? If they do, another
 cycle starts, again with parsing. When all <code class="language-plaintext highlighter-rouge">.eo</code> files are parsed,
 the goal <code class="language-plaintext highlighter-rouge">transpile</code> is executed, which turns <code class="language-plaintext highlighter-rouge">.xmir</code> files into <code class="language-plaintext highlighter-rouge">.java</code>
@@ -253,13 +253,13 @@ standard <a href="https://maven.apache.org/plugins/maven-compiler-plugin/"><code
 <span class="nt">&lt;/program&gt;</span>
 </code></pre></div></div>
 
-<p>If you wonder what this XML means, read 
+<p>If you wonder what this XML means, read
 <a href="https://arxiv.org/abs/2111.13384">this document</a>:
 there is a section about XMIR.</p>
 
 <h2 id="optimize-">Optimize 🌵</h2>
 
-<p>At this step the XMIR produced by the parser goes through 
+<p>At this step the XMIR produced by the parser goes through
 many XSL transformations, sometimes getting additional elements and attributes.
 Our example XMIR may get a new attribute <code class="language-plaintext highlighter-rouge">@ref</code>, pointing the reference to the
 object <code class="language-plaintext highlighter-rouge">user</code> to the line where the object was defined:</p>
@@ -312,8 +312,8 @@ into the CSV catalog and claim it to be foreign.</p>
 <h2 id="pull">Pull</h2>
 
 <p>Here we simply try to find source code <code class="language-plaintext highlighter-rouge">.eo</code> files for all foreign
-objects in Objectionary, by looking at its 
-<a href="https://github.com/yegor256/objectionary">GitHub repository</a>. 
+objects in Objectionary, by looking at its
+<a href="https://github.com/yegor256/objectionary">GitHub repository</a>.
 For example, this is where we would find
 <a href="https://github.com/yegor256/objectionary/blob/master/objects/org/eolang/io/stdout.eo"><code class="language-plaintext highlighter-rouge">stdout.eo</code></a>.
 We find them there and pull to the local disc.</p>
@@ -339,7 +339,7 @@ as <a href="https://en.wikipedia.org/wiki/Foreign_function_interface">FFI mechan
 The line that starts with <code class="language-plaintext highlighter-rouge">+rt</code> (runtime) explains where to get the
 runtime code. The <code class="language-plaintext highlighter-rouge">jvm</code> part is the name of the runtime.</p>
 
-<p>We go to <a href="https://search.maven.org/">Maven Central</a>, find there the artifact 
+<p>We go to <a href="https://search.maven.org/">Maven Central</a>, find there the artifact
 <a href="https://search.maven.org/artifact/org.eolang/eo-runtime"><code class="language-plaintext highlighter-rouge">org.eolang:eo-runtime:0.10.2</code></a>,
 and unpack it (it’s a zip archive with <code class="language-plaintext highlighter-rouge">.class</code> files after all).</p>
 
@@ -355,15 +355,15 @@ and unpack it (it’s a zip archive with <code class="language-plaintext highlig
 <p>Here, three runtime platforms will know where to get the missing code
 for the <code class="language-plaintext highlighter-rouge">stdout</code> atom:
 EO➝Java will go to <a href="https://search.maven.org/">Maven Central</a> for the JAR artifact,
-EO➝Ruby will go to <a href="https://rubygems.org/">RubyGems</a> 
+EO➝Ruby will go to <a href="https://rubygems.org/">RubyGems</a>
 trying to find the gem by the name <code class="language-plaintext highlighter-rouge">eo-core</code> and version <code class="language-plaintext highlighter-rouge">0.5.8</code>,
-while EO➝Python will go to <a href="https://pypi.org/">PyPi</a> 
+while EO➝Python will go to <a href="https://pypi.org/">PyPi</a>
 trying to find <code class="language-plaintext highlighter-rouge">eo-basics</code> package with the version <code class="language-plaintext highlighter-rouge">0.0.3</code>.</p>
 
 <h2 id="place-">Place 🌵</h2>
 
 <p>Next we place all <code class="language-plaintext highlighter-rouge">.class</code> files found in the unpacked JAR,
-into the <code class="language-plaintext highlighter-rouge">target/classes</code> directory. We do this in order 
+into the <code class="language-plaintext highlighter-rouge">target/classes</code> directory. We do this in order
 to help Maven Compiler Plugin find them in classpath.</p>
 
 <h2 id="mark-">Mark 🌵</h2>
@@ -375,7 +375,7 @@ as foreign objects too and add to the CSV catalog.</p>
 <h2 id="transpile-">Transpile 🌵</h2>
 
 <p>When all foreign objects which are registered in the catalog are downloaded,
-compiled, and optimized, we are ready to start 
+compiled, and optimized, we are ready to start
 <a href="https://en.wikipedia.org/wiki/Source-to-source_compiler"><em>transpiling</em></a>.
 Instead of compiling XMIR directly to Bytecode, we transpile it to <code class="language-plaintext highlighter-rouge">.java</code>
 and let Java compiler do the job of generating Bytecode.</p>
@@ -389,31 +389,31 @@ and let Java compiler do the job of generating Bytecode.</p>
   <li>Portability of the output code is higher.</li>
 </ul>
 
-<p>We already have two EO➝Java transpilers: 
-<a href="https://github.com/cqfn/eo">canonical one</a> and 
-<a href="https://github.com/polystat/hse-transpiler">the one</a> made by <a href="https://www.hse.ru/en/">HSE University</a>. 
-We also have EO➝Python experimental <a href="https://github.com/polystat/eo2py">transpiler</a> 
-made by students of <a href="https://innopolis.university/en/">Innopolis University</a>. 
+<p>We already have two EO➝Java transpilers:
+<a href="https://github.com/cqfn/eo">canonical one</a> and
+<a href="https://github.com/polystat/hse-transpiler">the one</a> made by <a href="https://www.hse.ru/en/">HSE University</a>.
+We also have EO➝Python experimental <a href="https://github.com/polystat/eo2py">transpiler</a>
+made by students of <a href="https://innopolis.university/en/">Innopolis University</a>.
 Most probably, when you read this article, there will be more transpilers available.</p>
 
-<p>Even though we believe in transpiling, it’s still possible to create 
-EO➝Bytecode, EO➝LLVM, or EO➝x86 compilers. 
+<p>Even though we believe in transpiling, it’s still possible to create
+EO➝Bytecode, EO➝LLVM, or EO➝x86 compilers.
 You are more than welcome to try!</p>
 
 <h2 id="compile">Compile</h2>
 
-<p>At this step, the standard <a href="https://maven.apache.org/plugins/maven-compiler-plugin/">Maven Compiler Plugin</a> 
+<p>At this step, the standard <a href="https://maven.apache.org/plugins/maven-compiler-plugin/">Maven Compiler Plugin</a>
 finds auto-generated <code class="language-plaintext highlighter-rouge">.java</code> files in <code class="language-plaintext highlighter-rouge">target/generated-sources</code>
 and turns them into <code class="language-plaintext highlighter-rouge">.class</code> files.</p>
 
 <h2 id="unplace-">Unplace 🌵</h2>
 
 <p>Here, we remove all <code class="language-plaintext highlighter-rouge">.class</code> files unpacked from dependencies. This is
-necessary, in order to avoid getting them packaged into the 
+necessary, in order to avoid getting them packaged into the
 final JAR.</p>
 
 <p>We do placing and then unplacing simply because Maven Compiler Plugin
-<a href="https://stackoverflow.com/questions/3410548">doesn’t allow</a> 
+<a href="https://stackoverflow.com/questions/3410548">doesn’t allow</a>
 us to extend classpath in runtime. If it would be possible,
 we would just download dependencies from Maven Central and add them
 to classpath, without unpacking, placing, and then unplacing.</p>
@@ -422,7 +422,7 @@ to classpath, without unpacking, placing, and then unplacing.</p>
 
 <p>Here, we delete all <code class="language-plaintext highlighter-rouge">.class</code> files from the <code class="language-plaintext highlighter-rouge">target/classes/</code> directory,
 which were auto-generated from <code class="language-plaintext highlighter-rouge">.eo</code>. We don’t want to ship binaries,
-which can be generated from <code class="language-plaintext highlighter-rouge">.eo</code> sources. We only want to ship 
+which can be generated from <code class="language-plaintext highlighter-rouge">.eo</code> sources. We only want to ship
 atoms, which are <code class="language-plaintext highlighter-rouge">.java</code> files originally.</p>
 
 <h2 id="copy-">Copy 🌵</h2>
@@ -431,8 +431,8 @@ atoms, which are <code class="language-plaintext highlighter-rouge">.java</code>
 them to <code class="language-plaintext highlighter-rouge">target/classes/EO-SOURCES/</code> directory. Later, they will be
 packaged together with <code class="language-plaintext highlighter-rouge">.class</code> files into a <code class="language-plaintext highlighter-rouge">.jar</code>, which will be
 deployed to Maven Central. While copying, we replace <code class="language-plaintext highlighter-rouge">0.0.0</code> in the
-runtime version to the currently deploying version. Take a look 
-at the file <a href="https://github.com/cqfn/eo/blob/master/eo-runtime/src/main/eo/org/eolang/io/stdout.eo"><code class="language-plaintext highlighter-rouge">stdout.eo</code></a>, 
+runtime version to the currently deploying version. Take a look
+at the file <a href="https://github.com/cqfn/eo/blob/master/eo-runtime/src/main/eo/org/eolang/io/stdout.eo"><code class="language-plaintext highlighter-rouge">stdout.eo</code></a>,
 in its source repository:</p>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+package org.eolang.io
@@ -440,7 +440,7 @@ in its source repository:</p>
 [text] &gt; stdout /bool
 </code></pre></div></div>
 
-<p>The version at the <code class="language-plaintext highlighter-rouge">+rt</code> line is <code class="language-plaintext highlighter-rouge">0.0.0</code>. When sources are copied to the 
+<p>The version at the <code class="language-plaintext highlighter-rouge">+rt</code> line is <code class="language-plaintext highlighter-rouge">0.0.0</code>. When sources are copied to the
 JAR, this text is replaced.</p>
 
 <p>The motivation to ship sources together with binaries is the following.
@@ -462,9 +462,9 @@ archive and <a href="/2014/08/19/how-to-release-to-maven-central.html">deploy</a
 to Maven Central.</p>
 
 <p>I suggest deploying sources to GitHub Pages too, to let users see
-them on the Web. Also, it will be helpful later when we make a pull 
-request to Objectionary. 
-Check this <a href="https://github.com/yegor256/eo-files/blob/master/.rultor.yml#L17-L31"><code class="language-plaintext highlighter-rouge">.rultor.yml</code></a> 
+them on the Web. Also, it will be helpful later when we make a pull
+request to Objectionary.
+Check this <a href="https://github.com/yegor256/eo-files/blob/master/.rultor.yml#L17-L31"><code class="language-plaintext highlighter-rouge">.rultor.yml</code></a>
 script in one of my EO libraries, it deploys <code class="language-plaintext highlighter-rouge">.eo</code> sources to GitHub Pages,
 substituting <code class="language-plaintext highlighter-rouge">0.0.0</code> version markers in them correctly.</p>
 
@@ -487,10 +487,9 @@ If everything is clean, we review the pull request and decide whether
 the objects suggested go along with others already present in the Objectionary.</p>
 
 <p>Once the pull request is merged, the objects become part of the centralized
-dictionary of all objects of EO. Take a look at <a href="https://github.com/yegor256/objectionary/pull/2">this pull request</a>, 
+dictionary of all objects of EO. Take a look at <a href="https://github.com/yegor256/objectionary/pull/2">this pull request</a>,
 where a new object was submitted to Objectionary, after its atom was
 deployed to Maven Central.</p>
-
 
     </article>
   </body>

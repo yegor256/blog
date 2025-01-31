@@ -75,23 +75,23 @@ you keep everything clean.
       </p>
       <p>Yegor Bugayenko<br>5 September 2023</p>
       <h1>Bibcop: Style Checker for BibTeX</h1>
-      <p>Almost every document you may write in 
+      <p>Almost every document you may write in
 <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> format will
 have a list of references at the end. Most likely, you will
-use <a href="https://www.ctan.org/pkg/bibtex">BibTeX</a> 
-or <a href="https://www.ctan.org/pkg/biblatex">BibLaTeX</a> 
+use <a href="https://www.ctan.org/pkg/bibtex">BibTeX</a>
+or <a href="https://www.ctan.org/pkg/biblatex">BibLaTeX</a>
 to print this list of references in a nicely formatted way.
 It is also highly probable that your <code class="language-plaintext highlighter-rouge">.bib</code> file will contain
 many typographic, stylistic, and logical mistakes. I’m fairly
 certain that you won’t find the time to identify and correct them.
 As a result, the “References” section in your paper may appear sloppy.
-I suggest using the <a href="https://www.ctan.org/pkg/bibcop"><code class="language-plaintext highlighter-rouge">bibcop</code></a> 
-package, which identifies mistakes in the <code class="language-plaintext highlighter-rouge">.bib</code> file 
+I suggest using the <a href="https://www.ctan.org/pkg/bibcop"><code class="language-plaintext highlighter-rouge">bibcop</code></a>
+package, which identifies mistakes in the <code class="language-plaintext highlighter-rouge">.bib</code> file
 and auto-fixes some of them.</p>
 
 
 
-<p>Here is a practical example. Let’s say, you want to 
+<p>Here is a practical example. Let’s say, you want to
 cite a famous paper about transformers. First, you find it in
 <a href="https://scholar.google.com/">Google Scholar</a> and click “Cite”:</p>
 
@@ -101,8 +101,8 @@ cite a famous paper about transformers. First, you find it in
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@article</span><span class="o">{</span><span class="n">vaswani2017attention</span><span class="o">,</span>
   <span class="n">title</span><span class="o">={</span><span class="nc">Attention</span> <span class="n">is</span> <span class="n">all</span> <span class="n">you</span> <span class="n">need</span><span class="o">},</span>
-  <span class="n">author</span><span class="o">={</span><span class="nc">Vaswani</span><span class="o">,</span> <span class="nc">Ashish</span> <span class="n">and</span> <span class="nc">Shazeer</span><span class="o">,</span> <span class="nc">Noam</span> <span class="n">and</span> 
-    <span class="nc">Parmar</span><span class="o">,</span> <span class="nc">Niki</span> <span class="n">and</span> <span class="nc">Uszkoreit</span><span class="o">,</span> <span class="nc">Jakob</span> <span class="n">and</span> <span class="nc">Jones</span><span class="o">,</span> <span class="nc">Llion</span> <span class="n">and</span> 
+  <span class="n">author</span><span class="o">={</span><span class="nc">Vaswani</span><span class="o">,</span> <span class="nc">Ashish</span> <span class="n">and</span> <span class="nc">Shazeer</span><span class="o">,</span> <span class="nc">Noam</span> <span class="n">and</span>
+    <span class="nc">Parmar</span><span class="o">,</span> <span class="nc">Niki</span> <span class="n">and</span> <span class="nc">Uszkoreit</span><span class="o">,</span> <span class="nc">Jakob</span> <span class="n">and</span> <span class="nc">Jones</span><span class="o">,</span> <span class="nc">Llion</span> <span class="n">and</span>
     <span class="nc">Gomez</span><span class="o">,</span> <span class="nc">Aidan</span> <span class="no">N</span> <span class="n">and</span> <span class="nc">Kaiser</span><span class="o">,</span> <span class="o">{</span><span class="err">\</span><span class="no">L</span><span class="o">}</span><span class="n">ukasz</span> <span class="n">and</span> <span class="nc">Polosukhin</span><span class="o">,</span> <span class="nc">Illia</span><span class="o">},</span>
   <span class="n">journal</span><span class="o">={</span><span class="nc">Advances</span> <span class="n">in</span> <span class="n">neural</span> <span class="n">information</span> <span class="n">processing</span> <span class="n">systems</span><span class="o">},</span>
   <span class="n">volume</span><span class="o">={</span><span class="mi">30</span><span class="o">},</span>
@@ -116,7 +116,7 @@ cite a famous paper about transformers. First, you find it in
 <span class="err">\</span><span class="n">usepackage</span><span class="o">[</span><span class="n">maxbibnames</span><span class="o">=</span><span class="mi">9</span><span class="o">]{</span><span class="n">biblatex</span><span class="o">}</span>
 <span class="err">\</span><span class="n">addbibresource</span><span class="o">{</span><span class="n">main</span><span class="o">.</span><span class="na">bib</span><span class="o">}</span>
 <span class="err">\</span><span class="n">begin</span><span class="o">{</span><span class="n">document</span><span class="o">}</span>
-<span class="nc">Transformers</span><span class="o">~</span><span class="err">\</span><span class="n">cite</span><span class="o">{</span><span class="n">vaswani2017attention</span><span class="o">}</span> 
+<span class="nc">Transformers</span><span class="o">~</span><span class="err">\</span><span class="n">cite</span><span class="o">{</span><span class="n">vaswani2017attention</span><span class="o">}</span>
 <span class="n">changed</span> <span class="n">everything</span><span class="o">!</span>
 <span class="err">\</span><span class="n">printbibliography</span>
 <span class="err">\</span><span class="n">end</span><span class="o">{</span><span class="n">document</span><span class="o">}</span>
@@ -126,8 +126,8 @@ cite a famous paper about transformers. First, you find it in
 
 
 
-<p>Looks more or less fine. 
-However, if you go to <a href="https://proceedings.neurips.cc/paper_files/paper/2017">the website</a> 
+<p>Looks more or less fine.
+However, if you go to <a href="https://proceedings.neurips.cc/paper_files/paper/2017">the website</a>
 of the publisher of this article, you will see that:</p>
 
 <ul>
@@ -137,9 +137,9 @@ of the publisher of this article, you will see that:</p>
 </ul>
 
 <p>In other words, Google Scholar gave you the citation with a few typographic
-mistakes. While not fatal, the quality of the “References” section 
-can sometimes be seen as reflective of the quality of the paper as a whole. 
-Simply put, negligence is not forgivable when dealing with information about other authors. 
+mistakes. While not fatal, the quality of the “References” section
+can sometimes be seen as reflective of the quality of the paper as a whole.
+Simply put, negligence is not forgivable when dealing with information about other authors.
 We must be accurate down to every letter and every dot.</p>
 
 <p>By including <code class="language-plaintext highlighter-rouge">bibcop</code> package to the document, the problem may be solved.
@@ -159,17 +159,17 @@ First, you install it (I assume, you are using <a href="https://tug.org/texlive/
 <p>When you compile the document, the following warnings will be printed
 to the console, together with other logs:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Package bibcop Warning: A shortened name must have 
-  a tailing dot in the 6th 'author', as in 'Knuth, Donald E.', 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Package bibcop Warning: A shortened name must have
+  a tailing dot in the 6th 'author', as in 'Knuth, Donald E.',
   in the 'vaswani2017attention' entry.
-Package bibcop Warning: All major words in the 'title' 
-  must be capitalized, while the 2nd word 'is' is not, 
+Package bibcop Warning: All major words in the 'title'
+  must be capitalized, while the 2nd word 'is' is not,
   in the 'vaswani2017attention' entry.
-Package bibcop Warning: A mandatory 'doi' tag for '@article' 
-  is missing among (author, journal, title, volume, year), 
+Package bibcop Warning: A mandatory 'doi' tag for '@article'
+  is missing among (author, journal, title, volume, year),
   in the 'vaswani2017attention' entry.
-Package bibcop Warning: The 'title' must be wrapped 
-  in double curled brackets, 
+Package bibcop Warning: The 'title' must be wrapped
+  in double curled brackets,
   in the 'vaswani2017attention' entry.
 </code></pre></div></div>
 
@@ -177,8 +177,8 @@ Package bibcop Warning: The 'title' must be wrapped
 
 
 
-<p>This one looks much better to me 
-(especially with the <a href="https://en.wikipedia.org/wiki/Digital_object_identifier">DOI</a>, which 
+<p>This one looks much better to me
+(especially with the <a href="https://en.wikipedia.org/wiki/Digital_object_identifier">DOI</a>, which
 was not provided by Google Scholar).</p>
 
 <p>By the way, some formatting problems may be auto-fixed by bibcop.
@@ -188,8 +188,8 @@ You can use it from the command line, assuming you have your
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bibcop <span class="nt">--fix</span> <span class="nt">--in-place</span> main.bib
 </code></pre></div></div>
 
-<p>This command will make as many fixes as possible. 
-Then, you can run <code class="language-plaintext highlighter-rouge">bibcop</code> again, from the command line, 
+<p>This command will make as many fixes as possible.
+Then, you can run <code class="language-plaintext highlighter-rouge">bibcop</code> again, from the command line,
 in order to check what style violations are still there:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bibcop main.bib
@@ -201,9 +201,8 @@ in order to check what style violations are still there:</p>
 
 <p><a href="https://ctan.org/pkg/bibcop">In CTAN</a>, you can find full PDF documentation.</p>
 
-<p>You are welcome to suggest additional style checkers, 
+<p>You are welcome to suggest additional style checkers,
 via <a href="https://github.com/yegor256/bibcop">GitHub issues</a>.</p>
-
 
     </article>
   </body>

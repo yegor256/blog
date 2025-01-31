@@ -112,7 +112,7 @@ Java <a href="https://docs.oracle.com/javase/tutorial/java/concepts/interface.ht
 to the method <code class="language-plaintext highlighter-rouge">print()</code>, the compiler will complain
 with the “type mismatch” error. It will be hard for a programmer to make
 a mistake and pass an object of type, say, <code class="language-plaintext highlighter-rouge">Car</code> to the method <code class="language-plaintext highlighter-rouge">print()</code>.
-However, it will still be possible, via dynamic 
+However, it will still be possible, via dynamic
 <a href="/2015/04/02/class-casting-is-anti-pattern.html">type casting</a>:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Car</span> <span class="n">car</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Car</span><span class="o">(</span><span class="s">"Mercedes-Benz G63"</span><span class="o">);</span>
@@ -126,7 +126,7 @@ possible to cast <code class="language-plaintext highlighter-rouge">Car</code> t
 
 <p>The beauty of strong typing is that it prevents errors. However, it increases
 the complexity of code: you need to create types first, you need to declare them
-in all your functions, you need type casting, which is hard to 
+in all your functions, you need type casting, which is hard to
 <a href="/2016/02/09/are-you-still-debugging.html">debug</a>, and so on.
 Weak typing <a href="https://softwareengineering.stackexchange.com/questions/38002">proponents</a>
 complain about this a lot and create languages like Ruby,
@@ -162,7 +162,7 @@ code again:</p>
 <p>Think about this: at compile time it’s already obvious that <code class="language-plaintext highlighter-rouge">b</code> must have
 <em>at least</em> one method <code class="language-plaintext highlighter-rouge">isbn()</code>. No need to force programmers to define
 the type <code class="language-plaintext highlighter-rouge">Book</code> explicitly and mention in the signature of the method <code class="language-plaintext highlighter-rouge">print()</code>
-that only books are welcome: this knowledge can easily be 
+that only books are welcome: this knowledge can easily be
 <a href="https://en.wikipedia.org/wiki/Type_inference">inferred</a> from
 the body of the method <code class="language-plaintext highlighter-rouge">print()</code>! The compiler may look at all statements
 in the method <code class="language-plaintext highlighter-rouge">print()</code> and clearly <em>understand</em> what exactly will be done

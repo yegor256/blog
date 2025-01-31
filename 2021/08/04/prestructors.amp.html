@@ -75,9 +75,9 @@ to pre-process their arguments.
       </p>
       <p>Yegor Bugayenko<br>4 August 2021</p>
       <h1>Prestructors</h1>
-      <p>Making constructors pre-process the arguments before 
-encapsulating them seems to be 
-<a href="/2015/05/07/ctors-must-be-code-free.html">bad practice</a>. 
+      <p>Making constructors pre-process the arguments before
+encapsulating them seems to be
+<a href="/2015/05/07/ctors-must-be-code-free.html">bad practice</a>.
 However, very often it’s necessary to do exactly that: perform some manipulations
 with the objects provided as arguments and only then assign
 them to the attributes of the constructed object. For this purpose
@@ -104,7 +104,7 @@ objects.</p>
 encapsulated as <code class="language-plaintext highlighter-rouge">this.titles</code> for some future use. It’s also protected against
 any accidental modifications, through the JDK decorator at
 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#unmodifiableList-java.util.List-"><code class="language-plaintext highlighter-rouge">unmodifiableList</code></a>.
-So far, so good. Now, we want to make our class a bit smarter 
+So far, so good. Now, we want to make our class a bit smarter
 and let it accept not only the <code class="language-plaintext highlighter-rouge">List</code> but an array of strings:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
@@ -122,11 +122,11 @@ and let it accept not only the <code class="language-plaintext highlighter-rouge
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>What’s wrong with this code? Those of you who have read my earlier 
-<a href="/tag/oop.html">blog posts about OOP</a> most definitely know the answer. First, 
-there are two primary constructors, which is another 
-<a href="/2015/05/28/one-primary-constructor.html">bad practice</a>. 
-Second, there is code in the second constructor, which is also a 
+<p>What’s wrong with this code? Those of you who have read my earlier
+<a href="/tag/oop.html">blog posts about OOP</a> most definitely know the answer. First,
+there are two primary constructors, which is another
+<a href="/2015/05/28/one-primary-constructor.html">bad practice</a>.
+Second, there is code in the second constructor, which is also a
 <a href="/2015/05/07/ctors-must-be-code-free.html">bad idea</a>.</p>
 
 <p>Here is how I usually refactor this code, to solve both mentioned problems:</p>
@@ -175,7 +175,7 @@ which would do exactly the same, but in a more declarative and lazy way:</p>
 </code></pre></div></div>
 
 <p><a href="https://www.javadoc.io/static/org.cactoos/cactoos/0.50/org/cactoos/list/ListOf.html"><code class="language-plaintext highlighter-rouge">ListOf</code></a>
-from <a href="https://www.cactoos.org">Cactoos</a> is a perfect example 
+from <a href="https://www.cactoos.org">Cactoos</a> is a perfect example
 of such a prestructor.</p>
 
     </article>

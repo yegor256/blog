@@ -76,12 +76,12 @@ away from the repository.
       <p>Yegor Bugayenko<br>11 August 2021</p>
       <h1>Logging in Unit Tests, a Bad Practice</h1>
       <p>Logging is an inevitable part of debugging. Well, at least in modern
-high-level programming languages and architectures. It wasn’t thirty 
-years ago, in Assembly, but it is now. Sometimes we trace variables, 
+high-level programming languages and architectures. It wasn’t thirty
+years ago, in Assembly, but it is now. Sometimes we trace variables,
 but rarely. More often we just print them to console. Moreover, we don’t
 just print them using <code class="language-plaintext highlighter-rouge">println</code> or whatever it is we have for console
-printing; instead, we send messages to a 
-<a href="https://en.wikipedia.org/wiki/Java_logging_framework">logging framework</a>, which deals with 
+printing; instead, we send messages to a
+<a href="https://en.wikipedia.org/wiki/Java_logging_framework">logging framework</a>, which deals with
 the console or any other logging destinations, like files. The beauty
 of such frameworks is that we don’t need to remove logging after debugging
 is finished—we just configure the framework to suppress all debug-level
@@ -114,24 +114,24 @@ from <a href="https://www.polystat.org">Polystat</a>, a static analyzer we’re 
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>This is Java and I’m using <a href="https://junit.org/junit5/">JUnit5</a>+<a href="http://hamcrest.org/">Hamcrest</a> 
+<p>This is Java and I’m using <a href="https://junit.org/junit5/">JUnit5</a>+<a href="http://hamcrest.org/">Hamcrest</a>
 together with my own logging framework
-<a href="https://log.jcabi.com">jcabi-log</a>, which is a decorator of 
-<a href="https://www.slf4j.org/">Slf4j</a>, which uses <a href="https://logging.apache.org/log4j/2.x/">Log4j</a> to print to 
+<a href="https://log.jcabi.com">jcabi-log</a>, which is a decorator of
+<a href="https://www.slf4j.org/">Slf4j</a>, which uses <a href="https://logging.apache.org/log4j/2.x/">Log4j</a> to print to
 the console.</p>
 
 <p>What is going on here? There is a class <code class="language-plaintext highlighter-rouge">Foo</code> with a method <code class="language-plaintext highlighter-rouge">build()</code>, which
 makes an XML document (I’m using <a href="https://xml.jcabi.com">jcabi-xml</a> library, which is a decorator of
-<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/package-summary.html">JDK DOM</a>). 
+<a href="https://docs.oracle.com/javase/8/docs/api/org/w3c/dom/package-summary.html">JDK DOM</a>).
 Then, the unit test prints the contents of the XML document to
 the console and makes a pretty silly assertion: the document is not NULL.
-It is silly because if it were NULL, the logging statement 
+It is silly because if it were NULL, the logging statement
 would already fail at the <code class="language-plaintext highlighter-rouge">.toString()</code> call.</p>
 
 <p>I’m the developer of this code, so I know what was going on: I was too lazy
 to write a proper assertion, which would look into the XML document
 and ensure that there were proper elements inside. I just printed it to the
-console, <em>visually</em> confirmed its validity and called it a day. 
+console, <em>visually</em> confirmed its validity and called it a day.
 If I’d had more time, this is how I would have written a much better unit test
 (I made the <a href="https://github.com/polystat/polystat/issues/10">improvements</a> in Polystat tests just now):</p>
 
@@ -149,17 +149,17 @@ If I’d had more time, this is how I would have written a much better unit test
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Now, the XML document is built and then tested for the presence of <code class="language-plaintext highlighter-rouge">//foo</code> 
-<a href="https://en.wikipedia.org/wiki/XPath">XPath</a> inside it. 
+<p>Now, the XML document is built and then tested for the presence of <code class="language-plaintext highlighter-rouge">//foo</code>
+<a href="https://en.wikipedia.org/wiki/XPath">XPath</a> inside it.
 The content of the document will be printed to the console
 only in the case where the assertion fails. If the XML has the required
 XPath, there will be no console output, which means no noise for future
 developers.</p>
 
-<p>Moreover, now it’s a <em>single-statement</em> test, which by itself is 
+<p>Moreover, now it’s a <em>single-statement</em> test, which by itself is
 <a href="/2017/05/17/single-statement-unit-tests.html">good practice</a>.</p>
 
-<p>Looking back on my experience of testing and logging, 
+<p>Looking back on my experience of testing and logging,
 I believe that logging in unit tests is a bad idea. Sometimes
 inevitable, because we are lazy or simply don’t have enough time, but still bad.
 Logging helps us confirm visually the correctness of the output,

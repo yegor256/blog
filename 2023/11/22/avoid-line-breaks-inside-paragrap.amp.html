@@ -38,7 +38,7 @@
             "height": 512
           }
         },
-        "description": "Explicit line breaks inside a paragraph is a very 
+        "description": "Explicit line breaks inside a paragraph is a very
 annoying typography mistake, which I strongly recommend to avoid.
 ",
         "keywords": ["line breaks", "explicit line break", "soft return", "newline inside paragraph", "force line break"]
@@ -75,12 +75,12 @@ annoying typography mistake, which I strongly recommend to avoid.
       <p>Yegor Bugayenko<br>22 November 2023</p>
       <h1>Avoid Soft Line Breaks Inside a Paragraph</h1>
       <p>An email, a document, a research paper, a presentation, and even a JavaDoc code block consist of
-<em>paragraphs</em>, <a href="https://en.wikipedia.org/wiki/Paragraph">which are</a> 
+<em>paragraphs</em>, <a href="https://en.wikipedia.org/wiki/Paragraph">which are</a>
 “self-contained units of discourse in writing dealing with a particular point or idea.”
 Visually, paragraphs are supposed to be separated by a vertical space that is a bit larger
-than a vertical spacing between lines. To achieve this, for example, in HTML, we wrap paragraphs in the 
+than a vertical spacing between lines. To achieve this, for example, in HTML, we wrap paragraphs in the
 <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> tag, while in LaTeX, we use <code class="language-plaintext highlighter-rouge">\par</code> or just an empty line between them. However, some people insert
-what <a href="https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap">are called</a> 
+what <a href="https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap">are called</a>
 “<em>soft line breaks</em>” inside paragraphs—this is a bad practice that I suggest you stay away from.</p>
 
 
@@ -90,7 +90,7 @@ what <a href="https://en.wikipedia.org/wiki/Line_wrap_and_word_wrap">are called<
 <p>This is how a paragraph should look, in HTML (no soft breaks, just <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;/p&gt;</code>):</p>
 
 <p>
-&lt;p&gt;Tyler gets me a job as a waiter, after<br> 
+&lt;p&gt;Tyler gets me a job as a waiter, after<br>
 that Tyler's pushing a gun in my mouth and <br>
 saying, the first step to eternal life is you <br>
 have to die. For a long time though, Tyler <br>
@@ -117,9 +117,8 @@ Tyler Durden.&lt;/p&gt;
 must break to form new lines. By injecting linebreaks into the body of
 a paragraph, you express distrust in the document formatting software,
 be it an HTML browser, a LaTeX compiler, or a Javadoc generator. In the end,
-it looks ugly, because we are <a href="/2019/05/21/dont-improvise.html">much worse designers</a> 
+it looks ugly, because we are <a href="/2019/05/21/dont-improvise.html">much worse designers</a>
 than the creators of LaTeX or browsers.</p>
-
 
     </article>
   </body>

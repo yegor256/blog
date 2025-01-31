@@ -81,7 +81,7 @@ Java, in just a few lines, using <a href="https://ssh.jcabi.com"><code class="la
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">hello</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Shell</span><span class="o">.</span><span class="na">Plain</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">SSH</span><span class="o">(</span>
     <span class="s">"ssh.example.com"</span><span class="o">,</span> <span class="mi">22</span><span class="o">,</span>
-    <span class="s">"yegor"</span><span class="o">,</span> <span class="s">"-----BEGIN RSA PRIVATE KEY-----..."</span>
+    <span class="s">"yegor"</span><span class="o">,</span> <span class="s">"-----BEGIN RSA PRIVАTE KEY-----..."</span>
   <span class="o">)</span>
 <span class="o">).</span><span class="na">exec</span><span class="o">(</span><span class="s">"echo 'Hello, world!'"</span><span class="o">);</span>
 </code></pre></div></div>
@@ -97,7 +97,7 @@ and then read back its grepped content:</p>
 
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shell shell = new SSH(
   "ssh.example.com", 22,
-  "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+  "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
 );
 File file = new File("/tmp/data.txt");
 new Shell.Safe(shell).exec(
@@ -136,7 +136,7 @@ want to duplicate <code class="language-plaintext highlighter-rouge">if/throw</c
 <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shell ssh = new Shell.Safe(
   new SSH(
     "ssh.example.com", 22,
-    "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+    "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
   )
 );
 </code></pre></div></div>
@@ -152,7 +152,7 @@ decorators, for example:</p>
   new Shell.Safe(
     new SSH(
       "ssh.example.com", 22,
-      "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+      "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
     )
   )
 );
