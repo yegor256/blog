@@ -75,12 +75,6 @@ or your DevOps processes are lacking stability. No matter what are your specific
 a one-day discussion will seriously boost the performance of the team. This
 is the investment you make in your people, which will come back ten fold.
 
-The price: $3,600 (plus travel expenses).
-
-The duration: 6 hours (six 45 minute slots with QA sessions between them).
-
-Ready?
-
 <div style="background-color:darkgreen;padding:.5em 1em;color:white;">
   <a href="mailto:training@yegor256.com">Email</a>
   or text us in
