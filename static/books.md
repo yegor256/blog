@@ -114,6 +114,17 @@ Published: 22 June 2020.
 {: .book-par}
 
 {: .book-badge}
+{% badge /images/books/angry-tests/cover.png 125 /angry-tests.html %}
+
+It is a book about automated testing. It summarizes everything I have to say about unit testing,
+integration testing, and code quality. It is essentially a summary of my
+practical experience from the last few decades of programming and writing
+tests. The book may be interesting to hands-on programmers---it can help you
+make your tests more helpful---regardless of your programming language.
+<br/>
+To be published: 22 April 2025.
+
+{: .book-badge}
 {% badge /images/books/elegant-objects/cover-eo1.png 125 /elegant-objects.html %}
 
 The **3rd Volume** of [Elegant Objects](/elegant-objects.html)
