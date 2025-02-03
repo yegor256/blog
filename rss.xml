@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-02-02T14:21:36+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Advice for First-Time Open Source Contributors</title><link href="https://www.yegor256.com/2024/12/15/open-source-beginner-advice.html" rel="alternate" type="text/html" title="Advice for First-Time Open Source Contributors" /><published>2024-12-15T00:00:00+00:00</published><updated>2024-12-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/12/15/open-source-beginner-advice</id><content type="html" xml:base="https://www.yegor256.com/2024/12/15/open-source-beginner-advice.html"><![CDATA[<p>My <a href="https://github.com/eclipse-ee4j/jersey/blob/b2c7ba6d388cb9722f39073d7e82aa818fec49d5/core-common/src/test/java/org/glassfish/jersey/uri/internal/PathTemplateTest.java#L26">first attempt</a> to contribute to an open source repository was a
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-02-03T17:58:10+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Advice for First-Time Open Source Contributors</title><link href="https://www.yegor256.com/2024/12/15/open-source-beginner-advice.html" rel="alternate" type="text/html" title="Advice for First-Time Open Source Contributors" /><published>2024-12-15T00:00:00+00:00</published><updated>2024-12-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/12/15/open-source-beginner-advice</id><content type="html" xml:base="https://www.yegor256.com/2024/12/15/open-source-beginner-advice.html"><![CDATA[<p>My <a href="https://github.com/eclipse-ee4j/jersey/blob/b2c7ba6d388cb9722f39073d7e82aa818fec49d5/core-common/src/test/java/org/glassfish/jersey/uri/internal/PathTemplateTest.java#L26">first attempt</a> to contribute to an open source repository was a
 miserable failure. I picked a Java repository I was already using
 (<a href="https://en.wikipedia.org/wiki/Eclipse_Jersey">Glassfish Jersey</a>), created a unit test for an existing class, submitted a
 patch (there were no pull requests at that time), and… it was merged. I got
@@ -33,6 +33,18 @@ faster—especially if you are just a beginner making your first pull requests.<
   for example: 1) lack of documentation, 2) inconsistent design, 3) high
   complexity, or anything else preventing you from quickly understanding the
   code and contributing. Such an issue is a valuable contribution in itself.</p>
+
+<p><strong>Blame the Code Base</strong>. If <code class="language-plaintext highlighter-rouge">master</code> branch is broken (you can’t build
+  it locally due to some errors), don’t get frustrated. It’s not your fault.
+  Instead, submit an issue and ask the team to fix it. They will respect
+  such a bug report, because you’re, in this case, their tester, working
+  for free.</p>
+
+<p><strong>Ping Them</strong>. When you submit a pull request, an issue, or a comment to
+  existing pull requests and issues, make sure you mention the person
+  whose attention you need. <a href="/2024/04/01/ping-me-please.html">Ping them</a>,
+  without any hesitation. Otherwise,
+  they simply will miss your message.</p>
 
 <p><strong>Make Small Changes</strong>. There is nothing more frustrating for a maintainer than
   a large pull request from a stranger. The reasons are simple: first,
