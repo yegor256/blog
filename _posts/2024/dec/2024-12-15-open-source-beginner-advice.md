@@ -55,6 +55,18 @@ faster—especially if you are just a beginner making your first pull requests.
   complexity, or anything else preventing you from quickly understanding the
   code and contributing. Such an issue is a valuable contribution in itself.
 
+**Blame the Code Base**. If `master` branch is broken (you can't build
+  it locally due to some errors), don't get frustrated. It's not your fault.
+  Instead, submit an issue and ask the team to fix it. They will respect
+  such a bug report, because you're, in this case, their tester, working
+  for free.
+
+**Ping Them**. When you submit a pull request, an issue, or a comment to
+  existing pull requests and issues, make sure you mention the person
+  whose attention you need. [Ping them]({% pst 2024/apr/2024-04-01-ping-me-please %}),
+  without any hesitation. Otherwise,
+  they simply will miss your message.
+
 **Make Small Changes**. There is nothing more frustrating for a maintainer than
   a large pull request from a stranger. The reasons are simple: first,
   strangers usually write bad code; second, they often become disappointed when
