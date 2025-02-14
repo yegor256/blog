@@ -48,7 +48,7 @@ gem 'rainbow', '3.1.1'
 gem 'rake', '13.2.1'
 gem 'redcarpet', '3.6.0'
 gem 'rss', '0.3.1'
-gem 'rubocop', '1.71.0'
+gem 'rubocop', '1.72.0'
 gem 'rubocop-minitest', '>0', require: false
 gem 'rubocop-performance', '>0', require: false
 gem 'rubocop-rake', '>0', require: false
