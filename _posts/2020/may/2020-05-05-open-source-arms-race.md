@@ -75,17 +75,17 @@ companies invest in open source:
     community-driven conferences, like
     [DockerCon](https://docker.events.cube365.net/docker/dockercon/),
     [KubeCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/),
-    [FOSDEM](https://fosdem.org/2020/),
-    and so on.
+    and
+    [FOSDEM](https://fosdem.org/2020/).
 
   * **Foundations**.
     [Apache](https://www.apache.org/foundation/thanks),
     [Linux](https://www.linuxfoundation.org/membership/members/),
     [Eclipse](https://www.eclipse.org/membership/exploreMembership.php#allmembers),
     [GNOME](https://www.gnome.org/foundation/),
-    [OSI](https://opensource.org/sponsors)
+    [OSI](https://opensource.org/sponsors),
     and [others](https://opensource.com/resources/organizations)
-    are sponsored by Google, IBM, Huawei, Microsoft, Oracle, and others.
+    are sponsored by Google, IBM, Huawei, Microsoft, and Oracle.
 
   * **Acquisitions**.
     They [acquire](https://techcrunch.com/2019/01/12/how-open-source-software-took-over-the-world/)
