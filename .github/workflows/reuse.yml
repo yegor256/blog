@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 ---
 # yamllint disable rule:line-length
-name: yamllint
+name: reuse
 'on':
   push:
     branches:
@@ -11,11 +11,9 @@ name: yamllint
     branches:
       - master
 jobs:
-  yamllint:
+  reuse:
     timeout-minutes: 15
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - uses: ibiqlik/action-yamllint@v3
-        with:
-          config_file: .yamllint.yml
+      - uses: fsfe/reuse-action@v5

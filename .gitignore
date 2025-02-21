@@ -11,3 +11,4 @@ css/_icons.scss
 _gnuplot/**/*.svg
 .jekyll-cache/
 _chatgpt-translate/
+vendor/
