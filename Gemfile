@@ -23,7 +23,7 @@ source 'https://rubygems.org'
 # gem 'jekyll-related-posts'
 
 gem 'fastimage', '2.4.0'
-gem 'html-proofer', '5.0.9'
+gem 'html-proofer', '5.0.10'
 gem 'jekyll', '4.3.3'
 gem 'jekyll-bits', '0.15'
 gem 'jekyll-chatgpt-translate', '0.0.45'
