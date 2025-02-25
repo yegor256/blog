@@ -31,7 +31,7 @@ gem 'nuggets', '1.6.1'
 gem 'pygments.rb', '3.0.0'
 gem 'rainbow', '3.1.1'
 gem 'rake', '13.2.1'
-gem 'redcarpet', '3.6.0'
+gem 'redcarpet', '3.6.1'
 gem 'rss', '0.3.1'
 gem 'rubocop', '1.71.0'
 gem 'rubocop-minitest', '>0', require: false
