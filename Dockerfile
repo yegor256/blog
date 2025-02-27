@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
-FROM yegor256/rultor-image:1.23.1
+FROM yegor256/rultor-image:1.24.0
 LABEL Description="yegor256.com" Vendor="Yegor Bugayenko" Version="1.0"
 
 ENV DEBIAN_FRONTEND=noninteractive
