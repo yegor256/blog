@@ -104,7 +104,7 @@ When I say "bugs," I mean more than just software errors but also:
  * features not yet implemented
  * functional and non-functional bugs
  * lack of test coverage
- * unresolved `@todo` markers
+ * unresolved `todo` markers
  * lack of risk analysis
  * etc.
 
@@ -238,11 +238,11 @@ it and determine the amount of time I have left. If I still have time to make it
 pass---I do it, commit the changes and report to the project manager.
 
 If I don't have time to implement the fix, I mark pieces of code that
-don't already have `@todo` markers, commit them and report to the
+don't already have `todo` markers, commit them and report to the
 project manager that I've finished.
 
 As you see, I'm fixing the code and breaking it at the same time. I'm fixing
-it with my new unit test, but breaking it with `@todo` puzzles.
+it with my new unit test, but breaking it with `todo` puzzles.
 
 This is how I help to increase the overall quality of the project - by
 fixing and breaking at the same time.

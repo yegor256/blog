@@ -59,7 +59,7 @@ Finally, in March 2010 we found a solution, which was labeled
 [Puzzle Driven Development]({% pst 2010/mar/2010-03-04-pdd %}) (PDD). According to
 this concept: 1) Any task has a very small fixed budget (we use 30 minutes);
 2) The task performer is allowed to complete only part of the task;
-3) The code that is being returned to `master` must include `@todo` markers, called "puzzles";
+3) The code that is being returned to `master` must include `todo` markers, called "puzzles";
 4) Puzzles are automatically converted to new tasks.
 
 The beauty of this approach is that the most complicated part of the software

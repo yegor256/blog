@@ -162,7 +162,7 @@ Once you manage to reproduce the bug and the build fails, stop right there.
 That's more than enough for a single piece of work. Skip the test
 (for example, using `@Ignore` annotation in JUnit 4) and commit your changes.
 Then add documentation to the unit test you just created, preferably in the
-form of a `@todo`. Explain there that you managed to reproduce the problem
+form of a `todo`. Explain there that you managed to reproduce the problem
 but didn't have enough time to fix it. Or maybe you just don't know how to
 fix it. Be honest and give all possible details.
 

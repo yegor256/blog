@@ -47,8 +47,7 @@ Now, your repository is being watched by [0pdd](https://www.0pdd.com). Every
 time you `git push` something new, it does a `git pull` and retrieves your changes
 from GitHub. Then it runs [pdd](https://github.com/yegor256/pdd), a command line tool
 that scans the entire code base (only the [`master`](https://help.github.com/articles/setting-the-default-branch/)
-branch) and finds all occurrences of `@todo`
-markers.
+branch) and finds all occurrences of `todo`  markers.
 
 For all newly found markers, [0pdd](https://www.0pdd.com) will submit new
 issues to the GitHub issue-tracking section of your repository.
@@ -61,7 +60,7 @@ Also, when you remove markers from your code base,
 Now, when an issue is assigned to a programmer, we allow him or her
 to [cut corners]({% pst 2015/jan/2015-01-15-how-to-cut-corners %})
 and return incomplete code back to the `master`. If and when the code is
-not complete, we ask the programmer to leave `@todo` markers in the code, called
+not complete, we ask the programmer to leave `todo` markers in the code, called
 "puzzles." Later, these puzzles will be assigned to other programmers,
 and so on. Eventually, the problem will be fixed when _most_ puzzles are
 resolved.
