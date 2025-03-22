@@ -105,8 +105,7 @@ and use this URL for the webhook:
 time you <code class="language-plaintext highlighter-rouge">git push</code> something new, it does a <code class="language-plaintext highlighter-rouge">git pull</code> and retrieves your changes
 from GitHub. Then it runs <a href="https://github.com/yegor256/pdd">pdd</a>, a command line tool
 that scans the entire code base (only the <a href="https://help.github.com/articles/setting-the-default-branch/"><code class="language-plaintext highlighter-rouge">master</code></a>
-branch) and finds all occurrences of <code class="language-plaintext highlighter-rouge">@todo</code>
-markers.</p>
+branch) and finds all occurrences of <code class="language-plaintext highlighter-rouge">todo</code>  markers.</p>
 
 <p>For all newly found markers, <a href="https://www.0pdd.com">0pdd</a> will submit new
 issues to the GitHub issue-tracking section of your repository.</p>
@@ -119,7 +118,7 @@ issues to the GitHub issue-tracking section of your repository.</p>
 <p>Now, when an issue is assigned to a programmer, we allow him or her
 to <a href="/2015/01/15/how-to-cut-corners.html">cut corners</a>
 and return incomplete code back to the <code class="language-plaintext highlighter-rouge">master</code>. If and when the code is
-not complete, we ask the programmer to leave <code class="language-plaintext highlighter-rouge">@todo</code> markers in the code, called
+not complete, we ask the programmer to leave <code class="language-plaintext highlighter-rouge">todo</code> markers in the code, called
 “puzzles.” Later, these puzzles will be assigned to other programmers,
 and so on. Eventually, the problem will be fixed when <em>most</em> puzzles are
 resolved.</p>

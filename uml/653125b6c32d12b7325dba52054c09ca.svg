@@ -3,7 +3,7 @@ entity script--><rect fill="#FEFECE" filter="url(#fp0emy6kwud7w)" height="36.296
 entity log--><rect fill="#FEFECE" filter="url(#fp0emy6kwud7w)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="41" x="6" y="104"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1" y="109"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1" y="130.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="21" x="16" y="126.9951">log</text><!--MD5=[3d0886578e13293edcfc9ae3a5ec2361]
 entity Line--><rect fill="#FEFECE" filter="url(#fp0emy6kwud7w)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="48" x="82.5" y="104"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="77.5" y="109"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="77.5" y="130.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="92.5" y="126.9951">Line</text><!--MD5=[c295700a57be6137f6492fbc2ae72a36]
 link script to log--><path d="M59.16,44.24 C52.62,59.61 43.01,82.2 35.91,98.89 " fill="none" id="script-&gt;log" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="33.79,103.87,40.9942,97.1544,35.7475,99.2691,33.6328,94.0224,33.79,103.87" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[6eb8689c378670d056e6e42ca119a4cf]
-link script to Line--><path d="M73.84,44.24 C80.38,59.61 89.99,82.2 97.09,98.89 " fill="none" id="script-&gt;Line" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="99.21,103.87,99.3672,94.0224,97.2525,99.2691,92.0058,97.1544,99.21,103.87" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[663f3ea724c1e37357e527df06d52586]
+link script to Line--><path d="M73.84,44.24 C80.38,59.61 89.99,82.2 97.09,98.89 " fill="none" id="script-&gt;Line" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="99.21,103.87,99.3672,94.0224,97.2525,99.2691,92.0058,97.1544,99.21,103.87" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[2f4153681715299a11ddbc8431715a84]
 @startuml
 
 [script] -down-> [log]
@@ -15,7 +15,7 @@ PlantUML version 1.2020.02(Sun Mar 01 10:22:07 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
-Java Version: 11.0.22+7-post-Ubuntu-0ubuntu222.04.1
+Java Version: 11.0.26+4-post-Ubuntu-1ubuntu122.04
 Operating System: Linux
 Default Encoding: UTF-8
 Language: en

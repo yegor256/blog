@@ -436,7 +436,7 @@ orfjackal/jumi   (Java)
 +
 -
 No visible CI
-No Github issue tracking (TODO list commited to the root, as well as roadmap :) )
+No Github issue tracking (TO-DO list commited to the root, as well as roadmap :) )
 No code quality control at all
 No test coverage control
 Inheritance over inheritance (fi.jumi.api.drivers.Driver) without any sense
