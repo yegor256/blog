@@ -104,7 +104,7 @@ module Jekyll
       months = months.sort_by { |k, _v| k }.to_h
       File.write(
         File.join(site.config['source'], '_temp/stats/words.txt'),
-        words.sort { |a, b| a.downcase <=> b.downcase }.uniq(&:downcase).join("\n")
+        words.sort_by(&:downcase).uniq(&:downcase).join("\n")
       )
       File.write(
         dat,
@@ -154,7 +154,7 @@ module Jekyll
       .select { |w| w.length > 1 }
       .grep(/^[A-Za-z].*/)
       .map do |w|
-        if /[A-Z]{2}.*/ =~ w
+        if /[A-Z]{2}.*/.match?(w)
           w
         else
           w.downcase

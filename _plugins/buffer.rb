@@ -43,25 +43,26 @@ module Jekyll
           next unless months > 3
           articles << {
             link: home + p.url,
-            title: if months < 6
-                     [
-                       "I wrote this #{months}-months ago:",
-                       "#{months}-months ago I wrote:",
-                       "Re-read this #{months}-months old post:"
-                     ].sample
-                   elsif months < 12
-                     [
-                       'I wrote this almost a year ago:',
-                       'Almost a year old article:',
-                       'Re-read this year-old blog post:'
-                     ].sample
-                   else
-                     [
-                       'I wrote this over a year ago:',
-                       'Pretty old, but still relevant:',
-                       'Over a year old, read it again:'
-                     ].sample
-                   end + " \"#{p['title']}\"#{tags}"
+            title:
+              if months < 6
+                [
+                  "I wrote this #{months}-months ago:",
+                  "#{months}-months ago I wrote:",
+                  "Re-read this #{months}-months old post:"
+                ].sample
+              elsif months < 12
+                [
+                  'I wrote this almost a year ago:',
+                  'Almost a year old article:',
+                  'Re-read this year-old blog post:'
+                ].sample
+              else
+                [
+                  'I wrote this over a year ago:',
+                  'Pretty old, but still relevant:',
+                  'Over a year old, read it again:'
+                ].sample
+              end + " \"#{p['title']}\"#{tags}"
           }
         end
         key = ENV.fetch('YOUTUBE_API_KEY', nil) # configured in .travis.yml
@@ -102,8 +103,10 @@ module Jekyll
           'yegor256/cactoos': 'Cactoos is a library of truly object-oriented Java primitives',
           'jcabi/jcabi-http': 'jcabi-http is an object-oriented Java HTTP client'
         }.each do |repo, tweet|
-          articles << { link: "https://github.com/#{repo}",
-                        title: "#{tweet}. Please, add your GitHub star, help the project:" }
+          articles << {
+            link: "https://github.com/#{repo}",
+            title: "#{tweet}. Please, add your GitHub star, help the project:"
+          }
         end
         articles.shuffle.each do |a|
           maker.items.new_item do |item|

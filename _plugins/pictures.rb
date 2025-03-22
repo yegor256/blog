@@ -13,7 +13,7 @@ module Yegor
         raise "File doesn't exist: #{src}" unless
           File.exist?("./_site#{src}") ||
           File.exist?(".#{src}") ||
-          src =~ /gnuplot/
+          src.include?('gnuplot')
       else
         @url = src
       end

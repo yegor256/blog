@@ -10,6 +10,12 @@ AllCops:
   TargetRubyVersion: 2.7
   SuggestExtensions: false
   NewCops: enable
+plugins:
+  - rubocop-rake
+  - rubocop-minitest
+  - rubocop-performance
+Performance/CollectionLiteralInLoop:
+  Enabled: false
 Gemspec/RequiredRubyVersion:
   Enabled: false
 Metrics/MethodLength:
@@ -36,7 +42,3 @@ Metrics/PerceivedComplexity:
   Max: 20
 Metrics/BlockLength:
   Max: 100
-require:
-  - rubocop-rake
-  - rubocop-minitest
-  - rubocop-performance

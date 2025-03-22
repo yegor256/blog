@@ -141,14 +141,14 @@ module Yegor
           #{post.content.include?('{% youtube') ? '<li class="has-youtube" title="There is a YouTube video inside"><i class="icon icon-youtube"></i></li>' : ''}
           #{post['chatgpt-translate'] ? '<li title="The article is translated to other languages by ChatGPT"><i class="icon icon-chatgpt"></i></li>' : ''}
         </ul>
-      </div>".gsub("\n", '')
+      </div>".delete("\n")
     end
 
     def yb_page_tags(page)
       return '' unless page['tags'].is_a?(Array)
       tags = page['tags'].dup.sort
       tags.map!(&:first) if tags.first.is_a?(Array)
-      tags.map { |t| tag_link(t) if t.is_a?(String) }.compact.join(' ')
+      tags.filter_map { |t| tag_link(t) if t.is_a?(String) }.join(' ')
     end
   end
 end
