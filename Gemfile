@@ -33,7 +33,7 @@ gem 'rainbow', '~>3.1'
 gem 'rake', '~>13.2'
 gem 'redcarpet', '~>3.6'
 gem 'rss', '~>0.3'
-gem 'rubocop', '1.74.0'
+gem 'rubocop', '1.75.1'
 gem 'rubocop-minitest', '>0', require: false
 gem 'rubocop-performance', '>0', require: false
 gem 'rubocop-rake', '>0', require: false
