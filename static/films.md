@@ -30,10 +30,11 @@ My recently made films:
   [Кинопоиск]()
 
   Watch:
-  ~~YouTube~~ (not yet)
+  [YouTube](https://www.youtube.com/watch?v=asWCzJGyD98)
 
   Download:
-  ~~2880x2160 (1.72Gb)~~ (not yet)
+  [3840x2160](https://films.yegor256.com/mug/4k.mov) (2.4Gb) |
+  [2880x2160](https://films.yegor256.com/mug/2880.mov) (1.7Gb)
 
   Subtitles:
   [Russian](https://films.yegor256.com/hot-stone/ru-captions.srt) |
