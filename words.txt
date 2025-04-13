@@ -1833,6 +1833,7 @@ confidence
 confident
 confidential
 config
+configs
 configurable
 configuration
 configurations
@@ -1840,6 +1841,8 @@ configure
 configured
 configures
 configuring
+configuring-branches-and-merges-in-your-repository
+configuring-pull-request-merges
 confirm
 confirmation
 confirmed
@@ -1933,6 +1936,7 @@ continually
 continue
 continues
 continuous
+continuousintegration
 continuously
 continuum
 contract
@@ -3091,6 +3095,7 @@ enjoys
 enormous
 enough
 enplain
+enroll
 enslaved
 enslaving
 ensure
@@ -3556,6 +3561,7 @@ finds
 finduserbyname
 fine
 fine-grained
+finer-grained
 finger
 finger-pointing
 fingers
@@ -4288,6 +4294,7 @@ highlighting
 highlights
 highly
 highways
+hiltor
 him
 himself
 hints
@@ -4453,6 +4460,7 @@ idiot
 idiot-friendly
 idiotic
 idiots
+idle
 idx
 IE
 IEEE
@@ -4544,7 +4552,9 @@ improves
 improving
 improvise
 in
+in-browser
 in-budget
+in-cloud
 in-code
 in-cooperation
 in-docker
@@ -5001,6 +5011,7 @@ jenkins
 jennifer
 jens
 jeopardize
+jeopardized
 JEP
 jeremy
 jerry
@@ -5372,6 +5383,7 @@ lightweight
 likable
 like
 liked
+likelihood
 likely
 likes
 likewise
@@ -5424,6 +5436,7 @@ living
 ll
 ller
 LLM
+LLM-based
 load
 loadbookbyid
 loaders
@@ -5600,6 +5613,7 @@ managerial
 managers
 manages
 managing
+managing-a-merge-queue
 mandates
 mandatory
 MANIFEST
@@ -5658,6 +5672,7 @@ marshalling
 martela
 martian
 martin
+martinfowler
 masculine
 mask
 massage
@@ -5869,6 +5884,7 @@ might
 migrate
 migrates
 migration
+migrations
 mihai
 mike
 milan
@@ -6009,6 +6025,7 @@ monkey
 monkey-feeding
 monkeys
 mono-tech
+monolith
 monolithic
 monopoly
 monorepo
@@ -6078,6 +6095,7 @@ mul
 mulcahy
 muller
 multi-billion-dollar
+multi-browser
 multi-column
 multi-dimensional
 multi-factor
@@ -6453,6 +6471,7 @@ ology
 olympic
 on
 on-boarding
+on-demand
 on-fly
 on-premise
 on-site
@@ -6467,6 +6486,7 @@ one
 one's
 one-hour
 one-interface
+one-line
 one-man
 one-million-dollar
 one-noun
@@ -6710,6 +6730,7 @@ paradise
 paragraph
 paragraphs
 parallel
+parallelized
 parameter
 parameters
 parent
@@ -6827,6 +6848,7 @@ penalties
 penalty
 pending
 penetrate
+penetration
 pennies
 pens
 pensions
@@ -7181,6 +7203,7 @@ prefers
 prefix
 prefixed
 prefixes
+preflight
 preliminary
 premises
 premium
@@ -7504,6 +7527,7 @@ questioned
 questioning
 questionnaire
 questions
+queue
 quick
 quickbooks
 quicker
@@ -8042,6 +8066,7 @@ reynolds
 rfp
 RGBColor
 RHVnNqB
+rhythm
 rich
 richard
 richer
@@ -9539,6 +9564,7 @@ thirty-two
 this
 thomas
 thompson
+thorough
 thoroughly
 those
 though
@@ -9564,6 +9590,7 @@ three-month
 three-year
 threecopies
 threshold
+thresholds
 throttling
 through
 throughout
@@ -10472,6 +10499,7 @@ worked
 worker
 workers
 workflow
+workflows
 working
 workload
 workplace
