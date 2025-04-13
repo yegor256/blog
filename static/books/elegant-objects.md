@@ -365,7 +365,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
     Reading your book, blog, and David West's book, I realize I did
     not understand OOP (except for using small class sizes). Like
     Mulla Nasrudin, who has taken a memory course, said:
-    "I’m improving. Now I can sometimes remember that I have forgotten something."
+    "I'm improving. Now I can sometimes remember that I have forgotten something."
     So it is with my OOP abilities. I would bring a combination of
     enthusiasm and naïveté to reading your manuscript.</span>
   </div>

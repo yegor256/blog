@@ -64,7 +64,7 @@ and creativity by introducing the concept of [productivity evaluation](https://w
 (that's unthinkable!).
 They can simply reward the most disciplined clock-watchers and call it a management.
 
-{% quote Let’s focus on fitting into the group rather than contributing to the codebase. %}
+{% quote Let's focus on fitting into the group rather than contributing to the codebase. %}
 
 On the other hand, perhaps it's not entirely detrimental for some of us. If the management
 is [incompetent]({% pst 2017/aug/2017-08-01-how-to-manage-a-manager %})

@@ -71,7 +71,7 @@ But they all lacked the very important skill which, I believe, distinguishes
 a professional software engineer from a guy who merely learned how to write Java code:
 [microtasking]({% pst 2017/nov/2017-11-28-microtasking %}).
 
-{% quote They simply don’t know how to break their changes into smaller pieces and deliver them incrementally. %}
+{% quote They simply don't know how to break their changes into smaller pieces and deliver them incrementally. %}
 
 They simply don't know how to break their changes, which in most cases are
 by no means useless, into smaller pieces and deliver them incrementally. They want to

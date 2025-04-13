@@ -41,7 +41,7 @@ are a few good articles about this subject, including
 by Carlo Pescio,
 [One of the Best Bits of Programming Advice I Ever Got](http://objology.blogspot.com/2011/09/one-of-best-bits-of-programming-advice.html)
 by Travis Griggs,
-and [Naming Objects – Don’t Use ER in Your Object Names](https://www.benhallbenhall.com/2013/01/naming-objects-er-object-names/)
+and [Naming Objects – Don't Use ER in Your Object Names](https://www.benhallbenhall.com/2013/01/naming-objects-er-object-names/)
 by Ben Hall.
 The main argument against this "-er" suffix is that "when you need a manager,
 it's often a sign that the managed are just plain old data structures

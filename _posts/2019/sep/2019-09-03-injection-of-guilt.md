@@ -54,7 +54,7 @@ by email, or even via a phone call? Well,
 we should use tickets,
 [of course]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 
-{% quote Why can’t we do this in writing, in a chat, by email, or even via a phone call? %}
+{% quote Why can't we do this in writing, in a chat, by email, or even via a phone call? %}
 
 Why do "planning for the next day" and "discussing progress" need to be done
 personally in a standing-up circle instead of digitally? Why can't we update

@@ -71,12 +71,12 @@ We discuss what are good and bad habits in exception throwing: how to create the
 <a href="https://www.youtube.com/watch?v=4ZWHs1mloUw"><img src="https://i.ytimg.com/vi/4ZWHs1mloUw/mqdefault.jpg" class="wnr" alt="Webinar no.52 by Yegor Bugayenko"/></a>
 Nov 4, 2020<br/>
 &#35;52: **RAII in Java**<br/>
-Resource Acquisition Is Initialization (RAII) is a design idea introduced in C++ by Bjarne Stroustrup for exception-safe resource management. Thanks to garbage collection Java doesn’t have this feature, but we can implement something similar, using try-with-resources. Let's see how exactly.
+Resource Acquisition Is Initialization (RAII) is a design idea introduced in C++ by Bjarne Stroustrup for exception-safe resource management. Thanks to garbage collection Java doesn't have this feature, but we can implement something similar, using try-with-resources. Let's see how exactly.
 
 <a href="https://www.youtube.com/watch?v=rsWrgxm8ktU"><img src="https://i.ytimg.com/vi/rsWrgxm8ktU/mqdefault.jpg" class="wnr" alt="Webinar no.51 by Yegor Bugayenko"/></a>
 Oct 7, 2020<br/>
 &#35;51: **Fat and Skinny Design**<br/>
-It seems that type/class hierarchies in OOP may be designed in two extreme ways: either with full encapsulation of data in mind; or with just a few interfaces making raw data visible, and letting classes deal with it, parse it, and turn it into smaller data elements. You may be surprised, but I’m suggesting the second option is more elegant.
+It seems that type/class hierarchies in OOP may be designed in two extreme ways: either with full encapsulation of data in mind; or with just a few interfaces making raw data visible, and letting classes deal with it, parse it, and turn it into smaller data elements. You may be surprised, but I'm suggesting the second option is more elegant.
 
 <a href="https://www.youtube.com/watch?v=nErn5G_JHhE"><img src="https://i.ytimg.com/vi/nErn5G_JHhE/mqdefault.jpg" class="wnr" alt="Webinar no.50 by Yegor Bugayenko"/></a>
 August 5, 2020<br/>

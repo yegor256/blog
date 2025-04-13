@@ -50,7 +50,7 @@ formulated problem statement or even if no such file exists.
 Who am I kidding? In most cases, even if we don't have a repository
 we will still be paid well!
 
-{% quote The primary responsibility of a team leader is keeping an eye on the problem statement and making sure it’s good enough for the team. %}
+{% quote The primary responsibility of a team leader is keeping an eye on the problem statement and making sure it's good enough for the team. %}
 
 This is true, but I think that money is not the fuel of
 the software economy ~~anymore~~. It's people. Not just people, but

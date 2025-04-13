@@ -58,7 +58,7 @@ Anthony Burgess, _A Clockwork Orange_, 1962. [Buy](https://amzn.to/2xOPVPG).
 
 Ken Kesey, _One Flew Over the Cuckoo's Nest_, 1962. [Buy](https://amzn.to/2xOPy7K).
 
-Philip Roth, _Portnoy’s Complaint_, 1969. [Buy](https://amzn.to/2xfsOeg).
+Philip Roth, _Portnoy's Complaint_, 1969. [Buy](https://amzn.to/2xfsOeg).
 
 Венедикт Ерофеев, _Москва---Петушки_, 1970.
 

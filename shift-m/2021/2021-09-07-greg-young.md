@@ -31,35 +31,35 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 [00.00.59] **Yegor**: So, you actually code in C right now?
 
-[00.01.02] **Greg**: I’ve coded in C regularly for coming up on 20 years
+[00.01.02] **Greg**: I've coded in C regularly for coming up on 20 years
 
 [00.01.05] **Yegor**: Is it C++
 
 [00.00.00] **Greg**: No, straight C
 
-[00.01.10] **Yegor**: Why not C++? I’m just trolling a little bit, but still
+[00.01.10] **Yegor**: Why not C++? I'm just trolling a little bit, but still
 
-[00.01.17] **Greg**: Well, one, when I write C++, I have a tendency of writing C and C++. I’ve just never gotten that far into C++. Two, for me the halving of a c client is actually much more valuable than a C++ client, because it can be used in essentially anything. What if I were to have a 68040. Do you think I could compile my c code down for 68040 and get it working what about my C++ code? Oh, well, maybe let's talk about what compilers we might be looking at
+[00.01.17] **Greg**: Well, one, when I write C++, I have a tendency of writing C and C++. I've just never gotten that far into C++. Two, for me the halving of a c client is actually much more valuable than a C++ client, because it can be used in essentially anything. What if I were to have a 68040. Do you think I could compile my c code down for 68040 and get it working what about my C++ code? Oh, well, maybe let's talk about what compilers we might be looking at
 
 [00.02.02] **Yegor**: Right
 
-[00.02.04] **Greg**: But it the whole reason I’ve been playing with the C client and it's not this isn't any serious work. This is just, you know, it's me playing around has been that it would be one client, that can be used from essentially anywhere. 
+[00.02.04] **Greg**: But it the whole reason I've been playing with the C client and it's not this isn't any serious work. This is just, you know, it's me playing around has been that it would be one client, that can be used from essentially anywhere. 
 
 [00.02.25] **Yegor**: And, you know, we jumped, we decided to do this talk this interview after I met your tweet out of many other tweets you make. But this one got me very interesting and let me actually quote it well, you're saying there that you are not happy with people more and more people saying that they are CTOs chief technical officers, but they don't code, and you don't find this trend, you find this trend scary, so why it's scary what's wrong with that?
 
-[00.02.50] **Greg**: Well, I I’ve worked as a consultant for many years, and I’ve been to many organizations where I go and talk to a chief technology officer, and well they literally don't know how to code and it's very very difficult to be in such a position without having understanding of code. So we are going to be telling people to do things and we are setting direction, but we are incapable of looking at the work, hat's being produced, we're incapable of knowing the quality of the work that's being produced
+[00.02.50] **Greg**: Well, I I've worked as a consultant for many years, and I've been to many organizations where I go and talk to a chief technology officer, and well they literally don't know how to code and it's very very difficult to be in such a position without having understanding of code. So we are going to be telling people to do things and we are setting direction, but we are incapable of looking at the work, hat's being produced, we're incapable of knowing the quality of the work that's being produced
 
-[00.03.33] **Yegor**: It's everywhere. I mean I’ve never met in my life. I’ve never met anyone in the position of the CTO who would actually write code, because they know how to code some of them, but they don't do it every day. They've done it long time ago, maybe, when there were programmers, but when they are CTO, they don't even think about that. 
+[00.03.33] **Yegor**: It's everywhere. I mean I've never met in my life. I've never met anyone in the position of the CTO who would actually write code, because they know how to code some of them, but they don't do it every day. They've done it long time ago, maybe, when there were programmers, but when they are CTO, they don't even think about that. 
 
 [00.03.53] **Greg**: So, I think there's a happy mix where you end up with a CTO, who's actively looking through code, and who occasionally sends pull requests, but isn't necessarily spending you know six hours a day actively writing code, but they should at least have some basis in writing code, and it's not that they wrote code 20 years ago. It's they, they still know how to actively write code. Being a CTO and not getting into the code of your teams is actually quite difficult. I mean what are you basing things off, if you're not in that code are you just going off of what they say?
 
 [00.04.55] **Yegor**: Yeah, that's true. You know what they say, because I have a few friends, a few people who I know quite close who are CTO, and when I ask them, this question do you really code? They say we do more high-level things because coding is something other people can do. That's the very typical answer they give
 
-[00.05.11] **Greg**: And I’m not suggesting that CTO should be coding. Six hours a day, it's more seeing a pull request from a CTO should be a fairly normal thing. Even if it's not something important, it's you know, they're just looking through some code, and well they saw this function, and they wanted to refactor it. So, they sent a pull request for it, because it came out a little bit nicer after refactoring. 
+[00.05.11] **Greg**: And I'm not suggesting that CTO should be coding. Six hours a day, it's more seeing a pull request from a CTO should be a fairly normal thing. Even if it's not something important, it's you know, they're just looking through some code, and well they saw this function, and they wanted to refactor it. So, they sent a pull request for it, because it came out a little bit nicer after refactoring. 
 
 [00.05.40] **Yegor**: So, they have to look at the code. They have to once upon a time go to the repository check what's going on there, so they have it has to be in their agenda their everyday routine works not just attending meetings, right, not just talking to people, but actually opening the repository going through the code. 
 
-[00.05.57] **Greg**: And if you if you're not doing that then what are you basing everything on? I don't know I’m not at all suggesting that you know a CTO should be coding 30 hours a week or, but they should at least have familiarity with the code base. 
+[00.05.57] **Greg**: And if you if you're not doing that then what are you basing everything on? I don't know I'm not at all suggesting that you know a CTO should be coding 30 hours a week or, but they should at least have familiarity with the code base. 
 
 [00.06.22] **Yegor**: And do you think in general coding is an art, something which is creative or it's more like a manufacturing process?
 [00.06.31] **Greg**: I would definitely have to go with art on that one there are some pieces of code that you will come into that there's lots of well-known ways of handling it. And you're basically just going to be following the same pattern that you've used 50 times before, but once we start looking at systems in general. It doesn't really fall down that because you start getting into like okay, so we're going to do microservices. Okay, how are those microservices going to talk to each other what are those patterns going to look like where are my boundaries and this suddenly starts getting into much more. 
@@ -82,7 +82,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 [00.10.13] **Yegor**: So it's like a vocabulary for us, right?
 
-[00.10.16] **Greg**: Yeah. And if you see a foo singleton, I’m willing to bet that you're going to guess that there's only one instance of it
+[00.10.16] **Greg**: Yeah. And if you see a foo singleton, I'm willing to bet that you're going to guess that there's only one instance of it
 
 [00.10.31] **Yegor**: Right, so we need to teach young programmers these design patterns and give them full, you know, full amount of them, because there are many of them not 10 not
 
@@ -98,7 +98,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.11.22] **Yegor**: Like let's say. Yeah, let's say, there's a single tone. So, you learn about singleton and then you see singleton, here, singleton, there singleton, there, so you make three singletones, and it looks to you as your program. It looks to you easier, because you know singletone. So, you put it in all the places. But at the same time, you over and over re-implement uh the same concept, which, probably, could be replaced by something else and extract it to someone place. And then, instead of having three single tones, you were going to have one place with something
 
 
-[00.11.52] **Greg**: We're getting we're getting into one of my favorite topics, now which is code duplication. And the reason it's one of my favorite topics. I have a rather controversial view on it I like code duplication. So, one of the things that I hate is coming into a code base where everything is connected to everything. And then you have to make a change to this base thing, and you realize it's going to affect 3428 other places. And you're like holy crap. What is going to happen if I do this, and I I’ve argued online before that one of the things we should be looking at more is to try denormalizing our code, to reduce dependencies. And I know that that's completely in the face of what everybody actually recommends, which is that we normalize our code, but there's some benefits to denormalizing your code as well. Have you ever gone and worked? On, let's say, a thousand-line self-contained piece of code. 
+[00.11.52] **Greg**: We're getting we're getting into one of my favorite topics, now which is code duplication. And the reason it's one of my favorite topics. I have a rather controversial view on it I like code duplication. So, one of the things that I hate is coming into a code base where everything is connected to everything. And then you have to make a change to this base thing, and you realize it's going to affect 3428 other places. And you're like holy crap. What is going to happen if I do this, and I I've argued online before that one of the things we should be looking at more is to try denormalizing our code, to reduce dependencies. And I know that that's completely in the face of what everybody actually recommends, which is that we normalize our code, but there's some benefits to denormalizing your code as well. Have you ever gone and worked? On, let's say, a thousand-line self-contained piece of code. 
 
 
 [00.13.07] **Yegor**: What's self-contained?
@@ -124,7 +124,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[00.14.01] **Greg**: And I’m not saying that one way is right and the other is wrong. I’m saying that we've been over optimizing to one side, and that's the normalization side.
+[00.14.01] **Greg**: And I'm not saying that one way is right and the other is wrong. I'm saying that we've been over optimizing to one side, and that's the normalization side.
 
 
 
@@ -137,7 +137,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.14.36] **Yegor**: It's interesting never thought about that
 
 
-[00.14.38] **Greg**: And this doesn't apply for all code, obviously. But it's a relatively common experience to run into where it's like no, I’m just gonna copy and paste this code out of that into my code and move forward. And now I have no dependency on what anyone does to that code in the future. I have no dependency on that library. That's my code. 
+[00.14.38] **Greg**: And this doesn't apply for all code, obviously. But it's a relatively common experience to run into where it's like no, I'm just gonna copy and paste this code out of that into my code and move forward. And now I have no dependency on what anyone does to that code in the future. I have no dependency on that library. That's my code. 
 
 
 [00.15.11] **Yegor**: Maybe we can have it in the computers, like some plugins some AI, maybe which can suggest us to do that, maybe the AI can only computer, whatever can look at our code and say you're overusing the library, because you're you depend on a huge library where you need basically just one function out of it. So how about you take it from there, put it here and then your code becomes more readable?
@@ -149,7 +149,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.16.22] **Yegor**: Right, that's a good point. So do you really do that in your code like this denormalization or it's just a theory
 
 
-[00.16.30] **Greg**: Oh, no, no! I’ve used this kind of denormalization for a very very long time
+[00.16.30] **Greg**: Oh, no, no! I've used this kind of denormalization for a very very long time
 
 
 [00.16.37] **Yegor**: And then your code becomes longer right, it's more readable but longer. Just like you said a 1000 like okay…
@@ -179,7 +179,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.18.39] **Yegor**: mighty moose? No
 
 
-[00.18.43] **Greg**:  mighty moose is a product I created some time ago. It was fine and basically what it would do is it would figure out which unit tests needed to be run, when you change code. So if you change some code, it will figure out that these are the unit tests that could, possibly, be affected, and then run those unit tests. I’ve been writing unit tests for a very long time and writing tooling on top of it. I am a strong believer in writing unit tests and integration tests. 
+[00.18.43] **Greg**:  mighty moose is a product I created some time ago. It was fine and basically what it would do is it would figure out which unit tests needed to be run, when you change code. So if you change some code, it will figure out that these are the unit tests that could, possibly, be affected, and then run those unit tests. I've been writing unit tests for a very long time and writing tooling on top of it. I am a strong believer in writing unit tests and integration tests. 
 
 
 [00.19.24] **Yegor**: And you know the difference?
@@ -194,7 +194,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.19.29] **Greg**: Scope, how many things am I interacting with
 
 
-[00.19.34] **Yegor**: And if I’m interacting with three things this is the unit test or integration test
+[00.19.34] **Yegor**: And if I'm interacting with three things this is the unit test or integration test
 
 
 [00.19.38] **Greg**: I would need to look at the code in question, because there are some times where I might be calling a method on an object, an internal to that object it then uses another object internally in which case I would say that's that looks more like a unit test, but it's more likely to end up being an integration test a perfect example of the former might be I am calling a method on a customer object and inside of that method it's uh interacting with a name value object and with an address value object. So, we have three objects there, but that's absolutely a unit test. 
@@ -215,14 +215,14 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.21.08] **Yegor**: Yes, definitely and now let's try to write the union test for this concept. It's going to be a unit test or integration? 
 
 
-[00.21.14] **Greg**: That's going to be a unit test. Although I have a much more useful way of putting this. And I’ve used this definition for many years, which is this fast or is this slow if it's fast then it's a unit test if it's slow, then it's an integration test
+[00.21.14] **Greg**: That's going to be a unit test. Although I have a much more useful way of putting this. And I've used this definition for many years, which is this fast or is this slow if it's fast then it's a unit test if it's slow, then it's an integration test
 
 
 [00.21.42] **Yegor**: Again, quite difficult to give a specific definition of slow and fast
 
 
 
-[00.21.47] **Greg**: Fast for me as it runs in one or two milliseconds. So, this is more a definition based on use than a definition that is actually useful because you could write something that touches 500 objects and it can be fast. What I’m looking for there is more my unit tests. I intend to be running on a very regular basis. Hell with mighty moose, it was every time you saved your code. All your tests were wrong. So, I want that to be fast and that's very important to keep fast. Then I have a bunch of tests which might still be highly valuable, but they're slow. I just don't want them being run every time that I change my code
+[00.21.47] **Greg**: Fast for me as it runs in one or two milliseconds. So, this is more a definition based on use than a definition that is actually useful because you could write something that touches 500 objects and it can be fast. What I'm looking for there is more my unit tests. I intend to be running on a very regular basis. Hell with mighty moose, it was every time you saved your code. All your tests were wrong. So, I want that to be fast and that's very important to keep fast. Then I have a bunch of tests which might still be highly valuable, but they're slow. I just don't want them being run every time that I change my code
 
 
 [00.23.02] **Yegor**: Because your entire test suit is slow right you. That's why you create the system in order to run on this specific test because the full test suit is too slow. 
@@ -234,7 +234,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.23.54] **Yegor**: Yeah
 
 
-[00.23.55] **Greg**: They are not fast. They take a long time to run. Perhaps maybe an hour. What I’m doing is I’m looking between the two of those and I’m trying to optimize for my workflow. If all my tests run in 10 seconds. That's no problem. If my tests take 15 minutes to run, while I’m sitting there actively developing code, I’m not going to run them. 
+[00.23.55] **Greg**: They are not fast. They take a long time to run. Perhaps maybe an hour. What I'm doing is I'm looking between the two of those and I'm trying to optimize for my workflow. If all my tests run in 10 seconds. That's no problem. If my tests take 15 minutes to run, while I'm sitting there actively developing code, I'm not going to run them. 
 
 
 [00.24.24] **Yegor**: Do you really have tests which go for 15 minutes?
@@ -246,7 +246,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.24.33] **Yegor**: Really, I mean like integration. 
 
 
-[00.23.35] **Greg**: I was going to say this is more when you start getting into things like what about elections an event store one month. So we have elections that run, how do you test that the election algorithm actually works properly. So, we're gonna need to throw up a couple nodes like fake nodes, and then what we're gonna do is we're gonna throw in randomized failures between them and then we're gonna let it run for a while. And because of the way things works you have timeouts you have all these other things that can occur that we literally had nodes sitting doing elections for days. Another good example of a test that can take days, but I’m going to take days and I turn into months for you. How do you know that the data is actually on disk?
+[00.23.35] **Greg**: I was going to say this is more when you start getting into things like what about elections an event store one month. So we have elections that run, how do you test that the election algorithm actually works properly. So, we're gonna need to throw up a couple nodes like fake nodes, and then what we're gonna do is we're gonna throw in randomized failures between them and then we're gonna let it run for a while. And because of the way things works you have timeouts you have all these other things that can occur that we literally had nodes sitting doing elections for days. Another good example of a test that can take days, but I'm going to take days and I turn into months for you. How do you know that the data is actually on disk?
 
 
 [00.25.44] **Yegor**: After like making a file creating a file or…
@@ -283,7 +283,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.27.19] **Yegor**: Interesting. 
 
 
-[00.27.20] **Greg**: But I’m not even sure, if I would call that an integration test at that point that's more
+[00.27.20] **Greg**: But I'm not even sure, if I would call that an integration test at that point that's more
 
 
 [00.27.27] **Yegor**: It's more like non-functional properties tests it's like quality-of-service test, because you don't really test the functionality you test like how it is resilient to failures. I don't know something like that, right? 
@@ -304,7 +304,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.28.20] **Greg**: You'd be rather missed about this entire thing. 
 
 
-[00.28.25] **Yegor**: Yeah, interesting. And but this is more like for system software, right? I mean I totally get the purpose. I’m just thinking how it's applicable to other like most software products people develop right now, because I think most people don't do system development. They do more like on the level of applications right like mobile application. For example, you don't test right. 
+[00.28.25] **Yegor**: Yeah, interesting. And but this is more like for system software, right? I mean I totally get the purpose. I'm just thinking how it's applicable to other like most software products people develop right now, because I think most people don't do system development. They do more like on the level of applications right like mobile application. For example, you don't test right. 
 
 
 
@@ -314,14 +314,14 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.29.44] **Yegor**: Yeah for sure, and how do you control this power on power off. So, you have to connect your software with some power switch, which is programmable
 
 
-[00.29.52] **Greg**: We actually have these. They sell them so basically what it is it's a little box that sits between the electrical outlet and the computer, and you basically plug it into the electrical outlet. And then you plug the computer into it, and it has a network connection, and you can I’ve seen varying ones. Some of them are HDP. Some of them are TCP, and you can basically send an http post to it, telling it to turn off power outlet too. Then you can send another http post. To it turn on power outlet 2.
+[00.29.52] **Greg**: We actually have these. They sell them so basically what it is it's a little box that sits between the electrical outlet and the computer, and you basically plug it into the electrical outlet. And then you plug the computer into it, and it has a network connection, and you can I've seen varying ones. Some of them are HDP. Some of them are TCP, and you can basically send an http post to it, telling it to turn off power outlet too. Then you can send another http post. To it turn on power outlet 2.
 
 
 [00.30.30] **Yegor**: Cool, so you made this hardware as well for testing people sell it. 
 
 
 
-[00.30.33] **Greg**: No, there’re people that sell this out there it. You could also do something uh like an x10 interface? The ones that we picked up we picked up because they support http: which was just kind of nice as opposed to having to deal with x10 or something like that. But there's quite a few of these kinds of tools that exist out there and they're not very expensive. And they have a load of uses outside of what we're discussing. Consider, for instance, if I were going to be running a restaurant and one of the things in my restaurant was, I had a big television-based menu system that was all over the restaurant. Well, if I plugged it in with all of these in order to shut everything off, I could just do it right from the cash register, right? So, when I say close out close out turns off all the tvs. Okay, as opposed to making somebody walk around hitting the power buttons on all of them right and it's especially true at some place like a McDonald’s where these screens are often embedded in the wall, and you might not easily be able to do that
+[00.30.33] **Greg**: No, there're people that sell this out there it. You could also do something uh like an x10 interface? The ones that we picked up we picked up because they support http: which was just kind of nice as opposed to having to deal with x10 or something like that. But there's quite a few of these kinds of tools that exist out there and they're not very expensive. And they have a load of uses outside of what we're discussing. Consider, for instance, if I were going to be running a restaurant and one of the things in my restaurant was, I had a big television-based menu system that was all over the restaurant. Well, if I plugged it in with all of these in order to shut everything off, I could just do it right from the cash register, right? So, when I say close out close out turns off all the tvs. Okay, as opposed to making somebody walk around hitting the power buttons on all of them right and it's especially true at some place like a McDonald's where these screens are often embedded in the wall, and you might not easily be able to do that
 
 
 
@@ -380,7 +380,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.35.30] **Yegor**: We don't have this stuff in Java C#. And all those modern languages right Python. 
 
 
-[00.35.35] **Greg**: No, no, no Spec Sharp. Spec Sharp was and we're talking this. This goes back a decade so Spec Sharp was a version of C# that supported this. And it came with a theorem prover, which was named Boogie. And Boogie would actually go through and theorem. Prove your C# code now interestingly Spec Sharp did not really move forward. It’s kind of like went off on a side path, but quite a few things out of the prover and the general idea of what they were doing, did actually come into the language. So, there are things that are not nearly as much, but there are things which are today returned as compiler errors in c sharp which were not previously, and you can do this based on annotations etc. 
+[00.35.35] **Greg**: No, no, no Spec Sharp. Spec Sharp was and we're talking this. This goes back a decade so Spec Sharp was a version of C# that supported this. And it came with a theorem prover, which was named Boogie. And Boogie would actually go through and theorem. Prove your C# code now interestingly Spec Sharp did not really move forward. It's kind of like went off on a side path, but quite a few things out of the prover and the general idea of what they were doing, did actually come into the language. So, there are things that are not nearly as much, but there are things which are today returned as compiler errors in c sharp which were not previously, and you can do this based on annotations etc. 
 
 
 [00.35.32] **Yegor**: So, this checker is the checker and zoom. So, this checker runs after I type my code in or while I type my code in?
@@ -428,7 +428,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[00.41.10] **Greg**: I’m going to give you a compile error that this will fail at runtime. 
+[00.41.10] **Greg**: I'm going to give you a compile error that this will fail at runtime. 
 
 
 [00.41.14] **Yegor**: Oh, so it's sort of like a static, another analysis, which is happening all right
@@ -444,7 +444,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.41.47] **Greg**: Well, you wouldn't be physically possible of compiling, that wouldn't work I mean it should work this way, if it doesn't work that way you, you cannot compile it. 
 
 
-[00.42.03] **Yegor**: You know how many people I’m at who are saying and believing that static analysis is a bad idea, that preventing people from writing the code, they would like to write it is a bad idea. They're saying like we should let programmers do, whatever they like and then let the see the code in production and the long story after that
+[00.42.03] **Yegor**: You know how many people I'm at who are saying and believing that static analysis is a bad idea, that preventing people from writing the code, they would like to write it is a bad idea. They're saying like we should let programmers do, whatever they like and then let the see the code in production and the long story after that
 
 
 [00.42.20] **Greg**: And again this depends on the type of code that we're discussing. There's a huge amount of code that this is completely fine to allow things like process, managers, not so much because when you have a process manager go out to lunch, there's a direct cost associated to that. I would much rather know that my process managers actually terminate and are guaranteed to terminate and are guaranteed to terminate within. A given SLA, than to have to run all the monitoring etc associated with them to be able to track whether or not. We've actually had an issue. 
@@ -454,7 +454,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[00.43.43] **Greg**: I’ve got a really good statement to have in that conversation. That's probably not going to be a conversation in the office. That's probably going to be conversation after work with a beer and it's going to be so… I want you to stop and think for a minute what happened, what would happen if you didn't get those error messages and you were instead having to deal with that same problem. But it occurred in production. It stopped you from being able to push it, because there was a possible error that could happen in production. If it happened
+[00.43.43] **Greg**: I've got a really good statement to have in that conversation. That's probably not going to be a conversation in the office. That's probably going to be conversation after work with a beer and it's going to be so… I want you to stop and think for a minute what happened, what would happen if you didn't get those error messages and you were instead having to deal with that same problem. But it occurred in production. It stopped you from being able to push it, because there was a possible error that could happen in production. If it happened
 
 
 [00.44.26] **Yegor**: But you understand that this is extra work for programmers to go through all these checks it. 
@@ -468,13 +468,13 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[00.49.18] **Greg**: You know,  I’ve done this in the past. And what my main thing that I focused on in order to even justify it was what happens when these things do go wrong. And it's oh, my god! This is a nightmare. 
+[00.49.18] **Greg**: You know,  I've done this in the past. And what my main thing that I focused on in order to even justify it was what happens when these things do go wrong. And it's oh, my god! This is a nightmare. 
 
 
 [00.45.38] **Yegor**: And who do you blame in this case the programmer who makes the mistake or the programmer who didn't implement the check or who's at fault when something goes wrong with the production?
 
 
-[00.45.48] **Greg**: Well, we could also say that maybe it was QA. Maybe it was my worry is not associating blame to somebody. My worry is ensuring. It doesn't happen. I would much rather just have this be impossible to happen even if it you know you're gonna you're gonna have to spend a day or two to kind of learn how this thing with the joint calculus actually works. But then we never have this happen in production. Our risk is gone. And again, t's not the situation where one of these processes goes off the rails that I’m worried about it's when there's 500. One process going off the rails. It's okay, you know what manual intervention we're going to have customer service handle this one that went off the rails and no big deal. Well, there's 500 of them. This is a completely different story. 
+[00.45.48] **Greg**: Well, we could also say that maybe it was QA. Maybe it was my worry is not associating blame to somebody. My worry is ensuring. It doesn't happen. I would much rather just have this be impossible to happen even if it you know you're gonna you're gonna have to spend a day or two to kind of learn how this thing with the joint calculus actually works. But then we never have this happen in production. Our risk is gone. And again, t's not the situation where one of these processes goes off the rails that I'm worried about it's when there's 500. One process going off the rails. It's okay, you know what manual intervention we're going to have customer service handle this one that went off the rails and no big deal. Well, there's 500 of them. This is a completely different story. 
 
 
 [00.45.52] **Yegor**: Yeah, that's true
@@ -493,7 +493,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[00.48.52] **Greg**: Now we're at the point of talking about an electrician, who's using a butter knife to take apart a light socket exactly and it's complaining that his butter knife doesn't work very well, it's like well, what you need to do is you need to learn how to use a screwdriver and I’m not trying to take a piss out of them or something like that, but it's a lot of the stuff that we see today is not problems with the tools. That's problems with the people using them. 
+[00.48.52] **Greg**: Now we're at the point of talking about an electrician, who's using a butter knife to take apart a light socket exactly and it's complaining that his butter knife doesn't work very well, it's like well, what you need to do is you need to learn how to use a screwdriver and I'm not trying to take a piss out of them or something like that, but it's a lot of the stuff that we see today is not problems with the tools. That's problems with the people using them. 
 
 
 [00.49.32] **Yegor**: So, you think there is no room for improvement of the modern programming languages, which we have so you're happy with the languages? 
@@ -539,7 +539,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [00.51.55] **Yegor**: And that's good. 
 
 
-[00.51.57] **Greg**: I’m limiting the scope of things that could, possibly happen coming off of it what if I could give more information about that value object that the compiler would be able to check
+[00.51.57] **Greg**: I'm limiting the scope of things that could, possibly happen coming off of it what if I could give more information about that value object that the compiler would be able to check
 
 
 
@@ -584,7 +584,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[00.54.10] **Greg**: I’d say it's about half done, but like it has liked a syntax it actually compiles, but I want to change things with it. It's related to those process. Managers I was discussing before in time where you actually have time as an intrinsic part of the language. 
+[00.54.10] **Greg**: I'd say it's about half done, but like it has liked a syntax it actually compiles, but I want to change things with it. It's related to those process. Managers I was discussing before in time where you actually have time as an intrinsic part of the language. 
 
 
 
@@ -615,11 +615,11 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[00.56.40] **Yegor**: But people say that functional programming is more difficult to understand for junior programmer. That's why it's only good for somebody who is old enough and mature enough to understand and it's much easier to write procedures and objects and methods to functional is not the mainstream paradigm and will never be that's what I’ve heard. 
+[00.56.40] **Yegor**: But people say that functional programming is more difficult to understand for junior programmer. That's why it's only good for somebody who is old enough and mature enough to understand and it's much easier to write procedures and objects and methods to functional is not the mainstream paradigm and will never be that's what I've heard. 
 
 
 
-[00.56.57] **Yegor**: I don't believe that statement is true instead what I’m going to propose is that either would be roughly equivalent to learn as your first language, but once you've already learned procedural programming, then learning functional programming is a little bit more difficult. In the same way, that if you started off as a functional programmer, and then you got into imperative code you'd be like. Oh, boy, there's a bunch of stuff, I need to learn here. It's more
+[00.56.57] **Yegor**: I don't believe that statement is true instead what I'm going to propose is that either would be roughly equivalent to learn as your first language, but once you've already learned procedural programming, then learning functional programming is a little bit more difficult. In the same way, that if you started off as a functional programmer, and then you got into imperative code you'd be like. Oh, boy, there's a bunch of stuff, I need to learn here. It's more
 
 
 
@@ -642,7 +642,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[00.58.09] **Greg**: And, you know, I was posting about this I’m trying to think if it's on twitter or not this was maybe a month or two ago. So, I can even tell you. I’m 90 sure the first computer science book I ever bought. It was mastering turbo assembler. 
+[00.58.09] **Greg**: And, you know, I was posting about this I'm trying to think if it's on twitter or not this was maybe a month or two ago. So, I can even tell you. I'm 90 sure the first computer science book I ever bought. It was mastering turbo assembler. 
 
 
 
@@ -659,7 +659,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[00.59.04] **Greg**: I have a lot of people that sometimes I maybe once a year or so I’ll put up on twitter? Oh, I got my books. And so, every time that they're making changes to the Pentium chips you, you can actually order the books from intel about the changes in the processor and basically, it's like it's like documentation at a machine and assembly level explaining to you. How the processors change very few people order them, but they're free. 
+[00.59.04] **Greg**: I have a lot of people that sometimes I maybe once a year or so I'll put up on twitter? Oh, I got my books. And so, every time that they're making changes to the Pentium chips you, you can actually order the books from intel about the changes in the processor and basically, it's like it's like documentation at a machine and assembly level explaining to you. How the processors change very few people order them, but they're free. 
 
 
 
@@ -671,7 +671,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[00.59.49] **Yegor**: Cool, I’ll try, interesting. So do people know to, do people have to know the architecture of a hardware? What's your opinion or maybe it's for system engineers and we are just
+[00.59.49] **Yegor**: Cool, I'll try, interesting. So do people know to, do people have to know the architecture of a hardware? What's your opinion or maybe it's for system engineers and we are just
 
 
 
@@ -736,7 +736,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[01.05.19] **Greg**: Depend what I’m working on
+[01.05.19] **Greg**: Depend what I'm working on
 
 
 
@@ -750,7 +750,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[01.05.49] **Greg**: The one that you really have to worry about though and I’ve seen this in organization after organization after organization is where they say that we're going to measure productivity and we're going to use this standardized format to measure all of our productivity and oddly all the team members, then optimize for the measurement of productivity not for the creation of good software. Now, these two things may or may not actually be aligned. It could be that I show up as a very productive developer in your metric, but what I’m being productive as producing a bunch of crap. 
+[01.05.49] **Greg**: The one that you really have to worry about though and I've seen this in organization after organization after organization is where they say that we're going to measure productivity and we're going to use this standardized format to measure all of our productivity and oddly all the team members, then optimize for the measurement of productivity not for the creation of good software. Now, these two things may or may not actually be aligned. It could be that I show up as a very productive developer in your metric, but what I'm being productive as producing a bunch of crap. 
 
 
 
@@ -766,7 +766,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[01.07.15] **Greg**: Well and who created the metric is actually a very important question. Do those metrics actually align in any way shape or form with what we actually want? Let me let me just give a really obvious example here so I’m going to make the metric for our organization lines of code per day. So now you end up putting in a thousand lines of code per day, but your code is utter crap. 
+[01.07.15] **Greg**: Well and who created the metric is actually a very important question. Do those metrics actually align in any way shape or form with what we actually want? Let me let me just give a really obvious example here so I'm going to make the metric for our organization lines of code per day. So now you end up putting in a thousand lines of code per day, but your code is utter crap. 
 
 
 
@@ -774,7 +774,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[01.07.54] **Greg**: Oh, oh, I’ve seen this one in use. So, what ends up happening is they create bugs. They create bugs, that are very simple to push them out. So, then they can go and fix them
+[01.07.54] **Greg**: Oh, oh, I've seen this one in use. So, what ends up happening is they create bugs. They create bugs, that are very simple to push them out. So, then they can go and fix them
 
 
 
@@ -840,7 +840,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[01.10.44] **Greg**: The versioning book is essentially done um the work. That needs to be done. I I’ve talked to some varying places about it is basically moving it to a physical form. It's layout work. It's like I even have all the art done and the art is actually really cool. It's not currently up in the lean PUB version when I was out in Gran Canaria, I hired a street artist
+[01.10.44] **Greg**: The versioning book is essentially done um the work. That needs to be done. I I've talked to some varying places about it is basically moving it to a physical form. It's layout work. It's like I even have all the art done and the art is actually really cool. It's not currently up in the lean PUB version when I was out in Gran Canaria, I hired a street artist
 
 
 
@@ -874,7 +874,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[01.12.00] **Greg**: I’ve talked to the couple publishers and it's a book. That's in a weird market from a publisher perspective. Well, it it's weird, because it's not really a book that you would ever want to put onto a shelf that say barnes and noble like it's just such a niche topic. 
+[01.12.00] **Greg**: I've talked to the couple publishers and it's a book. That's in a weird market from a publisher perspective. Well, it it's weird, because it's not really a book that you would ever want to put onto a shelf that say barnes and noble like it's just such a niche topic. 
 
 
 
@@ -892,7 +892,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[01.13.20] **Greg**: Right, and I’ve gone through, I’ve done varying print layouts things like that what's most likely going to end up happening. I found a service that basically do all the layout work with them. And then you can tell them. Okay, I want to print up 300 of these. And then they offer that they will drop ship them to people. If that kind of makes sense?
+[01.13.20] **Greg**: Right, and I've gone through, I've done varying print layouts things like that what's most likely going to end up happening. I found a service that basically do all the layout work with them. And then you can tell them. Okay, I want to print up 300 of these. And then they offer that they will drop ship them to people. If that kind of makes sense?
 
 
 
@@ -906,7 +906,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [01.14.02] **Yegor**: Right
 
 
-[01.14.05] **Greg**: And, I I’m not faulting the book companies in any way. I mean I understand their business model, and where there's not really alignment between the two. It's not really their specialty. 
+[01.14.05] **Greg**: And, I I'm not faulting the book companies in any way. I mean I understand their business model, and where there's not really alignment between the two. It's not really their specialty. 
 
 
 
@@ -953,11 +953,11 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 [01.15.41] **Yegor**: Yeah it does, and how big is the book, how many pages right now?
 
 
-[01.15.48] **Greg**: I’d have to go pull it up, it's not very long 
+[01.15.48] **Greg**: I'd have to go pull it up, it's not very long 
 
 
 
-[01.15.51] **Yegor**: I mean, I’m asking these questions because some of the people who are listening to us right now. They may think about publishing a book as well, so we need to tell them your experience, and then they may learn from you so what would you what would you tell them the people who haven't yet started
+[01.15.51] **Yegor**: I mean, I'm asking these questions because some of the people who are listening to us right now. They may think about publishing a book as well, so we need to tell them your experience, and then they may learn from you so what would you what would you tell them the people who haven't yet started
 
 
 
@@ -979,7 +979,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[01.17.20] **Greg**: Well, yeah. And then it's well. I know I need to rewrite chapters two and three, and I’ve done this myself. And I’ve watched lots of other people do it, where you start getting into this thing of, I’m no longer really creating new content. I’m just rewriting the content that I already have in slightly different ways. 
+[01.17.20] **Greg**: Well, yeah. And then it's well. I know I need to rewrite chapters two and three, and I've done this myself. And I've watched lots of other people do it, where you start getting into this thing of, I'm no longer really creating new content. I'm just rewriting the content that I already have in slightly different ways. 
 
 
 
@@ -987,20 +987,20 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[01.18.02] **Greg**: The other thing that I would tell people in terms of writing, especially for things like computer science, and I’ve learned this over time is to try to get as many personal examples of things into the text as possible. So, it's not just if I tell you, if you do this, you're going to end up failing, tell me the story about how you did it and you failed
+[01.18.02] **Greg**: The other thing that I would tell people in terms of writing, especially for things like computer science, and I've learned this over time is to try to get as many personal examples of things into the text as possible. So, it's not just if I tell you, if you do this, you're going to end up failing, tell me the story about how you did it and you failed
 
 
 [01.18.38] **Yegor**: No
 
 
 
-[01.18.50] **Greg**: Because that story, especially if it's a good one is something that's going to stay in my mind and it builds up your authenticity that it's not just that I’m telling you. Don't do this, I’m telling you don't do this, because I did it and here's where I *** up
+[01.18.50] **Greg**: Because that story, especially if it's a good one is something that's going to stay in my mind and it builds up your authenticity that it's not just that I'm telling you. Don't do this, I'm telling you don't do this, because I did it and here's where I *** up
 
 
 [01.19.08] **Yegor**: And in your book, you told them these stories. 
 
 
-[01.19.10] **Greg**: Yes, and that that's a big part of what I was trying to get into the book was not just that this is how you should do things, but it's also. Well, you know, I’m not some magician over here, who just came up with all this stuff. Here's where I didn't do these things and I really screwed up, and this is what you're trying to avoid
+[01.19.10] **Greg**: Yes, and that that's a big part of what I was trying to get into the book was not just that this is how you should do things, but it's also. Well, you know, I'm not some magician over here, who just came up with all this stuff. Here's where I didn't do these things and I really screwed up, and this is what you're trying to avoid
 
 
 [01.19.38] **Yegor**: Good. I think that's a that's a smart advice to people who… because yeah, I know I mean many books are pretty abstract, and they say very good things about things in general, but they don't go down to examples. And that's why they're boring to read I totally agree. 
@@ -1043,7 +1043,7 @@ Video is [here](https://www.youtube.com/watch?v=JER03qMCmIk).
 
 
 
-[01.21.30] **Yegor**: All right. Okay, okay, thanks for the talk, Greg. Let me I’ll let you go. Thanks for your time
+[01.21.30] **Yegor**: All right. Okay, okay, thanks for the talk, Greg. Let me I'll let you go. Thanks for your time
 
 
 [01.21.35] **Greg**: Enjoy?

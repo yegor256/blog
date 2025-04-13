@@ -201,7 +201,7 @@ However, my argument is different than what they're saying. Even though their re
 practical and valid, like "ORM is slow" or "database upgrades are hard,"
 they miss the main point. You can see a very good, practical answer
 to these practical arguments given by Bozhidar Bozhanov
-in his [ORM Haters Don’t Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
+in his [ORM Haters Don't Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
 
 {% badge /images/2014/11/orm-anti-pattern.svg 413 %}
 

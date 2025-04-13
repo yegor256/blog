@@ -20,7 +20,7 @@ jb_picture:
 republished:
   -
     place: "BLOG@CACM"
-    title: "Here’s Why Resentment is the Key to Happiness"
+    title: "Here's Why Resentment is the Key to Happiness"
     date: 2020-11-06
     url: https://cacm.acm.org/blogs/blog-cacm/248514-heres-why-resentment-is-the-key-to-happiness/fulltext
 ---
@@ -99,7 +99,7 @@ larger than unhappiness or depression---read what happened to the poor mice in t
 [Universe 25](https://curiosity.com/topics/universe-25-began-as-a-mice-paradise-but-ended-as-a-nightmare-curiosity/)
 experiment.
 
-{% quote Tech people don’t struggle enough, life doesn’t challenge us as much as we need. %}
+{% quote Tech people don't struggle enough, life doesn't challenge us as much as we need. %}
 
 What is the solution?
 Listen to what [Frank T. McAndrew](https://en.wikipedia.org/wiki/Francis_T._McAndrew)

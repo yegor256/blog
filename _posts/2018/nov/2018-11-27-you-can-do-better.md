@@ -136,7 +136,7 @@ new certificate every year.
 **Go to Job Interviews**.
 “Changing jobs every couple of years used to look bad on a resume. It told
 recruiters you can't hold down a job, can't get along with colleagues, or
-that you're simply disloyal and can’t commit. That stigma is fast
+that you're simply disloyal and can't commit. That stigma is fast
 becoming antiquated. Workers who stay with a company longer than
 two years are said to get paid 50% less,” according to
 [Vivian Giang](https://www.fastcompany.com/3055035/you-should-plan-on-switching-jobs-every-three-years-for-the-rest-of-your-).

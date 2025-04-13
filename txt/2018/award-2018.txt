@@ -439,7 +439,7 @@ https://github.com/Hack23/cia
 - Getters, setters and mutability all along the project
 - NULL in many places
 - Utility classes, static methods
-- Commits don’t link to issues and PRs
+- Commits don't link to issues and PRs
 - Uses Dependency Injection Containers and ORM/Pojo
 - ERs: listener, sender, generator, consumer...
 - The release procedure is not documented and does not look like it is automated.
@@ -928,7 +928,7 @@ https://github.com/jri/deepamehta
   . After accepting the security certificate issue, https://ci.deepamehta.de/jenkins/ seems to be leading to a 404 page, and I'm left with no visibility of the CI of the project
 - Milestones document mentioned in readme leads to this
   page: http://deepamehta.newthinking.net/docs/milestones.html,
-  and I get a "This site can’t be reached" error
+  and I get a "This site can't be reached" error
 
 @yegor256: 4/10
 

@@ -114,7 +114,7 @@ These articles and books might also be helpful:
     by [Luca Longo](https://scholar.google.com/citations?user=oBqRuY8AAAAJ)
   * [Writing the Literature Review](https://sites.umiacs.umd.edu/elm/2019/02/22/writing-the-literature-review/)
     by [Niklas Elmqvist](https://scholar.google.com/citations?user=LoQXe24AAAAJ)
-  * [Why I Don’t Write a “Related Work” Section](http://steveharoz.com/blog/2015/related-work-section/)
+  * [Why I Don't Write a “Related Work” Section](http://steveharoz.com/blog/2015/related-work-section/)
     by [Steve Haroz](https://scholar.google.com/citations?user=OcKUn3gAAAAJ)
   * [How to get a paper accepted at OOPSLA](https://dl.acm.org/doi/10.1145/165854.165934)
     by Kent Beck et al.
