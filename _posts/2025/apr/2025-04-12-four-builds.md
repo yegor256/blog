@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Four Builds: A Balance Between Quality and Fun"
+title: "Four Builds: A Balance Between Quality and Joy"
 date: 2025-04-12
 place: Novosibirsk, Russia
 tags: devops
@@ -18,11 +18,10 @@ jb_picture:
   caption: Trainspotting (1996) by Danny Boyle
 ---
 
-In 2006, Martin Fowler [suggested][Fowler] that 10 minutes should be enough for a build in most projects.
-Ten years later, [researchers][Hiltor] analyzed 35K GitHub repositories: the average build time was somewhere around 500 seconds.
-Then, they [interviewed][Hiltor2] five hundred programmers, asking them what would be the maximum acceptable time for a CI build.
-The most common answer was: 10 minutes.
-Let me disagree with Fowler and five hundred programmers.
+How long should it take to know if your code is safe?
+Martin Fowler once [said][Fowler]: 10 minutes.
+Ten years later, five hundred developers [agreed][Hiltor].
+I disagree---with all of them.
 First, ten minutes is not enough for a proper build, even for a small software system.
 Second, ten minutes is too much for a build that we run from the IDE after every one-line edit.
 We need a finer-grained classification of builds: from bullet-fast to thorough and dead slow.
@@ -67,7 +66,7 @@ What about compilation?
 The ten seconds include the time to compile the sources.
 What if the project has hundreds of large C++ files that need a few minutes to compile?
 We break such a project into smaller components—each with its own build and its own repository.
-We don't tolerate large codebases and monolith repositories.
+We don't tolerate large codebases and [monolith]({% pst 2018/sep/2018-09-05-monolithic-repositories %}) repositories.
 
 ## Cheap Build
 
@@ -135,5 +134,4 @@ The "four builds" framework may be reduced to a "two builds" one, but never to "
 
 
 [Fowler]: http://martinfowler.com/articles/continuousIntegration.html
-[Hiltor]: https://doi.org/10.1145/2970276.2970358
-[Hiltor2]: https://doi.org/10.1145/3106237.3106270
+[Hiltor]: https://doi.org/10.1145/3106237.3106270
