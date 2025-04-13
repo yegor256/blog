@@ -13,9 +13,9 @@ keywords:
   - fast build
   - how to make build fast
   - CI slow
-image: /images/2014/04/shaolin-temple-jet-li.png
+image: /images/2025/04/trainspotting.jpg
 jb_picture:
-  caption: hi
+  caption: Trainspotting (1996) by Danny Boyle
 ---
 
 In 2006, Martin Fowler [suggested][Fowler] that 10 minutes should be enough for a build in most projects.
