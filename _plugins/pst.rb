@@ -13,14 +13,14 @@ module Jekyll
         super
         @post = post.strip
         @file = "_posts/#{@post}.md"
-        raise "File #{@file} doesn't exist" unless File.exist?(@file)
+        raise "File #{@file} doesn't exist" unless File.exist?(@file) || ARGV.include?('--dirty')
       end
 
       def render(context)
         context.registers[:site].posts.docs.each do |p|
           return p.url if p.relative_path == @file
         end
-        raise "Can't find post with \"#{@post}\" name"
+        raise "Can't find post with \"#{@post}\" name" unless ARGV.include?('--dirty')
       end
     end
   end

@@ -11,7 +11,7 @@ amp: true
           style="width:125px;height:125px;" alt="QR code"/>
       </p>
       <p class="printable">
-        <code itemprop="url">{{ site.url }}{{ page.url }}</code>
+        <code itemprop="url">{{ site.url }}{{ page.short-url }}</code>
       </p>
       <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
       {% if page.book %}
@@ -47,7 +47,7 @@ amp: true
         </ul>
       {% endif %}
       {% if page.chatgpt-translate.model %}
-        <ul class="subline">
+        <ul class="unprintable subline">
           <li title="The page is translated by ChatGPT from English to a few languages">
             Translated by
             <i class="icon icon-chatgpt notranslate" aria-hidden="true"></i>
