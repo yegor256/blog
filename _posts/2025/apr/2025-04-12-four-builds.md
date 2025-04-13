@@ -92,7 +92,7 @@ That's why we want the build to take less than ten minutes—it must be **cheap*
 
 ## Preflight Build
 
-When all GitHub workflows are green, we hit the button, asking Rultor—or GitHub Merge Queue—to merge it.
+When all GitHub workflows are green, we hit the button, asking [Rultor]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})—or GitHub [Merge Queue][Queue]—to merge it.
 A **preflight** build starts and takes up to an hour, at an on-demand AWS EC2 instance.
 It takes so long because, on top of unit and integration tests, it runs, for example, mutation testing.
 Even in a small codebase, ten minutes may not be enough.
@@ -135,3 +135,4 @@ The "four builds" framework may be reduced to a "two builds" one, but never to "
 
 [Fowler]: http://martinfowler.com/articles/continuousIntegration.html
 [Hiltor]: https://doi.org/10.1145/3106237.3106270
+[Queue]: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue
