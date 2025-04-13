@@ -270,7 +270,7 @@ that they are not configurable through a file (like `.travis.yml`)---you should 
 
 {% badge /images/2014/10/snap.png 64 https://www.snap-ci.com %}
 
-[**Snap-CI**](https://www.snap-ci.com) is a product of
+**Snap-CI** ~~is~~ was a product of
 ThoughtWorks, an author of [Go](https://www.go.cd/),
 an open source continuous integration server. It looks a bit more
 complicated than others, giving you an ability to define "stages"
@@ -302,7 +302,7 @@ rather aggressively.
 
 {% badge /images/2014/10/hostedci.png 64 https://www.hosted-ci.com %}
 
-[**Hosted-CI**](https://www.hosted-ci.com) is for iOS/OSX only. They don't
+**Hosted-CI** is for iOS/OSX only. They don't
 give anything for free, even for open source projects. I didn't have a chance
 to test them yet.
 

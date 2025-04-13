@@ -18,7 +18,7 @@ buffer:
   - "I would say that it's a light version of AWS Data Pipeline. ThreeCopies does exactly the same, but it's easier to configure, and it's cheaper"
 ---
 
-{% badge https://www.threecopies.com/images/logo.png 64 https://www.threecopies.com %}
+<!-- {% badge https://www.threecopies.com/images/logo.png 64 https://www.threecopies.com %} -->
 
 I have a number of data resources which exist in one place only and which
 I don't really want to lose. For example, I have a hosted PHP website,

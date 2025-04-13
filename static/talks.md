@@ -754,7 +754,7 @@ Aside from that, this is definitely an event I would try to attend again
 <span class="venue-rate green">A</span>
 <img src="https://i.ytimg.com/vi/85B3FV_sB60/mqdefault.jpg" class="past-talk" alt="JBreak 2017"/>
 **Utility Classes Are Killing Us**;
-[JBreak 2017](https://2017.jbreak.ru/speakers/yegor-bugayenko/);
+JBreak 2017;
 <span class="city">Novosibirsk</span>, <span class="country">Russia</span>;
 4 April 2017;
 [видео](https://www.youtube.com/watch?v=85B3FV_sB60) (with English subtitles),
@@ -1398,7 +1398,7 @@ were rather boring and not well-prepared. Aside from that, I liked it
 <span class="venue-rate orange">C</span>
 <img src="https://i.ytimg.com/vi/LB_YLWhGrco/mqdefault.jpg" class="past-talk" alt="SEDC 2016"/>
 **Meetings and Motivation, Friends or Enemies?**;
-[SEDC 2016](https://www.sedcconference.org/);
+SEDC 2016;
 <span class="city">Washington, D.C.</span>, <span class="country">USA</span>;
 31 March 2016;
 [slides](https://www.slideshare.net/YegorBugayenko/meetingsfree-programming),
