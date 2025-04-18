@@ -98,6 +98,7 @@ characters, plot, jokes, dialogs, etc.
 Published: 6 July 2018.
 <br/>
 <a href="https://amzn.to/2u9BbqF"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+{: .book-par}
 
 {: .book-badge}
 {% badge /images/books/junior-objects/cover.png 125 /junior-objects.html %}
@@ -122,7 +123,10 @@ practical experience from the last few decades of programming and writing
 tests. The book may be interesting to hands-on programmers---it can help you
 make your tests more helpful---regardless of your programming language.
 <br/>
-To be published: 22 April 2025.
+Published: 16 April 2025.
+<br/>
+<a href="https://amzn.to/4czWVkh"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+{: .book-par}
 
 {: .book-badge}
 {% badge /images/books/elegant-objects/cover-eo1.png 125 /elegant-objects.html %}

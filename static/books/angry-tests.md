@@ -26,4 +26,11 @@ practical experience from the last few decades of programming and writing
 tests. The book may be interesting to hands-on programmers---it can help you
 make your tests more helpful---regardless of your programming language.
 
-To be pulished on the 22nd of April, 2025.
+Volume 1:<br/>
+<a href="https://amzn.to/4czWVkh"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+
+<!--more-->
+
+Apr 16, 2025:
+The first volume was published [on Amazon](https://amzn.to/4czWVkh).
+
