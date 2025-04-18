@@ -14,6 +14,10 @@ keywords:
   - unit testing book
   - testing book
   - software testing book
+style: |
+  .book-badge img {
+    border: 1px solid lightgray;
+  }
 ---
 
 {: .book-badge}
@@ -33,4 +37,3 @@ Volume 1:<br/>
 
 Apr 16, 2025:
 The first volume was published [on Amazon](https://amzn.to/4czWVkh).
-
