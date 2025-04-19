@@ -10,6 +10,9 @@ module Yegor
     def book(book)
       opts = book.strip.split(/\s+/, 2)
       case opts[0]
+      when 'angry-tests-1'
+        link = 'https://amzn.to/4czWVkh'
+        cover = '/images/books/angry-tests/cover.png'
       when 'elegant-objects-1'
         link = 'https://amzn.to/2qFt4Tn'
         cover = '/images/books/elegant-objects/cover-eo1.png'
@@ -23,15 +26,15 @@ module Yegor
         link = 'https://amzn.to/2qopIm5'
         cover = '/images/books/256-bloghacks/cover.png'
       end
-      "<aside class='book'>" \
-        "<a href='#{link}'>" \
-        "<img src='#{cover}' class='book-cover' alt='book cover'/>" \
-        '</a>' \
-        'Read more about this subject in ' \
-        "<a href='#{link}'>Section&nbsp;#{opts[1]}</a><br/> " \
-        'of my book' \
-        "<a href='#{link}'><img src='/images/books/amazon-buy-button.png' class='amazon-button' alt='Click to buy'/></a>" \
-        '</aside>'
+      "
+      <aside class='book'>
+        <a href='#{link}'><img src='#{cover}' class='book-cover' alt='book cover'/></a>
+        Read more about this subject in <a href='#{link}'>Section&nbsp;#{opts[1]}</a>
+        <br/>
+        of my book
+        <a href='#{link}'><img src='/images/books/amazon-buy-button.png' class='amazon-button' alt='Click to buy'/></a>
+      </aside>
+      "
     end
   end
 end

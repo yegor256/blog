@@ -14,8 +14,7 @@ module Jekyll
         prefix = post.date.strftime('_posts/%Y/%b/%Y-%m-%d-').downcase
         path = post.relative_path
         next unless path.index('_drafts/').nil?
-        next if path.index(prefix).zero?
-        raise "Wrong path of '#{path}', it has to start with #{prefix}"
+        raise "Wrong path of '#{path}', it has to start with #{prefix}" if path.index(prefix).nil?
       end
     end
   end
