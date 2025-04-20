@@ -55,6 +55,7 @@ shorts:
   permalink: :year:month:day:letter.html
 
 chatgpt-translate:
+  model: gpt-3.5-turbo
   threshold: 64
   min_chars: 20
   version: "42"
