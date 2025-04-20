@@ -5,7 +5,6 @@
 .jekyll-cache/
 .sass-cache/
 .yardoc/
-Gemfile.lock
 _chatgpt-translate/
 _gnuplot/**/*.svg
 _newsletters/send.sh
