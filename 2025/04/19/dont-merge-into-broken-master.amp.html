@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>We Don't Merge into a Broken Master Branch</title>
+    <link rel="canonical" href="https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master.html">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage":{
+          "@type": "WebPage",
+          "@id": "https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master.html"
+        },
+        "headline": "We Don't Merge into a Broken Master Branch",
+        "image": {
+          "@type": "ImageObject",
+          "url": "/images/2025/04/eye-of-the-beholder.jpg",
+          "height": 659,
+          "width": 1000
+        },
+        "datePublished": "2025-04-19",
+        "dateModified": "2025-04-19",
+        "author": {
+          "@type": "Person",
+          "name": "Yegor Bugayenko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "yegor256.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.yegor256.com/images/face-512x512.jpg",
+            "width": 512,
+            "height": 512
+          }
+        },
+        "description": "If the build is broken, don't send any pull requests until it's fixed.
+You're welcome to fix it yourself---just don't mix build-fixing changes with
+anything else.
+",
+        "keywords": ["broken build", "CI broken", "fix CI jobs", "CI discipline", "CI pipeline"]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
+    <style amp-custom="amp-custom">
+      @font-face {
+        font-family: 'Cambria';
+        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
+      }
+      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
+      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
+      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
+      code { padding: 0 .3em; background-color: lightgray; }
+      a, a:hover, a:visited { color: inherit; }
+      .intro { color: red; font-size: .75em; }
+      .photo { border-radius: 50%; }
+      pre { overflow-x:scroll; }
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <article>
+      <p class="intro">
+        This is a mobile version, full one is
+        <a href="https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master.html">here</a>.
+      </p>
+      <p>
+        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
+      </p>
+      <p>Yegor Bugayenko<br>19 April 2025</p>
+      <h1>We Don't Merge into a Broken Master Branch</h1>
+      <p>What do you think is the most typical reason for delays in pull request reviews?
+A <a href="https://doi.org/10.1145/3183519.3183525">study</a> at Google confirms that it’s the size—the more changes, the slower the review.
+Another <a href="https://doi.org/10.1109/ACCESS.2020.3002663">study</a> shows that it’s the emotional tone—anger and dominance expressed in comments are linked to a lower likelihood of a pull request being merged.
+A more recent <a href="https://doi.org/10.1016/j.jss.2020.110806">study</a> finds that it’s the author’s reputation: we merge PRs faster if we know the author.
+All of the above is true.
+In our projects, though, what often slows down PR reviews is the message: <strong>“CI failures are not related to my changes!”</strong></p>
+
+
+
+<amp-img src="/images/2025/04/eye-of-the-beholder.jpg" alt="Eye of the Beholder (1999) by Stephan Elliott" height="659" width="1000" layout="responsive"></amp-img>
+
+<p>Here’s how it happens:
+You fork a repo.
+You make changes to fix a bug or introduce a new feature.
+You commit them and push.
+You submit a pull request.
+You realize that some GitHub CI jobs fail.
+You read the logs.
+You don’t see any relevance between the error messages and your edits.
+You post a comment: “CI failures are not related to my changes!”
+You expect us to merge your pull request.</p>
+
+<p>Why shouldn’t we?</p>
+
+<p>We don’t merge them.
+We ask you to step back—to the point before you started making changes.
+Don’t make them yet.
+Instead, check the build status of the repository.
+Pay attention to all CI jobs, not just the one running Maven.
+They all must be green.
+Only when all jobs are green should you start editing the code.
+If any job is red, report a bug and wait until the team gets everything passing.</p>
+
+<p>Why?
+Because we try to reduce the effort required to fix the build.
+The more changes we pile onto a broken build, the higher the cost of cleaning it up.
+When the build is broken, we accept no new changes—except those that fix the build.</p>
+
+<p>What if the team takes too long to fix it?
+What if the build never becomes green?
+Still—you wait.
+You don’t submit a pull request to a repository with a broken build.</p>
+
+<hr>
+
+<p>You may fix the build yourself.
+If you do, submit it in a <strong>separate</strong> pull request.
+Don’t mix build-fixing changes with any other edits.</p>
+
+
+    </article>
+  </body>
+</html>

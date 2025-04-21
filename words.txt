@@ -1110,6 +1110,7 @@ bugging
 buggy
 bugs
 build
+build-fixing
 build-helper-maven-plugin
 buildbot
 builder
@@ -2754,6 +2755,7 @@ DOM
 domain
 domain-driven
 domains
+dominance
 dominant
 dominate
 dominating
@@ -2920,6 +2922,7 @@ editions
 editor
 editor-in-chief
 editors
+edits
 edsger
 educate
 educated
@@ -5081,6 +5084,7 @@ jsonresponse
 JSP
 JSR
 JSR-
+jss
 judge
 judging
 judgment
@@ -5331,6 +5335,7 @@ lemire
 lemmas
 lempel
 len
+lenarduzzi
 lending
 length
 lengthofinput
@@ -6592,6 +6597,7 @@ origins
 ORM
 orthodox
 orthogonal
+ortu
 OS
 osbp
 osbp-github
@@ -6966,6 +6972,7 @@ pierced
 pierrepicaud
 piggyback
 pike
+pile
 piled-up
 pill
 pills
@@ -9673,6 +9680,7 @@ tomcat
 tomes
 TOML
 tomorrow
+tone
 toner
 tonight
 tons
