@@ -22,7 +22,7 @@ image: /images/andreea/podcast.png
 
 [Allen Holub](https://www.holub.com) was our special guest.
 
-Video is [here](https://youtu.be/8OKdilyNOIg).
+Video is [here](https://youtu.be/8OKdilyNOIg) (Allen asked to take it down).
 
 Allen's Twitter is [@allenholub](https://twitter.com/allenholub).
 

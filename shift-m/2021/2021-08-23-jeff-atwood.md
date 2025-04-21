@@ -21,7 +21,7 @@ image: /images/andreea/podcast.png
 
 [Jeff Atwood](https://www.codinghorror.com/) was our special guest.
 
-Video is [here](https://youtu.be/NGdarWF6rto).
+Video is [here](https://youtu.be/NGdarWF6rto) (Jeff asked to take it down).
 
 ## Transcript
 

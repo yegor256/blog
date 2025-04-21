@@ -28,7 +28,7 @@ His [Twitter](https://twitter.com/adamtornhill?lang=en)
 
 The book: [Your Code as a Crime Scene](https://amzn.to/3AXCPxz_)
 
-Video is [here](https://youtu.be/AG44M1DaQXw).
+Video is [here](https://youtu.be/AG44M1DaQXw) (Adam asked to take it down).
 
 ## Transcript
 
