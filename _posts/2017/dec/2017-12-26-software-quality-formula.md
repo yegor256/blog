@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "The Formula for Software Quality"
 date: 2017-12-26

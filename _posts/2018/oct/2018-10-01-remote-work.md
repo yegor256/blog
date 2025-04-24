@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Remote Work Boosts Productivity Only If Done Right"
 date: 2018-10-01

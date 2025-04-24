@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Review a Research Paper: Constructive Critique in Five Steps"
 date: 2023-12-17

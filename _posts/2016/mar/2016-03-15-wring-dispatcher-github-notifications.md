@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Wring.io, a Dispatcher of GitHub Notifications"
 date: 2016-03-15

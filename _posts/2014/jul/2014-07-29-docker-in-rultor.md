@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Every Build in Its Own Docker Container"
 date: 2014-07-29

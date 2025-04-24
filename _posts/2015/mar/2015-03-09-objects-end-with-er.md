@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Don't Create Objects That&nbsp;End&nbsp;With&nbsp;-ER"
 date: 2015-03-09

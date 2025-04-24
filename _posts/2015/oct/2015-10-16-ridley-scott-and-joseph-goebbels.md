@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "What Is the Difference Between Ridley Scott and Joseph Goebbels?"
 date: 2015-10-16

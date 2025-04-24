@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent"
 date: 2015-02-05

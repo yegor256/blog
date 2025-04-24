@@ -141,7 +141,7 @@ GEM
     jgd (1.14.0)
       jekyll (>= 1)
       trollop (>= 2)
-    json (2.10.2)
+    json (2.11.2)
     kramdown (2.5.1)
       rexml (>= 3.3.9)
     kramdown-parser-gfm (1.1.0)
@@ -164,7 +164,7 @@ GEM
     multipart-post (2.4.1)
     net-http (0.6.0)
       uri
-    net-imap (0.5.6)
+    net-imap (0.5.7)
       date
       net-protocol
     net-pop (0.1.2)
@@ -218,7 +218,7 @@ GEM
     rouge (4.5.1)
     rss (0.3.1)
       rexml
-    rubocop (1.75.2)
+    rubocop (1.75.3)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
