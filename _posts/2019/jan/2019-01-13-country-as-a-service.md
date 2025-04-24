@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: russian
 date: 2019-01-13
 title: "Государство как услуга. Почему нет? Потому что."

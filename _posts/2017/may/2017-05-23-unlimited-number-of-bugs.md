@@ -1,7 +1,10 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
+layout: post
 redirect_from:
  - /2017/05/02/unlimited-number-of-bugs.html
-layout: post
 title: "Any Program Has an Unlimited Number of Bugs"
 date: 2017-05-23
 place: Odessa, Ukraine

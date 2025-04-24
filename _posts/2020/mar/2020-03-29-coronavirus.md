@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: russian
 date: 2020-03-29
 title: "Что общего у Деда Мороза и коронавируса?"

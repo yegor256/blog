@@ -14,7 +14,6 @@ path = [
     "**.jpg",
     "**.json",
     "**.liquid",
-    "**.md",
     "**.pdf",
     "**.png",
     "**.svg",
@@ -26,7 +25,6 @@ path = [
     "**/*.csv",
     "**/*.jpg",
     "**/*.json",
-    "**/*.md",
     "**/*.pdf",
     "**/*.png",
     "**/*.svg",
@@ -49,6 +47,7 @@ path = [
     "CNAME",
     "Gemfile.lock",
     "README.md",
+    "**/README.md",
     "aspell.en.pws",
     "renovate.json",
 ]
