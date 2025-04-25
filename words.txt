@@ -5407,6 +5407,7 @@ lining
 link
 linked
 linkedin
+linking-a-pull-request-to-an-issue
 links
 linter
 linters
@@ -9730,6 +9731,7 @@ tracked
 tracker
 trackers
 tracking
+tracking-your-work-with-issues
 tracks
 traction
 trade
@@ -10115,6 +10117,7 @@ user-targeted
 users
 uses
 using
+using-issues
 USPTO
 USSR
 usual
