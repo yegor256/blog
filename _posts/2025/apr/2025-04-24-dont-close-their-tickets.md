@@ -56,7 +56,7 @@ Testers try to prove that the software is bad by submitting bug reports.
 Programmers try to prove that the software is good by covering it with tests.
 If you close without confirmation from the reporter, you don't give them a chance to argue with you.
 Of course, they may shrug their shoulders and reopen the ticket.
-However, not everybody will do this, trying to avoid being disrespectful.
+However, not everybody will do this, trying to avoid being disrespectful or simply not having enough permission.
 In the end, no formal acceptance---no quality.
 
 Third, this leads to ticket **duplication**.
