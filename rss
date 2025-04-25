@@ -1,4 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-04-21T11:23:53+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">We Don’t Merge into a Broken Master Branch</title><link href="https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master.html" rel="alternate" type="text/html" title="We Don’t Merge into a Broken Master Branch" /><published>2025-04-19T00:00:00+00:00</published><updated>2025-04-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master</id><content type="html" xml:base="https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master.html"><![CDATA[<p>What do you think is the most typical reason for delays in pull request reviews?
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-04-25T07:09:10+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Let the Bug Reporter Have the Last Word</title><link href="https://www.yegor256.com/2025/04/24/dont-close-their-tickets.html" rel="alternate" type="text/html" title="Let the Bug Reporter Have the Last Word" /><published>2025-04-24T00:00:00+00:00</published><updated>2025-04-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/04/24/dont-close-their-tickets</id><content type="html" xml:base="https://www.yegor256.com/2025/04/24/dont-close-their-tickets.html"><![CDATA[<p>Someone has submitted a bug report to your repository.
+You fix the bug.
+You close the bug report.
+Stop.
+This is wrong.
+You shouldn’t close it.
+Instead, you should ask the reporter to review your fix.
+Then, maybe, they will close the ticket.
+If they don’t, you make another fix, until they do.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Analyze This (1999) by Harold Ramis" src="/images/2025/04/analyze-this.jpg" longdesc="#96fc5703" /><figcaption id="96fc5703">Analyze This (1999) by Harold Ramis</figcaption></figure>
+
+<p>According to <a href="https://www.joelonsoftware.com/2000/11/08/painless-bug-tracking/">Joel Spolsky</a>, ``the only person who can close a bug is the person who opened it in the first place.’’
+But, why?
+Why shouldn’t you close it, when it’s obvious that the bug is fixed?
+There are at least three reasons.</p>
+
+<p>First, this is <strong>offensive</strong> and <strong>demotivating</strong>.
+Why do I report a bug or suggest a feature?
+Because I’m not happy with your code in its current state.
+Something is broken or doesn’t work as expected.
+I want you to fix it to make me happy.
+I want you to confirm with me whether your fix has made me happy.
+If you don’t ask and simply close the ticket, I <strong>feel</strong> like I’m being <strong>ignored</strong>.
+Why would I bother reporting another bug or feature request?</p>
+
+<p>Second, this is a <strong>quality threat</strong>.
+Quality is always a product of conflict.
+The most productive conflict is the one between programmers and testers.
+Testers try to prove that the software is bad by submitting bug reports.
+Programmers try to prove that the software is good by covering it with tests.
+If you close without confirmation from the reporter, you don’t give them a chance to argue with you.
+Of course, they may shrug their shoulders and reopen the ticket.
+However, not everybody will do this, trying to avoid being disrespectful or simply not having enough permission.
+In the end, no formal acceptance—no quality.</p>
+
+<p>Third, this leads to ticket <strong>duplication</strong>.
+Most bug reporters won’t argue when you close their tickets without asking their permission.
+Instead, they will open new tickets with exactly the same or a similar description.
+The most disciplined will refer to the original ticket.
+Others will fill up the backlog with duplicates, making it messy.</p>
+
+<hr />
+
+<p>There are a few exceptions, though.
+If the ticket is an obvious duplicate, you close it right away.
+No need to ask its author for permission.
+If it’s a question—not a bug report—you close it with an answer.
+Also, if you aren’t planning to fix it, attach the <code class="language-plaintext highlighter-rouge">won't fix</code> badge to it and close.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="oss" /><summary type="html"><![CDATA[Even if the fix looks obvious to you, don't close the bug report; instead, let its author do this after your request.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/04/analyze-this.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/04/analyze-this.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">We Don’t Merge into a Broken Master Branch</title><link href="https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master.html" rel="alternate" type="text/html" title="We Don’t Merge into a Broken Master Branch" /><published>2025-04-19T00:00:00+00:00</published><updated>2025-04-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master</id><content type="html" xml:base="https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master.html"><![CDATA[<p>What do you think is the most typical reason for delays in pull request reviews?
 A <a href="https://doi.org/10.1145/3183519.3183525">study</a> at Google confirms that it’s the size—the more changes, the slower the review.
 Another <a href="https://doi.org/10.1109/ACCESS.2020.3002663">study</a> shows that it’s the emotional tone—anger and dominance expressed in comments are linked to a lower likelihood of a pull request being merged.
 A more recent <a href="https://doi.org/10.1016/j.jss.2020.110806">study</a> finds that it’s the author’s reputation: we merge PRs faster if we know the author.
@@ -1038,47 +1088,4 @@ YouTube канале, в формате интервью. Мы говорили 
 
 <p>Мне было стыдно читать это письмо. Стыдно за наших ученых.</p>
 
-<p>У меня все.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="конспирология" /><summary type="html"><![CDATA[Великая битва на Куликовом поле произошла в 1380-м году, до сих пор точно не известно, где именно, это случилось, но альтернативные версии категорически отвергаются. Почему?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/04/peresvet-i-chelubej.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/04/peresvet-i-chelubej.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ping Me, Please!</title><link href="https://www.yegor256.com/2024/04/01/ping-me-please.html" rel="alternate" type="text/html" title="Ping Me, Please!" /><published>2024-04-01T00:00:00+00:00</published><updated>2024-04-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/04/01/ping-me-please</id><content type="html" xml:base="https://www.yegor256.com/2024/04/01/ping-me-please.html"><![CDATA[<p>There is a big difference between distributed and collocated teams: the
-communication in distributed teams is asynchronous, which essentially
-means that when you ask something, a response doesn’t arrive
-immediately. Moreover, it may never arrive. This can be very
-uncomfortable for those who are used to the office work setup, where
-most communications are synchronous: any question is answered
-immediately, one way or another. In open-source repositories,
-everything is asynchronous. Here is a simple rule that may help you
-decrease the level of frustration in GitHub projects: ping them every
-time you need an answer or attention to be paid to your code.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="10th &amp; Wolf (2006) by Bobby Moresco" src="/images/2024/04/10th-and-wolf.jpg" longdesc="#4569e6d3" /><figcaption id="4569e6d3">10th &amp; Wolf (2006) by Bobby Moresco</figcaption></figure>
-
-<p>There are four basic scenarios:</p>
-
-<ul>
-  <li>
-    <p>You submitted a <em>new issue</em>.
-Post a message asking the project architect to pay attention.
-Otherwise, the owner of the backlog may miss your issue, and it will not be resolved for a long time.</p>
-  </li>
-  <li>
-    <p>You sent a <em>new pull request</em>.
-Post a message right in the PR, asking the architect to review it.
-Otherwise, the architect may simply miss the pull request, and it will stay in the “waiting for review” state for a long time.</p>
-  </li>
-  <li>
-    <p>You made <em>changes</em> in a pull request after code reviewers asked you.
-Post a message asking them to look at your code again.
-Otherwise, they may never see the changes you just made.</p>
-  </li>
-  <li>
-    <p>You post any <em>message</em> in an issue or a pull request.
-<a href="/2020/07/29/open-source-etiquette.html">Start it</a> with the nickname of the person you are talking to.
-Otherwise, the person who should help you may not receive a notification about your message, and it will be missed.</p>
-  </li>
-</ul>
-
-<p>Also, listen to what Ben Batler from GitHub <a href="https://ben.balter.com/2014/11/06/rules-of-communicating-at-github/">said once</a>:
-You essentially <em>never</em> “walk over” to a coworker’s desk, virtual or otherwise.
-Whenever possible, prefer issues and chat over “just in time” communications.
-Simply put, don’t text me in Telegram.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="oss" /><summary type="html"><![CDATA[Distributed teams communicate asynchronously, causing delays in responses; frequent pinging can alleviate frustration in open-source projects.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/04/10th-and-wolf.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/04/10th-and-wolf.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>У меня все.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="конспирология" /><summary type="html"><![CDATA[Великая битва на Куликовом поле произошла в 1380-м году, до сих пор точно не известно, где именно, это случилось, но альтернативные версии категорически отвергаются. Почему?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/04/peresvet-i-chelubej.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/04/peresvet-i-chelubej.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
