@@ -16,9 +16,9 @@ keywords:
   - close bug
   - who can close bug
   - close a bug
-image: /images/2025/04/
+image: /images/2025/04/analyze-this.jpg
 jb_picture:
-  caption: ...
+  caption: Analyze This (1999) by Harold Ramis
 ---
 
 Someone has submitted a bug report to your repository.
