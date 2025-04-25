@@ -52,7 +52,7 @@ module Jekyll
       sorted = Jekyll.places(site.posts.docs).sort_by { |_k, v| v }.reverse
       File.write(
         File.join(site.config['source'], '_temp/stats/places.txt'),
-        sorted.map { |k, v| "#{k}: #{v} (#{format('%.2f', (100.0 * v / site.posts.docs.length))}%)" }.join("\n")
+        sorted.map { |k, v| "#{k}: #{v} (#{format('%.2f', 100.0 * v / site.posts.docs.length)}%)" }.join("\n")
       )
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'places.txt')
       puts 'places.txt generated'
@@ -68,7 +68,7 @@ module Jekyll
       File.write(
         File.join(site.config['source'], '_temp/stats/tags.txt'),
         sorted.map do |k, v|
-          "#{k}: #{v.length} (#{format('%.2f', (100.0 * v.length / site.posts.docs.length))}%)"
+          "#{k}: #{v.length} (#{format('%.2f', 100.0 * v.length / site.posts.docs.length)}%)"
         end.join("\n")
       )
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'tags.txt')
