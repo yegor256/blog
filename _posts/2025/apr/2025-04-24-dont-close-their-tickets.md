@@ -73,4 +73,7 @@ No need to ask its author for permission.
 If it's a question---not a bug report---you close it with an answer.
 Also, if you aren't planning to fix it, attach the `won't fix` badge to it and close.
 
+P.S. I suggest avoiding [automatic issue closing] on pull request merge.
+
 [Joel Spolsky]: https://www.joelonsoftware.com/2000/11/08/painless-bug-tracking/
+[automatic issue closing]: https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue
