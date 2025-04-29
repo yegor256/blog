@@ -1,7 +1,10 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
+layout: post
 redirect_from:
  - /2017/05/02/unlimited-number-of-bugs.html
-layout: post
 title: "Any Program Has an Unlimited Number of Bugs"
 date: 2017-05-23
 place: Odessa, Ukraine
@@ -86,12 +89,12 @@ I'm sure you can find many more.
 {% youtube ZdHCrsQsoMI %}
 
 BTW, Glenford J. Myers said something very similar in his book
-"[The Art of Software Testing](http://amzn.to/1Y3qAbN)," which I
+"[The Art of Software Testing](https://amzn.to/1Y3qAbN)," which I
 [reviewed]({% pst 2014/aug/2014-08-22-art-of-software-testing %})
 earlier.
 
 Bill Hetzel,
-[_The Complete Guide to Software Testing_](http://amzn.to/2HziEtM)
+[_The Complete Guide to Software Testing_](https://amzn.to/2HziEtM)
 (1993):
 "Some Theoretical Limits to Testing:
 'We can never be sure the specifications are correct,'

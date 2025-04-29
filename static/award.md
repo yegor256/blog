@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: static
 title: "Software Quality Award"
 description: |
@@ -33,8 +36,7 @@ value quality above everything else.
 
 <!--more-->
 
-<span class="green">ATTENTION</span>:
-Submission to 2021 [is open]({% pst 2020/nov/2020-11-15-award-2021 %}).
+Since 2023, the award is renamed to [Kaicode Open Source Festival](https://www.kaicode.org).
 
 <hr/>
 

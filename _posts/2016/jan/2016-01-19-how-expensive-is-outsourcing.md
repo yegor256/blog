@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How Expensive Is Your Outsourcing Team?"
 date: 2016-01-19
@@ -48,7 +51,7 @@ and delivered. I showed him this article about
 [incremental billing]({% pst 2014/oct/2014-10-21-incremental-billing %}).
 He seemed to understand the advantages of our approach, compared to the
 [hourly salaries]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
-being paid by <del>almost</del> everybody else in the market.
+being paid by ~~almost~~ everybody else in the market.
 
 Still, the question remained---how much?
 
@@ -69,7 +72,7 @@ years ago, in my [How Much Do You Pay Per Line of Code?]({% pst 2014/apr/2014-04
 post, but will try again from a different perspective).
 
 Take a look at [yegor256/takes#430](https://github.com/yegor256/takes/issues/430),
-a feature request in the [Takes Framework](http://www.takes.org),
+a feature request in the [Takes Framework](https://www.takes.org),
 one of the projects we're managing.
 Let's see how much the project paid for the work done in this ticket:
 
@@ -132,4 +135,4 @@ a team is financially very efficient if its results per dollar is high.
 It doesn't really matter what the value of the second metric is.
 
 P.S. I'm going to show this article to that prospect who ran away. Maybe
-he will come back :)
+he will come back.

@@ -1,6 +1,11 @@
 ---
 ---
 
+// SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+// SPDX-License-Identifier: MIT
+
+@use "sass:color";
+
 @import 'disqus';
 @import 'defs';
 @import 'fonts';
@@ -9,6 +14,7 @@
 @import 'post';
 @import 'wrapper';
 @import 'youtube';
+@import 'russian';
 
 %gray {
   color: gray;
@@ -427,6 +433,7 @@ figure {
   position: relative;
 
   figcaption {
+    background-color: $lightgrey;
     bottom: 1em;
     color: silver;
     font-size: .8em;

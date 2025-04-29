@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "You Do Need Independent Technical Reviews!"
 date: 2014-12-18
@@ -240,4 +243,4 @@ understand their business.
 
 If you can offer more suggestions, based on your experience, please post
 them below in the comments, and I'll add them to the list. I'm still
-thinking that I may have forgotten something important :)
+thinking that I may have forgotten something important.

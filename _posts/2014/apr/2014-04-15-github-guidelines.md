@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: GitHub Guidelines
 date: 2014-04-15
@@ -17,7 +20,7 @@ keywords:
 
 This manual explains the workflow used when working with a [XDSD](https://www.xdsd.org)
 project hosted
-on [GitHub](http://www.github.com). You start when a GitHub issue is
+on [GitHub](https://www.github.com). You start when a GitHub issue is
 assigned to you. Next, you will receive a message from a
 [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 containing the issue number, title, description and its budget in hours (usually
@@ -85,7 +88,7 @@ yet have enough information. If this happens, don't try to figure out a problem
 or issue by yourself.
 
 The rule of thumb for this type of situation is: "If something is not clear, it
-is our fault, not yours." Therefore, if you don’t understand the project design,
+is our fault, not yours." Therefore, if you don't understand the project design,
 it is the fault of the project designer.
 
 Submit a [bug report]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %})
@@ -139,7 +142,7 @@ insist that someone else review them.
 
 After you make the required changes to the branch, don't forget
 to notify the reviewer in the issue by posting a message addressed to him/her.
-On every round of the review-fix cycle do the same: ask the reviewer to 
+On every round of the review-fix cycle do the same: ask the reviewer to
 take a look at your code again. Without such notifications your pull request
 may stay much longer in silence.
 

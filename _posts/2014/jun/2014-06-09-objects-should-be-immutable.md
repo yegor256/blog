@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Objects Should Be Immutable"
 date: 2014-06-09
@@ -26,7 +29,7 @@ related:
 ---
 
 In object-oriented programming, an object is
-[immutable](http://en.wikipedia.org/wiki/Immutable_object) if its state can't be
+[immutable](https://en.wikipedia.org/wiki/Immutable_object) if its state can't be
 modified after it is created.
 In Java, a good example of an
 immutable [object]({% pst 2016/jul/2016-07-14-who-is-object %})
@@ -71,7 +74,7 @@ The first and the most obvious argument is that immutable objects
 are thread-safe. This means that multiple threads can access the same
 object at the same time, without clashing with another thread.
 
-{% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2bQVqBr %}
+{% badge /images/2014/12/java-concurrency-in-practice.png 100 https://amzn.to/2bQVqBr %}
 
 If no object methods can modify its state, no matter how many
 of them and how often are being called parallel---they
@@ -79,7 +82,7 @@ will work in their own memory space in stack.
 
 Goetz et al. explained the advantages of immutable objects
 in more details in their very famous book
-[Java Concurrency in Practice](http://amzn.to/2bQVqBr)
+[Java Concurrency in Practice](https://amzn.to/2bQVqBr)
 (highly recommended).
 
 ## Avoiding Temporal Coupling
@@ -281,7 +284,7 @@ in a broken state if it
 a runtime exception on overflow.
 Its `size` property will be incremented, while `items` won't get a new element.
 
-{% badge /images/2014/06/effective-java-second-edition.png 100 http://amzn.to/2cs4aiR %}
+{% badge /images/2014/06/effective-java-second-edition.png 100 https://amzn.to/2cs4aiR %}
 
 Immutability prevents this problem. An object will never be
 left in a broken state because its state is modified only in
@@ -290,7 +293,7 @@ object instantiation, or succeed, making a valid solid object,
 which never changes its encapsulated state.
 
 For more on this subject, read
-[_Effective Java_](http://amzn.to/2cs4aiR)
+[_Effective Java_](https://amzn.to/2cs4aiR)
 by Joshua Bloch.
 
 ## Arguments Against Immutability
@@ -302,14 +305,14 @@ Very often, I hear people say that immutability is a
 fancy feature, while absolutely impractical in real
 enterprise systems. As a counter-argument, I can only show
 some examples of real-life applications that contain only immutable Java objects:
-[`jcabi-http`](http://http.jcabi.com),
+[`jcabi-http`](https://http.jcabi.com),
 [`jcabi-xml`]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %}),
 [`jcabi-github`]({% pst 2014/may/2014-05-14-object-oriented-github-java-sdk %}),
 [`jcabi-s3`]({% pst 2014/may/2014-05-26-amazon-s3-java-oop-adapter %}),
 [`jcabi-dynamo`]({% pst 2014/apr/2014-04-14-jcabi-dynamo-java-api-of-aws-dynamodb %}),
 [`jcabi-w3c`]({% pst 2014/apr/2014-04-29-w3c-java-validators %}),
 [`jcabi-jdbc`]({% pst 2014/aug/2014-08-18-fluent-jdbc-decorator %}),
-[`jcabi-simpledb`](http://simpledb.jcabi.com),
+[`jcabi-simpledb`](https://simpledb.jcabi.com),
 [`jcabi-ssh`]({% pst 2014/sep/2014-09-02-java-ssh-client %}).
 The above are all Java libraries that work solely with immutable
 classes/objects. [netbout.com](https://github.com/netbout/netbout)
@@ -325,5 +328,5 @@ elimination of code needed to protect mutable objects from corruption.&rdquo; I 
 
 If you have some other arguments, please post them below and I'll try to comment.
 
-P.S. Check [takes.org](http://www.takes.org),
+P.S. Check [takes.org](https://www.takes.org),
 a Java web framework that consists entirely of immutable objects.

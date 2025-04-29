@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Singletons Must Die"
 date: 2016-06-27
@@ -77,8 +80,8 @@ class Index {
 In case you're not familiar with JAX-RS, it's a simple
 [MVC]({% pst 2016/dec/2016-12-13-mvc-vs-oop %}) architecture,
 and this `text()` method is a "controller." Additionally, I'm using
-[`JdbcSession`](http://jdbc.jcabi.com/apidocs-0.16/com/jcabi/jdbc/JdbcSession.html),
-a simple JDBC wrapper from [jcabi-jdbc](http://jdbc.jcabi.com).
+[`JdbcSession`](https://jdbc.jcabi.com/apidocs-0.16/com/jcabi/jdbc/JdbcSession.html),
+a simple JDBC wrapper from [jcabi-jdbc](https://jdbc.jcabi.com).
 
 We need that `Database.INSTANCE` to be a singleton, right? We need it to
 be globally available so that _any_ MVC controller can have direct

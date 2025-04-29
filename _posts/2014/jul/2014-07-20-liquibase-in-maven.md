@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Liquibase with Maven"
 date: 2014-07-20
@@ -16,10 +19,10 @@ keywords:
   - liquibase maven mysql
 ---
 
-[Liquibase](http://www.liquibase.org) is a migration management tool
+[Liquibase](https://www.liquibase.org) is a migration management tool
 for relational databases. It versionalizes schema and data changes in
 a database; similar to the way Git or SVN works for source code.
-Thanks to their [Maven plugin](http://www.liquibase.org/documentation/maven/),
+Thanks to their [Maven plugin](https://www.liquibase.org/documentation/maven/),
 Liquibase can be used as a part
 of a build automation scenario.
 
@@ -31,7 +34,7 @@ Let's assume you're using MySQL (PostgreSQL or any other
 database configuration will be very similar.)
 
 Add `liquibase-maven-plugin`
-to your [`pom.xml`](http://maven.apache.org/pom.html) (get its latest
+to your [`pom.xml`](https://maven.apache.org/pom.html) (get its latest
 version in [Maven Central](http://search.maven.org/)):
 
 ```xml
@@ -61,7 +64,7 @@ version in [Maven Central](http://search.maven.org/)):
 To check that it works, run `mvn liquibase:help`.
 
 I would recommend you keep database credentials
-in [`settings.xml`](http://maven.apache.org/settings.html)
+in [`settings.xml`](https://maven.apache.org/settings.html)
 and  in their respective profiles. For example:
 
 ```xml
@@ -122,10 +125,10 @@ Now, create XML master changeset and save it to `src/main/liquibase/master.xml`:
 
 ```xml
 <databaseChangeLog
-  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+  xmlns="https://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://www.liquibase.org/xml/ns/dbchangelog
+    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
   <includeAll path="src/main/liquibase/2014" />
 </databaseChangeLog>
 ```
@@ -140,10 +143,10 @@ XML mostly because it is easier to maintain and works faster.
 Let's create a simple changeset, which adds a new column to an existing table:
 
 ```xml
-<databaseChangeLog xmlns='http://www.liquibase.org/xml/ns/dbchangelog'
-  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-  xsi:schemaLocation='http://www.liquibase.org/xml/ns/dbchangelog
-    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd'>
+<databaseChangeLog xmlns='https://www.liquibase.org/xml/ns/dbchangelog'
+  xmlns:xsi='https://www.w3.org/2001/XMLSchema-instance'
+  xsi:schemaLocation='https://www.liquibase.org/xml/ns/dbchangelog
+    https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd'>
   <changeSet id="002" author="Yegor">
     <sql>
       ALTER TABLE user ADD COLUMN address VARCHAR(1024);

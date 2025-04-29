@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "When Do You Stop Testing?"
 date: 2015-09-10
@@ -40,11 +43,11 @@ You're _fundamentally wrong_.
 
 {% jb_picture_body %}
 
-All this is perfectly explained by Glenford Myers in his [great book](http://amzn.to/1Y3qAbN)
+All this is perfectly explained by Glenford Myers in his [great book](https://amzn.to/1Y3qAbN)
 [The Art of Software Testing]({% pst 2014/aug/2014-08-22-art-of-software-testing %}).
 I will just summarize it here again.
 
-{% badge /images/2015/04/book-art-of-testing.jpg 96 http://amzn.to/1Y3qAbN %}
+{% badge /images/2015/04/book-art-of-testing.jpg 96 https://amzn.to/1Y3qAbN %}
 
 First, "testing is the process of executing a program with the
 intent of _finding errors_" (page 6). Pay attention, the intent is to find errors.
@@ -101,10 +104,10 @@ that the product is ready to be shipped. Then, ship it, consciously
 understanding that it still has an unlimited amount of not yet discovered
 bugs.
 
-{% badge /images/2015/04/book-object-thinking.jpg 96 http://amzn.to/266oJr4 %}
+{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
 
 David West in
-[Object Thinking](http://amzn.to/266oJr4)
+[Object Thinking](https://amzn.to/266oJr4)
 says that "software is released for use,
 not when it is known to be correct, but when the rate of discovering
 errors slows down to one that management considers acceptable" (page 13).

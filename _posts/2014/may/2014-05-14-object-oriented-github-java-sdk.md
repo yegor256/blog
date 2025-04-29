@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Object-Oriented GitHub API"
 date: 2014-05-14
@@ -20,7 +23,7 @@ keywords:
 
 {% badge /images/2014/05/github-logo.png 128 %}
 
-[GitHub](http://www.github.com) is an awesome platform for maintaining Git sources and
+[GitHub](https://www.github.com) is an awesome platform for maintaining Git sources and
 tracking project issues. I moved all my projects (both private and public)
 to GitHub about three years ago and have no regrets. Moreover,
 GitHub gives access to almost all of its features through RESTful JSON API.
@@ -34,10 +37,10 @@ but faced a number of issues:
  * They provide no mocking instruments
  * They don't cover the entire API and can't be extended
 
-{% badge http://img.jcabi.com/logo-square.svg 64 %}
+{% badge https://www.jcabi.com/logo-square.svg 64 %}
 
 Keeping in mind all those drawbacks, I created my
-own library---[jcabi-github](http://github.jcabi.com).
+own library---[jcabi-github](https://github.jcabi.com).
 Let's look at its most important advantages.
 
 <!--more-->
@@ -128,12 +131,12 @@ int found = github.entry()
   .intValue();
 ```
 
-[jcabi-http](http://http.jcabi.com) HTTP client is used by [jcabi-github](http://github.jcabi.com).
+[jcabi-http](https://http.jcabi.com) HTTP client is used by [jcabi-github](https://github.jcabi.com).
 
 ## Immutable
 
 All classes are truly immutable and annotated with
-[`@Immutable`](http://aspects.jcabi.com/annotation-immutable.html).
+[`@Immutable`](https://aspects.jcabi.com/annotation-immutable.html).
 This may sound like a minor benefit, but it was very important for me.
 I'm using this annotation in all my projects to ensure my classes are truly immutable.
 
@@ -142,7 +145,7 @@ I'm using this annotation in all my projects to ensure my classes are truly immu
 A few days ago we released the latest [version 0.8](https://github.com/jcabi/jcabi-github/releases/tag/jcabi-0.8).
 It is a major release, that included over 1200 commits. It covers the entire GitHub API and is
 supposed to be very stable.
-The library ships as a JAR dependency in [Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-github)
+The library ships as a JAR dependency in [Maven Central](https://repo1.maven.org/maven2/com/jcabi/jcabi-github)
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
 ```xml

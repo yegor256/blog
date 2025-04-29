@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: static
 title: "Contents"
 date: 2014-06-24
@@ -113,3 +116,7 @@ Sort by:
 {{ site.posts | yb_tagged_list }}
 </div>
 
+{% if jekyll.environment == "production" %}
+  <script>var disqus_shortname = 'yegor256';</script>
+  <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>
+{% endif %}

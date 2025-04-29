@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "An Open Code Base Is Not Yet an Open Source Project"
 date: 2018-05-08
@@ -50,7 +53,8 @@ famous piece [_The Cathedral and the Bazaar_](https://amzn.to/2FKF9tv),
 It's the responsibility of the software product's author to help
 those "good" programmers to reuse the code. Coding, testing, debugging,
 and making sure "it works on my laptop" is one thing. Making it readable and reusable
-is a totally different piece of work, which may take much more time.
+is a totally different piece of work, which may take
+[much more]({% pst 2024/dec/2024-12-15-open-source-beginner-advice %}) time.
 
 As [Karl Fogel](https://en.wikipedia.org/wiki/Karl_Fogel)
 said in [_Producing Open Source Software_](https://amzn.to/2jyMrrF):
@@ -195,13 +199,14 @@ repository is not being watched over, the badges will eventually start failing.
 
 In order to use your code we have to trust it, meaning that we have to
 be sure that it works, or at least passes automated tests. (Do I have to say that
-you must have tests?) How can we be sure it works? [CI]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %})
+you [must have tests]({% pst 2022/jul/2022-07-05-safety-net %})?)
+How can we be sure it works? [CI]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %})
 is the answer. We must be able
 to see the logs of the recent CI build and make sure it is clean.
 
-It's a matter of trust. You may never use those Travis builds and simply
+It's a matter of trust. You may never use those <del>Travis</del> GitHub Actions builds and simply
 ignore their red and green signals, but they are important for us---your
-clients. I add Travis badges to all projects of mine, right after I create
+clients. I add <del>Travis</del> GitHub Actions badges to all projects of mine, right after I create
 a new repository.
 
 ## Contribution Guidelines
@@ -225,9 +230,9 @@ the questions I'd recommend you answer in your
 
 Here is the text I
 [use](https://blog.github.com/2016-02-17-issue-and-pull-request-templates/) in all my projects:
-[`ISSUE_TEMPLATE.md`](https://github.com/yegor256/takes/blob/master/.github/ISSUE_TEMPLATE.md)
+[`ISSUE_TEMPLATE.md`](https://github.com/yegor256/takes/blob/14d1d4f6c398a5f8ff08d958fc86f4413dcc7778/.github/ISSUE_TEMPLATE.md)
 and
-[`PULL_REQUEST_TEMPLATE.md`](https://github.com/yegor256/takes/blob/master/.github/PULL_REQUEST_TEMPLATE.md).
+[`PULL_REQUEST_TEMPLATE.md`](https://github.com/yegor256/takes/blob/14d1d4f6c398a5f8ff08d958fc86f4413dcc7778/.github/PULL_REQUEST_TEMPLATE.md).
 
 ## Quality Wall
 

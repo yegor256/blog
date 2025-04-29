@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "RESTful API and a Web Site in the Same URL"
 date: 2014-09-09
@@ -65,7 +68,7 @@ what problems we will face:
     So, we will have to forget about JSON and stay
     with XML only. For me, this sounds perfectly all right. Others
     don't like XML and prefer to work with JSON only.
-    Never understood them :)
+    Never understood them.
 
  2. XSLT 2.0 is not supported by all browsers. Even XSLT 1.0 is
     only supported by some of them. For example, Internet Explorer 8 doesn't
@@ -124,7 +127,7 @@ Avoiding code duplication is a very important achievement. Moreover,
 I believe that it is the most important target for any software project.
 
 These small web apps work exactly as explained above:
-[s3auth.com](http://www.s3auth.com),
-[stateful.co](http://www.stateful.co),
-[bibrarian.com](http://www.bibrarian.com).
+[s3auth.com](https://www.s3auth.com),
+[stateful.co](https://www.stateful.co),
+[bibrarian.com](https://www.bibrarian.com).
 They are all open source, and you can see their source code in GitHub.

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Objects Without Methods"
 date: 2020-11-24
@@ -105,7 +108,7 @@ take an `area` object from the object `c`. It's not created for us
 at the moment we do `c.area`! It has already been there sitting and waiting
 for us to take it. It was created right when the object `c` was built.
 
-{% quote We have objects, but we don’t have methods. There are only attributes representing other objects. %}
+{% quote We have objects, but we don't have methods. There are only attributes representing other objects. %}
 
 This is the difference between methods in Java and attributes in EO.
 In Java, every method is a procedure to be executed as soon as it's
@@ -154,4 +157,3 @@ the console will see the string.
 
 Thus, we have objects, but we don't have methods.
 There are only attributes representing other objects.
-

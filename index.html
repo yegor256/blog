@@ -5,7 +5,7 @@ description: |
   Yegor Bugayenko blogging about object-oriented programming, Java,
   project management, philosophy, and startup investments;
   at least one new post every week.
-image: /images/face-1200x1200.jpg
+image: /images/face-1024x1024.jpg
 sitemap: false
 keywords:
   - java blog
@@ -52,6 +52,11 @@ keywords:
                 <i class="icon icon-comments"></i>
                 <a href="{{ site.url }}{{ post.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
               </li>
+              {% if post.chatgpt-translate.model %}
+                <li title="This article is translated to a few languages by ChatGPT">
+                  <i class="icon icon-chatgpt"></i>
+              </li>
+              {% endif %}
             </ul>
           </header>
           <div class="main" itemprop="description">
@@ -95,3 +100,7 @@ keywords:
   </footer>
 </div>
 
+{% if jekyll.environment == "production" %}
+  <script>var disqus_shortname = 'yegor256';</script>
+  <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>
+{% endif %}

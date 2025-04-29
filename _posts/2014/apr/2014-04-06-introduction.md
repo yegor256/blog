@@ -1,10 +1,13 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "First Post"
 date: 2014-04-06
 place: Xemxija, Malta
 description: |
-  First post in my awesome blog :) The post doesn't contain
+  First post in my awesome blog. The post doesn't contain
   any valuable information and is just an anchor.
 keywords:
   - yegor bugayenko
@@ -24,11 +27,11 @@ quality, and will write solely about my ideas and
 views on it.
 
 Anyway, welcome to my new blog. Together, let's see how
-this works out! :)
+this works out!
 
 <!--more-->
 
 BTW, I purchased the
-[Cambria font](http://www.myfonts.com/fonts/ascender/cambria/)
+[Cambria font](https://www.myfonts.com/fonts/ascender/cambria/)
 just for this new blog. It cost, &euro;98. Nevertheless, I think
 it's a good investment for this new venture.

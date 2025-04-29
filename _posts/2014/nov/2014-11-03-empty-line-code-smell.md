@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "An Empty Line is a Code Smell"
 date: 2014-11-03
@@ -158,4 +161,3 @@ method.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Do you use empty lines inside object methods to make them more readable? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/987978512123523072?ref_src=twsrc%5Etfw">April 22, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-

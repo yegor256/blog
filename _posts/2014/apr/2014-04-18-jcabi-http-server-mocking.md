@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Mocking of HTTP Server in Java"
 date: 2014-04-18
@@ -16,7 +19,7 @@ keywords:
   - mock java http server
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
 
 Recently, I explained a
 [fluent Java HTTP client]({% pst 2014/apr/2014-04-11-jcabi-http-intro %})
@@ -27,9 +30,9 @@ interactions more object-oriented than with other available clients,including:
 and plain old
 [`HttpURLConnection`](http://docs.oracle.com/javase/7/docs/api/java/net/HttpURLConnection.html).
 
-This client ships in the [jcabi-http](http://http.jcabi.com) Maven artifact.
+This client ships in the [jcabi-http](https://http.jcabi.com) Maven artifact.
 However, the client part is not the only benefit of using
-[jcabi-http](http://http.jcabi.com). Jcabi also includes a server component that
+[jcabi-http](https://http.jcabi.com). Jcabi also includes a server component that
 can help you in unit and integration testing of your HTTP clients.
 
 <!--more-->
@@ -59,7 +62,7 @@ MatcherAssert.assertThat(
 Now, let's discover what happens here.
 
 In the first few lines, I create an instance of
-[`MkContainer`](http://http.jcabi.com/apidocs-1.1/com/jcabi/http/mock/MkContainer.html),
+[`MkContainer`](https://http.jcabi.com/apidocs-1.1/com/jcabi/http/mock/MkContainer.html),
 which literally has four methods: `next(MkAnswer)`, `start()`, `stop()`, and
 `home()`.
 
@@ -75,7 +78,7 @@ The container finds the first available and unoccupied port.
 In the example above, I added just one answer. This means that the container
 will reply only to the first HTTP request with that answer and that all
 consecutive requests will cause HTTP responses with status "internal server
-error [500](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)."
+error [500](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)."
 
 In lines 5 through 8, I make an HTTP request to the already started server.
 Also, I make an assertion that the body of the HTTP response contains the text
@@ -93,7 +96,7 @@ As you can see, I use `container.home()` in order to get the URL of the server.
 It is recommended that you allow the container to find the first unoccupied TCP
 port and bind itself to it. Nevertheless, if you need to specify your own port,
 you can do it with a one-argument method
-[`start(int)`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/mock/MkContainer.html#start%28int%29)
+[`start(int)`](https://http.jcabi.com/apidocs-1.3/com/jcabi/http/mock/MkContainer.html#start%28int%29)
 in `MkContainer`.
 
 I use `try/finally` to stop the container safely. In unit tests, this is not
@@ -114,7 +117,7 @@ MatcherAssert.assertThat(
 ```
 
 An instance of
-[`MkQuery`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/mock/MkQuery.html)
+[`MkQuery`](https://http.jcabi.com/apidocs-1.3/com/jcabi/http/mock/MkQuery.html)
 exposes information about the query made. In this example, I get all headers of
 the HTTP request and making an assertion that the`"User-Agent"` header was there
 and had at least one value equal to `"Myself"`.
@@ -123,11 +126,11 @@ This mocking technology is used actively in unit and integration tests of
 [jcabi-github](https://github.com/jcabi/jcabi-github), which is a Java client to
 GitHub API. In its development, the technology is very important in checking
 which requests are being sent to the server and validating whether they comply
-with our requirements. Here, we are using [jcabi-http](http://http.jcabi.com)
+with our requirements. Here, we are using [jcabi-http](https://http.jcabi.com)
 mocking.
 
 As with the client, you need the
-[`jcabi-http.jar`](http://repo1.maven.org/maven2/com/jcabi/jcabi-http)
+[`jcabi-http.jar`](https://repo1.maven.org/maven2/com/jcabi/jcabi-http)
 dependency
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
@@ -140,7 +143,7 @@ dependency
 
 Besides the above, you need to add one more dependency, which is a Grizzly HTTP
 server.
-[`MkGrizzlyContainer`](http://http.jcabi.com/apidocs-1.3/com/jcabi/http/mock/MkGrizzlyContainer.html)
+[`MkGrizzlyContainer`](https://http.jcabi.com/apidocs-1.3/com/jcabi/http/mock/MkGrizzlyContainer.html)
 is based on it.
 
 ```xml
@@ -153,4 +156,4 @@ is based on it.
 
 If you have any questions or suggestions, please submit them through [GitHub
 issues](https://github.com/jcabi/jcabi-http/issues).
-As always, bugs are welcome :)
+As always, bugs are welcome.

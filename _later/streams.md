@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Java Lambdas Are a Mistake"
 date: 2016-04-29
@@ -19,7 +22,7 @@ keywords:
 Let's talk about [lambda expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
 (and [Stream API](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html))
 introduced in Java&nbsp;8.
-According to [Oracle](http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html),
+According to [Oracle](https://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html),
 they "_enable you to treat functionality as a method argument_"
 and "_support functional-style operations_" respectively. In other words, they are
 guests from the world of
@@ -43,7 +46,7 @@ serve a single isolated and one-time purpose. We don't need them to exist
 or be visible for the entire application. Instead, we just need them
 right here and for once.
 
-For example, let's say we have a simple <del>collection</del> iterator of strings:
+For example, let's say we have a simple ~~collection~~ iterator of strings:
 
 ```java
 Iterator<String> list = Arrays.asList(
@@ -296,5 +299,3 @@ Method names are the same as Java `Iterator` has, but they are implemented
 by the object itself. See the difference?
 
 To be continued...
-
-

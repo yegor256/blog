@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "SASS in Java Webapp"
 date: 2014-06-26
@@ -17,7 +20,7 @@ keywords:
 ---
 
 [SASS](http://sass-lang.com/) is a powerful and very popular
-language for writing [CSS](http://www.w3.org/Style/CSS/Overview.en.html)
+language for writing [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 style sheets. This is how I'm using SASS in my Maven projects.
 
 First, I change the extensions of `.css` files to
@@ -85,7 +88,7 @@ to compress/minify the style sheets produced by the SASS compiler:
 Minified `.css` files will be placed into `target/css-min`.
 
 The final step is to configure the
-[maven-war-plugin](http://maven.apache.org/plugins/maven-war-plugin/)
+[maven-war-plugin](https://maven.apache.org/plugins/maven-war-plugin/)
 to pick up `.css` files and package them into the final WAR archive:
 
 ```xml

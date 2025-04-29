@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Monolithic Repos Are Evil"
 date: 2018-09-05
@@ -19,7 +22,7 @@ jb_picture:
   caption: Funny Games (2007) by Michael Haneke
 ---
 
-We all keep our code in <del>Git</del>
+We all keep our code in ~~Git~~
 [version control](https://en.wikipedia.org/wiki/Version_control) repositories.
 The question is whether we should create a new repository for each
 new module or try to keep as much as possible in a single so called "monolithic" repo
@@ -33,7 +36,7 @@ advocate the second approach. I believe they are wrong.
 {% jb_picture_body %}
 
 Let's use the following JavaScript function as an example.
-It downloads a JSON document from a [Zold](http://www.zold.io)
+It downloads a JSON document from a [Zold](https://www.zold.io)
 node (using [jQuery](https://jquery.com/))
 and places part of its content on the HTML page.
 Then it colors the data according to its value.
@@ -158,16 +161,16 @@ Here is what I did:
   * [Implemented](https://github.com/yegor256/colorizejs/issues/3) and released
     the next version [0.1.0](https://github.com/yegor256/colorizejs/tree/0.1.0);
   * [Added it](https://github.com/zold-io/zold.github.io/issues/81) to Zold front-end,
-    tested it, and released it---check it out [here](http://www.zold.io/health.html).
+    tested it, and released it---check it out [here](https://www.zold.io/health.html).
 
 It took almost three weeks of waiting and four hours of work, just
 to move a small piece of JavaScript code to a new repository and release
-it separately. Was it worth it? Well, I think it was. But <del>many</del> most
+it separately. Was it worth it? Well, I think it was. But ~~many~~ most
 other blog post authors, who I managed to find, think that it would be better to keep
 everything in a single monolithic repo, mostly because it's better for _productivity_.
 For example,
 [Advantages of monorepos](https://danluu.com/monorepo/) by [Dan Luu](https://twitter.com/danluu),
-[Advantages and Disadvantages of a Monolithic Repository](https://people.engr.ncsu.edu/ermurph3/papers/seip18.pdf)
+[Advantages and Disadvantages of a Monolithic Repository](https://dl.acm.org/doi/abs/10.1145/3183519.3183550)
 (a case study at Google) by Ciera Jaspan et al.,
 and
 [How Monolithic Repository in Open Source saved my Laziness](https://www.tomasvotruba.cz/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/)
@@ -177,7 +180,7 @@ There are also a few good analyses of both approaches, for example
 [Monolithic repositories vs. Many repositories](https://www.dotconferences.com/2016/05/fabien-potencier-monolithic-repositories-vs-many-repositories)
 speech by Fabien Potencier at dotScale 2016
 and
-[Repo Style Wars: Mono vs Multi](http://www.gigamonkeys.com/mono-vs-multi/)
+[Repo Style Wars: Mono vs Multi](https://www.gigamonkeys.com/mono-vs-multi/)
 by Peter Seibel.
 
 In a nutshell, they
@@ -264,7 +267,7 @@ from it are enormous. This is my short list of them:
     Each repository, inevitably, will have its own namespace. For example, in the
     JS repository I just created, I only have two files: `colorizejs.js` and `test-colorizejs.js`.
     I don't really care about the naming inside them, since the namespace
-    is very small. <del>I can even use global variables.</del>
+    is very small. ~~I can even use global variables.~~
     Shorter names and smaller namespaces mean better maintainability.
 
   * **Simple Tests**.

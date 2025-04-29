@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Best Hosted Continuous Integration Services for a Private Repository"
 date: 2014-10-05
@@ -39,7 +42,7 @@ style: |-
 Every project I'm working with starts with a setup of
 [continuous integration]({% pst 2016/aug/2016-08-01-continuous-integration-maturity %})
 pipeline. I'm a big fan of cloud services,
-that's why I was always using [Travis](http://www.travis-ci.org). A few of
+that's why I was always using [Travis](https://www.travis-ci.org). A few of
 my clients questioned this choice recently, mostly because
 of the price. So I decided to make a brief analysis of the market.
 
@@ -74,8 +77,8 @@ the best and highly recommended):
 </tr>
 </thead>
 <tbody>
-<tr><td><a href="http://www.shippable.com">Shippable</a>&#x263A;</td>
-  <td class="x-right"><a href="http://www.shippable.com/pricing.html">free</a> (!)</td>
+<tr><td><a href="https://www.shippable.com">Shippable</a>&#x263A;</td>
+  <td class="x-right"><a href="https://www.shippable.com/pricing.html">free</a> (!)</td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -85,7 +88,7 @@ the best and highly recommended):
   <td><a href="https://app.shippable.com/projects/542e8fb980088cee586d3806/builds/latest">
     <img src="https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master" class="x-build" alt='badge'/></a></td>
   </tr>
-<tr><td><a href="http://www.travis-ci.org">Travis</a></td>
+<tr><td><a href="https://www.travis-ci.org">Travis</a></td>
   <td class="x-right"><a href="https://travis-ci.com/plans">$69/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -96,8 +99,8 @@ the best and highly recommended):
   <td><a href="https://travis-ci.org/yegor256/rultor">
     <img src="https://travis-ci.org/yegor256/rultor.svg?branch=master" class="x-build" alt='badge'/></a></td>
   </tr>
-<tr><td><a href="http://www.appveyor.com">AppVeyor</a></td>
-  <td class="x-right"><a href="http://www.appveyor.com/pricing">$39/mo</a></td>
+<tr><td><a href="https://www.appveyor.com">AppVeyor</a></td>
+  <td class="x-right"><a href="https://www.appveyor.com/pricing">$39/mo</a></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
@@ -107,7 +110,7 @@ the best and highly recommended):
   <td><a href="https://ci.appveyor.com/project/yegor256/rultor/branch/master">
     <img src="https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true" class="x-build" alt='badge'/></a></td>
   </tr>
-<tr><td><a href="http://www.wercker.com">Wercker</a></td>
+<tr><td><a href="https://www.wercker.com">Wercker</a></td>
   <td class="x-right">$350/mo</td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -119,7 +122,7 @@ the best and highly recommended):
     <img src="https://app.wercker.com/status/0e6506c69e078b7692e50b240c034524/s%20wercker status" class="x-build" alt='badge'/></a></td>
   </tr>
 <tr><td colspan="9" class="x-hr"></td></tr>
-<tr><td><a href="http://www.semaphoreapp.com">SemaphoreApp</a></td>
+<tr><td><a href="https://www.semaphoreapp.com">SemaphoreApp</a></td>
   <td class="x-right"><a href="https://semaphoreapp.com/pricing">$29/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -128,7 +131,7 @@ the best and highly recommended):
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.snap-ci.com">Snap-CI</a>&#x263A;</td>
+<tr><td><a href="https://www.snap-ci.com">Snap-CI</a>&#x263A;</td>
   <td class="x-right"><a href="https://snap-ci.com/plans">$30/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -146,7 +149,7 @@ the best and highly recommended):
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
   </tr>
-<tr><td><a href="http://www.circleci.com">CircleCI</a>&#x263A;</td>
+<tr><td><a href="https://www.circleci.com">CircleCI</a>&#x263A;</td>
   <td class="x-right"><a href="https://circleci.com/pricing">$19/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -164,7 +167,7 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.deploybot.com">DeployBot</a></td>
+<tr><td><a href="https://www.deploybot.com">DeployBot</a></td>
   <td class="x-right"><a href="https://signup.deploybot.com/signup/new">$15/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -182,7 +185,7 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://www.greenhouseci.com">GreenHouseCI</a></td>
+<tr><td><a href="https://www.greenhouseci.com">GreenHouseCI</a></td>
   <td class="x-right"><a href="https://greenhouseci.com/pricing.html">$49/mo</a></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -210,9 +213,9 @@ them in the list with &#x263A; emoji.
 
 ## Best Four
 
-{% badge /images/2014/10/shippable.svg 92 http://www.shippable.com %}
+{% badge /images/2014/10/shippable.svg 92 https://www.shippable.com %}
 
-[**Shippable**](http://www.shippable.com) was easy to configure
+[**Shippable**](https://www.shippable.com) was easy to configure
 since it understands `.travis.yml` out of the box.
 The user interface is easy to navigate since it doesn't
 have "settings" page at all (or I didn't find it). Everything is
@@ -220,9 +223,9 @@ configured via `shippable.yml` file in the repository. The service
 looks stable and robust, no complains so far. What is especially
 cool about them is that they allow you to build in a Docker container.
 
-{% badge /images/2014/10/travis.png 92 http://www.travis-ci.org %}
+{% badge /images/2014/10/travis.png 92 https://www.travis-ci.org %}
 
-[**Travis**](http://www.travis-ci.org) is
+[**Travis**](https://www.travis-ci.org) is
 the best platform I've seen so far. Mostly because
 it is the most popular. Perfectly integrates with
 GitHub and has proper documentation. One important
@@ -232,9 +235,9 @@ say. I strongly disagree, since Jenkins will
 require a 24x7 administration, which costs way more than $129, but
 it's always difficult to explain.
 
-{% badge /images/2014/10/wercker.png 92 http://www.wercker.com %}
+{% badge /images/2014/10/wercker.png 92 https://www.wercker.com %}
 
-[**Wercker**](http://www.wercker.com) is a European product
+[**Wercker**](https://www.wercker.com) is a European product
 from Amsterdam, which is still in beta and that's why free
 for all projects. The platform looks very promising. It is still
 free for private repositories and is backed up by
@@ -243,9 +246,9 @@ They also have an interesting concept of build "boxes," which
 can be pre-configured similar to Docker containers.
 It works rather stable for the last few months, no complains so far.
 
-{% badge /images/2014/10/appveyor.png 92 http://www.appveyor.com %}
+{% badge /images/2014/10/appveyor.png 92 https://www.appveyor.com %}
 
-[**AppVeyor**](http://www.appveyor.com) is the only one
+[**AppVeyor**](https://www.appveyor.com) is the only one
 that runs Windows builds. Even though I'm working mostly with
 Java and Ruby, which are expected to be platform independent, they
 very often appear to be exactly the opposite. When your build
@@ -257,9 +260,9 @@ with AppVeyor.
 
 ## Others
 
-{% badge /images/2014/10/semaphoreapp.png 64 http://www.semaphoreapp.com %}
+{% badge /images/2014/10/semaphoreapp.png 64 https://www.semaphoreapp.com %}
 
-[**SemaphoreApp**](http://www.semaphoreapp.com) is easy to
+[**SemaphoreApp**](https://www.semaphoreapp.com) is easy to
 configure and work with. It makes an impression of a light-weight
 system, which I generally appreciate. As a downside, they
 <span class="strike">don't have any Maven pre-installed</span>
@@ -268,10 +271,10 @@ custom script that downloads and unpacks the latest Maven. Another downside is
 that they are not configurable through a file (like `.travis.yml`)---you should do everything through a UI. They also support
 [caching between builds](https://semaphoreapp.com/docs/caching-between-builds.html).
 
-{% badge /images/2014/10/snap.png 64 http://www.snap-ci.com %}
+{% badge /images/2014/10/snap.png 64 https://www.snap-ci.com %}
 
-[**Snap-CI**](http://www.snap-ci.com) is a product of
-ThoughtWorks, an author of [Go](http://www.go.cd/),
+**Snap-CI** ~~is~~ was a product of
+ThoughtWorks, an author of [Go](https://www.go.cd/),
 an open source continuous integration server. It looks a bit more
 complicated than others, giving you an ability to define "stages"
 and combine them into pipelines. I'm not sure yet how these mechanisms
@@ -287,31 +290,31 @@ requests, but I didn't manage to configure them. They simply
 don't notify our pull requests in GitHub, even though they build them.
 Maybe I'll find a way, so far it's not clear.
 
-{% badge /images/2014/10/circleci.png 64 http://www.circleci.com %}
+{% badge /images/2014/10/circleci.png 64 https://www.circleci.com %}
 
-[**CircleCI**](http://www.circleci.com) I still don't know why my build
+[**CircleCI**](https://www.circleci.com) I still don't know why my build
 fails there. Really difficult to configure and understand
 what's going on. Trying to figure it out...
 
-{% badge /images/2014/10/solanolabs.png 64 http://www.solanolabs.com %}
+{% badge /images/2014/10/solanolabs.png 64 https://www.solanolabs.com %}
 
-[**SolanoLabs**](http://www.solanolabs.com) looks rather immature and
+[**SolanoLabs**](https://www.solanolabs.com) looks rather immature and
 difficult to configure. They don't even support automatic GitHub hook
 configuration when new repository is added. However, their sales spams me
-rather aggressively :)
+rather aggressively.
 
-{% badge /images/2014/10/hostedci.png 64 http://www.hosted-ci.com %}
+{% badge /images/2014/10/hostedci.png 64 https://www.hosted-ci.com %}
 
-[**Hosted-CI**](http://www.hosted-ci.com) is for iOS/OSX only. They don't
+**Hosted-CI** is for iOS/OSX only. They don't
 give anything for free, even for open source projects. I didn't have a chance
 to test them yet.
 
-{% badge /images/2014/10/cloudbees.png 64 http://www.cloudbees.com %}
+{% badge /images/2014/10/cloudbees.png 64 https://www.cloudbees.com %}
 
-[**CloudBees**](http://www.cloudbees.com) is basically a hosted Jenkins.
+[**CloudBees**](https://www.cloudbees.com) is basically a hosted Jenkins.
 I don't really like Jenkins, that's why can't recommend this platform.
 
-{% badge /images/2014/10/deploybot.png 64 http://www.deploybot.com %}
+{% badge /images/2014/10/deploybot.png 64 https://www.deploybot.com %}
 
 [**DeployBot**](https://deploybot.com/) doesn't even allow me to login
 via GitHub, huh? They seem to be more "deployment" oriented, not just
@@ -323,7 +326,7 @@ continuous integration.
 billing model---they charge per build, not per month. I would definitely
 recommend to give it a try. I couldn't make it work though...
 
-{% badge /images/2014/10/greenhouseci.png 64 http://www.greenhouseci.com %}
+{% badge /images/2014/10/greenhouseci.png 64 https://www.greenhouseci.com %}
 
 [**GreenHouseCI**](http://greenhouseci.com/) is a CI platform for
 mobile apps (iOS, Android, etc.) Seems to be interesting, I just don't have
@@ -354,8 +357,8 @@ a full scale mobile app to test it against.
 BTW, if you don't like the idea of keeping continuous integration
 in cloud, consider these on-premise software packages (in order or preference):
 [Jenkins](http://jenkins-ci.org/),
-[TeamCity](http://www.jetbrains.com/teamcity/),
-[Go](http://www.thoughtworks.com/products/go-continuous-delivery),
+[TeamCity](https://www.jetbrains.com/teamcity/),
+[Go](https://www.thoughtworks.com/products/go-continuous-delivery),
 [Strider](https://github.com/Strider-CD/strider),
 [BuildBot](http://buildbot.net/).
 

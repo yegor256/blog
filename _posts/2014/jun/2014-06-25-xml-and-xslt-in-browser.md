@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "XML+XSLT in a Browser"
 date: 2014-06-25
@@ -18,7 +21,7 @@ keywords:
   - xslt java web framework
 ---
 
-[Separating data and their presentation](http://en.wikipedia.org/wiki/Separation_of_presentation_and_content)
+[Separating data and their presentation](https://en.wikipedia.org/wiki/Separation_of_presentation_and_content)
 is a great concept. Take HTML and CSS for example. HTML is supposed to have pure data and
 CSS is supposed to format that data in order to make it readable by a human. Years ago,
 that was probably the intention of HTML/CSS, but in reality it doesn't work like that.
@@ -28,7 +31,7 @@ We still have to format our data using HTML tags, while
 [CSS]({% pst 2014/jun/2014-06-26-sass-in-java-webapp %})
 can help slightly with positioning and decorating.
 
-On the other hand, XML with [XSLT](http://en.wikipedia.org/wiki/XSLT)
+On the other hand, XML with [XSLT](https://en.wikipedia.org/wiki/XSLT)
 implements perfectly the idea of separating data and presentation. XML documents,
 like HTML, are supposed to contain data only without any information about
 positioning or formatting. XSL stylesheets position and decorate the data.
@@ -37,7 +40,7 @@ any formatting inside XML.
 
 The latest versions of Chrome, Safari, Firefox and IE all support
 this mechanism. When a browser retrieves an XML document from a server,
-and the document has an XSL stylesheet [associated](http://www.w3.org/TR/xml-stylesheet/)
+and the document has an XSL stylesheet [associated](https://www.w3.org/TR/xml-stylesheet/)
 with it---the browser transforms XML into HTML on-fly.
 
 <!--more-->
@@ -45,12 +48,12 @@ with it---the browser transforms XML into HTML on-fly.
 ## Working Example
 
 Let's review a simple Java web application that works
-this way. It is using [Takes Framework](http://www.takes.org)
+this way. It is using [Takes Framework](https://www.takes.org)
 that makes this mechanism possible. In the next post, I'll explain
 how ReXSL works. For now, though, let's focus on the idea of delivering
 bare data in XML and formatting it with an XSL stylesheet.
 
-Open [http://www.stateful.co](http://www.stateful.co)---it is
+Open [https://www.stateful.co](https://www.stateful.co)---it is
 a collection of stateful web primitives, explained in the
 [Atomic Counters at Stateful.co]({% pst 2014/may/2014-05-18-cloud-autoincrement-counters %}) article.
 
@@ -88,7 +91,7 @@ this document is more suitable for machine parsing instead of reading by a human
 The document contains data, which is important for its requester.
 It's up to the requester on how to render the data or to not render it at all.
 
-Its second line [associates](http://www.w3.org/TR/xml-stylesheet/)
+Its second line [associates](https://www.w3.org/TR/xml-stylesheet/)
 the document with the XSL stylesheet `/xsl/index.xsl` that
 is loaded by the browser separately:
 
@@ -111,8 +114,8 @@ For example:
 
 ```xml
 <xsl:stylesheet version="2.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns="http://www.w3.org/1999/xhtml">
+  xmlns:xsl="https://www.w3.org/1999/XSL/Transform"
+  xmlns="https://www.w3.org/1999/xhtml">
   <xsl:template match="page">
     <html>
       <body>
@@ -138,8 +141,8 @@ to know are a few simple commands and the principle of XML transformation.
 ## Why Not a Templating Engine?
 
 Now, why is this approach better than all that widely use Java templating engines, including
-[JSP](http://en.wikipedia.org/wiki/JavaServer_Pages),
-[JSF](http://en.wikipedia.org/wiki/JavaServer_Faces),
+[JSP](https://en.wikipedia.org/wiki/JavaServer_Pages),
+[JSF](https://en.wikipedia.org/wiki/JavaServer_Faces),
 [Velocity](http://velocity.apache.org/engine/devel/),
 [FreeMarker](http://freemarker.org/),
 [Tiles](http://tiles.apache.org/), etc?
@@ -182,12 +185,12 @@ done by Julian Reschke. Besides that, XSLT 2.0 is
 [not supported](http://stackoverflow.com/questions/6282340/which-browsers-support-xslt-2-0-already) at all.
 
 There is a workaround, though. We can understand which browser
-is making a request (via its [`User-Agent`](http://en.wikipedia.org/wiki/User_agent) HTTP header)
+is making a request (via its [`User-Agent`](https://en.wikipedia.org/wiki/User_agent) HTTP header)
 and transform XML into HTML on the server side. Thus, for modern browsers that support XSL,
 we will deliver XML and for all others---HTML.
 
 This is exactly how [ReXSL framework](https://github.com/yegor256/rexsl) works.
-Open [http://www.stateful.co](http://www.stateful.co) in Internet Explorer
+Open [https://www.stateful.co](https://www.stateful.co) in Internet Explorer
 and you will see an HTML document, not an XML document as is the case with Chrome.
 
 BTW, see how all this is implemented:

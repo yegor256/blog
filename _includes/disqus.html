@@ -1,0 +1,34 @@
+{% if jekyll.environment == "production" %}
+  <script>var disqus_shortname = '{{ include.shortname }}';</script>
+  <script id="dsq-count-scr" src="//{{ include.shortname }}.disqus.com/count.js" async="async"></script>
+{% endif %}
+
+<div class="disqus" role="complementary" aria-hidden="true">
+  <p class="disqus_hint" >
+    Please, use <a href="https://help.disqus.com/commenting/what-html-tags-are-allowed-within-comments">syntax highlighting</a>
+    in your comments, to make them more readable.
+  </p>
+  <div id="disqus_thread" class="disqus-thread">
+    <a>&nbsp;</a>
+  </div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = document.location.href.split('?')[0].split('#')[0];
+      this.page.identifier = this.page.url;
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = '//{{ include.shortname }}.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>
+    <div>
+      <p class="red">
+        JavaScript is disabled in your browser,
+        that's why you can't see comments under this post.
+      </p>
+    </div>
+  </noscript>
+</div>

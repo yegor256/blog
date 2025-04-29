@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "RAII in Java"
 date: 2017-08-08
@@ -25,7 +28,7 @@ buffer:
 Resource Acquisition Is Initialization
 ([RAII](https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization))
 is a design idea introduced in C++ by
-[Bjarne Stroustrup](http://amzn.to/2uMlANB)
+[Bjarne Stroustrup](https://amzn.to/2uMlANB)
 for exception-safe resource management.
 Thanks to garbage collection Java
 [doesn't have](https://stackoverflow.com/questions/477399) this feature,
@@ -177,9 +180,8 @@ I introduced method `acquire()` and moved `sem.acquire()` out of the `Permit` co
 [believe]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %})
 that constructors must be code-free.
 
-To summarize, RAII is a perfect design <del>pattern</del> approach when you
+To summarize, RAII is a perfect design ~~pattern~~ approach when you
 deal with resources that may [leak](https://en.wikipedia.org/wiki/Resource_leak).
 Even though Java doesn't have it out of the box we can implement it
 via [try-with-resources](https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html) and
 [`Closeable`](https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html).
-

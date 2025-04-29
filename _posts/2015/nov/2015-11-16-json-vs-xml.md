@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Stop Comparing JSON and XML"
 date: 2015-11-16
@@ -24,7 +27,7 @@ jb_picture:
 JSON or XML? Which one is better? Which one is faster? Which
 one should I use in my next project? Stop it! These things are not comparable.
 It's similar to comparing a bicycle and an
-[AMG S65](http://www.mbusa.com/mercedes/vehicles/model/class-S/model-S65V). Seriously,
+[AMG S65](https://www.mbusa.com/mercedes/vehicles/model/class-S/model-S65V). Seriously,
 which one is better? They both can take you from home to the office, right?
 In some cases, a bicycle will do it better. But does that mean
 they can be compared to each other? The same applies here with JSON and XML.
@@ -80,12 +83,12 @@ We're using it **temporarily** to transfer a piece
 of data from point A to point B. Indeed, it is shorter than XML and
 more readable. That's it.
 
-{% badge /images/2015/04/book-xml-nutshell.jpg 96 http://amzn.to/2c5n8uC %}
+{% badge /images/2015/04/book-xml-nutshell.jpg 96 https://amzn.to/2c5n8uC %}
 
 XML is not a data format; it is a **language**. A very powerful one. Let me
 show you what it's capable of. Let me basically explain why I love it. And I would
 strongly recommend you read
-[**XML in a Nutshell, Third Edition**](http://amzn.to/2c5n8uC)
+[**XML in a Nutshell, Third Edition**](https://amzn.to/2c5n8uC)
 by Elliotte Rusty Harold and W. Scott Means.
 
 I believe there are four features XML has that seriously set it apart from
@@ -94,10 +97,10 @@ JSON or any other simple data format, like
 
  * **XPath**.
   To get data like the year of publication from the document above, I just
-  send an [XPath](http://www.w3.org/TR/xpath20/)
+  send an [XPath](https://www.w3.org/TR/xpath20/)
   query: `/book/published/year/text()`. However, there has to be
   an XPath processor that understands my request and returns `2004`.
-  The beauty of this is that XPath [2.0](http://www.xml.com/pub/a/2002/03/20/xpath2.html)
+  The beauty of this is that XPath [2.0](https://www.xml.com/pub/a/2002/03/20/xpath2.html)
   is a very powerful query engine
   with its own functions, predicates, axes, etc. You can literally put
   any logic into your XPath request without writing any traversing logic
@@ -110,7 +113,7 @@ JSON or any other simple data format, like
   name of the book author, for example, while metadata (data about data)
   can and should be placed into attributes. This significantly helps in organizing
   and structuring information. On top of that, both elements and attributes
-  can be marked as belonging to certain [namespaces](http://www.w3.org/TR/REC-xml-names/).
+  can be marked as belonging to certain [namespaces](https://www.w3.org/TR/REC-xml-names/).
   This is a very useful technique during times
   when a few applications are working with the same XML document.
 
@@ -120,7 +123,7 @@ JSON or any other simple data format, like
   structure is not broken by any of these actions. One of them may
   use `<year>` to store the publication date while another uses
   `<date>` with ISO-8601. To avoid that mess in structure, create a supplementary
-  document, which is called [XML Schema](http://www.w3.org/XML/Schema),
+  document, which is called [XML Schema](https://www.w3.org/XML/Schema),
   and ship it together with the main document.
   Everyone who wants to work with the main document will first **validate**
   its correctness using the schema supplied. This is a sort of integration testing
@@ -130,9 +133,9 @@ JSON or any other simple data format, like
  * **XSL**.
   You can make modifications to your XML document without any Java/Ruby/etc. code
   at all. Just create an
-  [XSL transformation](http://www.w3.org/TR/xslt20/) document and "apply" it to your
+  [XSL transformation](https://www.w3.org/TR/xslt20/) document and "apply" it to your
   original XML. As an output, you will get a new XML. The
-  [XSL](http://www.w3.org/Style/XSL/) language
+  [XSL](https://www.w3.org/Style/XSL/) language
   (it is purely functional, by the way) is designed for hierarchical data
   manipulations. It is much more suitable for this task than Java or any other
   OOP/procedural approach. You can transform an XML document into anything, including
@@ -149,12 +152,12 @@ it gives me very convenient access to anything inside it (XPath).
 
 There are [many more](http://users.jyu.fi/~airi/xmlfamily.html)
 languages, standards, and applications developed around XML, including
-[XForms](http://www.w3.org/MarkUp/Forms/),
-[SVG](http://www.w3.org/Graphics/SVG/),
-[MathML](http://www.w3.org/Math/),
-[RDF](http://www.w3.org/RDF/),
-[OWL](http://www.w3.org/2001/sw/wiki/OWL),
-[WSDL](http://www.w3.org/TR/wsdl), etc.
+[XForms](https://www.w3.org/MarkUp/Forms/),
+[SVG](https://www.w3.org/Graphics/SVG/),
+[MathML](https://www.w3.org/Math/),
+[RDF](https://www.w3.org/RDF/),
+[OWL](https://www.w3.org/2001/sw/wiki/OWL),
+[WSDL](https://www.w3.org/TR/wsdl), etc.
 But you are less likely to use them
 in a mainstream project, as they are rather "niche."
 

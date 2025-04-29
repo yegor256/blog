@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Alan Kay Was Wrong About Him Being Wrong"
 date: 2017-12-12
@@ -58,7 +61,7 @@ is very procedural. We try to encapsulate as much as we can inside a single
 object, however inevitably still having to expose a lot of its data in order to
 be able to "connect" it with other objects.
 
-We turn objects into "little computers," as [some books](http://amzn.to/2npiZZQ) refer to them. They
+We turn objects into "little computers," as [some books](https://amzn.to/2npiZZQ) refer to them. They
 expect data to come in, they process the data, and return back some new data.
 The maintainability problem is not really solved with this approach---we
 still have to deal with a lot of data, remembering its semantic outside of

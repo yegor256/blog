@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: static
 title: "Quotes"
 description: |
@@ -24,10 +27,9 @@ than the feeling of our self, of our own ego."<br/>
 [Sigmund Freud](https://en.wikipedia.org/wiki/Sigmund_Freud),
 [Das Unbehagen in der Kultur](https://en.wikipedia.org/wiki/Civilization_and_Its_Discontents), 1930.
 
-"What is good? &mdash; All that heightens the feeling of power, the
-will to power, power itself in man. What is bad? &mdash; All
-that proceeds from weakness. What is happiness? &mdash;
-The feeling that power increases &mdash; that a resistance is overcome."<br/>
+"What is good?---All that heightens the feeling of power, the
+will to power, power itself in man. What is bad?---All
+that proceeds from weakness. What is happiness?---The feeling that power increases---that a resistance is overcome."<br/>
 [Friedrich Nietzsche](https://en.wikipedia.org/wiki/Friedrich_Nietzsche),
 [Der Antichrist](https://en.wikipedia.org/wiki/The_Antichrist_%28book%29), 1888.
 

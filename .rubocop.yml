@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+---
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'assets/**/*'
+    - 'vendor/**/*'
+  DisplayCopNames: true
+  TargetRubyVersion: 2.7
+  SuggestExtensions: false
+  NewCops: enable
+plugins:
+  - rubocop-rake
+  - rubocop-minitest
+  - rubocop-performance
+Performance/CollectionLiteralInLoop:
+  Enabled: false
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Layout/ElseAlignment:
+  Enabled: false
+Layout/CaseIndentation:
+  Enabled: false
+Layout/EndAlignment:
+  Enabled: false
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+Metrics/AbcSize:
+  Enabled: false
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+Layout/LineLength:
+  Max: 180
+Metrics/CyclomaticComplexity:
+  Max: 20
+Metrics/PerceivedComplexity:
+  Max: 20
+Metrics/BlockLength:
+  Max: 100
+require: []

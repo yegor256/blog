@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Reflection Means Hidden Coupling"
 date: 2022-06-05
@@ -21,12 +24,12 @@ jb_picture:
 [Reflective programming](https://en.wikipedia.org/wiki/Reflective_programming) (or reflection) happens
 when your code changes itself on the fly. For example, a method of a class, when we call it,
 among other things adds a new method to the class
-(also known as [monkey patching](https://en.wikipedia.org/wiki/Monkey_patch)). 
+(also known as [monkey patching](https://en.wikipedia.org/wiki/Monkey_patch)).
 Java, Python, PHP, JavaScript, you name it---they
-all have this "powerful" feature. What's 
-[wrong](https://softwareengineering.stackexchange.com/questions/193526) with it? 
-Well, it's 
-[slow](https://mattwarren.org/2016/12/14/Why-is-Reflection-slow/), 
+all have this "powerful" feature. What's
+[wrong](https://softwareengineering.stackexchange.com/questions/193526) with it?
+Well, it's
+[slow](https://mattwarren.org/2016/12/14/Why-is-Reflection-slow/),
 [dangerous](https://owasp.org/www-community/vulnerabilities/Unsafe_use_of_Reflection),
 and hard to read and debug.
 But all that is nothing compared with the _coupling_ it introduces to the code.
@@ -57,7 +60,7 @@ a [dynamic shortcut](https://stackoverflow.com/questions/19017258)
 to it in the bytecode.
 
 Why is this bad, aside from the fact that
-1) it's [slow](http://www.buzdin.lv/2011/01/is-java-reflection-really-slow.html),
+1) it's [slow](https://www.buzdin.lv/2011/01/is-java-reflection-really-slow.html),
 2) it's more verbose and so [less readable](https://armedia.com/blog/instanceof-avoid-in-code/),
 and
 3) it introduces a new point of failure since the object `items` may not be

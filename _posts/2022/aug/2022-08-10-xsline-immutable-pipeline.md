@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Declarative and Immutable Pipeline of Transformations"
 date: 2022-08-10
@@ -206,4 +209,3 @@ Train<Shift> train = new TrBulk<>(
 With this design I can construct the train in almost any possible way.
 
 See, for example, how we use it [here](https://github.com/objectionary/eo/blob/0.23.6/eo-parser/src/main/java/org/eolang/parser/ParsingTrain.java#L86-L103) and [here](https://github.com/objectionary/eo/blob/0.23.6/eo-maven-plugin/src/main/java/org/eolang/maven/SpyTrain.java#L49-L75).
-

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "What if the Architect is Wrong?"
 date: 2019-01-15
@@ -38,12 +41,12 @@ management model, provided the dictator is _smart_. This means, first of all, ha
 1) to analyze the reality, 2) [collect]({% pst 2015/may/2015-05-13-two-instruments-of-software-architect %})
 all available differing opinions, and 3) find
 the best possible option, leaving personal emotions aside. How many people
-truly can do that? <del>None</del> Very few.
+truly can do that? ~~None~~ Very few.
 
 Everybody else will most likely abuse the power and turn into a bad dictator,
 who doesn't listen to anyone, doesn't pay attention to different opinions,
 and makes technical decisions out of personal feelings. How many
-software architects like that are out there? <del>All</del> Many.
+software architects like that are out there? ~~All~~ Many.
 
 What is the solution?
 

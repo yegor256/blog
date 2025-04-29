@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: Incremental Requirements With Requs
 date: 2014-04-26
@@ -18,16 +21,17 @@ keywords:
 Requirements engineering is one of the most important disciplines in software
 development. Perhaps, even more important than architecture, design or coding
 itself.
-
 Joy Beatty and Karl Wiegers in
 [Software Requirements](https://www.amazon.com/dp/0735679665)
 argue that the cost of mistakes made in a
 [requirements specification]({% pst 2015/nov/2015-11-10-ten-mistakes-in-specs %})
 is significantly higher than a bug in source code. I totally agree.
 
+<!--more-->
+
 In XDSD projects we specify requirements using
-[Requs](http://www.requs.org),
-a [controlled natural language](http://en.wikipedia.org/wiki/Controlled_natural_language)
+[Requs](https://www.requs.org),
+a [controlled natural language](https://en.wikipedia.org/wiki/Controlled_natural_language)
 that sounds like English, while at the same time is parseable by computers.
 A simple requirements document in Requs may look similar to:
 
@@ -40,9 +44,7 @@ UC1 where Employee gets raise: "TBD."
 This Software Requirements Specification (SRS) defines two types (`Department`
 and `Employee`) and one method `UC` (aka "use case").
 
-<!--more-->
-
-Requs syntax is explained [here](http://www.requs.org/syntax.html).
+Requs syntax is explained [here](https://www.requs.org/syntax.html).
 
 The main and only goal of requirements engineering in any XDSD project is to
 create a complete and non-ambiguous SRS document. The person who performs this
@@ -91,7 +93,7 @@ OK, now I that know the identity of the product owner, I need to talk to him. In
 XDSD, we don't do any meetings, phone calls, or any other type of
 [informal communications]({% pst 2016/aug/2016-08-23-communication-maturity %}).
 Therefore, my only mechanism for receiving the information I
-need is with is---tickets.
+need is with his---tickets.
 
 I will submit **new** tickets, addressing them to the product owner. As there
 can be many product owners in a project, I must submit tickets that clearly
@@ -117,7 +119,7 @@ My job, as a system analyst, is to make changes to some of these files and
 submit a pull request for review.
 
 [GitHub Guidelines]({% pst 2014/apr/2014-04-15-github-guidelines %}) explains
-[how to work with GitHub. However, in short, I need to:
+how to work with GitHub. However, in short, I need to:
 
  * Clone the repository;
  * Check out its copy to my computer;
@@ -140,8 +142,8 @@ document using the same method our
 server uses to compile them.
 
 Before I can compile, though, I need to install
-[JDK7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
-and [Maven](http://maven.apache.org/download.cgi).
+[JDK7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+and [Maven](https://maven.apache.org/download.cgi).
 
 Afterwards, I make the following command line call in the project directory:
 
@@ -162,7 +164,7 @@ will work, but only with this
 ## Pull Request Review
 
 Once all changes are finished, I will submit a pull request. A project manager
-will the assign someone to review my pull request and I will receive feedback.
+will then assign someone to review my pull request and I will receive feedback.
 
 In most cases, there will be at least a few corrections requested by the
 reviewer. Generally speaking, my requests are reviewed by other system analysts.

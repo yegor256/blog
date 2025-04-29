@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: static
 title: "Boilerplate"
 description: |
@@ -15,7 +18,7 @@ keywords:
 nospell: true
 ---
 
-{% badge https://www.yegor256.com/images/face-1024x1024.jpg 250 %}
+{% badge https://www.yegor256.com/images/about/yegor-full-size.jpg 250 %}
 
 Quick bio:<br/>
 Lab Director in Huawei, founder of Zerocracy and author of Elegant Objects.
@@ -58,8 +61,8 @@ Best speeches:
 YouTube channel:<br/>
 https://www.youtube.com/channel/UCr9qCdqXLm2SU0BIs6d_68Q
 
-Twitter:<br/>
-[yegor256](https://twitter.com/yegor256)
+X:<br/>
+[yegor256](https://x.com/yegor256)
 
 Instagram:<br/>
 [yegor256](https://instagram.com/yegor256)
@@ -73,9 +76,11 @@ LinkedIn:<br/>
 Current location (to travel from):<br/>
 Moscow, Russia
 
+<!--
 Postal address:<br/>
 555 Bryant Str, Ste 470,<br/>
 Palo Alto, CA 94301, USA.
+-->
 
 Telegram:<br/>
 [@yegor256](https://t.me/yegor256)
@@ -86,19 +91,18 @@ Telegram:<br/>
 Директор лаборатории в Huawei, основатель Zerocracy и автор книги Elegant Objects.
 
 Краткое описание:<br/>
-Егор &mdash; директор лаборатории в Huawei,
+Егор---директор лаборатории в Huawei,
 основатель Zerocracy,
 автор Elegant Objects, серии книг об ООП,
 и программист на Java и Ruby.
 
 Полное описание:<br/>
-Егор Бугаенко &mdash; директор лаборатории в Huawei,
+Егор Бугаенко---директор лаборатории в Huawei,
 основатель компании Zerocracy, разрабатывающей AI роботов для управления программистами;
 ООП-фундаменталист;
-автор "Elegant Objects" &mdash; серии книг об объектно-ориентированном программировании;
+автор "Elegant Objects"---серии книг об объектно-ориентированном программировании;
 создатель криптовалюты Zold для быстрых микроплатежей;
 провокационный блогер на yegor256.com;
 пишущий Java и Ruby программист;
 создатель Cactoos, Takes, JCabi и Rultor;
 филантроп, жертвующий ежегодно несколько тысяч долларов номинантам его собственной премии за самый качественный программный проект.
-

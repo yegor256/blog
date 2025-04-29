@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How I Would Re-design equals()"
 date: 2017-07-11
@@ -35,7 +38,7 @@ _better_.
 
 {% jb_picture_body %}
 
-Say we have a <del>simple</del> primitive class `Weight`, objects of which
+Say we have a ~~simple~~ primitive class `Weight`, objects of which
 represent the weight of something in kilos:
 
 ```java
@@ -192,4 +195,3 @@ need to do in order to become comparable is to implement `Digitizable` and
 This approach is actually very close to the
 [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %})
 I described earlier.
-

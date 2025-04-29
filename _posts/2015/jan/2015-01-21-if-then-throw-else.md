@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "If. Then. Throw. Else. WTF?"
 date: 2015-01-21
@@ -109,4 +112,3 @@ if (x < 0) {
 ```
 
 Don't do this.
-

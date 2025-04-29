@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Basic HTTP Auth for S3 Buckets"
 date: 2014-04-21
@@ -15,7 +18,7 @@ keywords:
   - http basic auth
 ---
 
-{% badge http://img.s3auth.com/logo.png 200 http://www.s3auth.com %}
+{% badge http://img.s3auth.com/logo.png 200 https://www.s3auth.com %}
 
 [Amazon S3](http://aws.amazon.com/s3/) is a simple and very useful storage of
 binary objects (aka "files"). To use it, you create a "bucket" there with a
@@ -52,7 +55,7 @@ few people had access to the content using their Web browsers.
 ## HTTP Basic Authentication
 
 The HTTP protocol offers a nice
-["basic access authentication"](http://en.wikipedia.org/wiki/Basic_access_authentication)
+["basic access authentication"](https://en.wikipedia.org/wiki/Basic_access_authentication)
 feature that doesn't require any extra site pages.
 
 When an HTTP request arrives at the server, it doesn't deliver the content but
@@ -61,7 +64,7 @@ who you are, please authenticate yourself."
 
 The browser shows its native login screen and prompts for a user name and
 password. After entering the login credentials, they are concatenated,
-[Base64](http://en.wikipedia.org/wiki/Base64) encoded, and added to the next
+[Base64](https://en.wikipedia.org/wiki/Base64) encoded, and added to the next
 request in `Authorization` HTTP header.
 
 {% figure /images/2014/04/s3auth-authentication-dialog.png 600 %}
@@ -84,7 +87,7 @@ and authorized (he has permission to access the request webpage).
 ## `s3auth.com`
 
 Since Amazon doesn't provide this feature, I decided to create a simple web
-service, [s3auth.com](http://www.s3auth.com), which stays in front of my Amazon
+service, [s3auth.com](https://www.s3auth.com), which stays in front of my Amazon
 S3 buckets and implements the HTTP-native authentication and authorization
 mechanism.
 
@@ -119,7 +122,7 @@ days, the server seems to work properly and is stable.
 ## Extra Features
 
 Besides authentication and authorization, the
-[s3auth.com](http://www.s3auth.com) server can render lists of pages---just like Apache HTTP Server. If you have a collection of objects in your bucket---but the `index.html` file is missing---Amazon S3 delivers a "page
+[s3auth.com](https://www.s3auth.com) server can render lists of pages---just like Apache HTTP Server. If you have a collection of objects in your bucket---but the `index.html` file is missing---Amazon S3 delivers a "page
 not found" result. Conversely, my server displays a list of objects in the
 bucket, when no `index.html` is present, and makes it possible to navigate up or
 down one folder.
@@ -127,14 +130,14 @@ down one folder.
 When your bucket has the versioning feature turned on, you are able to list all
 versions of any object in the browser. To do this, just add `?all-versions` to
 the end of the URL to display the list. Next, click a version to have
-[s3auth.com](http://www.s3auth.com) retrieve and render it.
+[s3auth.com](https://www.s3auth.com) retrieve and render it.
 
 ## Traction
 
 I created this service mostly for myself, but apparently I'm not the only with
-the problems described above. At the moment, [s3auth.com](http://www.s3auth.com)
+the problems described above. At the moment, [s3auth.com](https://www.s3auth.com)
 hosts over 300 domains and sends through more than 10Mb of data each hour.
 
-PS. This post explains how [s3auth.com](http://www.s3auth.com) can be
+PS. This post explains how [s3auth.com](https://www.s3auth.com) can be
 used as a front-end to your Maven repository:
 [How to Set Up a Private Maven Repository in Amazon S3]({% pst 2015/sep/2015-09-07-maven-repository-amazon-s3 %}).

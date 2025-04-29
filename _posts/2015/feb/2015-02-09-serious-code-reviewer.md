@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Four NOs of a Serious Code Reviewer"
 date: 2015-02-09
@@ -18,7 +21,7 @@ translated:
 image: /images/2015/02/kim-jong-un-doing-code-review.png
 ---
 
-[Code reviews](http://en.wikipedia.org/wiki/Code_review)
+[Code reviews](https://en.wikipedia.org/wiki/Code_review)
 (a.k.a. peer reviews) must be a mandatory practice for every
 serious software development team. I hope there is no debate about this. Some
 do pre-merge code reviews, [protecting]({% pst 2014/jul/2014-07-21-read-only-master-branch %})
@@ -27,20 +30,20 @@ accidental mistakes. Others do post-merge
 [regular reviews]({% pst 2014/dec/2014-12-18-independent-technical-reviews %})
 to discover bugs and inconsistencies after they are introduced by their
 authors. Some even do both, reviewing before merges and regularly after. Code reviews
-are very similar to a [white-box testing](http://en.wikipedia.org/wiki/White-box_testing)
+are very similar to a [white-box testing](https://en.wikipedia.org/wiki/White-box_testing)
 technique where a tester looks for defects with full access to the sources of the software.
 In either case, a code review is a great instrument to increase quality and
 boost team motivation.
+
+<!--more-->
+
+{% jb_picture_body %}
 
 However, it's not so simple to do them right. I would even say it's
 very easy and comfortable to do them wrong. Most code reviews
 and reviewers I've seen make similar mistakes. That's why I decided
 to summarize the four basic principles of a good reviewer as I see them.
 Hopefully you find them helpful.
-
-<!--more-->
-
-{% jb_picture_body %}
 
 ## No Fear
 

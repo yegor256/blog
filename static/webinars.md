@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: static
 title: "Webinars"
 description: |
@@ -27,7 +30,7 @@ style: |
 
 On the first Wednesday of each month, at 11am PST, I _try to_ organize
 a webinar. For about an hour we talk about software
-development, object-oriented programming <del>and project management</del>
+development, object-oriented programming ~~and project management~~
 (for project management topics listen to the [Shift-M](/shift-m.html) podcast).
 Here is a full list of all webinars on [YouTube](https://www.youtube.com/playlist?list=PLaIsQH4uc08x0H7Cu_OO72DBTNADqFXNm)
 (don't forget [to subscribe](https://www.youtube.com/c/yegor256?sub_confirmation=1)
@@ -71,12 +74,12 @@ We discuss what are good and bad habits in exception throwing: how to create the
 <a href="https://www.youtube.com/watch?v=4ZWHs1mloUw"><img src="https://i.ytimg.com/vi/4ZWHs1mloUw/mqdefault.jpg" class="wnr" alt="Webinar no.52 by Yegor Bugayenko"/></a>
 Nov 4, 2020<br/>
 &#35;52: **RAII in Java**<br/>
-Resource Acquisition Is Initialization (RAII) is a design idea introduced in C++ by Bjarne Stroustrup for exception-safe resource management. Thanks to garbage collection Java doesn’t have this feature, but we can implement something similar, using try-with-resources. Let's see how exactly.
+Resource Acquisition Is Initialization (RAII) is a design idea introduced in C++ by Bjarne Stroustrup for exception-safe resource management. Thanks to garbage collection Java doesn't have this feature, but we can implement something similar, using try-with-resources. Let's see how exactly.
 
 <a href="https://www.youtube.com/watch?v=rsWrgxm8ktU"><img src="https://i.ytimg.com/vi/rsWrgxm8ktU/mqdefault.jpg" class="wnr" alt="Webinar no.51 by Yegor Bugayenko"/></a>
 Oct 7, 2020<br/>
 &#35;51: **Fat and Skinny Design**<br/>
-It seems that type/class hierarchies in OOP may be designed in two extreme ways: either with full encapsulation of data in mind; or with just a few interfaces making raw data visible, and letting classes deal with it, parse it, and turn it into smaller data elements. You may be surprised, but I’m suggesting the second option is more elegant.
+It seems that type/class hierarchies in OOP may be designed in two extreme ways: either with full encapsulation of data in mind; or with just a few interfaces making raw data visible, and letting classes deal with it, parse it, and turn it into smaller data elements. You may be surprised, but I'm suggesting the second option is more elegant.
 
 <a href="https://www.youtube.com/watch?v=nErn5G_JHhE"><img src="https://i.ytimg.com/vi/nErn5G_JHhE/mqdefault.jpg" class="wnr" alt="Webinar no.50 by Yegor Bugayenko"/></a>
 August 5, 2020<br/>
@@ -106,7 +109,7 @@ August 7, 2019<br/>
 Xembly is an "Assembly for XML", an imperative language for building and modifying XML documents. I'm using it in many Java projects where I need to build or modify XML pages. Here is a live demonstration of its features.
 
 <a href="https://www.youtube.com/watch?v=_d3AmqeGcMU"><img src="https://i.ytimg.com/vi/_d3AmqeGcMU/mqdefault.jpg" class="wnr" alt="Webinar no.45 by Yegor Bugayenko"/></a>
-Jule 3, 2019<br/>
+July 3, 2019<br/>
 &#35;45: **How Much Immutability Is Enough**<br/>
 Immutability is a virtue in object-oriented programming, but very often it is being confused with constants. Those are different things. Immutable objects are not constants and there are a lot of possibilities to make an object immutable but still ready to accept changes.
 
@@ -292,7 +295,7 @@ was based on this blog post:
 <a href="https://www.youtube.com/watch?v=PVvLQGnyDrQ"><img src="https://i.ytimg.com/vi/PVvLQGnyDrQ/mqdefault.jpg" class="wnr" alt="Webinar by Yegor Bugayenko"/></a>
 January 11, 2017<br/>
 &#35;20: **Gradients of Immutability**<br/>
-We discussed what immutability really was, with a few example in Java and [EO](http://www.eolang.org)
+We discussed what immutability really was, with a few example in Java and [EO](https://www.eolang.org)
 (new language we're developing now). The discussion was based on this blog post:
 [_Gradients of Immutability_]({% pst 2016/sep/2016-09-07-gradients-of-immutability %}).
 
@@ -363,7 +366,7 @@ and
 March 2, 2016<br/>
 &#35;12: **Takes, Java Web Framework, Intro**<br/>
 This was be a very practical Java coding webinar. We created
-[jare.io](http://www.jare.io), a web system, using Takes Framework, immutable objects
+[jare.io](https://www.jare.io), a web system, using Takes Framework, immutable objects
 and the best practices of pure fanatical object-oriented programming.
 We used this blog post as a guidance:
 [_Java Web App Architecture In Takes Framework_]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})
@@ -471,4 +474,3 @@ Of course, I'm in favor of objects :) The webinar is basically
 motivated by this earlier post:
 [_Composable Decorators vs. Imperative Utility Methods_]({% pst 2015/feb/2015-02-26-composable-decorators %}).
 It took a bit longer than an hour.
-

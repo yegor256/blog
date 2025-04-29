@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: static
 title: "Books"
 description: |
@@ -84,7 +87,7 @@ dependency injection, reflection, and others.
 <br/>
 Published: 18 Apr 2017.
 <br/>
-<a href="http://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+<a href="https://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 {: .book-par}
 
 {: .book-badge}
@@ -98,6 +101,7 @@ characters, plot, jokes, dialogs, etc.
 Published: 6 July 2018.
 <br/>
 <a href="https://amzn.to/2u9BbqF"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+{: .book-par}
 
 {: .book-badge}
 {% badge /images/books/junior-objects/cover.png 125 /junior-objects.html %}
@@ -114,6 +118,20 @@ Published: 22 June 2020.
 {: .book-par}
 
 {: .book-badge}
+{% badge /images/books/angry-tests/cover.png 125 /angry-tests.html %}
+
+It is a book about automated testing. It summarizes everything I have to say about unit testing,
+integration testing, and code quality. It is essentially a summary of my
+practical experience from the last few decades of programming and writing
+tests. The book may be interesting to hands-on programmers---it can help you
+make your tests more helpful---regardless of your programming language.
+<br/>
+Published: 16 April 2025.
+<br/>
+<a href="https://amzn.to/4czWVkh"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
+{: .book-par}
+
+{: .book-badge}
 {% badge /images/books/elegant-objects/cover-eo1.png 125 /elegant-objects.html %}
 
 The **3rd Volume** of [Elegant Objects](/elegant-objects.html)
@@ -121,7 +139,7 @@ will contain practical object-oriented design patterns, just like
 those GoF book suggested. The book will not criticize bad practices, like
 previous two volumes did, but will suggest what to do instead.
 <br/>
-To be published: in 2022.
+To be published: in <del>2022</del> 2024.
 {: .book-par}
 
 To be continued...

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Hazardous Enthusiasm"
 date: 2019-01-01
@@ -24,7 +27,7 @@ On a daily basis I deal with many programmers who contribute to my
 projects, either as volunteers or for money via [Zerocracy](https://www.zerocracy.com)
 (and my software projects are [all]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})
 open source). Over the years I have realized
-that there is a pattern in their behavior, which I need to be <del>scared</del> aware of.
+that there is a pattern in their behavior, which I need to be ~~scared~~ aware of.
 I call it "hazardous enthusiasm." Here are the symptoms.
 
 <!--more-->
@@ -40,7 +43,7 @@ Then, when things become clearer for him, he starts criticizing the architecture
 He [approaches]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
 me in Telegram and asks me whether I realize that the architecture
 is a total mess and that if we don't change it immediately the project will
-be dead in a few <del>days</del> weeks. I attempt to assure him that I understand,
+be dead in a few ~~days~~ weeks. I attempt to assure him that I understand,
 but... He immediately suggests an improvement: We have to re-do it all from
 scratch or at least get rid of that collection of objects and replace it with
 a singleton and a very nice [ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
@@ -71,7 +74,7 @@ But they all lacked the very important skill which, I believe, distinguishes
 a professional software engineer from a guy who merely learned how to write Java code:
 [microtasking]({% pst 2017/nov/2017-11-28-microtasking %}).
 
-{% quote They simply don’t know how to break their changes into smaller pieces and deliver them incrementally. %}
+{% quote They simply don't know how to break their changes into smaller pieces and deliver them incrementally. %}
 
 They simply don't know how to break their changes, which in most cases are
 by no means useless, into smaller pieces and deliver them incrementally. They want to
@@ -98,4 +101,3 @@ They are [hackers]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %})
 not designers or [architects]({% pst 2018/jun/2018-06-26-are-you-an-architect %}).
 
 Honestly, I feel sorry when I lose them.
-

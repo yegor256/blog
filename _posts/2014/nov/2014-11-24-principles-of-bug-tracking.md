@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Five Principles of Bug Tracking"
 date: 2014-11-24
@@ -48,23 +51,25 @@ is a task, I'm ordering you to do it---you're doing it. In any case,
 there are two main characters. No matter how many people are involved in the ticket
 resolution, only these two characters have formal roles.
 
-{% quote Remember what is happening there - one person is selling his solution to another person %}
+{% quote Remember what is happening there — one person is selling his solution to another person. %}
 
 The responsibility of the ticket reporter is to _defend the problem_. When I
 [report a bug]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}),
-I have to insist that it exists---this is my job. Others
+I have to [insist]({% pst 2020/jul/2020-07-29-open-source-etiquette %})
+that it exists---this is my job. Others
 may tell me that I'm wrong and the bug is not there. They may tell
 me that they can't reproduce it. They may say that my description of
 a task is too _vague_ and nobody understands it. There may be many issues
 of that kind. My job is to do the best I can in order to *keep the ticket alive*.
 Obviously, if the bug is not reproducible, I'll be forced to close
-the ticket. However, until the ticket is closed, I'm its guardian angel. :)
+the ticket. However, until the ticket is closed, I'm its guardian angel.
 
 {% youtube 7DYr8GYzJ6Q %}
 
 On the other hand, the responsibility of the ticket solver is to
 _defend the solution_. When a ticket is assigned to me and I have to resolve it,
-my job is to convince the reporter that my solution is good enough. He may
+my job is to [convince]({% pst 2020/jul/2020-07-29-open-source-etiquette %})
+the reporter that my solution is good enough. He may
 tell me that my solution is not sufficient, not the most efficient, or
 incomplete. My job is to insist that I'm right and he is wrong. Well, of course,
 in a reasonable way. And in order to create a solution that will be
@@ -101,12 +106,12 @@ short and focused---1) a problem, 2) a refinement
 question, 3) a short explanation, 4) a solution, 5) closed, thanks everybody.
 This is an ideal scenario.
 
-{% quote Long-living tickets are a management nightmare %}
+{% quote Long-living tickets are a management nightmare. %}
 
 As soon as you realize that your ticket is turning into a long discussion,
 try to close it even faster. How can I close it if the reporter doesn't
 like my solution? Find a temporary solution that will satisfy the reporter
-and allow you to close the ticket. Use "TODO" in your code or dirty
+and allow you to close the ticket. Use "TO-DO" in your code or dirty
 workarounds---they are all better than a ticket hovering for a long time.
 
 Once you see that the solution is provided and is sufficient enough
@@ -126,7 +131,7 @@ of the ticket solver, who is trying to understand your report and provide
 a solution; and also 4) for the time of everybody else who will participate
 in the discussion.
 
-{% quote Anything would work, but not nothing %}
+{% quote Anything would work, but not nothing. %}
 
 If you close the ticket without a problem being properly solved,
 you put this money into the _trash_ bin. Once the ticket is started, there
@@ -136,7 +141,7 @@ them into something useful, you have to make sure that *some*
 solution is delivered.
 
 It can be a temporary solution. It can be a single line change in the
-project documentation. It can be a TODO marker in the code saying that
+project documentation. It can be a TO-DO marker in the code saying that
 "we are aware of the problem but won't fix it because we're lazy." Anything
 would work, but not nothing.
 
@@ -160,14 +165,15 @@ or "I remember I had a similar issue some time ago" are very annoying
 and distracting. Let's be honest, nobody really needs or cares about "opinions."
 All we need in a ticket is a solution(s).
 
-{% quote Don't pollute the air with generic opinions %}
+{% quote Don't pollute the air with generic opinions. %}
 
 If you think the ticket should be closed because the introduced solution
-is good enough, address your comment to the ticket reporter. And start
+is good enough, [address]({% pst 2024/apr/2024-04-01-ping-me-please %})
+your comment to the ticket reporter. And start
 it with "@jeff, I think the solution you've got already is good enough, because..."
 This way, you will help the assigned to close the ticket and move on.
 
-If you think the solution is wrong, address your comment to the assigned
+If you think the solution is wrong, address your comment to the assignee
 of the ticket, starting with "@jeff, I believe your solution is not good enough
 because..." This way, you will help the ticket reporter keep the ticket
 open until a proper solution comes up.
@@ -181,7 +187,8 @@ project at all.
 ## 5. Report When It Is Broken
 
 I think it is obvious, but I will reiterate: Every bug has
-to be reproducible. Every time you [report a bug]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}), you should explain
+to be reproducible. Every time you
+[report a bug]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}), you should explain
 how exactly the product is broken. Yes, it is your job to prove that the
 software doesn't work as intended, or is not documented properly, or
 doesn't satisfy the
@@ -193,9 +200,10 @@ a task, a question, or a suggestion, should be formatted in this way. By
 submitting it, you're asking the project to move from point A to point B. Something
 is not right at point A, and it will be much better for all of us to be
 at that point B. So it's obvious that you have to explain where these points
-A and B are. It is highly desirable if you can explain how to get there---how to reproduce a problem and how to fix it.
+A and B are. It is highly desirable if you can explain
+how to get there---how to reproduce a problem and how to fix it.
 
-{% quote Your job, as a ticket reporter, is to draw that line from point A to point B %}
+{% quote Your job, as a ticket reporter, is to draw that line from point A to point B. %}
 
 Even when you have a question, you should also follow that format. If you
 have a question, it means the project documentation is not sufficient

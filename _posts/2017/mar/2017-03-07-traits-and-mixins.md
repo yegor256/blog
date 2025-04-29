@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Traits and Mixins Are Not OOP"
 date: 2017-03-07
@@ -22,7 +25,7 @@ jb_picture:
 Let me say right off the bat that the features we will discuss here are
 pure _poison_ brought to object-oriented programming by those who desperately
 needed a lobotomy, just like David West suggested in his
-[Object Thinking](http://amzn.to/2ass77O) book.
+[Object Thinking](https://amzn.to/2ass77O) book.
 These features have different names, but the most common ones are
 [traits](https://en.wikipedia.org/wiki/Trait_%28computer_programming%29) and
 [mixins](https://en.wikipedia.org/wiki/Mixin). I seriously can't understand

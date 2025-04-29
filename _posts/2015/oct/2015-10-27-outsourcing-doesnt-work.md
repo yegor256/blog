@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Why Software Outsourcing Doesn't Work ... Anymore"
 date: 2015-10-27
@@ -24,9 +27,9 @@ jb_picture:
 
 I want to create an iPhone app for my web service, but I don't have
 programmers. Well, I don't have iOS programmers. And I don't have money.
-Sound familiar? What do I do? Right, I go to <del>Google</del>
-[Upwork](http://www.upwork.com) and find an awesome company in Bangalore
-that is excited to work with me for <del>nothing</del> reasonable money. In
+Sound familiar? What do I do? Right, I go to ~~Google~~
+[Upwork](https://www.upwork.com) and find an awesome company in Bangalore
+that is excited to work with me for ~~nothing~~ reasonable money. In
 a few months and after a few thousand dollars, I realize this is not exactly
 what I expected. After yet another few months, I swear to God I'll never outsource
 any software development to anyone. Is it just me? Not really.
@@ -182,7 +185,7 @@ with my customers.
 Not anymore.
 
 Put yourself in their shoes. Today, a good Java developer in Ukraine
-[earns](http://www.payscale.com/research/UA/Job=Senior_Java_Developer/Salary)
+[earns](https://www.payscale.com/research/UA/Job=Senior_Java_Developer/Salary)
 _$4,000_ a month. On top of that, this developer expects health
 insurance, a free gym membership, free lunch, paid vacation, paid sick leave, etc. At the same
 time, the price of Java time is not much higher on the market than it was years ago. Even

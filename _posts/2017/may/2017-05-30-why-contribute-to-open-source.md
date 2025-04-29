@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Why Do You Contribute to Open Source?"
 date: 2017-05-30
@@ -31,7 +34,7 @@ without demanding anything back---guys, you're doing it wrong!
 
 {% jb_picture_body %}
 
-Open source <del>almost</del> always means _free_, as in beer---nobody will
+Open source ~~almost~~ always means _free_, as in beer---nobody will
 pay you anything for your pull requests. However, it doesn't mean
 you're not allowed to make money.
 

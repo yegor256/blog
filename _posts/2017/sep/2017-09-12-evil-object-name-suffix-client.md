@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Yet Another Evil Suffix For Object Names: Client"
 date: 2017-09-12
@@ -65,7 +68,7 @@ That's why it's not as maintainable as it should be, for two reasons:
   from [Apache HttpComponents](https://hc.apache.org/) as an example.
   However, when the server is more complex, the size of the client also
   grows. There are over 160 (!) methods in `AmazonS3Client` at the time of writing, while
-  it started with only a few dozen just a few <del>years</del> hundred versions ago.
+  it started with only a few dozen just a few ~~years~~ hundred versions ago.
 
   * **It is data focused**.
   The very idea of a client-server relationship is about transferring
@@ -119,7 +122,8 @@ The consequences depend on the situation, but these are the most probable:
   * **Extendability issues**.
   Needless to say, it's almost impossible to
   [decorate]({% pst 2015/feb/2015-02-26-composable-decorators %}) a client
-  object when it has 160+ methods and keeps on growing. The only possible
+  object when it has 160+ methods and [keeps on growing]({% pst 2014/nov/2014-11-07-how-immutability-helps %}).
+  The only possible
   way to add new functionality to it is by creating new methods. Eventually
   we get a [monster class](https://en.wikipedia.org/wiki/God_object)
   that can't be re-used anyhow without modification.
@@ -150,10 +154,9 @@ To summarize, the trouble is not exactly in the name suffix, but in the very ide
 of representing the entire server on the client side rather than its _entities_. Such
 an abstraction is 1) too big and 2) very data driven.
 
-BTW, check out some of the [JCabi libraries](http://www.jcabi.com) (Java) for examples
+BTW, check out some of the [JCabi libraries](https://www.jcabi.com) (Java) for examples
 of object-oriented clients without "client" objects:
-[jcabi-github](http://github.jcabi.com),
-[jcabi-dynamo](http://dynamo.jcabi.com),
+[jcabi-github](https://github.jcabi.com),
+[jcabi-dynamo](https://dynamo.jcabi.com),
 [jcabi-s3](http://s3.jcabi.com),
-or [jcabi-simpledb](http://simpledb.jcabi.com).
-
+or [jcabi-simpledb](https://simpledb.jcabi.com).

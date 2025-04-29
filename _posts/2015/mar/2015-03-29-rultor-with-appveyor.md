@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them"
 date: 2015-03-29
@@ -15,9 +18,9 @@ keywords:
   - windows builds with docker
 ---
 
-{% badge /images/2014/10/appveyor.png 100 http://www.appveyor.com %}
+{% badge /images/2014/10/appveyor.png 100 https://www.appveyor.com %}
 
-[AppVeyor](http://www.appveyor.com) is a great cloud
+[AppVeyor](https://www.appveyor.com) is a great cloud
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) service that builds
 Windows projects. [Rultor](https://www.rultor.com) is a DevOps assistant, which automates
 release, merge and deploy operations, using Docker containers. These posts
@@ -32,7 +35,7 @@ and Docker can't build Windows projects. The only and the best logical solution
 is to trigger AppVeyor before running all other scripts in Docker. If AppVeyor
 gives a green light, we continue with our usual in-Docker script. Otherwise,
 we fail the entire build. Below I explain how this automation was configured
-in [Takes framework](http://www.takes.org).
+in [Takes framework](https://www.takes.org).
 
 <!--more-->
 
@@ -96,7 +99,7 @@ merge:
 
 There is no magic here, it's very simple. First, I start a new build
 using `/api/builds` end-point of
-[AppVeyor REST API](http://www.appveyor.com/docs/api/projects-builds#start-build-of-pull-request-github-only).
+[AppVeyor REST API](https://www.appveyor.com/docs/api/projects-builds#start-build-of-pull-request-github-only).
 `${pull_id}` is an environment variable that is coming from Rultor,
 it contains an integer number of current pull request.
 

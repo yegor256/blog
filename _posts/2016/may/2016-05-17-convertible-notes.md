@@ -1,9 +1,12 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "What to Worry About in Convertible Notes"
 date: 2016-05-17
 place: Palo Alto, CA
-tags: startup
+tags: business
 description: |
   Convertible notes is a popular instrument of seed
   investments used by early-stage investors. Here is what
@@ -43,7 +46,7 @@ a new mobile app, a multi-national corporation or a bank robbery:
 "shares of stock" were invented
 (if you know who invented them and when, let me know).
 
-Say we're planning to <del>rob a bank</del> create a Facebook killer. There are three
+Say we're planning to ~~rob a bank~~ create a Facebook killer. There are three
 of us. We print three papers, each of which says: "whoever holds this paper
 has one vote and will get an equal part of the profit." How does that sound? Each of us
 has the same paper. When it's time to decide whether we use Java or PHP,
@@ -74,7 +77,7 @@ shares with Microsoft name of them. Microsoft Corporation has
 been printing extra shares [nine times](https://www.microsoft.com/en-us/Investor/FAQ.aspx) after their IPO in 1986.
 When Bill Gates founded the company in April 1975, he had 500K shares, which were equal
 to 50% (I'm guessing, do you know exact numbers?).
-Now he holds [nearly 223M](http://www.investopedia.com/articles/investing/122215/top-4-microsoft-shareholders.asp),
+Now he holds [nearly 223M](https://www.investopedia.com/articles/investing/122215/top-4-microsoft-shareholders.asp),
 which is just 2.8% of the total.
 
 Now, the most annoying part. In reality, shares are not just pieces of paper
@@ -89,7 +92,7 @@ _terms and conditions of which my lawyer will discuss with you_."
 If we're talking about $500K, you will have no problem meeting that lawyers.
 However, if it's just $25K... To make life easier for smaller investments,
 convertible notes were invented (well, there were
-[a few other reasons](http://techcrunch.com/2012/04/07/convertible-note-seed-financings/)).
+[a few other reasons](https://techcrunch.com/2012/04/07/convertible-note-seed-financings/)).
 They are **not equity**. Investors that
 have convertible notes can't vote. They can't sell convertible notes and they
 can't get any profit from the company. So, what they are for then? I'll explain
@@ -217,7 +220,7 @@ day will come faster than you expect.
 Try not to give convertible notes with a maturity date to anyone.
 
 [SAFE](https://blog.ycombinator.com/announcing-the-safe-a-replacement-for-convertible-notes)
-is a form of convertible notes, introduced by [YC](http://www.ycombinator.com),
+is a form of convertible notes, introduced by [YC](https://www.ycombinator.com),
 which doesn't have a maturity date at all. This technically means that
 you don't have to pay them anything back. Well, there is only one situation
 when you have to pay---in case your startup dies. In that case, you will
@@ -229,4 +232,3 @@ in your bank account. Most likely there will be nothing, so don't worry.
 There are other less usual or less important elements of convertible notes, which
 you most likely won't ever see or should not worry about, like pro-data rights,
 for example. Just focus on the things listed above and you will be good.
-

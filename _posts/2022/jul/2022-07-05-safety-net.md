@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Automated Tests Are the Safety Net that Saves You"
 date: 2022-07-05
@@ -17,6 +20,12 @@ keywords:
 image: /images/2022/06/safety-net.jpg
 social:
   - reddit: https://www.reddit.com/r/programming/comments/vrsgcu/automated_tests_are_the_safety_net_that_saves_you/
+republished:
+  -
+    place: "BLOG@CACM"
+    title: "Automated Tests Are the Safety Net"
+    date: 2023-08-04
+    url: https://cacm.acm.org/blogs/blog-cacm/275214-automated-tests-are-the-safety-net/fulltext
 ---
 
 Automated tests are the ones that are usually called unit tests or integration tests,
@@ -39,6 +48,8 @@ it is "a net to protect people from injury after falling from heights."
 You most probably have seen it on buildings which are being
 constructed or reconstructed.
 The red one in the picture is the safety net.
+
+> Unit Tests provide a safety net of regression tests and validation tests so that you can refactor and integrate effectively. As they say at the circus; never work without a net! -- [eXtreme Programming](http://www.extremeprogramming.org/rules/unittests.html)
 
 If construction workers accidentally fall down
 or drop their tools, they won't die and won't kill anyone on the ground.

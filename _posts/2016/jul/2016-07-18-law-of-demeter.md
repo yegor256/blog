@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "The Law of Demeter Doesn't Mean One Dot"
 date: 2016-07-18
@@ -36,7 +39,7 @@ perfect, but its common understanding in the OOP world is simply wrong
 
 {% jb_picture_body %}
 
-[Object-Oriented Programming: An Objective Sense of Style](http://www.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf),
+[Object-Oriented Programming: An Objective Sense of Style](https://www.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf),
 K.Lieberherr, I.Holland, and A.Riel, OOPSLA'88 Proceedings, 1988.
 
 This is where it was introduced. Let's see what it literally says (look for

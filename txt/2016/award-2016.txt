@@ -14,10 +14,10 @@ comments by Yegor:
 - there are 17.7K lines of Objective-C/Swift
 - some files are rather long: https://github.com/hackiftekhar/IQKeyboardManager/blob/master/IQKeyboardManager/IQKeyboardManager.m (2100 LoC)
 - there are setters and getters everywhere (probably due to the iOS nature, but still…)
-- I didn’t find any static analysis there (code formatting looks messy very often)
-- I didn’t understand what landscape.io badge is doing there (it’s for Python projects, AFAIK)
-- coveralls badge doesn’t really work - I didn’t find the coverage report
-- maybe I’m wrong, but I didn’t find any unit tests in the project (except for the Demo)
+- I didn't find any static analysis there (code formatting looks messy very often)
+- I didn't understand what landscape.io badge is doing there (it's for Python projects, AFAIK)
+- coveralls badge doesn't really work - I didn't find the coverage report
+- maybe I'm wrong, but I didn't find any unit tests in the project (except for the Demo)
 
 
 
@@ -71,7 +71,7 @@ mutable non private fields! (RequestSizeWatchdog)
 protected and package private fields/methods missuse
 
 - there are 11.1K lines of Java code and 19.6K of JavaScript
-- I don’t really see OOP here. it looks like a nice procedural code
+- I don't really see OOP here. it looks like a nice procedural code
 
 
 
@@ -125,7 +125,7 @@ Inheritance over composition (AbstractCommand hierarhy)
 
 - JAXB with setters (not really OOP)
 - interfaces are labeled as I* (a very bad practice)
-- doesn’t look like OOP to me
+- doesn't look like OOP to me
 
 
 
@@ -186,8 +186,8 @@ Test coverage (codeclimate)
 Code quality (rubocop)
 SORRY, PLEASE, CHECK IT BY YOURSELF
 
-- looks like a good project, but it’s Ruby on Rails, which is not OOP at all
-+ it’s a finalist
+- looks like a good project, but it's Ruby on Rails, which is not OOP at all
++ it's a finalist
 
 
 
@@ -234,8 +234,8 @@ SORRY, PLEASE, CHECK IT BY YOURSELF
 - no static analysis: code formatting is messy
 - so many SWITCH statements: this is not really OOP
 - global variables and functions: not OOP at all
-- maybe I’m wrong, but I didn’t find any classes/objects here
-- also, I didn’t find any unit tests
+- maybe I'm wrong, but I didn't find any classes/objects here
+- also, I didn't find any unit tests
 
 
 
@@ -296,10 +296,10 @@ SORRY, PLEASE, CHECK IT BY YOURSELF
 
 + static analysis is there (PHPCS)
 + unit testing is there (phpunit)
-- I didn’t find code coverage analysis
+- I didn't find code coverage analysis
 - just one GitHub release
 - main development is not done through pull request (commits go to master)
-- overall the project looks clean, but it’s not OOP: there’re DTOs, ORM, getters/setters, etc.
+- overall the project looks clean, but it's not OOP: there're DTOs, ORM, getters/setters, etc.
 
 
 
@@ -350,7 +350,7 @@ Mutability is everywhere
 SimonKagstrom/kcov  (C++)
 SORRY, PLEASE, CHECK IT BY YOURSELF
 
-- there is no static analysis (or I didn’t find it), but code looks clean (
+- there is no static analysis (or I didn't find it), but code looks clean (
 + GitHub releases are in place
 + CI is in place
 + GitHub issues and pull requests are there
@@ -393,12 +393,12 @@ Code is less than 10k
 skinny-framework/skinny-framework  (Scala)
 SORRY, PLEASE, CHECK IT BY YOURSELF
 
-- I didn’t find static analysis
+- I didn't find static analysis
 - code coverage seems to be out of control
 + releases are in GitHub
 + there are many unit tests
 - I found some utility classes and -ER classes
-+ it’s a finalist
++ it's a finalist
 
 
 
@@ -436,7 +436,7 @@ orfjackal/jumi   (Java)
 +
 -
 No visible CI
-No Github issue tracking (TODO list commited to the root, as well as roadmap :) )
+No Github issue tracking (TO-DO list commited to the root, as well as roadmap :) )
 No code quality control at all
 No test coverage control
 Inheritance over inheritance (fi.jumi.api.drivers.Driver) without any sense
@@ -481,7 +481,7 @@ paypal/squbs  (Scala)
 SORRY, PLEASE, CHECK IT BY YOURSELF
 
 - I found many -ER classes, getters, setters
-- I didn’t find static analysis
+- I didn't find static analysis
 + there are many tests, high code coverage
 + overall it looks interesting, definitely a finalist
 
@@ -539,7 +539,7 @@ No code quality control at all
 God classes (javaslang.collection.CharSeq)
 In general, not so bad ... but no OOP, mostly functional stuff :)
 
-+ indeed looks interesting, it’s a finalist
++ indeed looks interesting, it's a finalist
 
 
 
@@ -638,7 +638,7 @@ It could be less than 10k LoC
 (!) consider this repo
 
 + there are 45.9K lines of Java code
-+ it’s interesting, it’s a finalist
++ it's interesting, it's a finalist
 
 
 
@@ -664,7 +664,7 @@ Package private field access (QSlot)
 js-cookie/js-cookie  (JS)
 SORRY, PLEASE, CHECK IT BY YOURSELF (not sure JS applicable)
 
-- it’s too small, just 1.4K lines of JavaScript code
+- it's too small, just 1.4K lines of JavaScript code
 
 
 
@@ -672,7 +672,7 @@ SORRY, PLEASE, CHECK IT BY YOURSELF (not sure JS applicable)
 coala/coala	 (Python)
 SORRY, PLEASE, CHECK IT BY YOURSELF
 
-+ interesting, it’s a finalist
++ interesting, it's a finalist
 
 
 
@@ -711,9 +711,9 @@ SORRY, PLEASE, CHECK IT BY YOURSELF
 
 + CI is here
 + GitHub releases are here
-- I didn’t find coverage control
-- didn’t find static analysis
-- it’s C, not really OOP
+- I didn't find coverage control
+- didn't find static analysis
+- it's C, not really OOP
 
 
 
@@ -785,8 +785,7 @@ srdja/Collections-C   (C)
 SORRY, PLEASE, CHECK IT BY YOURSELF
 
 - there are 9.5K lines of C code
-- it’s not really OOP
-- even though the code is rather clean I didn’t find static analysis
+- it's not really OOP
+- even though the code is rather clean I didn't find static analysis
 - test code coverage is not under control
 - there are no GitHub releases
-

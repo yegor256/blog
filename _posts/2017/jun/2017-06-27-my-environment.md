@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "My Work Environment"
 date: 2017-06-27
@@ -28,26 +31,23 @@ for someone.
 
 {% jb_picture_body %}
 
+The page was most recently updated on the 16th of May, 2024.
+
 <img src="/images/2017/06/env-macbook.jpg" class="env-ico" alt="icon"/><br/>
-[MacBook Pro](https://www.apple.com/macbook-pro/)
-Retina, 15-inch, [Late 2013](https://support.apple.com/kb/sp690?locale=en_US),
-2.3GHz/16Gb/512Gb ($2,900) with MacOS Sierra. I bought it over
-three years ago and don't want to replace with a new one, simply
-because [rumors are](https://blog.devteam.space/new-macbook-pro-is-not-a-laptop-for-developers-anymore-d0d4b1b8b7de)
-its quality is very low. My smartphone is
-[iPhone&nbsp;6s](https://www.apple.com/shop/buy-iphone/iphone6s).
-For video and podcast recording I'm using [Zoom&nbsp;H6](http://amzn.to/2tjPebw)
+[MacBook M2 Pro](https://www.apple.com/macbook-pro/)
+16-inch, 32Gb/2Tb (~$4,000). My smartphone is iPhone&nbsp;14&nbsp;Max.
+For video and podcast recording I'm using Zoom&nbsp;H1
 together with
-[Movo LV4-O2](http://amzn.to/2tkdA4G) microphone,
-[Sennheiser HD 380 PRO](http://amzn.to/2ienJf9) headphones, and
-[SLIK Sprint 150](http://amzn.to/2xy2ivL) tripod.
+Cannon M50 and R10 cameras,
+[Sennheiser HD 380 PRO](https://amzn.to/2ienJf9) headphones, and
+[SLIK Sprint 150](https://amzn.to/2xy2ivL) tripod.
 
 <img src="/images/2017/06/env-intellij-idea.jpg" class="env-ico" alt="icon"/><br/>
-[IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) (<del>$499</del> free)
+[IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/) (~~$499~~ free)
 for Java projects. I've got a free open source
 license from [JetBrains](https://www.jetbrains.com/),
 because I'm an active contributor and
-an author of [Takes Framework](http://www.takes.org).
+an author of [Takes Framework](https://www.takes.org).
 If you contribute to open source (and
 [you must]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})), you may do
 the same, I believe, just [email them](mailto:opensource@jetbrains.com) and ask.
@@ -69,7 +69,7 @@ to Sublime because it's just better. I also tried
 for web browsing. I also have
 [Safari](https://www.apple.com/lae/safari/),
 [FireFox](https://www.mozilla.org/en-US/firefox/new/),
-and [Opera](http://www.opera.com/) but only to verify my websites
+and [Opera](https://www.opera.com/) but only to verify my websites
 for cross-browser compatibility, that's all. I'm using these
 plugins:
 [AdBlock](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom),
@@ -90,7 +90,7 @@ Homebrew. I was using [MacPorts](https://www.macports.org/)
 in my previous MacBook, but switched to Homebrew and have no regrets.
 
 <img src="/images/2017/06/env-yourkit.jpg" class="env-ico" alt="icon"/><br/>
-[YourKit](https://www.yourkit.com/) (<del>$499</del> free)
+[YourKit](https://www.yourkit.com/) (~~$499~~ free)
 for Java profiling. I've got a free license from them, again because
 I'm a contributor to a few open source projects.
 [Email them](mailto:sales@yourkit.com)
@@ -110,11 +110,11 @@ for editing vector graphics, mainly SVG. Also, it's good for
 converting SVG into PNG.
 
 <img src="/images/2017/06/env-pixelmator.jpg" class="env-ico" alt="icon"/><br/>
-[Pixelmator](http://www.pixelmator.com/) ($30)
+[Pixelmator](https://www.pixelmator.com/) ($30)
 for editing rasterized images, like PNG, GIF, JPEG, etc.
 The icons you see at this page were created with the help of
 Pixelmator. It is a perfect alternative to
-[Adobe Photoshop](http://www.adobe.com/products/photoshop.html), if you
+[Adobe Photoshop](https://www.adobe.com/products/photoshop.html), if you
 are a programmer, not a graphic designer.
 
 <img src="/images/2017/06/env-1password.jpg" class="env-ico" alt="icon"/><br/>
@@ -136,11 +136,13 @@ for post-processing of [Shift-M](/shift-m.html) episodes.
 for long-term planning. I put my long-term plans there and open
 them once a month. I definitely should use this software more frequently.
 
+<!--
 <img src="/images/2017/06/env-tower.jpg" class="env-ico" alt="icon"/><br/>
 [Tower](https://www.git-tower.com/) ($79)
 for visual [Git](https://git-scm.com/) manipulations. Even though I'm using Git
 from the command line only, this tool helps me time to time when I need
 to go through the history and find out where exactly I broke something.
+-->
 
 <img src="/images/2017/06/env-transmit.jpg" class="env-ico" alt="icon"/><br/>
 [Transmit](https://panic.com/transmit/) ($34)
@@ -150,21 +152,23 @@ for FTP and AWS S3 file management.
 [OBS Studio](https://obsproject.com/) (free)
 for webinars and video recording.
 
+<!--
 <img src="/images/2017/06/env-mtorrent.jpg" class="env-ico" alt="icon"/><br/>
-[µTorrent](http://www.utorrent.com/) (free)
+[µTorrent](https://www.utorrent.com/) (free)
 for stealing movies. I find them mostly at
 [rutracker.org](http://rutracker.org/forum/index.php) or
 [The Pirate Bay](https://piratebay.to/).
 I do realize that stealing is a bad thing and I'm actually strongly
 against piracy, but most movies are either too expensive or not
 available for purchase.
+--->
 
 <img src="/images/2017/06/env-vlc.jpg" class="env-ico" alt="icon"/><br/>
-[VLC](http://www.videolan.org/vlc/index.html) (free)
+[VLC](https://www.videolan.org/vlc/index.html) (free)
 for watching those stolen movies.
 
 <img src="/images/2017/06/env-vienna.jpg" class="env-ico" alt="icon"/><br/>
-[Vienna](http://www.vienna-rss.com/) (free)
+[Vienna](https://www.vienna-rss.com/) (free)
 for reading RSS feeds, rarely.
 
 <img src="/images/2017/06/env-istat.jpg" class="env-ico" alt="icon"/><br/>
@@ -197,15 +201,17 @@ everything that is already "history" to my personal
 <img src="/images/2017/06/env-skype.jpg" class="env-ico" alt="icon"/>
 <img src="/images/2017/06/env-slack.jpg" class="env-ico" alt="icon"/>
 <img src="/images/2017/06/env-colloquy.jpg" class="env-ico" alt="icon"/><br/>
-[Telegram](https://telegram.org/),
-[Viber](https://www.viber.com/en/),
+[Telegram](https://telegram.org/)
+<!-- [Viber](https://www.viber.com/en/), -->
+and
 [WhatsApp](https://www.whatsapp.com/),
-[Messenger](https://www.messenger.com/), and
-[Skype](https://www.skype.com/en/) (all free, in order of preference)
+<!-- [Messenger](https://www.messenger.com/), -->
+<!-- [Skype](https://www.skype.com/en/) -->
+(all free, in order of preference)
 for P2P messaging.
 [Slack](https://slack.com/) for business messaging sometimes.
 [Colloquy](http://colloquy.info/) for IRC messaging when I need it.
 
 <img src="/images/2017/06/env-pokerstars.jpg" class="env-ico" alt="icon"/><br/>
-[PokerStars](http://www.pokerstars.com/poker/download/?source=13953351) (not free at all)
+[PokerStars](https://www.pokerstars.com/poker/download/?source=13953351) (not free at all)
 for playing poker before falling asleep.

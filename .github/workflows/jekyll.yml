@@ -1,19 +1,22 @@
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
 ---
+# yamllint disable rule:line-length
 name: jekyll
-on:
+'on':
   push:
     branches:
       - master
   pull_request:
     branches:
       - master
+concurrency:
+  group: jekyll-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   jekyll:
-    runs-on: ubuntu-20.04
+    timeout-minutes: 15
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.6
-      - run: bundle update
-      - run: bundle exec jekyll build
+      - uses: actions/checkout@v4
+      - uses: yegor256/blog@master

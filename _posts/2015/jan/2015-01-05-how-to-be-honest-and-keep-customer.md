@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Be Honest and Keep a Customer"
 date: 2015-01-05
@@ -239,4 +242,3 @@ with each client, and improve your management
 process and your principles of work. Hiding source code is not
 professional and makes you look bad in the eyes of your clients and
 the entire industry.
-

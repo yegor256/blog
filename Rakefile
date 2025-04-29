@@ -1,4 +1,7 @@
-# encoding: utf-8
+# frozen_string_literal: true
+
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
 
 require 'rubygems'
 require 'rake'
@@ -27,26 +30,32 @@ task default: [
   :excerpts,
   :snippets,
   :orphans,
-  # :ping,
+  :ping,
+  :eslint,
   # :jslint,
   # :proofer,
-  # :rubocop,
+  :rubocop
 ]
 
 def done(msg)
-  puts msg + "\n\n"
+  puts "#{msg}\n\n"
 end
 
-def all_html()
-  Dir['_site/**/*.html'].reject{ |f| f.end_with? '.amp.html' }
+def all_html
+  Dir['_site/**/*.html']
+    .reject { |f| f.end_with?('.amp.html') }
+    .reject { |f| f.start_with?('_site/en/') }
+    .reject { |f| f.start_with?('_site/zh/') }
+    .reject { |f| f.start_with?('_site/ru/') }
 end
 
-def all_links()
-  all_html().reduce([]) do |array, f|
+def all_links
+  links = all_html.reduce([]) do |array, f|
     array + Nokogiri::HTML(File.read(f)).xpath(
       '//article//a/@href'
     ).to_a.map(&:to_s)
-  end.sort.map{ |a| a.gsub(/^\//, 'https://www.yegor256.com/') }
+  end
+  links.sort.map { |a| a.gsub(%r{^/}, 'https://www.yegor256.com/') }
 end
 
 desc 'Delete _site directory'
@@ -82,8 +91,8 @@ task :build do
     done 'Jekyll site already exists in _site (run "rake clean" first)'
   else
     puts 'Building Jekyll site...'
-    system('jekyll build --trace')
-    fail "Jekyll failed with #{$CHILD_STATUS}" unless $CHILD_STATUS.success?
+    system('jekyll build --trace --future')
+    raise "Jekyll failed with #{$CHILD_STATUS}" unless $CHILD_STATUS.success?
     done 'Jekyll site generated without issues'
   end
 end
@@ -92,7 +101,7 @@ desc 'Check the existence of all critical pages'
 task pages: [:build] do
   File.open('_rake/pages.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
-    fail "Page/directory #{file} is not found (try to run 'rake clean' and start over)" unless File.exist?(file)
+    raise "Page/directory #{file} is not found (try to run 'rake clean' and start over)" unless File.exist?(file)
     puts "#{file}: OK" if VERBOSE
   end
   done 'All files are in place'
@@ -102,11 +111,11 @@ desc 'Check the absence of garbage'
 task garbage: [:build] do
   File.open('_rake/garbage.txt').map(&:strip).each do |p|
     file = "_site/#{p}"
-    fail "Page #{file} is still there" if File.exist? file
+    raise "Page #{file} is still there" if File.exist? file
     puts "#{file}: absent, OK" if VERBOSE
   end
-  ['_posts', 'static'].each do |p|
-    garbage = Dir["#{p}/**/*"].reject{ |f| f.end_with?('.md') || !File.file?(f) }
+  %w[_posts static].each do |p|
+    garbage = Dir["#{p}/**/*"].reject { |f| f.end_with?('.md') || !File.file?(f) }
     raise "Suspicious files in #{p}: #{garbage}" unless garbage.empty?
   end
   done 'There is no garbage'
@@ -123,11 +132,11 @@ task w3c: [:build] do
   ].each do |p|
     file = "_site/#{p}"
     results = validator.validate_file(file)
-    if results.errors.length > 0
+    if results.errors.length.positive?
       results.errors.each do |err|
-        puts err.to_s
+        puts err
       end
-      fail "Page #{file} is not W3C compliant"
+      raise "Page #{file} is not W3C compliant"
     end
     puts "#{p}: OK" if VERBOSE
   end
@@ -161,7 +170,9 @@ end
 
 desc 'Check spelling in all HTML pages'
 task spell: [:build] do
-  typos = all_html().reduce(0) do |total, f|
+  bad_pages = 0
+  bad_words = []
+  typos = all_html.reduce(0) do |total, f|
     html = Nokogiri::HTML(File.read(f))
     html.search('//code').remove
     html.search('//script').remove
@@ -185,26 +196,38 @@ task spell: [:build] do
     stdout = `cat "#{tmp.path}" \
       | aspell -a --lang=en_US -W 3 --ignore-case --encoding=utf-8 -p ./_rake/aspell.en.pws \
       | grep ^\\&`
+    found = 0
     if stdout.empty?
-      puts "#{f}: OK (#{text.split(' ').size} words)" if VERBOSE
+      puts "#{f}: OK (#{text.split.size} words)" if VERBOSE
     else
-      puts "Typos in #{f}:"
+      lines = stdout.split("\n")
+      found = lines.size
+      words = lines.map { |t| t.split[1] }
+      bad_words += words
+      puts "#{found} typos in #{f}: #{words.join(', ')}"
       puts stdout
-      puts text
-      exit
+      puts text if VERBOSE
+      bad_pages += 1
     end
-    total + stdout.split("\n").size
+    total + found
   end
-  fail "#{typos.size} typo(s)" unless typos == 0
+  unless typos.zero?
+    puts "All typos:\n  #{bad_words.uniq.join("\n  ")}"
+    raise "#{typos.size} typo(s) in #{bad_pages} pages"
+  end
   done 'No spelling errors'
 end
 
-desc 'Ping all foreign links'
+desc 'Ping some foreign links'
 task ping: [:build] do
-  links = all_links().uniq
-    .reject{ |a| a.start_with? 'https://www.yegor256.com/' }
-    .reject{ |a| a.include? 'linkedin.com' }
-    .reject{ |a| !(a =~ /^https?:\/\/.*/) }
+  links = all_links.uniq
+    .reject { |a| a.start_with? 'https://www.yegor256.com/' }
+    .reject { |a| a.include? 'linkedin.com' }
+    .select { |a| (a =~ %r{^https?://.*}) }
+    .reject { |a| a.start_with? 'http://localhost' }
+    .reject { |a| a.start_with? 'https://www.youtube.com/watch?v=' }
+    .shuffle
+    .take(128)
   tmp = Tempfile.new(['yegor256-', '.txt'])
   tmp << links.join("\n")
   tmp.flush
@@ -214,17 +237,19 @@ task ping: [:build] do
   puts "#{links.size} links found, testing them..."
   system("./_rake/ping.sh #{tmp.path} #{out.path}")
   errors = File.read(out).split("\n").reduce(0) do |cnt, p|
-    code, link = p.split(' ')
-    next if link.nil?
-    if code != '200'
+    code, link = p.split
+    next nil if link.nil?
+    if code == '200'
+      cnt
+    else
       puts "#{link}: #{code}"
       cnt + 1
-    else
-      cnt
     end
   end
-  fail "#{errors} broken link(s)" unless errors < 20
-  done "#{links.size} links are valid, #{errors} are broken"
+  total = links.size
+  per = (100 * errors / total).to_i
+  raise "#{errors} among #{total} links are broken (#{per}%)" unless per < 16
+  done "#{total} links are found, #{errors} are broken, it's more or less OK (#{per}%)"
 end
 
 desc 'Run RuboCop on all Ruby files'
@@ -236,29 +261,46 @@ end
 desc 'Test all JavaScript files with JSLint'
 task :jslint do
   Dir['js/**/*.js'].each do |f|
+    puts "jslint #{f}..."
     stdout = `jslint #{f}`
-    fail "jslint failed at #{f}:\n#{stdout}" unless $CHILD_STATUS.success?
+    raise "jslint failed at #{f}:\n#{stdout}" unless $CHILD_STATUS.success?
   end
   done 'JSLint says JavaScript files are clean'
+end
+
+desc 'Test all JavaScript files with ESLint'
+task :eslint do
+  Dir['js/**/*.js'].each do |f|
+    puts "eslint #{f}..."
+    if f.include?('min.js')
+      puts '  skipped'
+      next
+    end
+    stdout = `eslint #{f}`
+    raise "eslint failed at #{f}:\n#{stdout}" unless $CHILD_STATUS.success?
+  end
+  done 'ESLint says JavaScript files are clean'
 end
 
 desc 'Make sure all pages have excerpts'
 task :excerpts do
   Dir['_posts/**/*.md'].each do |f|
-    fail "No excerpt in #{f}" unless File.read(f).include? '<!--more-->'
+    raise "No excerpt in #{f}" unless File.read(f).include? '<!--more-->'
   end
   done 'All articles have excerpts'
 end
 
-desc 'Make sure there are no prohibited RegEx-es'
-task :regex do
+desc 'Make sure there are no prohibited RegEx-es in generated HTMLs'
+task regex: [:build] do
   ptns = [
+    /\s—\s[a-zA-Z]/,
     /("|&quot;)[,.?!]/,
     /\s&mdash;/,
     /&mdash;\s/
   ]
-  errors = 0;
-  all_html().each do |f|
+  errors = 0
+  pages = 0
+  all_html.each do |f|
     html = Nokogiri::HTML(File.read(f))
     html.search('//code').remove
     html.search('//script').remove
@@ -270,50 +312,52 @@ task :regex do
         errors += 1
       end
     end
+    pages += 1
   end
-  raise "#{errors} violations of RegEx prohibition" unless errors == 0
-  done 'No prohibited regular expressions'
+  raise "#{errors} violations of RegEx prohibition" unless errors.zero?
+  done "No prohibited regular expressions in #{pages} pages"
 end
 
 desc 'Make sure all snippets are compact enough'
 task :snippets do
-  all_html().each do |f|
+  all_html.each do |f|
     lines = Nokogiri::HTML(File.read(f)).xpath(
       '//article//figure[@class="highlight"]/pre/code[not(contains(@class,"text"))]'
     ).to_a.map(&:to_s)
       .join("\n")
       .gsub(/<code [^>]+>/, '')
       .gsub(/<span class="[A-Za-z0-9-]+">/, '')
-      .gsub(/<a href="[^\"]+">/, '')
-      .gsub(/<\/a>/, '')
-      .gsub(/<\/code>/, "\n")
-      .gsub(/<\/span>/, '')
-      .gsub(/&lt;/, '<')
-      .gsub(/&gt;/, '>')
+      .gsub(/<a href="[^"]+">/, '')
+      .gsub(%r{</a>}, '')
+      .gsub(%r{</code>}, "\n")
+      .gsub(%r{</span>}, '')
+      .gsub('&lt;', '<')
+      .gsub('&gt;', '>')
       .split("\n")
-    long = lines.reject{ |s| s.length < 81 }
-    fail "Too wide snippet in #{f}: #{long}" unless long.empty?
+    long = lines.reject { |s| s.length < 81 }
+    raise "Too wide snippet in #{f}: #{long}" unless long.empty?
     puts "#{f}: OK (#{lines.size} lines)" if VERBOSE
   end
   done 'All snippets are compact enough'
 end
 
-desc 'Make sure there are no orphan articles'
+desc 'Make sure there are no orphan articles (nobody cites them)'
 task orphans: [:build] do
-  links = all_links()
-    .reject{ |a| !a.start_with? 'https://www.yegor256.com/' }
-    .map{ |a| a.gsub(/#.*/, '') }
-  links += all_html().map { |f| f.gsub(/_site/, 'https://www.yegor256.com') }
+  prefix = 'https://www.yegor256.com/'
+  links = all_links
+    .select { |a| a.start_with? prefix }
+    .map { |a| a.gsub(/#.*/, '') }
+  links += all_html.map { |f| f.gsub('_site', 'https://www.yegor256.com') }
   counts = {}
   links
-    .reject{ |a| !a.match /.*\/[0-9]{4}\/[0-9]{2}\/[0-9]{2}\/.*/ }
-    .reject{ |a| a.end_with? '.amp.html' }
-    .reject{ |a| a.include? '2009/03/04/pdd' }
-    .reject{ |a| a.include? '2017/05/02/unl' }
+    .select { |a| a.match %r{.*/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*} }
+    .reject { |a| a.end_with? '.amp.html' }
+    .reject { |a| a.include? '2009/03/04/pdd' }
+    .reject { |a| a.include? '2017/05/02/unl' }
     .group_by(&:itself)
-    .each { |k,v| counts[k] = v.length }
+    .each { |k, v| counts[k] = v.length }
   orphans = 0
-  counts.each do |k,v|
+  counts.each do |k, v|
     if v < 4
       puts "#{k} is an orphan (#{v})"
       orphans += 1
@@ -321,7 +365,6 @@ task orphans: [:build] do
       puts "#{k}: #{v}"
     end
   end
-  fail "There are #{orphans} orphans" unless orphans == 0
+  raise "There are #{orphans} orphans" unless orphans.zero?
   done "There are no orphans in #{links.size} links"
 end
-

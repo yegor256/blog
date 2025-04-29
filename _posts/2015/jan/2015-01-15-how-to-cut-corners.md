@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Cut Corners and Stay Cool"
 date: 2015-01-15
@@ -146,14 +149,14 @@ to create a test that reproduces the bug. Basically, this is what you should sta
 every ticket with, be it a bug or a feature. Catch the bug with a unit test!
 Prove that the bug exists by failing the build with a new test.
 
-{% badge /images/2015/01/working-effectively-with-legacy-code.png 96 http://amzn.to/1SdcZ8M %}
+{% badge /images/2015/01/working-effectively-with-legacy-code.png 96 https://amzn.to/1SdcZ8M %}
 
 This may be rather difficult to achieve, especially when the software you're
 trying to fix or modify was written by <span class="strike">idiots</span>
 someone who had no idea about unit testing. There are plenty of techniques
 that may help you find a way to make such software more testable. I would
 highly recommend you read
-[Working Effectively with Legacy Code](http://amzn.to/1SdcZ8M)
+[Working Effectively with Legacy Code](https://amzn.to/1SdcZ8M)
 by Michael Feathers. There are many different patterns, and most of them work.
 
 {% quote Catching a bug with a unit test is, in most cases, more than 80% of success. %}
@@ -162,7 +165,7 @@ Once you manage to reproduce the bug and the build fails, stop right there.
 That's more than enough for a single piece of work. Skip the test
 (for example, using `@Ignore` annotation in JUnit 4) and commit your changes.
 Then add documentation to the unit test you just created, preferably in the
-form of a `@todo`. Explain there that you managed to reproduce the problem
+form of a `todo`. Explain there that you managed to reproduce the problem
 but didn't have enough time to fix it. Or maybe you just don't know how to
 fix it. Be honest and give all possible details.
 
@@ -268,7 +271,7 @@ So it's payback time.
 {% quote Being a professional developer doesn't mean being able to fix any problem. %}
 
 Your "No!" will be very valuable feedback for him. It will help him
-make his next important management decisions.
+make his next important management [decisions]({% pst 2023/aug/2023-08-15-decision-making-process %}).
 
 On the other hand, if you lie just to give the impression you're a guy who
 can fix anything and yet fail in the end, you will damage not only your

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: static
 title: "12 Best Articles to Read"
 description: |
@@ -19,6 +22,6 @@ keywords:
 
 These twelve articles are the most interesting to read.
 Here is the blog [contents](/contents.html).
-And don't forget to subscribe to my [monthly updates](/about-me.html) :)
+And don't forget to subscribe to my [monthly updates](/about-me.html).
 
 {{ site.categories['best'] | yb_tagged_list }}

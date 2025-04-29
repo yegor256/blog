@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Deploy Maven Artifacts to CloudRepo via Rultor"
 date: 2019-02-03
@@ -58,7 +61,7 @@ a 25% discount off of your first year.
 Simply [shoot them an email](mailto:support@cloudrepo.io) when your account is created
 and they'll take care of you (don't forget to mention me, to get the discount).
 
-{% badge /images/2019/02/cloudrepo.png 100 http://www.cloudrepo.io %}
+{% badge /images/2019/02/cloudrepo.png 100 https://www.cloudrepo.io %}
 
 Assuming you have created an account with
 CloudRepo and [setup both a user and maven repository](https://www.cloudrepo.io/docs/maven.html#pre-requisites),

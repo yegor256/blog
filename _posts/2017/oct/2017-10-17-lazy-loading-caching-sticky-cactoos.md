@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Lazy Loading and Caching via Sticky Cactoos Primitives"
 date: 2017-10-17
@@ -172,7 +175,7 @@ However there is a better way to implement it.
 Let's refactor our class, this time using
 [`Scalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html)
 from
-[Cactoos](http://www.cactoos.org):
+[Cactoos](https://www.cactoos.org):
 
 ```java
 class Encrypted4 implements Encrypted {

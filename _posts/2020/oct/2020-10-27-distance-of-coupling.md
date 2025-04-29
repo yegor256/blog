@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "New Metric: the Distance of Coupling"
 date: 2020-10-27
@@ -40,7 +43,7 @@ explicit barriers between objects? Let's see.
 {% jb_picture_body %}
 
 First, I'm not the first and not the only one asking this question.
-[David West](http://amzn.to/266oJr4) much earlier said that "in most ways,
+[David West](https://amzn.to/266oJr4) much earlier said that "in most ways,
 encapsulation is a discipline more than a real barrier," and
 that "seldom is the integrity of an object protected in any absolute sense".
 In practice, "it is up to the user of an object to respect that object's encapsulation.''
@@ -161,4 +164,3 @@ return a quick summary of it. The distance metric will tell us exactly that:
 how many times, and by how much, we violated the principle of loose coupling.
 
 Would you be interested in creating such an analyzer for, say, Java code?
-

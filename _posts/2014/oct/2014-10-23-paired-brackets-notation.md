@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Paired Brackets"
 date: 2014-10-23
@@ -62,7 +65,7 @@ of the code help you to navigate, if you follow the notation.
 
 Those multiple closing brackets may look strange to you
 at the beginning---but give yourself some time and you will
-get used to them :)
+get used to them.
 
 ## Fluent
 
@@ -101,4 +104,3 @@ how your `.js` code would look in [Atom](https://atom.io/):
 Finally, here is Python in [PyCharm](https://www.jetbrains.com/pycharm/):
 
 {% figure /images/2014/10/pycharm-python-indentation.png 852 %}
-

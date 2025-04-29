@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Try. Finally. If. Not. Null."
 date: 2016-03-22
@@ -95,4 +98,3 @@ is justified is where we're using third-party APIs or JDK. They may return
 `null` sometimes because... well, their design is bad. We have
 no other option but to do `if(x==null)`. But that's it. No other places
 are good for `null`.
-

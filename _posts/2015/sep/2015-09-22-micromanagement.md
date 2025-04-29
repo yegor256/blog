@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Are You a Micromanager?"
 date: 2015-09-22
@@ -37,7 +40,7 @@ about micromanagement. Most of them emphasize that the "micro" prefix prescribes
 the size of the tasks being managed, meaning a good manager doesn't care
 about the small stuff while a micromanager employs
 "excessive control or attention to details," as
-[Merriam-Webster](http://www.merriam-webster.com/dictionary/micromanage) says.
+[Merriam-Webster](https://www.merriam-webster.com/dictionary/micromanage) says.
 
 {% quote A good manager declares what needs to be done, never telling me how I must achieve it. %}
 
@@ -49,8 +52,6 @@ Micromanagement has nothing to do with the details observed or the amount
 of control a manager exerts over subordinates. Instead, it is all about
 _how_ the details are observed and control is exercised. A micromanager
 gives instructions while a good manager defines goals and rules.
-
-{% youtube ZVn7ufg-tk0 %}
 
 Micro-managers define _algorithms_ for achieving results and insist
 on them being implemented according to their will. This is what
@@ -69,6 +70,8 @@ This is how a good manager would delegate a similar task:
   be up and running by 6 p.m. I'm counting on you.
 ```
 
+{% youtube ZVn7ufg-tk0 %}
+
 Pay attention to how polite our micromanager is and how rude the good manager is.
 However, it's obvious that the first one is extremely annoying while
 the second doesn't irritate us at all. Because it's all about how
@@ -83,7 +86,7 @@ declares what needs to be done, never telling me how I must achieve it.
 {% youtube 0Jte_LGR5Zk %}
 
 By the way, there is---surprisingly---a lot in common between management and
-object-oriented programming :) Good object-oriented programming is
+object-oriented programming. Good object-oriented programming is
 [also declarative]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %}),
 not imperative.
 

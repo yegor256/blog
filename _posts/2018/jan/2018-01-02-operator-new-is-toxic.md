@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Operator new() is Toxic"
 date: 2018-01-02
@@ -36,7 +39,7 @@ it couples objects, making testing and reuse very difficult or even impossible.
 Let's say there is a story in a file that we need to read as a UTF-8 text
 (I'm using
 [`TextOf`](http://static.javadoc.io/org.cactoos/cactoos/0.25.6/org/cactoos/text/TextOf.html)
-from [Cactoos](http://www.cactoos.org)):
+from [Cactoos](https://www.cactoos.org)):
 
 ```java
 class Story {
@@ -104,7 +107,7 @@ new Story();
 ```
 
 I'm sure you're well aware of this technique, which is also known
-as [dependency injection](http://martinfowler.com/articles/injection.html).
+as [dependency injection](https://martinfowler.com/articles/injection.html).
 I'm actually not saying anything new. What I want you to pay attention to here is
 the location and the amount of `new` operators in all three code snippets.
 
@@ -158,6 +161,3 @@ methods, the less reusable and testable is the class.
 In other words, operator `new` is a rather toxic thing, so try to keep its
 usage to a minimum in your methods. Make sure you instantiate everything
 or almost everything in your secondary constructors.
-
-
-

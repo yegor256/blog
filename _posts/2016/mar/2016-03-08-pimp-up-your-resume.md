@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Pimp Up Your Resume"
 date: 2016-03-08
@@ -202,8 +205,8 @@ a blog if you want to position yourself as an expensive software engineer.
 
 It doesn't need to be a very popular blog; don't focus on numbers. But
 it has to be properly created, designed, and hosted. Don't use
-[WordPress](http://www.wordpress.com), [Blogger](http://www.blogger.com),
-or [Tumblr](http://www.tumblr.com). Instead,
+[WordPress](https://www.wordpress.com), [Blogger](https://www.blogger.com),
+or [Tumblr](https://www.tumblr.com). Instead,
 I would recommend you think about static site generators like
 [Jekyll](https://jekyllrb.com/) and host
 it all on [GitHub Pages](https://pages.github.com/). That's what I'm doing.
@@ -268,6 +271,8 @@ me, because I truly believe that modern offices and full-time jobs
 turn programmers into
 [slaves]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) (and not only programmers).
 
+{% youtube af6bidlat6Q %}
+
 Other employers may think differently. Well, they most likely think differently.
 That's why you have to demonstrate with which offices you've spent 10 recent
 years of your life. I would recommend you keep this list short. Even if you've
@@ -326,6 +331,9 @@ Want free advice on your resume? Send it to
 what I think. I will reply to all emails, but be ready to hear
 mostly what's wrong. What's right you will know without me, when
 they pay you $200 per hour.
+
+You may also want to join our Telegram group [@resumania](https://t.me/resumania),
+where you can publish you CV and receive free feedback from the community.
 
 Look at these samples (they are good):
 [`@dozortsev`](/pdf/resumes/anton-dozortsev.pdf),

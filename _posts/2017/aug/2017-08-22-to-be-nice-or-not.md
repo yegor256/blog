@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "To Be Nice or Not to Be Nice?"
 date: 2017-08-22
@@ -25,9 +28,9 @@ buffer:
 ---
 
 I stumbled upon this two-year-old article
-[_Why It's Safe for Founders to Be Nice_](http://www.paulgraham.com/safe.html),
+[_Why It's Safe for Founders to Be Nice_](https://www.paulgraham.com/safe.html),
 written by [Paul Graham](https://twitter.com/paulg)
-(a co-founder of [Y Combinator](http://www.ycombinator.com/)), whom I honestly respect,
+(a co-founder of [Y Combinator](https://www.ycombinator.com/)), whom I honestly respect,
 and I decided to explain why I disagree. Not that I think we shouldn't
 be nice. Not at all. But I do think that "being nice" is not a solution for organizational,
 management, marketing, sales, or business development problems. Moreover,
@@ -59,7 +62,7 @@ perfectly summarizes how softness may become a weakness,
 if we fail to take it under control. In a nutshell,
 we are either soft-hearted or successful.
 This "weakness" is affecting more people every year, since the entire
-world, especially its [male part](http://www.telegraph.co.uk/men/thinking-man/millennial-men-have-gone-soft--but-its-not-our-fault/),
+world, especially its [male part](https://www.telegraph.co.uk/men/thinking-man/millennial-men-have-gone-soft--but-its-not-our-fault/),
 is tending to soften up, mostly thanks to the rapidly growing quality of life.
 
 For some of us, who, like that founder, are "fundamentally soft-hearted,"
@@ -102,7 +105,7 @@ under the influence of our parents. As kids we quickly learn that in
 order to survive and have something to eat we must make those grown-ups
 happy, or at least not disappoint them. Later on we call this
 [guilt-driven behavior](https://www.forbes.com/sites/stevenberglas/2012/06/07/6-signs-you-are-suffering-from-guilt-and-probably-dont-know-it/#2920e0b67a24)
-"soft-heartedness" and become [proud of it](http://www.lifehack.org/articles/communication/8-problems-you-face-when-you-have-soft-heart.html).
+"soft-heartedness" and become [proud of it](https://www.lifehack.org/articles/communication/8-problems-you-face-when-you-have-soft-heart.html).
 But I believe it's unfixable. Those who were traumatized by guilt in their childhood
 will never be able to offend somebody and walk away without any negative
 feelings. They are scarred forever.
@@ -138,4 +141,3 @@ to be nice, I would say that it is very unsafe. But _not_ being nice is obviousl
 a solution either, because anyone asking this question clearly wants to be nice.
 Thus, the only solution I managed to find is a personal
 code of conduct, which helps me be effective and not stressed at the same time.
-

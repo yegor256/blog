@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How Do You Punish Your Employees?"
 date: 2016-01-05
@@ -179,7 +182,7 @@ That's what you need!
 
 <hr/>
 
-{% badge /images/2016/01/management-stripped-bare.jpg 96 http://amzn.to/2bNjruM %}
+{% badge /images/2016/01/management-stripped-bare.jpg 96 https://amzn.to/2bNjruM %}
 
 This list is definitely not exhaustive. I'm sure there are many
 more [interesting](https://en.wikipedia.org/wiki/Psychopathy)
@@ -188,5 +191,5 @@ share them below in the comments. As I said above, I believe this is
 an art, not a science.
 
 PS. If you like this article, you will certainly enjoy this
-[Management Stripped Bare: What They Don't Teach You at Business School](http://amzn.to/2bNjruM)
+[Management Stripped Bare: What They Don't Teach You at Business School](https://amzn.to/2bNjruM)
 book by Jo Owen. I actually borrowed some ideas from that book.

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Protect a Business Idea While Outsourcing"
 date: 2015-05-04
@@ -64,7 +67,7 @@ By the way, I'm not a lawyer; I'm speaking here from practical experience only.
 
 The first and easiest step is a so-called NDA. Here is a very simple
 and useful example of one, from
-[NOLO](http://www.nolo.com/legal-encyclopedia/sample-confidentiality-agreement-nda-33343.html).
+[NOLO](https://www.nolo.com/legal-encyclopedia/sample-confidentiality-agreement-nda-33343.html).
 You put the name of your programmers into the document and ask them to sign it.
 They won't object, and you get a piece of paper with a signature; what's next?
 
@@ -98,7 +101,7 @@ good manners, it's a sign that the restroom is occupied.
 
 ## Non-Compete Clause (NCC)
 
-The next level of protection is an agreement with a [Non-Compete Clause](http://en.wikipedia.org/wiki/Non-compete_clause),
+The next level of protection is an agreement with a [Non-Compete Clause](https://en.wikipedia.org/wiki/Non-compete_clause),
 which explicitly prohibits me from engaging in the business that your
 idea is about. For example, it may sound like this: "The developer
 is not allowed to participate in any businesses related to online searching
@@ -122,7 +125,7 @@ Copyright is where the government starts to protect you, but you have to
 pay us for it (by "us" I mean all of us, the society). Well, at least in
 the United States. In the United Kingdom, it's free, for example.
 
-In the U.S., you go to [copyright.gov](http://www.copyright.gov),
+In the U.S., you go to [copyright.gov](https://www.copyright.gov),
 click "register a copyright,"
 fill in an online form,
 post the description of your business idea in a plain text file,
@@ -148,14 +151,14 @@ guarantee, you have to do three things: 1) explain what exactly will be protecte
 2) prove that it doesn't belong to someone else, and 3) pay your dues regularly.
 It's very similar to what gangsters do when they "protect" you,
 but here we're dealing with intellectual property and there is only one
-"gangster" per country :) The concept is pretty much the same.
+"gangster" per country. The concept is pretty much the same.
 
-{% badge /images/2015/04/nolo-patent-it-yourself.jpg 96 http://amzn.to/2c5oky8 %}
+{% badge /images/2015/04/nolo-patent-it-yourself.jpg 96 https://amzn.to/2c5oky8 %}
 
 First, you describe your idea in the format that patents are written. It is
 not difficult at all, but it would help if you read one of those "how to file
 a patent" books. I recommend
-[Patent It Yourself: Your Step-by-Step Guide to Filing at the U.S. Patent Office](http://amzn.to/2c5oky8)
+[Patent It Yourself: Your Step-by-Step Guide to Filing at the U.S. Patent Office](https://amzn.to/2c5oky8)
 by David Pressman and Thomas J. Tuytschaevers.
 
 Your application will likely amount to about 10 pages and should take a few days
@@ -168,7 +171,7 @@ for searching algorithms and mention them in your patent in the list
 of references.
 
 Finally, you pay $425 (if you're a small company) and submit it to the
-[USPTO](http://www.uspto.gov). There is also an option to file a "provisional"
+[USPTO](https://www.uspto.gov). There is also an option to file a "provisional"
 patent, but I would recommend you not do this, as it's just an extra hassle. Simply
 file a normal one.
 
@@ -177,27 +180,27 @@ that uses the idea described in your patent, you can bring me to court
 and ask me to share my profit with you. You will claim that I was making
 money by using your brilliant idea, and now it's time to share that success.
 Legally speaking, you will
-accuse me of [patent infringement](http://en.wikipedia.org/wiki/Patent_infringement).
+accuse me of [patent infringement](https://en.wikipedia.org/wiki/Patent_infringement).
 
 First, I will try to invalidate your patent, claiming that something
 similar already existed before you filed a patent, called
-[prior art](http://en.wikipedia.org/wiki/Prior_art). If I succeed, the USPTO will
+[prior art](https://en.wikipedia.org/wiki/Prior_art). If I succeed, the USPTO will
 invalidate your patent without a refund, and I'll walk away, paying you nothing.
 
 If I fail, I'll try to prove that I didn't infringe on your patent. I will say
 that my product is not using your ideas but rather is designed with something else
-in mind, just like Samsung [did](http://en.wikipedia.org/wiki/Apple_Inc._v._Samsung_Electronics_Co.).
+in mind, just like Samsung [did](https://en.wikipedia.org/wiki/Apple_Inc._v._Samsung_Electronics_Co.).
 Maybe I'll win, but my chances will be low.
 
 By the way, in a few years, you will receive a patent from the USPTO and put it on the shelf.
 You will then have to pay $480 more. Also, at the end of three years, you will have to pay $800 just
 to keep your guarantee alive. That escalates to $1,800 in seven years and $3,700 in 11 years
-(see the [fee schedule](http://www.uspto.gov/learning-and-resources/fees-and-payment/uspto-fee-schedule)).
-Told you; just like gangsters :)
+(see the [fee schedule](https://www.uspto.gov/learning-and-resources/fees-and-payment/uspto-fee-schedule)).
+Told you; just like gangsters.
 
 To summarize, getting a patent is the best instrument available at the moment
 in developed countries that can protect your business idea.
-However, as Apple vs. Samsung [lawsuit](http://en.wikipedia.org/wiki/Apple_Inc._v._Samsung_Electronics_Co.) demonstrates,
+However, as Apple vs. Samsung [lawsuit](https://en.wikipedia.org/wiki/Apple_Inc._v._Samsung_Electronics_Co.) demonstrates,
 it is not a 100 percent guarantee either.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">How do you protect your business ideas (to prevent programmers from copying them)? <a href="https://twitter.com/hashtag/outsourcing?src=hash&amp;ref_src=twsrc%5Etfw">#outsourcing</a> <a href="https://twitter.com/hashtag/freelance?src=hash&amp;ref_src=twsrc%5Etfw">#freelance</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1066629433447129089?ref_src=twsrc%5Etfw">November 25, 2018</a></blockquote>

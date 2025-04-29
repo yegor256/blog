@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Nine Steps to Start a Software Project"
 date: 2015-08-04
@@ -66,8 +69,8 @@ Thus, let's assume I managed to create a piece of software and it works.
 
 ## Decisions and Alternatives
 
-First of all, I have to document my key technical decisions and their
-alternatives. [We](https://www.zerocracy.com) usually work in GitHub, and the best documentation
+First of all, I have to document my key [technical decisions]({% pst 2023/aug/2023-08-15-decision-making-process %})
+and their alternatives. [We](https://www.zerocracy.com) usually work in GitHub, and the best documentation
 media is the `README.md` file in the root directory of the repo. I just
 put my text there in a plain [Markdown](https://daringfireball.net/projects/markdown/)
 format. That's enough for a good
@@ -142,7 +145,7 @@ In this case, I documented the alternatives and gave my reasons why
 they are not good for us. As you see, the reasons are very biased; I
 basically expressed my personal opinions about these three
 frameworks and definitely gave preference to my own open
-source [Takes](http://www.takes.org) framework. Is it good? No, it's not.
+source [Takes](https://www.takes.org) framework. Is it good? No, it's not.
 But I'm the [architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}),
 and I do what I think is right for the project.
 

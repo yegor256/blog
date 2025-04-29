@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Spell Check Your LaTeX Writings Using GNU Aspell"
 date: 2020-10-06
@@ -21,9 +24,9 @@ jb_picture:
 
 Do you use [LaTeX](https://www.latex-project.org/)
 for your academic and technical writings? You don't?
-Well you should! It's the <del>most</del> only professional instrument for
+Well you should! It's the ~~most~~ only professional instrument for
 making properly formatted PDF documents.
-MS Word and Apple Pages are for <del>secretaries</del> non-tech people,
+MS Word and Apple Pages are for ~~secretaries~~ non-tech people,
 while LaTeX is serious. It's perfect in so many ways, thanks to
 [Donald Knuth](https://en.wikipedia.org/wiki/Donald_Knuth)
 (the creator of TeX) and

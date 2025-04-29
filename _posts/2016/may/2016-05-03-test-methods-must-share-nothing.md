@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Test Methods Must Share Nothing"
 date: 2016-05-03
@@ -44,7 +47,7 @@ in one `FooTest.java` file. Preparing all objects in one "before" is not
 possible. So we have to do certain things again and again in our test
 methods.
 
-Let's take a look at one of the classes in our [Takes Framework](http://www.takes.org):
+Let's take a look at one of the classes in our [Takes Framework](https://www.takes.org):
 [`VerboseListTest`](https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java).
 It's a unit test and it has a problem, which I'm trying to tell you about.
 Look at that [`MSG`](https://github.com/yegor256/takes/blob/0.32.7/src/test/java/org/takes/misc/VerboseListTest.java#L54)
@@ -164,4 +167,3 @@ Having that in mind, we can easily conclude that methods like `setUp()` or
 any shared variables in test classes are _evil_. They must not be used
 and simply must not exist. I think that their invention in JUnit caused
 a lot of harm to Java code.
-

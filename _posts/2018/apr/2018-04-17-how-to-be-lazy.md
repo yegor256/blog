@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Be Lazy and Stay Calm"
 date: 2018-04-17
@@ -55,7 +58,7 @@ First of all, when the task, which you are going to be paid for, is in front of 
 you can't understand how to solve it, _don't_ blame yourself. You are not
 supposed to be an expert in the legacy code you just opened up.
 Strictly speaking, you are not supposed to be an expert in anything.
-A project, <del>unlike your mom</del>, doesn't expect you to
+A project, ~~unlike your mom~~, doesn't expect you to
 be intelligent or tech-savvy. It needs you to
 [close tickets]({% pst 2017/nov/2017-11-28-microtasking %}).
 

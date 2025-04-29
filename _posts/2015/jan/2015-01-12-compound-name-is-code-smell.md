@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "A Compound Name Is a Code Smell"
 date: 2015-01-12
@@ -88,7 +91,7 @@ as were many other characters in the Old Testament. Second and middle
 names were invented later in order to resolve ambiguity. To keep
 your methods and classes clean and solid, and to prevent ambiguity, try to give your variables
 and methods unique single-word names, just like Adam and Eve were named
-by you know who :)
+by you know who.
 
 PS. Also, [redundant variables]({% pst 2015/sep/2015-09-01-redundant-variables-are-evil %})
 are evil as well.

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How Much Do They Suffer?"
 date: 2019-06-19
@@ -67,7 +70,7 @@ always try to do everything
 [the boss says]({% pst 2015/jan/2015-01-26-happy-boss-false-objective %}), making no attempts
 to "fight back" and win some room for excuses. Seasoned experts
 [know how]({% pst 2017/aug/2017-08-01-how-to-manage-a-manager %})
-to manage their <del>owners</del> managers. Thus, those two expo guys did
+to manage their ~~owners~~ managers. Thus, those two expo guys did
 everything right. The mistake was on the co-founder's side:
 
 She didn't make them worry _enough_.

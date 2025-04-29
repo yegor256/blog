@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Class Casting Is a Discriminating Anti-Pattern"
 date: 2015-04-02
@@ -35,8 +38,8 @@ of it, for example
 [`Iterables.size()`](https://github.com/google/guava/blob/v18.0/guava/src/com/google/common/collect/Iterables.java#L104-L111)):
 
 ```java
-public final class Foo {
-  public int sizeOf(Iterable items) {
+class Foo {
+  int sizeOf(Iterable items) {
     int size = 0;
     if (items instanceof Collection) {
       size = Collection.class.cast(items).size();
@@ -61,31 +64,33 @@ coupling is not visible to the clients of `sizeOf()`. They don't know that
 method `sizeOf()` relies on interface `Collection`. If tomorrow we decide
 to change it, `sizeOf()` won't work. And we'll be very surprised, since
 its signature says nothing about this dependency. This won't happen with
-`Collection`, obviously, since it is part of the Java SDK, but with custom
+[`Collection`](https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html),
+obviously, since it is part of the Java SDK, but with custom
 classes, this may and will happen.
 
-The second problem is an inevitably _growing complexity_ of method `sizeOf()`. The
+The second problem is an inevitably _growing complexity_ of the `sizeOf()` method. The
 more special types it has to treat differently, the more complex it will become.
-This if/then [forking]({% pst 2016/aug/2016-08-10-if-then-else-code-smell %})
+This `if/then` [forking]({% pst 2016/aug/2016-08-10-if-then-else-code-smell %})
 is inevitable, since it has to check all possible
 types and give them special treatment. Such complexity is a result
-of a violation of the single responsibility principle. The method is not
-only calculating the size of `Iterable` but is also performing type
+of a violation of the [single responsibility principle]({% pst 2017/dec/2017-12-19-srp-is-hoax %}). The method is not
+only calculating the size of [`Iterable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) but is also performing type
 casting and forking based on that casting.
 
 What is the alternative? There are a few, but the most obvious
-is method overloading (not available in semi-OOP languages like Ruby or PHP):
+is [method overloading]({% pst 2023/aug/2023-08-01-method-overloading %})
+(not available in semi-OOP languages like Ruby or PHP):
 
 ```java
-public final class Foo {
-  public int sizeOf(Iterable items) {
+class Foo {
+  int sizeOf(Iterable items) {
     int size = 0;
     for (Object item : items) {
       ++size;
     }
     return size;
   }
-  public int sizeOf(Collection items) {
+  int sizeOf(Collection items) {
     return items.size();
   }
 }
@@ -95,7 +100,7 @@ Isn't that more elegant?
 
 Philosophically speaking, type casting is discrimination  against the object
 that comes into the method. The object complies with the contract provided by the
-method signature. It implements the `Iterable` interface, which
+method signature. It implements the [`Iterable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html) interface, which
 [is a contract]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}),
 and it expects equal treatment with all other objects that come into
 the same method. But the method discriminates objects by their types.

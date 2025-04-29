@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Constructors or Static Factory Methods?"
 date: 2017-11-14
@@ -19,6 +22,8 @@ social:
 image: /images/2017/11/extract.jpg
 jb_picture:
   caption: Extract (2009) by Mike Judge
+translated:
+  - Ukrainian: https://serge3ling.github.io/yegor256/2017-11-14-static-factory-methods/
 buffer:
   - "I believe Joshua Bloch said it first in his very good book \"Effective Java\": static factory methods are the preferred way to instantiate objects compared with constructors. I disagree."
   - "I believe that static methods are pure evil"
@@ -26,7 +31,7 @@ buffer:
 ---
 
 I believe Joshua Bloch said it first in his very good book
-[_Effective Java_](http://amzn.to/2zgpiRI): static factory methods are the preferred
+[_Effective Java_](https://amzn.to/2zgpiRI): static factory methods are the preferred
 way to instantiate objects compared with constructors. I disagree.
 Not only because I believe that static methods are pure evil, but
 mostly because in this particular case they pretend to be good
@@ -96,7 +101,7 @@ Let's take them one by one.
 ## They Have Names
 
 This is how you make a
-[red tomato](http://www.rapidtables.com/web/color/red-color.htm)
+[red tomato](https://www.rapidtables.com/web/color/red-color.htm)
 color object with a constructor:
 
 ```java

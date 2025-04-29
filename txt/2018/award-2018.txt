@@ -439,7 +439,7 @@ https://github.com/Hack23/cia
 - Getters, setters and mutability all along the project
 - NULL in many places
 - Utility classes, static methods
-- Commits don’t link to issues and PRs
+- Commits don't link to issues and PRs
 - Uses Dependency Injection Containers and ORM/Pojo
 - ERs: listener, sender, generator, consumer...
 - The release procedure is not documented and does not look like it is automated.
@@ -543,7 +543,7 @@ Warning: Project MIGHT NOT to pass to the lines of code rule (9033 loc at the ti
 + Releases are made to maven central repo (example https://search.maven.org/search?q=g:com.github.seratch%20a:jslack)
 + CI being used with Travis
 + Project seems to be documented for a potential end-user of the library in the readme
-? There is javadoc documentation of the library (http://www.javadoc.io/doc/com.github.seratch/jslack/1.1.6)
+? There is javadoc documentation of the library (https://www.javadoc.io/doc/com.github.seratch/jslack/1.1.6)
   but it's not mentioned on the readme
 ? 9033 LOC < 10.000 lines of code
 - No info on readme in a quick-start manner of how to properly build the project
@@ -928,7 +928,7 @@ https://github.com/jri/deepamehta
   . After accepting the security certificate issue, https://ci.deepamehta.de/jenkins/ seems to be leading to a 404 page, and I'm left with no visibility of the CI of the project
 - Milestones document mentioned in readme leads to this
   page: http://deepamehta.newthinking.net/docs/milestones.html,
-  and I get a "This site can’t be reached" error
+  and I get a "This site can't be reached" error
 
 @yegor256: 4/10
 
@@ -1053,7 +1053,7 @@ https://github.com/akaigoro/df4j
 - Sometimes returns `null`
 - Uses `null` in a lot of places
 - Frequently guards against `null`
-+/- Many TODOs
++/- Many TO-DOs
 - Uses many Utils
 - Puts many classes in the same source files
 - Uses ActionCaller and allows Reflection Exceptions (such as NoSuchMethodException) outside of it's own context
@@ -1313,8 +1313,3 @@ https://github.com/WriteThemFirst/approvals-java/
 https://github.com/ashtonhogan/tacinga
 
 Github 404 - User / Repo Not Found
-
-
-
-
-

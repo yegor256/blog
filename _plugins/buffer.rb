@@ -1,25 +1,14 @@
-# Copyright (c) 2014-2022 Yegor Bugayenko
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the 'Software'), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so. The Software doesn't include files with .md extension.
-# That files you are not allowed to copy, distribute, modify, publish, or sell.
-#
-# THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
+# frozen_string_literal: true
+
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
 
 require 'rss'
 require 'securerandom'
 
+# Jekyll module
 module Jekyll
+  # The class
   class YegorBufferFile < StaticFile
     def write(dest)
       target = File.join(dest, @dir, @name)
@@ -31,30 +20,31 @@ module Jekyll
       true
     end
   end
+
+  # The class
   class YegorBufferGenerator < Generator
     priority :low
     safe true
     def generate(site)
       home = 'https://www.yegor256.com'
-      rss = RSS::Maker.make("atom") do |maker|
-        maker.channel.author = "yegor256"
+      rss = RSS::Maker.make('atom') do |maker|
+        maker.channel.author = 'yegor256'
         maker.channel.updated = Time.now.to_s
-        maker.channel.about = "For buffer.com only"
-        maker.channel.title = "yegor256.com for buffer.com only"
+        maker.channel.about = 'For buffer.com only'
+        maker.channel.title = 'yegor256.com for buffer.com only'
         articles = []
         site.posts.docs.each do |p|
-          tags = p['tags'] ? " #{p['tags'].map {|t| "##{t}"}.join(' ')}" : ''
-          if p['buffer']
-            p['buffer'].each do |quote|
-              raise "Quote too log in #{p.url}" if quote.length > 200
-              articles << { link: home + p.url, title: quote + tags }
-            end
+          tags = p['tags'] ? " #{p['tags'].map { |t| "##{t}" }.join(' ')}" : ''
+          p['buffer']&.each do |quote|
+            raise "Quote too log in #{p.url}" if quote.length > 200
+            articles << { link: home + p.url, title: quote + tags }
           end
           months = ((Time.now - p['date']) / (30 * 24 * 60 * 60)).to_i
-          if months > 3
-            articles << {
-              link: home + p.url,
-              title: if months < 6
+          next unless months > 3
+          articles << {
+            link: home + p.url,
+            title:
+              if months < 6
                 [
                   "I wrote this #{months}-months ago:",
                   "#{months}-months ago I wrote:",
@@ -73,14 +63,13 @@ module Jekyll
                   'Over a year old, read it again:'
                 ].sample
               end + " \"#{p['title']}\"#{tags}"
-            }
-          end
+          }
         end
-        key = ENV['YOUTUBE_API_KEY'] # configured in .travis.yml
+        key = ENV.fetch('YOUTUBE_API_KEY', nil) # configured in .travis.yml
         unless key.nil?
           uri = URI.parse("https://www.googleapis.com/youtube/v3/playlistItems?playlistId=UUr9qCdqXLm2SU0BIs6d_68Q&part=snippet&maxResults=50&key=#{key}")
           JSON.parse(Net::HTTP.get(uri))['items'].each do |video|
-            date = Time.parse(video['snippet']['publishedAt'])
+            # date = Time.parse(video['snippet']['publishedAt'])
             id = video['snippet']['resourceId']['videoId']
             tags = JSON.parse(
               Net::HTTP.get(
@@ -90,7 +79,7 @@ module Jekyll
               )
             )['items'][0]['snippet']['tags']
             raise "No tags for #{id}" if tags.nil?
-            tags = tags.select{ |t| t =~ /[a-z]{3,12}/ }.take(3).map{ |t| "##{t}" }.join(' ')
+            tags = tags.grep(/[a-z]{3,12}/).take(3).map { |t| "##{t}" }.join(' ')
             articles << {
               link: "https://www.youtube.com/watch?v=#{id}",
               title: "Watch it again: \"#{video['snippet']['title']}\" #{tags}"
@@ -98,10 +87,10 @@ module Jekyll
           end
         end
         {
-          'Don\'t forget to follow me in Facebook, here is the link': 'https://www.facebook.com/yegor256',
-          'Don\'t forget to subscribe to my YouTube channel, I post videos a few times a month': 'https://www.youtube.com/c/yegor256?sub_confirmation=1',
-          'Don\'t forget to follow my Angel.co account, if you are also there': 'https://angel.co/yegor256',
-          'BTW, here is my GitHub account, don\'t hesitate to follow it': 'https://github.com/yegor256?tab=followers'
+          "Don't forget to follow me in Facebook, here is the link": 'https://www.facebook.com/yegor256',
+          "Don't forget to subscribe to my YouTube channel, I post videos a few times a month": 'https://www.youtube.com/c/yegor256?sub_confirmation=1',
+          "Don't forget to follow my Angel.co account, if you are also there": 'https://angel.co/yegor256',
+          "BTW, here is my GitHub account, don't hesitate to follow it": 'https://github.com/yegor256?tab=followers'
         }.each do |tweet, link|
           articles << { link: link, title: tweet }
         end
@@ -112,9 +101,12 @@ module Jekyll
           'yegor256/rultor': 'Rultor is a chatbot DevOps assistant to automate deployment and merge operations',
           'teamed/qulice': 'Qulice is an aggregator of Java static analyzers',
           'yegor256/cactoos': 'Cactoos is a library of truly object-oriented Java primitives',
-          'jcabi/jcabi-http': 'jcabi-http is an object-oriented Java HTTP client',
+          'jcabi/jcabi-http': 'jcabi-http is an object-oriented Java HTTP client'
         }.each do |repo, tweet|
-          articles << { link: "https://github.com/#{repo}", title: "#{tweet}. Please, add your GitHub star, help the project:" }
+          articles << {
+            link: "https://github.com/#{repo}",
+            title: "#{tweet}. Please, add your GitHub star, help the project:"
+          }
         end
         articles.shuffle.each do |a|
           maker.items.new_item do |item|

@@ -1,3 +1,6 @@
+% SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+% SPDX-License-Identifier: MIT
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{yb}[21/4/2021 0.1.0 Template for my documents]
 \LoadClass[12pt]{article}
@@ -58,7 +61,7 @@
 
 \newcommand\ybPrintPhoto{%
   \begin{textblock}{2.4}[1,0](14,1.5){
-    \includegraphics[width=\textwidth]{../images/face-1200x1200.jpg}
+    \includegraphics[width=\textwidth]{../images/face-1024x1024.jpg}
   }\end{textblock}
 }
 

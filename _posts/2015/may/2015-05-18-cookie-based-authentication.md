@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How Cookie-Based Authentication Works in the Takes Framework"
 date: 2015-05-18
@@ -15,7 +18,7 @@ keywords:
   - cookie authentication security
 ---
 
-{% badge http://www.takes.org/logo.png 96 http://www.takes.org %}
+{% badge https://www.takes.org/logo.png 96 https://www.takes.org %}
 
 When you enter your email and password into the Facebook login page,
 you get into your account. Then, wherever you go in the site,
@@ -24,7 +27,7 @@ remembers you and doesn't ask for the password again and again. This works
 thanks to [HTTP cookies](https://en.wikipedia.org/wiki/HTTP_cookie)
 and is called _cookie-based authentication_. Even though this mechanism
 often causes some security problems, it is very popular and simple.
-Here is how [Takes](http://www.takes.org) makes it possible in a few lines of code.
+Here is how [Takes](https://www.takes.org) makes it possible in a few lines of code.
 
 <!--more-->
 
@@ -93,7 +96,7 @@ browser and gets a hold of a properly encrypted email cookie? In this case,
 the thief would be able to use the same cookie for authentication even without
 knowing its content. The server would trust the information and let the
 person into my account. This type of attack is called
-[man-in-the-middle](http://en.wikipedia.org/wiki/Man-in-the-middle_attack) (MITM).
+[man-in-the-middle](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) (MITM).
 To prevent this from happening, we should use HTTPS and inform the browser
 that the cookie is sensitive and should never be returned to the server without
 SSL encryption. That's done by an extra flag in the `Set-Cookie` header:
@@ -111,7 +114,7 @@ JavaScript code into the page (Don't ask me how ... this will happen only
 if your entire HTML rendering is done wrong), and this code will gain access
 to the cookie. Then, the code will send the cookie somewhere else so
 the attacker can collect it. This type of attack is called
-[cross-site scripting](http://en.wikipedia.org/wiki/Cross-site_scripting) (XSS).
+[cross-site scripting](https://en.wikipedia.org/wiki/Cross-site_scripting) (XSS).
 To prevent this, there is another flag for the `Set-Cookie` header, called `HttpOnly`:
 
 ```text
@@ -127,7 +130,7 @@ have access to it.
 ## How It's Done in Takes
 
 Here is how this cookie-based authentication mechanism is designed in the
-[Takes](http://www.takes.org) framework. The entire framework consists of
+[Takes](https://www.takes.org) framework. The entire framework consists of
 _takes_, which receive requests and produce responses
 ([this article]({% pst 2015/mar/2015-03-22-takes-java-web-framework %})
 explains the framework in more detail). When the request comes in,

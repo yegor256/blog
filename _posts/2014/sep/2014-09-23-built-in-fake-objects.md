@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Built-in Fake Objects"
 date: 2014-09-23
@@ -37,7 +40,7 @@ almost impossible to maintain.
 
 ## Object Hierarchy
 
-Take the `Region` interface from [jcabi-dynamo](http://dynamo.jcabi.com) as an example
+Take the `Region` interface from [jcabi-dynamo](https://dynamo.jcabi.com) as an example
 (this snippet and all others in this article are simplified, for the
 sake of brevity):
 
@@ -127,8 +130,8 @@ which will look very similar to what we have already written.
 ## Fake Classes
 
 The solution is to create fake classes and ship them
-together with real classes. This is what [jcabi-dynamo](http://dynamo.jcabi.com)
-is doing. Just look at its [JavaDoc](http://dynamo.jcabi.com/apidocs-0.16.1/index.html).
+together with real classes. This is what [jcabi-dynamo](https://dynamo.jcabi.com)
+is doing. Just look at its [JavaDoc](https://dynamo.jcabi.com/apidocs-0.16.1/index.html).
 There is a package called `com.jcabi.dynamo.mock` that contains
 only fake classes, suitable only for unit testing.
 

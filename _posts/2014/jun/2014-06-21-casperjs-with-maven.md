@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "CasperJS Tests in Maven Build"
 date: 2014-06-21
@@ -266,8 +269,8 @@ In the last step, I shut down the Tomcat server.
 ## Real Example
 
 If you want to see how this all works in action, take
-a look at [stateful.co](http://www.stateful.co). It is a Java
-Web application hosted at [CloudBees](http://www.cloudbees.com).
+a look at [stateful.co](https://www.stateful.co). It is a Java
+Web application hosted at [CloudBees](https://www.cloudbees.com).
 Its source code is open and available in [GitHub](https://github.com/sttc/stateful).
 
 Its [`pom.xml`](https://github.com/sttc/stateful/blob/sttc-1.5/pom.xml)

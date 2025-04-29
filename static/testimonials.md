@@ -1,9 +1,12 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: static
 title: "Testimonials"
 description: |
   This is what my readers think about me and don't
-  hesitate to email me; some of them are rather harsh :)
+  hesitate to email me; some of them are rather harsh.
 permalink: testimonials.html
 keywords:
   - blog
@@ -117,4 +120,4 @@ of his point of view..."&mdash;[@heldev](https://github.com/heldev)
 
 "You're a weird individual"&mdash;[Andriy](https://www.yegor256.com/2017/12/05/data-access-object.html#comment-3650742133)
 
-Ready to add something? :) Just [email](mailto:me@yegor256.com).
+Ready to add something? Just [email](mailto:me@yegor256.com).

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Put a Number on Your Boss's Emotions"
 date: 2020-12-29
@@ -27,7 +30,7 @@ performance, doesn't judge, doesn't
 doesn't blame; however, at the end of the year they tell you that
 your performance was not as high as expected. Why?
 "Just work better, my friend, we count on you!"
-Bad luck, you are in a teal [self-managing organization]({% pst 2020/dec/2020-12-22-self-managing-orgs %}). 
+Bad luck, you are in a teal [self-managing organization]({% pst 2020/dec/2020-12-22-self-managing-orgs %}).
 They've already
 killed the management, but still didn't dare to kill the managers.
 They don't know how to measure, but still have people who are
@@ -63,7 +66,7 @@ management, or humane management, or just love and peace):
     Unfortunately, there are simply no metrics, mostly because it's a very bad idea
     to put a number on a person! When and if you try to suggest some metrics,
     everybody laughs and says that "It's very difficult to measure
-    the performance of creative people! <del>Go back to your cage!</del>"
+    the performance of creative people! ~~Go back to your cage!~~"
 
   * When the time comes, they make their monetary decisions based on their personal
     emotional and irrational judgment of yourself and your results.
@@ -95,8 +98,7 @@ is how to not get yourself hugely frustrated when your bonus is smaller
 than Jeff's, who was obviously less productive, according to your personal
 judgment. This actually is the key problem: jealousy. If you see
 that someone, who you don't respect due to his/her bad results and lack
-of skills, is appreciated more than yourself by your boss ---
-you get jealous and quit.
+of skills, is appreciated more than yourself by your boss---you get jealous and quit.
 
 {% quote When they can't objectively evaluate your performance, they judge you irrationally and emotionally. %}
 

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Read MANIFEST.MF Files"
 date: 2014-07-03
@@ -17,7 +20,7 @@ keywords:
   - how to read manifest.mf
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://manifests.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://manifests.jcabi.com %}
 
 Every Java package (JAR, WAR, EAR, etc.) has
 a [`MANIFEST.MF`](http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html)
@@ -35,7 +38,7 @@ When your application has multiple JAR dependencies, you have multiple
 `META-INF/MANIFEST.MF`. Very often it is necessary to go through all of
 them in runtime and find the attribute by its name.
 
-[jcabi-manifests](http://manifests.jcabi.com) makes it possible with a one-liner:
+[jcabi-manifests](https://manifests.jcabi.com) makes it possible with a one-liner:
 
 ```java
 import com.jcabi.manifests.Manifests;
@@ -52,9 +55,9 @@ files, and how it works on a low level.
 When you package a library or even a web application,
 it is a good practice to add an attribute to its `MANIFEST.MF`
 with the package version name and build number. In Maven,
-[`maven-jar-plugin`](http://maven.apache.org/plugins/maven-jar-plugin/)
+[`maven-jar-plugin`](https://maven.apache.org/plugins/maven-jar-plugin/)
 can help you (almost the same configuration for
-[`maven-war-plugin`](http://maven.apache.org/plugins/maven-war-plugin/)):
+[`maven-war-plugin`](https://maven.apache.org/plugins/maven-war-plugin/)):
 
 ```xml
 <plugin>
@@ -98,14 +101,14 @@ Foo-Hash: 7ef4ac3
 In runtime, you can show these values to the user to help him
 understand which version of the product he is working with at any given moment.
 
-Look at [stateful.co](http://www.stateful.co), for example. At the bottom
+Look at [stateful.co](https://www.stateful.co), for example. At the bottom
 of its front page, you see the version number and Git hash. They are
 retrieved from `MANIFEST.MF` of the deployed WAR package, on every page click.
 
 ## Credentials
 
 Although this may be considered as a bad practice
-(see [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](http://amzn.to/2bQVmlb)
+(see [Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](https://amzn.to/2bQVmlb)
 by Jez Humble and David Farley), sometimes it is convenient to package production
 credentials right into the JAR/WAR archive during the
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %})/delivery cycle.
@@ -127,11 +130,10 @@ details right into `MANIFEST.MF`:
 ```
 
 Afterwards, you can retrieve them in
-runtime using [`jcabi-manifests`](http://manifests.jcabi.com):
+runtime using [`jcabi-manifests`](https://manifests.jcabi.com):
 
 ```java
 String url = Manifests.read("Pgsql");
 ```
 
-If you know of any other useful purposes for `MANIFEST.MF`, let me know :)
-
+If you know of any other useful purposes for `MANIFEST.MF`, let me know.

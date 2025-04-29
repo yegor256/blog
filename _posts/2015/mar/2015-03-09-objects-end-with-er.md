@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Don't Create Objects That&nbsp;End&nbsp;With&nbsp;-ER"
 date: 2015-03-09
@@ -34,14 +37,14 @@ Instead, they are collections of procedures pretending to be classes.
 
 {% jb_picture_body %}
 
-[Peter Coad](http://en.wikipedia.org/wiki/Peter_Coad)
+[Peter Coad](https://en.wikipedia.org/wiki/Peter_Coad)
 used to say: Challenge any class name that ends in "-er." There
 are a few good articles about this subject, including
-[Your Coding Conventions Are Hurting You](http://www.carlopescio.com/2011/04/your-coding-conventions-are-hurting-you.html)
+[Your Coding Conventions Are Hurting You](https://www.carlopescio.com/2011/04/your-coding-conventions-are-hurting-you.html)
 by Carlo Pescio,
 [One of the Best Bits of Programming Advice I Ever Got](http://objology.blogspot.com/2011/09/one-of-best-bits-of-programming-advice.html)
 by Travis Griggs,
-and [Naming Objects – Don’t Use ER in Your Object Names](http://www.benhallbenhall.com/2013/01/naming-objects-er-object-names/)
+and [Naming Objects – Don't Use ER in Your Object Names](https://www.benhallbenhall.com/2013/01/naming-objects-er-object-names/)
 by Ben Hall.
 The main argument against this "-er" suffix is that "when you need a manager,
 it's often a sign that the managed are just plain old data structures
@@ -55,8 +58,8 @@ I mentioned already in [Seven Virtues of a Good Object]({% pst 2014/nov/2014-11-
 that a good object name is not a job title, but I didn't explain why I think so.
 Besides that, in [Utility Classes Have Nothing to Do With Functional Programming]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %}),
 I tried to explain the difference between
-[declarative](http://en.wikipedia.org/wiki/Declarative_programming) and
-[imperative](http://en.wikipedia.org/wiki/Imperative_programming) programming paradigms.
+[declarative](https://en.wikipedia.org/wiki/Declarative_programming) and
+[imperative](https://en.wikipedia.org/wiki/Imperative_programming) programming paradigms.
 Now it's time to put these two pieces together.
 
 Let's say I'm an object and you're my client. You give me a bucket of apples

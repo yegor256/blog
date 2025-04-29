@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Incremental Billing"
 date: 2014-10-21
@@ -35,7 +38,7 @@ in [Zerocracy](https://www.zerocracy.com).
 The difference between fixed-cost and T&M is in who takes the risk of spending
 money and getting nothing in return. This risk is huge in the software
 development industry, especially in [outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %}).
-[Over 80%](http://www.projectsmart.co.uk/docs/chaos-report.pdf) of all
+[Over 80%](https://www.projectsmart.co.uk/docs/chaos-report.pdf) of all
 software projects fail to achieve their objectives and
 [about 30%](http://thenextweb.com/insider/2014/09/25/top-20-reasons-startups-fail-report/)
 of startups fail by running out of

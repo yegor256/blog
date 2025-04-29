@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How I Test My Java Classes for Thread-Safety"
 date: 2018-03-27
@@ -204,7 +207,7 @@ as I was before. It's 7-9, but never 10. The class, apparently, is not thread-sa
 But before we fix the class, let's make our test simpler. Let's use
 [`RunInThreads`](http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/matchers/RunsInThreads.html)
 (renamed to just [`Threads`](https://www.javadoc.io/doc/org.cactoos/cactoos/latest/org/cactoos/experimental/Threads.html) in the recent version)
-from [Cactoos](http://www.cactoos.org), which does exactly the same as we've done above,
+from [Cactoos](https://www.cactoos.org), which does exactly the same as we've done above,
 but under the hood:
 
 ```java
@@ -226,7 +229,7 @@ class BooksTest {
 }
 ```
 
-{% badge /images/2014/12/java-concurrency-in-practice.png 100 http://amzn.to/2c7sVS1 %}
+{% badge /images/2014/12/java-concurrency-in-practice.png 100 https://amzn.to/2c7sVS1 %}
 
 The first argument of `assertThat()` is an instance of
 [`Func`](http://static.javadoc.io/org.cactoos/cactoos/0.29/org/cactoos/Func.html)
@@ -243,7 +246,7 @@ By the way, in order to make `Books` thread-safe we just need to add
 `synchronized` to its method `add()`. Or maybe you can suggest a better
 solution?
 
-P.S. I learned all this from [Java Concurrency in Practice](http://amzn.to/2c7sVS1)
+P.S. I learned all this from [Java Concurrency in Practice](https://amzn.to/2c7sVS1)
 by Goetz et al.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Do you create unit tests to prove that your classes are thread-safe?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1028678871187640329?ref_src=twsrc%5Etfw">August 12, 2018</a></blockquote>

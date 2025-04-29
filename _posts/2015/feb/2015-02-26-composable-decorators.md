@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Composable Decorators vs. Imperative Utility Methods"
 date: 2015-02-26
@@ -17,11 +20,11 @@ keywords:
 image: /images/2015/02/russina-matroshka.jpg
 ---
 
-The [decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)
+The [decorator pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
 is my favorite among all other patterns I'm aware of. It is a very simple
 and yet very powerful mechanism to make your code
-[highly cohesive](http://en.wikipedia.org/wiki/Cohesion_%28computer_science%29) and
-[loosely coupled](http://en.wikipedia.org/wiki/Coupling_%28computer_programming%29).
+[highly cohesive](https://en.wikipedia.org/wiki/Cohesion_%28computer_science%29) and
+[loosely coupled](https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29).
 However, I believe decorators are not used often enough. They should
 be everywhere, but they are not. The biggest advantage we get from decorators
 is that they make our code _composable_. That's why the title of this

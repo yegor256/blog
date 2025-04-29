@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Streams vs. Decorators"
 date: 2017-10-10
@@ -25,7 +28,7 @@ buffer:
   - "There is no such thing as forEachWithIndex() in the Stream interface as of Java 8 (and Java 9 too)"
 ---
 
-The [Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
+The [Streams API](https://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
 was introduced in Java&nbsp;8, together with
 [lambda expressions](http://openjdk.java.net/projects/lambda/), just a few
 years ago. I, as a disciplined Java adept, tried to use this new feature
@@ -33,7 +36,7 @@ in a few of my projects, for example
 [here](https://github.com/yegor256/jare/blob/0.11/src/main/java/io/jare/dynamo/DyUser.java#L85-L88) and
 [here](https://github.com/yegor256/wring/blob/0.17.2/src/main/java/io/wring/dynamo/DyEvents.java#L95-L98).
 I didn't really like it and went back to good old decorators. Moreover, I
-created [Cactoos](http://www.cactoos.org), a library of decorators, to replace
+created [Cactoos](https://www.cactoos.org), a library of decorators, to replace
 [Guava](https://github.com/google/guava), which is not so good in so many places.
 
 <!--more-->
@@ -79,7 +82,7 @@ for example to take numbers from two sources instead of one, etc.
 It's procedural. Enough said. Don't do it this way.
 
 Now, Java&nbsp;8 gives us the
-[Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html),
+[Streams API](https://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html),
 which is supposed to offer a
 functional way to do the same. Let's try to use it.
 
@@ -145,8 +148,8 @@ of object-oriented programming, starting with
 ones.
 
 What is the object-oriented way to implement the same algorithm? Here
-is how I would do it with [Cactoos](http://www.cactoos.org), which is just a collection of
-<del>primitive</del> simple Java classes:
+is how I would do it with [Cactoos](https://www.cactoos.org), which is just a collection of
+~~primitive~~ simple Java classes:
 
 ```java
 new And(
@@ -242,5 +245,3 @@ for (Double probe : probes) {
 ```
 
 This is some weird combination of object-oriented and functional styles.
-
-

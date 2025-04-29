@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Holacracy or Autocracy? Both!"
 date: 2016-02-18
@@ -62,7 +65,7 @@ However, when we're talking about _project_ management, this very same approach 
 have catastrophic consequences. A project is something very different
 than a team. A project is a "temporary endeavor
 undertaken to create a unique product, service, or result," according to
-[PMBOK](http://www.pmi.org/PMBOK-Guide-and-Standards.aspx).
+[PMBOK](https://www.pmi.org/PMBOK-Guide-and-Standards.aspx).
 A project is something that starts and ends. The key objective of a project
 is to _end_, while an organization's objective is to _survive_. See the
 difference? A new mobile app, a conference, a new release, a round of

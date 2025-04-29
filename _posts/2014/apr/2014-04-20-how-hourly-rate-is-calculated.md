@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: How Hourly Rate Is Calculated
 date: 2014-04-20
@@ -52,7 +55,7 @@ Keep in mind that besides decreasing your hourly rate, a low overall score may
 affect the number of tasks you receive from us.
 
 The best developers receive most of the new tasks. So, continue reading, follow
-our principles and learn how to earn and enjoy higher rates :)
+our principles and learn how to earn and enjoy higher rates.
 
 ## Fast Delivery
 
@@ -80,7 +83,7 @@ expect you to finish it on time.
 Our
 [No Obligation Principle]({% pst 2014/apr/2014-04-13-no-obligations-principle %})
 gives our [project managers]({% pst 2016/feb/2016-02-18-holacracy-autocracy %}) freedom
-to take any task away from you if don’t complete it in a
+to take any task away from you if don't complete it in a
 reasonable amount of time (ten days).
 
 Removal of tasks by project managers affects your overall score negatively.

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Why InputStream Design Is Wrong"
 date: 2016-04-26
@@ -107,12 +110,13 @@ final byte b = new InputStream.Smart(input).read();
 The functionality of reading a single byte is outside of `InputStream`,
 because this is not its business. The stream doesn't need to know
 how to manage the data after it is read. All the stream
-is **responsible** for is reading, not parsing or manipulating afterwards.
+is _responsible_ for is reading, not parsing or manipulating afterwards.
 
 Interfaces must be small.
 
-Obviously, method overloading in interfaces is a code smell. An interface
-with more than **three methods** is a good candidate for refactoring. If methods
+Obviously, [method overloading]({% pst 2023/aug/2023-08-01-method-overloading %})
+in interfaces is a code smell. An interface
+with more than _three methods_ is a good candidate for refactoring. If methods
 overload each other---it's serious trouble.
 
 Interfaces must be small!

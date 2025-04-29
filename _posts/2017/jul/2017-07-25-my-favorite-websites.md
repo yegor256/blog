@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "My Favorite Websites"
 date: 2017-07-25
@@ -58,7 +61,7 @@ I just search by
 tags in order to find relevant questions and answer them if I can.
 
 <img src="//www.wring.io/images/logo.svg" class="env-ico" alt="icon"/><br/>
-[Wring](http://www.wring.io) aggregates my GitHub notifications
+[Wring](https://www.wring.io) aggregates my GitHub notifications
 and helps me stay on top of all events that are happening there.
 It's my own project and I use it every day.
 
@@ -83,7 +86,7 @@ continuous integration platforms. There are
 but I like these guys.
 
 <img src="/images/2017/07/sites-godaddy.jpg" class="env-ico" alt="icon"/><br/>
-[Godaddy](http://www.godaddy.com) is where I register all domain
+[Godaddy](https://www.godaddy.com) is where I register all domain
 names. Their user interface is terrible, but their
 prices are the lowest. So, I'm with them for at least eight years already.
 
@@ -105,15 +108,15 @@ seem to be the best sources of news for me. I open them a few times a week.
 
 <img src="/images/2017/07/sites-facebook.jpg" class="env-ico" alt="icon"/>
 <img src="/images/2017/07/sites-twitter.jpg" class="env-ico" alt="icon"/><br/>
-[Facebook](http://www.facebook.com)
-and [Twitter](http://www.twitter.com)
+[Facebook](https://www.facebook.com)
+and [Twitter](https://www.twitter.com)
 are the social networks I'm spamming regularly. They are far from being
 perfect, but they totally dominate the market.
-I was using these guys, but they seem to be <del>dead</del> less popular now:
+I was using these guys, but they seem to be ~~dead~~ less popular now:
 LinkedIn, Google+.
 
 <img src="/images/2017/07/sites-amazon.jpg" class="env-ico" alt="icon"/><br/>
-[Amazon](http://amzn.to/2ufwBbw)
+[Amazon](https://amzn.to/2ufwBbw)
 is where I buy everything that is not food or clothes.
 
 <img src="/images/2017/07/sites-aws.jpg" class="env-ico" alt="icon"/><br/>
@@ -154,12 +157,12 @@ them for the premium package and have no regrets. The service really
 helps me deliver content to the social networks on schedule.
 
 <img src="/images/2017/07/sites-youtube.jpg" class="env-ico" alt="icon"/><br/>
-[YouTube](http://www.youtube.com)
+[YouTube](https://www.youtube.com)
 is where I keep my video content. I also stream
 [my webinars](/webinars.html) there.
 
 <img src="/images/2017/07/sites-soundcloud.jpg" class="env-ico" alt="icon"/><br/>
-[SoundCloud](http://www.soundcloud.com)
+[SoundCloud](https://www.soundcloud.com)
 is where I'm listening to music and keep my own channel with
 [Shift-M](/shift-m.html) podcast and other audio content.
 

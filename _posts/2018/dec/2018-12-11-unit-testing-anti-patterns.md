@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Unit Testing Anti-Patterns, Full List"
 date: 2018-12-11
@@ -54,8 +57,8 @@ tests.
 
 {:name='happy'}
 **Happy Path**.
-The tests stay on happy paths (i.e. expected results, e.g. 18 years old) 
-without testing for boundaries and exceptions (e.g. -2 years old). 
+The tests stay on happy paths (i.e. expected results, e.g. 18 years old)
+without testing for boundaries and exceptions (e.g. -2 years old).
 
 {:name='poke'}
 **Slow Poke**<sup>3</sup>.

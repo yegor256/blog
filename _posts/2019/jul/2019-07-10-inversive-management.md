@@ -1,9 +1,12 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Inversive Management"
 date: 2019-07-10
 place: Moscow, Russia
-tags: testing
+tags: management
 description: |
   It's either you or your employees who worry about the results;
   a smart and pragmatic manager knows how to make the workers
@@ -38,7 +41,7 @@ Here is how it works, over and over again. First you hire them, and all of them 
 Well, most of them. At least this is what their resumes say. Then you sit together and define a plan.
 It looks doable and you [trust]({% pst 2019/may/2019-05-28-trust-or-not %}) them.
 They start working and soon enough you realize that some of them
-are lagging behind the promises made in the plan. You start <del>begging</del> asking them
+are lagging behind the promises made in the plan. You start ~~begging~~ asking them
 to correct, to improve, to be more effective, to be more responsive,
 to commit, and to stay focused. You may even hire an Agile coach to train them.
 They improve, but not for long.

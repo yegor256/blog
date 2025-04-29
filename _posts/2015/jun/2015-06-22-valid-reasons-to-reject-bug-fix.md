@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "A Few Valid Reasons to Reject a Bug Fix"
 date: 2015-06-22
@@ -50,7 +53,7 @@ product when under pressure.
 Obviously, there are situations when the unit tests are wrong and
 we have to delete them. In those cases, don't forget to create new ones.
 
-{% badge /images/2015/04/book-legacy.jpg 96 http://amzn.to/1SdcZ8M %}
+{% badge /images/2015/04/book-legacy.jpg 96 https://amzn.to/1SdcZ8M %}
 
 There are also situations when the bug must be fixed in a few minutes
 to put the system back online and fixing all unit tests will take an hour.
@@ -59,7 +62,7 @@ situation with test coverage in the product. There's no doubt that we have to ma
 a fix and ask our tests to shut up for some time. But in this case, make sure
 the next task your team is working on after the bug fix is released is
 correcting those disabled unit tests. I would recommend reading
-[Working Effectively With Legacy Code](http://amzn.to/1SdcZ8M)
+[Working Effectively With Legacy Code](https://amzn.to/1SdcZ8M)
 by Michael Feathers, which tackles this very subject.
 
 ## It Doesn't Reproduce the Issue
@@ -84,7 +87,7 @@ a test, a bug fix is a waste of the project's money.
 Furthermore, without a unit test reproducing the issue, there is no
 guarantee that our bug fix doesn't introduce more bugs. I would even say that
 the more bug fixes we have, the higher the
-[entropy](http://en.wikipedia.org/wiki/Entropy_%28information_theory%29).
+[entropy](https://en.wikipedia.org/wiki/Entropy_%28information_theory%29).
 And the only way to decrease this uncertainty is by covering the
 code with unit tests. Without a test, a bug fix brings more disorder
 to the code base.

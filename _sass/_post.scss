@@ -1,9 +1,54 @@
+// SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+// SPDX-License-Identifier: MIT
+
 article {
   p {
     hyphens: auto;
     margin-bottom: .75 * $em;
     margin-top: .75 * $em;
+
+    del {
+      color: $grey;
+      text-decoration: line-through;
+    }
+
+    em {
+      color: $orange;
+      font-style: normal;
+    }
+
+    strong {
+      color: $red;
+      font-weight: bold;
+    }
   }
+
+  table tr {
+    td,
+    th {
+      vertical-align: top;
+    }
+
+    th {
+      border-bottom: 1px solid $grey;
+    }
+  }
+
+  .footnotes {
+    font-size: .8em;
+    line-height: 1em;
+
+    ol {
+      color: $grey;
+      margin-top: 4em;
+      padding-left: 1em;
+    }
+  }
+}
+
+.jekyll-chatgpt-translate {
+  color: $grey;
+  font-size: 80%;
 }
 
 .buttons {
@@ -20,8 +65,8 @@ article {
 
     .count {
       background-color: white;
-      border: 1 * $px solid gray;
-      color: gray;
+      border: 1 * $px solid $grey;
+      color: $grey;
       display: none;
       font-family: $code-font;
       font-size: .6 * $em;
@@ -34,9 +79,9 @@ article {
 
     .icon {
       $size: 1.2;
-      border: 1 * $px solid gray;
+      border: 1 * $px solid $grey;
       border-radius: 50%;
-      color: gray;
+      color: $grey;
       display: inline-block;
       height: $size * $em;
       line-height: $size * $em;
@@ -48,7 +93,7 @@ article {
       width: $size * $em;
 
       &:hover {
-        background-color: gray;
+        background-color: $grey;
         color: white;
       }
     }
@@ -92,4 +137,3 @@ article {
     height: 20 * $px;
   }
 }
-

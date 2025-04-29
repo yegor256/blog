@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Employee Turnover Is Good for the Maintainability of Your Code Base"
 date: 2015-12-29
@@ -31,7 +34,7 @@ be very harmful.
 {% jb_picture_body %}
 
 I've found this
-[good article](http://www.eremedia.com/ere/a-low-turnover-rate-could-mean-that-you-have-ugly-employees/)
+[good article](https://www.eremedia.com/ere/a-low-turnover-rate-could-mean-that-you-have-ugly-employees/)
 where John Sullivan explains why low turnover could be a troubling
 symptom. It's a really good read, but rather generic. It is not specifically about software
 teams. My experience is mostly focused on programmers and their
@@ -71,7 +74,7 @@ becomes a specialist in his or her own part of the code, mostly because
 it's easier to work with something you're familiar with instead of jumping
 from module to module. Needless to say, strong code ownership is
 a bad practice. Collective code ownership is a much better alternative,
-as [explained](http://martinfowler.com/bliki/CodeOwnership.html) by Martin Fowler.
+as [explained](https://martinfowler.com/bliki/CodeOwnership.html) by Martin Fowler.
 
 {% quote Having strong experts on the team inevitably leads to hero-driven development %}
 
@@ -113,4 +116,3 @@ In the end, programmers control management, not the other way around.
 or rotating programmers, but few teams, especially co-located ones,
 can afford it. If your team can't, just try to keep your turnover high
 enough to prevent the appearance of _heroes_ (a.k.a. subject matter experts).
-

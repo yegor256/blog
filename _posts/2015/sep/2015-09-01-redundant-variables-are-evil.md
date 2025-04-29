@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Redundant Variables Are Pure Evil"
 date: 2015-09-01
@@ -80,3 +83,12 @@ you won't need _any_ variables aside from method arguments.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">More variables with longer self-explainable names make code... <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1074235467887980544?ref_src=twsrc%5Etfw">December 16, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+P.S. "Avoid temporary variables. The fewer temporary variables in a program,
+the less chance there is that one will not be properly initialized,
+or that one will be altered unexpectedly before it is
+used."---_The Elements of Programming Style_, Brian Kernighan and Phillip James Plauger, 1974.
+
+P.P.S. You may find [this study](https://ieeexplore.ieee.org/abstract/document/5332232)
+by Raymond Buse et al. relevant: they found out that the biggest negative
+impact on Java code readability has the number of identifiers used in the code.

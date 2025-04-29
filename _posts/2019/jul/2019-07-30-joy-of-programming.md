@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "The Joy of Programming"
 date: 2019-07-30
@@ -114,7 +117,7 @@ or like a good one? You may think it depends on the time/budget I have
 for the job at hand, but you would be wrong. It totally depends on my
 _readiness_ to live in depression.
 
-{% quote I don’t want to be a monkey flying an aircraft. I want to be a pilot. %}
+{% quote I don't want to be a monkey flying an aircraft. I want to be a pilot. %}
 
 Some time ago I told myself that I won't do it anymore. I don't want to be
 a _monkey_ flying an aircraft. I want to be a _pilot_. Of course, the learning

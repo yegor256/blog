@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Checked vs. Unchecked Exceptions: The Debate Is Not Over"
 date: 2015-07-28
@@ -167,7 +170,7 @@ No noise, very clean code, and obvious logic.
 
 ## Inappropriately Exposed Implementation Details
 
-[Some say](http://www.ibm.com/developerworks/library/j-jtp05254/)
+[Some say](https://www.ibm.com/developerworks/library/j-jtp05254/)
 the ability to put a checked exception into `throws` in the method
 signature instead of catching it here and rethrowing a new type
 encourages us to have too many irrelevant exception types in method
@@ -190,7 +193,7 @@ to exception management in OOP.
 
 ## Recoverable Exceptions
 
-Joshua Bloch, in [_Effective Java_](http://amzn.to/2crH5tW),
+Joshua Bloch, in [_Effective Java_](https://amzn.to/2crH5tW),
 says to "use checked exceptions for recoverable conditions and runtime exceptions
 for programming errors." He means something like this:
 

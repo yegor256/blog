@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "SRP is a Hoax"
 date: 2017-12-19
@@ -21,7 +24,7 @@ jb_picture:
 
 The [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle),
 according to [Robert Martin](https://en.wikipedia.org/wiki/Robert_Cecil_Martin)'s
-[Clean Code](http://amzn.to/2m7LmaA),
+[Clean Code](https://amzn.to/2m7LmaA),
 means that "a class should have only one reason to change."
 Let's try to decrypt this rather vague statement and see how it
 helps us design better object-oriented software. If it does.

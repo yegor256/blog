@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How Much Do You Pay Per&nbsp;Line&nbsp;of&nbsp;Code?"
 date: 2014-04-11
@@ -67,7 +70,7 @@ lines, of which about 90% was Java and the rest in XML.
 ## Maturity of Development
 
 Both projects hosted their code bases on GitHub. Both teams were developing in
-[feature branches](http://martinfowler.com/bliki/FeatureBranch.html)- even for
+[feature branches](https://martinfowler.com/bliki/FeatureBranch.html)- even for
 small fixes.
 
 Both teams used build automation,
@@ -81,7 +84,7 @@ Both projects satisfied the
 of their users. I'm mentioning this to
 emphasize that both projects produced valuable and useful lines of code. There
 was no garbage and almost no [code
-duplication](http://en.wikipedia.org/wiki/Duplicate_code).
+duplication](https://en.wikipedia.org/wiki/Duplicate_code).
 
 ## Show Me the Money
 
@@ -117,7 +120,7 @@ removed 9k, which comes to 54k in all. To complete this work, we spent only $7k
 
 This also means that programmers were writing approximately 150 lines per hour
 or over a thousand per day.
-[The Mythical Man-Month](http://en.wikipedia.org/wiki/The_Mythical_Man-Month)
+[The Mythical Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)
 talks about 10 lines per day, which is a hundred times less than we saw in our project.
 
 $350k vs $7k, $3.98 vs &cent;13? What do you think?
@@ -155,7 +158,7 @@ And when these principles are in place---you pay thirty times less.
 
 By the way, this is what people say about their projects:
 
- * $12&ndash;103: [crazyontap.com](http://www.crazyontap.com/topic.php?TopicId=242135)
+ * $12&ndash;103: [crazyontap.com](https://www.crazyontap.com/topic.php?TopicId=242135)
  * $15&ndash;40: [betterembsw.blogspot.nl](http://betterembsw.blogspot.nl/2010/10/embedded-software-costs-15-40-per-line.html)
  * over $5: [joelonsoftware.com](http://discuss.joelonsoftware.com/default.asp?biz.5.467536.25)
 

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Are You a Hacker or a Designer?"
 date: 2014-10-26
@@ -44,7 +47,7 @@ of our code is much more important than its performance.
 Look at this graph. It is a comparison of two trends over the
 last twenty years (1994-2014).
 The first trend falls down and shows how much cheaper
-[computer memory](http://www.jcmit.com/memoryprice.htm)
+[computer memory](https://www.jcmit.com/memoryprice.htm)
 and [HDD storage](http://ns1758.ca/winch/winchest.html)
 have become over the last twenty years.
 

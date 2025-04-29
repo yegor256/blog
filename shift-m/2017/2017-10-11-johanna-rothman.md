@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Shift-M/10"
 date: 2017-10-11 12:00:00
@@ -26,7 +29,7 @@ Check Johanna's [Twitter](https://twitter.com/johannarothman),
 and the [blog](https://www.jrothman.com/) (definitely worth reading).
 
 Here is the book we were talking about:
-[Hiring Geeks That Fit](http://amzn.to/2hBZ17W).
+[Hiring Geeks That Fit](https://amzn.to/2hBZ17W).
 
 ## Transcript
 

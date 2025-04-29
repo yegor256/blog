@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "What Motivates Me as a Programmer"
 date: 2017-09-19
@@ -158,7 +161,7 @@ not per hour/week/month/year. If you want me to be truly motivated you have to
 invent a payment structure where my paychecks will correspond to my results.
 I do realize that this may require you to change the entire management
 system, so I don't absolutely insist. But you have to remember that as long as
-you pay me only for my time I will try to do my best to <del>steal from you</del> use
+you pay me only for my time I will try to do my best to ~~steal from you~~ use
 it for my
 [own benefit]({% pst 2017/jan/2017-01-24-career-advice %}).
 
@@ -207,4 +210,3 @@ I consider unethical, like corruption, gambling, crime, etc.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What motivates you best of all? <a href="https://twitter.com/hashtag/motivation?src=hash&amp;ref_src=twsrc%5Etfw">#motivation</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1003355914555002881?ref_src=twsrc%5Etfw">June 3, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-

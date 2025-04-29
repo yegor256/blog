@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Worst Technical Specifications Have No Glossaries"
 date: 2015-03-16
@@ -108,4 +111,4 @@ To conclude, there is no excuse for the absence of a glossary in any
 software project. And it is the personal responsibility of a software
 architect to keep this document (or a chapter) up to date.
 
-Hope I wasn't too obvious above :)
+Hope I wasn't too obvious above.

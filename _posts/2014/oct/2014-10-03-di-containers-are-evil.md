@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Dependency Injection Containers are Code Polluters"
 date: 2014-10-03
@@ -18,10 +21,10 @@ keywords:
 book: elegant-objects-2 6.3
 ---
 
-While [dependency injection](http://martinfowler.com/articles/injection.html) (aka, "DI")
+While [dependency injection](https://martinfowler.com/articles/injection.html) (aka, "DI")
 is a natural technique of composing objects in OOP
-(known long before the term was [introduced by Martin Fowler](http://www.martinfowler.com/articles/injection.html)),
-[Spring IoC](http://www.spring.io),
+(known long before the term was [introduced by Martin Fowler](https://www.martinfowler.com/articles/injection.html)),
+[Spring IoC](https://www.spring.io),
 [Google Guice](https://code.google.com/p/google-guice/),
 [Java EE6 CDI](http://docs.oracle.com/javaee/6/tutorial/doc/giwhl.html),
 [Dagger](http://square.github.io/dagger/) and other
@@ -34,7 +37,7 @@ turn it into an _anti-pattern_.
 
 I'm not going to discuss obvious arguments against
 "setter injections"
-(like in [Spring IoC](http://www.springbyexample.org/examples/intro-to-ioc-basic-setter-injection.html))
+(like in [Spring IoC](https://www.springbyexample.org/examples/intro-to-ioc-basic-setter-injection.html))
 and
 "field injections"
 (like in [PicoContainer](http://picocontainer.codehaus.org/annotated-field-injection.html)).

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Tacit, a CSS Framework Without Classes"
 date: 2015-04-13
@@ -114,4 +117,4 @@ element of web design, while HTML is something that assists.
 Tacit takes a different approach. In Tacit, HTML is king while CSS is a supportive
 element that only makes data look better.
 
-Enjoy :)
+Enjoy!

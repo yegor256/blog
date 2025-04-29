@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Daily Stand-up Injection of Guilt"
 date: 2019-09-03
@@ -54,7 +57,7 @@ by email, or even via a phone call? Well,
 we should use tickets,
 [of course]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 
-{% quote Why can’t we do this in writing, in a chat, by email, or even via a phone call? %}
+{% quote Why can't we do this in writing, in a chat, by email, or even via a phone call? %}
 
 Why do "planning for the next day" and "discussing progress" need to be done
 personally in a standing-up circle instead of digitally? Why can't we update
@@ -72,13 +75,13 @@ As I said in
 [_Code Ahead_](/code-ahead.html), my recently published book,
 the only reasonable explanation I have is that
 the group needs this ritual in order to stay _united_. And I meant the group
-with a weak and incompetent <del>manager</del> management.
+with a weak and incompetent ~~manager~~ management.
 
 A strong and professional management keeps the group together and makes it achieve
 the goal through 1) _explicitly-defined_ personal objectives
 and 2) _non-ambiguous_ motivational instruments. Simply put,
 at every moment of time everybody knows exactly what they have to do in order to get
-<del>money</del> what they are there for.
+~~money~~ what they are there for.
 
 However, _most_ software groups don't have such great management, for many
 reasons. Thanks to how
@@ -124,7 +127,7 @@ of someone speaking in front of a group can be (I can confirm that too as a
 [regular](/talks.html) public speaker). Guilt kicks in and the programmer
 feels that his or her actions may cause or have already caused problems to others.
 The programmer gets back to the computer and starts working hard, without
-any objectives or motivation. Except to not let <del>mommy</del> others down!
+any objectives or motivation. Except to not let ~~mommy~~ others down!
 
 To the contrary, a strong and competent management employs formal reward-and-punishment mechanisms
 in order to align the personal objectives of each team member with the business
@@ -147,7 +150,7 @@ Meetings, especially morning stand-ups, are a "perfect" substitute, because
 they make it possible to humiliate programmers regularly, triggering their
 innate guilt emotion, which sends these or similar signals to their brains:
 
-  - Don't stop working, you will disappoint <del>your mom</del> the team!
+  - Don't stop working, you will disappoint ~~your mom~~ the team!
   - Don't open Facebook, it upsets everybody!
   - Work on this ticket, we rely on you!
   - Deploy it faster, don't let us down!

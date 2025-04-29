@@ -1,8 +1,11 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "The Bigger Victim of Sexual Harassment"
 date: 2017-07-18
-place: Saint Petersburg, Russia
+place: St. Petersburg, Russia
 tags: mood
 description: |
   Sexual harassment has been a hot topic in Silicon Valley
@@ -29,7 +32,7 @@ You most probably are aware of the recent sexual harassment
 [scandals](https://www.nytimes.com/2017/06/30/technology/women-entrepreneurs-speak-out-sexual-harassment.html?_r=0)
 in Silicon Valley, which led to serious career problems for
 [Dave McClure](https://500hats.com/im-a-creep-i-m-sorry-d2c13e996ea0) (former CEO of [500 Startups](https://500.co/)),
-[Travis Kalanick](https://www.nytimes.com/2017/02/19/business/uber-sexual-harassment-investigation.html) (former CEO of [Uber](http://www.uber.com)),
+[Travis Kalanick](https://www.nytimes.com/2017/02/19/business/uber-sexual-harassment-investigation.html) (former CEO of [Uber](https://www.uber.com)),
 [Chris Sacca](https://medium.com/@sacca/i-have-more-work-to-do-c775c5d56ca1),
 and
 [a few others](https://www.usatoday.com/story/tech/news/2017/06/30/venture-capital-sexual-harassment-scandal/103336512/).
@@ -65,7 +68,7 @@ that "you either go along and we go out, or you won't be hired." Of course,
 "no hire" may not hurt as much as a knife or a fist in the face, but it
 does hurt. Especially if you are a woman, a member of a minority group.
 
-I'm a <del>sexist</del> gentleman,
+I'm a ~~sexist~~ gentleman,
 I feel bad when I see women being threatened. I want to protect them
 and I expect our system of justice to help me, just
 like it helps when we deal with physical violence.
@@ -85,7 +88,7 @@ This fear is destroying us.
 Thanks to this fear our _masculine_ characteristics become a victim of this dangerous game
 that society is playing right now, with a noble intent to protect women against
 verbal and psychological abuse. We men are losing our self-confidence,
-our self-esteem, our <del>balls</del> courage.
+our self-esteem, our ~~balls~~ courage.
 
 This fear mentally castrates us.
 

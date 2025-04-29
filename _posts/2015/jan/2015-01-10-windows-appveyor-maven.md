@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Continuous Integration on Windows, with Appveyor and Maven"
 date: 2015-01-10
@@ -15,7 +18,7 @@ keywords:
   - continuous integration win7
 ---
 
-{% badge /images/2014/10/appveyor.png 64 http://www.appveyor.com %}
+{% badge /images/2014/10/appveyor.png 64 https://www.appveyor.com %}
 
 The purpose of Continuous Integration is to tell us, the developers,
 when the product we're working on is not "packagable" any more. The
@@ -24,11 +27,11 @@ be younger if we find it sooner. The younger the damage, the easier it is
 to fix. There are many modern and high-quality
 [hosted continuous integration services]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %}),
 but only one of them (to my knowledge) supports Windows as a build
-platform---[appveyor.com](http://www.appveyor.com). My experience
+platform---[appveyor.com](https://www.appveyor.com). My experience
 tells me that it's a good practice to continuously integrate on
 different platforms at the same time, especially when developing an
 open source library. That's why, in [Zerocracy](https://www.zerocracy.com)
-we're using AppVeyor in combination with [Travis](http://www.travis-ci.org).
+we're using AppVeyor in combination with [Travis](https://www.travis-ci.org).
 
 <!--more-->
 
@@ -44,7 +47,7 @@ install:
       Add-Type -AssemblyName System.IO.Compression.FileSystem
       if (!(Test-Path -Path "C:\maven" )) {
         (new-object System.Net.WebClient).DownloadFile(
-          'http://www.us.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip',
+          'https://www.us.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip',
           'C:\maven-bin.zip'
         )
         [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\maven-bin.zip", "C:\maven")

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Altruism Kills!"
 date: 2019-12-24
@@ -46,13 +49,13 @@ against the perceived inputs and outcomes of others."
 In other words, we feel motivated to contribute only when we
 know that we take back an _equal_ amount of benefits.
 
-{% quote Modern leadership is not about giving and taking, but about sharing and helping? I don’t buy this. %}
+{% quote Modern leadership is not about giving and taking, but about sharing and helping? I don't buy this. %}
 
 You may say that [transactional management](https://en.wikipedia.org/wiki/Transactional_leadership)
 is in the past and modern
 teams are all about _transformational laissez-faire leadership_, where
 we don't do primitive piecework trade, but rather
-share common goals, <del>kiss</del> inspire each other, and
+share common goals, ~~kiss~~ inspire each other, and
 contribute enthusiastically. You may say that
 modern leadership is not about giving and taking,
 but about sharing and helping.
@@ -79,10 +82,10 @@ either with cash, or appreciation, or a good office atmosphere.
 There are two possible extreme attitudes: 1) the _altruistic_ one, when programmers
 contribute and expect absolutely nothing back, and 2) an _egoistic_ one, when
 programmers don't contribute at all, but expect their salaries to grow
-every year <del>(also known as software outsourcing)</del>.
+every year ~~(also known as software outsourcing)~~.
 
 Ever heard about the Fail Fast vs Fail Safe dichotomy? It is
-[well known](http://martinfowler.com/ieeeSoftware/failFast.pdf) that
+[well known](https://martinfowler.com/ieeeSoftware/failFast.pdf) that
 any process survives better if it is designed to Fail Fast, revealing internal
 problems as soon as possible, instead of being Fail Safe and concealing defects
 in an attempt to survive. Even though Fail Fast feels more dangerous, it
@@ -107,7 +110,7 @@ altruism of the programmers.
 
 On the other hand, if every programmer acts egoistically and demands
 the project to pay them more than they deserve, the business will feel
-the problem very soon --- simply by running out of money. Egoistic programmers
+the problem very soon---simply by running out of money. Egoistic programmers
 reveal the defect in the motivational system and make it necessary for
 the business to fix it somehow. Either by introducing measurable KPIs,
 or by making requirements more strict and demanding, or maybe by checking

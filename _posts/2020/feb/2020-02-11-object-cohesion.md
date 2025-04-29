@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Object Cohesion: Why It Matters"
 date: 2020-02-11
@@ -29,7 +32,7 @@ use [no annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}),
 and so on. We, the EO adepts, claim many things, but not so many people
 believe us. Those non-believers [say](/testimonials.html)
 that we are trolls,
-[at best]({% post_url 2020/may/2020-05-13-career-killer %}).
+[at best]({% pst 2020/may/2020-05-13-career-killer %}).
 Their main argument is: everybody works differently,
 why should we listen to you? I have no answer for them... well I had no answer, until I
 created [jPeek](https://www.jpeek.org) and started researching object _cohesion_.
@@ -126,7 +129,7 @@ than by some experiments.
 I created an open source software library to help me do these experiments and called
 it [jPeek.org](https://www.jpeek.org). It is a calculator of cohesion metrics
 for Java code. No surprise, there are many metrics we can use to calculate cohesion. At least
-[thirty](http://www.math.md/files/csjm/v25-n1/v25-n1-%28pp44-74%29.pdf)
+[thirty](https://www.math.md/files/csjm/v25-n1/v25-n1-%28pp44-74%29.pdf)
 of them are published, while only a few of them were properly implemented.
 In jPeek, thanks to its contributors, we managed to implement over a dozen.
 

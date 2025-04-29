@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Shift-M/8"
 date: 2017-08-28 12:00:00
@@ -22,4 +25,3 @@ image: /images/andreea/podcast.png
 
 The blog post I'm discussing is here:
 [How to Pay Programmers Less?]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %})
-

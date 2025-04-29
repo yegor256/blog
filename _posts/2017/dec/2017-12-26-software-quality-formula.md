@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "The Formula for Software Quality"
 date: 2017-12-26
@@ -58,10 +61,10 @@ of 0% means that all bugs are found by them.
 
 Does it make sense?
 
-{% badge /images/2017/12/managing-the-testing-process.jpg 96 http://amzn.to/2EEe2o6 %}
+{% badge /images/2017/12/managing-the-testing-process.jpg 96 https://amzn.to/2EEe2o6 %}
 
 P.S. It seems that I'm not the inventor of the formula. This is the quote
-from [_Managing the Testing Process: Practical Tools and Techniques for Managing Hardware and Software Testing_](http://amzn.to/2GvhMEV) (2009)
+from [_Managing the Testing Process: Practical Tools and Techniques for Managing Hardware and Software Testing_](https://amzn.to/2GvhMEV) (2009)
 by Rex Black, page 109:
 A common metric of test team effectiveness measures whether the test team
 manages to find a sizeable majority of the bugs prior to release. The production

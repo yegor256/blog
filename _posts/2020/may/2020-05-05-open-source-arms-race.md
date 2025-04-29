@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Open Source Arms Race"
 date: 2020-05-05
@@ -75,17 +78,17 @@ companies invest in open source:
     community-driven conferences, like
     [DockerCon](https://docker.events.cube365.net/docker/dockercon/),
     [KubeCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/),
-    [FOSDEM](https://fosdem.org/2020/),
-    and so on.
+    and
+    [FOSDEM](https://fosdem.org/2020/).
 
   * **Foundations**.
-    [Apache](http://www.apache.org/foundation/thanks),
+    [Apache](https://www.apache.org/foundation/thanks),
     [Linux](https://www.linuxfoundation.org/membership/members/),
     [Eclipse](https://www.eclipse.org/membership/exploreMembership.php#allmembers),
     [GNOME](https://www.gnome.org/foundation/),
-    [OSI](https://opensource.org/sponsors)
+    [OSI](https://opensource.org/sponsors),
     and [others](https://opensource.com/resources/organizations)
-    are sponsored by Google, IBM, Huawei, Microsoft, Oracle, and others.
+    are sponsored by Google, IBM, Huawei, Microsoft, and Oracle.
 
   * **Acquisitions**.
     They [acquire](https://techcrunch.com/2019/01/12/how-open-source-software-took-over-the-world/)
@@ -106,7 +109,7 @@ companies invest in open source:
     [Nginx](https://github.com/nginx/nginx)
       ([$670m](https://techcrunch.com/2019/03/11/f5-acquires-nginx-for-670m-to-move-into-open-source-multi-cloud-services/)),
     and [so on](https://index.co/market/open-source/acquisitions).
-    The market is [booming](https://a16z.com/2019/10/04/commercializing-open-source/), by the way.
+    The market is [booming](https://a16z.com/open-source-from-community-to-commercialization/), by the way.
 
   * **Donations**.
     Google, for example, [donates](https://opensource.google/docs/growing/funding/) to

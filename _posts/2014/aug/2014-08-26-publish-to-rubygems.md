@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Publish to RubyGems, in One Click"
 date: 2014-08-26
@@ -39,7 +42,7 @@ strongly recommend moving there.
 
 ## Create RubyGems Account
 
-Create an account in [RubyGems.org](http://www.rubygems.org).
+Create an account in [RubyGems.org](https://www.rubygems.org).
 
 ## Create `rubygems.yml`
 
@@ -116,7 +119,7 @@ the GitHub issue tracker, and post something like that into it
 
 You will get a response in a few seconds. The rest will be done by Rultor.
 
-Enjoy :)
+Enjoy!
 
 BTW, if something doesn't work as I've explained, don't hesitate to
 submit a ticket to

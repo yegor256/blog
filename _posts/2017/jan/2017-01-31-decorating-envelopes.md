@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Decorating Envelopes"
 date: 2017-01-31
@@ -19,14 +22,14 @@ jb_picture:
   caption: North by Northwest (1959) by Alfred Hitchcock
 ---
 
-<del>Sometimes</del> Very often I need a
+~~Sometimes~~ Very often I need a
 [class]({% pst 2016/sep/2016-09-20-oop-without-classes %}) that implements an
 interface by making an instance of another class. Sound weird? Let me show
 you an example. There are many classes of that kind in the
-[Takes Framework](http://www.takes.org),
+[Takes Framework](https://www.takes.org),
 and they all are named like `*Wrap`. It's a convenient design concept that,
 unfortunately, looks rather verbose in Java. It would be great to have something
-shorter, like in [EO](http://www.eolang.org) for example.
+shorter, like in [EO](https://www.eolang.org) for example.
 
 <!--more-->
 
@@ -34,7 +37,7 @@ shorter, like in [EO](http://www.eolang.org) for example.
 
 Take a look at
 [`RsHtml`](https://github.com/yegor256/takes/blob/1.1/src/main/java/org/takes/rs/RsHtml.java)
-from [Takes Framework](http://www.takes.org). Its design looks
+from [Takes Framework](https://www.takes.org). Its design looks
 like this (a simplified version with only one primary constructor):
 
 ```java

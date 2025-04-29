@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: static
 title: "My Pet Projects"
 description: |
@@ -35,10 +38,10 @@ and [Deployment Script vs. Rultor]({% pst 2014/sep/2014-09-11-deployment-script-
 <br/>
 Founded 5-Jun-2013.
 
-{% badge https://camo.githubusercontent.com/21b0e8be23deb3c2743027b82fda3af26c04ebfbb43faf5fc73c01b66607f8bf/687474703a2f2f696d672e71756c6963652e636f6d2f6c6f676f2e737667 140 https://www.qulice.com %}
+{% badge https://www.qulice.com/logo.svg 140 https://www.qulice.com %}
 
 [Qulice](https://www.qulice.com) is a aggregate of a few popular and powerful
-style chekckers for Java, in particular Checkstyle and PMD. Qulice not only makes it
+style checkers for Java, in particular Checkstyle and PMD. Qulice not only makes it
 easy to use them all in one package, but also extends them with a few dozen
 rules, which are pretty strong and rather controversial. I use Qulice in all
 Java projects of mine.
@@ -126,6 +129,7 @@ More about it in this article:
 <br/>
 Founded 21-Aug-2017.
 
+<!--
 {% badge //www.threecopies.com/images/logo.png 70 https://www.threecopies.com %}
 
 [ThreeCopies.com](https://www.threecopies.com) is a hosted service
@@ -136,16 +140,17 @@ More about it in this article:
 [ThreeCopies.com&mdash;Server-Side Data Backup Service]({% pst 2017/sep/2017-09-26-threecopies-server-data-backup %}).
 <br/>
 Founded 25-Jun-2017.
+-->
 
-{% badge //www.wring.io/images/logo.svg 70 https://www.wring.io %}
+<!-- {% badge //www.wring.io/images/logo.svg 70 https://www.wring.io %} -->
 
-[Wring.io](https://www.wring.io) is a smart inbox for GitHub (and other, in the future)
+<!-- [Wring.io](https://www.wring.io) is a smart inbox for GitHub (and other, in the future)
 notifications we can't parse in our email inbox, because there are too many of them.
 I use this system every day to filter hundreds of notifications GitHub is sending me.
 More about it in this article:
 [Wring.io, a Dispatcher of GitHub Notifications]({% pst 2016/mar/2016-03-15-wring-dispatcher-github-notifications %}).
 <br/>
-Founded 21-Feb-2016.
+Founded 21-Feb-2016. -->
 
 {% badge //github.com/yegor256/tacit/raw/master/tacit_logo.png 70 https://github.com/yegor256/tacit %}
 
@@ -197,8 +202,9 @@ More about it in this article:
 <br/>
 Founded 27-Aug-2018.
 
-{% badge //www.soalition.com/logo.svg 70 https://www.soalition.com %}
+<!-- {% badge //www.soalition.com/logo.svg 70 https://www.soalition.com %} -->
 
+<!--
 [Soalition](https://www.soalition.com) is a manager of social coalitions
 of online writers. You join a group as a member and start sharing your
 online content. Other members of the group re-post your content and earn
@@ -206,21 +212,23 @@ reputation points. In exchange you have to re-post their content. Thus,
 you all gain better social visibility of your mutual idea.
 <br/>
 Founded 28-Aug-2018.
+-->
 
 {% badge //www.0rsk.com/logo.svg 70 https://www.0rsk.com %}
 
 [0rsk](https://www.0rsk.com) is a free online risk management tool,
 to help you identify risks, record them in Cause+Risk+Effect format,
 analyze their probabilities and impacts, create response plans
-and stay informed about the most current agenda of thigs you have
+and stay informed about the most current agenda of things you have
 to do in order to implement those plans.
 <br/>
 Founded 12-Apr-2019.
 
+<!--
 Others (less stable or successful):
 [jpeek](https://github.com/yegor256/jpeek),
 [xcop](https://github.com/yegor256/xcop),
-[phpRack](http://www.phpRack.com/),
-[netbout](http://www.netbout.com),
-[thindeck](http://www.thindeck.com),
-[h12](http://www.h12.co).
+[phpRack](https://www.phpRack.com/),
+[netbout](https://www.netbout.com),
+[thindeck](https://www.thindeck.com).
+-->

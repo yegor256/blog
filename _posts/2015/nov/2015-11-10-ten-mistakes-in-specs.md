@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "10 Typical Mistakes in Specs"
 date: 2015-11-10
@@ -19,7 +22,7 @@ jb_picture:
 ---
 
 There is a great book called
-[Software Requirements](http://amzn.to/2c5n12h)
+[Software Requirements](https://amzn.to/2c5n12h)
 written by Karl Wiegers about, well, software requirements.
 It's a must read for every software engineer, in my opinion. There's
 no need for me to repeat what it says, but there are a few very

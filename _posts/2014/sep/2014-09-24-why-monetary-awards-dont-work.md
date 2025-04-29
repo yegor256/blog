@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Why Monetary Awards Don't Work?"
 date: 2014-09-24
@@ -43,7 +46,7 @@ Why, in a [modern office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave
 do we try to hide
 [monetary]({% pst 2016/jan/2016-01-12-good-programmers-dont-work-for-equity %})
 motivation and replace it with
-[everything else](http://www.hrworld.com/features/25-employee-rewards/),
+[everything else](https://www.hrworld.com/features/25-employee-rewards/),
 like free lunches, team building events,
 paid vacations, etc. Why don't we just say---"Jeff completed his task faster than
 everybody else. This is his $500 check. Whoever completes the
@@ -84,7 +87,7 @@ Two and a Half Men (TV Series).
 What do I mean by ground rules?
 
 It should be a simple document
-([PMBOK](http://www.pmi.org/PMBOK-Guide-and-Standards.aspx)
+([PMBOK](https://www.pmi.org/PMBOK-Guide-and-Standards.aspx)
 calls it a Staffing Management Plan) that helps me, as a team member,
 answer at least these basic questions:
 

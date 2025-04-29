@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Release to Maven Central, in One Click"
 date: 2014-08-19
@@ -18,7 +21,7 @@ keywords:
 categories: jcg
 ---
 
-When I release a new version of [jcabi-aspects](http://aspects.jcabi.com),
+When I release a new version of [jcabi-aspects](https://aspects.jcabi.com),
 a Java open source library, to Maven Central, it takes 30 seconds of my time.
 Maybe even less. Recently, I released version 0.17.2. You can see
 how it all happened, in [GitHub issue #80](https://github.com/jcabi/jcabi-aspects/issues/80):
@@ -137,7 +140,7 @@ to your `pom.xml`:
 
 ## Configure GPG Plugin
 
-Again, I'd recommend using [jcabi-parent](http://parent.jcabi.com),
+Again, I'd recommend using [jcabi-parent](https://parent.jcabi.com),
 which configures this plugin automatically. If you're using it, skip this step.
 
 Otherwise, add this plugin to your `pom.xml`:
@@ -169,7 +172,7 @@ Otherwise, add this plugin to your `pom.xml`:
 
 ## Configure Versions Plugin
 
-Once again, I recommend using [http://parent.jcabi.com]({% pst 2015/feb/2015-02-05-jcabi-parent-maven-pom %}). It
+Once again, I recommend using [https://parent.jcabi.com]({% pst 2015/feb/2015-02-05-jcabi-parent-maven-pom %}). It
 configures all required plugins out-of-the-box. If you're using it, skip this step.
 
 Otherwise, add this plugin to your `pom.xml`:
@@ -196,7 +199,7 @@ Otherwise, add this plugin to your `pom.xml`:
 
 ## Configure Sonatype Plugin
 
-Yes, you're right, [http://parent.jcabi.com]({% pst 2015/feb/2015-02-05-jcabi-parent-maven-pom %}) will help
+Yes, you're right, [https://parent.jcabi.com]({% pst 2015/feb/2015-02-05-jcabi-parent-maven-pom %}) will help
 you here as well. If you're using it, skip this step too.
 
 Otherwise, add these four plugins to your `pom.xml`:
@@ -298,7 +301,7 @@ GitHub issue tracker, and post something like that into it
 
 You will get a response in a few seconds. The rest will be done by Rultor.
 
-Enjoy :)
+Enjoy!
 
 BTW, if something doesn't work as I've explained, don't hesitate to
 submit a ticket to

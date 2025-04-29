@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Avoid a Software Outsourcing Disaster"
 date: 2015-05-21
@@ -48,10 +51,10 @@ two major success factors in
 [software outsourcing]({% pst 2015/oct/2015-10-27-outsourcing-doesnt-work %})
 that are very often neglected.
 
-{% badge /images/2015/05/wei-liao-zi-book.jpg 96 http://amzn.to/2bQVQI2 %}
+{% badge /images/2015/05/wei-liao-zi-book.jpg 96 https://amzn.to/2bQVQI2 %}
 
 I learned this principle from [Wei Liao Zi](https://en.wikipedia.org/wiki/Wei_Liaozi).
-He said, according to [Military Strategy Classics of Ancient China](http://amzn.to/2bQVQI2),
+He said, according to [Military Strategy Classics of Ancient China](https://amzn.to/2bQVQI2),
 p.239:
 
 > When information from below reaches up high, and the concerns
@@ -70,7 +73,7 @@ and month after month; the backlog always has something, and you simply
 can't finish this. You're starting to see this project in your nightmares,
 and Prozac doesn't help anymore. How does this sound? Familiar?
 
-{% quote Let's forget about these beautiful promises and focus on the ugly reality — you're on your own. %}
+{% quote Let's forget about these beautiful promises and focus on the ugly reality---you're on your own. %}
 
 I hope you do realize that no matter what kind of contract you signed with
 your software outsourcing partner, how many schedules you've baselined,
@@ -91,7 +94,7 @@ will assure you that customer satisfaction is more important than money.
 However, I'm suggesting you be strong enough to face the reality---it's all _lies_.
 
 The majority of software outsourcing projects fail.
-The vast majority (see the latest [CHAOS report](http://www.csus.edu/indiv/v/velianitis/161/ChaosReport.pdf)).
+The vast majority (see the latest [CHAOS report](https://www.csus.edu/indiv/v/velianitis/161/ChaosReport.pdf)).
 Software developers realize this better than you,
 mostly because they see how it happens every day.
 And your project is not an exception. Thus, let's forget about these
@@ -226,7 +229,7 @@ In my experience, this unpredictability and unreliability of a software
 outsourcing team is in most cases caused by a project sponsor himself or herself.
 This happens when you don't listen to them or they are afraid to tell
 you the _truth_, which is usually the same thing. Some call this
-"[fear-driven development](http://www.hanselman.com/blog/FearDrivenDevelopmentFDD.aspx)."
+"[fear-driven development](https://www.hanselman.com/blog/FearDrivenDevelopmentFDD.aspx)."
 The team is afraid of you, and in order to
 keep you on board as a paying customer, has to lie to you.
 

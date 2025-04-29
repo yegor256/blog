@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Deployment Script vs. Rultor"
 date: 2014-09-11
@@ -47,7 +50,7 @@ existing scripts. You just teach Rultor how to call them.
 
 The first advantage you get once you start calling your deployment
 scripts from Rultor is the [usage of Docker]({% pst 2014/jul/2014-07-29-docker-in-rultor %}).
-I'm sure you know what [Docker](http://www.docker.io) is, but for those who don't---it is a
+I'm sure you know what [Docker](https://www.docker.io) is, but for those who don't---it is a
 manager of virtual Linux "machines." It's a command line script
 that you call when you need to run some script in a new virtual machine (aka "container").
 Docker starts the container almost immediately and runs your script. The beauty
@@ -129,7 +132,7 @@ git ftp push --user ".." \
 ```
 
 Obviously, running this script on my MacBook (without virtualization) would
-cause a lot of trouble. Well, I don't even have `apt-get` here :)
+cause a lot of trouble. Well, I don't even have `apt-get` here.
 
 Thus, the first benefit that Rultor gives you is an isolation
 of your deployment script in its own virtual environment. We have this

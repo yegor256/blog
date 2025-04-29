@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Meetings Are Legalized Robbery"
 date: 2015-07-13
@@ -50,7 +53,8 @@ Say I'm an architect who needs to design the schema for a relational
 database in a new project, and I have a team of five programmers whom I want
 to help me with this design. That's a very logical and appropriate desire,
 as a good architect always discusses all possible options with available
-team members before making a final decision. So I call a meeting? No!
+team members before making a [final decision]({% pst 2023/aug/2023-08-15-decision-making-process %}).
+So I call a meeting? No!
 
 ## A Good Architect
 
@@ -328,4 +332,3 @@ Let me summarize. Meetings are an activity that requires almost no skill,
 while documenting ideas in text and diagrams is a way more difficult
 job to do. So train and discipline yourself to work with documents
 and let juniors enjoy their meetings.
-

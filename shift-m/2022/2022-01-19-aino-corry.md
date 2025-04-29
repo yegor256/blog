@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Shift-M/52"
 date: 2022-01-19 12:00:00
@@ -25,7 +28,7 @@ Aino's website is [here](https://metadeveloper.com).
 
 And the book is [here](https://amzn.to/3fREDOQ).
 
-Video is [here](https://youtu.be/ByatpkT2-tI).
+Video is [here](https://youtu.be/ByatpkT2-tI) (Aino asked to take it down).
 
 ## Transcript
 

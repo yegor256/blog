@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "What Pay Equality Protects Us Against?"
 date: 2018-09-29
@@ -20,12 +23,12 @@ jb_picture:
 It's not a secret that our salaries are a
 [secret](https://www.forbes.com/sites/davidburkus/2016/02/02/why-do-we-keep-salaries-secret/).
 Employers don't like their employees to know and discuss each other wages.
-Moreover, <del>most</del> some of them even put restrictive
+Moreover, ~~most~~ some of them even put restrictive
 [pay gag clauses](https://www.recruiter.com/i/gag-clause/) into
 employment contracts or NDA-s. Dispite [recent efforts](https://beta.congress.gov/bill/113th-congress/senate-bill/84)
 of law makers to make that clauses illegal,
 about half of American employees are still explicitly prohibited
-or strongly [discouraged](http://www.iwpr.org/publications/pubs/pay-secrecy-and-wage-discrimination)
+or strongly [discouraged](https://www.iwpr.org/publications/pubs/pay-secrecy-and-wage-discrimination)
 from discussing pay with their coworkers.
 My question is do we really want to know how much our friends are making and
 will that information, if being available, help us write better software?
@@ -119,7 +122,7 @@ Even if pay secrecy comes with good intentions, this is its unintended effect: I
 https://www.theatlantic.com/business/archive/2014/07/when-the-boss-says-dont-tell-your-coworkers-how-much-you-get-paid/374467/
 
 We created a formula for how salaries are calculated and added it to our Wiki page for everyone on the team to see
-http://www.inc.com/jeff-haden/inside-buffer-company-complete-transparency.html
+https://www.inc.com/jeff-haden/inside-buffer-company-complete-transparency.html
 
 https://www.forbes.com/sites/edwardlawler/2012/09/12/pay-secrecy-why-bother/
 secrecy helps them cover up their bad decision making; and with secrecy, they do not have to correct the problems or defend what they have done.
@@ -142,4 +145,3 @@ Squaremouth: Employees make their pitch, and a majority vote is required for app
 
 
 <!--more-->
-

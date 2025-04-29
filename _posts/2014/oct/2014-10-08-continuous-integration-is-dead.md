@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Continuous Integration is Dead"
 date: 2014-10-08
@@ -22,7 +25,7 @@ social:
 
 A few days ago, my article
 [Why Continuous Integration Doesn't Work](http://devops.com/blogs/continuous-integration-doesnt-work/)
-was published at [DevOps.com](http://www.devops.com). Almost the same
+was published at [DevOps.com](https://www.devops.com). Almost the same
 day I received a few strongly negative critiques on Twitter.
 
 Here is my response to the un-asked question:
@@ -39,10 +42,10 @@ Apache Continuum, Hudson, CruiseControl, and Jenkins in over 50 open
 source and commercial projects. Besides that,
 a few years ago I created a hosted
 [continuous integration]({% pst 2016/aug/2016-08-01-continuous-integration-maturity %}) service called
-[fazend.com](http://www.fazend.com),
+[fazend.com](https://www.fazend.com),
 renamed to [rultor.com](https://www.rultor.com) in 2013.
-Currently, I'm also an active user of [Travis](http://www.travis-ci.org)
-and [AppVeyor](http://www.appveyor.com).
+Currently, I'm also an active user of [Travis](https://www.travis-ci.org)
+and [AppVeyor](https://www.appveyor.com).
 
 ## How Continuous Integration Should Work
 
@@ -73,7 +76,7 @@ Let's see the organizational side.
 Continuous integration is not only a server that builds, but a
 management/organizational process that should "work." Being a process
 that works means exactly what Jez Humble said in
-[Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](http://amzn.to/2c7sR4V),
+[Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation](https://amzn.to/2c7sR4V),
 on page 55:
 
 > Crucially, if the build fails, the development team

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: Project Lifecycle in Zerocracy
 date: 2014-10-06
@@ -137,8 +140,8 @@ This is a one-man job for
 [an architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).
 Every project we work on
 has an architect who is [personally responsible]({% pst 2015/may/2015-05-11-software-architect-responsibilities %})
-for the quality and technical decisions. We have a few brilliant engineers
-for this role.
+for the quality and [technical decisions]({% pst 2023/aug/2023-08-15-decision-making-process %}).
+We have a few brilliant engineers for this role.
 
 The Building phase is rather straight forward. The architect has to implement the
 solution according to the `README`, in a few working days. No matter

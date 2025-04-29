@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Typical Mistakes in Java Code"
 date: 2014-04-27
@@ -20,7 +23,7 @@ translated:
 ---
 
 This page contains most typical mistakes I see in the Java code of people
-working with me. Static analysis (we're using [qulice](http://www.qulice.com)
+working with me. Static analysis (we're using [qulice](https://www.qulice.com)
 can't catch all of the mistakes for obvious reasons, and that's why I decided to
 list them all here.
 
@@ -300,7 +303,7 @@ why do they have to share the same input constants?
 
 ## Test Data Coupling
 
-This is an example of [data coupling](http://en.wikipedia.org/wiki/Coupling_%28computer_programming%29) in a test method:
+This is an example of [data coupling](https://en.wikipedia.org/wiki/Coupling_%28computer_programming%29) in a test method:
 
 ```java
 User user = new User("Jeff");

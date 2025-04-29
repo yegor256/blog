@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Keynote Clowns"
 date: 2016-05-10
@@ -100,5 +103,3 @@ interesting content. As far as I understand, conference organizers are just too
 lazy to do that. It's just easier to buy a "proven" clown.
 
 It's sad.
-
-

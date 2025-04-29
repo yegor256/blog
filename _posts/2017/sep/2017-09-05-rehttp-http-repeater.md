@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "ReHTTP.net&mdash;HTTP Repeater"
 date: 2017-09-05
@@ -16,10 +19,10 @@ keywords:
   - repeat webhook
 ---
 
-{% badge http://www.rehttp.net/images/logo.svg 92 http://www.rehttp.net %}
+{% badge https://www.rehttp.net/images/logo.svg 92 https://www.rehttp.net %}
 
 I faced a problem a few weeks ago with
-[0pdd.com](http://www.0pdd.com), one of my web apps that is
+[0pdd.com](https://www.0pdd.com), one of my web apps that is
 supposed to receive HTTP requests (known as
 [webhooks](https://developer.github.com/webhooks/)) from GitHub:
 sometimes the app is down, GitHub gets an HTTP error, and never
@@ -31,18 +34,18 @@ requests and repeat them later if they can't be delivered immediately.
 
 <!--more-->
 
-I created [rehttp.net](http://www.rehttp.net) to do exactly that.
+I created [rehttp.net](https://www.rehttp.net) to do exactly that.
 
 See, the URL I've been giving to GitHub is this one:
 
 ```text
-http://www.0pdd.com/hook/github
+https://www.0pdd.com/hook/github
 ```
 
 From now on a new URL has to be used:
 
 ```text
-https://www.rehttp.net/p/http://www.0pdd.com/hook/github
+https://www.rehttp.net/p/https://www.0pdd.com/hook/github
 ```
 
 It looks very similar, but starts with `https://www.rehttp.net/p/`. GitHub sends

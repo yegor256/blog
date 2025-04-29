@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "16 Don'ts of Career Growth"
 date: 2017-01-24
@@ -45,7 +48,7 @@ in a few years. Well, they worked and keep working for me.
 
 **Don't Be Loyal**.
 The company you are working for at the moment is just a training
-ground, nothing else. Don't invest an <del>extra</del> minute of your time into it.
+ground, nothing else. Don't invest an ~~extra~~ minute of your time into it.
 Be selfish; think only about yourself and your personal skills,
 knowledge, and experience. They pay you to be dedicated and loyal?
 Well, that's their fault. Use them to learn new technologies, experiment
@@ -125,7 +128,7 @@ absolute minimum. Second, pay for certificates for the
 same reasons. Third, purchase software; don't steal it. Finally, don't be
 cheap on your laptop. It is much more important than your car or a birthday
 gift for your spouse. Your laptop is your instrument; it must be
-<del>good and expensive</del>
+~~good and expensive~~
 [made by Apple]({% pst 2017/jun/2017-06-27-my-environment %}).
 You must go "all in" if you want to win.
 
@@ -220,7 +223,7 @@ coworkers respect you. What matters is what the _market_ thinks about you.
 **Don't Forget to Relax**.
 Nobody likes those smelly dorks who only get one haircut per year. They will
 hire you and respect you as a coder, but they will never take you
-seriously as a candidate for a role with a lot of <del>money</del> responsibility. You will
+seriously as a candidate for a role with a lot of ~~money~~ responsibility. You will
 always look like a mentally unstable person. Instead, you must look "like business," even
 though you are a geek. That's why it's very important to pay attention to
 how you spend your free time---how you relax. Playing GTA 'til 3 a.m. is not

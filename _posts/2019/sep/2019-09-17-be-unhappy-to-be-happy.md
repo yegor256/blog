@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Be Unhappy to Be Happy"
 date: 2019-09-17
@@ -20,7 +23,7 @@ jb_picture:
 republished:
   -
     place: "BLOG@CACM"
-    title: "Here’s Why Resentment is the Key to Happiness"
+    title: "Here's Why Resentment is the Key to Happiness"
     date: 2020-11-06
     url: https://cacm.acm.org/blogs/blog-cacm/248514-heres-why-resentment-is-the-key-to-happiness/fulltext
 ---
@@ -42,7 +45,7 @@ Debika Chakraborty asks [here](https://www.lifealth.com/mind-body-and-soul/happi
 I think that happiness is missing not despite us having everything, but _thanks_ to that.
 
 Happiness, according to [Nietzsche](https://en.wikiquote.org/wiki/The_Antichrist),
-is "the feeling that power increases --- that a resistance is overcome."
+is "the feeling that power increases---that a resistance is overcome."
 Therefore, in order to be happy, we must have some issues to deal with. It's not enough to possess those
 cars, houses and well-paid jobs. We need to overcome the obstacles first.
 Happiness is simply impossible without a struggle being won.
@@ -85,7 +88,7 @@ mentioned above and don't need to struggle much in order to get them.
 The smarter we are, the easier it is for us _to achieve_: find a well-paid job
 and buy a new iPhone.
 
-We <del>intelligent</del> tech people, don't struggle enough.
+We ~~intelligent~~ tech people, don't struggle enough.
 
 Life doesn't challenge us as much as we need. We don't even need to have special talents
 these days to be decently paid: You read [_JavaScript in 24 Hours_](https://amzn.to/2O1MBIg) and a new iPhone
@@ -99,7 +102,7 @@ larger than unhappiness or depression---read what happened to the poor mice in t
 [Universe 25](https://curiosity.com/topics/universe-25-began-as-a-mice-paradise-but-ended-as-a-nightmare-curiosity/)
 experiment.
 
-{% quote Tech people don’t struggle enough, life doesn’t challenge us as much as we need. %}
+{% quote Tech people don't struggle enough, life doesn't challenge us as much as we need. %}
 
 What is the solution?
 Listen to what [Frank T. McAndrew](https://en.wikipedia.org/wiki/Francis_T._McAndrew)

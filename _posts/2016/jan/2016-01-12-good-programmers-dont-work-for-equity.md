@@ -1,9 +1,12 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Good Programmers Don't Work for Equity"
 date: 2016-01-12
 place: Los Angeles, CA
-tags: startup
+tags: business
 description: |
   Equity or cash? These days, it seems that working for
   equity is the way to become a millionaire.

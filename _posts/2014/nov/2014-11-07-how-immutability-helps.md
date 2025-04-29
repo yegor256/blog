@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How Immutability Helps"
 date: 2014-11-07
@@ -33,7 +36,7 @@ asking to provide more specific and practical examples.
 Thus, in order to illustrate my strongly negative attitude to "mutability via setters," I took
 an existing [commons-email](http://commons.apache.org/proper/commons-email/) Java library from Apache
 and re-designed it my way, without setters and with "object thinking" in mind.
-I released my library as part of the [jcabi](http://www.jcabi.com) family---[jcabi-email](http://email.jcabi.com). Let's see what benefits
+I released my library as part of the [jcabi](https://www.jcabi.com) family---[jcabi-email](https://email.jcabi.com). Let's see what benefits
 we get from a "pure" object-oriented and immutable approach, without getters.
 
 <!--more-->
@@ -52,7 +55,7 @@ email.setMsg("Dude, how are you?");
 email.send();
 ```
 
-Here is how you do the same with [jcabi-email](http://email.jcabi.com):
+Here is how you do the same with [jcabi-email](https://email.jcabi.com):
 
 ```java
 Postman postman = new Postman.Default(
@@ -183,7 +186,7 @@ arguments of a constructor and you're done.
 
 ## How Did I Design An Immutable Email?
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
 
 When I was designing [jcabi-email](https://github.com/jcabi/jcabi-email)
 I started with a small and simple class:
@@ -222,8 +225,8 @@ this complex object for me (pay attention, both
 [`Postman`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Postman.java) and
 [`Envelope`](https://github.com/jcabi/jcabi-email/blob/1.3/src/main/java/com/jcabi/email/Envelope.java)
 are immutable and annotated with
-[@Immutable](http://aspects.jcabi.com/apidocs-0.20/com/jcabi/aspects/Immutable.html) from
-[jcabi-aspects](http://aspects.jcabi.com/annotation-immutable.html)):
+[@Immutable](https://aspects.jcabi.com/apidocs-0.20/com/jcabi/aspects/Immutable.html) from
+[jcabi-aspects](https://aspects.jcabi.com/annotation-immutable.html)):
 
 ```java
 @Immutable
@@ -259,7 +262,7 @@ class MIME implements Envelope {
 It works, but it does nothing useful yet. It only creates an absolutely
 empty MIME message and returns it. How about adding a subject to it
 and both `To:` and `From:` addresses (pay attention,
-[`MIME`](http://email.jcabi.com/apidocs-1.10/com/jcabi/email/Envelope.Mime.html) class is
+[`MIME`](https://email.jcabi.com/apidocs-1.10/com/jcabi/email/Envelope.Mime.html) class is
 also immutable):
 
 ```java
@@ -360,6 +363,6 @@ have done what Apache developers did with commons-email---bloat the
 class and turn it into an unmaintainable
 [monster]({% pst 2017/sep/2017-09-12-evil-object-name-suffix-client %}).
 
-That's [jcabi-email](http://email.jcabi.com). I hope
+That's [jcabi-email](https://email.jcabi.com). I hope
 this example was illustrative enough and that you will start writing
 cleaner code with immutable objects.

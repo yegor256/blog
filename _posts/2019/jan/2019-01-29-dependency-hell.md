@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "My Recipe Against Dependency Hell"
 date: 2019-01-29
@@ -29,7 +32,7 @@ and [I was not alone](https://blog.danlew.net/2015/09/09/dont-use-dynamic-versio
 However, very soon I [realized](https://twitter.com/yegor256/status/1060538705260265474)
 that dynamic versions, like `1.+`, give more flexibility.
 Just a few weeks ago I realized that neither approach
-is right and found myself a hybrid formula. No suprise, I again saw that
+is right and found myself a hybrid formula. No surprise, I again saw that
 [I wasn't alone](https://brock.io/post/repeatable_android_builds/).
 
 <!--more-->
@@ -71,7 +74,7 @@ which version to use. It will be necessary to resolve the conflict somehow.
 In the case of Maven it's resolvable, in the case of, for example,
 [Rake](https://github.com/ruby/rake), it's not (to my knowledge).
 
-{% quote If you trust the authors of the library, use dynamic versioning; if you don’t, use a fixed version. %}
+{% quote If you trust the authors of the library, use dynamic versioning; if you don't, use a fixed version. %}
 
 To resolve this problem, library Y will have to explicitly say which version
 has to be used. But it can't be sure that `1.14.1` will work correctly with
@@ -105,5 +108,3 @@ Pay attention to the version numbers. Those that start with `~>` or `>=` are dyn
 while others are fixed. It's a hybrid approach, but it works for me.
 
 Maybe it will help you too.
-
-

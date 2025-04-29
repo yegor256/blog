@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How Much For This Software?"
 date: 2015-06-02
@@ -149,4 +152,4 @@ And this is right:
 
 > Hey driver, how much do you charge per mile, and do you have a map?
 
-Hope I've made my point clear :)
+Hope I've made my point clear.

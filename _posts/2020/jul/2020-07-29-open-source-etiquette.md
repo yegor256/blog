@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Open Source Etiquette"
 date: 2020-07-29
@@ -31,7 +34,8 @@ of the "Java for Dummies" book.
 
 {% jb_picture_body %}
 
-In no particular order:
+In no particular order (while more details are in
+[this blog post]({% pst 2024/dec/2024-12-15-open-source-beginner-advice %})):
 
 **Make Small [Pull Requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)**.
 Some recent [research](https://www.researchgate.net/publication/325730783_Modern_code_review_a_case_study_at_google)
@@ -85,8 +89,9 @@ When you make some changes to the branch and want your pull request to be
 reviewed again: post a message explicitly asking your reviewer to take another look.
 When you submit a pull request, post a message into it addressing it to the
 architect of the project: ask them to review the PR.
-And so on. Don't expect them to watch your activity. They have other things to do.
-It's your responsibility to ping them.
+And [so on]({% pst 2024/apr/2024-04-01-ping-me-please %}).
+Don't expect them to watch your activity. They have other things to do.
+It's your responsibility to [ping them]({% pst 2024/apr/2024-04-01-ping-me-please %}).
 
 **Make Descriptive [Commits](https://git-scm.com/docs/git-commit)**.
 The style of formatting Git commit messages (I'm sure you are using Git) is usually
@@ -141,6 +146,7 @@ of your products.
 
 This seems to be it. If you do all of these, you will demonstrate
 respect to other developers and they will respect you in return.
-Did I forget anything important?
+Did I [forget]({% pst 2024/dec/2024-12-15-open-source-beginner-advice %})
+anything important?
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">What does it take to be an active and successful <a href="https://twitter.com/hashtag/opensource?src=hash&amp;ref_src=twsrc%5Etfw">#opensource</a> contributor?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1373522225471557633?ref_src=twsrc%5Etfw">March 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Nine Steps of Learning by Refactoring"
 date: 2018-04-10
@@ -56,7 +59,7 @@ the easiest one.
 
 ## Remove IDE Red Spots
 
-When I open the source code of [Cactoos](http://www.cactoos.org)
+When I open the source code of [Cactoos](https://www.cactoos.org)
 in IntelliJ IDEA, using my
 custom [`settings.jar`](/bin/settings.jar), I see something like this:
 
@@ -75,7 +78,7 @@ See the difference?
 The first thing I do, when I see someone else's code, is to make it "red spots free"
 for my IDE. Most of those red spots are easy to remove,
 while others will take some time to refactor.
-While doing that I learn a lot about the <del>crap</del> program I have
+While doing that I learn a lot about the ~~crap~~ program I have
 to deal with.
 
 ## Remove Empty Lines
@@ -128,19 +131,19 @@ if we are talking about closed-source commercial code. We are lucky if
 the classes have more or less descriptive names and are small and
 cohesive.
 
-{% badge /images/2015/04/book-goos.jpg 96 http://amzn.to/1PBpoDT %}
+{% badge /images/2015/04/book-goos.jpg 96 https://amzn.to/1PBpoDT %}
 
-{% badge /images/2015/04/book-legacy.jpg 96 http://amzn.to/1SdcZ8M %}
+{% badge /images/2015/04/book-legacy.jpg 96 https://amzn.to/1SdcZ8M %}
 
 However, instead of documentation I prefer to deal with unit tests. They
 explain the code much better and prove that it works. When I don't
 understand how the class works, I try to write a unit test for it. In most
 cases it's not possible, for many reasons. In such a case I try to apply
 everything I learned from
-[_Working Effectively With Legacy Code_](http://amzn.to/1SdcZ8M)
+[_Working Effectively With Legacy Code_](https://amzn.to/1SdcZ8M)
 by Michael Feathers
 and
-[_Growing Object-Oriented Software, Guided by Tests_](http://amzn.to/1PBpoDT)
+[_Growing Object-Oriented Software, Guided by Tests_](https://amzn.to/1PBpoDT)
 by Steve Freeman and Nat Pryce.
 Both books are pretty much focused on this very problem: what to do
 when you don't know what to do, testing-wise.
@@ -181,7 +184,7 @@ there are 4,100 Java files in Spring Boot v2.0.0.RELEASE and 243K LoC,
 which include the `null` keyword 7,055 times. This means approximately one `null`
 for every 35 lines.
 
-To the contrary, [Takes Framework](http://www.takes.org), which I founded a few years ago,
+To the contrary, [Takes Framework](https://www.takes.org), which I founded a few years ago,
 has 771 Java files, 154K LoC, and 58 `null` keywords. Which is roughly
 one `null` per 2,700 lines. See the difference?
 
@@ -198,7 +201,7 @@ some time ago,
 helps keep objects smaller. Most classes
 that I see in the foreign code I deal with are mutable. And large.
 
-If you look at any artifact analyzed by [jpeek](http://www.jpeek.org),
+If you look at any artifact analyzed by [jpeek](https://www.jpeek.org),
 you will see that in most of them approximately 80% of classes
 are mutable. Moving from mutability to immutability is a big challenge
 in object-oriented programming, which, if resolved, leads to better
@@ -223,7 +226,7 @@ that getting rid of `static` is a more complex task.
 
 This is the final step and the most complex one. It's complex because
 I configure static analyzers to their maximum potential or even more.
-I'm using [Qulice](http://www.qulice.com),
+I'm using [Qulice](https://www.qulice.com),
 which is an aggregator of
 [Checkstyle](http://checkstyle.sourceforge.net/),
 [PMD](http://pmd.sourceforge.net/), and
@@ -248,4 +251,3 @@ gives for the `spring-boot-project/spring-boot` sub-module in Spring Boot
 When Qulice says that everything is clean, I consider the code base fully
 ready for maintenance and modifications. At this point the refactoring
 is done.
-

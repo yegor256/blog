@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Strong Typing without Types"
 date: 2020-11-10
@@ -60,7 +63,8 @@ If an object that doesn't `implement` the interface `Book` is passed
 to the method `print()`, the compiler will complain
 with the "type mismatch" error. It will be hard for a programmer to make
 a mistake and pass an object of type, say, `Car` to the method `print()`.
-However, it will still be possible, via dynamic type casting:
+However, it will still be possible, via dynamic
+[type casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %}):
 
 ```java
 Car car = new Car("Mercedes-Benz G63");
@@ -74,7 +78,8 @@ possible to cast `Car` to `Book`.
 
 The beauty of strong typing is that it prevents errors. However, it increases
 the complexity of code: you need to create types first, you need to declare them
-in all your functions, you need type casting, which is hard to debug, and so on.
+in all your functions, you need type casting, which is hard to
+[debug]({% pst 2016/feb/2016-02-09-are-you-still-debugging %}), and so on.
 Weak typing [proponents](https://softwareengineering.stackexchange.com/questions/38002)
 complain about this a lot and create languages like Ruby,
 which don't have types at all, for example:
@@ -111,13 +116,14 @@ void print(Book b) {
 Think about this: at compile time it's already obvious that `b` must have
 _at least_ one method `isbn()`. No need to force programmers to define
 the type `Book` explicitly and mention in the signature of the method `print()`
-that only books are welcome: this knowledge can easily be inferred from
+that only books are welcome: this knowledge can easily be
+[inferred](https://en.wikipedia.org/wiki/Type_inference) from
 the body of the method `print()`! The compiler may look at all statements
 in the method `print()` and clearly _understand_ what exactly will be done
 with the object `b`. This information should be enough to visualize
 the "type" of the incoming object. No need to ask the programmer to
 do this explicitly and spend another five lines of code in a new file
-to declare the type `Book`. The compiler can do this job for us.
+to declare the type `Book`. The compiler together with the IDE can do this job for us.
 
 Of course, to make this work we must prohibit
 [type casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %})

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "DAO is Yet Another OOP Shame"
 date: 2017-12-05
@@ -31,7 +34,7 @@ and
 I haven't had a chance
 yet to mention DAO. Here is my take on it: it's as much of a shame
 as its friends---ORM, DTO, and getters. In a nutshell,
-a [Data Access Object](http://www.oracle.com/technetwork/java/dataaccessobject-138824.html)
+a [Data Access Object](https://www.oracle.com/technetwork/java/dataaccessobject-138824.html)
 is an object [that](https://en.wikipedia.org/wiki/Data_access_object)
 "provides an abstract interface to some type of database or other
 persistence mechanism." The purpose is noble, but the implementation

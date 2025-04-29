@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "70/70"
 date: 2018-08-14
@@ -111,10 +114,9 @@ and a few decades, when I retire and my grandchildren inherit them.
 That's why I ask all those "offensive" questions upfront. If the other side does
 indeed get offended, I attempt to explain to them what I just said in this article.
 If they don't understand and still want to marry me out of love,
-I walk away. As [Paul Graham](http://www.paulgraham.com/startupmistakes.html), a co-founder of Y Combinator,
-[said](http://www.paulgraham.com/startupmistakes.html),
+I walk away. As [Paul Graham](https://www.paulgraham.com/startupmistakes.html), a co-founder of Y Combinator,
+[said](https://www.paulgraham.com/startupmistakes.html),
 "Most of the disputes I've seen between founders could have been avoided if they'd been more careful about
 who they started a company with." I don't want to start a business with
 those who are scared of a prenup. I know that in that case
 the divorce will be ugly.
-

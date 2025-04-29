@@ -1,9 +1,12 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Unspoken Secrets of an Elevator Pitch"
 date: 2016-03-28
 place: Palo Alto, CA
-tags: startup sarcasm
+tags: business sarcasm
 description: |
   The quality of your elevator pitch is the key
   success factor for your startup, so listen to this
@@ -21,10 +24,10 @@ jb_picture:
 
 Your success depends on the quality of your **elevator pitch**. Basically, your
 success doesn't depend on much of anything else. The pitch is king.
-You have to impress the <del>catcher</del> investor in just a few seconds while
+You have to impress the ~~catcher~~ investor in just a few seconds while
 the elevator is still moving (that's where you are supposed to hunt for that
 prey). It's not rocket science; you can learn a few basic
-principles and become a expert. Here they are, the principles.
+principles and become an expert. Here they are, the principles.
 
 <!--more-->
 
@@ -138,7 +141,7 @@ in such a huge and promising market?
 Especially if you're in a public place, you must speak as if you're
 a bit deaf. Be loud. That will prove that you're absolutely
 confident in what you're saying, today and always. The investor
-will be sure you are capable of attracting <del>mates</del> customers and
+will be sure you are capable of attracting ~~mates~~ customers and
 other investors, if for no other reason than because you're not afraid of being that ugly loud
 in public. You're 100% extrovert---you must demonstrate it
 shamelessly.

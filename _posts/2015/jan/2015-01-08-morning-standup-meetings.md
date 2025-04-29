@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Daily Stand-Up Meetings Are a Good Tool for a Bad Manager"
 date: 2015-01-08
@@ -96,7 +99,7 @@ and what problems they experienced. You would have seen this information earlier
 when you needed it. You would stay informed about your project affairs
 even outside of the office. Actually, you would not need an office at all,
 but that's a subject for
-[another discussion]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) :)
+[another discussion]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
 
 {% quote These morning meetings give the impression that the manager is working hard and well deserves his overblown salary. %}
 
@@ -116,7 +119,8 @@ regular status update meetings, because he knows how to use effective
 [communication instruments]({% pst 2016/aug/2016-08-23-communication-maturity %}),
 like issue tracking tools,
 [emails]({% pst 2017/apr/2017-04-18-no-help-via-email %}), code reviews,
-decision-making meetings, pair programming, etc.
+[decision-making meetings]({% pst 2023/aug/2023-08-15-decision-making-process %}),
+pair programming, etc.
 
 ## Responsibility
 

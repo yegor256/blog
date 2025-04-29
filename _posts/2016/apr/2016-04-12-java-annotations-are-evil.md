@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Java Annotations Are a Big Mistake"
 date: 2016-04-12
@@ -249,10 +252,10 @@ class Foo {
 ```
 
 I simplified the actual algorithm of retrying a method call on failure, but I'm
-sure you get the idea. [AspectJ](http://www.eclipse.org/aspectj/),
-the [AOP](http://en.wikipedia.org/wiki/Aspect-oriented_programming)
+sure you get the idea. [AspectJ](https://www.eclipse.org/aspectj/),
+the [AOP](https://en.wikipedia.org/wiki/Aspect-oriented_programming)
 engine, uses
-[`@RetryOnFailure`](http://aspects.jcabi.com/annotation-retryonfailure.html)
+[`@RetryOnFailure`](https://aspects.jcabi.com/annotation-retryonfailure.html)
 annotation as a signal, informing us that the class
 has to be wrapped into another one. This is happening behind the scenes. We don't
 see that supplementary class, which implements the retrying algorithm.
@@ -338,4 +341,3 @@ best method of instantiation is operator `new`. This operator is the key
 instrument for an OOP developer. Taking it away from us and giving us
 "configuration mechanisms" is an unforgivable
 [crime]({% pst 2015/nov/2015-11-24-imprisonment-for-irresponsible-coding %}).
-

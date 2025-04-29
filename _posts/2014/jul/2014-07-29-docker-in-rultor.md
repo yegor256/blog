@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Every Build in Its Own Docker Container"
 date: 2014-07-29
@@ -16,9 +19,9 @@ keywords:
   - unit tests in docker
 ---
 
-{% badge https://doc.rultor.com/images/docker-logo.png 100 http://www.docker.io %}
+{% badge https://doc.rultor.com/images/docker-logo.png 100 https://www.docker.io %}
 
-[Docker](http://www.docker.io) is a command line tool that
+[Docker](https://www.docker.io) is a command line tool that
 can run a shell command in a virtual Linux, inside an isolated file system.
 Every time we build our projects, we want them to run in their own
 Docker containers. Take this Maven project for example:

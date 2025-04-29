@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Fluent JDBC Decorator"
 date: 2014-08-18
@@ -15,10 +18,10 @@ keywords:
   - lightweight jdbc wrapper
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://aspects.jcabi.com %}
 
 This is how you fetch text from a SQL table
-with [jcabi-jdbc](http://jdbc.jcabi.com):
+with [jcabi-jdbc](https://jdbc.jcabi.com):
 
 ```java
 String name = new JdbcSession(source)
@@ -34,8 +37,8 @@ via JDBC, avoiding the need to use
 
 <!--more-->
 
-[jcabi-jdbc](http://jdbc.jcabi.com) is a lightweight wrapper of
-[JDBC](http://www.oracle.com/technetwork/java/javase/jdbc/index.html).
+[jcabi-jdbc](https://jdbc.jcabi.com) is a lightweight wrapper of
+[JDBC](https://www.oracle.com/technetwork/java/javase/jdbc/index.html).
 It is very convenient to use when you don't need a full-scale
 [ORM]({% pst 2014/dec/2014-12-01-orm-offensive-anti-pattern %})
 (like Hibernate), but want just to select, insert, or update
@@ -46,7 +49,7 @@ You start it by instantiating the class with a single parameter---data source.
 
 You can obtain the data source from your connection pool. There are many
 implementations of connection pools. I would recommend that you use
-[BoneCP](http://www.jolbox.com/). Below is an example of how you would connect to PostgreSQL:
+[BoneCP](https://www.jolbox.com/). Below is an example of how you would connect to PostgreSQL:
 
 ```java
 @Cacheable(forever = true)
@@ -69,11 +72,11 @@ to be created just once, and every second call should return its
 existing instance (kind of like a
 [Singleton pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})).
 
-[jcabi-jdbc](http://jdbc.jcabi.com) website explains how you
-can [insert](http://jdbc.jcabi.com/example-insert.html),
-[update](http://jdbc.jcabi.com/example-update.html), or
+[jcabi-jdbc](https://jdbc.jcabi.com) website explains how you
+can [insert](https://jdbc.jcabi.com/example-insert.html),
+[update](https://jdbc.jcabi.com/example-update.html), or
 delete a row. You can also
-[execute any SQL statement](http://jdbc.jcabi.com/example-execute.html).
+[execute any SQL statement](https://jdbc.jcabi.com/example-execute.html).
 
 By default, `JdbcSession` closes the JDBC connection right after the
 first select/update/insert operation. Simply put, it is designed
@@ -96,4 +99,3 @@ new JdbcSession(source)
 
 In this example we're executing three SQL statements one by one, leaving
 connection (and transaction) open until `commit()` is called.
-

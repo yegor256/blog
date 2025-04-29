@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How Data Visibility Hurts Maintainability"
 date: 2019-03-12
@@ -113,7 +116,7 @@ void print() {
 ```
 
 Now the variable `i` is visible not only inside the function `print()` but
-in <del>many</del> all other places of the application we develop. The scope
+in ~~many~~ all other places of the application we develop. The scope
 of visibility of `i` is the size of the entire code base. Needless to say that
 makes the code of function `print()` [very unreadable]({% pst 2018/jul/2018-07-03-global-variables %}).
 I simply can't know what value to expect in `i` when the execution of `print()` starts---I
@@ -138,7 +141,7 @@ They were.
 But then C++ showed up and ruined everything.
 
 Let's try to introduce an object to our C snippet, the way
-<del>most</del> some C++ programmers would do it:
+~~most~~ some C++ programmers would do it:
 
 ```cpp
 class Idx {
@@ -188,7 +191,7 @@ example made a promise to take part of the problem and let me never worry about 
 but in reality it only made the problem larger, by giving me back two problems:
 `print()` and `Idx`.
 
-{% badge /images/2019/03/bjarne-stroustrup-book.jpg 96 http://amzn.to/2uMlANB %}
+{% badge /images/2019/03/bjarne-stroustrup-book.jpg 96 https://amzn.to/2uMlANB %}
 
 Why is this thanks to C++? Because C++ added object-orientation on top of C procedural
 programming ideas, never even thinking about prohibiting some of them, to _force_
@@ -200,7 +203,7 @@ switch the paradigm from procedures and variables to objects and methods.
 methods and classes and said: "Use them, they are more convenient
 than variables, ... or maybe not, sometimes, ... I don't know"
 (I'm not sure it's his quote, but I believe that it's very close to what he
-had in mind). Read [his book](http://amzn.to/2uMlANB), and you will see how many pages are dedicated to
+had in mind). Read [his book](https://amzn.to/2uMlANB), and you will see how many pages are dedicated to
 the philosophy of object orientation and how many to the technicalities of
 operators and statements.
 

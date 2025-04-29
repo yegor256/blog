@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "EO the Career Killer"
 date: 2020-05-13
@@ -48,7 +51,7 @@ is a very alternative concept, provoking you, a junior programmer, to renounce e
 you've learned to date [about OOP]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %})
 and to start thinking differently. It sounds
 interesting while you are sitting in a room listening to my lecture, but it
-<del>may</del> will [hurt]({% pst 2019/nov/2019-11-05-revolutionary-evolution %})
+~~may~~ will [hurt]({% pst 2019/nov/2019-11-05-revolutionary-evolution %})
 you once you attend your first job interview.
 
 I've heard stories of people failing job interviews just after saying my
@@ -107,8 +110,9 @@ This is how you can truly join our community:
     and
     [@painofoop](https://t.me/painofoop) (for juniors);
 
-  * Write a blog about OOP, like [@skapral](https://www.pragmaticobjects.com/)
-    and [@g4s8](https://blog.g4s8.wtf/) are doing;
+  * Write a blog about OOP, like
+    [@skapral](https://www.pragmaticobjects.com/) (the link is dead, hopefully not forever)
+    and [@g4s8](https://g4s8.wtf/) are doing;
 
   * Create an open source framework or a library in the EO style
     and make it popular on GitHub

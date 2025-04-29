@@ -1,9 +1,12 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Growing Revenue May Kill Your Startup"
 date: 2016-04-08
 place: Palo Alto, CA
-tags: startup
+tags: business
 description: |
   Growing revenue looks very motivating for
   a startup founder, but it is a very big threat
@@ -32,7 +35,7 @@ growing revenue may kill it even faster.
 {% jb_picture_body %}
 
 I see this rather typical pattern in many startups we interview
-at [SeedRamp](http://www.seedramp.com). The idea is great, the prototype
+at [SeedRamp](https://www.seedramp.com). The idea is great, the prototype
 works, the first customers are on board, and the first payments are coming in.
 The founders are excited. They spend all their energy to make sure those
 first paying customers are happy by creating new features, fixing bugs, and employing
@@ -41,7 +44,7 @@ buyers and pay for marketing, promotion, and Google AdWords. The numbers
 grow every month and ... they don't realize they are
 actually _killing_ their own startup.
 
-{% badge http://www.seedramp.com/images/logo.svg 128 http://www.seedramp.com %}
+{% badge https://www.seedramp.com/images/logo.svg 128 https://www.seedramp.com %}
 
 If you're building a cafe, a bakery, a web development studio,
 or a bicycle repair shop, a growing customer base with stable revenue

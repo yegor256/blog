@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Gluten-Free Management Recipes"
 date: 2017-06-06
@@ -39,16 +42,16 @@ negativity, finger-pointing, or
 [honesty]({% pst 2015/jan/2015-01-05-how-to-be-honest-and-keep-customer %}).
 You must think positively and always find a balance somewhere between
 "you guys are good" and "you're just fantastic."
-You must be their full-hearted <del>clown</del> cheerleader!
+You must be their full-hearted ~~clown~~ cheerleader!
 Truth hurts and modern management is not about hurting people, it's about
 making them happy. You must be a permanent source of good news, funny
-stories, and smiles, shielding your <del>slaves</del> people
+stories, and smiles, shielding your ~~slaves~~ people
 from the reality and its threats.
 
 {% quote Truth hurts and modern management is not about hurting people, it's about making them happy. %}
 
 **Be Politically Correct**.
-How many [latinx](http://www.huffingtonpost.com/entry/why-people-are-using-the-term-latinx_us_57753328e4b0cc0fa136a159)
+How many [latinx](https://www.huffingtonpost.com/entry/why-people-are-using-the-term-latinx_us_57753328e4b0cc0fa136a159)
 are in your team? What about gays and transsexuals?
 You're not sure? That's wrong. You have to count. You don't know how to
 segregate bi-sexuals from "normal" people and black females from white males?
@@ -122,7 +125,7 @@ In other words, being a
 [good slave]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %})
 and showing your team a good example.
 Don't worry about the future, when projects fail good committers
-just commit <del>suicide</del> themselves to new projects.
+just commit ~~suicide~~ themselves to new projects.
 
 **Be a Friend**.
 Explicit and non-ambiguous work orders are not

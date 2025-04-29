@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Motivate Kids to Code"
 date: 2019-09-10
@@ -75,10 +78,10 @@ The majority of my projects are not alive anymore, especially the ones
 I created when I was a kid and a student (and I feel so sad about that).
 However, the outcome is obvious: I'm in the tech industry now and I can code in Java.
 
-{% quote Your job, as their parents, is to help them identify the right goals—this is where kids usually fail. %}
+{% quote Your job, as their parents, is to help them identify the right goals---this is where kids usually fail. %}
 
 So don't expect your kids to enjoy studying. Expect them to be interested
-in _building_ things and making <del>money</del> profit. Your job, as their parents, is
+in _building_ things and making ~~money~~ profit. Your job, as their parents, is
 to help them _identify_ the right goals---this is where kids usually fail because they
 don't have enough experience to judge what's more achievable and which are the largest risks.
 I remember trying to create a robot which was supposed to speak like a human.

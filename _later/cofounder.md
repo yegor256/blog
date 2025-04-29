@@ -1,9 +1,12 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Do You Really Need a Co-Founder?"
 date: 2016-06-20
 place: Palo Alto, CA
-tags: startups
+tags: business
 description: |
   Getting a co-founder on board seems to be an easy
   process, but very few of us actually understand
@@ -48,5 +51,3 @@ Everything is clear, cash is cash. But that's rarely the case. In most startups
 founders and co-founders have no cash. All they have is their time, which
 they are ready spend on building that house/startup. And that's where
 the situation becomes more complicated and leads to ugly conflicts.
-
-

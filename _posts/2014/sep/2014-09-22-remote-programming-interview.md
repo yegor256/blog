@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Remote Programming in Teamed.io"
 date: 2014-09-22
@@ -19,9 +22,9 @@ noindex: true
 <iframe class='video' src='https://www.youtube.com/embed/TWBBZK_XRNU?controls=2' allowfullscreen='true'></iframe>
 
 Here is an interview taken by Lisette Sutherland from
-[www.CollaborationSuperpowers.com](http://www.collaborationsuperpowers.com),
+[www.CollaborationSuperpowers.com](https://www.collaborationsuperpowers.com),
 a few hours ago,
-which I enjoyed to give :)
+which I enjoyed to give.
 
 <!--more-->
 
@@ -71,4 +74,4 @@ I answered these questions (approximately):
 
  * How do we find clients (42:29)?
 
-Enjoy :)
+Enjoy!

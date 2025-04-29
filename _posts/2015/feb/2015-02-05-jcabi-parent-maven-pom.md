@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Don't Repeat Yourself in Maven POMs; Use Jcabi-Parent"
 date: 2015-02-05
@@ -15,7 +18,7 @@ keywords:
   - parent pom maven
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
 
 Maven is a build automation tool mostly for Java projects. It's a great
 tool, but it has one important drawback that has motivated the creation
@@ -39,21 +42,21 @@ what code duplication means. It's a disaster. However, there is a solution.
 
 <!--more-->
 
-[jcabi-parent](http://parent.jcabi.com) is a very simple Maven dependency
+[jcabi-parent](https://parent.jcabi.com) is a very simple Maven dependency
 with nothing inside it except a large `pom.xml` with multiple pre-configured
 dependencies, profiles, and plugins. All you need to do in order to reuse them
 all in your project is define `com.jcabi:parent` as your parent POM:
 
 ```xml
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-    http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://maven.apache.org/POM/4.0.0
+    https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.jcabi</groupId>
     <artifactId>parent</artifactId>
-    <!-- check the latest version at http://parent.jcabi.com -->
+    <!-- check the latest version at https://parent.jcabi.com -->
     <version>0.32.1</version>
   </parent>
   [...]

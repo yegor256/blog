@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Wring.io, a Dispatcher of GitHub Notifications"
 date: 2016-03-15
@@ -15,7 +18,7 @@ keywords:
   - read github notifications
 ---
 
-{% badge http://www.wring.io/images/logo.svg 92 http://www.wring.io %}
+{% badge https://www.wring.io/images/logo.svg 92 https://www.wring.io %}
 
 I'm taking participation in over 50 repositories in GitHub. [We](https://www.zerocracy.com)
 manage all of our projects there. GitHub is sending me hundreds of emails
@@ -24,18 +27,18 @@ but it's not really possible. Gmail filters are not powerful enough to
 understand the difference between different types of notifications, and there
 are many other problems.
 I decided to create my own simple filtering machine. It's called
-[wring.io](http://www.wring.io).
+[wring.io](https://www.wring.io).
 
 <!--more-->
 
 The idea of wring.io is simple. First, I'm registering my sources
 of notifications (called "pipes"), such as GitHub. Then I'm giving
-[wring.io](http://www.wring.io) permission
+[wring.io](https://www.wring.io) permission
 to connect to GitHub on my behalf and fetch whatever is new there.
 
 Then I'm configuring what should be filtered out, using text matching and/or
 regular expressions. Right after a new pipe is created,
-[wring.io](http://www.wring.io) starts pulling all my sources and updating my inbox.
+[wring.io](https://www.wring.io) starts pulling all my sources and updating my inbox.
 All I need to do is delete new messages from my inbox when I'm done with them.
 That's it.
 

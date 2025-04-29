@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Shift-M/26"
 date: 2018-02-04 12:00:00
@@ -20,7 +23,7 @@ image: /images/andreea/podcast.png
 
 <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/432135660%3Fsecret_token%3Ds-M4ZgN&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
 
-[James Bach](http://www.satisfice.com/) was a special guest.
+[James Bach](https://www.satisfice.com/) was a special guest.
 He is very famous in the area of software testing, a regular
 speaker, book author, blogger, and a practitioner.
 

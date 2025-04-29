@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Team Morale: Myths and Reality"
 date: 2015-03-02
@@ -214,4 +217,3 @@ your chair. Why don't most managers do this? Because they don't have any
 [rationale]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %})
 behind their monetary decisions. Instead of managing the money,
 they let money manage them.
-

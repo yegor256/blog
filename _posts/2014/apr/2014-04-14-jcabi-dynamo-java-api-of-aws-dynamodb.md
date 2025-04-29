@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Object-Oriented DynamoDB API"
 date: 2014-04-14
@@ -15,7 +18,7 @@ keywords:
   - java dynamodb query example
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://dynamo.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://dynamo.jcabi.com %}
 
 I'm a big fan of cloud computing in general and of
 [Amazon Web Services](http://aws.amazon.com/) in particular. I honestly believe that in a
@@ -30,8 +33,8 @@ future.
 
 <!--more-->
 
-DynamoDB is a [NoSQL](http://en.wikipedia.org/wiki/NoSQL) database accessible
-through [RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer)
+DynamoDB is a [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database accessible
+through [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer)
 JSON API. Its design is relatively simple. There are tables, which basically
 are collections of data structures, or in AWS terminology, "items."
 
@@ -51,7 +54,7 @@ optional attributes. For instance, take the example table `depts`:
 For Java, Amazon provides an
 [SDK](https://aws.amazon.com/documentation/sdkforjava/), which mirrors all
 RESTful calls to Java methods. The SDK works fine, but is designed in a pure
-[procedural](http://en.wikipedia.org/wiki/Procedural_programming) style.
+[procedural](https://en.wikipedia.org/wiki/Procedural_programming) style.
 
 Let's say we want to add a new item to the table above. RESTful call
 [`putItem`](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_PutItem.html)
@@ -88,12 +91,12 @@ try {
 
 The above script works fine, but there is one major drawback---it is not
 object oriented. It is a perfect example of an imperative [procedural
-programming](http://en.wikipedia.org/wiki/Procedural_programming).
+programming](https://en.wikipedia.org/wiki/Procedural_programming).
 
 To allow you to compare, let me show what I've done with
-[jcabi-dynamo](http://dynamo.jcabi.com). Here is my code, which does exactly the
+[jcabi-dynamo](https://dynamo.jcabi.com). Here is my code, which does exactly the
 same thing, but in an
-[object-oriented](http://en.wikipedia.org/wiki/Object-oriented_programming) way:
+[object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) way:
 
 ```java
 Region region = // instantiate it with credentials
@@ -109,10 +112,10 @@ Item item = table.put(
 My code is not only shorter, but it also employs
 [encapsulation]({% pst 2016/nov/2016-11-21-naked-data %}) and separates
 responsibilities of classes.
-[`Table`](http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Table.html)
+[`Table`](https://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Table.html)
 class (actually it is an interface internally implemented by a class)
 encapsulates information about the table, while
-[`Item`](http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html)
+[`Item`](https://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html)
 encapsulates item details.
 
 We can pass an `item` as an argument to another method and all DynamoDB related
@@ -127,9 +130,9 @@ void sayHello(Item item) {
 
 In this script, we don't know anything about DynamoDB or how to deal with its
 RESTful API. We interact solely with an instance of
-[`Item`](http://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html) class.
+[`Item`](https://dynamo.jcabi.com/apidocs-0.10/com/jcabi/dynamo/Item.html) class.
 
-By the way, all public entities in [jcabi-dynamo](http://dynamo.jcabi.com) are
+By the way, all public entities in [jcabi-dynamo](https://dynamo.jcabi.com) are
 Java interfaces. Thanks to that, you can test and mock the library completely
 (but I would recommend to use
 [DynamoDB Local]({% pst 2014/may/2014-05-01-dynamodb-local-maven-plugin %})
@@ -148,12 +151,12 @@ while (workers.hasNext()) {
 }
 ```
 
-[jcabi-dynamo](http://dynamo.jcabi.com) has saved a lot of code lines in a few
+[jcabi-dynamo](https://dynamo.jcabi.com) has saved a lot of code lines in a few
 of my projects. You can see it in action at
 [rultor-users](https://github.com/rultor/rultor/tree/rultor-0.2/rultor-users/src/main/java/com/rultor/users).
 
 The library ships as a JAR dependency in [Maven
-Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-dynamo)
+Central](https://repo1.maven.org/maven2/com/jcabi/jcabi-dynamo)
 (get its latest versions from [Maven Central](http://search.maven.org/)):
 
 ```xml

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Elegant READMEs"
 date: 2019-04-23
@@ -41,7 +44,7 @@ of the project is in the GitHub subtitle. Why repeat yourself? Instead,
 start with a logo and a list of badges right after it:
 
 ```text
-<img src="http://www.takes.org/logo.png" height="64px"/>
+<img src="https://www.takes.org/logo.png" height="64px"/>
 
 [![Build Status](https://travis-ci.org/zold-io/zold.svg?branch=master)](https://travis-ci.org/zold-io/zold)
 ```

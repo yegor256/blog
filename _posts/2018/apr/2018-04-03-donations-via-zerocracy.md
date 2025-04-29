@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Fully Transparent Donations via Zerocracy"
 date: 2018-04-03
@@ -37,7 +40,7 @@ At least that's what I feel when I see a [Patreon](https://patreon.com/) button.
 
 [Zerocracy](https://www.zerocracy.com) is a platform that manages programmers remotely.
 Moreover, it's absolutely [free](https://www.zerocracy.com/policy.html#23) for open source projects. Take a
-look at [Cactoos](http://www.cactoos.org) or [Takes](http://www.takes.org)---they
+look at [Cactoos](https://www.cactoos.org) or [Takes](https://www.takes.org)---they
 are both managed by
 [Zerocrat]({% pst 2018/mar/2018-03-21-zerocracy-announcement %}). These projects
 are funded by myself. I add money to Zerocracy out of my pocket and Zerocracy
@@ -85,5 +88,3 @@ The advantage of this approach, compared to, for example,
 be distributed in micro-payments and will be fully traceable. I believe
 that this makes a difference for donators---they are interested to see
 how their money is being used.
-
-

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Atomic Counters at Stateful.co"
 date: 2014-05-18
@@ -58,7 +61,7 @@ a few times in case of collisions.
 {% badge http://img.stateful.co/pomegranate.svg 128 %}
 
 To make life easier in a few of my applications, I created a simple web
-service---[stateful.co](http://www.stateful.co).
+service---[stateful.co](https://www.stateful.co).
 It provides a simple atomic counter feature through its RESTful API.
 
 <!--more-->
@@ -66,17 +69,17 @@ It provides a simple atomic counter feature through its RESTful API.
 First, you create a counter with a unique name. Then,
 you set its initial value (it is zero by default). And, that's it.
 Every time you need to obtain a new value for `id` column in
-DynamoDB table, you make an HTTP request to [stateful.co](http://www.stateful.co)
+DynamoDB table, you make an HTTP request to [stateful.co](https://www.stateful.co)
 asking to
 increment your counter by one and return its next value.
 
-[stateful.co](http://www.stateful.co) guarantees that values
+[stateful.co](https://www.stateful.co) guarantees that values
 returned will never duplicate each other---no matter how many
 clients are using a counter or how fast they request increments simultaneously.
 
 Moreover, I designed a small [Java SDK](https://github.com/sttc/java-sdk)
-for [stateful.co](http://www.stateful.co). All you need to do is add
-this [java-sdk.jar](http://repo1.maven.org/maven2/co/stateful/java-sdk/)
+for [stateful.co](https://www.stateful.co). All you need to do is add
+this [java-sdk.jar](https://repo1.maven.org/maven2/co/stateful/java-sdk/)
 Maven dependency to your project:
 
 ```xml
@@ -87,7 +90,7 @@ Maven dependency to your project:
 </dependency>
 ```
 
-And, you can use [stateful.co](http://www.stateful.co) counters from Java code:
+And, you can use [stateful.co](https://www.stateful.co) counters from Java code:
 
 ```java
 Sttc sttc = new RtSttc(
@@ -101,6 +104,6 @@ System.out.println("new value: " + value);
 ```
 
 You can review authentication parameters for `RtSttc`
-constructor at [stateful.co](http://www.stateful.co).
+constructor at [stateful.co](https://www.stateful.co).
 
 The service is absolutely free of charge.

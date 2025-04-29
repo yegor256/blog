@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: static
 title: "Get a Training"
 description: |
@@ -75,12 +78,6 @@ or your DevOps processes are lacking stability. No matter what are your specific
 a one-day discussion will seriously boost the performance of the team. This
 is the investment you make in your people, which will come back ten fold.
 
-The price: $3,600 (plus travel expenses).
-
-The duration: 6 hours (six 45 minute slots with QA sessions between them).
-
-Ready?
-
 <div style="background-color:darkgreen;padding:.5em 1em;color:white;">
   <a href="mailto:training@yegor256.com">Email</a>
   or text us in
@@ -103,7 +100,7 @@ March 2017, 12 people
 "Большинству тренинг понравился. Некоторые услышали Ваши идеи впервые и отнеслись к ним настороженно.
 В любом случае все получили возможность услышать альтернативную точку зрения на практики ООП.
 Понравилась Ваша манера подачи материала, все очень конкретно и на примерах.
-Бывает, что лектор на вопросы, --- 'А что делать, если вот так и так у меня в коде?'
+Бывает, что лектор на вопросы,---'А что делать, если вот так и так у меня в коде?'
 уклончиво отвечает, что надо смотреть по ситуации и т.п. В отличие от таких лекторов
 у Вас все конкретно, если с чем-то не сталкивались или не согласны, то так и говорите.
 Большое спасибо за тренинг!"<br/>

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Are You a Coder or a Developer?"
 date: 2018-01-23
@@ -62,7 +65,7 @@ yes, exactly because of that. I am lazy and don't want to answer any questions o
 My answers will be totally wasted, if you, for example, quit the project
 tomorrow. Or if someone else joins us in a week and has
 exactly the same set of questions. Do I have to explain all over again? I'm too
-<del>old</del> lazy for that."
+~~old~~ lazy for that."
 
 He most probably thinks that I'm an [arrogant prick](/testimonials.html), but what can he do? He
 reads [my article]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %})
@@ -117,4 +120,3 @@ likely won't have these skills.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">A fellow programmer asks you to explain how the class, which you created some time ago, works. What do you do? <a href="https://twitter.com/hashtag/sociotech?src=hash&amp;ref_src=twsrc%5Etfw">#sociotech</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/985439928430538752?ref_src=twsrc%5Etfw">April 15, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-

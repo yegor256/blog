@@ -8,14 +8,11 @@ rss.xml
 sitemap.xml
 talks.html
 best.html
-jcg.html
 contents.html
 css
 css/layout.css
-css/icons.css
 js
 js/all.js
-rss-jcg.xml
 txt
 txt/2015/award-2015.txt
 p/5

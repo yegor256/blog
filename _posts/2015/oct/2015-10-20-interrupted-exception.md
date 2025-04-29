@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "What Do You Do With InterruptedException?"
 date: 2015-10-20
@@ -232,4 +235,4 @@ a runtime exception. What happens next, we don't care.
 
 I think that's it. You can find a more detailed and official description
 of this problem here:
-[Java Theory and Practice: Dealing With `InterruptedException`](http://www.ibm.com/developerworks/library/j-jtp05236/).
+[Java Theory and Practice: Dealing With `InterruptedException`](https://www.ibm.com/developerworks/library/j-jtp05236/).

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: static
 title: "Elegant Objects Reviews"
 description: |
@@ -26,7 +29,7 @@ interesting ones here, from all possible sources, including Amazon,
 GoodReads, email, chats, etc. There is no particular order in this list.
 
 [David West](http://davewest.us/),
-Author of [Object Thinking](http://amzn.to/2ass77O):<br/>
+Author of [Object Thinking](https://amzn.to/2ass77O):<br/>
 "Yegor Bugayenko's books, Elegant Objects I & II, show you how to
 correctly and elegantly implement the object concept in code; while all
 other books show you how to use code to warp and corrupt the object concept."
@@ -50,4 +53,3 @@ Co-founder of [DevTernity](http://devternity.com/):<br/>
 [Anton Chernousov](https://www.amazon.com/gp/customer-reviews/R1PLMTYQ0BP6XM/),
 Founder of [The Art of Programming](https://theartofprogramming.podbean.com/):<br/>
 "It is one of the best books if you have a lot of experience in different projects."
-

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Object-Oriented Declarative Input/Output in Cactoos"
 date: 2017-06-22
@@ -16,9 +19,9 @@ keywords:
   - input/output cactoos
 ---
 
-{% badge /images/books/elegant-objects/cactus.svg 92 http://www.cactoos.org %}
+{% badge /images/books/elegant-objects/cactus.svg 92 https://www.cactoos.org %}
 
-[Cactoos](http://www.cactoos.org) is a library of object-oriented
+[Cactoos](https://www.cactoos.org) is a library of object-oriented
 Java primitives
 [we](https://github.com/yegor256/cactoos#contributors)
 started to work on just a few weeks ago. The intent was to
@@ -198,7 +201,7 @@ How will you modify this class? How ugly will it look after that?
 That's because the design is not object-oriented.
 
 This is how you would do the same design, in an object-oriented way,
-with [Cactoos](http://www.cactoos.org):
+with [Cactoos](https://www.cactoos.org):
 
 ```java
 class Encoder {

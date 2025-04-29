@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Inheritance Is a Procedural Technique for Code Reuse"
 date: 2016-09-13
@@ -29,17 +32,17 @@ is bad and that
 is a
 [good idea](http://programmers.stackexchange.com/questions/65179),
 but do we really understand why?
-In <del>most</del> all articles
+In ~~most~~ all articles
 [I've found](https://www.google.com/search?q=inheritance+is+bad)
 addressing this subject, authors have said that inheritance may be harmful
 to your code, so it's better not to use it. This "better" part is what bothers me;
 does it mean that sometimes inheritance makes sense?
 I interviewed [David West](http://davewest.us/)
-(the author of [Object Thinking](http://amzn.to/266oJr4), my favorite book about OOP)
+(the author of [Object Thinking](https://amzn.to/266oJr4), my favorite book about OOP)
 a few weeks ago, and he said that inheritance should not exist in
 object-oriented programming at all ([full video](https://www.youtube.com/watch?v=s-hdZZzMCac)).
 Maybe Dr. West is right and we should totally forget `extends` keyword in Java,
-for example.
+for example?
 
 <!--more-->
 
@@ -48,11 +51,11 @@ for example.
 I think we should. And I think I know the reason why.
 
 It's not because we introduce unnecessary coupling, as Allen Holub said in his
-[Why extends is evil](http://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html) article.
+[Why extends is evil](https://www.javaworld.com/article/2073649/core-java/why-extends-is-evil.html) article.
 He was definitely right, but I believe it's not the root cause of the problem.
 
 "Inherit," as an English verb, has a number of meanings.
-[This one](http://www.oxforddictionaries.com/us/definition/american_english/inherit)
+[This one](https://www.oxforddictionaries.com/us/definition/american_english/inherit)
 is what inheritance inventors in [Simula](https://en.wikipedia.org/wiki/Simula) had in mind, I guess:
 "Derive (a quality, characteristic, or predisposition) genetically from one's parents or ancestors."
 
@@ -86,7 +89,7 @@ is exactly that---copying---and it has nothing to do with the meaning
 of the word "inherit" I quoted above.
 
 Implementation inheritance is much closer to a different
-[meaning](http://www.oxforddictionaries.com/us/definition/american_english/inherit):
+[meaning](https://www.oxforddictionaries.com/us/definition/american_english/inherit):
 "Receive (money, property, or a title) as an heir at the death of the previous holder."
 Who is dead, you ask? An object is dead if it allows other objects to
 _inherit_ its encapsulated code and data. This is implementation
@@ -111,12 +114,12 @@ from class `Manuscript`, as if it's not a
 [living organism]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}), but rather a dead
 one from which we can inherit its parts, "money, properties, or a title."
 
-{% badge /images/2015/04/book-object-thinking.jpg 96 http://amzn.to/266oJr4 %}
+{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
 
 Implementation inheritance was created as a mechanism for
 [code reuse](https://en.wikipedia.org/wiki/Code_reuse),
 and it doesn't fit into OOP at all. Yes, it may look convenient in the
-beginning, but it is absolutely wrong in terms of [object thinking](http://amzn.to/266oJr4).
+beginning, but it is absolutely wrong in terms of [object thinking](https://amzn.to/266oJr4).
 Just like [getters and setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 implementation inheritance turns
 objects into _containers_ with data and procedures. Of course, it's
@@ -124,7 +127,7 @@ convenient to copy some of those data and procedures to a new object
 in order to avoid code duplication. But this is not what objects are about. They
 are not dead; they are alive!
 
-Don't _kill_ them with inheritance :)
+Don't _kill_ them with inheritance!
 
 Thus, I think inheritance is bad because it is a _procedural_ technique for _code reuse_.
 It comes as no surprise that it introduces all the problems people have been talking about for years.

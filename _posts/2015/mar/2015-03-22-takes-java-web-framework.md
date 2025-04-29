@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Java Web App Architecture In Takes Framework"
 date: 2015-03-22
@@ -32,7 +35,7 @@ classes, and 4) no class casting, reflection,
 and [`instanceof`]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %})
 operators. These four basic principles should guarantee
 clean code and transparent architecture. That's how the
-[Takes](http://www.takes.org) framework was born.
+[Takes](https://www.takes.org) framework was born.
 Let's see what was created and how it works.
 
 <!--more-->
@@ -47,8 +50,8 @@ components, in simple terms.
 {% youtube nheD2LNYrpk %}
 
 First, to create a web server, we should create
-a new [network socket](http://en.wikipedia.org/wiki/Network_socket),
-that accepts connections on a certain [TCP port](http://en.wikipedia.org/wiki/Port_%28computer_networking%29).
+a new [network socket](https://en.wikipedia.org/wiki/Network_socket),
+that accepts connections on a certain [TCP port](https://en.wikipedia.org/wiki/Port_%28computer_networking%29).
 Usually it is 80, but I'm going to use 8080 for testing purposes.
 This is done in Java with the [`ServerSocket`](http://docs.oracle.com/javase/7/docs/api/java/net/ServerSocket.html) class:
 
@@ -189,7 +192,7 @@ Hello, world!
 ```
 
 That's all you need to build a web server. Now let's discuss how to make
-it object-oriented and composable. Let's try to see how the [Takes](http://www.takes.org)
+it object-oriented and composable. Let's try to see how the [Takes](https://www.takes.org)
 framework was built.
 
 ## Routing/Dispatching
@@ -236,7 +239,7 @@ Obviously, `Exit.NEVER` always responds with, "Don't stop, please."
 Now let's see what's inside the HTTP request arriving at `TkFoo` and what
 we can get out of it. This is how the
 [`Request`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html)
-interface is defined in [Takes](http://www.takes.org):
+interface is defined in [Takes](https://www.takes.org):
 
 ```java
 public interface Request {
@@ -248,7 +251,7 @@ public interface Request {
 The request is divided into two parts: the head and the body. The head
 contains all lines that go before the empty line that starts
 a body, according to HTTP specification in
-[RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html). There are many useful
+[RFC 2616](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html). There are many useful
 decorators for `Request` in the framework. For example, `RqMethod` will
 help you get the method name from the first line of the header:
 
@@ -340,10 +343,10 @@ If you're using Maven, this is the `pom.xml` you should start with:
 
 ```xml
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-    http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="https://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://maven.apache.org/POM/4.0.0
+    https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>foo</groupId>
   <artifactId>foo</artifactId>
@@ -569,8 +572,8 @@ in terms of [MVC]({% pst 2016/dec/2016-12-13-mvc-vs-oop %}).
 
 I'll write a separate article about templating with Xembly and XSL very soon.
 
-In the meantime, we'll create decorators for [JSF/Facelets](http://en.wikipedia.org/wiki/Facelets)
-and [JSP](http://en.wikipedia.org/wiki/JavaServer_Pages) rendering
+In the meantime, we'll create decorators for [JSF/Facelets](https://en.wikipedia.org/wiki/Facelets)
+and [JSP](https://en.wikipedia.org/wiki/JavaServer_Pages) rendering
 in Takes. If you're interested in helping, please fork the framework
 and submit your pull requests.
 
@@ -585,7 +588,7 @@ constructors of custom _takes_.
 For example, we have a PostgreSQL database that contains
 some table data that we need to render. Here is how I would
 initialize a connection to it in the `Entry` class (I'm using
-a [BoneCP](http://www.jolbox.com/) connection pool):
+a [BoneCP](https://www.jolbox.com/) connection pool):
 
 ```java
 public final class Entry {
@@ -653,7 +656,7 @@ public final class TkIndexTest {
 
 Also, we can start the entire application or any individual _take_ in a
 test HTTP server and test its behavior via a real TCP socket; for example
-(I'm using [jcabi-http](http://http.jcabi.com) to make an HTTP request and check the output):
+(I'm using [jcabi-http](https://http.jcabi.com) to make an HTTP request and check the output):
 
 ```java
 public final class TkIndexTest {

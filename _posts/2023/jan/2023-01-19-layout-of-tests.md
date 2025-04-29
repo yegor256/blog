@@ -1,9 +1,12 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "On the Layout of Tests"
 date: 2023-01-19
 place: Moscow, Russia
-tags: tests
+tags: testing
 description: |
   What is the right way to keep test classes in a repository?
   There is no single canonical approach, but a few principles may help
@@ -34,31 +37,31 @@ So let's try to find a better answer.
 
 {% jb_picture_body %}
 
-The primary purpose of my unit tests is to help me code. They are the 
-[safety net]({% pst 2022/jul/2022-07-05-safety-net %}) --- 
-they catch me when I make a mistake. For example, let's say I go back and edit a few files that I 
+The primary purpose of my unit tests is to help me code. They are the
+[safety net]({% pst 2022/jul/2022-07-05-safety-net %})---they
+catch me when I make a mistake. For example, let's say I go back and edit a few files that I
 edited a few years ago and, of course, I do it wrong this time. Then, I run all 500 unit tests
-in the project, and ... ten of them turn red. Pay attention, I don't say "fail" because, 
-just like a safety net around a building, failed tests are the tests 
+in the project, and ... ten of them turn red. Pay attention, I don't say "fail" because,
+just like a safety net around a building, failed tests are the tests
 that didn't catch a falling hammer and didn't spot a bug just introduced.
 Thus, 490 of them _failed_, but ten of them _succeeded_.
 
 
 ## Assertions
 
-Next, I scratch my head and think --- what exactly did I do wrong? Which 
-file did I break? I just changed a few dozen code lines. Where exactly was the 
-mistake? In order to find out, I read the output of the tests. I expect 
-the messages they print to the console to be descriptive enough to 
-help me understand the problem. I don't want to revert all my changes 
-and start from scratch, right? I want to quickly jump to the line with 
-the bug, fix it, rerun all 500 tests, see all of them green, 
+Next, I scratch my head and think---what exactly did I do wrong? Which
+file did I break? I just changed a few dozen code lines. Where exactly was the
+mistake? In order to find out, I read the output of the tests. I expect
+the messages they print to the console to be descriptive enough to
+help me understand the problem. I don't want to revert all my changes
+and start from scratch, right? I want to quickly jump to the line with
+the bug, fix it, rerun all 500 tests, see all of them green,
 commit my changes and call it a day.
 
-Needless to say, descriptive messages of test assertions 
+Needless to say, descriptive messages of test assertions
 and proper naming of test methods are the recipe for success.
-Let's consider simple object Phrases, where we add 
-a few English phrases, and it magically understands which 
+Let's consider simple object Phrases, where we add
+a few English phrases, and it magically understands which
 of them are greetings (obviously, using ML).
 For such a class, this Java/JUnit5 test would be very bad:
 
@@ -75,7 +78,7 @@ void test1() {
 ```
 
 While this test is much better, thanks to [Hamcrest](https://www.hamcrest.org)
-assertions (how to name test methods --- is a separate
+assertions (how to name test methods---is a separate
 story explained in detail [here](https://stackoverflow.com/questions/155436/)):
 
 ```java
@@ -105,8 +108,8 @@ Descriptive messages will help me understand what the problem is.
 However, will I know _where_ the problem is? In which Java class? Not really.
 Is it in `Phrases.java,` or maybe in `Greetings.java,` which is returned by `Phrases.greetings()`?
 I can only get this information from the _name_ of the test class.
-If it's called `PhrasesTest.java` --- all bugs that it catches _are most probably_
-located in `Phrases.java.` If it's called `GreetingsTest.java` --- ... well, you get the idea.
+If it's called `PhrasesTest.java`---all bugs that it catches _are most probably_
+located in `Phrases.java.` If it's called `GreetingsTest.java`---... well, you get the idea.
 
 My point is that the name of a test class is not just a name. It's an instruction
 for a wondering programmer:
@@ -114,15 +117,15 @@ for a wondering programmer:
 removing the `Test` suffix." If I try to follow this instruction and
 it leads me nowhere, I get very frustrated, especially if the project
 is not mine. I can't get the required information from anywhere else.
-The name of the test class is my last hope. By the way, we can use [this](https://github.com/volodya-lombrozo/test-naming-conventions) to control naming of tests in Java.
+The name of the test class is my last hope. By the way, we can use [volodya-lombrozo/jtcop](https://github.com/volodya-lombrozo/jtcop) to control naming of tests in Java.
 
 ## Very Long Test Classes
 
 What if a test class gets too long? It may have a few dozen or more test methods. We don't
-want a class to be too big, right? Wrong! A test class is not a class. It's not even 
+want a class to be too big, right? Wrong! A test class is not a class. It's not even
 a utility class. It's a container for test scripts. It's called a class because
-Java (and many other languages) do not have alternative code 
-organization instruments. So don't worry about your test classes getting excessively long. 5000 lines of code 
+Java (and many other languages) do not have alternative code
+organization instruments. So don't worry about your test classes getting excessively long. 5000 lines of code
 in a test class is _not a problem_ at all. Again, because it's not a class, it's only
 a collection of test scripts.
 
@@ -302,7 +305,7 @@ src/
 ```
 
 Pay attention to the test `FactoryOfPhrasesTest.` It tests the "fake" object `FactoryOfPhrases,`
-which is part of the live classes collection. The factory of phases is shipped together
+which is part of the live classes collection. The factory of phrases is shipped together
 with all other classes. Therefore, it can be used by other projects and not only for test
 purposes.
 
@@ -330,16 +333,16 @@ verify
 ```
 
 First, the resources needed for integration testing are acquired
-at the `pre-integration-test` phase. For example, a test instance of MySQL 
-database may be started. Then, the tests with `ITCase` are executed at the ‘integration-test' phase. The 
-result of their execution is ignored for now but only recorded in a file. 
+at the `pre-integration-test` phase. For example, a test instance of MySQL
+database may be started. Then, the tests with `ITCase` are executed at the ‘integration-test' phase. The
+result of their execution is ignored for now but only recorded in a file.
 Then, the resources are released at the `post-integration-test` phase.
-For example, the MySQL server is shut down. Finally, at the `verify` phase, 
-the results of the tests are verified, and the build fails if 
+For example, the MySQL server is shut down. Finally, at the `verify` phase,
+the results of the tests are verified, and the build fails if
 some of them are not green.
 
 I keep `ITCase` files together with `Test` files only when they are
-integration tests for specific live classes. Very often, they are not --- that's why
+integration tests for specific live classes. Very often, they are not---that's why
 they are integration tests. They may integrate and test a number of classes together.
 In this case, I put them in a separate package and gave them arbitrary names
 that don't match with the names of live classes:
@@ -375,4 +378,3 @@ annotated with `@Test` (in the case of Java).
 Then, there is the second rule:
 a package with tests may only have classes with `Test` or `ITCase` suffices
 that map one-to-one to live classes and nothing else.
-

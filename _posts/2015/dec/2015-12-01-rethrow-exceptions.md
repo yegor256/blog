@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Throwing an Exception Without Proper Context Is a Bad Habit"
 date: 2015-12-01
@@ -127,7 +130,7 @@ difficult, especially in production, where it's
 almost impossible to reproduce the problem right away.
 
 Thus, please be more verbose in your exception messages. I will do the same
-in my code :)
+in my code.
 
 And one more thing before you go. In most OOP languages, exceptions
 are unchecked, which means that catching them is not a mandatory

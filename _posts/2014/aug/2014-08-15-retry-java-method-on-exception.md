@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Retry Java Method Call on Exception"
 date: 2014-08-15
@@ -15,13 +18,13 @@ keywords:
   - java method re-run
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://aspects.jcabi.com %}
 
 If you have a method that fails occasionally and
 you want to retry it a few times before
 [throwing]({% pst 2015/dec/2015-12-01-rethrow-exceptions %})
-an exception. [`@RetryOnFailure`](http://aspects.jcabi.com/annotation-retryonfailure.html) from
-[jcabi-aspects](http://aspects.jcabi.com) can help.
+an exception. [`@RetryOnFailure`](https://aspects.jcabi.com/annotation-retryonfailure.html) from
+[jcabi-aspects](https://aspects.jcabi.com) can help.
 For example, if you're downloading the following web page:
 
 ```java
@@ -41,7 +44,7 @@ failed executions with a ten seconds interval between them.
 <!--more-->
 
 [This post]({% pst 2014/jun/2014-06-01-aop-aspectj-java-method-logging %})
-explains how [jcabi-aspects](http://aspects.jcabi.com)
+explains how [jcabi-aspects](https://aspects.jcabi.com)
 works with binary weaving. This mechanism integrates AspectJ with
 your code.
 

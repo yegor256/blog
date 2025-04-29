@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "A Chatbot Is Better Than a UI for a Microservice"
 date: 2015-11-03
@@ -231,7 +234,7 @@ interacts with GitHub. Mistakes are less visible. Trust me, we have
 had **many of them** over the 18 months that Rultor has been in public use.
 We've had downtimes, we've had serious logical mistakes, and we've had data corruption.
 But very rarely have these problems become visible online. We merely saw them
-in our server logs. Users didn't see them. Well, mostly :)
+in our server logs. Users didn't see them. Well, mostly.
 
 ## Everything Is Traceable
 
@@ -272,7 +275,7 @@ to some extent, this approach is feasible, I believe.
 
 I didn't go too far with this idea, but something was done. We have
 a messaging platform that allows multiple chatbots to communicate
-with users. It's called [Netbout](http://www.netbout.com). It's a very
+with users. It's called [Netbout](https://www.netbout.com). It's a very
 primitive web system with isolated discussions. Simply put, anyone
 can create a new discussion, invite a few friends, and post messages there.
 Both users and chatbots can do that.
@@ -283,7 +286,7 @@ the candidate clicks the "Submit" button, a new discussion starts, and the first
 chatbot decides who should [interview]({% pst 2016/mar/2016-03-01-how-we-interview-programmers %})
 that person. The decision is made
 according to the skills listed in the form. The chatbot invites one of our
-[best programmers](http://www.teamed.io/#check-out-ourbest-developers)
+[best programmers](https://www.teamed.io/#check-out-ourbest-developers)
 to conduct the interview. When the interview is done, another chatbot explains to
 the candidate what the next steps are, registers him or her in our
 database, and starts to show the progress of work.

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "What Is the Difference Between Ridley Scott and Joseph Goebbels?"
 date: 2015-10-16
@@ -19,7 +22,7 @@ jb_picture:
   caption: Кубанские казаки (1950) by Иван Пырьев
 ---
 
-I saw [The Martian](http://www.imdb.com/title/tt3659388/)
+I saw [The Martian](https://www.imdb.com/title/tt3659388/)
 this weekend, and it triggered a few thoughts. Of course, I didn't like
 the movie as a
 [piece of art]({% pst 2014/apr/2014-04-06-movies-for-thanasis %}).
@@ -33,7 +36,7 @@ should I expect, right? Not just that. I think the problem is bigger.
 
 {% jb_picture_body %}
 
-Have any of you seen this movie: [Cossacks of the Kuban](http://www.imdb.com/title/tt0041562/)?
+Have any of you seen this movie: [Cossacks of the Kuban](https://www.imdb.com/title/tt0041562/)?
 It was shot in 1949, when [Joseph Stalin](https://en.wikipedia.org/wiki/Joseph_Stalin)
 was in power, the [Soviet Union](https://en.wikipedia.org/wiki/Soviet_Union)
 was literally broke, and [WWII](https://en.wikipedia.org/wiki/World_War_II)
@@ -43,7 +46,7 @@ However, the film showed something completely opposite---wealthy villages, rich 
 It was [propaganda](https://en.wikipedia.org/wiki/Propaganda) in 1949.
 
 But isn't it quite similar to what I've just seen a few days ago,
-produced and directed in 2015 by [Ridley Scott](http://www.imdb.com/name/nm0000631/)?
+produced and directed in 2015 by [Ridley Scott](https://www.imdb.com/name/nm0000631/)?
 
 {% badge /images/2015/10/ussr-symbol.jpg 128 https://en.wikipedia.org/wiki/Soviet_Union %}
 
@@ -130,4 +133,3 @@ Nazi war crimes---so Joseph Goebbels built a _fake_ reality for us.
 We don't want to know about the true principles of management---so Ridley Scott built fake ones for us.
 
 Think about it.
-

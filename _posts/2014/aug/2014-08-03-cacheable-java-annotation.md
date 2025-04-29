@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Cache Java Method Results"
 date: 2014-08-03
@@ -17,18 +20,18 @@ keywords:
   - "@Cacheable"
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://aspects.jcabi.com %}
 
 Say, you have a method that takes time to execute and you want
-its result to be cached. There are [many solutions](http://www.coderanch.com/how-to/java/CachingStrategies),
+its result to be cached. There are [many solutions](https://www.coderanch.com/how-to/java/CachingStrategies),
 including
 [Apache Commons JCS](http://commons.apache.org/proper/commons-jcs/),
-[Ehcache](http://www.ehcache.org),
+[Ehcache](https://www.ehcache.org),
 [JSR 107](https://jcp.org/en/jsr/detail?id=107),
 [Guava Caching](https://code.google.com/p/guava-libraries/wiki/CachesExplained)
 and many others.
 
-[jcabi-aspects](http://aspects.jcabi.com/annotation-cacheable.html) offers a very simple one,
+[jcabi-aspects](https://aspects.jcabi.com/annotation-cacheable.html) offers a very simple one,
 based on AOP aspects and Java6
 [annotations]({% pst 2016/apr/2016-04-12-java-annotations-are-evil %}):
 
@@ -66,7 +69,7 @@ value: "<html>...</html>"
 ```
 
 Every consecutive call to `load()` will be intercepted by the aspect
-from [jcabi-aspects](http://aspects.jcabi.com) and resolved immediately
+from [jcabi-aspects](https://aspects.jcabi.com) and resolved immediately
 with a value from the cache map. The method will not get any control until
 the end of its lifetime, which is five minutes in the example above.
 
@@ -102,4 +105,4 @@ There is also `@Cacheable.FlushAfter`. The difference is that
 when the method `add()` starts.
 `FlushAfter` invalidates cache after method `add()` finishes. This small difference makes a big one, sometimes.
 
-This article explains [how to add jcabi-aspects to your project](http://aspects.jcabi.com/example-weaving.html).
+This article explains [how to add jcabi-aspects to your project](https://aspects.jcabi.com/example-weaving.html).

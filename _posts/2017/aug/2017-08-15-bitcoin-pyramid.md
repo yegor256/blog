@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Bitcoin Is Not a Pyramid. Coinbase&nbsp;Is."
 date: 2017-08-15
@@ -23,7 +26,7 @@ buffer:
   - "I will make profit on the trading commission and the owners of YegorCoin will hope that they can manage to sell everything before my shop gets busted"
 ---
 
-In September 2016 I paid [Coinbase](http://www.coinbase.com)
+In September 2016 I paid [Coinbase](https://www.coinbase.com)
 $1,222 for two BTCs, $611 each. Seven months later, in April 2017,
 they paid me back $2,490, which was $1,245 for each BTC. My profit before
 tax was $1,268, over 100% of the investment, in just seven months.
@@ -46,9 +49,9 @@ Where did they get that cash?
 
 Obviously you know what a [Ponzi scheme](https://en.wikipedia.org/wiki/Ponzi_scheme) is, right?
 If you don't, watch
-[Episode 16](http://www.imdb.com/title/tt1811261/)
+[Episode 16](https://www.imdb.com/title/tt1811261/)
 of the 8th Season of
-[Two and a Half Men](http://www.imdb.com/title/tt0369179/).
+[Two and a Half Men](https://www.imdb.com/title/tt0369179/).
 In a nutshell, I'm getting my investment and my profit from other people, who are
 paying Coinbase for my BTCs. If there were no demand,
 my entire investment would disappear and I would only have the BTC bits
@@ -72,7 +75,7 @@ just like [Twitter stocks](https://www.google.com/finance?q=TWTR) (it's a joke).
 Should we blame Bitcoin for that? I don't think so.
 
 I think that what Coinbase (and similar traders like
-[CoinMama](http://www.coinmama.com) or [CEX.io](http://www.cex.io)) are doing is definitely
+[CoinMama](https://www.coinmama.com) or [CEX.io](https://www.cex.io)) are doing is definitely
 a pyramid and must be stopped by the government, sooner rather than later.
 
 Imagine, I start a company tomorrow. I call it YegorBase.
@@ -82,7 +85,7 @@ may buy that, especially because it will be possible to sell them the next day,
 when the price will be $101. Initially I will create some fuss to promote
 the product and the trading will begin. I will make my commission.
 
-Will this be legal? I seriously doubt that [Stripe](http://www.stripe.com),
+Will this be legal? I seriously doubt that [Stripe](https://www.stripe.com),
 for example, would approve my account if I told them my business plan.
 
 And the problem is not the YegorCoin itself---there is nothing wrong in
@@ -104,4 +107,3 @@ Why the police are still closing their eyes to what Coinbase is doing,
 I simply can't understand. Maybe because NYSE and A16Z are among their
 [long list](https://www.crunchbase.com/organization/coinbase/investors)
 of investors?
-

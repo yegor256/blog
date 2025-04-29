@@ -1,3 +1,26 @@
+// Copyright (c) 2014-2025 Yegor Bugayenko
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the 'Software'), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so. The Software doesn't include files with .md extension.
+// That files you are not allowed to copy, distribute, modify, publish, or sell.
+//
+// THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+
+/**
+ * SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+ * SPDX-License-Identifier: MIT
+ */
+
 /*globals $:false, window:false, document:false */
 var VK = {};
 if (typeof($) != 'undefined') {
@@ -10,7 +33,7 @@ if (typeof($) != 'undefined') {
       return num;
     }
     if ($('.buttons').css('display') !== 'none') {
-      $('.button').click(
+      $(".button[href!='#']").click(
         function (event) {
           event.preventDefault();
           var $this = $(this);
@@ -25,33 +48,6 @@ if (typeof($) != 'undefined') {
         eurl = encodeURIComponent(url),
         border = '1px solid #ffa094',
         timeout = 5000;
-      // https://stackoverflow.com/questions/45157191/google-share-counts-are-not-showing
-      // if ($('.count-googleplus').length) {
-      //   $.ajax({
-      //     dataType: 'json',
-      //     async: true,
-      //     timeout: timeout,
-      //     url: 'http://free.sharedcount.com/?apikey=d730c518430eabcabc46ab79528c744067afa17e&url=' + eurl,
-      //     success: function (data) {
-      //       if (data.GooglePlusOne !== 0) {
-      //         $('.count-googleplus').html(number(data.GooglePlusOne)).fadeIn();
-      //       }
-      //     },
-      //     error: function() {
-      //       $('.share .icon-googleplus').css('border', border);
-      //     }
-      //   });
-      // }
-      // @see http://stackoverflow.com/questions/32172969/how-to-get-twitter-url-count
-      // $.getJSON(
-      //   'http://urls.api.twitter.com/1/urls/count.json?callback=?&url=' + eurl,
-      //   function(json) {
-      //     var count = json.count;
-      //     if (count > 0) {
-      //       $('.count-twitter').html(number(count)).fadeIn();
-      //     }
-      //   }
-      // );
       if ($('.count-facebook').length) {
         $.ajax({
           dataType: 'jsonp',
@@ -119,6 +115,7 @@ if (typeof($) != 'undefined') {
           url: 'https://vk.com/share.php?act=count&url=' + eurl
         });
       }
+      /*
       if ($('.count-hackernews').length) {
         $.ajax({
           dataType: 'json',
@@ -138,6 +135,7 @@ if (typeof($) != 'undefined') {
           }
         });
       }
+      */
     }
     $('h2').each(
       function (idx, element) {

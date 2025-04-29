@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "To Measure or Not to Measure"
 date: 2020-06-23
@@ -45,7 +48,7 @@ reduced to a mere number?
 First, let's see why putting a metric on a programmer
 may be considered bad practice (my opinion: these are merely excuses
 from overly-paid programmers/managers who are just trying to keep their jobs, doing
-<del>nothing</del> whatever they want, and wasting employers' money):
+~~nothing~~ whatever they want, and wasting employers' money):
 
   * "Individual performance metrics are against the spirit of Scrum,"
     [says](https://www.scrum.org/forum/scrum-forum/13381/individual-performance-scrum-enviornment)
@@ -63,9 +66,9 @@ from overly-paid programmers/managers who are just trying to keep their jobs, do
 
   * "Individual rewards foster competition in an environment
     where co-operation is essential for success,"
-    [says](http://www.agilebuddha.com/agile/metrics-to-build-great-agile-teams-measure-influence-not-control/)
-    [Avienaash Shiralige](http://www.agilebuddha.com/author/admin/),
-    an Agile Coach at [AgileBuddha](http://www.agilebuddha.com/).
+    [says](https://www.agilebuddha.com/agile/metrics-to-build-great-agile-teams-measure-influence-not-control/)
+    [Avienaash Shiralige](https://www.agilebuddha.com/author/admin/),
+    an Agile Coach at [AgileBuddha](https://www.agilebuddha.com/).
 
   * "Individual metrics discourage team collaboration,"
     [says](https://www.infoq.com/articles/not-destroy-team-metrics/)

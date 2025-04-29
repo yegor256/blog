@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Who Is an Object?"
 date: 2016-07-14
@@ -40,14 +43,14 @@ What is an object? I've done a little research, and this is what I've found:
 
   * "An object stores its state in fields and exposes its behavior through methods"---[What Is an Object?](https://docs.oracle.com/javase/tutorial/java/concepts/object.html) by Oracle.
 
-  * "Each object looks quite a bit like a little computer---it has a state, and it has operations that you can ask it to perform"---[Thinking in Java](http://amzn.to/1PBmQpm), 4th Ed., Bruce Eckel, p. 16.
+  * "Each object looks quite a bit like a little computer---it has a state, and it has operations that you can ask it to perform"---[Thinking in Java](https://amzn.to/1PBmQpm), 4th Ed., Bruce Eckel, p. 16.
 
   * "A class is a collection of data fields that hold values
-    and methods that operate on those values"---[Java in a Nutshell](http://amzn.to/28PEqSi), 6th Ed., Evans and Flanagan, p. 98.
+    and methods that operate on those values"---[Java in a Nutshell](https://amzn.to/28PEqSi), 6th Ed., Evans and Flanagan, p. 98.
 
-  * "An object is some memory that holds a value of some type"---[The C++ Programming Language](http://amzn.to/1XyGCtk), 4th Ed., Bjarne Stroustrup, p. 40.
+  * "An object is some memory that holds a value of some type"---[The C++ Programming Language](https://amzn.to/1XyGCtk), 4th Ed., Bjarne Stroustrup, p. 40.
 
-  * "An object consists of some private memory and a set of operations"---[Smalltalk-80](http://amzn.to/1UhYinp), Goldberg and Robson, p. 6.
+  * "An object consists of some private memory and a set of operations"---[Smalltalk-80](https://amzn.to/1UhYinp), Goldberg and Robson, p. 6.
 
 What is common throughout all these definitions is the word "contains" (or "holds,"
 "consists," "has," etc.). They all think that an object is a _box with data_.
@@ -126,7 +129,7 @@ treats an object as a box with data that are too visible to
 the outside world. That visibility provokes us to think _procedurally_
 and try to access that data as much as possible.
 
-{% badge /images/2015/04/book-object-thinking.jpg 96 http://amzn.to/266oJr4 %}
+{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
 
 If we would think of an object as a **representative** of data instead of
 a container of them, we would not want to get a hold of data as soon as
@@ -139,7 +142,7 @@ languages that won't store objects as in-memory data structures, even
 technically.
 
 By the way, here is the definition of an object from my favorite book,
-[Object Thinking](http://amzn.to/266oJr4) by David West, p. 66:
+[Object Thinking](https://amzn.to/266oJr4) by David West, p. 66:
 
 > An object is the equivalent of the quanta from which the universe is constructed
 

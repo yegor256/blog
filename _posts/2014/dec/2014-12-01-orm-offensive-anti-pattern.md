@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "ORM Is an Offensive Anti-Pattern"
 date: 2014-12-01
@@ -52,8 +55,8 @@ accessing a relational database from an object-oriented language
 in almost every language; for example:
 [Hibernate](http://hibernate.org/orm/) for Java,
 [ActiveRecord]({% pst 2016/jul/2016-07-26-active-record %}) for Ruby on Rails,
-[Doctrine](http://www.doctrine-project.org/) for PHP, and
-[SQLAlchemy](http://www.sqlalchemy.org/) for Python.
+[Doctrine](https://www.doctrine-project.org/) for PHP, and
+[SQLAlchemy](https://www.sqlalchemy.org/) for Python.
 In Java, the ORM design is even standardized as [JPA](https://en.wikipedia.org/wiki/Java_Persistence_API).
 
 First, let's see how ORM works, by example. Let's use Java, PostgreSQL, and Hibernate.
@@ -191,9 +194,9 @@ was maybe the second big mistake in
 Actually, I'm not the only one saying something like this, and
 definitely not the first. A lot about
 this subject has already been published by very respected authors, including
-[OrmHate](http://martinfowler.com/bliki/OrmHate.html) by Martin Fowler (not against ORM, but worth mentioning anyway),
+[OrmHate](https://martinfowler.com/bliki/OrmHate.html) by Martin Fowler (not against ORM, but worth mentioning anyway),
 [Object-Relational Mapping Is the Vietnam of Computer Science](http://blog.codinghorror.com/object-relational-mapping-is-the-vietnam-of-computer-science/) by Jeff Atwood,
-[The Vietnam of Computer Science](http://blogs.tedneward.com/post/the-vietnam-of-computer-science/) by Ted Neward,
+[The Vietnam of Computer Science](https://web.archive.org/web/20220823105749/http://blogs.tedneward.com/post/the-vietnam-of-computer-science/) by Ted Neward,
 [ORM Is an Anti-Pattern](http://seldo.com/weblog/2011/08/11/orm_is_an_antipattern) by Laurie Voss,
 and many others.
 
@@ -201,7 +204,7 @@ However, my argument is different than what they're saying. Even though their re
 practical and valid, like "ORM is slow" or "database upgrades are hard,"
 they miss the main point. You can see a very good, practical answer
 to these practical arguments given by Bozhidar Bozhanov
-in his [ORM Haters Don’t Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
+in his [ORM Haters Don't Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
 
 {% badge /images/2014/11/orm-anti-pattern.svg 413 %}
 
@@ -314,8 +317,8 @@ see how we can implement these two classes.
 
 {% youtube 03PXmPc7Q3g %}
 
-I'm going to use [jcabi-jdbc](http://jdbc.jcabi.com) as a JDBC wrapper,
-but you can use something else like [jOOQ](http://www.jooq.org),
+I'm going to use [jcabi-jdbc](https://jdbc.jcabi.com) as a JDBC wrapper,
+but you can use something else like [jOOQ](https://www.jooq.org),
 or just plain JDBC if you like. It doesn't
 really matter. What matters is that your database interactions are hidden
 inside objects. Let's start with `Posts` and implement it in class

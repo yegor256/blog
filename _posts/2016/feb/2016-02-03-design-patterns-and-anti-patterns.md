@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Design Patterns and Anti-Patterns, Love and Hate"
 date: 2016-02-03
@@ -72,7 +75,7 @@ in its spirit, since a facade is nothing more than a collection
 of [procedures]({% pst 2015/feb/2015-02-20-utility-classes-vs-functional-programming %}).
 
 [<span class='red'>Factory Method</span>](https://en.wikipedia.org/wiki/Factory_method_pattern).
-<del>This one seems OK</del>. It's [bad]({% pst 2017/nov/2017-11-14-static-factory-methods %})!
+~~This one seems OK~~. It's [bad]({% pst 2017/nov/2017-11-14-static-factory-methods %})!
 
 [<span class='red'>Flyweight</span>](https://en.wikipedia.org/wiki/Flyweight_pattern).
 It's a workaround, as I see it, so it's not a good design pattern. I would

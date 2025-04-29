@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Research Paper Simple Template"
 date: 2022-08-24
@@ -40,7 +43,7 @@ Use [LaTeX](https://www.latex-project.org), either locally or in [Overleaf](http
 
 Read my personal [best practices](https://yegor256.github.io/latex-best-practices/main.pdf) for LaTeX.
 
-Keep the same [organisational structure](https://www.sheffield.ac.uk/academic-skills/study-skills-online/academic-writing) in each paragraph.
+Keep the same [organizational structure](https://www.sheffield.ac.uk/academic-skills/study-skills-online/academic-writing) in each paragraph.
 
 ## Title
 
@@ -65,7 +68,9 @@ on Introduction, Results, and Discussion.
 
 ## Introduction
 
-Answer these questions in this particular order:
+[Answer](https://goldbio.com/articles/article/how-to-write-introduction-section)
+these questions in this particular order:
+
   * What is going on in your field of study?
   * What is wrong?
   * Why is this Problem important?
@@ -82,9 +87,7 @@ A Contribution is something tangible, which a reader can take from your study
 and use somehow in their own studies.
 A theorem, a method, a toolkit, a data-set, or an algorithm are good examples of a Contribution.
 
-<del>Finally, help your reader understand how the rest of the paper is structured and why.</del>
-Don't do this! Instead, finish each paragraph in this Section with something along this line:
-"In Section X we will explain it."
+Finally, help your reader understand how the rest of the paper is structured and why.
 
 ## Background
 
@@ -99,7 +102,7 @@ to read the rest of the paper.
 ## Related Work
 
 In the first paragraph, give an overview of all existing studies that
-you managed to find. Classify them somehow.
+you managed to find. Classify them [somehow]({% pst 2023/sep/2023-09-29-how-to-write-related-work-section %}).
 
 Then write one paragraph per study. Explain what the study was about
 and what are its key findings. Finish each paragraph with the flaws
@@ -118,7 +121,7 @@ discovered his [laws of motion](https://en.wikipedia.org/wiki/Newton's_laws_of_m
 or _extend_ the reality with a new device
 (this is how [Thomas Edison](https://en.wikipedia.org/wiki/Thomas_Edison) invented the [light bulb](https://en.wikipedia.org/wiki/Incandescent_light_bulb)).
 
-If you observe, algorithmically [describe](https://research.com/research/how-to-write-research-methodology) the Method.
+If you observe, algorithmically [describe]({% pst 2023/oct/2023-10-11-method-of-research %}) the Method.
 
 If you extend, describe the Device and its usage scenarios.
 

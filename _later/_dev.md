@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Basic Terms to Become Tech-Savvy"
 date: 2017-11-20
@@ -54,7 +57,7 @@ In other words, you will pay for a car but we will deliver you a chair
 strictly according to the contract. Disappointed? We are very sorry.
 Next, please!
 
-If you really want a <del>car</del> software that will do what you expect
+If you really want a ~~car~~ software that will do what you expect
 it to do, you have to learn how to be a _Product Owner_. It's a new job you will
 have to occupy for the next few months or maybe years. You will occupy it
 anyway, either you like it or not. But if you do that conciously and well
@@ -84,7 +87,7 @@ and fix them as soon as possible.
 
 **Deployment Pipeline**.
 Read:
-[Continuous Delivery](http://amzn.to/2c7sR4V) (book).
+[Continuous Delivery](https://amzn.to/2c7sR4V) (book).
 
 **Continuous Integration**.
 
@@ -140,5 +143,3 @@ team is to put the next release to
 That's it. You will be a tech-savvy product owner if you have all these
 questions answered and you understand the answers. You will waste your
 $150,000 much more wisely.
-
-

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Embrace the Chaos!"
 date: 2020-01-07
@@ -27,7 +30,7 @@ management, no objective metrics, no quality control, and no light at the
 end of the tunnel. You feel like a cog in the machine: arrive at nine,
 leave at five, be quiet, and paychecks will keep coming.
 If you are talented and ambitious, sooner or later you will
-start thinking about <del>suicide</del> resignation. But hold on!
+start thinking about ~~suicide~~ resignation. But hold on!
 
 <!--more-->
 
@@ -51,7 +54,7 @@ the first scenario is a much better place to be: such an imperfect system _needs
 improvements. And, of course, the one who makes them
 gets the rewards: bonuses, a promotion, a raise, and so on.
 
-{% quote Be thankful for the existence of the chaos—your career can grow because of it. %}
+{% quote Be thankful for the existence of the chaos---your career can grow because of it. %}
 
 If you see the issues around you, both technical and managerial, and you
 know how to fix them---great! This means that you are already ahead

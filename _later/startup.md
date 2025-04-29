@@ -1,9 +1,12 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Top Ten Excuses Before You Shut Down Your Startup"
 date: 2015-10-20
 place: Palo Alto, CA
-tags: management startup
+tags: management business
 description: |
   I have to say this almost every day and every
   time I hear the same question back &mdash Why?
@@ -38,4 +41,3 @@ The team is excited.
 It's always difficult to innovate.
 
 It's a tough season for our business.
-

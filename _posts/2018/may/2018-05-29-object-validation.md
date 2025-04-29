@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Object Validation: to Defer or Not?"
 date: 2018-05-29
@@ -22,7 +25,8 @@ jb_picture:
 <!-- https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622 -->
 
 I [said earlier]({% pst 2015/may/2015-05-07-ctors-must-be-code-free %})
-that constructors must be code-free and do nothing
+that constructors must be code-free and do
+[nothing]({% pst 2023/aug/2023-08-08-two-step-initialization %})
 aside from attribute initialization. Since then, the most frequently
 asked [question](https://www.yegor256.com/2015/05/07/ctors-must-be-code-free.html#comment-3903379622)
 is: What about validation of arguments? If they are "broken,"

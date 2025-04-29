@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Object Behavior Must Not Be Configurable"
 date: 2016-04-19
@@ -57,7 +60,7 @@ and solid class. Here is how we use it to read the content of Google
 front page:
 
 ```java
-String html = new Page("http://www.google.com").html();
+String html = new Page("https://www.google.com").html();
 ```
 
 Everything is fine until we start making this class more powerful.
@@ -198,7 +201,7 @@ This is how we will call our highly configurable `Page`
 
 ```java
 String html = new Page(
-  "http://www.google.com",
+  "https://www.google.com",
   new PageSettings()
     .withEncoding("ISO_8859_1")
     .withAlwaysHtml(true)
@@ -230,7 +233,7 @@ Here is how:
 
 ```java
 Page page = new NeverEmptyPage(
-  new DefaultPage("http://www.google.com")
+  new DefaultPage("https://www.google.com")
 )
 String html = new AlwaysTextPage(
   new TextPage(page, "ISO_8859_1")
@@ -348,7 +351,7 @@ Now, our code should look like this (pay attention, I'm now using `OncePage`):
 ```java
 Page page = new NeverEmptyPage(
   new OncePage(
-    new DefaultPage("http://www.google.com")
+    new DefaultPage("https://www.google.com")
   )
 )
 String html = new AlwaysTextPage(
@@ -362,4 +365,3 @@ hope it's readable and I managed to convey the idea. Now we have five
 classes, each of which is rather small, easy to read and easy to reuse.
 
 Just follow the rule: never make classes configurable!
-

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Utility Classes Have Nothing to Do With Functional Programming"
 date: 2015-02-20
@@ -20,7 +23,7 @@ jb_picture:
 ---
 
 I was recently [accused](https://twitter.com/lukaseder/status/564866432790708224) of being against
-[functional programming](http://en.wikipedia.org/wiki/Functional_programming)
+[functional programming](https://en.wikipedia.org/wiki/Functional_programming)
 because [I call utility classes an anti-pattern]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}).
 That's absolutely wrong! Well, I do consider them a terrible anti-pattern,
 but they have nothing to do with functional programming. I believe there are
@@ -30,6 +33,10 @@ functional programming is based on lambda calculus, where
 a function can be assigned to a variable. Utility class methods
 are not functions in this sense. I'll decode these statements in a minute.
 
+<!--more-->
+
+{% jb_picture_body %}
+
 In Java, there are basically two valid alternatives to these ugly utility
 classes aggressively promoted by [Guava](https://code.google.com/p/guava-libraries/),
 [Apache Commons](http://commons.apache.org/), and others. The first one
@@ -37,10 +44,6 @@ is the use of traditional classes, and the second one is
 [Java&nbsp;8 lambda](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html).
 Now let's see why utility classes are not even close to functional programming
 and where this misconception is coming from.
-
-<!--more-->
-
-{% jb_picture_body %}
 
 Here is a typical example of a utility class
 [`Math`](http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html) from Java 1.0:
@@ -59,7 +62,7 @@ value of a floating point number:
 double x = Math.abs(3.1415926d);
 ```
 
-{% quote The code will work, but it is not object-oriented programming %}
+{% quote The code will work, but it is not object-oriented programming. %}
 
 What's wrong with it? We need a function, and we get it from class `Math`.
 The class has many useful functions inside it that can be used for many typical
@@ -75,7 +78,7 @@ it's up to you to decide. Let's see what the difference is.
 
 There are basically two different approaches: declarative and imperative.
 
-[Imperative programming](http://en.wikipedia.org/wiki/Imperative_programming)
+[Imperative programming](https://en.wikipedia.org/wiki/Imperative_programming)
 is focused on describing _how_ a program operates
 in terms of statements that change a program state. We just saw an example
 of imperative programming above. Here is another (this is pure imperative/procedural
@@ -92,7 +95,7 @@ public class MyMath {
 }
 ```
 
-[Declarative programming](http://en.wikipedia.org/wiki/Declarative_programming)
+[Declarative programming](https://en.wikipedia.org/wiki/Declarative_programming)
 focuses on _what_ the program should accomplish without prescribing
 how to do it in terms of sequences of actions to be taken. This is how
 the same code would look in Lisp, a functional programming language:
@@ -103,7 +106,7 @@ the same code would look in Lisp, a functional programming language:
 
 What's the catch? Just a difference in syntax? Not really.
 
-There are [many definitions](http://en.wikipedia.org/wiki/Comparison_of_programming_paradigms)
+There are [many definitions](https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms)
 of the difference between imperative and declarative styles, but I will try to
 give my own. There are basically three roles interacting in the scenario
 with this `f` function/method: a _buyer_, a _packager_ of the result,

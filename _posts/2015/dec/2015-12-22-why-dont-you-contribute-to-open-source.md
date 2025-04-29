@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Why Don't You Contribute to Open Source?"
 date: 2015-12-22
@@ -126,4 +129,3 @@ Again, it's not a crime. It's just who you are.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Does your boss allow you to contribute to open source projects during your normal business hours? <a href="https://twitter.com/hashtag/opensource?src=hash&amp;ref_src=twsrc%5Etfw">#opensource</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1008231659387449344?ref_src=twsrc%5Etfw">June 17, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-

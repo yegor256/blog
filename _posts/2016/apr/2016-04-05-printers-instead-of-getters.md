@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Printers Instead of Getters"
 date: 2016-04-05
@@ -211,4 +214,3 @@ stays small, while the complexity of "media" objects is unlimited.
 My point here is simple---no
 [getters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}),
 just printers!
-

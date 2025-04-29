@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Why NULL is Bad?"
 date: 2014-05-13
@@ -47,9 +50,9 @@ It may return `NULL` instead of an object---that's what is wrong.
 `NULL` is a terrible practice in an object-oriented paradigm and should be avoided at
 [all costs]({% pst 2016/mar/2016-03-22-try-finally-if-not-null %}).
 There have been a number of opinions about this published already, including
-[Null References, The Billion Dollar Mistake](http://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare)
+[Null References, The Billion Dollar Mistake](https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare)
 presentation by Tony Hoare and the entire
-[Object Thinking](http://amzn.to/266oJr4)
+[Object Thinking](https://amzn.to/266oJr4)
 book by David West.
 
 Here, I'll try to summarize all the arguments and show examples of
@@ -57,7 +60,7 @@ how `NULL` usage can be avoided and replaced with proper object-oriented constru
 
 Basically, there are two possible alternatives to `NULL`.
 
-The first one is **[Null Object](http://en.wikipedia.org/wiki/Null_Object_pattern)**
+The first one is **[Null Object](https://en.wikipedia.org/wiki/Null_Object_pattern)**
 design [pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
 (the best way is to make it a constant):
 
@@ -89,8 +92,8 @@ Now, let's see the arguments against `NULL`.
 
 Besides Tony Hoare's presentation and David West's book
 mentioned above, I read these publications before writing this post:
-[Clean Code](http://amzn.to/2m7LmaA) by Robert Martin,
-[Code Complete](http://amzn.to/2cs4cXW) by Steve McConnell,
+[Clean Code](https://amzn.to/2m7LmaA) by Robert Martin,
+[Code Complete](https://amzn.to/2cs4cXW) by Steve McConnell,
 [Say "No" to "Null"](http://elegantcode.com/2010/05/01/say-no-to-null/) by John Sonmez,
 [Is returning null bad design?](http://stackoverflow.com/questions/1274792/is-returning-null-bad-design) discussion at Stack Overflow.
 
@@ -114,9 +117,9 @@ if (employee == null) {
 ```
 
 This is how exceptional situations are supposed to be handled in
-[C](http://en.wikipedia.org/wiki/C_%28programming_language%29) and
+[C](https://en.wikipedia.org/wiki/C_%28programming_language%29) and
 other imperative procedural languages. OOP introduced
-[exception handling](http://en.wikipedia.org/wiki/Exception_handling)
+[exception handling](https://en.wikipedia.org/wiki/Exception_handling)
 primarily to get rid of these ad-hoc error handling blocks.
 In OOP, we let exceptions bubble up until they reach an application-wide
 error handler and our code becomes much cleaner and shorter:
@@ -213,7 +216,7 @@ or refuse to help if we need something "Jeffrey specific" (Null Object).
 
 ## Slow Failing
 
-Instead of [failing fast](http://martinfowler.com/ieeeSoftware/failFast.pdf),
+Instead of [failing fast](https://martinfowler.com/ieeeSoftware/failFast.pdf),
 the code above attempts to die slowly, killing others on its way.
 Instead of letting everyone know that something went wrong and that an
 exception handling should start immediately, it is hiding this failure from its client.
@@ -299,8 +302,8 @@ this caching problem to
 another layer of your application.
 
 For example, in Java, you can use aspect-oriented programming aspects.
-For example, [jcabi-aspects](http://aspects.jcabi.com) has
-[`@Cacheable`](http://aspects.jcabi.com/annotation-cacheable.html)
+For example, [jcabi-aspects](https://aspects.jcabi.com) has
+[`@Cacheable`](https://aspects.jcabi.com/annotation-cacheable.html)
 annotation that caches the value returned by a method:
 
 ```java
@@ -314,4 +317,10 @@ public class Department {
 ```
 
 I hope this analysis was convincing enough that you will
-stop `NULL`-ing your code :)
+stop `NULL`-ing your code.
+
+p.s. If you are interested in a more scientific arguments against NULL,
+read [this recently published research paper](https://ieeexplore.ieee.org/abstract/document/9392959)
+that empirically demonstrates
+a correlation between the intensity of NULL usage and cognitive
+complexity---the more NULL is seen in a class, the higher the complexity of its methods.

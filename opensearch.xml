@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+ * SPDX-License-Identifier: MIT
+-->
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>yegor256</ShortName>
   <Description>Search yegor256.com</Description>
@@ -10,7 +14,7 @@
   <LongName>Yegor's Blog About Computers</LongName>
   <Image height="128" width="128" type="image/png">https://www.yegor256.com/favicon.ico</Image>
   <Developer>Yegor Bugayenko</Developer>
-  <Attribution>Copyright 2014-2021, Yegor Bugayenko, All Rights Reserved</Attribution>
+  <Attribution>Copyright 2014-2025, Yegor Bugayenko, All Rights Reserved</Attribution>
   <Query role="example" searchTerms="java"/>
   <SyndicationRight>open</SyndicationRight>
   <AdultContent>false</AdultContent>

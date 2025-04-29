@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Dataization"
 date: 2021-02-10
@@ -149,6 +152,3 @@ Thus, we construct objects first, either through _abstraction_ (declaring new
 abstract objects) or through _application_ (making copies of abstract
 objects). Next, we dataize one of the objects and the entire composition
 of objects starts to "live," trying to turn itself into data.
-
-
-

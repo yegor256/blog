@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Pay Programmers Less"
 date: 2016-12-06
@@ -97,7 +100,7 @@ their programmers if they don't touch yours. If they reject
 this deal, try to recruit a few of their key engineers. Just offer to double
 their salaries. You won't really hire them, of course, but this move will definitely shake
 your local market, and competitors will be afraid of you. They will agree to never
-touch your <del>slaves</del> developers.
+touch your ~~slaves~~ developers.
 
 **Promote corporate values**.
 [Brainwash]({% pst 2015/mar/2015-03-02-team-morale-myths-and-reality %})
@@ -140,7 +143,7 @@ A fancy and professional coffee machine will cost you $1,000 and make
 it possible to save $200 to $300 on each programmer monthly. Do the math.
 Make yourself a rule that instead of giving someone a raise, it's always
 better to buy a new PlayStation for the office. Also, let them bring
-their <del>spouses</del> pets to the office---they will <del>work</del> stay
+their ~~spouses~~ pets to the office---they will ~~work~~ stay
 longer for less money.
 
 **Give them sound titles**.

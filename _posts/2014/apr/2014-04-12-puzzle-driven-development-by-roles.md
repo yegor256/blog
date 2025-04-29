@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "PDD by Roles"
 date: 2014-04-12
@@ -104,7 +107,7 @@ When I say "bugs," I mean more than just software errors but also:
  * features not yet implemented
  * functional and non-functional bugs
  * lack of test coverage
- * unresolved `@todo` markers
+ * unresolved `todo` markers
  * lack of risk analysis
  * etc.
 
@@ -154,7 +157,7 @@ want to keep my customers waiting.
 
 This is where puzzle driven development
 helps me. Instead of submitting bug reports, I add
-"[TBD](http://en.wikipedia.org/wiki/To_be_announced)" puzzles in
+"[TBD](https://en.wikipedia.org/wiki/To_be_announced)" puzzles in
 the SRS document. The puzzles are informal replacements of normally very strict
 formal requirements. They satisfy my customer, since they are in
 plain English, and are understandable by technical people.
@@ -238,11 +241,11 @@ it and determine the amount of time I have left. If I still have time to make it
 pass---I do it, commit the changes and report to the project manager.
 
 If I don't have time to implement the fix, I mark pieces of code that
-don't already have `@todo` markers, commit them and report to the
+don't already have `todo` markers, commit them and report to the
 project manager that I've finished.
 
 As you see, I'm fixing the code and breaking it at the same time. I'm fixing
-it with my new unit test, but breaking it with `@todo` puzzles.
+it with my new unit test, but breaking it with `todo` puzzles.
 
 This is how I help to increase the overall quality of the project - by
 fixing and breaking at the same time.

@@ -1,19 +1,22 @@
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+---
+# yamllint disable rule:line-length
 docker:
-  image: yegor256/blog-image
+  directory: repo
 assets:
-  secrets.yml: "zerocracy/home#assets/blog/secrets.yml"
-  id_rsa: "zerocracy/home#assets/blog/id_rsa"
-  id_rsa.pub: "zerocracy/home#assets/blog/id_rsa.pub"
+  secrets.yml: "yegor256/home#assets/blog/secrets.yml"
+  chatgpt-key.txt: "yegor256/home#assets/blog/chatgpt-key.txt"
+  id_rsa: "yegor256/home#assets/blog/id_rsa"
+  id_rsa.pub: "yegor256/home#assets/blog/id_rsa.pub"
 install: |
-  sudo apt-get update
-  sudo apt-get install -y woff2
-  export GEM_HOME=~/.ruby
-  export GEM_PATH=$GEM_HOME:$GEM_PATH
-  bundle install
+  bundle lock --no-color
+  bundle install --no-color
 merge:
   script: |
     LC_ALL=en_US.UTF-8 bundle exec rake
 deploy:
+  # yamllint disable rule:line-length
   script: |
     export JEKYLL_ENV=production
     LC_ALL=en_US.UTF-8 bundle exec rake
@@ -23,4 +26,17 @@ deploy:
     echo -e "Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile=/dev/null" > ~/.ssh/config
     git config --global user.email "rultor@yegor256.com"
     git config --global user.name "Rultor"
+    echo -e "chatgpt-translate:\n  api_key_file: $(pwd)/../chatgpt-key.txt" > _config-deploy.yml
     LC_ALL=en_US.UTF-8 jgd
+
+    rvm default 2.7.6 && source /usr/local/rvm/scripts/rvm
+    ruby -v
+    gem install ffi -v 1.16.3
+    gem install fontcustom -v 2.0.0
+    fontcustom --version
+    "$(pwd)/_glyphs/compile.sh" /tmp/icons
+    git checkout gh-pages
+    git pull
+    for e in svg ttf woff eot css; do cp "/tmp/icons/icons.${e}" css; git add "css/icons.${e}"; done
+    git commit -am 'new glyphs' || echo no changes in glyphs
+    git push origin gh-pages

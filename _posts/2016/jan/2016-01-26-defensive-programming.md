@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Defensive Programming via Validating Decorators"
 date: 2016-01-26
@@ -135,4 +138,3 @@ directly with objects that don't defend themselves.
 I also decided not to use the Java Validation API anymore for the
 same reason. Its annotations make classes much more verbose
 and less cohesive. I'm using validating decorators instead.
-

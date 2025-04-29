@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Synchronization Between Nodes"
 date: 2014-12-04
@@ -25,7 +28,7 @@ such synchronization, there will be collisions and conflicts. This
 is especially true when we're talking about "resources" that do
 not support *atomic* transactions.
 
-{% badge http://img.stateful.co/pomegranate.svg 64 http://www.stateful.co %}
+{% badge http://img.stateful.co/pomegranate.svg 64 https://www.stateful.co %}
 
 To solve this issue and prevent conflicts, we have to introduce
 one more element into the picture. All software modules, before
@@ -35,7 +38,7 @@ should *release* the lock. While the lock is being captured by one
 module, no other modules will be able to capture it. The approach
 is very simple and well-known. However, I didn't find any cloud services
 that would provide such a locking and unlocking service over a RESTful API.
-So I decided to create one---[stateful.co](http://www.stateful.co).
+So I decided to create one---[stateful.co](https://www.stateful.co).
 
 <!--more-->
 
@@ -72,8 +75,8 @@ initiated two transactions with two different web apps.
 
 The right approach here is to "lock" the DynamoDB table first, even before
 reading the salary. Then do the modifications and eventually unlock it. Here is
-how [stateful.co](http://www.stateful.co) helps me. All I need to do is create a new named lock
-in the [stateful.co](http://www.stateful.co) web panel,
+how [stateful.co](https://www.stateful.co) helps me. All I need to do is create a new named lock
+in the [stateful.co](https://www.stateful.co) web panel,
 get my authentication keys, and modify my Java code:
 
 ```java
@@ -105,7 +108,7 @@ guarantee atomicity of transaction---if part of the transaction fails,
 there won't be any automatic rollbacks and the DynamoDB table will be left
 in a "broken" state.
 
-Locks from [stateful.co](http://www.stateful.co) guarantee isolation in resource usage, and you can
+Locks from [stateful.co](https://www.stateful.co) guarantee isolation in resource usage, and you can
 use any type of resources, including NoSQL tables, files, S3 objects,
 embedded software, etc.
 

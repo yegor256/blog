@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Tech Journalism Sucks"
 date: 2018-11-20
@@ -20,7 +23,7 @@ jb_picture:
 ---
 
 This July, just four months ago,
-I submitted an article to [InfoQ](http://www.infoq.com/), a
+I submitted an article to [InfoQ](https://www.infoq.com/), a
 popular online tech magazine. In the article I
 suggested that in order to improve our projects we must not make programmers worry
 about the quality of code they write, but instead let them focus mostly
@@ -79,9 +82,8 @@ Tech journalism sucks.
 If you want to be published, say what everybody else is saying. Or else say something
 very new. I don't really know. What will I do from now on? I will keep sending my
 articles to many places. I've even created a list of journalists (over 200 magazines)
-and I <del>spam</del> send them my articles via [Mailanes]({% pst 2018/oct/2018-10-30-mailanes %}).
+and I ~~spam~~ send them my articles via [Mailanes]({% pst 2018/oct/2018-10-30-mailanes %}).
 
 It seems they don't deserve a better attitude.
 
 Sadly.
-

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "XSL Transformation in Java: An Easy Way"
 date: 2015-02-02
@@ -15,9 +18,9 @@ keywords:
   - java xslt code example
 ---
 
-{% badge http://img.jcabi.com/logo-square.svg 64 http://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
 
-[XSL transformation](http://www.w3.org/TR/xslt20/)
+[XSL transformation](https://www.w3.org/TR/xslt20/)
 (XSLT) is a powerful mechanism for converting one
 XML document into another. However, in Java, XML manipulations
 are rather verbose and complex. Even for a simple XSL transformation,
@@ -67,7 +70,7 @@ it to plain English text.
 Here is how we're doing that with the help of
 [jcabi-xml]({% pst 2014/apr/2014-04-24-java-xml-parsing-and-traversing %})
 and its class,
-[`XSLDocument`](http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html).
+[`XSLDocument`](https://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html).
 
 ```java
 final String xml = // comes from DynamoDB
@@ -81,7 +84,7 @@ That's it. Now let's see what's there in that `status.xsl` file
 (this is just a skeleton of it; the full version is [here](https://github.com/yegor256/rultor/blob/1.48/src/main/resources/com/rultor/agents/github/qtn/status.xsl)):
 
 ```xml
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:xsl="https://www.w3.org/1999/XSL/Transform"
   version="2.0">
   <xsl:output method="text"/>
   <xsl:template match="/talk">
@@ -97,7 +100,7 @@ That's it. Now let's see what's there in that `status.xsl` file
 ```
 
 It is good practice to create XSL documents only once per application
-run. We have a static utility method [`XSLDocument.make()`](http://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29) for this:
+run. We have a static utility method [`XSLDocument.make()`](https://xml.jcabi.com/apidocs-0.15/com/jcabi/xml/XSLDocument.html#make%28java.io.InputStream%29) for this:
 
 ```java
 final class Foo {

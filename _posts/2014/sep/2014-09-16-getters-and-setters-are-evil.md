@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Getters/Setters. Evil. Period."
 date: 2014-09-16
@@ -28,7 +31,7 @@ jb_picture:
 ---
 
 There is an old debate, started in 2003 by Allen Holub
-in this [Why getter and setter methods are evil](http://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html)
+in this [Why getter and setter methods are evil](https://www.javaworld.com/article/2073723/core-java/why-getter-and-setter-methods-are-evil.html)
 famous article, about whether getters/setters is an
 [anti-pattern]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %})
 and should be avoided or if it is something we inevitably need in object-oriented
@@ -47,23 +50,23 @@ Arrogant enough to catch your attention? You've been using
 that get/set pattern for 15 years and you're a respected Java architect?
 And you don't want to hear that nonsense from a stranger? Well, I understand
 your feelings. I felt almost the same when I stumbled upon
-[Object Thinking](http://amzn.to/266oJr4)
+[Object Thinking](https://amzn.to/266oJr4)
 by David West, the best book about object-oriented programming I've read so far.
 So please. Calm down and try to understand while I try to explain.
 
 ## Existing Arguments
 
-{% badge /images/2014/09/object-thinking-by-david-west.png 96 http://amzn.to/266oJr4 %}
+{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
 
 There are a few arguments against "accessors"
-(another name for getters <del>and setters</del>), in an object-oriented world.
+(another name for getters ~~and setters~~), in an object-oriented world.
 All of them, I think, are not strong enough. Let's briefly go
 through them.
 
 **Tell, Don't Ask**
 Allen Holub says, "Don't ask for the information
 you need to do the work; ask the object that has the information
-to do the work for you."
+to do the work for you." Martin Fowler [agrees](https://martinfowler.com/bliki/TellDontAsk.html).
 
 **Violated Encapsulation Principle**
 An object can be teared apart by other objects, since they
@@ -133,7 +136,7 @@ Dog dog = new Dog();
 dog.setWeight("23kg");
 ```
 
-Can you imagine this transaction in the real world? :)
+Can you imagine this transaction in the real world?
 
 {% youtube F4N25kZ2zQU %}
 
@@ -145,7 +148,7 @@ David West has to say about it, on page 30 of his book:
 into a successful object developer is a lobotomy.
 
 Do you need a lobotomy? Well, I definitely needed one and received it, while
-reading West's [Object Thinking](http://amzn.to/266oJr4).
+reading West's [Object Thinking](https://amzn.to/266oJr4).
 
 ## Object Thinking
 
@@ -160,7 +163,7 @@ Ball ball = dog.give();
 
 Now, we're treating the dog as a real animal, who can take a ball from us
 and can give it back, when we ask. Worth mentioning is that the
-dog can't give `NULL` back. Dogs simply don't know what `NULL` is :)
+dog can't give `NULL` back. Dogs simply don't know what `NULL` is.
 Object thinking immediately eliminates
 [NULL references]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 from your code.
@@ -212,7 +215,7 @@ truly understand and appreciate the beautiful world of true objects.
 
 PPS. Forgot to say, yes, dependency injection via setters is also
 a terrible anti-pattern. About it, in
-[one of the next posts]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}) :)
+[one of the next posts]({% pst 2014/oct/2014-10-03-di-containers-are-evil %}).
 
 PPPS. Here is what I'm suggesting to use instead of getters:
 [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}).

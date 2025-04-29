@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Set Up a Private Maven Repository in Amazon S3"
 date: 2015-09-07
@@ -145,7 +148,7 @@ $ mvn clean deploy
 
 Now you want to see these artifacts in your browser, in a secure mode, by
 providing secure credentials. I recommend you use
-[s3auth.com](http://www.s3auth.com), as explained in
+[s3auth.com](https://www.s3auth.com), as explained in
 [Basic HTTP Auth for S3 Buckets]({% pst 2014/apr/2014-04-21-s3-http-basic-auth %}).
 
 ## Configure Rultor

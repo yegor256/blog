@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Making Your Boss Happy Is a False Objective"
 date: 2015-01-26
@@ -31,17 +34,17 @@ for the project, not for the boss.
 
 {% jb_picture_body %}
 
-We all work on **projects** as developers, designers, programmers,
+We all work on _projects_ as developers, designers, programmers,
 [managers]({% pst 2015/sep/2015-09-22-micromanagement %}),
 testers, you name it. The boss is also a member of the project. More
-formally, he or she is a **stakeholder**, same as every one of us. Each stakeholder
-has his own **needs** for the project: 1) Jeff, the developer, wants to learn Scala
+formally, he or she is a _stakeholder_, same as every one of us. Each stakeholder
+has his own _needs_ for the project: 1) Jeff, the developer, wants to learn Scala
 and collect his paychecks every two weeks; 2) Sally, the product owner,
 wants to attend an expo in Paris and also collect her paychecks;
 3) Bob, the CTO, wants to raise round A funding and collect a big paycheck; etc.
 
-The project has its own **objectives**, to achieve 1 million downloads
-in less than six months and under $300,000, for example.
+The project has its own _objectives_, to achieve 1 million downloads
+in less than six months and spend under $300,000, for example.
 This is what the project works for. This is what all of us are here for.
 
 Our personal needs may be fully satisfied
@@ -56,14 +59,14 @@ The project is the source of our checks. Not the CFO.
 
 The CFO is a stakeholder, like everyone else. The project gives him more
 power than others because it's necessary for the whole mechanism to
-work properly. Every project member has his or her own **roles and responsibilities**.
+work properly. Every project member has his or her own _roles and responsibilities_.
 I write code; the CFO writes checks. I eat at McDonald's; he drives
 a Jaguar. We have different needs, and we both agreed that the project
 would satisfy them. Otherwise we wouldn't be here, right?
 
 We're all parts of a mechanism called a "project," which works according
 to the rules and principles of
-[**project management**]({% pst 2016/may/2016-05-24-who-is-project-manager %})
+[_project management_]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 whether we are aware of them or not. Whether we have a
 [project manager]({% pst 2016/may/2016-05-24-who-is-project-manager %}) or not. Even if we violate
 all of them and manage ourselves in total chaos, we still have a scope,
@@ -97,7 +100,7 @@ always acts in the best interest of the project, not of himself or
 anyone else personally.
 
 I believe a professional team player does two things:
-**obeys and resists**.
+_obeys and resists_.
 
 First, you have to understand that the boss is here in order
 to help you organize your time, your tasks, your communications,

@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Constructors Must Be Code-Free"
 date: 2015-05-07
@@ -141,8 +144,8 @@ public final class CachedName implements Name {
 }
 ```
 
-I'm using the [`Cacheable`](http://aspects.jcabi.com/annotation-cacheable.html)
-annotation from [jcabi-aspects](http://aspects.jcabi.com/), but you can use any other
+I'm using the [`Cacheable`](https://aspects.jcabi.com/annotation-cacheable.html)
+annotation from [jcabi-aspects](https://aspects.jcabi.com/), but you can use any other
 caching tools available in Java (or other languages), like
 [Guava Cache](https://code.google.com/p/guava-libraries/wiki/CachesExplained):
 

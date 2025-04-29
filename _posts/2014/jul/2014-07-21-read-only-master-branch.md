@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Master Branch Must Be Read-Only"
 date: 2014-07-21
@@ -58,21 +61,21 @@ a top priority for its author and the entire team. The error
 should be fixed right after a red flag is raised by the
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) server.
 
-{% badge /images/2014/07/continuous-delivery-book.png 100 http://amzn.to/2bQVmlb %}
+{% badge /images/2014/07/continuous-delivery-book.png 100 https://amzn.to/2bQVmlb %}
 
-[Continuous Delivery by Jez Humble et. al.](http://amzn.to/2bQVmlb)
+[Continuous Delivery by Jez Humble et. al.](https://amzn.to/2bQVmlb)
 explains this approach perfectly in Chapter 7, pages 169&ndash;186.
 
 There are a few good tools on the market, which automate DevOps procedures.
 Some of them are open source, you can download
 and install them on your own servers. For example:
-[Jenkins](http://jenkins-ci.org/),
-[Go](http://www.thoughtworks.com/products/go-continuous-delivery), and
-[CruiseControl](http://cruisecontrol.sourceforge.net/).
+[Jenkins](https://jenkins-ci.org/),
+[Go](https://www.thoughtworks.com/products/go-continuous-delivery), and
+[CruiseControl](https://cruisecontrol.sourceforge.net/).
 Some of them are available as a service in cloud, such as:
-[Travis](http://www.travis-ci.org),
-[Shippable](http://www.shippable.com),
-[Wercker](http://wercker.com/), and
+[Travis](https://www.travis-ci.org),
+[Shippable](https://www.shippable.com),
+Wercker, and
 [many others]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %}).
 
 ## Why Continuous Integration Doesn't Work?
@@ -104,7 +107,7 @@ fix our build later. And [it's only logical]({% pst 2014/oct/2014-10-08-continuo
 <a href="/pdf/2014/guard-article.pdf" class="em2"
   title="Prevent Conflicts in Distributed Agile PHP Projects"><i class="icon icon-pdf"></i></a>
 
-Four years ago, in 2010, I published an article in [php|Architect](http://www.phparch.com/magazine/2010-2/august/)
+Four years ago, in 2010, I published an article in [php|Architect](https://www.phparch.com/magazine/2010-2/august/)
 called "Prevent Conflicts in Distributed Agile PHP Projects." In the article,
 a solution was proposed (full article in [PDF](/pdf/2014/guard-article.pdf))
 for Subversion and PHP.

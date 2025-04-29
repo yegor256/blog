@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Hints for Zerocracy Architect"
 date: 2017-11-10
@@ -29,5 +32,3 @@ don't expect quality, make reviews and submit bugs
 accept incomplete changes, use PDD
 
 set quality bar as high as you can
-
-

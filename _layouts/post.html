@@ -11,7 +11,7 @@ amp: true
           style="width:125px;height:125px;" alt="QR code"/>
       </p>
       <p class="printable">
-        <code itemprop="url">{{ site.url }}{{ page.url }}</code>
+        <code itemprop="url">{{ site.url }}{{ page.short-url }}</code>
       </p>
       <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
       {% if page.book %}
@@ -44,6 +44,25 @@ amp: true
             {% endfor %}
           {% endfor %}
           <li><a href="mailto:translate@yegor256.com">add yours!</a></li>
+        </ul>
+      {% endif %}
+      {% if page.chatgpt-translate.model %}
+        <ul class="unprintable subline">
+          <li title="The page is translated by ChatGPT from English to a few languages">
+            Translated by
+            <i class="icon icon-chatgpt notranslate" aria-hidden="true"></i>
+            to
+          </li>
+          {% if page.chatgpt-translate.urls['zh'] %}
+            <li title="Click to see this page translated to Chinese">
+              <a href='{{ site.url }}{{ page.chatgpt-translate.urls["zh"] }}'>中文</a>
+            </li>
+          {% endif %}
+          {% if page.chatgpt-translate.urls['ru'] %}
+            <li title="Click to see this page translated to Russian">
+              <a href='{{ site.url }}{{ page.chatgpt-translate.urls["ru"] }}'>русский</a>
+            </li>
+          {% endif %}
         </ul>
       {% endif %}
       {% if page.social %}
@@ -91,68 +110,32 @@ amp: true
           <span class="count count-hackernews">0</span>
           <i class="icon icon-hackernews notranslate" aria-hidden="true"></i>
         </a>
+        <a href="#" title="Cite it via BibTeX" class="button" onclick="$('#bibtex').toggle(); return false;">
+          <i class="icon icon-tex notranslate" aria-hidden="true"></i>
+        </a>
       </nav>
     </header>
     <article class="main" itemprop="articleBody">
       <div {% if page.nospell %} class="nospell" {% endif %}>
+        <div id="bibtex" style="display: none">
+          <p>Please, cite this blog post via <a href="https://www.bibtex.org/">BibTeX</a> as such:</p>
+          <pre style="color:#053c5e;">@misc&#123;bugayenko{{ page.date | date: "%Y" }}blog{{ page.date | date: "%m%d" }},
+  author = &#123;Bugayenko, Yegor&#125;,
+  title = &#123;&#123;{{ page.title | replace:'&','\&' | replace:'#','\#' | replace:'_','\_' }}&#125;&#125;,
+  howpublished = &#123;\url&#123;{{ site.url }}{{ page.short-url }}&#125;&#125;,
+  year = &#123;{{ page.date | date: "%Y" }}&#125;,
+  month = &#123;{{ page.date | date: "%b" | downcase }}&#125;,
+  note = &#123;[Online; accessed {{ 'now' | date: "%d-%m-%Y" }}]&#125;
+&#125;</pre></div>
         {{ content }}
       </div>
     </article>
   </div>
 
-  <div class="wrapper" aria-hidden="true">
-    {% if page.related %}
-      <div class="unprintable">
-        <hr/>
-        <p>If you like this article, you will definitely like these
-        <strong>very relevant</strong> posts too:</p>
-        {% related_posts %}
-      </div>
-    {% else %}
-      <related-posts />
-    {% endif %}
-  </div>
+  {% include related.html %}
 
-  <div class="disqus" role="complementary" aria-hidden="true">
-    <p class="disqus_hint" >
-      Please, use <a href="https://help.disqus.com/commenting/what-html-tags-are-allowed-within-comments">syntax highlighting</a>
-      in your comments, to make them more readable.
-    </p>
-    <div id="disqus_thread" class="disqus-thread">
-      <a>&nbsp;</a>
-    </div>
-    <script>
-      var disqus_config = function () {
-        this.page.url = document.location.href.split('?')[0].split('#')[0].replace('https://', 'http://');
-        this.page.identifier = this.page.url;
-      };
-      (function() {
-        var d = document, s = d.createElement('script');
-        s.src = '//yegor256.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>
-      <div>
-        <p class="red">
-          JavaScript is disabled in your browser,
-          that's why you can't see comments under this post.
-        </p>
-      </div>
-    </noscript>
-  </div>
+  {% include disqus.html shortname="yegor256" %}
 
-  <div class="wrapper">
-    <footer class="footer">
-      <p>
-        &copy;
-        <span itemscope="" itemprop="copyrightHolder" itemtype="http://schema.org/Person">
-          <span itemprop="name">{{ site.author.name }}</span>
-        </span>
-        2014&ndash;<span itemprop="copyrightYear">{{ 'now' | date: "%Y" }}</span>
-      </p>
-    </footer>
-  </div>
+  {% include footer.html %}
 
 </section>

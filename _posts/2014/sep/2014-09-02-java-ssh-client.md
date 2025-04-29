@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Simple Java SSH Client"
 date: 2014-09-02
@@ -19,19 +22,19 @@ categories: jcg
 ---
 
 An execution of a shell command via SSH can be done in
-Java, in just a few lines, using [`jcabi-ssh`](http://ssh.jcabi.com):
+Java, in just a few lines, using [`jcabi-ssh`](https://ssh.jcabi.com):
 
 ```java
 String hello = new Shell.Plain(
   new SSH(
     "ssh.example.com", 22,
-    "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+    "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
   )
 ).exec("echo 'Hello, world!'");
 ```
 
-[`jcabi-ssh`](http://ssh.jcabi.com) is
-a convenient wrapper of [`JSch`](http://www.jcraft.com/jsch/),
+[`jcabi-ssh`](https://ssh.jcabi.com) is
+a convenient wrapper of [`JSch`](https://www.jcraft.com/jsch/),
 a well-known pure Java implementation of SSH2.
 
 <!--more-->
@@ -42,7 +45,7 @@ and then read back its grepped content:
 ```xml
 Shell shell = new SSH(
   "ssh.example.com", 22,
-  "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+  "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
 );
 File file = new File("/tmp/data.txt");
 new Shell.Safe(shell).exec(
@@ -83,7 +86,7 @@ want to duplicate `if/throw` in many places of your code.
 Shell ssh = new Shell.Safe(
   new SSH(
     "ssh.example.com", 22,
-    "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+    "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
   )
 );
 ```
@@ -92,7 +95,7 @@ Shell ssh = new Shell.Safe(
 
 `Shell.Verbose` decorates an instance of `Shell` and copies
 `stdout` and `stderr` to the slf4j logging facility (using
-[`jcabi-log`](http://log.jcabi.com)). Of course, you can combine
+[`jcabi-log`](https://log.jcabi.com)). Of course, you can combine
 decorators, for example:
 
 ```xml
@@ -100,7 +103,7 @@ Shell ssh = new Shell.Verbose(
   new Shell.Safe(
     new SSH(
       "ssh.example.com", 22,
-      "yegor", "-----BEGIN RSA PRIVATE KEY-----..."
+      "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
     )
   )
 );
@@ -121,7 +124,7 @@ String login = new Shell.Plain(new Shell.Safe(ssh)).exec("whoami");
 ## Download
 
 You need a single dependency
-[`jcabi-ssh.jar`](http://repo1.maven.org/maven2/com/jcabi/jcabi-ssh)
+[`jcabi-ssh.jar`](https://repo1.maven.org/maven2/com/jcabi/jcabi-ssh)
 in your Maven project
 (get its latest version in [Maven Central](http://search.maven.org/)):
 

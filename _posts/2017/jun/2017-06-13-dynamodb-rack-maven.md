@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "DynamoDB + Rake + Maven + Rack::Test"
 date: 2017-06-13
@@ -39,7 +42,7 @@ purposes of testing. You need to start it before your integration
 tests and stop it afterwards.
 
 To make things simpler
-I suggest you use [`jcabi-dynamodb-maven-plugin`](http://dynamodb.jcabi.com/),
+I suggest you use [`jcabi-dynamodb-maven-plugin`](https://dynamodb.jcabi.com/),
 a [Maven](https://maven.apache.org/) plugin that I
 [made]({% pst 2014/may/2014-05-01-dynamodb-local-maven-plugin %}) a few years ago.
 You will need to add
@@ -183,4 +186,3 @@ In a nutshell:
     Maven and it stops DynamoDB Local.
 
 That's it.
-

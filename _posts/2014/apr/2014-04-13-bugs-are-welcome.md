@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Bugs Are Welcome"
 date: 2014-04-13
@@ -78,7 +81,7 @@ Let us try to define a bug (or software defect) in a non-ambiguous manner.
 Something can be reported as a bug and subsequently paid for
 [iff](https://en.wikipedia.org/wiki/If_and_only_if):
 
- * it is [reproducible](http://en.wikipedia.org/wiki/Reproducibility)
+ * it is [reproducible](https://en.wikipedia.org/wiki/Reproducibility)
  * it refers to functionality already implemented
  * it can be fixed in a reasonable amount of time
  * it doesn't duplicate a bug already reported

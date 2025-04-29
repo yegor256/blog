@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "How to Deploy to CloudBees, in One Click"
 date: 2014-08-25
@@ -17,7 +20,7 @@ keywords:
   - continuous delivery cloudbees
 ---
 
-When I deploy a new version of [stateful.co](http://www.stateful.co),
+When I deploy a new version of [stateful.co](https://www.stateful.co),
 a Java web application, to CloudBees, it takes 30 seconds of my time.
 Maybe even less. Recently, I deployed version 1.6.5. You can see
 how it all happened, in [GitHub issue #6](https://github.com/sttc/stateful/issues/6):
@@ -36,7 +39,7 @@ takes just a few seconds of your time.
 
 <p style="border:1px solid red;padding:1em;color:red;">
 Since CloudBees is
-<a href="http://www.cloudbees.com/press/cloudbees-becomes-enterprise-jenkins-company">shutting down its PaaS service</a>
+<a href="https://www.cloudbees.com/press/cloudbees-becomes-enterprise-jenkins-company">shutting down its PaaS service</a>
 by the end of December, 2014,
 this article will have no sense after that.
 </p>
@@ -211,7 +214,7 @@ GitHub issue tracker, and post something like that into it
 
 You will get a response in a few seconds. The rest will be done by Rultor.
 
-Enjoy :)
+Enjoy!
 
 BTW, if something doesn't work as I've explained, don't hesitate to
 submit a ticket to the
@@ -220,6 +223,6 @@ I will try to help you.
 
 Also, a similar configuration can be performed
 for [Heroku]({% pst 2014/sep/2014-09-13-deploying-to-heroku %})
-(using [jcabi-heroku-maven-plugin](http://heroku.jcabi.com))
-and for AWS Elastic Beanstalk (using [jcabi-beanstalk-maven-plugin](http://beanstalk.jcabi.com)).
+(using [jcabi-heroku-maven-plugin](https://heroku.jcabi.com))
+and for AWS Elastic Beanstalk (using [jcabi-beanstalk-maven-plugin](https://beanstalk.jcabi.com)).
 I'll probably dedicate individual posts to them, as well.

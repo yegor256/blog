@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Five Features to Make Java Even Better"
 date: 2017-11-07
@@ -165,7 +168,7 @@ incomplete set of arguments. The arguments we don't provide will be set
 to `null` by default. Also, when a method has to return something, but
 there is no `return` statement, Java should return `null`. This is almost exactly how
 it works in PHP, Ruby, and many other languages. I believe
-it would be a convenient feature for Java <del>monkeys</del> developers too.
+it would be a convenient feature for Java ~~monkeys~~ developers too.
 
 We won't need to define so many methods when some of the arguments are optional.
 [Method overloading](https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html)
@@ -215,7 +218,7 @@ must automatically have
 There should be no need
 to create them, Java will provide them out-of-the-box, just like
 [Kotlin](https://kotlinlang.org/docs/reference/properties.html)
-and [Ruby](http://www.rubyist.net/~slagell/ruby/accessors.html) do.
+and [Ruby](https://www.rubyist.net/~slagell/ruby/accessors.html) do.
 What is the point of having an attribute if there are no getters and setters
 to read it and to modify it, right?
 

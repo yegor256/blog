@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Full Time"
 date: 2018-01-29
@@ -40,7 +43,7 @@ we have to put their payckecks together making sure they cover our
 expenses. This is called _part-time_ and it's risky, since we have
 to always be on alert---whether there are enough projects in the pipeline,
 whether they pay enough, and where do we find new ones when these projects
-<del>fire us</del> finishe.
+~~fire us~~ finishe.
 
 Full-time employment is way more secure. However, it has a number of drawbacks.
 

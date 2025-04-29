@@ -1,6 +1,9 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
-title: "Imposters to Win!"
+title: "Impostors to Win!"
 date: 2021-03-03
 place: Moscow, Russia
 tags: sarcasm
@@ -11,7 +14,7 @@ description: |
 keywords:
   - management
   - psychology
-  - imposter
+  - impostor
   - office fights
   - office politics
 image: /images/2021/03/the-kominsky-method.jpg
@@ -19,16 +22,16 @@ jb_picture:
   caption: The Kominsky Method (2018-) by Chuck Lorre
 ---
 
-The time of objectivity is fading out. 
+The time of objectivity is fading out.
 [Meritocracy]({% pst 2018/jan/2018-01-09-micro-budgeting %}) is now a rude word.
-[Metrics]({% pst 2020/jun/2020-06-23-individual-performance-metrics %}) 
+[Metrics]({% pst 2020/jun/2020-06-23-individual-performance-metrics %})
 in management will soon be considered as harassment.
 Productivity is [already](/shift-m/2020/44.html) a false objective.
 It's time to start taking advantage of this era of nonsense.
-The era of imposters is coming!
+The era of impostors is coming!
 Don't miss the opportunity to become a great one.
 Here is a quick summary of key techniques to make you highly successful in any argument
-you may have in your 
+you may have in your
 [flat democratic organizations of the future]({% pst 2020/dec/2020-12-22-self-managing-orgs %})
 without any skills, knowledge, education, or real achievements.
 Just pure love and emotions.
@@ -85,7 +88,7 @@ If you quit because of an argument---your opponent will lose a lot of karma poin
 "I will quit" is the most powerful weapon in your arsenal.
 However, use it carefully, only after you massage them with the other three tactics.
 
-Your ultimate goal in your career as a great imposter should be
+Your ultimate goal in your career as a great impostor should be
 the situation where nobody argues with you. They must be
 scared of verifying your results, questioning your conclusions,
 validating your points, and even asking you difficult questions.
@@ -94,7 +97,7 @@ They must know that by doing so they will immediately become
 behavior.
 
 They must understand that real experts are very fragile and can easily
-be offended. They must learn the lesson: 
+be offended. They must learn the lesson:
 doubting the opinion of an expert is simply rude.
 The best they can do with you, an expert, is to tell you how
 great you are and how much they respect your contribution. Anything

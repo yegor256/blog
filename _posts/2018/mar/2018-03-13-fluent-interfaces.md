@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Fluent Interfaces Are Bad for Maintainability"
 date: 2018-03-13
@@ -34,7 +37,7 @@ now I will add my few cents.
 
 {% jb_picture_body %}
 
-Let's take my own library [jcabi-http](http://http.jcabi.com/),
+Let's take my own library [jcabi-http](https://http.jcabi.com/),
 which I created a few years ago,
 when I thought that fluent interfaces were a good thing. Here is how you
 use the library to make an HTTP request and validate its output:
@@ -54,7 +57,7 @@ Yes, it does, on the surface. But the _internal_ design of the library's
 classes, including [`JdkRequest`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html),
 which is the one you see,
 is very far from being elegant. The biggest problem is that
-they are rather big and it's <del>difficult</del> impossible
+they are rather big and it's ~~difficult~~ impossible
 to extend them without making them even bigger.
 
 {% youtube REj8pJesMVI %}
@@ -119,7 +122,7 @@ which depends heavily on Reflection and
 
 In other words, fluent interfaces mean large classes or some ugly workarounds.
 I mentioned this problem earlier, when I [wrote]({% pst 2017/oct/2017-10-10-streams-vs-decorators %}) about
-[Streams API](http://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
+[Streams API](https://www.oracle.com/technetwork/articles/java/ma14-java-se-8-streams-2177646.html)
 and the interface
 [Stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html),
 which is perfectly fluent. There are 43 methods!
@@ -189,4 +192,3 @@ to do that if I know that the changes I introduce
 are isolated and easy to test.
 
 Thus, no fluent interfaces anymore from me, only objects and decorators.
-

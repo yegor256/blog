@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: ""
 date: 2019-09-01
@@ -30,4 +33,3 @@ Time. -- long requests
 Brevity. -- short error messages, or no logs at all
 
 Dependencies.
-

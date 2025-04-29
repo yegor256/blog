@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "Object-Oriented Java Adapter of Amazon S3 SDK"
 date: 2014-05-26
@@ -48,7 +51,7 @@ String content = IOUtils.toString(input, "UTF-8");
 input.close();
 ```
 
-{% badge http://img.jcabi.com/logo-square.svg 64 %}
+{% badge https://www.jcabi.com/logo-square.svg 64 %}
 
 As always, procedural programming has its inevitable
 disadvantages. To overcome them all, I designed
@@ -97,7 +100,7 @@ a Java object, which encapsulates all AWS interaction details.
 
 Since [jcabi-s3](http://s3.jcabi.com) exposes all entities
 as interfaces, they can easily be extended through encapsulation
-([Decorator Pattern](http://en.wikipedia.org/wiki/Decorator_pattern)).
+([Decorator Pattern](https://en.wikipedia.org/wiki/Decorator_pattern)).
 
 For example, you want your code to retry S3 object read operations
 a few times before giving up and
@@ -199,11 +202,11 @@ I'm using [JUnit](http://junit.org/) and [Mockito](https://code.google.com/p/moc
 ## Immutability
 
 All classes in [jcabi-s3](http://s3.jcabi.com) are
-annotated with [`@Immutable`](http://aspects.jcabi.com/annotation-immutable.html)
+annotated with [`@Immutable`](https://aspects.jcabi.com/annotation-immutable.html)
 and are truly immutable.
 
 The library ships as a JAR dependency in
-[Maven Central](http://repo1.maven.org/maven2/com/jcabi/jcabi-s3)
+[Maven Central](https://repo1.maven.org/maven2/com/jcabi/jcabi-s3)
 (get its latest versions in [Maven Central](http://search.maven.org/)):
 
 ```xml

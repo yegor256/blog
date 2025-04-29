@@ -1,4 +1,7 @@
 ---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
 layout: post
 title: "OOP Alternative to Utility Classes"
 date: 2014-05-05
@@ -35,7 +38,7 @@ This design idea is very popular in the Java world (as well as C#, Ruby, etc.)
 because utility classes provide common functionality used everywhere.
 
 Here, we want to follow the
-[DRY principle](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and avoid
+[DRY principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) and avoid
 duplication. Therefore, we place common code blocks into utility classes and
 reuse them when necessary:
 
@@ -59,8 +62,8 @@ There have been many discussions of this subject; to name a few:
 [Are Helper Classes Evil?](http://blogs.msdn.com/b/nickmalik/archive/2005/09/06/461404.aspx) by Nick Malik,
 [Why helper, singletons and utility classes are mostly bad](http://smart421.wordpress.com/2011/08/31/why-helper-singletons-and-utility-classes-are-mostly-bad-2/) by Simon Hart,
 [Avoiding Utility Classes](https://github.com/marshallward/marshallward.org/blob/master/content/avoid_util_classes.rst) by Marshal Ward,
-[Kill That Util Class!](http://www.jroller.com/DhavalDalal/entry/kill_that_util_class) by Dhaval Dalal,
-[Helper Classes Are A Code Smell](http://www.robbagby.com/posts/helper-classes-are-a-code-smell/) by Rob Bagby.
+[Kill That Util Class!](https://www.jroller.com/DhavalDalal/entry/kill_that_util_class) by Dhaval Dalal,
+[Helper Classes Are A Code Smell](https://www.robbagby.com/posts/helper-classes-are-a-code-smell/) by Rob Bagby.
 
 {% youtube psrp3TtaYYI %}
 
@@ -159,14 +162,14 @@ collection of strings and hides all I/O operations. When we iterate it---a
 file is being read. When we `addAll()` to it---a file is being written.
 
 `Trimmed` also implements `Collection<String>` and encapsulates a collection of
-strings ([Decorator pattern](http://en.wikipedia.org/wiki/Decorator_pattern)).
+strings ([Decorator pattern](https://en.wikipedia.org/wiki/Decorator_pattern)).
 Every time the next line is retrieved, it gets trimmed.
 
 All classes taking
 participation in the snippet are rather small: `Trimmed`, `FileLines`, and
 `UnicodeFile`.
 Each of them is responsible for its own single feature, thus following perfectly
-the [single responsibility principle](http://en.wikipedia.org/wiki/Single_responsibility_principle).
+the [single responsibility principle](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
 {% youtube D0dqC_3Bch8 %}
 
