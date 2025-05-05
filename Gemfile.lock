@@ -6,7 +6,7 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     afm (0.2.2)
     ast (2.4.3)
-    async (2.23.1)
+    async (2.24.0)
       console (~> 1.29)
       fiber-annotation
       io-event (~> 1.9)
@@ -29,7 +29,7 @@ GEM
       ffi (>= 1.15.0)
     event_stream_parser (1.0.0)
     eventmachine (1.2.7)
-    faraday (2.13.0)
+    faraday (2.13.1)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
@@ -164,7 +164,7 @@ GEM
     multipart-post (2.4.1)
     net-http (0.6.0)
       uri
-    net-imap (0.5.7)
+    net-imap (0.5.8)
       date
       net-protocol
     net-pop (0.1.2)
@@ -204,7 +204,7 @@ GEM
       ruby-rc4
       ttfunk
     prism (1.4.0)
-    public_suffix (6.0.1)
+    public_suffix (6.0.2)
     pygments.rb (3.0.0)
     racc (1.8.1)
     rainbow (3.1.1)
@@ -215,10 +215,10 @@ GEM
     redcarpet (3.6.1)
     regexp_parser (2.10.0)
     rexml (3.4.1)
-    rouge (4.5.1)
+    rouge (4.5.2)
     rss (0.3.1)
       rexml
-    rubocop (1.75.3)
+    rubocop (1.75.5)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
