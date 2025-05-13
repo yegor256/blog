@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+---
+name: checkmake
+'on':
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  checkmake:
+    timeout-minutes: 15
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Uno-Takashi/checkmake-action@v2
