@@ -17,7 +17,7 @@ keywords:
   - github issue title
 image: /images/2025/05/bronx-tale.jpg
 jb_picture:
-  caption: Bronx Tale (1993) by Robert De Niro
+  caption: Flawless (1999) by Joel Schumacher
 ---
 
 A few weeks ago, [@horw] released a new GitHub plugin that fixes GitHub issue titles: [issue-title-ai].
@@ -79,9 +79,14 @@ If the taste is good, tickets are **uniformly** named.
 
 There are three styles of naming I can think of:
 
-* **Summary**
-* **Order**
-* **Offense**
+* A **summary** briefly explains what the problem is about,
+for example "PDF-downloading feature;
+
+* An **order** tells the person who fixes the issue what needs to be done,
+for example "Implement PDF-downloading";
+
+* An **offense** blaims the product for the absence of the feature,
+for example "I can't download PDF".
 
 We prefer the third style.
 Because we believe that every ticket much be a bug report.
