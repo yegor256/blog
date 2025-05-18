@@ -33,17 +33,10 @@ RUN /usr/bin/install-node.sh \
   && npm install -g eslint@8.44.0 \
   && eslint --version
 
-# hadolint ignore=DL3003
-RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 \
-  && cd _tidy-html5/build/cmake \
-  && git checkout 5.8.0 \
-  && cmake ../.. \
-  && make \
-  && make install \
-  && tidy --version
-
-# hadolint ignore=DL3059
-RUN npm install -g cssshrink@0.0.5
-
-# hadolint ignore=DL3059
-RUN /bin/bash -l -c "gem update --system && gem install jgd -v 1.13.0"
+COPY .github/*.sh /tmp
+RUN /tmp/install-tidy.sh \
+  && /tmp/install-woff.sh \
+  && npm install -g cssshrink@0.0.5 \
+  && gem install ffi -v 1.16.3 \
+  && gem install fontcustom -v 2.0.0 \
+  && gem install jgd -v 1.13.0

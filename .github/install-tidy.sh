@@ -7,12 +7,15 @@ set -ex -o pipefail
 
 self=$(dirname "$0")
 
-fontcustom --version
-
 tmp=${self}/../_temp
-mkdir -p "${tmp}"
-"${self}/compile-glyphs.sh" "${tmp}"
 
-for e in svg ttf woff eot css; do
-  cp "${tmp}/icons.${e}" "${self}/../css"
-done
+cd "${tmp}"
+
+git clone https://github.com/htacg/tidy-html5.git _tidy-html5
+cd _tidy-html5/build/cmake
+git checkout 5.8.0
+cmake ../..
+make
+make install
+
+tidy --version
