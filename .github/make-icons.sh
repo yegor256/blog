@@ -8,6 +8,7 @@ set -ex -o pipefail
 self=$(dirname "$0")
 
 ruby --version
+env
 
 fontcustom --version
 

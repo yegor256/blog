@@ -7,6 +7,9 @@ set -ex -o pipefail
 
 self=$(dirname "$0")
 
+ruby --version
+env
+
 gem install ffi -v 1.16.3
 gem install fontcustom -v 2.0.0
 
