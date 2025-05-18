@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
-FROM yegor256/latex
+FROM yegor256/latex:0.0.1
 LABEL description="yegor256.com"
 LABEL vendor="Yegor Bugayenko"
 LABEL version="1.0"
@@ -45,12 +45,14 @@ RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 \
   && tidy --version
 
 COPY _docker/woff.zip /tmp/woff.zip
+# hadolint ignore=DL3003
 RUN unzip /tmp/woff.zip -d _sfnt2woff \
   && cd _sfnt2woff \
   && make \
   && cp sfnt2woff /usr/local/bin/ \
   && sfnt2woff --version
 
+# hadolint ignore=DL3059
 RUN npm install -g cssshrink@0.0.5
 
 RUN /bin/bash -l -c "gem update --system && gem install jgd -v 1.13.0"
