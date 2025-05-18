@@ -6,7 +6,7 @@ layout: post
 title: "No BTW in Bug Reports"
 date: 2025-05-18
 place: Moscow, Russia
-tags: mgmt
+tags: mgmt testing
 description: |
   Keep your ticket focused---one issue per report, no distractions,
   no "by the way"---this is how you help your team achive higher efficiency.
@@ -74,7 +74,7 @@ You might also believe that submitting a ticket offends the team.
 They already have a lot of work to do---why bother them with even more?
 Every bug report or feature request might seem like an extra burden on their shoulders.
 But again, that's a false belief.
-Bug reports are the fuel for their engines.
+Bug reports are the [fuel]({% pst 2018/feb/2018-02-06-where-to-find-more-bugs %}) for their engines.
 They need your tickets.
 First, because they help clarify requirements.
 Second, because they provide a sense that their work is **needed** and **appreciated**.
