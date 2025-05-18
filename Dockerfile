@@ -55,4 +55,5 @@ RUN unzip /tmp/woff.zip -d _sfnt2woff \
 # hadolint ignore=DL3059
 RUN npm install -g cssshrink@0.0.5
 
+# hadolint ignore=DL3059
 RUN /bin/bash -l -c "gem update --system && gem install jgd -v 1.13.0"
