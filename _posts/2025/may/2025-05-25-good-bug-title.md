@@ -8,7 +8,9 @@ date: 2025-05-25
 place: Moscow, Russia
 tags: management testing
 description: |
-  ...
+  ChatGPT helps us re-format GitHub issue titles
+  after their authors submit them --- helping developers
+  understand their tasks better.
 keywords:
   - bug report title
   - bug title
@@ -36,7 +38,7 @@ A properly formulated problem---this essentially is a title---leads to faster an
 Let's say, you try to download a PNG file, but get a text file instead.
 You want to report this problem to the team.
 How would you title such a bug report?
-I'll give you a few options:
+Pick one, out of these five:
 
 * "CSV file downloading"
 * "Fix CSV-file downloading feature"
@@ -46,7 +48,7 @@ I'll give you a few options:
 
 Now, let's say you want to be able to download a PDF file.
 How would you title this feature request?
-How about these options:
+Pick one:
 
 * "PDF files"
 * "Immplement PDF file feature"
@@ -54,11 +56,11 @@ How about these options:
 * "CSV files are not enough, PDF needed"
 * "I can't download PDF file"
 
-Finally, let's say you want to fix the PDF features.
-However, you don't understand where to put new Java classes, into which package?
+Finally, let's say you want to fix the PDF feature.
+However, you don't understand into which package you should put new Java classes.
 You decide to submit a ticket, asking the team for help.
 How would you title such a request?
-How about these options:
+Pick a title:
 
 * "Java packages"
 * "Where should I place my classes?"
@@ -80,13 +82,13 @@ If the taste is good, tickets are **uniformly** named.
 There are three styles of naming I can think of:
 
 * A **summary** briefly explains what the problem is about,
-for example "PDF-downloading feature;
+for example "PDF-downloading";
 
 * An **order** tells the person who fixes the issue what needs to be done,
 for example "Implement PDF-downloading";
 
-* An **offense** blaims the product for the absence of the feature,
-for example "I can't download PDF".
+* An **offense** blaims the product for the absence of the feature
+or the presence of the bug, for example "I can't download PDF".
 
 We prefer the third style.
 Because we believe that every ticket much be a bug report.
