@@ -22,4 +22,3 @@ RUN /tmp/install-apt.sh \
 RUN /usr/bin/install-node.sh \
   && npm install -g eslint@8.44.0 \
   && eslint --version
-
