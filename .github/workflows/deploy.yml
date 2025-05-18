@@ -39,11 +39,11 @@ jobs:
           ruby-version: 2.7
           bundler-cache: false
       - run: sudo .github/install-woff.sh
-      - run: .github/make-icons.sh
+      - run: .github/make-icons.sh icons
       - uses: actions/upload-artifact@v4
         with:
           name: icons
-          path: css
+          path: icons
   publish:
     timeout-minutes: 5
     runs-on: ubuntu-24.04

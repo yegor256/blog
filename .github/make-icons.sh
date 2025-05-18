@@ -16,6 +16,9 @@ tmp=${self}/../_temp
 mkdir -p "${tmp}"
 "${self}/compile-glyphs.sh" "${tmp}"
 
+target=$1
+mkdir -p "${target}"
+
 for e in svg ttf woff eot css; do
-  cp "${tmp}/icons.${e}" "${self}/../css"
+  cp "${tmp}/icons.${e}" "${target}"
 done

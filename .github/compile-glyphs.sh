@@ -8,7 +8,6 @@ set -ex -o pipefail
 self=$(dirname "$0")
 
 target=$1
-
 mkdir -p "${target}"
 
 fontcustom compile "${self}/../_glyphs" \
