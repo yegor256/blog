@@ -7,6 +7,8 @@ set -ex -o pipefail
 
 self=$(dirname "$0")
 
+ruby --version
+
 fontcustom --version
 
 tmp=${self}/../_temp
