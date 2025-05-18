@@ -15,7 +15,7 @@ keywords:
   - how to make a title for a bug
   - ticket title
   - github issue title
-image: /images/2025/05/bronx-tale.jpg
+image: /images/2025/05/flawless.jpg
 jb_picture:
   caption: Flawless (1999) by Joel Schumacher
 ---
