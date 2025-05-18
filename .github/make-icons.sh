@@ -10,9 +10,9 @@ gem install fontcustom -v 2.0.0
 
 fontcustom --version
 
-tmp=${self}/../temp
+tmp=${self}/../_temp
 mkdir -p "${tmp}"
-"${self}/../_glyphs/compile.sh" "${tmp}"
+"${self}/compile.sh" "${tmp}"
 
 for e in svg ttf woff eot css; do
   cp "${tmp}/icons.${e}" "${self}/../css"
