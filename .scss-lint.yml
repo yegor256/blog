@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+---
+scss_files: '**/*.scss'
+
+exclude: 'css/layout.scss'
+
+linters:
+  SelectorFormat:
+    enabled: false
+  ColorVariable:
+    enabled: false
+  ColorKeyword:
+    enabled: false
+  NestingDepth:
+    enabled: false
+  SelectorDepth:
+    enabled: false
+  ImportantRule:
+    enabled: false
+  UrlFormat:
+    enabled: false

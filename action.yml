@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+---
+name: blog-action
+description: 'Build Jekyll website'
+branding:
+  icon: alert-triangle
+  color: orange
+runs:
+  using: docker
+  image: Dockerfile
+  entrypoint: /bin/bash
+  args:
+    - '--login'
+    - '-c'
+    - |
+      rvm default 3.2.2 \
+      && source /usr/local/rvm/scripts/rvm \
+      && bundle lock \
+      && bundle update \
+      && bundle exec rake

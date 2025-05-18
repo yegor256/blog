@@ -1,0 +1,3 @@
+--pws=aspell.en.pws
+--ignore=nospell
+--ignore=tikz:op

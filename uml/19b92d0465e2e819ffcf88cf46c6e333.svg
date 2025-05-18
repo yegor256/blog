@@ -5,7 +5,7 @@ entity Scraper--><rect fill="#FEFECE" filter="url(#f13akp6n7nryjh)" height="36.2
 entity Analyzer--><rect fill="#FEFECE" filter="url(#f13akp6n7nryjh)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="78" x="6" y="8"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1" y="13"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1" y="34.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="58" x="16" y="30.9951">Analyzer</text><!--MD5=[5ea9df1b280942a34c52619e9c4568b3]
 link Lucene to UI--><path d="M155,44.24 C155,61.2 155,86.95 155,103.87 " fill="none" id="Lucene-UI" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[176a40bcba72e504f7f39eded4cc31e4]
 link Lucene to Scraper--><path d="M190.53,26 C202.16,26 213.79,26 225.43,26 " fill="none" id="Lucene-Scraper" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[86f3c70998be07b7c1bd321dfb5074cc]
-link Analyzer to Lucene--><path d="M84.1,26 C95.83,26 107.55,26 119.27,26 " fill="none" id="Analyzer-Lucene" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[f6612764f4d52eb0f8427784de350015]
+link Analyzer to Lucene--><path d="M84.1,26 C95.83,26 107.55,26 119.27,26 " fill="none" id="Analyzer-Lucene" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[ab2db9c35d438c83e73346628e2bbfda]
 @startuml
 
 [Lucene] -down- [UI]
@@ -18,9 +18,9 @@ PlantUML version 1.2020.02(Sun Mar 01 10:22:07 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
-Java Version: 11.0.26+4-post-Debian-1deb11u1
+Java Version: 17.0.15+6
 Operating System: Linux
 Default Encoding: UTF-8
 Language: en
-Country: US
+Country: null
 --></g></svg>

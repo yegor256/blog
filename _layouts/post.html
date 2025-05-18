@@ -1,0 +1,141 @@
+---
+layout: default
+amp: true
+---
+
+<section itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div class="wrapper">
+    <header>
+      <p class="printable">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ site.url }}{{ page.url }}&amp;format=svg"
+          style="width:125px;height:125px;" alt="QR code"/>
+      </p>
+      <p class="printable">
+        <code itemprop="url">{{ site.url }}{{ page.short-url }}</code>
+      </p>
+      <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
+      {% if page.book %}
+        {{ page.book | book }}
+      {% endif %}
+      <ul class="subline">
+        <li>
+          <time itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%-d %B %Y" }}
+          </time>
+        </li>
+        {% if page.place %}
+          <li class="desktop-only" itemprop="locationCreated">{{ page.place }}</li>
+        {% endif %}
+        {{ page | modified }}
+        <li class="printable" itemscope="" itemprop="author" itemtype="http://schema.org/Person">
+          <span itemprop="name">{{ site.author.name }}</span>
+        </li>
+        <li class="unprintable">
+          <i class="icon icon-comments"></i>
+          <a href="https://www.yegor256.com{{ page.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
+        </li>
+      </ul>
+      {% if page.translated %}
+        <ul class="unprintable subline">
+          <li>Translated:</li>
+          {% for hash in page.translated %}
+            {% for link in hash %}
+              <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+            {% endfor %}
+          {% endfor %}
+          <li><a href="mailto:translate@yegor256.com">add yours!</a></li>
+        </ul>
+      {% endif %}
+      {% if page.chatgpt-translate.model %}
+        <ul class="unprintable subline">
+          <li title="The page is translated by ChatGPT from English to a few languages">
+            Translated by
+            <i class="icon icon-chatgpt notranslate" aria-hidden="true"></i>
+            to
+          </li>
+          {% if page.chatgpt-translate.urls['zh'] %}
+            <li title="Click to see this page translated to Chinese">
+              <a href='{{ site.url }}{{ page.chatgpt-translate.urls["zh"] }}'>中文</a>
+            </li>
+          {% endif %}
+          {% if page.chatgpt-translate.urls['ru'] %}
+            <li title="Click to see this page translated to Russian">
+              <a href='{{ site.url }}{{ page.chatgpt-translate.urls["ru"] }}'>русский</a>
+            </li>
+          {% endif %}
+        </ul>
+      {% endif %}
+      {% if page.social %}
+        <ul class="subline">
+          <li>Discussed at:</li>
+          {% for hash in page.social %}
+            {% for link in hash %}
+              <li><a href="{{ link[1] }}">{{ link[0] }}</a></li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if page.republished %}
+        <ul class="subline">
+          <li>Republished in:</li>
+          {% for m in page.republished %}
+            <li><a href="{{ m.url }}">{{ m.place }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      <p class="unprintable">{{ page | yb_page_tags }}</p>
+      <nav class="buttons notranslate desktop-only">
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+          title="Share on Facebook" class="button" rel="nofollow">
+          <span class="count count-facebook">0</span>
+          <i class="icon icon-facebook notranslate" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/share?url={{ site.url }}{{ page.url }}&amp;text={{ page.title | cgi_escape }}"
+          title="Share on Twitter" class="button" rel="nofollow">
+          <span class="count count-twitter">0</span>
+          <i class="icon icon-twitter notranslate" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/cws/share?url={{ site.url }}{{ page.url }}"
+          title="Share on LinkedIn" class="button" rel="nofollow">
+          <span class="count count-linkedin">0</span>
+          <i class="icon icon-linkedin notranslate" aria-hidden="true"></i>
+        </a>
+        <a href="https://reddit.com/submit?url={{ site.url }}{{ page.url }}%3F{{ page.date | date: "%Y-%U" }}&amp;title={{ page.title | cgi_escape }}"
+          title="Share on Reddit" class="button" rel="nofollow">
+          <span class="count count-reddit">0</span>
+          <i class="icon icon-reddit notranslate" aria-hidden="true"></i>
+        </a>
+        <a href="https://news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}%3F{{ page.date | date: "%Y-%U" }}&amp;t={{ page.title | cgi_escape }}"
+          title="Share on Hacker News" class="button" rel="nofollow">
+          <span class="count count-hackernews">0</span>
+          <i class="icon icon-hackernews notranslate" aria-hidden="true"></i>
+        </a>
+        <a href="#" title="Cite it via BibTeX" class="button" onclick="$('#bibtex').toggle(); return false;">
+          <i class="icon icon-tex notranslate" aria-hidden="true"></i>
+        </a>
+      </nav>
+    </header>
+    <article class="main" itemprop="articleBody">
+      <div {% if page.nospell %} class="nospell" {% endif %}>
+        <div id="bibtex" style="display: none">
+          <p>Please, cite this blog post via <a href="https://www.bibtex.org/">BibTeX</a> as such:</p>
+          <pre style="color:#053c5e;">@misc&#123;bugayenko{{ page.date | date: "%Y" }}blog{{ page.date | date: "%m%d" }},
+  author = &#123;Bugayenko, Yegor&#125;,
+  title = &#123;&#123;{{ page.title | replace:'&','\&' | replace:'#','\#' | replace:'_','\_' }}&#125;&#125;,
+  howpublished = &#123;\url&#123;{{ site.url }}{{ page.short-url }}&#125;&#125;,
+  year = &#123;{{ page.date | date: "%Y" }}&#125;,
+  month = &#123;{{ page.date | date: "%b" | downcase }}&#125;,
+  note = &#123;[Online; accessed {{ 'now' | date: "%d-%m-%Y" }}]&#125;
+&#125;</pre></div>
+        {{ content }}
+      </div>
+    </article>
+  </div>
+
+  {% include related.html %}
+
+  {% include disqus.html shortname="yegor256" %}
+
+  {% include footer.html %}
+
+</section>

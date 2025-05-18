@@ -1,0 +1,11 @@
+{% if related_posts != empty %}
+  <div class="unprintable">
+    <hr/>
+    <p>
+      You may also find these <strong>related</strong> posts interesting:
+      {% for p in related_posts %}
+        <a href="{{ p.url }}" data-score="{{ p.score }}">{{ p.title }}</a>;
+      {% endfor %}
+    </p>
+  </div>
+{% endif %}

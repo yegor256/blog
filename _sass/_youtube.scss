@@ -1,0 +1,45 @@
+// SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+// SPDX-License-Identifier: MIT
+
+.youtube {
+  @extend %desktop-only;
+  @extend %unprintable;
+  @extend %gray;
+  border-left: 4 * $px solid #e52d27;
+  float: right;
+  font-size: .8 * $em;
+  line-height: $em;
+  margin: .5 * $em -5 * $em .5 * $em $em;
+  padding-left: $em;
+  text-align: left;
+  width: 10 * $em;
+
+  .box {
+    display: block;
+    line-height: 0;
+    margin-bottom: .4 * $em;
+    position: relative;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    .play {
+      color: white;
+      height: 100%;
+      line-height: 1 * $em;
+      padding-top: 21%;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      vertical-align: middle;
+      width: 100%;
+
+      i::before {
+        font-size: 3 * $em;
+        line-height: 1 * $em;
+      }
+    }
+  }
+}
