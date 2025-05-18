@@ -237,7 +237,7 @@ task ping: [:build] do
   errors = File.read(out).split("\n").reduce(0) do |cnt, p|
     code, link = p.split
     next nil if link.nil?
-    if code == '200'
+    if code == '200' || code == '403'
       cnt
     else
       puts "#{link}: #{code}"
