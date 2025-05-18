@@ -28,8 +28,8 @@ We've already integrated the plugin into [objectionary/eo] and a few other repos
 Works like a charm.
 What's wrong with the titles the way they are, you may ask?
 Why do we need to ask ChatGPT to make them "better"?
-It's simple and important.
-A properly formulated problem---this essentially is a title---leads to faster and more accurate bug resolution.
+We want every issue---either a bug report, a feature request, or a question---to be formulated as a complaint.
+We believe that this leads to quicker resolution of them.
 
 <!--more-->
 
@@ -41,15 +41,19 @@ How would you title such a bug report?
 Pick one, out of these five:
 
 * "CSV file downloading"
-* "Fix CSV-file downloading feature"
+* "Fix CSV-file downloading"
+* "CSV downloading must be fixed"
 * "Why I get text file instead of PNG?"
 * "I need text file, not PNG"
 * "PNG file downloading is broken"
 
-There may be more...
+There may be more... While the best is the last one.
 
 We believe that every ticket much be a bug report.
 We---and [Mozilla]---call it **bug-driven development**.
+Even if it's a feature request or a question, it must be filed as a complaint.
+This
+
 That's why we want all ticket titles to sound like complaints.
 
 [@horw]: https://github.com/horw
