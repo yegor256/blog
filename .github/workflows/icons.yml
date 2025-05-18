@@ -17,6 +17,8 @@ jobs:
         with:
           ruby-version: 2.7
           bundler-cache: false
+      - run: apt-get update --yes
+      - run: apt-get install --yes --no-install-recommends fontforge=*
       - run: .github/make-icons.sh
       - uses: JamesIves/github-pages-deploy-action@v4.7.3
         with:
