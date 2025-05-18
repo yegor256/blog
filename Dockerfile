@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
-FROM yegor256/rultor-image:1.24.0
+FROM yegor256/latex
 LABEL description="yegor256.com"
 LABEL vendor="Yegor Bugayenko"
 LABEL version="1.0"
@@ -31,7 +31,8 @@ RUN apt-get update --yes --fix-missing \
   && cmake --version \
   && shellcheck --version
 
-RUN npm install -g eslint@8.44.0 \
+RUN /usr/bin/install-node.sh \
+  && npm install -g eslint@8.44.0 \
   && eslint --version
 
 RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 \
