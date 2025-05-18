@@ -46,53 +46,11 @@ Pick one, out of these five:
 * "I need text file, not PNG"
 * "PNG file downloading is broken"
 
-Now, let's say you want to be able to download a PDF file.
-How would you title this feature request?
-Pick one:
+There may be more...
 
-* "PDF files"
-* "Immplement PDF file feature"
-* "Why don't have have PDF feature?"
-* "CSV files are not enough, PDF needed"
-* "I can't download PDF file"
-
-Finally, let's say you want to fix the PDF feature.
-However, you don't understand into which package you should put new Java classes.
-You decide to submit a ticket, asking the team for help.
-How would you title such a request?
-Pick a title:
-
-* "Java packages"
-* "Where should I place my classes?"
-* "Why classes are misplaced?"
-* "Not clear where new Java classes belong"
-* "Layout of Java classes is not documented"
-
-I can continue with examples.
-They will all look similar.
-I believe, you've already figured out that the best titles are the last in the lists.
-
-You may disagree and say that it's a matter of taste.
-That's true.
-A matter of bad taste vs. good taste.
-
-If the taste is bad, ticket are titled chaotically.
-If the taste is good, tickets are **uniformly** named.
-
-There are three styles of naming I can think of:
-
-* A **summary** briefly explains what the problem is about,
-for example "PDF-downloading";
-
-* An **order** tells the person who fixes the issue what needs to be done,
-for example "Implement PDF-downloading";
-
-* An **offense** blaims the product for the absence of the feature
-or the presence of the bug, for example "I can't download PDF".
-
-We prefer the third style.
-Because we believe that every ticket much be a bug report.
+We believe that every ticket much be a bug report.
 We---and [Mozilla]---call it **bug-driven development**.
+That's why we want all ticket titles to sound like complaints.
 
 [@horw]: https://github.com/horw
 [issue-title-ai]: https://github.com/horw/issue-title-ai
