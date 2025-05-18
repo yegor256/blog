@@ -44,7 +44,7 @@ Co-founder at [InVision](https://www.invisionapp.com/):<br/>
 
 [Baruch Sadogursky](https://www.amazon.com/gp/customer-reviews/R1EAWT563455BU/),
 Developer Advocate of [JFrog](https://www.jfrog.com/):<br/>
-"It's facinating."
+"It's fascinating."
 
 [Eduards Sizovs](https://www.goodreads.com/review/show/1716906360),
 Co-founder of [DevTernity](http://devternity.com/):<br/>

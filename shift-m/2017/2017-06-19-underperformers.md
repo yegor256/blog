@@ -9,7 +9,7 @@ place: Copenhagen, Denmark
 permalink: /podcast/2017/3.html
 description: |
   How to deal with underperforming employees? That's
-  a very typical question project managers ask, misunderstaning
+  a very typical question project managers ask, misunderstanding
   their own roles in this situation.
 keywords:
   - podcast

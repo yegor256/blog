@@ -60,7 +60,7 @@ Next, please!
 If you really want a ~~car~~ software that will do what you expect
 it to do, you have to learn how to be a _Product Owner_. It's a new job you will
 have to occupy for the next few months or maybe years. You will occupy it
-anyway, either you like it or not. But if you do that conciously and well
+anyway, either you like it or not. But if you do that consciously and well
 aware of how it all works, you can lose a little less money and increase
 your chances to success.
 

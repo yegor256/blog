@@ -8,7 +8,7 @@ date: 2019-12-04 12:00:00
 place: Moscow, Russia
 permalink: /shift-m/2019/42.html
 description: |
-  Self development is easy to say but difficult to achive;
+  Self development is easy to say but difficult to achieve;
   Venkat shares his experience and gives some advice.
 keywords:
   - podcast

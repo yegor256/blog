@@ -9,7 +9,7 @@ place: Moscow, Russia
 tags: mgmt testing
 description: |
   Keep your ticket focused---one issue per report, no distractions,
-  no "by the way"---this is how you help your team achive higher efficiency.
+  no "by the way"---this is how you help your team achieve higher efficiency.
 keywords:
   - bug reports
   - bug reporting

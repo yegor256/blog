@@ -19,7 +19,7 @@ keywords:
   - startup failure stories
 ---
 
-Here is a non exhaustive list of simptoms of a startup
+Here is a non exhaustive list of symptoms of a startup
 that is heading to failure. Maybe there are more, but
 under this list I can put my signature. I've seen them
 so many times.

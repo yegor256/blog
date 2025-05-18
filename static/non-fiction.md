@@ -10,7 +10,7 @@ place: Odessa, Ukraine
 tags: books
 description: |
   Here is a list of my favorite non-fiction books, which are
-  about mangement, programming or business; they are
+  about management, programming or business; they are
   about philosophy of life mostly.
 keywords:
   - non-fiction books

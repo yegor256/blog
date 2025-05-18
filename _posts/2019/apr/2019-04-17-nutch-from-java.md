@@ -16,7 +16,7 @@ keywords:
   - nutch
   - nutch in java
   - java nutch
-  - nutch without comand line
+  - nutch without command line
   - nutch apache
 ---
 

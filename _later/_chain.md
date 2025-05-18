@@ -49,7 +49,7 @@ interface Items<T> {
 
 I would not use the `Iterator` simply because it is
 [mutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) and
-it doesn't alow its methods
+it doesn't allow its methods
 to throw checked `IOException`, and I'm a
 [big fan]({% pst 2015/jul/2015-07-28-checked-vs-unchecked-exceptions %}) of those.
 The `Items` interface is immutable and is supposed to be used like this,

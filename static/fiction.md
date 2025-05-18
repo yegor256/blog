@@ -10,7 +10,7 @@ place: Odessa, Ukraine
 tags: books
 description: |
   Here is a list of my favorite fiction books, which are
-  not about mangement, programming or business; they are
+  not about management, programming or business; they are
   about life and love.
 keywords:
   - fiction books

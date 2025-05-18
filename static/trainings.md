@@ -14,7 +14,7 @@ keywords:
   - oop trainings
   - software development trainings
   - trainings devops
-  - software engineering trainigs
+  - software engineering trainings
 nospell: true
 image: /images/andreea/yegor-is-presenting.png
 ---

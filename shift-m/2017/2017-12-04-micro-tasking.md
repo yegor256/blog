@@ -8,7 +8,7 @@ date: 2017-12-04 12:00:00
 place: Odessa, Ukraine
 permalink: /shift-m/2017/17.html
 description: |
-  Micro-tasking is a management concent I'm advocating,
+  Micro-tasking is a management consent I'm advocating,
   but sometimes it doesn't work; here I listed a few
   situations when this may happen.
 keywords:

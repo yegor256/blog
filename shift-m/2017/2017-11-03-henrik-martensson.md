@@ -10,7 +10,7 @@ permalink: /shift-m/2017/18.html
 description: |
   Henrik wrote an interesting blog post about the
   problem we all are experiencing with the modern
-  recruting and HR systems; we discussed them.
+  recruiting and HR systems; we discussed them.
 keywords:
   - podcast
   - project management podcast

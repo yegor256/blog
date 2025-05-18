@@ -570,7 +570,7 @@ try to attend next year
 The event was organized by JUG.ru guys (authors of JPoint and Joker) and
 it was rather good, as usual. Maybe because it was not Java community, I didn't
 get as much value from the event as I was getting from JPoint, but the
-overall impression was good. The accomodation, the venue, the equipment,
+overall impression was good. The accommodation, the venue, the equipment,
 the food were perfect. What I missed was the promotional part and the social
 activity around the talks
 {: .talk-event}
@@ -607,7 +607,7 @@ the audience was well prepared, the organizers werefriendly
 19-20 June 2017;
 [video](https://youtu.be/cv23Z6xpwDw),
 [slides](https://www.slideshare.net/YegorBugayenko/java-annotations-are-a-bad-idea).
-The food, the accomodation, the audience, the equipment was good. The location
+The food, the accommodation, the audience, the equipment was good. The location
 was rather far away from the hotel. Aside from that, the conference was
 surprisingly good, even though I was told that in 2016 there were not enough
 attendees. This year there were just two tracks, about 80 people at my talk.
@@ -651,7 +651,7 @@ glad to attend again, if they invite
 [video](https://www.youtube.com/watch?v=1bAixLaOCSA),
 [slides](https://www.slideshare.net/YegorBugayenko/objectoriented-junit-tests).
 This was my second year and it did work even better than in 2016. The location
-was better, the accomodation was perfect, the team was very dedicated, the
+was better, the accommodation was perfect, the team was very dedicated, the
 audience was interested. Will definitely try to attend next year
 {: .talk-event}
 
@@ -673,7 +673,7 @@ audience was interested. Will definitely try to attend next year
 [video](https://www.youtube.com/watch?v=CCr8hRE_TUs),
 [slides](https://www.slideshare.net/YegorBugayenko/objectoriented-flavor-for-junit-tests).
 As usual, this conference was very good, but this year something was missing.
-The venue was perfect, the accomodation, the team, the audience, the
+The venue was perfect, the accommodation, the team, the audience, the
 equipment at the highest level. I guess the content could be better with
 the budget these guys have available. More cutting-edge talks, more panel
 discussions, more provocation, more scandals. It was rather quiet and routine.
@@ -711,7 +711,7 @@ of the subject, or the time of the year
 [video](https://www.youtube.com/watch?v=HSh_Gpnn6fo).
 The event was very big, but many things were not as good as I would expect.
 It was in the cinema, as in 2016&mdash;not the best location, if you ask me.
-The food was average, the accomodation too. The key issue was the lack
+The food was average, the accommodation too. The key issue was the lack
 of social connection between speakers and attendees
 {: .talk-event}
 
@@ -1467,7 +1467,7 @@ tickets
 <img src="https://i.ytimg.com/vi/Xj226o2xI9Y/mqdefault.jpg" class="past-talk" alt="DevNexus 2015"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**;
 [DevNexus 2016](https://www.devnexus.com/s/speakers#Yegor_Bugayenko);
-<span class="city">Altanta, GA</span>, <span class="country">USA</span>;
+<span class="city">Atlanta, GA</span>, <span class="country">USA</span>;
 16 February 2016;
 [slides](https://www.slideshare.net/YegorBugayenko/chat-bots-vs-ui),
 [photos](https://www.facebook.com/yegor256/posts/10208707358871299),
