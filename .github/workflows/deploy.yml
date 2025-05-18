@@ -58,6 +58,9 @@ jobs:
         with:
           name: icons
           path: gh-pages/css
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
       - run: sudo npm install -g html-minifier@4.0.0
       - run: |
           find gh-pages -name '*.html' -type f -exec \
