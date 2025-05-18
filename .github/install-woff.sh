@@ -5,7 +5,9 @@
 
 set -ex -o pipefail
 
-unzip _docker/woff.zip -d /tmp/_sfnt2woff
+self=$(dirname "$0")
+
+unzip "${self}/../_docker/woff.zip" -d /tmp/_sfnt2woff
 cd /tmp/_sfnt2woff
 make
 cp sfnt2woff /usr/local/bin/
