@@ -10,9 +10,6 @@ name: jekyll
   pull_request:
     branches:
       - master
-concurrency:
-  group: jekyll-${{ github.ref }}
-  cancel-in-progress: true
 jobs:
   jekyll:
     timeout-minutes: 15
