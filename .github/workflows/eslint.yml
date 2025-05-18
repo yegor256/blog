@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 ---
 # yamllint disable rule:line-length
-name: jekyll
+name: eslint
 'on':
   push:
     branches:
@@ -11,14 +11,11 @@ name: jekyll
     branches:
       - master
 jobs:
-  jekyll:
+  eslint:
     timeout-minutes: 15
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.3
-          bundler-cache: true
-      - run: sudo .github/install-apt.sh
-      - run: bundle exec rake
+      - run: npm install -g eslint@9.27.0
+      - run: npm install @eslint/js
+      - run: eslint --config .github/eslint.config.js

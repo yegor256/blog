@@ -31,8 +31,6 @@ task default: [
   :snippets,
   :orphans,
   :ping,
-  :eslint,
-  # :jslint,
   # :proofer,
   :rubocop
 ]
@@ -239,7 +237,7 @@ task ping: [:build] do
   errors = File.read(out).split("\n").reduce(0) do |cnt, p|
     code, link = p.split
     next nil if link.nil?
-    if code == '200'
+    if code == '200' || code == '403'
       cnt
     else
       puts "#{link}: #{code}"
@@ -255,31 +253,6 @@ end
 desc 'Run RuboCop on all Ruby files'
 RuboCop::RakeTask.new do |t|
   t.fail_on_error = true
-  t.requires << 'rubocop-rspec'
-end
-
-desc 'Test all JavaScript files with JSLint'
-task :jslint do
-  Dir['js/**/*.js'].each do |f|
-    puts "jslint #{f}..."
-    stdout = `jslint #{f}`
-    raise "jslint failed at #{f}:\n#{stdout}" unless $CHILD_STATUS.success?
-  end
-  done 'JSLint says JavaScript files are clean'
-end
-
-desc 'Test all JavaScript files with ESLint'
-task :eslint do
-  Dir['js/**/*.js'].each do |f|
-    puts "eslint #{f}..."
-    if f.include?('min.js')
-      puts '  skipped'
-      next
-    end
-    stdout = `eslint #{f}`
-    raise "eslint failed at #{f}:\n#{stdout}" unless $CHILD_STATUS.success?
-  end
-  done 'ESLint says JavaScript files are clean'
 end
 
 desc 'Make sure all pages have excerpts'

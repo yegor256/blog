@@ -18,9 +18,8 @@ module Yegor
     end
 
     def render(_context)
-      path = File.expand_path('~/secrets.yml')
-      return unless File.exist?(path)
-      key = YAML.safe_load(File.open(path))['youtube_api_key']
+      key = ENV.fetch('YOUTUBE_API_KEY', nil)
+      return if key.nil?
       uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?id=#{@id}&part=snippet&key=#{key}")
       json = JSON.parse(Net::HTTP.get(uri))
       # raise json['error']['message'] if json['error']

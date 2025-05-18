@@ -7,6 +7,11 @@ set -ex -o pipefail
 
 self=$(dirname "$0")
 
+apt-get update --yes
+apt-get install --yes --no-install-recommends fontforge=* woff2=*
+apt-get clean
+rm -rf /var/lib/apt/lists/*
+
 unzip "${self}/../_docker/woff.zip" -d /tmp/_sfnt2woff
 cd /tmp/_sfnt2woff
 make

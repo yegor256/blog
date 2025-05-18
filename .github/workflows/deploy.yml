@@ -1,0 +1,66 @@
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+---
+name: deploy
+'on':
+  push:
+    branches:
+      - master
+concurrency:
+  group: ${{ github.ref }}-deploy
+  cancel-in-progress: true
+jobs:
+  site:
+    timeout-minutes: 45
+    runs-on: ubuntu-24.04
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3
+          bundler-cache: true
+      - run: sudo .github/install-apt.sh
+      - run: bundle exec rake
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+  icons:
+    timeout-minutes: 10
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: rm -f Gemfile Gemfile.lock
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: false
+      - run: sudo .github/install-woff.sh
+      - run: .github/make-icons.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: icons
+          path: css
+  publish:
+    timeout-minutes: 5
+    runs-on: ubuntu-24.04
+    needs: [site, icons]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: gh-pages
+      - uses: actions/download-artifact@v4
+        with:
+          name: icons
+          path: gh-pages/css
+      - uses: JamesIves/github-pages-deploy-action@v4.7.3
+        with:
+          branch: gh-pages
+          folder: gh-pages
+          target-folder: .
+          clean: true
