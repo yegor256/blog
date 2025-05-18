@@ -15,7 +15,6 @@ RUN apt-get update --yes --fix-missing \
     aspell=* aspell-en=* \
     graphviz=* gnuplot=* \
     s3cmd=* \
-    fontforge=* \
     liblapack-dev=* \
     cmake=* \
     libxml2-utils=* \
@@ -26,7 +25,6 @@ RUN apt-get update --yes --fix-missing \
   && rm -rf /var/lib/apt/lists/* \
   && plantuml -version \
   && aspell --version \
-  && fontforge --version \
   && gnuplot --version \
   && cmake --version \
   && shellcheck --version
@@ -43,14 +41,6 @@ RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 \
   && make \
   && make install \
   && tidy --version
-
-COPY _docker/woff.zip /tmp/woff.zip
-# hadolint ignore=DL3003
-RUN unzip /tmp/woff.zip -d _sfnt2woff \
-  && cd _sfnt2woff \
-  && make \
-  && cp sfnt2woff /usr/local/bin/ \
-  && sfnt2woff --version
 
 # hadolint ignore=DL3059
 RUN npm install -g cssshrink@0.0.5

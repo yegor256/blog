@@ -19,10 +19,11 @@ jobs:
           bundler-cache: false
       - run: sudo apt-get update --yes
       - run: sudo apt-get install --yes --no-install-recommends fontforge=*
+      - run: sudo .github/install-woff.sh
       - run: .github/make-icons.sh
       - uses: JamesIves/github-pages-deploy-action@v4.7.3
         with:
           branch: gh-pages
           folder: css
           target-folder: css
-          clean: true
+          clean: false
