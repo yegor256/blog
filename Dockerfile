@@ -31,7 +31,8 @@ RUN apt-get update --yes --fix-missing \
   && cmake --version \
   && shellcheck --version
 
-RUN npm install -g eslint@8.44.0 \
+RUN /usr/bin/install-node.sh \
+  && npm install -g eslint@8.44.0 \
   && eslint --version
 
 RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 \
