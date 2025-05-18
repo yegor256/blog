@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "Keep Bug Reports Focused: No BTW"
+title: "No BTW in Bug Reports"
 date: 2025-05-18
 place: Moscow, Russia
 tags: mgmt
@@ -16,9 +16,9 @@ keywords:
   - quality of bugs
   - good bug report
   - discipline of bug reporting
-image: /images/2025/05/
+image: /images/2025/05/bronx-tale.jpg
 jb_picture:
-  caption: ...
+  caption: Bronx Tale (1993) by Robert De Niro
 ---
 
 Every ticket---a bug report or a feature request---is a short-term contract.
@@ -66,7 +66,7 @@ It feels like they're interested, so you don’t want to lose the momentum.
 But that's a false assumption.
 They're not motivated to keep the discussion open.
 What they really want is to close the ticket---ASAP.
-Dragging out the conversation only risks annoying them.
+Dragging out the conversation only risks **annoying** them.
 
 You might also believe that submitting a ticket offends the team.
 They already have a lot of work to do---why bother them with even more?
@@ -75,11 +75,17 @@ But again, that's a false belief.
 Bug reports are the fuel for their engines.
 They need your tickets.
 First, because they help clarify requirements.
-Second, because they provide a sense that their work is needed and appreciated.
+Second, because they provide a sense that their work is **needed** and **appreciated**.
 Nothing hurts a software team more than a silent customer and an empty bug tracker.
 
 So, avoid saying "BTW" when talking to the team in a ticket.
 Stick to requesting a fix for the bug you originally reported.
-If something else comes to mind along the way---whether it's a question, another bug, or a feature request---submit a new ticket.
-That's the right place for it.
-We---and Mozilla---believe that every ticket should be a bug report.
+If something else comes to mind along the way---whether it's a question, another bug, or a feature request---submit a **new ticket**.
+We—and [Mozilla]—believe that every ticket should be a bug report.
+
+You might also consider moving the conversation to a mailing list, as [suggested by Karl Fogel].
+Or even to Slack or Telegram.
+But I don’t recommend it.
+
+[suggested by Karl Fogel]: https://producingoss.com/da/bug-tracker-usage.html
+[Mozilla]: https://www.researchgate.net/publication/2559439_An_Overview_of_the_Software_Engineering_Process_and_Tools_in_the_Mozilla_Project
