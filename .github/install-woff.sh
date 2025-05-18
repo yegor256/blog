@@ -11,3 +11,7 @@ unzip "${self}/../_docker/woff.zip" -d /tmp/_sfnt2woff
 cd /tmp/_sfnt2woff
 make
 cp sfnt2woff /usr/bin/
+
+git clone --recursive https://github.com/google/woff2.git
+cd woff2
+make clean all
