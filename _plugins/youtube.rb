@@ -18,7 +18,7 @@ module Yegor
     end
 
     def render(_context)
-      key = ENV['YOUTUBE_API_KEY']
+      key = ENV.fetch('YOUTUBE_API_KEY', nil)
       return if key.nil?
       uri = URI.parse("https://www.googleapis.com/youtube/v3/videos?id=#{@id}&part=snippet&key=#{key}")
       json = JSON.parse(Net::HTTP.get(uri))
