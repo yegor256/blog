@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+      - run: rm -f Gemfile Gemfile.lock
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
