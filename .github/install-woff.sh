@@ -7,12 +7,6 @@ set -ex -o pipefail
 
 self=$(dirname "$0")
 
-ruby --version
-env
-
-gem install ffi -v 1.16.3
-gem install fontcustom -v 2.0.0
-
 apt-get update --yes
 apt-get install --yes --no-install-recommends fontforge=* woff2=*
 apt-get clean
