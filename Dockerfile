@@ -35,6 +35,7 @@ RUN /usr/bin/install-node.sh \
   && npm install -g eslint@8.44.0 \
   && eslint --version
 
+# hadolint ignore=DL3003
 RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 \
   && cd _tidy-html5/build/cmake \
   && git checkout 5.8.0 \
