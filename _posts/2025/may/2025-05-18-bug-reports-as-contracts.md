@@ -60,13 +60,15 @@ A few more good recipes to distract them:
 
 All of these questions, complaints and suggestions are perfect candidates for new bug reports.
 
-You might think a ticket is an opportunity to chat with the team.
+You might think a ticket is an opportunity to [chat]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}) with the team.
 They're already responding---so why not ask all your questions while you have their attention?
 It feels like they're interested, so you don’t want to lose the momentum.
 But that's a false assumption.
-They're not motivated to keep the discussion open.
+They're [not motivated]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}) to keep the discussion open.
 What they really want is to close the ticket---ASAP.
 Dragging out the conversation only risks **annoying** them.
+
+{% quote Nothing hurts a software team more than a silent customer and an empty bug tracker. %}
 
 You might also believe that submitting a ticket offends the team.
 They already have a lot of work to do---why bother them with even more?
@@ -81,11 +83,11 @@ Nothing hurts a software team more than a silent customer and an empty bug track
 So, avoid saying "BTW" when talking to the team in a ticket.
 Stick to requesting a fix for the bug you originally reported.
 If something else comes to mind along the way---whether it's a question, another bug, or a feature request---submit a **new ticket**.
-We—and [Mozilla]—believe that every ticket should be a bug report.
+We—and [Mozilla]—believe that every ticket should be a [bug report]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}).
 
 You might also consider moving the conversation to a mailing list, as [suggested by Karl Fogel].
 Or even to Slack or Telegram.
-But I don’t recommend it.
+But I [don’t recommend]({% pst 2016/aug/2016-08-23-communication-maturity %}) it.
 
 [suggested by Karl Fogel]: https://producingoss.com/da/bug-tracker-usage.html
 [Mozilla]: https://www.researchgate.net/publication/2559439_An_Overview_of_the_Software_Engineering_Process_and_Tools_in_the_Mozilla_Project
