@@ -138,7 +138,7 @@ We figured that in addition to HSE it would be good to have a few other sponsors
 mostly to make us look more serious and reputable (as much as it's possible
 for a young conference). We had good contacts with a few Russian
 education organizations and they all agreed to join:
-[MIPT](https://mipt.ru/english/),
+MIPT,
 [MSU](https://www.msu.ru/), and
 [ISP RAS](https://www.ispras.ru/en/).
 We contacted industry companies, and they also agreed:

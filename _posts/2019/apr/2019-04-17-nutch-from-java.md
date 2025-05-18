@@ -187,7 +187,7 @@ This seems to be a pretty straight-forward algorithm, however
 there is one tricky part. Nutch, in order to work, needs a number
 of plugins, which are standalone JAR packages, which it doesn't include
 in its default JAR. They exist in its
-[binary distribution](https://nutch.apache.org/downloads.html) and they
+binary distribution and they
 are pretty heavy (over 250MB in Nutch 1.15). Nutch expects you to download
 the entire distribution, unpack, and run the binary `nutch` they provide,
 which will work with the provided plugins.

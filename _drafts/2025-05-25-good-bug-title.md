@@ -33,10 +33,21 @@ A properly formulated problem---this essentially is a title---leads to faster an
 
 {% jb_picture_body %}
 
-There are three types of tickets we see in our repositories from our contributors.
+Let's say, you try to download a PNG file, but get a text file instead.
+You want to report this problem to the team.
+How would you title such a bug report?
+I'll give you a few options:
 
-...
+* "Why I get text file instead of PNG?"
+* "I need text file, not PNG"
+* "Fix CSV-file downloading feature"
+* "PNG file downloading is broken"
 
+Now, let's say you want to be able to download PDF file.
+How would you title this feature request?
+How about these options:
+
+* "..."
 
 
 [@horw]: https://github.com/horw
