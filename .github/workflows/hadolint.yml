@@ -4,7 +4,11 @@
 name: hadolint
 'on':
   push:
+    branches:
+      - master
   pull_request:
+    branches:
+      - master
 jobs:
   hadolint:
     timeout-minutes: 15
