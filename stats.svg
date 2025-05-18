@@ -7,7 +7,7 @@
 >
 
 <title>Gnuplot</title>
-<desc>Produced by GNUPLOT 5.4 patchlevel 2 </desc>
+<desc>Produced by GNUPLOT 5.4 patchlevel 1 </desc>
 
 <g id="gnuplot_canvas">
 
@@ -713,7 +713,10 @@
 	<path stroke='rgb(129, 179,  65)'  d='M625.34,230.00 L625.34,206.52 L628.36,206.52 L628.36,230.00 L625.34,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '641.23,230.00 644.26,230.00 644.26,200.64 641.23,200.64 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M641.23,230.00 L641.23,200.65 L644.25,200.65 L644.25,230.00 L641.23,230.00 Z  '/></g>
+	<path stroke='rgb(129, 179,  65)'  d='M641.23,230.00 L641.23,200.65 L644.25,200.65 L644.25,230.00 L641.23,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(129, 179,  65)' points = '645.23,230.00 648.26,230.00 648.26,219.95 645.23,219.95 '/>
+	</g>
+	<path stroke='rgb(129, 179,  65)'  d='M645.23,230.00 L645.23,219.96 L648.25,219.96 L648.25,230.00 L645.23,230.00 Z  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb(129, 179,  65)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>

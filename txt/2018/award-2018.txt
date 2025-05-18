@@ -36,7 +36,7 @@ Warning: Project does not pass to the lines of code rule, though I still reviewe
 
 https://github.com/shlinkio/shlink (PHP, 12K LoC, 42K HoC)
 
-+ Class names are well orginized.
++ Class names are well organized.
 + Code is object oriented.
 + Coding style is clean.
 + High code coverage 93 %
@@ -331,7 +331,7 @@ https://github.com/javascript-obfuscator/javascript-obfuscator (JavaScript, 80K 
 + Deployment automated.
 + Code is clean
 + Github issues tracker.
-+ Class names are well orginized
++ Class names are well organized
 - Coding style mosty in Javascript way.
 - Lots of static methods used. I found in 27 files.
 - Lost of global methods. I found in 25 files
@@ -862,7 +862,7 @@ https://github.com/smarr/SMOns
 - Could not get info about metrics, project just show about travis build status.
 + Yes, requirements are documented in README.md.
 - No code coverage metrics found.
-+/- Source repository is preety clean, but is a little difficult to find project files due non-standard project tree.
++/- Source repository is pretty clean, but is a little difficult to find project files due non-standard project tree.
 + Good documentation in https://somns.readthedocs.io/en/dev/
 - Team seams to take a long time to respond tickets outside the planned
   milestones (more than one month from ticket open to ticket closure).
@@ -1012,7 +1012,7 @@ https://github.com/smartcommunitylab/smartcampus.gamification
 - Anemic Domain Model antipattern.
 - Interfaces depend on data structures. This violates Dependency Inversion Principle.
 - Law Of Demeter violated in at least several places.
-- Heavy use of data classes with generater getters/setters.
+- Heavy use of data classes with generator getters/setters.
 - Utility classes.
 - Few interfaces. A few of them have over 20 methods.
 - A few classes with over 500 lines of code.
@@ -1083,7 +1083,7 @@ https://github.com/RobinJ1995/DistroHopper
 - ER naming classes
 - One big class HomeActivity (1021 loc)
 - Procedural design (lot of if/else/for nestings in AppManager, HomeActivity, IconPackHelper, Image and so on)
-- Usage of contstants (ex. RequestCode)
+- Usage of constants (ex. RequestCode)
 - Plenty of classes do not implement an interface
 - Implementation inheritance (ex. Observed)
 - Usage of instanceOf (App, Image, HomeActivity...)
@@ -1260,10 +1260,10 @@ https://github.com/Guseyn/cutie (Javascript)
 + Good documentation
 + 15 releases
 + Clean OOP in JavaScript. !Wow
-+ Class names are well orginized.
++ Class names are well organized.
 - Project has only 583 lines of code. Too small.
 - There are some test, But no any data about test coverage.
-- Commits not well orginized
+- Commits not well organized
 
 @yegor256: it's just too small
 
@@ -1291,7 +1291,7 @@ https://github.com/infotech-group/android-drawable-dsl
 + 3 releases
 + deployment automated with circleci.com
 - Project is too small only 353 lines of code in Kotlin. and 300 in XML
-- commits not well orginized
+- commits not well organized
 - code mostly written in kotlin style. Not very OOP.
 - Codding style is in procudural programming.
 - There are test but it is not clear what is test coverage.

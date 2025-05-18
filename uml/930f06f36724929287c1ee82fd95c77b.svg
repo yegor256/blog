@@ -7,7 +7,7 @@ entity PostgreSQL--><rect fill="#FEFECE" filter="url(#f1kqucwdlkjggv)" height="3
 reverse link TxtAuthor to TxtHead--><path d="M111.34,45 C118.7,45 126.05,45 133.4,45 " fill="none" id="TxtAuthor&lt;-TxtHead" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="98.11,45,104.11,49,110.11,45,104.11,41,98.11,45" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[d2475efb338a171331b3eea876866aaf]
 reverse link TxtHead to Article--><path d="M241.93,45 C249.25,45 256.57,45 263.9,45 " fill="none" id="TxtHead&lt;-Article" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="228.74,45,234.74,49,240.74,45,234.74,41,228.74,45" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[05893bd97759a0e224e18adacac57fea]
 reverse link Article to SqlArticle--><path d="M307,95.84 C307,111.87 307,128.87 307,142 " fill="none" id="Article&lt;-SqlArticle" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="300,95.72,307,75.72,314,95.72,300,95.72" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[fcd9472dd1b213d3f5d93cc14988f3e1]
-link SqlArticle to PostgreSQL--><path d="M307,190.19 C307,206.57 307,228.4 307,244.6 " fill="none" id="SqlArticle-&gt;PostgreSQL" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="307,249.87,311,240.87,307,244.87,303,240.87,307,249.87" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[3bb63924025e7567f6419805e4dc7ce7]
+link SqlArticle to PostgreSQL--><path d="M307,190.19 C307,206.57 307,228.4 307,244.6 " fill="none" id="SqlArticle-&gt;PostgreSQL" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#A80036" points="307,249.87,311,240.87,307,244.87,303,240.87,307,249.87" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[4d8b521eb7d36ab139650f6e922b010c]
 @startuml
 
 allowmixing
@@ -28,7 +28,7 @@ PlantUML version 1.2020.02(Sun Mar 01 10:22:07 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
-Java Version: 11.0.26+4-post-Ubuntu-1ubuntu122.04
+Java Version: 11.0.26+4-post-Debian-1deb11u1
 Operating System: Linux
 Default Encoding: UTF-8
 Language: en
