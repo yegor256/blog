@@ -18,6 +18,7 @@ merge:
 deploy:
   # yamllint disable rule:line-length
   script: |
+    set -e
     export JEKYLL_ENV=production
     LC_ALL=en_US.UTF-8 bundle exec rake
     mkdir ~/.ssh
