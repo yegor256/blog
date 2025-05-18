@@ -11,6 +11,7 @@ gem install fontcustom -v 2.0.0
 fontcustom --version
 
 tmp=${self}/../temp
+mkdir -p "${tmp}"
 "${self}/../_glyphs/compile.sh" "${tmp}"
 
 for e in svg ttf woff eot css; do
