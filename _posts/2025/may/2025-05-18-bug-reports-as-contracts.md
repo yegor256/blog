@@ -52,11 +52,11 @@ You want them to stay focused on the problem at hand.
 
 A few more good recipes to distract them:
 
-* "BTW, it would be great to have another feature that..."
+* "**BTW**, it would be great to have another feature that..."
 
-* "BTW, why this code is designed this way?"
+* "**BTW**, why this code is designed this way?"
 
-* "BTW, I wonder, how this works?"
+* "**BTW**, I wonder, how this works?"
 
 All of these questions, complaints and suggestions are perfect candidates for new bug reports.
 
