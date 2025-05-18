@@ -49,17 +49,18 @@ jobs:
     runs-on: ubuntu-24.04
     needs: [site, icons]
     steps:
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
           name: site
-          path: site
+          path: gh-pages
       - uses: actions/download-artifact@v4
         with:
           name: icons
-          path: site/css
+          path: gh-pages/css
       - uses: JamesIves/github-pages-deploy-action@v4.7.3
         with:
           branch: gh-pages
-          folder: site
+          folder: gh-pages
           target-folder: .
           clean: true
