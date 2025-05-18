@@ -15,5 +15,6 @@ cp sfnt2woff /usr/bin/
 git clone --recursive https://github.com/google/woff2.git
 cd woff2
 make clean all
-ls -al
-tree
+for f in woff2_compress woff2_decompress woff2_info; do
+  cp "${f}" /usr/bin
+done
