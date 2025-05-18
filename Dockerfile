@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
-FROM yegor256/rultor-image:1.24.0
+FROM yegor256/latex:0.0.1
 LABEL description="yegor256.com"
 LABEL vendor="Yegor Bugayenko"
 LABEL version="1.0"
@@ -15,7 +15,6 @@ RUN apt-get update --yes --fix-missing \
     aspell=* aspell-en=* \
     graphviz=* gnuplot=* \
     s3cmd=* \
-    fontforge=* \
     liblapack-dev=* \
     cmake=* \
     libxml2-utils=* \
@@ -26,29 +25,18 @@ RUN apt-get update --yes --fix-missing \
   && rm -rf /var/lib/apt/lists/* \
   && plantuml -version \
   && aspell --version \
-  && fontforge --version \
   && gnuplot --version \
   && cmake --version \
   && shellcheck --version
 
-RUN npm install -g eslint@8.44.0 \
+RUN /usr/bin/install-node.sh \
+  && npm install -g eslint@8.44.0 \
   && eslint --version
 
-RUN git clone https://github.com/htacg/tidy-html5.git _tidy-html5 \
-  && cd _tidy-html5/build/cmake \
-  && git checkout 5.8.0 \
-  && cmake ../.. \
-  && make \
-  && make install \
-  && tidy --version
-
-COPY _docker/woff.zip /tmp/woff.zip
-RUN unzip /tmp/woff.zip -d _sfnt2woff \
-  && cd _sfnt2woff \
-  && make \
-  && cp sfnt2woff /usr/local/bin/ \
-  && sfnt2woff --version
-
-RUN npm install -g cssshrink@0.0.5
-
-RUN /bin/bash -l -c "gem update --system && gem install jgd -v 1.13.0"
+COPY .github/*.sh /tmp
+RUN /tmp/install-tidy.sh \
+  && /tmp/install-woff.sh \
+  && npm install -g cssshrink@0.0.5 \
+  && gem install ffi -v 1.16.3 \
+  && gem install fontcustom -v 2.0.0 \
+  && gem install jgd -v 1.13.0

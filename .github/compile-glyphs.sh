@@ -1,17 +1,17 @@
 #!/bin/bash
+
 # SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
-set -e
-set -x
+set -ex -o pipefail
 
-dir=$(dirname "$0")
+self=$(dirname "$0")
 
 target=$1
 
 mkdir -p "${target}"
 
-fontcustom compile "${dir}" \
+fontcustom compile "${self}/../_glyphs" \
   "--output=${target}" \
   --font-name=icons --templates=css --no-hash --force --autowidth --debug
 
