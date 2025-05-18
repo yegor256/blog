@@ -1,0 +1,25 @@
+# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+---
+name: icons
+'on':
+  push:
+    branches:
+      - master
+jobs:
+  icons:
+    timeout-minutes: 15
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+          bundler-cache: true
+      - run: .github/make-icons.sh
+      - uses: JamesIves/github-pages-deploy-action@v4.7.3
+        with:
+          branch: gh-pages
+          folder: css
+          target-folder: css
+          clean: true
