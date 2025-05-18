@@ -42,4 +42,3 @@ Metrics/PerceivedComplexity:
   Max: 20
 Metrics/BlockLength:
   Max: 100
-require: []

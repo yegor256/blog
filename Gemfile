@@ -37,7 +37,6 @@ gem 'rubocop', '~>1.75'
 gem 'rubocop-minitest', '>0', require: false
 gem 'rubocop-performance', '>0', require: false
 gem 'rubocop-rake', '>0', require: false
-gem 'rubocop-rspec', '~>3.4'
 gem 'sass', '~>3.7'
 gem 'scss_lint', '~>0.60'
 gem 'trollop', '~>2.9'
