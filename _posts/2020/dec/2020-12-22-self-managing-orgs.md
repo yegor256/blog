@@ -87,7 +87,7 @@ may only be made by those who are ready to pay for mistakes: managers.
 
 In a traditional hierarchical organization, everybody has a manager, who
 is responsible for answering these questions. This is what managers are for:
-to consentrate authority and responsibility. This is what levels of management
+to concentrate authority and responsibility. This is what levels of management
 are for: to decompose larger authority and responsibility into
 smaller pieces, delegating them to lower-level personnel. I believe, I don't need
 to explain this essential wisdom: it's the fundamentals of management.

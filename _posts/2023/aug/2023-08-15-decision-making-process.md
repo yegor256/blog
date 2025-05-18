@@ -39,7 +39,7 @@ in software teams or companies (with the most critical ones listed last):
 
   * **Overload**.
   Regardless of how crucial your proposal is, many meeting attendees have their own priorities.
-  You cannot expect them to consentrate fully on your idea or actively engage
+  You cannot expect them to concentrate fully on your idea or actively engage
   in the discussion. Furthermore, some might just be lazy by nature.
 
   * **Incompetence**.

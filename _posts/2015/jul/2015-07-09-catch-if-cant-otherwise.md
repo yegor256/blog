@@ -89,7 +89,7 @@ from languages without exceptions, like C.
 
 Exceptions were invented to simplify our design by moving the entire
 error handling code away from the main logic. Moreover, we're not just moving it away but
-also consentrating it in one place---in the `main()` method, the entry
+also concentrating it in one place---in the `main()` method, the entry
 point of the entire app.
 
 The primary purpose of an exception is to collect as much information as possible

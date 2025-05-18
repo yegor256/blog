@@ -229,7 +229,7 @@ same time, and in the same room. This argument makes sense, but I'll address tha
 
 ## Meetings Waste Time
 
-I think it's obvious. For the first few minutes of the meeting, you're consentrated;
+I think it's obvious. For the first few minutes of the meeting, you're concentrated;
 then you start checking your Twitter feed and doodling. Everybody is doing
 the same---not because we're [lazy]({% pst 2018/apr/2018-04-17-how-to-be-lazy %})
 but because there is _no demand_
@@ -238,18 +238,18 @@ for our full focus at the meeting.
 {% youtube pt9uHp35fwM %}
 
 While Monica is working with the document, making comments and suggestions, she is
-[fully consentrated]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %})
+[fully concentrated]({% pst 2015/nov/2015-11-21-ringelmann-effect-vs-agile %})
 on the result---mostly because there is nobody
 else to
 [help]({% pst 2015/feb/2015-02-16-it-is-not-a-school %})
 her. She has to deliver that pull request, and I'm waiting for her.
-Her consentration is as high as it would be at the meeting, when someone
+Her concentration is as high as it would be at the meeting, when someone
 is asking her a direct question and she has to provide a detailed answer.
 
 Her time is optimized for a suitable outcome while everybody else is doing
 something else.
 
-At the meeting, on the other hand, we're all consentrating sparingly at best. And the longer
+At the meeting, on the other hand, we're all concentrating sparingly at best. And the longer
 the meeting, the slower we are. Also, the more people who are there,
 the less we care and the more interested we become in our Facebook updates.
 I reckon that's not much of a surprise to you if you've been in the software development

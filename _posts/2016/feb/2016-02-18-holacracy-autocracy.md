@@ -39,7 +39,7 @@ According to Wikipedia at the time of writing, a
 "authority and decision-making are distributed" while,
 on the other hand,
 [_autocracy_](https://en.wikipedia.org/wiki/Autocracy) exists when
-"supreme power is consentrated in the hands of one person."
+"supreme power is concentrated in the hands of one person."
 
 When I say organization, I mean a team, a startup, a company, that
 sort of thing. It's something with a brand, an office, a business entity
