@@ -75,7 +75,7 @@ They already have a lot of work to do---why bother them with even more?
 Every bug report or feature request might seem like an extra burden on their shoulders.
 But again, that's a false belief.
 Bug reports are the [fuel]({% pst 2018/feb/2018-02-06-where-to-find-more-bugs %}) for their engines.
-They need your tickets.
+They [need]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}) your tickets.
 First, because they help clarify requirements.
 Second, because they provide a sense that their work is **needed** and **appreciated**.
 Nothing hurts a software team more than a silent customer and an empty bug tracker.
