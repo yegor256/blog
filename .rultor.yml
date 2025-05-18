@@ -29,15 +29,3 @@ deploy:
     git config --global user.name "Rultor"
     echo -e "chatgpt-translate:\n  api_key_file: $(pwd)/../chatgpt-key.txt" > _config-deploy.yml
     LC_ALL=en_US.UTF-8 jgd
-
-    rvm default 2.7.6 && source /usr/local/rvm/scripts/rvm
-    ruby -v
-    gem install ffi -v 1.16.3
-    gem install fontcustom -v 2.0.0
-    fontcustom --version
-    "$(pwd)/_glyphs/compile.sh" /tmp/icons
-    git checkout gh-pages
-    git pull
-    for e in svg ttf woff eot css; do cp "/tmp/icons/icons.${e}" css; git add "css/icons.${e}"; done
-    git commit -am 'new glyphs' || echo no changes in glyphs
-    git push origin gh-pages
