@@ -15,8 +15,6 @@ RUN /tmp/install-apt.sh \
   && /tmp/install-tidy.sh \
   && /tmp/install-woff.sh \
   && npm install -g cssshrink@0.0.5 \
-  && gem install ffi -v 1.16.3 \
-  && gem install fontcustom -v 2.0.0 \
   && gem install jgd -v 1.13.0
 
 RUN /usr/bin/install-node.sh \
