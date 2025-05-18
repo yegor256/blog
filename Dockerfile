@@ -11,19 +11,19 @@ SHELL ["/bin/bash", "-e", "-c", "-o", "pipefail"]
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update --yes --fix-missing \
-  && apt-get install --yes --no-install-recommends
-    aspell=* aspell-en=*
-    graphviz=* gnuplot=*
-    s3cmd=*
-    fontforge=*
-    liblapack-dev=*
-    cmake=*
-    libxml2-utils=*
-    shellcheck=*
+  && apt-get install --yes --no-install-recommends \
+    aspell=* aspell-en=* \
+    graphviz=* gnuplot=* \
+    s3cmd=* \
+    fontforge=* \
+    liblapack-dev=* \
+    cmake=* \
+    libxml2-utils=* \
+    shellcheck=* \
     plantuml=* \
     woff2=* \
   && apt-get clean \
-  && rm -rf /var/lib/apt/lists/*
+  && rm -rf /var/lib/apt/lists/* \
   && plantuml -version \
   && aspell --version \
   && fontforge --version \
