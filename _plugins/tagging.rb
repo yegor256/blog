@@ -3,8 +3,8 @@
 # SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
-require 'nuggets/range/quantile'
 require 'erb'
+require 'nuggets/range/quantile'
 
 # My module
 module Yegor
