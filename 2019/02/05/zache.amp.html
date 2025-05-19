@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Zache: A Simple Ruby In-Memory Cache</title>
-    <link rel="canonical" href="https://www.yegor256.com/2019/02/05/zache.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Zache: A Simple Ruby In-Memory Cache</title><link rel="canonical"href="https://www.yegor256.com/2019/02/05/zache.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,81 +33,14 @@ which, I was surprised to find out, hasn't been implemented so far
 in any other Gems.
 ",
         "keywords": ["ruby cache", "ruby in-memory cache", "ruby caching", "memory caching ruby", "ruby simple cache"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2019/02/05/zache.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>5 February 2019</p>
-      <h1>Zache: A Simple Ruby In-Memory Cache</h1>
-      <p>A month ago I stumbled upon a problem: I wasn’t able to find a Ruby
-gem which would do in-memory caching with the capability to expire
-on timeout. After some quick research I decided to implement my own and called
-it Zache (as in “zero cache,” since there is no back end). Here is how it works:</p>
-
-
-
-<p>First, you create the cache:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'zache'</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2019/02/05/zache.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>5 February 2019<h1>Zache: A Simple Ruby In-Memory Cache</h1><p>A month ago I stumbled upon a problem: I wasn’t able to find a Ruby gem which would do in-memory caching with the capability to expire on timeout. After some quick research I decided to implement my own and called it Zache (as in “zero cache,” since there is no back end). Here is how it works:<p>First, you create the cache:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'zache'</span>
 <span class="n">zache</span> <span class="o">=</span> <span class="no">Zache</span><span class="p">.</span><span class="nf">new</span>
-</code></pre></div></div>
-
-<p>Then you fetch the value by the key, also providing the block which will
-be executed if the key is absent or expired:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">zache</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="ss">:x</span><span class="p">,</span> <span class="ss">lifetime: </span><span class="mi">15</span><span class="p">)</span> <span class="k">do</span>
+</code></pre></div></div><p>Then you fetch the value by the key, also providing the block which will be executed if the key is absent or expired:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">zache</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="ss">:x</span><span class="p">,</span> <span class="ss">lifetime: </span><span class="mi">15</span><span class="p">)</span> <span class="k">do</span>
   <span class="c1"># Something very slow and expensive, which</span>
   <span class="c1"># we only want to execute once every 15 seconds.</span>
 <span class="k">end</span>
-</code></pre></div></div>
-
-<p>Here, <code class="language-plaintext highlighter-rouge">:x</code> is the key and <code class="language-plaintext highlighter-rouge">15</code> is the number of seconds it will stay
-in the cache, until it expires.</p>
-
-<p>It’s important to notice that the key won’t be deleted from the cache
-automatically. It will stay there until the next call to <code class="language-plaintext highlighter-rouge">get(:x)</code>. Only at
-that moment will it be marked as “expired.” In order to clean up the
-cache, you can call <code class="language-plaintext highlighter-rouge">zache.clean()</code> and all expired keys will be deleted.</p>
-
-<p>You can do it regularly in a separate thread, for example, every minute:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Thread</span><span class="p">.</span><span class="nf">start</span> <span class="k">do</span>
+</code></pre></div></div><p>Here, <code class="language-plaintext highlighter-rouge">:x</code> is the key and <code class="language-plaintext highlighter-rouge">15</code> is the number of seconds it will stay in the cache, until it expires.<p>It’s important to notice that the key won’t be deleted from the cache automatically. It will stay there until the next call to <code class="language-plaintext highlighter-rouge">get(:x)</code>. Only at that moment will it be marked as “expired.” In order to clean up the cache, you can call <code class="language-plaintext highlighter-rouge">zache.clean()</code> and all expired keys will be deleted.<p>You can do it regularly in a separate thread, for example, every minute:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Thread</span><span class="p">.</span><span class="nf">start</span> <span class="k">do</span>
   <span class="nb">sleep</span> <span class="mi">60</span>
   <span class="n">zache</span><span class="p">.</span><span class="nf">clean</span>
 <span class="k">end</span>
-</code></pre></div></div>
-
-<p>Also, Zache, of course, is thread-safe.</p>
-
-<p>The gem is in this <a href="https://github.com/yegor256/zache">GitHub repository</a>.
-Feel free to report bugs, if you find them, or help us with additional features.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Also, Zache, of course, is thread-safe.<p>The gem is in this <a href="https://github.com/yegor256/zache">GitHub repository</a>. Feel free to report bugs, if you find them, or help us with additional features.</article>

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Objects Without Methods</title>
-    <link rel="canonical" href="https://www.yegor256.com/2020/11/24/objects-without-methods.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Objects Without Methods</title><link rel="canonical"href="https://www.yegor256.com/2020/11/24/objects-without-methods.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,165 +33,17 @@ objects have attributes, which are other objects, created
 together with the parent object.
 ",
         "keywords": ["methods in oop", "object oriented programming", "oop and eo", "eolang", "eo design"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2020/11/24/objects-without-methods.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>24 November 2020</p>
-      <h1>Objects Without Methods</h1>
-      <p>What do you think an object is in OOP? No matter what language you are
-programming with, you will most probably agree with Bruce Eckel,
-the author of <a href="https://amzn.to/3pRHv1Q">Thinking in Java</a>, who said that “each object has a state
-and operations that you can ask it to perform,” or
-Benjamin Evans, the author of <a href="https://amzn.to/35uKVPU">Java in a Nutshell</a>, who claimed that it is
-“a collection of data fields that hold values and methods that operate on those values.”
-However, hold on… What if I told you that an object may have no “operations”
-and still be a perfect “equivalent of the quanta from which the universe
-is constructed,” as David West suggested in his great book
-<a href="https://amzn.to/3kuXHlL">Object Thinking</a>?</p>
-
-
-
-<amp-img src="/images/2020/11/the-ballad-of-buster-scruggs.jpg" alt="The Ballad of Buster Scruggs (2018) by Coen brothers" height="1000" width="1500" layout="responsive"></amp-img>
-
-<p>In <a href="https://www.eolang.org">EO</a>,
-our experimental programming language, we made an attempt to re-define
-OOP and its objects. There are two types of <em>things</em> in EO: atoms and objects.
-An atom is the lowest level language primitive, which can’t be expressed by
-other atoms. For example, an arithmetic addition of two other objects is an atom
-(stay with me, this is EO syntax, you will get used to it):</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>add 5 y &gt; x
-</code></pre></div></div>
-
-<p>In a more traditional Java-like <a href="https://en.wikipedia.org/wiki/Infix_notation">infix notation</a>
-this code would look like this:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = add(5, y)
-</code></pre></div></div>
-
-<p>The atom is <code class="language-plaintext highlighter-rouge">add</code> and its two specific
-arguments are <code class="language-plaintext highlighter-rouge">5</code> and <code class="language-plaintext highlighter-rouge">y</code>. This statement creates a new atom, using
-the existing one and specifying its arguments. The name of the new atom being
-created is <code class="language-plaintext highlighter-rouge">x</code>. Once we ask this newly created atom to do anything,
-it gets what’s in <code class="language-plaintext highlighter-rouge">y</code>, adds <code class="language-plaintext highlighter-rouge">5</code>, and starts behaving
-like a summary of them. Until then, it stays quiet.
-EO is a declarative language.</p>
-
-<p>Atoms are provided by the EO runtime. For example,
-<code class="language-plaintext highlighter-rouge">add</code>, <code class="language-plaintext highlighter-rouge">sub</code>, <code class="language-plaintext highlighter-rouge">mul</code>,  and <code class="language-plaintext highlighter-rouge">div</code> are for arithmetic operations;
-<code class="language-plaintext highlighter-rouge">if</code> and <code class="language-plaintext highlighter-rouge">for</code> are for forking and iterating;
-<code class="language-plaintext highlighter-rouge">less</code>, <code class="language-plaintext highlighter-rouge">and</code>, <code class="language-plaintext highlighter-rouge">eq</code>, <code class="language-plaintext highlighter-rouge">or</code> are for logical operations, and so on.
-Atoms may resemble low-level functions with arguments.
-However, they don’t calculate results immediately, but only when needed.
-Saying <code class="language-plaintext highlighter-rouge">add(5, file)</code> won’t lead to reading the content
-of the file and adding 5 to it immediately. Only when the
-created atom is dealt with will the file reading happen.</p>
-
-<p>Next, on top of these atoms, objects can be created by a programmer.
-For example, this is an object that represents a circle:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[r] &gt; circle
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2020/11/24/objects-without-methods.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>24 November 2020<h1>Objects Without Methods</h1><p>What do you think an object is in OOP? No matter what language you are programming with, you will most probably agree with Bruce Eckel, the author of <a href="https://amzn.to/3pRHv1Q">Thinking in Java</a>, who said that “each object has a state and operations that you can ask it to perform,” or Benjamin Evans, the author of <a href="https://amzn.to/35uKVPU">Java in a Nutshell</a>, who claimed that it is “a collection of data fields that hold values and methods that operate on those values.” However, hold on… What if I told you that an object may have no “operations” and still be a perfect “equivalent of the quanta from which the universe is constructed,” as David West suggested in his great book <a href="https://amzn.to/3kuXHlL">Object Thinking</a>?</p><amp-img src="/images/2020/11/the-ballad-of-buster-scruggs.jpg"alt="The Ballad of Buster Scruggs (2018) by Coen brothers"height="1000"width="1500"layout="responsive"></amp-img><p>In <a href="https://www.eolang.org">EO</a>, our experimental programming language, we made an attempt to re-define OOP and its objects. There are two types of <em>things</em> in EO: atoms and objects. An atom is the lowest level language primitive, which can’t be expressed by other atoms. For example, an arithmetic addition of two other objects is an atom (stay with me, this is EO syntax, you will get used to it):<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>add 5 y &gt; x
+</code></pre></div></div><p>In a more traditional Java-like <a href="https://en.wikipedia.org/wiki/Infix_notation">infix notation</a> this code would look like this:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = add(5, y)
+</code></pre></div></div><p>The atom is <code class="language-plaintext highlighter-rouge">add</code> and its two specific arguments are <code class="language-plaintext highlighter-rouge">5</code> and <code class="language-plaintext highlighter-rouge">y</code>. This statement creates a new atom, using the existing one and specifying its arguments. The name of the new atom being created is <code class="language-plaintext highlighter-rouge">x</code>. Once we ask this newly created atom to do anything, it gets what’s in <code class="language-plaintext highlighter-rouge">y</code>, adds <code class="language-plaintext highlighter-rouge">5</code>, and starts behaving like a summary of them. Until then, it stays quiet. EO is a declarative language.<p>Atoms are provided by the EO runtime. For example, <code class="language-plaintext highlighter-rouge">add</code>, <code class="language-plaintext highlighter-rouge">sub</code>, <code class="language-plaintext highlighter-rouge">mul</code>, and <code class="language-plaintext highlighter-rouge">div</code> are for arithmetic operations; <code class="language-plaintext highlighter-rouge">if</code> and <code class="language-plaintext highlighter-rouge">for</code> are for forking and iterating; <code class="language-plaintext highlighter-rouge">less</code>, <code class="language-plaintext highlighter-rouge">and</code>, <code class="language-plaintext highlighter-rouge">eq</code>, <code class="language-plaintext highlighter-rouge">or</code> are for logical operations, and so on. Atoms may resemble low-level functions with arguments. However, they don’t calculate results immediately, but only when needed. Saying <code class="language-plaintext highlighter-rouge">add(5, file)</code> won’t lead to reading the content of the file and adding 5 to it immediately. Only when the created atom is dealt with will the file reading happen.<p>Next, on top of these atoms, objects can be created by a programmer. For example, this is an object that represents a circle:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[r] &gt; circle
   mul 2 3.14 r &gt; perimeter
   mul 3.14 r r &gt; area
-</code></pre></div></div>
-
-<p>The first line creates an “abstract” object named <code class="language-plaintext highlighter-rouge">circle</code>. It is abstract,
-because one of its attributes <code class="language-plaintext highlighter-rouge">r</code> is “free”. It’s not specified
-in this object and that’s why the object can’t be used as is, it has
-to be copied with <code class="language-plaintext highlighter-rouge">r</code> specified. For example, this is the circle <code class="language-plaintext highlighter-rouge">c</code>
-with the radius 30:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>circle 30 &gt; c
-</code></pre></div></div>
-
-<p>The object <code class="language-plaintext highlighter-rouge">circle</code> has three attributes. The first one is <code class="language-plaintext highlighter-rouge">r</code>, which is free.
-The other two are <code class="language-plaintext highlighter-rouge">perimeter</code> and <code class="language-plaintext highlighter-rouge">area</code>. They are “bounded,” since their
-atoms are already defined: <code class="language-plaintext highlighter-rouge">mul</code> in both cases. To get the area of the
-circle <code class="language-plaintext highlighter-rouge">c</code> we do this:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c.area &gt; a
-</code></pre></div></div>
-
-<p>It looks like a method call, but it’s not. We don’t call a method, we just
-take an <code class="language-plaintext highlighter-rouge">area</code> object from the object <code class="language-plaintext highlighter-rouge">c</code>. It’s not created for us
-at the moment we do <code class="language-plaintext highlighter-rouge">c.area</code>! It has already been there sitting and waiting
-for us to take it. It was created right when the object <code class="language-plaintext highlighter-rouge">c</code> was built.</p>
-
-
-
-<p>This is the difference between methods in Java and attributes in EO.
-In Java, every method is a procedure to be executed as soon as it’s
-called. This method calling (or message sending, according to
-<a href="/2017/12/12/alan-kay-was-wrong.html">early OOP adepts</a>)
-mechanism was inherited from C functions,
-which itself we inherited from ALGOL procedures, I believe.
-EO does it differently. There is no method calling. It just takes attributes out
-of objects and gives them to other objects, until control is
-passed to them and it gets down to the level of atoms.</p>
-
-<p>In the example above, the object <code class="language-plaintext highlighter-rouge">a</code> is not a calculated number.
-It’s an atom <code class="language-plaintext highlighter-rouge">mul</code> that encapsulates <code class="language-plaintext highlighter-rouge">3.14</code> and <code class="language-plaintext highlighter-rouge">30</code> (the radius). The
-result of the calculation is not yet known. If we don’t do anything
-with <code class="language-plaintext highlighter-rouge">a</code>, the CPU will never do the calculation. However, if we decide
-to, say, print the number to the console, the calculation will happen:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>stdout
+</code></pre></div></div><p>The first line creates an “abstract” object named <code class="language-plaintext highlighter-rouge">circle</code>. It is abstract, because one of its attributes <code class="language-plaintext highlighter-rouge">r</code> is “free”. It’s not specified in this object and that’s why the object can’t be used as is, it has to be copied with <code class="language-plaintext highlighter-rouge">r</code> specified. For example, this is the circle <code class="language-plaintext highlighter-rouge">c</code> with the radius 30:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>circle 30 &gt; c
+</code></pre></div></div><p>The object <code class="language-plaintext highlighter-rouge">circle</code> has three attributes. The first one is <code class="language-plaintext highlighter-rouge">r</code>, which is free. The other two are <code class="language-plaintext highlighter-rouge">perimeter</code> and <code class="language-plaintext highlighter-rouge">area</code>. They are “bounded,” since their atoms are already defined: <code class="language-plaintext highlighter-rouge">mul</code> in both cases. To get the area of the circle <code class="language-plaintext highlighter-rouge">c</code> we do this:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c.area &gt; a
+</code></pre></div></div><p>It looks like a method call, but it’s not. We don’t call a method, we just take an <code class="language-plaintext highlighter-rouge">area</code> object from the object <code class="language-plaintext highlighter-rouge">c</code>. It’s not created for us at the moment we do <code class="language-plaintext highlighter-rouge">c.area</code>! It has already been there sitting and waiting for us to take it. It was created right when the object <code class="language-plaintext highlighter-rouge">c</code> was built.<p>This is the difference between methods in Java and attributes in EO. In Java, every method is a procedure to be executed as soon as it’s called. This method calling (or message sending, according to <a href="/2017/12/12/alan-kay-was-wrong.html">early OOP adepts</a>) mechanism was inherited from C functions, which itself we inherited from ALGOL procedures, I believe. EO does it differently. There is no method calling. It just takes attributes out of objects and gives them to other objects, until control is passed to them and it gets down to the level of atoms.<p>In the example above, the object <code class="language-plaintext highlighter-rouge">a</code> is not a calculated number. It’s an atom <code class="language-plaintext highlighter-rouge">mul</code> that encapsulates <code class="language-plaintext highlighter-rouge">3.14</code> and <code class="language-plaintext highlighter-rouge">30</code> (the radius). The result of the calculation is not yet known. If we don’t do anything with <code class="language-plaintext highlighter-rouge">a</code>, the CPU will never do the calculation. However, if we decide to, say, print the number to the console, the calculation will happen:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>stdout
   sprintf
     "Radius is %d, Area is %d"
     r
     a
-</code></pre></div></div>
-
-<p>Here, the atom <code class="language-plaintext highlighter-rouge">sprintf</code> constructs the string, which encapsulates
-three attributes: the text, <code class="language-plaintext highlighter-rouge">r</code>, and <code class="language-plaintext highlighter-rouge">a</code>. By the way,
-it’s possible to use either vertical or horizontal notation
-for constructing objects. The code above may be written like this:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>stdout (sprintf "Radius is %d, Area is %d" r a)
-</code></pre></div></div>
-
-<p>The atom <code class="language-plaintext highlighter-rouge">stdout</code> encapsulates the string constructed by <code class="language-plaintext highlighter-rouge">sprintf</code>
-and stays quiet. It doesn’t print anything! Only when someone
-at some point tries to “touch” this object, taking one of
-its attributes out, the atom <code class="language-plaintext highlighter-rouge">stdout</code> will drop the line to the
-console.</p>
-
-<p>There are no attributes in <code class="language-plaintext highlighter-rouge">stdout</code>, <code class="language-plaintext highlighter-rouge">sprintf</code>, <code class="language-plaintext highlighter-rouge">mul</code>, and most
-other atoms, except one: 𝜑.
-Any object or atom has this specific attribute, also known as
-the “body” of an object. Once someone attempts to touch <code class="language-plaintext highlighter-rouge">stdout.𝜑</code>,
-the console will see the string.</p>
-
-<p>Thus, we have objects, but we don’t have methods.
-There are only attributes representing other objects.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Here, the atom <code class="language-plaintext highlighter-rouge">sprintf</code> constructs the string, which encapsulates three attributes: the text, <code class="language-plaintext highlighter-rouge">r</code>, and <code class="language-plaintext highlighter-rouge">a</code>. By the way, it’s possible to use either vertical or horizontal notation for constructing objects. The code above may be written like this:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>stdout (sprintf "Radius is %d, Area is %d" r a)
+</code></pre></div></div><p>The atom <code class="language-plaintext highlighter-rouge">stdout</code> encapsulates the string constructed by <code class="language-plaintext highlighter-rouge">sprintf</code> and stays quiet. It doesn’t print anything! Only when someone at some point tries to “touch” this object, taking one of its attributes out, the atom <code class="language-plaintext highlighter-rouge">stdout</code> will drop the line to the console.<p>There are no attributes in <code class="language-plaintext highlighter-rouge">stdout</code>, <code class="language-plaintext highlighter-rouge">sprintf</code>, <code class="language-plaintext highlighter-rouge">mul</code>, and most other atoms, except one: 𝜑. Any object or atom has this specific attribute, also known as the “body” of an object. Once someone attempts to touch <code class="language-plaintext highlighter-rouge">stdout.𝜑</code>, the console will see the string.<p>Thus, we have objects, but we don’t have methods. There are only attributes representing other objects.</article>

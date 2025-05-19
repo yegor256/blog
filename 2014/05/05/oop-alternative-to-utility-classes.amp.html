@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>OOP Alternative to Utility Classes</title>
-    <link rel="canonical" href="https://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>OOP Alternative to Utility Classes</title><link rel="canonical"href="https://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,100 +33,13 @@ in Java and other object-oriented languages. However,
 many consider them a terrible practice to be avoided.
 ",
         "keywords": ["static methods is evil", "static is evil", "utility class is evil", "utility class is bad", "utility classes are evil", "utility classes are bad", "utility classes is a bad practice"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>5 May 2014</p>
-      <h1>OOP Alternative to Utility Classes</h1>
-      <p>A utility class (aka helper class) is a “structure” that has only static methods
-and encapsulates no state. <code class="language-plaintext highlighter-rouge">StringUtils</code>, <code class="language-plaintext highlighter-rouge">IOUtils</code>, <code class="language-plaintext highlighter-rouge">FileUtils</code> from
-<a href="http://commons.apache.org/">Apache Commons</a>; <code class="language-plaintext highlighter-rouge">Iterables</code> and <code class="language-plaintext highlighter-rouge">Iterators</code> from
-<a href="https://code.google.com/p/guava-libraries/">Guava</a>, and
-<a href="http://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html"><code class="language-plaintext highlighter-rouge">Files</code></a>
-from JDK7 are perfect examples of utility classes.</p>
-
-
-
-<p>This design idea is very popular in the Java world (as well as C#, Ruby, etc.)
-because utility classes provide common functionality used everywhere.</p>
-
-<p>Here, we want to follow the
-<a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY principle</a> and avoid
-duplication. Therefore, we place common code blocks into utility classes and
-reuse them when necessary:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This is a terrible design, don't reuse</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2014/05/05/oop-alternative-to-utility-classes.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>5 May 2014<h1>OOP Alternative to Utility Classes</h1><p>A utility class (aka helper class) is a “structure” that has only static methods and encapsulates no state. <code class="language-plaintext highlighter-rouge">StringUtils</code>, <code class="language-plaintext highlighter-rouge">IOUtils</code>, <code class="language-plaintext highlighter-rouge">FileUtils</code> from <a href="http://commons.apache.org/">Apache Commons</a>; <code class="language-plaintext highlighter-rouge">Iterables</code> and <code class="language-plaintext highlighter-rouge">Iterators</code> from <a href="https://code.google.com/p/guava-libraries/">Guava</a>, and <a href="http://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html"><code class="language-plaintext highlighter-rouge">Files</code></a> from JDK7 are perfect examples of utility classes.<p>This design idea is very popular in the Java world (as well as C#, Ruby, etc.) because utility classes provide common functionality used everywhere.<p>Here, we want to follow the <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY principle</a> and avoid duplication. Therefore, we place common code blocks into utility classes and reuse them when necessary:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This is a terrible design, don't reuse</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">NumberUtils</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span> <span class="o">?</span> <span class="n">a</span> <span class="o">:</span> <span class="n">b</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Indeed, this a very convenient technique!?</p>
-
-<h2 id="utility-classes-are-evil">Utility Classes Are Evil</h2>
-
-<p>However, in an object-oriented world, utility classes are considered a very bad
-(some even may say “terrible”) practice.</p>
-
-<p>There have been many discussions of this subject; to name a few:
-<a href="http://blogs.msdn.com/b/nickmalik/archive/2005/09/06/461404.aspx">Are Helper Classes Evil?</a> by Nick Malik,
-<a href="http://smart421.wordpress.com/2011/08/31/why-helper-singletons-and-utility-classes-are-mostly-bad-2/">Why helper, singletons and utility classes are mostly bad</a> by Simon Hart,
-<a href="https://github.com/marshallward/marshallward.org/blob/master/content/avoid_util_classes.rst">Avoiding Utility Classes</a> by Marshal Ward,
-<a href="https://www.jroller.com/DhavalDalal/entry/kill_that_util_class">Kill That Util Class!</a> by Dhaval Dalal,
-<a href="https://www.robbagby.com/posts/helper-classes-are-a-code-smell/">Helper Classes Are A Code Smell</a> by Rob Bagby.</p>
-
-
-
-<p>Additionally, there are a few questions on StackExchange about utility classes:
-<a href="http://stackoverflow.com/questions/3339929/if-a-utilities-class-is-evil-where-do-i-put-my-generic-code">If a “Utilities” class is evil, where do I put my generic code?</a>,
-<a href="http://stackoverflow.com/questions/3340032/utility-classes-are-evil">Utility Classes are Evil</a>.</p>
-
-<p>A dry summary of all their arguments is that utility classes are not proper
-<em>objects</em>; therefore, they don’t fit into object-oriented world. They were
-inherited from <em>procedural</em> programming, mostly because we were used to a
-functional decomposition paradigm back then.</p>
-
-<p>Assuming you agree with the arguments and want to stop using utility classes,
-I’ll show by example how these creatures can be replaced with proper
-<a href="/2016/07/14/who-is-object.html">objects</a>.</p>
-
-<h2 id="procedural-example">Procedural Example</h2>
-
-<p>Say, for instance, you want to read a text file, split it into lines, trim every
-line and then save the results in another file. This is can be done with
-<a href="http://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FileUtils.html"><code class="language-plaintext highlighter-rouge">FileUtils</code></a>
-from Apache Commons:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">transform</span><span class="o">(</span><span class="nc">File</span> <span class="n">in</span><span class="o">,</span> <span class="nc">File</span> <span class="n">out</span><span class="o">)</span> <span class="o">{</span>
+</code></pre></div></div><p>Indeed, this a very convenient technique!?<h2 id="utility-classes-are-evil">Utility Classes Are Evil</h2><p>However, in an object-oriented world, utility classes are considered a very bad (some even may say “terrible”) practice.<p>There have been many discussions of this subject; to name a few: <a href="http://blogs.msdn.com/b/nickmalik/archive/2005/09/06/461404.aspx">Are Helper Classes Evil?</a> by Nick Malik, <a href="http://smart421.wordpress.com/2011/08/31/why-helper-singletons-and-utility-classes-are-mostly-bad-2/">Why helper, singletons and utility classes are mostly bad</a> by Simon Hart, <a href="https://github.com/marshallward/marshallward.org/blob/master/content/avoid_util_classes.rst">Avoiding Utility Classes</a> by Marshal Ward, <a href="https://www.jroller.com/DhavalDalal/entry/kill_that_util_class">Kill That Util Class!</a> by Dhaval Dalal, <a href="https://www.robbagby.com/posts/helper-classes-are-a-code-smell/">Helper Classes Are A Code Smell</a> by Rob Bagby.<p>Additionally, there are a few questions on StackExchange about utility classes: <a href="http://stackoverflow.com/questions/3339929/if-a-utilities-class-is-evil-where-do-i-put-my-generic-code">If a “Utilities” class is evil, where do I put my generic code?</a>, <a href="http://stackoverflow.com/questions/3340032/utility-classes-are-evil">Utility Classes are Evil</a>.<p>A dry summary of all their arguments is that utility classes are not proper <em>objects</em>; therefore, they don’t fit into object-oriented world. They were inherited from <em>procedural</em> programming, mostly because we were used to a functional decomposition paradigm back then.<p>Assuming you agree with the arguments and want to stop using utility classes, I’ll show by example how these creatures can be replaced with proper <a href="/2016/07/14/who-is-object.html">objects</a>.<h2 id="procedural-example">Procedural Example</h2><p>Say, for instance, you want to read a text file, split it into lines, trim every line and then save the results in another file. This is can be done with <a href="http://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/FileUtils.html"><code class="language-plaintext highlighter-rouge">FileUtils</code></a> from Apache Commons:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">transform</span><span class="o">(</span><span class="nc">File</span> <span class="n">in</span><span class="o">,</span> <span class="nc">File</span> <span class="n">out</span><span class="o">)</span> <span class="o">{</span>
   <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">src</span> <span class="o">=</span> <span class="nc">FileUtils</span><span class="o">.</span><span class="na">readLines</span><span class="o">(</span><span class="n">in</span><span class="o">,</span> <span class="s">"UTF-8"</span><span class="o">);</span>
   <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">dest</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">src</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
   <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">line</span> <span class="o">:</span> <span class="n">src</span><span class="o">)</span> <span class="o">{</span>
@@ -144,21 +47,7 @@ from Apache Commons:</p>
   <span class="o">}</span>
   <span class="nc">FileUtils</span><span class="o">.</span><span class="na">writeLines</span><span class="o">(</span><span class="n">out</span><span class="o">,</span> <span class="n">dest</span><span class="o">,</span> <span class="s">"UTF-8"</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>The above code may look clean; however, this is procedural programming, not
-object-oriented. We are manipulating data (bytes and bits) and explicitly
-instructing the computer from where to retrieve them and then where to put them
-on every single line of code. We’re defining <em>a procedure of execution</em>.</p>
-
-<h2 id="object-oriented-alternative">Object-Oriented Alternative</h2>
-
-<p>In an object-oriented paradigm, we should instantiate and compose objects, thus
-letting them manage data when and how <em>they</em> desire. Instead of calling
-supplementary static functions, we should create objects that are capable of
-exposing the behavior we are seeking:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Max</span> <span class="kd">implements</span> <span class="nc">Number</span> <span class="o">{</span>
+</code></pre></div></div><p>The above code may look clean; however, this is procedural programming, not object-oriented. We are manipulating data (bytes and bits) and explicitly instructing the computer from where to retrieve them and then where to put them on every single line of code. We’re defining <em>a procedure of execution</em>.<h2 id="object-oriented-alternative">Object-Oriented Alternative</h2><p>In an object-oriented paradigm, we should instantiate and compose objects, thus letting them manage data when and how <em>they</em> desire. Instead of calling supplementary static functions, we should create objects that are capable of exposing the behavior we are seeking:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Max</span> <span class="kd">implements</span> <span class="nc">Number</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">a</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">b</span><span class="o">;</span>
   <span class="kd">public</span> <span class="nf">Max</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
@@ -170,26 +59,9 @@ exposing the behavior we are seeking:</p>
     <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">a</span> <span class="o">&gt;</span> <span class="k">this</span><span class="o">.</span><span class="na">b</span> <span class="o">?</span> <span class="k">this</span><span class="o">.</span><span class="na">a</span> <span class="o">:</span> <span class="k">this</span><span class="o">.</span><span class="na">b</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>This procedural call:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="nc">NumberUtils</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">5</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>Will become object-oriented:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Max</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">5</span><span class="o">).</span><span class="na">intValue</span><span class="o">();</span>
-</code></pre></div></div>
-
-<p>Potato, potato? Not really; just read on…</p>
-
-<h2 id="objects-instead-of-data-structures">Objects Instead of Data Structures</h2>
-
-<p>This is how I would design the same file-transforming functionality as above but
-in an object-oriented manner:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">transform</span><span class="o">(</span><span class="nc">File</span> <span class="n">in</span><span class="o">,</span> <span class="nc">File</span> <span class="n">out</span><span class="o">)</span> <span class="o">{</span>
+</code></pre></div></div><p>This procedural call:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="nc">NumberUtils</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">5</span><span class="o">);</span>
+</code></pre></div></div><p>Will become object-oriented:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Max</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="mi">5</span><span class="o">).</span><span class="na">intValue</span><span class="o">();</span>
+</code></pre></div></div><p>Potato, potato? Not really; just read on…<h2 id="objects-instead-of-data-structures">Objects Instead of Data Structures</h2><p>This is how I would design the same file-transforming functionality as above but in an object-oriented manner:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">transform</span><span class="o">(</span><span class="nc">File</span> <span class="n">in</span><span class="o">,</span> <span class="nc">File</span> <span class="n">out</span><span class="o">)</span> <span class="o">{</span>
   <span class="nc">Collection</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">src</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Trimmed</span><span class="o">(</span>
     <span class="k">new</span> <span class="nf">FileLines</span><span class="o">(</span><span class="k">new</span> <span class="nc">UnicodeFile</span><span class="o">(</span><span class="n">in</span><span class="o">))</span>
   <span class="o">);</span>
@@ -198,52 +70,4 @@ in an object-oriented manner:</p>
   <span class="o">);</span>
   <span class="n">dest</span><span class="o">.</span><span class="na">addAll</span><span class="o">(</span><span class="n">src</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">FileLines</code> implements <code class="language-plaintext highlighter-rouge">Collection&lt;String&gt;</code> and encapsulates  all file reading
-and writing operations. An instance of <code class="language-plaintext highlighter-rouge">FileLines</code> behaves exactly as a
-collection of strings and hides all I/O operations. When we iterate it—a
-file is being read. When we <code class="language-plaintext highlighter-rouge">addAll()</code> to it—a file is being written.</p>
-
-<p><code class="language-plaintext highlighter-rouge">Trimmed</code> also implements <code class="language-plaintext highlighter-rouge">Collection&lt;String&gt;</code> and encapsulates a collection of
-strings (<a href="https://en.wikipedia.org/wiki/Decorator_pattern">Decorator pattern</a>).
-Every time the next line is retrieved, it gets trimmed.</p>
-
-<p>All classes taking
-participation in the snippet are rather small: <code class="language-plaintext highlighter-rouge">Trimmed</code>, <code class="language-plaintext highlighter-rouge">FileLines</code>, and
-<code class="language-plaintext highlighter-rouge">UnicodeFile</code>.
-Each of them is responsible for its own single feature, thus following perfectly
-the <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>.</p>
-
-
-
-<p>On our side, as users of the library, this may be not so important, but for
-their developers it is an imperative.
-It is much easier to develop, maintain and unit-test class <code class="language-plaintext highlighter-rouge">FileLines</code> rather
-than using a <code class="language-plaintext highlighter-rouge">readLines()</code> method in a 80+ methods and 3000 lines utility class
-<code class="language-plaintext highlighter-rouge">FileUtils</code>. Seriously, look at
-<a href="https://github.com/apache/commons-io/blob/commons-io-2.5/src/main/java/org/apache/commons/io/FileUtils.java">its source code</a>.</p>
-
-<p>An object-oriented approach enables lazy execution. The <code class="language-plaintext highlighter-rouge">in</code> file is not read
-until its data is required. If we fail to open <code class="language-plaintext highlighter-rouge">out</code> due to some I/O error, the
-first file won’t even be touched. The whole show starts only after we call <code class="language-plaintext highlighter-rouge">addAll()</code>.</p>
-
-<p>All lines in the second snippet, except the last one, instantiate and compose
-smaller objects into bigger ones. This object composition is rather cheap for
-the CPU since it doesn’t cause any data transformations.</p>
-
-<p>Besides that, it is obvious that the second script runs in O(1) space, while the
-first one executes in O(n). This is the consequence of our procedural approach
-to data in the first script.</p>
-
-<p>In an object-oriented world, there is no data; there are only objects and their behavior!</p>
-
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">Utility classes are...</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1251749635103821824?ref_src=twsrc%5Etfw">April 19, 2020</a>
-</blockquote>
-
-
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p><code class="language-plaintext highlighter-rouge">FileLines</code> implements <code class="language-plaintext highlighter-rouge">Collection&lt;String&gt;</code> and encapsulates all file reading and writing operations. An instance of <code class="language-plaintext highlighter-rouge">FileLines</code> behaves exactly as a collection of strings and hides all I/O operations. When we iterate it—a file is being read. When we <code class="language-plaintext highlighter-rouge">addAll()</code> to it—a file is being written.<p><code class="language-plaintext highlighter-rouge">Trimmed</code> also implements <code class="language-plaintext highlighter-rouge">Collection&lt;String&gt;</code> and encapsulates a collection of strings (<a href="https://en.wikipedia.org/wiki/Decorator_pattern">Decorator pattern</a>). Every time the next line is retrieved, it gets trimmed.<p>All classes taking participation in the snippet are rather small: <code class="language-plaintext highlighter-rouge">Trimmed</code>, <code class="language-plaintext highlighter-rouge">FileLines</code>, and <code class="language-plaintext highlighter-rouge">UnicodeFile</code>. Each of them is responsible for its own single feature, thus following perfectly the <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>.<p>On our side, as users of the library, this may be not so important, but for their developers it is an imperative. It is much easier to develop, maintain and unit-test class <code class="language-plaintext highlighter-rouge">FileLines</code> rather than using a <code class="language-plaintext highlighter-rouge">readLines()</code> method in a 80+ methods and 3000 lines utility class <code class="language-plaintext highlighter-rouge">FileUtils</code>. Seriously, look at <a href="https://github.com/apache/commons-io/blob/commons-io-2.5/src/main/java/org/apache/commons/io/FileUtils.java">its source code</a>.<p>An object-oriented approach enables lazy execution. The <code class="language-plaintext highlighter-rouge">in</code> file is not read until its data is required. If we fail to open <code class="language-plaintext highlighter-rouge">out</code> due to some I/O error, the first file won’t even be touched. The whole show starts only after we call <code class="language-plaintext highlighter-rouge">addAll()</code>.<p>All lines in the second snippet, except the last one, instantiate and compose smaller objects into bigger ones. This object composition is rather cheap for the CPU since it doesn’t cause any data transformations.<p>Besides that, it is obvious that the second script runs in O(1) space, while the first one executes in O(n). This is the consequence of our procedural approach to data in the first script.<p>In an object-oriented world, there is no data; there are only objects and their behavior!<blockquote class="twitter-tweet"><p lang="en"dir="ltr">Utility classes are...</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1251749635103821824?ref_src=twsrc%5Etfw">April 19, 2020</a></blockquote></article>

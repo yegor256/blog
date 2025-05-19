@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>A Few Thoughts on Unit Test Scaffolding</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/05/25/unit-test-scaffolding.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>A Few Thoughts on Unit Test Scaffolding</title><link rel="canonical"href="https://www.yegor256.com/2015/05/25/unit-test-scaffolding.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,56 +33,7 @@ of some other structures before a test can be initiated;
 here is how I recommend you do that.
 ",
         "keywords": ["unit test scaffolding", "unit testing best practices", "unit testing mocks", "unit testing stubs", "unit testing of static"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/05/25/unit-test-scaffolding.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>25 May 2015</p>
-      <h1>A Few Thoughts on Unit Test Scaffolding</h1>
-      <p>When I start to repeat myself in unit test methods by creating
-the same objects and preparing the data to run the test,
-I feel disappointed in my design. Long test methods with a lot of code
-duplication just don’t look right. To simplify and shorten them,
-there are basically two options, at least in Java: 1) private properties
-initialized through <code class="language-plaintext highlighter-rouge">@Before</code> and <code class="language-plaintext highlighter-rouge">@BeforeClass</code>, and 2)
-<a href="/2017/02/07/private-method-is-new-class.html">private static methods</a>.
-They both look anti-OOP to me, and I think there is an
-alternative. Let me explain.</p>
-
-
-
-<amp-img src="/images/2015/05/leon-the-professional.jpg" alt="Léon: The Professional by Luc Besson" height="563" width="1200" layout="responsive"></amp-img>
-
-<p>JUnit officially suggests a
-<a href="http://junit.org/faq.html#atests_2">test fixture</a>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">MetricsTest</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/05/25/unit-test-scaffolding.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>25 May 2015<h1>A Few Thoughts on Unit Test Scaffolding</h1><p>When I start to repeat myself in unit test methods by creating the same objects and preparing the data to run the test, I feel disappointed in my design. Long test methods with a lot of code duplication just don’t look right. To simplify and shorten them, there are basically two options, at least in Java: 1) private properties initialized through <code class="language-plaintext highlighter-rouge">@Before</code> and <code class="language-plaintext highlighter-rouge">@BeforeClass</code>, and 2) <a href="/2017/02/07/private-method-is-new-class.html">private static methods</a>. They both look anti-OOP to me, and I think there is an alternative. Let me explain.</p><amp-img src="/images/2015/05/leon-the-professional.jpg"alt="Léon: The Professional by Luc Besson"height="563"width="1200"layout="responsive"></amp-img><p>JUnit officially suggests a <a href="http://junit.org/faq.html#atests_2">test fixture</a>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">MetricsTest</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="nc">File</span> <span class="n">temp</span><span class="o">;</span>
   <span class="kd">private</span> <span class="nc">Folder</span> <span class="n">folder</span><span class="o">;</span>
   <span class="nd">@Before</span>
@@ -115,30 +56,7 @@ alternative. Let me explain.</p>
     <span class="n">assertEquals</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="k">new</span> <span class="nc">Metrics</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">folder</span><span class="o">).</span><span class="na">wc</span><span class="o">());</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>I think it’s obvious what this test is doing. First, in <code class="language-plaintext highlighter-rouge">prepare()</code>,
-it creates a “test fixture” of type <code class="language-plaintext highlighter-rouge">Folder</code>. That is used in all three
-tests as an argument for the <code class="language-plaintext highlighter-rouge">Metrics</code> constructor. The real class being
-tested here is <code class="language-plaintext highlighter-rouge">Metrics</code> while <code class="language-plaintext highlighter-rouge">this.folder</code> is something we need
-in order to test it.</p>
-
-
-
-<p>What’s wrong with this test? There is one serious issue:
-<strong>coupling</strong> between test methods. Test methods (and all tests in general)
-must be perfectly isolated from each other. This means that changing
-one test must not affect any others. In this example, that is not the case.
-When I want to change the <code class="language-plaintext highlighter-rouge">countsWords()</code> test, I have to change the internals
-of <code class="language-plaintext highlighter-rouge">before()</code>, which will affect the other method in the test “class.”</p>
-
-<p>With all due respect to JUnit, the idea of creating test fixtures in
-<code class="language-plaintext highlighter-rouge">@Before</code> and <code class="language-plaintext highlighter-rouge">@After</code> is wrong, mostly because it encourages
-developers to couple test methods.</p>
-
-<p>Here is how we can improve our test and isolate test methods:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">MetricsTest</span> <span class="o">{</span>
+</code></pre></div></div><p>I think it’s obvious what this test is doing. First, in <code class="language-plaintext highlighter-rouge">prepare()</code>, it creates a “test fixture” of type <code class="language-plaintext highlighter-rouge">Folder</code>. That is used in all three tests as an argument for the <code class="language-plaintext highlighter-rouge">Metrics</code> constructor. The real class being tested here is <code class="language-plaintext highlighter-rouge">Metrics</code> while <code class="language-plaintext highlighter-rouge">this.folder</code> is something we need in order to test it.<p>What’s wrong with this test? There is one serious issue: <strong>coupling</strong> between test methods. Test methods (and all tests in general) must be perfectly isolated from each other. This means that changing one test must not affect any others. In this example, that is not the case. When I want to change the <code class="language-plaintext highlighter-rouge">countsWords()</code> test, I have to change the internals of <code class="language-plaintext highlighter-rouge">before()</code>, which will affect the other method in the test “class.”<p>With all due respect to JUnit, the idea of creating test fixtures in <code class="language-plaintext highlighter-rouge">@Before</code> and <code class="language-plaintext highlighter-rouge">@After</code> is wrong, mostly because it encourages developers to couple test methods.<p>Here is how we can improve our test and isolate test methods:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">MetricsTest</span> <span class="o">{</span>
   <span class="nd">@Test</span>
   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">calculatesTotalSize</span><span class="o">()</span> <span class="o">{</span>
     <span class="kd">final</span> <span class="nc">File</span> <span class="n">dir</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">createTempDirectory</span><span class="o">(</span><span class="s">"test-1"</span><span class="o">);</span>
@@ -177,31 +95,7 @@ developers to couple test methods.</p>
     <span class="k">return</span> <span class="n">folder</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Does it look better now? We’re not there yet, but now our test
-methods are perfectly isolated. If I want to change one of them,
-I’m not going to affect the others because I pass all configuration
-parameters to a private static utility (!) method <code class="language-plaintext highlighter-rouge">folder()</code>.</p>
-
-<p>A utility method, huh? Yes,
-<a href="/2014/05/05/oop-alternative-to-utility-classes.html">it smells</a>.</p>
-
-<p>The main issue with this design, even though it is way better than
-the previous one, is that it doesn’t prevent code duplication between
-test “classes.” If I need a similar test fixture of type <code class="language-plaintext highlighter-rouge">Folder</code> in
-another test case, I will have to move this static method there. Or
-even worse, I will have to create a utility class.
-Yes, there is <a href="/2015/02/20/utility-classes-vs-functional-programming.html">nothing worse</a>
-in object-oriented programming than utility classes.</p>
-
-<p>A much better design would be to use
-“<a href="/2014/09/23/built-in-fake-objects.html">fake</a>” objects
-instead of private static utilities. Here is how. First, we create a fake class
-and place it into <code class="language-plaintext highlighter-rouge">src/main/java</code>. This class can be used in tests
-and also in production code, if necessary (<code class="language-plaintext highlighter-rouge">Fk</code> for “fake”):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">FkFolder</span> <span class="kd">implements</span> <span class="nc">Folder</span><span class="o">,</span> <span class="nc">Closeable</span> <span class="o">{</span>
+</code></pre></div></div><p>Does it look better now? We’re not there yet, but now our test methods are perfectly isolated. If I want to change one of them, I’m not going to affect the others because I pass all configuration parameters to a private static utility (!) method <code class="language-plaintext highlighter-rouge">folder()</code>.<p>A utility method, huh? Yes, <a href="/2014/05/05/oop-alternative-to-utility-classes.html">it smells</a>.<p>The main issue with this design, even though it is way better than the previous one, is that it doesn’t prevent code duplication between test “classes.” If I need a similar test fixture of type <code class="language-plaintext highlighter-rouge">Folder</code> in another test case, I will have to move this static method there. Or even worse, I will have to create a utility class. Yes, there is <a href="/2015/02/20/utility-classes-vs-functional-programming.html">nothing worse</a> in object-oriented programming than utility classes.<p>A much better design would be to use “<a href="/2014/09/23/built-in-fake-objects.html">fake</a>” objects instead of private static utilities. Here is how. First, we create a fake class and place it into <code class="language-plaintext highlighter-rouge">src/main/java</code>. This class can be used in tests and also in production code, if necessary (<code class="language-plaintext highlighter-rouge">Fk</code> for “fake”):<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">FkFolder</span> <span class="kd">implements</span> <span class="nc">Folder</span><span class="o">,</span> <span class="nc">Closeable</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">File</span> <span class="n">dir</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">parts</span><span class="o">;</span>
   <span class="kd">public</span> <span class="nf">FkFolder</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">prts</span><span class="o">)</span> <span class="o">{</span>
@@ -225,11 +119,7 @@ and also in production code, if necessary (<code class="language-plaintext highl
     <span class="nc">FileUtils</span><span class="o">.</span><span class="na">deleteDirectory</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">dir</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Here is how our test will look now:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">MetricsTest</span> <span class="o">{</span>
+</code></pre></div></div><p>Here is how our test will look now:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">MetricsTest</span> <span class="o">{</span>
   <span class="nd">@Test</span>
   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">calculatesTotalSize</span><span class="o">()</span> <span class="o">{</span>
     <span class="kd">final</span> <span class="nc">String</span><span class="o">[]</span> <span class="n">parts</span> <span class="o">=</span> <span class="o">{</span>
@@ -252,16 +142,4 @@ and also in production code, if necessary (<code class="language-plaintext highl
     <span class="o">}</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>What do you think? Isn’t it better than what JUnit offers?
-Isn’t it more reusable and extensible than utility methods?</p>
-
-<p>To summarize, I believe scaffolding in unit testing must be
-done through
-<a href="/2014/09/23/built-in-fake-objects.html">fake objects</a>
-that are shipped together with production code.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>What do you think? Isn’t it better than what JUnit offers? Isn’t it more reusable and extensible than utility methods?<p>To summarize, I believe scaffolding in unit testing must be done through <a href="/2014/09/23/built-in-fake-objects.html">fake objects</a> that are shipped together with production code.</article>

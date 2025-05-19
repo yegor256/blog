@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>ThreeCopies.com—Server-Side Data Backup Service</title>
-    <link rel="canonical" href="https://www.yegor256.com/2017/09/26/threecopies-server-data-backup.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>ThreeCopies.com—Server-Side Data Backup Service</title><link rel="canonical"href="https://www.yegor256.com/2017/09/26/threecopies-server-data-backup.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -42,94 +32,7 @@
 web service to get rid of backup servers entirely.
 ",
         "keywords": ["data pipeline", "online backup", "server data backup", "server-side backup service", "threecopies"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2017/09/26/threecopies-server-data-backup.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>26 September 2017</p>
-      <h1>ThreeCopies.com—Server-Side Data Backup Service</h1>
-      
-
-<p>I have a number of data resources which exist in one place only and which
-I don’t really want to lose. For example, I have a hosted PHP website,
-and a MySQL database hosted at the same place. I also have
-a NoSQL database at Amazon DynamoDB, a PostgreSQL database at
-Heroku, and also… Well, there are many of them. How to back them up was always a
-question for me.</p>
-
-
-
-<amp-img src="/images/2017/09/threecopies.jpg" alt="" height="1132" width="1466" layout="responsive"></amp-img>
-
-<p>The most straightforward way is to rent a cheap $15/mo server
-(or use an existing one) and configure Cron to run a custom bash
-script, which will pull the data from the MySQL database, package it,
-and upload it to some place where it will be safe, such as Amazon S3
-bucket. Then, I would need another script for the PostgreSQL database, and another one
-for the FTP file archive, etc.</p>
-
-
-
-<p>This is actually how I was doing it for years. The drawbacks
-of this solution were always the same:</p>
-
-<ul>
-  <li>I needed to pay for the server.</li>
-  <li>I needed to make sure the server was always up and running (Linux is far from reliable).</li>
-  <li>I needed to back up my scripts too.</li>
-  <li>I needed to SSH to the server every time I wanted to change a script, remember where they were, how they start, etc.</li>
-</ul>
-
-<p>The biggest issue is that every single owner of a data source faces
-exactly the same set of problems. “Why can’t I create a hosted solution for
-these scripts, to help everybody to back up their data,” I was asking myself
-for years. “Well, I can,” was the answer just a few weeks ago, and
-I created <a href="https://www.threecopies.com">ThreeCopies</a>.</p>
-
-<p>It’s a very simple hosted executor of bash scripts, which you edit
-through a web interface. Then one of our servers starts a Docker
-container (<a href="https://hub.docker.com/r/yegor256/threecopies/">yegor256/threecopies</a> is the image, here is the
-<a href="https://github.com/yegor256/threecopies/blob/master/src/docker/Dockerfile"><code class="language-plaintext highlighter-rouge">Dockerfile</code></a>)
-and runs your script inside.</p>
-
-<p>The script starts every hour, every day and every week.
-Hence the name: “three copies.” It’s good practice for data backup
-to create separate copies with different regularities. Also, you might want to put
-different data into different copies. To help your script understand which
-copy is running at any particular time we pass the <code class="language-plaintext highlighter-rouge">$period</code> environment variable into it, with
-the value of either <code class="language-plaintext highlighter-rouge">hour</code>, <code class="language-plaintext highlighter-rouge">day</code>, or <code class="language-plaintext highlighter-rouge">week</code>.</p>
-
-<p>How your script pulls the data, packages it, and archives it, depends on the
-data. I created a short cheat sheet for most common scenarios. This is how
-I backup the MySQL database for <a href="https://www.thepmp.com">thePMP</a>, for example:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># I don't want to back up every hour</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2017/09/26/threecopies-server-data-backup.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>26 September 2017<h1>ThreeCopies.com—Server-Side Data Backup Service</h1><p>I have a number of data resources which exist in one place only and which I don’t really want to lose. For example, I have a hosted PHP website, and a MySQL database hosted at the same place. I also have a NoSQL database at Amazon DynamoDB, a PostgreSQL database at Heroku, and also… Well, there are many of them. How to back them up was always a question for me.</p><amp-img src="/images/2017/09/threecopies.jpg"alt=""height="1132"width="1466"layout="responsive"></amp-img><p>The most straightforward way is to rent a cheap $15/mo server (or use an existing one) and configure Cron to run a custom bash script, which will pull the data from the MySQL database, package it, and upload it to some place where it will be safe, such as Amazon S3 bucket. Then, I would need another script for the PostgreSQL database, and another one for the FTP file archive, etc.<p>This is actually how I was doing it for years. The drawbacks of this solution were always the same:<ul><li>I needed to pay for the server.<li>I needed to make sure the server was always up and running (Linux is far from reliable).<li>I needed to back up my scripts too.<li>I needed to SSH to the server every time I wanted to change a script, remember where they were, how they start, etc.</ul><p>The biggest issue is that every single owner of a data source faces exactly the same set of problems. “Why can’t I create a hosted solution for these scripts, to help everybody to back up their data,” I was asking myself for years. “Well, I can,” was the answer just a few weeks ago, and I created <a href="https://www.threecopies.com">ThreeCopies</a>.<p>It’s a very simple hosted executor of bash scripts, which you edit through a web interface. Then one of our servers starts a Docker container (<a href="https://hub.docker.com/r/yegor256/threecopies/">yegor256/threecopies</a> is the image, here is the <a href="https://github.com/yegor256/threecopies/blob/master/src/docker/Dockerfile"><code class="language-plaintext highlighter-rouge">Dockerfile</code></a>) and runs your script inside.<p>The script starts every hour, every day and every week. Hence the name: “three copies.” It’s good practice for data backup to create separate copies with different regularities. Also, you might want to put different data into different copies. To help your script understand which copy is running at any particular time we pass the <code class="language-plaintext highlighter-rouge">$period</code> environment variable into it, with the value of either <code class="language-plaintext highlighter-rouge">hour</code>, <code class="language-plaintext highlighter-rouge">day</code>, or <code class="language-plaintext highlighter-rouge">week</code>.<p>How your script pulls the data, packages it, and archives it, depends on the data. I created a short cheat sheet for most common scenarios. This is how I backup the MySQL database for <a href="https://www.thepmp.com">thePMP</a>, for example:<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># I don't want to back up every hour</span>
 <span class="k">if</span> <span class="o">[</span> <span class="s2">"</span><span class="k">${</span><span class="nv">period</span><span class="k">}</span><span class="s2">"</span> <span class="o">==</span> <span class="s2">"hour"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then </span><span class="nb">exit </span>0<span class="p">;</span> <span class="k">fi</span>
 
 <span class="c"># I dump the entire database into the file</span>
@@ -146,28 +49,4 @@ mysqldump <span class="nt">--lock-tables</span><span class="o">=</span><span cla
 <span class="nb">echo</span> <span class="s2">"access_key=AKIAICJKH*****CVLAFA"</span> <span class="o">&gt;&gt;</span> ~/.s3cfg
 <span class="nb">echo</span> <span class="s2">"secret_key=yQv3g3ao654Ns**********H1xQSfZlTkseA0haG"</span> <span class="o">&gt;&gt;</span> ~/.s3cfg
 s3cmd <span class="nt">--no-progress</span> put <span class="s2">"</span><span class="k">${</span><span class="nv">tgz</span><span class="k">}</span><span class="s2">"</span> <span class="s2">"s3://backup.yegor256.com/</span><span class="k">${</span><span class="nv">tgz</span><span class="k">}</span><span class="s2">"</span>
-</code></pre></div></div>
-
-<p>The output of the script is available through the web interface and this
-is yet another benefit of this solution. It’s easy to monitor what went
-wrong and restart the script. All logs are available through the browser. No
-SSH, no terminals.</p>
-
-<p>I would say that it’s a light version of
-<a href="https://aws.amazon.com/datapipeline/">AWS Data Pipeline</a>. <a href="https://www.threecopies.com">ThreeCopies</a>
-does exactly the same, but it’s easier to configure, and it’s cheaper.
-I’m charging $0.01 per script execution hour. And I actually charge
-per second, while AWS always charges for a full hour. For $5.00 you get
-500 hours. For example, the script you see above takes about 5 minutes
-to complete (the database is not huge). If you skip the hourly executions, like I did above, you
-will consume 170 minutes of server time every month, which will cost you about
-<strong>$0.34 per year</strong>! This is much cheaper than a server and
-its monitoring, I believe.</p>
-
-<p>One more thing before you go. ThreeCopies is written in Java 8 and is open source,
-find it <a href="https://github.com/yegor256/threecopies">in GitHub</a>. Feel free to
-inspect the code, find bugs, and contribute with fixes or improvements.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>The output of the script is available through the web interface and this is yet another benefit of this solution. It’s easy to monitor what went wrong and restart the script. All logs are available through the browser. No SSH, no terminals.<p>I would say that it’s a light version of <a href="https://aws.amazon.com/datapipeline/">AWS Data Pipeline</a>. <a href="https://www.threecopies.com">ThreeCopies</a> does exactly the same, but it’s easier to configure, and it’s cheaper. I’m charging $0.01 per script execution hour. And I actually charge per second, while AWS always charges for a full hour. For $5.00 you get 500 hours. For example, the script you see above takes about 5 minutes to complete (the database is not huge). If you skip the hourly executions, like I did above, you will consume 170 minutes of server time every month, which will cost you about <strong>$0.34 per year</strong>! This is much cheaper than a server and its monitoring, I believe.<p>One more thing before you go. ThreeCopies is written in Java 8 and is open source, find it <a href="https://github.com/yegor256/threecopies">in GitHub</a>. Feel free to inspect the code, find bugs, and contribute with fixes or improvements.</article>

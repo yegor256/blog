@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>How Much Your Objects Encapsulate?</title>
-    <link rel="canonical" href="https://www.yegor256.com/2014/12/15/how-much-your-objects-encapsulate.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>How Much Your Objects Encapsulate?</title><link rel="canonical"href="https://www.yegor256.com/2014/12/15/how-much-your-objects-encapsulate.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,88 +33,9 @@ it receive through its methods? If you encapsulate too little, your
 level of abstraction it too high.
 ",
         "keywords": ["object design", "good object design", "encapsulation", "object constructor", "object method vs constructor"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2014/12/15/how-much-your-objects-encapsulate.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>15 December 2014</p>
-      <h1>How Much Your Objects Encapsulate?</h1>
-      <p>Which line do you like more, the first or the second:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="no">HTTP</span><span class="o">(</span><span class="s">"https://www.google.com"</span><span class="o">).</span><span class="na">read</span><span class="o">();</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2014/12/15/how-much-your-objects-encapsulate.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>15 December 2014<h1>How Much Your Objects Encapsulate?</h1><p>Which line do you like more, the first or the second:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="no">HTTP</span><span class="o">(</span><span class="s">"https://www.google.com"</span><span class="o">).</span><span class="na">read</span><span class="o">();</span>
 <span class="k">new</span> <span class="nf">HTTP</span><span class="o">().</span><span class="na">read</span><span class="o">(</span><span class="s">"https://www.google.com"</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>What is the difference? The first class <code class="language-plaintext highlighter-rouge">HTTP</code> encapsulates a URL,
-while the second one expects it as an argument of method <code class="language-plaintext highlighter-rouge">read()</code>. Technically,
-both objects do exactly the same thing: they read the content of the Google home page.
-Which one is the right design? Usually I hate to say this, but in
-this case I have to—it depends.</p>
-
-
-
-<amp-img src="/images/2014/12/truman-show-universe.png" alt="The Truman Show (1998) by Peter Weir" height="675" width="1200" layout="responsive"></amp-img>
-
-<p>As <a href="/2014/11/20/seven-virtues-of-good-object.html">we discussed before</a>,
-a good object is a representative of a real-life entity. Such an entity
-exists outside of the object’s living environment. The
-<a href="/2016/07/14/who-is-object.html">object</a> knows
-how to access it and how to communicate with it.</p>
-
-<p>What is that real-life entity in the example above? Each class
-gives its own answer. And the answer is given by the list
-of arguments its constructors accept. The first class accepts
-a single URL as an argument of its constructor. This tells us
-that the object of this class, after being constructed, will represent
-a web page. The second class accepts no arguments, which tells us
-that the object of it will represent… the Universe.</p>
-
-
-
-<p>I think this principle is applicable to all classes in
-object-oriented programming—in order to understand what
-real-life entity an object represents, look at its constructor. All
-arguments passed into the constructor and encapsulated by the object identify
-a real-life entity accessed and managed by the object.</p>
-
-<p>Of course, I’m talking about
-<a href="/2014/11/20/seven-virtues-of-good-object.html">good objects</a>,
-which are
-<a href="/2014/06/09/objects-should-be-immutable.html">immutable</a>
-and
-<a href="/2014/09/16/getters-and-setters-are-evil.html">don’t have setters and getters</a>.</p>
-
-<p>Pay attention that I’m talking about arguments encapsulated by the object. The
-following class doesn’t represent the Universe, even though it does have
-a no-arguments constructor:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Time</span> <span class="o">{</span>
+</code></pre></div></div><p>What is the difference? The first class <code class="language-plaintext highlighter-rouge">HTTP</code> encapsulates a URL, while the second one expects it as an argument of method <code class="language-plaintext highlighter-rouge">read()</code>. Technically, both objects do exactly the same thing: they read the content of the Google home page. Which one is the right design? Usually I hate to say this, but in this case I have to—it depends.</p><amp-img src="/images/2014/12/truman-show-universe.png"alt="The Truman Show (1998) by Peter Weir"height="675"width="1200"layout="responsive"></amp-img><p>As <a href="/2014/11/20/seven-virtues-of-good-object.html">we discussed before</a>, a good object is a representative of a real-life entity. Such an entity exists outside of the object’s living environment. The <a href="/2016/07/14/who-is-object.html">object</a> knows how to access it and how to communicate with it.<p>What is that real-life entity in the example above? Each class gives its own answer. And the answer is given by the list of arguments its constructors accept. The first class accepts a single URL as an argument of its constructor. This tells us that the object of this class, after being constructed, will represent a web page. The second class accepts no arguments, which tells us that the object of it will represent… the Universe.<p>I think this principle is applicable to all classes in object-oriented programming—in order to understand what real-life entity an object represents, look at its constructor. All arguments passed into the constructor and encapsulated by the object identify a real-life entity accessed and managed by the object.<p>Of course, I’m talking about <a href="/2014/11/20/seven-virtues-of-good-object.html">good objects</a>, which are <a href="/2014/06/09/objects-should-be-immutable.html">immutable</a> and <a href="/2014/09/16/getters-and-setters-are-evil.html">don’t have setters and getters</a>.<p>Pay attention that I’m talking about arguments encapsulated by the object. The following class doesn’t represent the Universe, even though it does have a no-arguments constructor:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Time</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">msec</span><span class="o">;</span>
   <span class="kd">public</span> <span class="nf">Time</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">(</span><span class="nc">System</span><span class="o">.</span><span class="na">currentTimeMillis</span><span class="o">());</span>
@@ -133,23 +44,7 @@ a no-arguments constructor:</p>
     <span class="k">this</span><span class="o">.</span><span class="na">msec</span> <span class="o">=</span> <span class="n">time</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>This class has two constructors. One of them is the main one, and one is
-supplementary. We’re interested in the main one, which implements
-the <a href="/2016/11/21/naked-data.html"><em>encapsulation</em></a> of arguments.</p>
-
-
-
-<p>Now, the question is which is better: to represent a web page
-or the Universe? It depends, but I think that in general, the smaller the
-real-life entity we represent, the more solid and cohesive design
-we give to the object.</p>
-
-<p>On the other hand, sometimes we have to have an object that represents
-the Universe. For example, we may have this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">HTTP</span> <span class="o">{</span>
+</code></pre></div></div><p>This class has two constructors. One of them is the main one, and one is supplementary. We’re interested in the main one, which implements the <a href="/2016/11/21/naked-data.html"><em>encapsulation</em></a> of arguments.<p>Now, the question is which is better: to represent a web page or the Universe? It depends, but I think that in general, the smaller the real-life entity we represent, the more solid and cohesive design we give to the object.<p>On the other hand, sometimes we have to have an object that represents the Universe. For example, we may have this:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">HTTP</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="nc">String</span> <span class="nf">read</span><span class="o">(</span><span class="nc">String</span> <span class="n">url</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// read via HTTP and return</span>
   <span class="o">}</span>
@@ -157,18 +52,4 @@ the Universe. For example, we may have this:</p>
     <span class="c1">// check whether we're online</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>This is not an elegant design, but it demonstrates when it may be
-necessary to represent the entire Universe. An object of this <code class="language-plaintext highlighter-rouge">HTTP</code> class can read
-any web page from the entire web (it is almost as big as the Universe, isn’t it?),
-and it can check whether the entire web is accessible by it. Obviously,
-in this case, we don’t need it to encapsulate anything.</p>
-
-<p>I believe that objects representing the Universe are not good objects,
-mostly because there is only one Universe; why do we need many
-representatives of it?</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>This is not an elegant design, but it demonstrates when it may be necessary to represent the entire Universe. An object of this <code class="language-plaintext highlighter-rouge">HTTP</code> class can read any web page from the entire web (it is almost as big as the Universe, isn’t it?), and it can check whether the entire web is accessible by it. Obviously, in this case, we don’t need it to encapsulate anything.<p>I believe that objects representing the Universe are not good objects, mostly because there is only one Universe; why do we need many representatives of it?</article>

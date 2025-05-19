@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Utility Classes Have Nothing to Do With Functional Programming</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Utility Classes Have Nothing to Do With Functional Programming</title><link rel="canonical"href="https://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,125 +33,20 @@ functions, have nothing to do with functional programming, mostly
 because they are bags of procedures
 ",
         "keywords": ["functional programming", "utility classes in java", "utility classes vs functional programming", "utility classes are not functional programming", "utility classes"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>20 February 2015</p>
-      <h1>Utility Classes Have Nothing to Do With Functional Programming</h1>
-      <p>I was recently <a href="https://twitter.com/lukaseder/status/564866432790708224">accused</a> of being against
-<a href="https://en.wikipedia.org/wiki/Functional_programming">functional programming</a>
-because <a href="/2014/05/05/oop-alternative-to-utility-classes.html">I call utility classes an anti-pattern</a>.
-That’s absolutely wrong! Well, I do consider them a terrible anti-pattern,
-but they have nothing to do with functional programming. I believe there are
-two basic reasons why. First, functional programming is declarative, while
-utility class methods are imperative. Second,
-functional programming is based on lambda calculus, where
-a function can be assigned to a variable. Utility class methods
-are not functions in this sense. I’ll decode these statements in a minute.</p>
-
-
-
-<amp-img src="/images/2015/02/color-me-kubrick.png" alt="Color Me Kubrick (2005) by Brian W. Cook" height="680" width="1200" layout="responsive"></amp-img>
-
-<p>In Java, there are basically two valid alternatives to these ugly utility
-classes aggressively promoted by <a href="https://code.google.com/p/guava-libraries/">Guava</a>,
-<a href="http://commons.apache.org/">Apache Commons</a>, and others. The first one
-is the use of traditional classes, and the second one is
-<a href="http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">Java 8 lambda</a>.
-Now let’s see why utility classes are not even close to functional programming
-and where this misconception is coming from.</p>
-
-<p>Here is a typical example of a utility class
-<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html"><code class="language-plaintext highlighter-rouge">Math</code></a> from Java 1.0:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Math</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/02/20/utility-classes-vs-functional-programming.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>20 February 2015<h1>Utility Classes Have Nothing to Do With Functional Programming</h1><p>I was recently <a href="https://twitter.com/lukaseder/status/564866432790708224">accused</a> of being against <a href="https://en.wikipedia.org/wiki/Functional_programming">functional programming</a> because <a href="/2014/05/05/oop-alternative-to-utility-classes.html">I call utility classes an anti-pattern</a>. That’s absolutely wrong! Well, I do consider them a terrible anti-pattern, but they have nothing to do with functional programming. I believe there are two basic reasons why. First, functional programming is declarative, while utility class methods are imperative. Second, functional programming is based on lambda calculus, where a function can be assigned to a variable. Utility class methods are not functions in this sense. I’ll decode these statements in a minute.</p><amp-img src="/images/2015/02/color-me-kubrick.png"alt="Color Me Kubrick (2005) by Brian W. Cook"height="680"width="1200"layout="responsive"></amp-img><p>In Java, there are basically two valid alternatives to these ugly utility classes aggressively promoted by <a href="https://code.google.com/p/guava-libraries/">Guava</a>, <a href="http://commons.apache.org/">Apache Commons</a>, and others. The first one is the use of traditional classes, and the second one is <a href="http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html">Java 8 lambda</a>. Now let’s see why utility classes are not even close to functional programming and where this misconception is coming from.<p>Here is a typical example of a utility class <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html"><code class="language-plaintext highlighter-rouge">Math</code></a> from Java 1.0:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Math</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">abs</span><span class="o">(</span><span class="kt">double</span> <span class="n">a</span><span class="o">);</span>
   <span class="c1">// a few dozens of other methods of the same style</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Here is how you would use it when you want to calculate an absolute
-value of a floating point number:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="mf">3.1415926d</span><span class="o">);</span>
-</code></pre></div></div>
-
-
-
-<p>What’s wrong with it? We need a function, and we get it from class <code class="language-plaintext highlighter-rouge">Math</code>.
-The class has many useful functions inside it that can be used for many typical
-mathematical operations, like calculating maximum, minimum, sine, cosine, etc.
-It is a very popular concept; just look at any commercial or open source product.
-These utility classes are used everywhere since Java was invented (this
-<code class="language-plaintext highlighter-rouge">Math</code> class was introduced in Java’s first version). Well, technically
-there is nothing wrong. The code will work. But it is not object-oriented
-programming. Instead, it is imperative and procedural. Do we care? Well,
-it’s up to you to decide. Let’s see what the difference is.</p>
-
-
-
-<p>There are basically two different approaches: declarative and imperative.</p>
-
-<p><a href="https://en.wikipedia.org/wiki/Imperative_programming">Imperative programming</a>
-is focused on describing <em>how</em> a program operates
-in terms of statements that change a program state. We just saw an example
-of imperative programming above. Here is another (this is pure imperative/procedural
-programming that has nothing to do with
-<a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyMath</span> <span class="o">{</span>
+</code></pre></div></div><p>Here is how you would use it when you want to calculate an absolute value of a floating point number:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="mf">3.1415926d</span><span class="o">);</span>
+</code></pre></div></div><p>What’s wrong with it? We need a function, and we get it from class <code class="language-plaintext highlighter-rouge">Math</code>. The class has many useful functions inside it that can be used for many typical mathematical operations, like calculating maximum, minimum, sine, cosine, etc. It is a very popular concept; just look at any commercial or open source product. These utility classes are used everywhere since Java was invented (this <code class="language-plaintext highlighter-rouge">Math</code> class was introduced in Java’s first version). Well, technically there is nothing wrong. The code will work. But it is not object-oriented programming. Instead, it is imperative and procedural. Do we care? Well, it’s up to you to decide. Let’s see what the difference is.<p>There are basically two different approaches: declarative and imperative.<p><a href="https://en.wikipedia.org/wiki/Imperative_programming">Imperative programming</a> is focused on describing <em>how</em> a program operates in terms of statements that change a program state. We just saw an example of imperative programming above. Here is another (this is pure imperative/procedural programming that has nothing to do with <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>):<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyMath</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kt">double</span> <span class="nf">f</span><span class="o">(</span><span class="kt">double</span> <span class="n">a</span><span class="o">,</span> <span class="kt">double</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
     <span class="kt">double</span> <span class="n">max</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">);</span>
     <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="n">max</span><span class="o">);</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p><a href="https://en.wikipedia.org/wiki/Declarative_programming">Declarative programming</a>
-focuses on <em>what</em> the program should accomplish without prescribing
-how to do it in terms of sequences of actions to be taken. This is how
-the same code would look in Lisp, a functional programming language:</p>
-
-<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">f</span> <span class="p">(</span><span class="nv">a</span> <span class="nv">b</span><span class="p">)</span> <span class="p">(</span><span class="nb">abs</span> <span class="p">(</span><span class="nb">max</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">)))</span>
-</code></pre></div></div>
-
-<p>What’s the catch? Just a difference in syntax? Not really.</p>
-
-<p>There are <a href="https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms">many definitions</a>
-of the difference between imperative and declarative styles, but I will try to
-give my own. There are basically three roles interacting in the scenario
-with this <code class="language-plaintext highlighter-rouge">f</code> function/method: a <em>buyer</em>, a <em>packager</em> of the result,
-and a <em>consumer</em> of the result. Let’s say I call this function like this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span>
+</code></pre></div></div><p><a href="https://en.wikipedia.org/wiki/Declarative_programming">Declarative programming</a> focuses on <em>what</em> the program should accomplish without prescribing how to do it in terms of sequences of actions to be taken. This is how the same code would look in Lisp, a functional programming language:<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">f</span> <span class="p">(</span><span class="nv">a</span> <span class="nv">b</span><span class="p">)</span> <span class="p">(</span><span class="nb">abs</span> <span class="p">(</span><span class="nb">max</span> <span class="nv">a</span> <span class="nv">b</span><span class="p">)))</span>
+</code></pre></div></div><p>What’s the catch? Just a difference in syntax? Not really.<p>There are <a href="https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms">many definitions</a> of the difference between imperative and declarative styles, but I will try to give my own. There are basically three roles interacting in the scenario with this <code class="language-plaintext highlighter-rouge">f</code> function/method: a <em>buyer</em>, a <em>packager</em> of the result, and a <em>consumer</em> of the result. Let’s say I call this function like this:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">void</span> <span class="nf">foo</span><span class="o">()</span> <span class="o">{</span>
   <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">calc</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="o">-</span><span class="mi">7</span><span class="o">);</span>
   <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"max+abs equals to "</span> <span class="o">+</span> <span class="n">x</span><span class="o">);</span>
 <span class="o">}</span>
@@ -169,137 +54,14 @@ and a <em>consumer</em> of the result. Let’s say I call this function like thi
   <span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">f</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">);</span>
   <span class="k">return</span> <span class="n">x</span><span class="o">;</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Here, method <code class="language-plaintext highlighter-rouge">calc()</code> is a buyer, method <code class="language-plaintext highlighter-rouge">Math.f()</code> is a packager of the result,
-and method <code class="language-plaintext highlighter-rouge">foo()</code> is a consumer. No matter which programming style is used,
-there are always these three guys participating in the process:
-the buyer, the packager, and the consumer.</p>
-
-
-
-<p>Imagine you’re a buyer and want to purchase a gift for your (girl|boy)friend. The first
-option is to visit a shop, pay $50, let them package that perfume for you,
-and then deliver it to the friend (and get a kiss in return). This is an <em>imperative</em> style.</p>
-
-<p>The second option is to visit a shop, pay $50, and get a gift card. You then
-present this card to the friend (and get a kiss in return). When he or she decides to convert it
-to perfume, he or she will visit the shop and get it. This
-is a <em>declarative</em> style.</p>
-
-<p>See the difference?</p>
-
-<p>In the first case, which is imperative, you force the packager (a beauty shop)
-to find that perfume in stock, package it, and present it to you as
-a ready-to-be-used product. In the second scenario, which is declarative,
-you’re just getting a <em>promise</em> from the shop that eventually, when it’s
-necessary, the staff will find the perfume in stock, package it, and provide it to
-those who need it. If your friend never visits the shop with that gift card,
-the perfume will remain in stock.</p>
-
-<p>Moreover, your friend can use that gift card as a product itself, never
-visiting the shop. He or she may instead present it to somebody else as a gift
-or just exchange it for another card or product. The gift card itself
-becomes a product!</p>
-
-<p>So the difference is what the consumer is getting—either a
-product ready to be used (imperative) or a voucher for the product, which
-can later be converted into a real product (declarative).</p>
-
-<p>Utility classes, like <code class="language-plaintext highlighter-rouge">Math</code> from JDK or <code class="language-plaintext highlighter-rouge">StringUtils</code> from Apache Commons,
-return products ready to be used immediately, while functions in Lisp
-and other functional languages return “vouchers.” For example, if you
-call the <code class="language-plaintext highlighter-rouge">max</code> function in Lisp, the actual maximum between two numbers
-will only be calculated when you actually start using it:</p>
-
-<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="k">let</span> <span class="p">(</span><span class="nv">x</span> <span class="p">(</span><span class="nb">max</span> <span class="mi">1</span> <span class="mi">5</span><span class="p">))</span>
+</code></pre></div></div><p>Here, method <code class="language-plaintext highlighter-rouge">calc()</code> is a buyer, method <code class="language-plaintext highlighter-rouge">Math.f()</code> is a packager of the result, and method <code class="language-plaintext highlighter-rouge">foo()</code> is a consumer. No matter which programming style is used, there are always these three guys participating in the process: the buyer, the packager, and the consumer.<p>Imagine you’re a buyer and want to purchase a gift for your (girl|boy)friend. The first option is to visit a shop, pay $50, let them package that perfume for you, and then deliver it to the friend (and get a kiss in return). This is an <em>imperative</em> style.<p>The second option is to visit a shop, pay $50, and get a gift card. You then present this card to the friend (and get a kiss in return). When he or she decides to convert it to perfume, he or she will visit the shop and get it. This is a <em>declarative</em> style.<p>See the difference?<p>In the first case, which is imperative, you force the packager (a beauty shop) to find that perfume in stock, package it, and present it to you as a ready-to-be-used product. In the second scenario, which is declarative, you’re just getting a <em>promise</em> from the shop that eventually, when it’s necessary, the staff will find the perfume in stock, package it, and provide it to those who need it. If your friend never visits the shop with that gift card, the perfume will remain in stock.<p>Moreover, your friend can use that gift card as a product itself, never visiting the shop. He or she may instead present it to somebody else as a gift or just exchange it for another card or product. The gift card itself becomes a product!<p>So the difference is what the consumer is getting—either a product ready to be used (imperative) or a voucher for the product, which can later be converted into a real product (declarative).<p>Utility classes, like <code class="language-plaintext highlighter-rouge">Math</code> from JDK or <code class="language-plaintext highlighter-rouge">StringUtils</code> from Apache Commons, return products ready to be used immediately, while functions in Lisp and other functional languages return “vouchers.” For example, if you call the <code class="language-plaintext highlighter-rouge">max</code> function in Lisp, the actual maximum between two numbers will only be calculated when you actually start using it:<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="k">let</span> <span class="p">(</span><span class="nv">x</span> <span class="p">(</span><span class="nb">max</span> <span class="mi">1</span> <span class="mi">5</span><span class="p">))</span>
   <span class="p">(</span><span class="nb">print</span> <span class="s">"X equals to "</span> <span class="nv">x</span><span class="p">))</span>
-</code></pre></div></div>
-
-<p>Until this <code class="language-plaintext highlighter-rouge">print</code> actually starts to output characters to the
-screen, the function <code class="language-plaintext highlighter-rouge">max</code> won’t be called. This <code class="language-plaintext highlighter-rouge">x</code> is a “voucher” returned
-to you when you attempted to “buy” a maximum between <code class="language-plaintext highlighter-rouge">1</code> and <code class="language-plaintext highlighter-rouge">5</code>.</p>
-
-<p>Note, however, that nesting Java static functions one into another doesn’t
-make them declarative. The code is still imperative, because its execution
-delivers the result here and now:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyMath</span> <span class="o">{</span>
+</code></pre></div></div><p>Until this <code class="language-plaintext highlighter-rouge">print</code> actually starts to output characters to the screen, the function <code class="language-plaintext highlighter-rouge">max</code> won’t be called. This <code class="language-plaintext highlighter-rouge">x</code> is a “voucher” returned to you when you attempted to “buy” a maximum between <code class="language-plaintext highlighter-rouge">1</code> and <code class="language-plaintext highlighter-rouge">5</code>.<p>Note, however, that nesting Java static functions one into another doesn’t make them declarative. The code is still imperative, because its execution delivers the result here and now:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyMath</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kt">double</span> <span class="nf">f</span><span class="o">(</span><span class="kt">double</span> <span class="n">a</span><span class="o">,</span> <span class="kt">double</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">return</span> <span class="nc">Math</span><span class="o">.</span><span class="na">abs</span><span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">));</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>“Okay,” you may say, “I got it, but why is declarative style better than imperative?
-What’s the big deal?” I’m getting to it. Let me first show the difference
-between functions in functional programming and static methods in OOP.
-As mentioned above, this is the second big difference between utility
-classes and functional programming.</p>
-
-<p>In any functional programming language, you can do this:</p>
-
-<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">foo</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nv">x</span> <span class="mi">5</span><span class="p">))</span>
-</code></pre></div></div>
-
-<p>Then, later, you can call that <code class="language-plaintext highlighter-rouge">x</code>:</p>
-
-<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">bar</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">+</span> <span class="nv">x</span> <span class="mi">1</span><span class="p">))</span> <span class="nv">//</span> <span class="nv">defining</span> <span class="k">function</span> <span class="nv">bar</span>
+</code></pre></div></div><p>“Okay,” you may say, “I got it, but why is declarative style better than imperative? What’s the big deal?” I’m getting to it. Let me first show the difference between functions in functional programming and static methods in OOP. As mentioned above, this is the second big difference between utility classes and functional programming.<p>In any functional programming language, you can do this:<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">foo</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nv">x</span> <span class="mi">5</span><span class="p">))</span>
+</code></pre></div></div><p>Then, later, you can call that <code class="language-plaintext highlighter-rouge">x</code>:<div class="language-lisp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="nb">defun</span> <span class="nv">bar</span> <span class="p">(</span><span class="nv">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">+</span> <span class="nv">x</span> <span class="mi">1</span><span class="p">))</span> <span class="nv">//</span> <span class="nv">defining</span> <span class="k">function</span> <span class="nv">bar</span>
 <span class="p">(</span><span class="nb">print</span> <span class="p">(</span><span class="nv">foo</span> <span class="nv">bar</span><span class="p">))</span> <span class="nv">//</span> <span class="nv">passing</span> <span class="nv">bar</span> <span class="nv">as</span> <span class="nv">an</span> <span class="nv">argument</span> <span class="nv">to</span> <span class="nv">foo</span>
-</code></pre></div></div>
-
-<p>Static methods in Java are not <em>functions</em> in terms of functional programming.
-You can’t do anything like this with a static method. You can’t pass a static
-method as an argument to another method. Basically, static
-methods are procedures or, simply put, Java statements grouped under a unique
-name. The only way to access them is to call a procedure and pass all
-necessary arguments to it. The procedure will calculate something and return
-a result that is immediately ready for usage.</p>
-
-<p>And now we’re getting to the final question I can hear you asking:
-“Okay, utility classes are not functional programming, but they look like
-functional programming, they work very fast, and they are very easy to
-use. Why not use them? Why aim for perfection when 20 years of Java history
-proves that utility classes are the main instrument of each Java developer?”</p>
-
-<p>Besides <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>
-fundamentalism, which I’m very often accused of, there are
-a few very practical reasons (BTW, I am an OOP fundamentalist):</p>
-
-<ul>
-  <li>
-    <p><strong>Testability</strong>.
-Calls to static methods in utility classes are hard-coded dependencies that
-can never be broken for testing purposes. If your class is calling
-<code class="language-plaintext highlighter-rouge">FileUtils.readFile()</code>, I will never be able to test it without using
-a real file on disk.</p>
-  </li>
-  <li>
-    <p><strong>Efficiency</strong>.
-Utility classes, due to their imperative nature, are much less efficient
-than their <a href="/2014/05/05/oop-alternative-to-utility-classes.html">declarative alternatives</a>.
-They simply do all calculations right here and now, taking processor
-resources even when it’s not yet necessary. Instead of returning a promise
-to break down a string into chunks, <code class="language-plaintext highlighter-rouge">StringUtils.split()</code> breaks it down
-right now. And it breaks it down into all possible chunks, even if only
-the first one is required by the “buyer.”</p>
-  </li>
-  <li>
-    <p><strong>Readability</strong>.
-Utility classes tend to be huge (try to read the source code of <code class="language-plaintext highlighter-rouge">StringUtils</code>
-or <code class="language-plaintext highlighter-rouge">FileUtils</code> from Apache Commons). The entire idea of separation of concerns,
-which makes OOP so beautiful, is absent in utility classes. They just
-put all possible procedures into one huge <code class="language-plaintext highlighter-rouge">.java</code> file, which becomes
-absolutely unmaintainable when it surpasses a dozen static methods.</p>
-  </li>
-</ul>
-
-<p>To conclude, let me reiterate: Utility classes have nothing to do
-with functional programming. They are simply bags of static methods, which
-are imperative procedures. Try to stay as far as possible away from them and
-use solid, cohesive objects no matter how many of them you have to declare
-and how small they are.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Static methods in Java are not <em>functions</em> in terms of functional programming. You can’t do anything like this with a static method. You can’t pass a static method as an argument to another method. Basically, static methods are procedures or, simply put, Java statements grouped under a unique name. The only way to access them is to call a procedure and pass all necessary arguments to it. The procedure will calculate something and return a result that is immediately ready for usage.<p>And now we’re getting to the final question I can hear you asking: “Okay, utility classes are not functional programming, but they look like functional programming, they work very fast, and they are very easy to use. Why not use them? Why aim for perfection when 20 years of Java history proves that utility classes are the main instrument of each Java developer?”<p>Besides <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a> fundamentalism, which I’m very often accused of, there are a few very practical reasons (BTW, I am an OOP fundamentalist):<ul><li><p><strong>Testability</strong>. Calls to static methods in utility classes are hard-coded dependencies that can never be broken for testing purposes. If your class is calling <code class="language-plaintext highlighter-rouge">FileUtils.readFile()</code>, I will never be able to test it without using a real file on disk.<li><p><strong>Efficiency</strong>. Utility classes, due to their imperative nature, are much less efficient than their <a href="/2014/05/05/oop-alternative-to-utility-classes.html">declarative alternatives</a>. They simply do all calculations right here and now, taking processor resources even when it’s not yet necessary. Instead of returning a promise to break down a string into chunks, <code class="language-plaintext highlighter-rouge">StringUtils.split()</code> breaks it down right now. And it breaks it down into all possible chunks, even if only the first one is required by the “buyer.”<li><p><strong>Readability</strong>. Utility classes tend to be huge (try to read the source code of <code class="language-plaintext highlighter-rouge">StringUtils</code> or <code class="language-plaintext highlighter-rouge">FileUtils</code> from Apache Commons). The entire idea of separation of concerns, which makes OOP so beautiful, is absent in utility classes. They just put all possible procedures into one huge <code class="language-plaintext highlighter-rouge">.java</code> file, which becomes absolutely unmaintainable when it surpasses a dozen static methods.</ul><p>To conclude, let me reiterate: Utility classes have nothing to do with functional programming. They are simply bags of static methods, which are imperative procedures. Try to stay as far as possible away from them and use solid, cohesive objects no matter how many of them you have to declare and how small they are.</article>

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Temporal Coupling Between Method Calls</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Temporal Coupling Between Method Calls</title><link rel="canonical"href="https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,51 +33,7 @@ temporal coupling, which is a bottleneck for
 effective refactoring; avoid them.
 ",
         "keywords": ["temporal coupling", "temporal coupling java", "temporal coupling hidden", "temporal coupling in oop", "temporal coupling definition"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>8 December 2015</p>
-      <h1>Temporal Coupling Between Method Calls</h1>
-      <p>Temporal coupling happens between sequential method calls
-when they must stay in a particular order. This is inevitable
-in imperative programming, but we can reduce the negative effect
-of it just by turning those static procedures into functions. Take
-a look at this example.</p>
-
-
-
-<amp-img src="/images/2015/12/blueberry.jpg" alt="Blueberry (2004) by Jan Kounen" height="675" width="1200" layout="responsive"></amp-img>
-
-<p>Here is the code:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/12/08/temporal-coupling-between-method-calls.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>8 December 2015<h1>Temporal Coupling Between Method Calls</h1><p>Temporal coupling happens between sequential method calls when they must stay in a particular order. This is inevitable in imperative programming, but we can reduce the negative effect of it just by turning those static procedures into functions. Take a look at this example.</p><amp-img src="/images/2015/12/blueberry.jpg"alt="Blueberry (2004) by Jan Kounen"height="675"width="1200"layout="responsive"></amp-img><p>Here is the code:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">names</span><span class="o">()</span> <span class="o">{</span>
     <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span>
     <span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">);</span>
@@ -99,21 +45,7 @@ a look at this example.</p>
     <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">toLowerCase</span><span class="o">());</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>What do you think about that? I believe it’s clear what <code class="language-plaintext highlighter-rouge">names()</code> is doing—creating a list of names. In order to avoid duplication, there is a supplementary
-<em>procedure</em>, <code class="language-plaintext highlighter-rouge">append()</code>, which converts an item to lowercase and adds it to the
-list.</p>
-
-<p>This is poor design.</p>
-
-<p>It is a <strong>procedural</strong> design, and there is <strong>temporal coupling</strong> between
-lines in method <code class="language-plaintext highlighter-rouge">names()</code>.</p>
-
-<p>Let me first show you a better (though not the best!) design,
-then I will try to explain its benefits:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+</code></pre></div></div><p>What do you think about that? I believe it’s clear what <code class="language-plaintext highlighter-rouge">names()</code> is doing—creating a list of names. In order to avoid duplication, there is a supplementary <em>procedure</em>, <code class="language-plaintext highlighter-rouge">append()</code>, which converts an item to lowercase and adds it to the list.<p>This is poor design.<p>It is a <strong>procedural</strong> design, and there is <strong>temporal coupling</strong> between lines in method <code class="language-plaintext highlighter-rouge">names()</code>.<p>Let me first show you a better (though not the best!) design, then I will try to explain its benefits:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="nf">names</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">return</span> <span class="nc">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
       <span class="nc">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
@@ -129,43 +61,17 @@ then I will try to explain its benefits:</p>
     <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>An ideal design for method <code class="language-plaintext highlighter-rouge">with()</code> would create a new instance of
-<code class="language-plaintext highlighter-rouge">List</code>, populate it through <code class="language-plaintext highlighter-rouge">addAll(list)</code>, then <code class="language-plaintext highlighter-rouge">add(item)</code> to it, and
-finally return. That would be perfectly
-<a href="https://www.yegor256.com/2014/06/09/objects-should-be-immutable.html">immutable</a>,
-but slow.</p>
-
-<p>So, what is wrong with this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span>
+</code></pre></div></div><p>An ideal design for method <code class="language-plaintext highlighter-rouge">with()</code> would create a new instance of <code class="language-plaintext highlighter-rouge">List</code>, populate it through <code class="language-plaintext highlighter-rouge">addAll(list)</code>, then <code class="language-plaintext highlighter-rouge">add(item)</code> to it, and finally return. That would be perfectly <a href="https://www.yegor256.com/2014/06/09/objects-should-be-immutable.html">immutable</a>, but slow.<p>So, what is wrong with this:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span>
 <span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">);</span>
 <span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Walter"</span><span class="o">);</span>
 <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
-</code></pre></div></div>
-
-<p>It looks perfectly clean, doesn’t it? Instantiate a list, append two items to it, and
-return it. Yes, it is clean—for now. Because we remember what <code class="language-plaintext highlighter-rouge">append()</code> is
-doing. In a few months, we’ll get back to this code, and it will look like this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span>
+</code></pre></div></div><p>It looks perfectly clean, doesn’t it? Instantiate a list, append two items to it, and return it. Yes, it is clean—for now. Because we remember what <code class="language-plaintext highlighter-rouge">append()</code> is doing. In a few months, we’ll get back to this code, and it will look like this:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span>
 <span class="c1">// 10 more lines here</span>
 <span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">);</span>
 <span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Walter"</span><span class="o">);</span>
 <span class="c1">// 10 more lines here</span>
 <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
-</code></pre></div></div>
-
-<p>Is it so clear now that <code class="language-plaintext highlighter-rouge">append()</code> is actually adding <code class="language-plaintext highlighter-rouge">"Jeff"</code> to <code class="language-plaintext highlighter-rouge">list</code>? What
-will happen if I remove that line? Will it affect the result being
-returned in the last line? I don’t know. I need to <strong>check</strong> the body of method
-<code class="language-plaintext highlighter-rouge">append()</code> to make sure.</p>
-
-<p>Also, how about returning <code class="language-plaintext highlighter-rouge">list</code> first and calling <code class="language-plaintext highlighter-rouge">append()</code> afterwards? This
-is what possible “refactoring” may do to our code:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span>
+</code></pre></div></div><p>Is it so clear now that <code class="language-plaintext highlighter-rouge">append()</code> is actually adding <code class="language-plaintext highlighter-rouge">"Jeff"</code> to <code class="language-plaintext highlighter-rouge">list</code>? What will happen if I remove that line? Will it affect the result being returned in the last line? I don’t know. I need to <strong>check</strong> the body of method <code class="language-plaintext highlighter-rouge">append()</code> to make sure.<p>Also, how about returning <code class="language-plaintext highlighter-rouge">list</code> first and calling <code class="language-plaintext highlighter-rouge">append()</code> afterwards? This is what possible “refactoring” may do to our code:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">();</span>
 <span class="k">if</span> <span class="o">(</span><span class="cm">/* something */</span><span class="o">)</span> <span class="o">{</span>
   <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
 <span class="o">}</span>
@@ -174,59 +80,16 @@ is what possible “refactoring” may do to our code:</p>
 <span class="nc">Foo</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">list</span><span class="o">,</span> <span class="s">"Jeff"</span><span class="o">);</span>
 <span class="c1">// 10 more lines here</span>
 <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
-</code></pre></div></div>
-
-<p>First of all, we return <code class="language-plaintext highlighter-rouge">list</code> too early, when it is not ready. But did anyone
-tell me that these two calls to <code class="language-plaintext highlighter-rouge">append()</code> must happen before <code class="language-plaintext highlighter-rouge">return list</code>?
-Second, we changed the order of <code class="language-plaintext highlighter-rouge">append()</code> calls. Again, did anyone tell me
-that it’s important to call them in that particular order?</p>
-
-<p>Nobody. Nowhere. This is called <strong>temporal coupling</strong>.</p>
-
-<p>Our lines are <strong>coupled</strong> together. They must stay in this particular order, but the
-knowledge about that order is hidden. It’s easy to destroy
-the order, and our compiler won’t be able to catch us.</p>
-
-<p>To the contrary, this design doesn’t have any “order”:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="nc">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
+</code></pre></div></div><p>First of all, we return <code class="language-plaintext highlighter-rouge">list</code> too early, when it is not ready. But did anyone tell me that these two calls to <code class="language-plaintext highlighter-rouge">append()</code> must happen before <code class="language-plaintext highlighter-rouge">return list</code>? Second, we changed the order of <code class="language-plaintext highlighter-rouge">append()</code> calls. Again, did anyone tell me that it’s important to call them in that particular order?<p>Nobody. Nowhere. This is called <strong>temporal coupling</strong>.<p>Our lines are <strong>coupled</strong> together. They must stay in this particular order, but the knowledge about that order is hidden. It’s easy to destroy the order, and our compiler won’t be able to catch us.<p>To the contrary, this design doesn’t have any “order”:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">return</span> <span class="nc">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
   <span class="nc">Foo</span><span class="o">.</span><span class="na">with</span><span class="o">(</span>
     <span class="k">new</span> <span class="nf">LinkedList</span><span class="o">(),</span>
     <span class="s">"Jeff"</span>
   <span class="o">),</span>
   <span class="s">"Walter"</span>
 <span class="o">);</span>
-</code></pre></div></div>
-
-<p>It just <strong>returns</strong> a list, which is constructed by a few calls to the <code class="language-plaintext highlighter-rouge">with()</code>
-method. It is a single line instead of four.</p>
-
-<p>As <a href="/2015/08/18/multiple-return-statements-in-oop.html">discussed before</a>,
-an ideal method in OOP must have just a single statement, and this statement is
-<code class="language-plaintext highlighter-rouge">return</code>.</p>
-
-<p>The same is true about validation. For example, this code is bad:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Jeff"</span><span class="o">);</span>
+</code></pre></div></div><p>It just <strong>returns</strong> a list, which is constructed by a few calls to the <code class="language-plaintext highlighter-rouge">with()</code> method. It is a single line instead of four.<p>As <a href="/2015/08/18/multiple-return-statements-in-oop.html">discussed before</a>, an ideal method in OOP must have just a single statement, and this statement is <code class="language-plaintext highlighter-rouge">return</code>.<p>The same is true about validation. For example, this code is bad:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Jeff"</span><span class="o">);</span>
 <span class="nc">Foo</span><span class="o">.</span><span class="na">checkIfListStillHasSpace</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
 <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Walter"</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>While this one is much better:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Jeff"</span><span class="o">);</span>
+</code></pre></div></div><p>While this one is much better:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Jeff"</span><span class="o">);</span>
 <span class="nc">Foo</span><span class="o">.</span><span class="na">withEnoughSpace</span><span class="o">(</span><span class="n">list</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="s">"Walter"</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>See the difference?</p>
-
-<p>And, of course, an ideal approach would be to use
-<a href="/2015/02/26/composable-decorators.html">composable decorators</a>
-instead of these ugly static methods. But if it’s not possible for
-some reason, just don’t make those static methods look like procedures.
-Make sure they always return results, which become arguments to
-further calls.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>See the difference?<p>And, of course, an ideal approach would be to use <a href="/2015/02/26/composable-decorators.html">composable decorators</a> instead of these ugly static methods. But if it’s not possible for some reason, just don’t make those static methods look like procedures. Make sure they always return results, which become arguments to further calls.</article>

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>OOP Without Classes?</title>
-    <link rel="canonical" href="https://www.yegor256.com/2016/09/20/oop-without-classes.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>OOP Without Classes?</title><link rel="canonical"href="https://www.yegor256.com/2016/09/20/oop-without-classes.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,62 +33,10 @@ possible to just have objects, and types. And,
 of course, no implementation inheritance.
 ",
         "keywords": ["class in oop", "what is class in oop", "object-oriented programming", "role of class in oop", "classes in oop"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2016/09/20/oop-without-classes.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>20 September 2016</p>
-      <h1>OOP Without Classes?</h1>
-      <p>I <a href="https://www.youtube.com/watch?v=s-hdZZzMCac">interviewed</a>
-David West, the author of the <a href="https://amzn.to/266oJr4">Object Thinking</a> book,
-a few weeks ago, and he said that classes were not meant to be in
-object-oriented programming at all. He actually said that
-<a href="https://www.youtube.com/watch?v=RdE-d_EhzmA">earlier</a>; I just didn’t
-understand him then. The more I’ve thought about this, the more it appears
-obvious that we indeed do not need classes.</p>
-
-
-
-<amp-img src="/images/2016/09/battleship-potemkin.jpg" alt="Броненосец Потемкин (1925) by Сергей Эйзенштейн" height="816" width="1200" layout="responsive"></amp-img>
-
-<p>Here is a prototype.</p>
-
-<p>Let’s say we have only <em>types</em> and <em>objects</em>. First, we define a type:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type Book {
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2016/09/20/oop-without-classes.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>20 September 2016<h1>OOP Without Classes?</h1><p>I <a href="https://www.youtube.com/watch?v=s-hdZZzMCac">interviewed</a> David West, the author of the <a href="https://amzn.to/266oJr4">Object Thinking</a> book, a few weeks ago, and he said that classes were not meant to be in object-oriented programming at all. He actually said that <a href="https://www.youtube.com/watch?v=RdE-d_EhzmA">earlier</a>; I just didn’t understand him then. The more I’ve thought about this, the more it appears obvious that we indeed do not need classes.</p><amp-img src="/images/2016/09/battleship-potemkin.jpg"alt="Броненосец Потемкин (1925) by Сергей Эйзенштейн"height="816"width="1200"layout="responsive"></amp-img><p>Here is a prototype.<p>Let’s say we have only <em>types</em> and <em>objects</em>. First, we define a type:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type Book {
   void print();
 }
-</code></pre></div></div>
-
-<p>Then we <em>create</em> an object (pay attention; we don’t “instantiate”):</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Book b1 = create Book("Object Thinking") {
+</code></pre></div></div><p>Then we <em>create</em> an object (pay attention; we don’t “instantiate”):<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Book b1 = create Book("Object Thinking") {
   String title;
   Book(String t) {
     this.title = t;
@@ -107,26 +45,5 @@ obvious that we indeed do not need classes.</p>
     print("My title: " + this.title);
   }
 }
-</code></pre></div></div>
-
-<p>Then we create another object, which will behave similarly
-to the one we already have but with different constructor arguments.
-We <em>copy</em> an existing one:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Book b2 = copy b1("Elegant Objects");
-</code></pre></div></div>
-
-<p>Libraries will deliver us objects, which we can copy.</p>
-
-<p>That’s it.</p>
-
-<p>No <a href="/2016/09/13/inheritance-is-procedural.html">implementation inheritance</a>
-and no <a href="/2014/05/05/oop-alternative-to-utility-classes.html">static methods</a>,
-of course.
-Only <a href="https://en.wikipedia.org/wiki/Subtyping">subtyping</a>.</p>
-
-<p>Why not?</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Then we create another object, which will behave similarly to the one we already have but with different constructor arguments. We <em>copy</em> an existing one:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Book b2 = copy b1("Elegant Objects");
+</code></pre></div></div><p>Libraries will deliver us objects, which we can copy.<p>That’s it.<p>No <a href="/2016/09/13/inheritance-is-procedural.html">implementation inheritance</a> and no <a href="/2014/05/05/oop-alternative-to-utility-classes.html">static methods</a>, of course. Only <a href="https://en.wikipedia.org/wiki/Subtyping">subtyping</a>.<p>Why not?</article>

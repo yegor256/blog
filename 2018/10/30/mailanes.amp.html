@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Mailanes.com Helps Manage Newsletters and Mailing Lists</title>
-    <link rel="canonical" href="https://www.yegor256.com/2018/10/30/mailanes.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Mailanes.com Helps Manage Newsletters and Mailing Lists</title><link rel="canonical"href="https://www.yegor256.com/2018/10/30/mailanes.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,136 +33,13 @@ a list of email addresses where you want to deliver some information
 regularly.
 ",
         "keywords": ["mail sending", "smtp sending", "mass emails", "email mass campaign", "send smtp"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2018/10/30/mailanes.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>30 October 2018</p>
-      <h1>Mailanes.com Helps Manage Newsletters and Mailing Lists</h1>
-      <p>There are other products doing something similar, including
-<a href="https://www.mailchimp.com/">MailChimp</a>, <a href="https://www.aweber.com/">AWeber</a>, and
-many others. They are great. Maybe. I don’t really know. I tried some of them,
-some time ago. And I was frustrated. They are expensive, clumsy, and heavy.
-That’s my experience. I wanted something lightweight, where I can upload
-a list of emails, create a simple HTML/text letter, configure my SMTP outbound
-server, and call it a day. I spent a few days and created
-<a href="https://www.mailanes.com">Mailanes</a>. It’s free (for all of you), it’s simple,
-and it’s <a href="https://github.com/yegor256/mailanes/">open source</a>.</p>
-
-
-
-<p>First, you login via GitHub (what else, right?) Then you create a List
-of Recipients. You add them there one by one or you upload a CSV. Next,
-you create a Lane of Letters. A lane is something your recipients should
-be moved through, step by step, email by email. Then you create a Campaign
-and connect your list with the lane. That’s it.</p>
-
-<p>Let me show by example.
-Let’s say you go to <a href="https://www.zerocracy.com">zerocracy.com</a>, enter your email
-and click “Help me start!” The form on the site is configured to post that
-email directly to the Mailanes web app (see the <a href="https://www.zerocracy.com/">sources</a>):</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">action=</span><span class="s">"https://www.mailanes.com/subscribe?list=4"</span><span class="nt">&gt;</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2018/10/30/mailanes.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>30 October 2018<h1>Mailanes.com Helps Manage Newsletters and Mailing Lists</h1><p>There are other products doing something similar, including <a href="https://www.mailchimp.com/">MailChimp</a>, <a href="https://www.aweber.com/">AWeber</a>, and many others. They are great. Maybe. I don’t really know. I tried some of them, some time ago. And I was frustrated. They are expensive, clumsy, and heavy. That’s my experience. I wanted something lightweight, where I can upload a list of emails, create a simple HTML/text letter, configure my SMTP outbound server, and call it a day. I spent a few days and created <a href="https://www.mailanes.com">Mailanes</a>. It’s free (for all of you), it’s simple, and it’s <a href="https://github.com/yegor256/mailanes/">open source</a>.<p>First, you login via GitHub (what else, right?) Then you create a List of Recipients. You add them there one by one or you upload a CSV. Next, you create a Lane of Letters. A lane is something your recipients should be moved through, step by step, email by email. Then you create a Campaign and connect your list with the lane. That’s it.<p>Let me show by example. Let’s say you go to <a href="https://www.zerocracy.com">zerocracy.com</a>, enter your email and click “Help me start!” The form on the site is configured to post that email directly to the Mailanes web app (see the <a href="https://www.zerocracy.com/">sources</a>):<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"POST"</span> <span class="na">action=</span><span class="s">"https://www.mailanes.com/subscribe?list=4"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"source"</span> <span class="na">value=</span><span class="s">"www.zerocracy.com"</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"redirect"</span> <span class="na">value=</span><span class="s">"https://www.zerocracy.com/"</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"Your email..."</span> <span class="na">size=</span><span class="s">"24"</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Help me start!<span class="nt">&lt;/button&gt;</span>
 <span class="nt">&lt;/form&gt;</span>
-</code></pre></div></div>
-
-<p>The <code class="language-plaintext highlighter-rouge">action</code> of the form points to the <code class="language-plaintext highlighter-rouge">/subscribe?list=4</code> URL at the Mailanes
-server. Once submitted, the recipient will be added to list number 4 and the browser
-will be redirected to the URL in the <code class="language-plaintext highlighter-rouge">redirect</code> form parameter.</p>
-
-<p>Right after the recipient shows up in the list, the system starts moving
-him or her through the letters defined in the lane. Try it yourself and you
-will receive the first letter almost immediately (in 10 minutes, to be precise).</p>
-
-<p>To define a letter I decided to use <a href="https://github.com/Shopify/liquid">Liquid</a>,
-as a pretty simple markup language. For the configuration of lists, lanes, letters
-and campaigns I’m using <a href="http://yaml.org/">YAML</a>, since it’s rich enough but
-way easier and shorter than JSON and, of course, XML. Here is what the
-configuration of the first letter you will receive looks like:</p>
-
-
-
-<p>The <code class="language-plaintext highlighter-rouge">relax</code> parameter of the letter specifies how much time the system has
-to wait after this letter before it sends you the next one. <code class="language-plaintext highlighter-rouge">"4:0:0"</code> stands
-for four days, zero hours, and zero minutes.</p>
-
-<p>At the bottom of the letter I added this:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Thanks,<span class="nt">&lt;br/&gt;</span>
+</code></pre></div></div><p>The <code class="language-plaintext highlighter-rouge">action</code> of the form points to the <code class="language-plaintext highlighter-rouge">/subscribe?list=4</code> URL at the Mailanes server. Once submitted, the recipient will be added to list number 4 and the browser will be redirected to the URL in the <code class="language-plaintext highlighter-rouge">redirect</code> form parameter.<p>Right after the recipient shows up in the list, the system starts moving him or her through the letters defined in the lane. Try it yourself and you will receive the first letter almost immediately (in 10 minutes, to be precise).<p>To define a letter I decided to use <a href="https://github.com/Shopify/liquid">Liquid</a>, as a pretty simple markup language. For the configuration of lists, lanes, letters and campaigns I’m using <a href="http://yaml.org/">YAML</a>, since it’s rich enough but way easier and shorter than JSON and, of course, XML. Here is what the configuration of the first letter you will receive looks like:<p>The <code class="language-plaintext highlighter-rouge">relax</code> parameter of the letter specifies how much time the system has to wait after this letter before it sends you the next one. <code class="language-plaintext highlighter-rouge">"4:0:0"</code> stands for four days, zero hours, and zero minutes.<p>At the bottom of the letter I added this:<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Thanks,<span class="nt">&lt;br/&gt;</span>
 Yegor Bugayenko<span class="nt">&lt;br/&gt;</span>
 Click [here]({{ unsubscribe }}) if you don't want to hear from me again.
-</code></pre></div></div>
-
-<p>The <code class="language-plaintext highlighter-rouge">{{ unsubscribe }}</code> will be replaced by the link to a page where
-the recipient of the email will be instantly unsubscribed. I believe it’s
-good practice to allow your newsletter receivers to unsubscribe instantly.
-They will also have the ability to do it via the <a href="https://tools.ietf.org/html/rfc8058"><code class="language-plaintext highlighter-rouge">List-Unsubscribe</code></a>
-mail header.</p>
-
-<p>I also configured the lane with my SMTP server details. I’m using
-AWS <a href="https://aws.amazon.com/ses/">Simple Email Service</a>.
-It’s pretty easy to configure and it’s inexpensive:
-<a href="https://aws.amazon.com/ses/pricing/">$1 per 10,000 emails</a> at the time of writing.
-To my knowledge, <a href="https://sendgrid.com/pricing/">SendGrid</a>
-is two times more expensive,
-<a href="https://www.smtp2go.com">Smtp2Go</a>—six times,
-<a href="https://www.sendinblue.com/pricing/">SendInBlue</a>—four times,
-<a href="https://www.mailgun.com/pricing">MailGun</a>—eight times, etc.:</p>
-
-
-
-<p>Then, I configured my list to notify me via Telegram about all new subscribers,
-unsubscribe actions, etc.:</p>
-
-
-
-<p>You see, there is the Telegram chat ID where I’m getting notifications. You can
-do that too, you just need to know the chat ID. Start talking to the
-Telegram bot <a href="https://t.me/mailanes_bot">@mailanes_bot</a> and it will tell you your chat ID.</p>
-
-<p>I’m using Mailanes for my blog newsletter too. Try to subscribe to it
-<a href="/about-me.html#subscribe">here</a> and you will see what happens.</p>
-
-<p>The <a href="https://github.com/yegor256/mailanes/blob/master/README.md">README</a> fully
-explains all possible configuration options. The project is open, so feel free
-to contribute with <a href="https://github.com/yegor256/mailanes">pull requests</a>.
-As I said above, it’s absolutely <em>free</em>
-for anyone. Just sign up, create your lists, lanes, and campaigns, and go ahead.</p>
-
-<p>If something is not clear in the system and you are lost, don’t hesitate
-to <a href="https://github.com/yegor256/mailanes/issues">submit a ticket</a>,
-I will try to improve it or add documentation.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>The <code class="language-plaintext highlighter-rouge">{{ unsubscribe }}</code> will be replaced by the link to a page where the recipient of the email will be instantly unsubscribed. I believe it’s good practice to allow your newsletter receivers to unsubscribe instantly. They will also have the ability to do it via the <a href="https://tools.ietf.org/html/rfc8058"><code class="language-plaintext highlighter-rouge">List-Unsubscribe</code></a> mail header.<p>I also configured the lane with my SMTP server details. I’m using AWS <a href="https://aws.amazon.com/ses/">Simple Email Service</a>. It’s pretty easy to configure and it’s inexpensive: <a href="https://aws.amazon.com/ses/pricing/">$1 per 10,000 emails</a> at the time of writing. To my knowledge, <a href="https://sendgrid.com/pricing/">SendGrid</a> is two times more expensive, <a href="https://www.smtp2go.com">Smtp2Go</a>—six times, <a href="https://www.sendinblue.com/pricing/">SendInBlue</a>—four times, <a href="https://www.mailgun.com/pricing">MailGun</a>—eight times, etc.:<p>Then, I configured my list to notify me via Telegram about all new subscribers, unsubscribe actions, etc.:<p>You see, there is the Telegram chat ID where I’m getting notifications. You can do that too, you just need to know the chat ID. Start talking to the Telegram bot <a href="https://t.me/mailanes_bot">@mailanes_bot</a> and it will tell you your chat ID.<p>I’m using Mailanes for my blog newsletter too. Try to subscribe to it <a href="/about-me.html#subscribe">here</a> and you will see what happens.<p>The <a href="https://github.com/yegor256/mailanes/blob/master/README.md">README</a> fully explains all possible configuration options. The project is open, so feel free to contribute with <a href="https://github.com/yegor256/mailanes">pull requests</a>. As I said above, it’s absolutely <em>free</em> for anyone. Just sign up, create your lists, lanes, and campaigns, and go ahead.<p>If something is not clear in the system and you are lost, don’t hesitate to <a href="https://github.com/yegor256/mailanes/issues">submit a ticket</a>, I will try to improve it or add documentation.</article>

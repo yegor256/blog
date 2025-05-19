@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>How to Implement an Iterating Adapter</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/04/30/iterating-adapter.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>How to Implement an Iterating Adapter</title><link rel="canonical"href="https://www.yegor256.com/2015/04/30/iterating-adapter.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -42,71 +32,15 @@
 an iterating adapter in Java; this article should give a practical example.
 ",
         "keywords": ["java iterator", "iterator in java example", "iterator in java adapter", "java iterator example", "implement java iterator"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/04/30/iterating-adapter.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>30 April 2015</p>
-      <h1>How to Implement an Iterating Adapter</h1>
-      <p><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html">Iterator</a>
-is one of the fundamental Java
-<a href="/2016/04/26/why-inputstream-design-is-wrong.html">interfaces</a>,
-introduced in Java 1.2. It is supposed
-to be very simple; however, in my experience, many Java developers don’t understand
-how to implement a custom one, which should iterate a stream of data
-coming from some other source. In other words, it becomes an <em>adapter</em> of
-another source of data, in the form of an iterator. I hope this example will help.</p>
-
-
-
-<p>Let’s say we have an object of this class:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Data</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/04/30/iterating-adapter.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>30 April 2015<h1>How to Implement an Iterating Adapter</h1><p><a href="http://docs.oracle.com/javase/7/docs/api/java/util/Iterator.html">Iterator</a> is one of the fundamental Java <a href="/2016/04/26/why-inputstream-design-is-wrong.html">interfaces</a>, introduced in Java 1.2. It is supposed to be very simple; however, in my experience, many Java developers don’t understand how to implement a custom one, which should iterate a stream of data coming from some other source. In other words, it becomes an <em>adapter</em> of another source of data, in the form of an iterator. I hope this example will help.<p>Let’s say we have an object of this class:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Data</span> <span class="o">{</span>
   <span class="kt">byte</span><span class="o">[]</span> <span class="nf">read</span><span class="o">();</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>When we call <code class="language-plaintext highlighter-rouge">read()</code>, it returns a new array of bytes that were retrieved
-from somewhere. If there is nothing to retrieve, the array will be empty. Now,
-we want to create an <em>adapter</em> that would consume the bytes and let
-us iterate them:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">FluentData</span> <span class="kd">implements</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Byte</span><span class="o">&gt;</span> <span class="o">{</span>
+</code></pre></div></div><p>When we call <code class="language-plaintext highlighter-rouge">read()</code>, it returns a new array of bytes that were retrieved from somewhere. If there is nothing to retrieve, the array will be empty. Now, we want to create an <em>adapter</em> that would consume the bytes and let us iterate them:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">FluentData</span> <span class="kd">implements</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Byte</span><span class="o">&gt;</span> <span class="o">{</span>
   <span class="kt">boolean</span> <span class="nf">hasNext</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
   <span class="nc">Byte</span> <span class="nf">next</span><span class="o">()</span> <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
   <span class="kt">void</span> <span class="nf">remove</span><span class="o">()</span>  <span class="o">{</span> <span class="cm">/* ... */</span> <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Here is how it should look (it is not thread-safe!):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">FluentData</span> <span class="kd">implements</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Byte</span><span class="o">&gt;</span> <span class="o">{</span>
+</code></pre></div></div><p>Here is how it should look (it is not thread-safe!):<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">FluentData</span> <span class="kd">implements</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="nc">Byte</span><span class="o">&gt;</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Data</span> <span class="n">data</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Queue</span><span class="o">&lt;</span><span class="nc">Byte</span><span class="o">&gt;</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedList</span><span class="o">&lt;&gt;();</span>
   <span class="kd">public</span> <span class="nf">FluentData</span><span class="o">(</span><span class="kd">final</span> <span class="nc">Data</span> <span class="n">dat</span><span class="o">)</span> <span class="o">{</span>
@@ -130,16 +64,4 @@ us iterate them:</p>
     <span class="k">throw</span> <span class="k">new</span> <span class="nf">UnsupportedOperationException</span><span class="o">(</span><span class="s">"It is read-only"</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>There is no way to make it
-<a href="/2017/01/17/synchronized-decorators.html">thread-safe</a> because the iterating process
-is outside the scope of the iterator. Even if we declare our methods
-as <code class="language-plaintext highlighter-rouge">synchronized</code>, this won’t guarantee that two threads won’t conflict
-when they both call <code class="language-plaintext highlighter-rouge">hasNext()</code> and <code class="language-plaintext highlighter-rouge">next()</code>. So don’t bother with it and
-just document the iterator as not thread-safe, then let its users
-synchronize one level higher when necessary.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>There is no way to make it <a href="/2017/01/17/synchronized-decorators.html">thread-safe</a> because the iterating process is outside the scope of the iterator. Even if we declare our methods as <code class="language-plaintext highlighter-rouge">synchronized</code>, this won’t guarantee that two threads won’t conflict when they both call <code class="language-plaintext highlighter-rouge">hasNext()</code> and <code class="language-plaintext highlighter-rouge">next()</code>. So don’t bother with it and just document the iterator as not thread-safe, then let its users synchronize one level higher when necessary.</article>

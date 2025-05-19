@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>RAII in Java</title>
-    <link rel="canonical" href="https://www.yegor256.com/2017/08/08/raii-in-java.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>RAII in Java</title><link rel="canonical"href="https://www.yegor256.com/2017/08/08/raii-in-java.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,58 +33,7 @@ is a design idea introduced in C++; it is applicable
 to Java as well.
 ",
         "keywords": ["RAII", "resource acquisition is initialization", "RAII in OOP", "RAII in Java", "RAII in C++"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2017/08/08/raii-in-java.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>8 August 2017</p>
-      <h1>RAII in Java</h1>
-      <p>Resource Acquisition Is Initialization
-(<a href="https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization">RAII</a>)
-is a design idea introduced in C++ by
-<a href="https://amzn.to/2uMlANB">Bjarne Stroustrup</a>
-for exception-safe resource management.
-Thanks to garbage collection Java
-<a href="https://stackoverflow.com/questions/477399">doesn’t have</a> this feature,
-but we can implement something similar, using
-<a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a>.</p>
-
-
-
-<amp-img src="/images/2017/08/at-sachem-farm.jpg" alt="At Sachem Farm (1998) by John Huddles" height="674" width="1280" layout="responsive"></amp-img>
-
-<p>The problem RAII is solving is obvious; have a look at this code
-(I’m sure you know what
-<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html"><code class="language-plaintext highlighter-rouge">Semaphore</code></a>
-is and how it works in Java):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2017/08/08/raii-in-java.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>8 August 2017<h1>RAII in Java</h1><p>Resource Acquisition Is Initialization (<a href="https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization">RAII</a>) is a design idea introduced in C++ by <a href="https://amzn.to/2uMlANB">Bjarne Stroustrup</a> for exception-safe resource management. Thanks to garbage collection Java <a href="https://stackoverflow.com/questions/477399">doesn’t have</a> this feature, but we can implement something similar, using <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a>.</p><amp-img src="/images/2017/08/at-sachem-farm.jpg"alt="At Sachem Farm (1998) by John Huddles"height="674"width="1280"layout="responsive"></amp-img><p>The problem RAII is solving is obvious; have a look at this code (I’m sure you know what <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/Semaphore.html"><code class="language-plaintext highlighter-rouge">Semaphore</code></a> is and how it works in Java):<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="nc">Semaphore</span> <span class="n">sem</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Semaphore</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
   <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">acquire</span><span class="o">();</span>
@@ -105,23 +44,7 @@ is and how it works in Java):</p>
     <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">release</span><span class="o">();</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>The code is rather primitive and doesn’t do anything useful, but you
-most probably get the idea: the method <code class="language-plaintext highlighter-rouge">print()</code>, if being called from
-multiple parallel threads, will allow only five of them to print
-in parallel. Sometimes it will not allow some of them to print and will
-throw an exception if <code class="language-plaintext highlighter-rouge">x</code> is bigger than <code class="language-plaintext highlighter-rouge">1000</code>.</p>
-
-<p>The problem with this code is—<a href="https://en.wikipedia.org/wiki/Resource_leak">resource leakage</a>.
-Each <code class="language-plaintext highlighter-rouge">print()</code> call
-with <code class="language-plaintext highlighter-rouge">x</code> larger than <code class="language-plaintext highlighter-rouge">1000</code> will take one permit from the semaphore and
-won’t return it. In five calls with exceptions
-the semaphore will be empty and all other threads won’t print anything.</p>
-
-<p>What is the solution? Here it is:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
+</code></pre></div></div><p>The code is rather primitive and doesn’t do anything useful, but you most probably get the idea: the method <code class="language-plaintext highlighter-rouge">print()</code>, if being called from multiple parallel threads, will allow only five of them to print in parallel. Sometimes it will not allow some of them to print and will throw an exception if <code class="language-plaintext highlighter-rouge">x</code> is bigger than <code class="language-plaintext highlighter-rouge">1000</code>.<p>The problem with this code is—<a href="https://en.wikipedia.org/wiki/Resource_leak">resource leakage</a>. Each <code class="language-plaintext highlighter-rouge">print()</code> call with <code class="language-plaintext highlighter-rouge">x</code> larger than <code class="language-plaintext highlighter-rouge">1000</code> will take one permit from the semaphore and won’t return it. In five calls with exceptions the semaphore will be empty and all other threads won’t print anything.<p>What is the solution? Here it is:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Foo</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="nc">Semaphore</span> <span class="n">sem</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Semaphore</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
   <span class="kt">void</span> <span class="nf">print</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">acquire</span><span class="o">();</span>
@@ -133,18 +56,7 @@ the semaphore will be empty and all other threads won’t print anything.</p>
     <span class="k">this</span><span class="o">.</span><span class="na">sem</span><span class="o">.</span><span class="na">release</span><span class="o">();</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>We must release the permit before we throw the exception.</p>
-
-<p>However, there is another problem that shows up: code duplication. We release
-the permit in two places. If we add more <code class="language-plaintext highlighter-rouge">throw</code> instructions we will
-also have to add more <code class="language-plaintext highlighter-rouge">sem.release()</code> calls.</p>
-
-<p>A very elegant solution was introduced in C++ and is called RAII. This
-is how it would look in Java:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Permit</span> <span class="o">{</span>
+</code></pre></div></div><p>We must release the permit before we throw the exception.<p>However, there is another problem that shows up: code duplication. We release the permit in two places. If we add more <code class="language-plaintext highlighter-rouge">throw</code> instructions we will also have to add more <code class="language-plaintext highlighter-rouge">sem.release()</code> calls.<p>A very elegant solution was introduced in C++ and is called RAII. This is how it would look in Java:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Permit</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="nc">Semaphore</span> <span class="n">sem</span><span class="o">;</span>
   <span class="nc">Permit</span><span class="o">(</span><span class="nc">Semaphore</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">sem</span> <span class="o">=</span> <span class="n">s</span><span class="o">;</span>
@@ -165,28 +77,7 @@ is how it would look in Java:</p>
     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"x = %d"</span><span class="o">,</span> <span class="n">x</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>See how beautiful the code is inside method <code class="language-plaintext highlighter-rouge">Foo.print()</code>. We just create
-an instance of class <code class="language-plaintext highlighter-rouge">Permit</code> and it immediately acquires a new permit
-at the semaphore. Then we exit the method <code class="language-plaintext highlighter-rouge">print()</code>, either by exception
-or in the normal way, and the method <code class="language-plaintext highlighter-rouge">Permit.finalize()</code> releases the permit.</p>
-
-
-
-<p>Elegant, isn’t it? Yes, it is, but it won’t work in Java.</p>
-
-<p>It won’t work because, unlike C++, Java doesn’t destroy objects when
-their scope of visibility is closed. The object of class <code class="language-plaintext highlighter-rouge">Permit</code> won’t
-be destroyed when we exit the method <code class="language-plaintext highlighter-rouge">print()</code>. It will be destroyed
-<em>eventually</em> but we don’t know when exactly. Most likely it will be
-destroyed way after all permits in the semaphore got acquired and we
-get blocked.</p>
-
-<p>There is a solution in Java too. It is not as elegant as the one from
-C++, but it does work. Here it is:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Permit</span> <span class="kd">implements</span> <span class="nc">Closeable</span> <span class="o">{</span>
+</code></pre></div></div><p>See how beautiful the code is inside method <code class="language-plaintext highlighter-rouge">Foo.print()</code>. We just create an instance of class <code class="language-plaintext highlighter-rouge">Permit</code> and it immediately acquires a new permit at the semaphore. Then we exit the method <code class="language-plaintext highlighter-rouge">print()</code>, either by exception or in the normal way, and the method <code class="language-plaintext highlighter-rouge">Permit.finalize()</code> releases the permit.<p>Elegant, isn’t it? Yes, it is, but it won’t work in Java.<p>It won’t work because, unlike C++, Java doesn’t destroy objects when their scope of visibility is closed. The object of class <code class="language-plaintext highlighter-rouge">Permit</code> won’t be destroyed when we exit the method <code class="language-plaintext highlighter-rouge">print()</code>. It will be destroyed <em>eventually</em> but we don’t know when exactly. Most likely it will be destroyed way after all permits in the semaphore got acquired and we get blocked.<p>There is a solution in Java too. It is not as elegant as the one from C++, but it does work. Here it is:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Permit</span> <span class="kd">implements</span> <span class="nc">Closeable</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="nc">Semaphore</span> <span class="n">sem</span><span class="o">;</span>
   <span class="nc">Permit</span><span class="o">(</span><span class="nc">Semaphore</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">sem</span> <span class="o">=</span> <span class="n">s</span><span class="o">;</span>
@@ -211,27 +102,4 @@ C++, but it does work. Here it is:</p>
     <span class="o">}</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Pay attention to the <code class="language-plaintext highlighter-rouge">try</code> block and to the
-<a href="https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html"><code class="language-plaintext highlighter-rouge">Closeable</code></a> interface
-that the class <code class="language-plaintext highlighter-rouge">Permit</code> now implements. The object <code class="language-plaintext highlighter-rouge">p</code> will be “closed”
-when the <code class="language-plaintext highlighter-rouge">try</code> block exits. It may exit either at the end, or
-by the <code class="language-plaintext highlighter-rouge">return</code> or <code class="language-plaintext highlighter-rouge">throw</code> statements. In either case <code class="language-plaintext highlighter-rouge">Permit.close()</code>
-will be called: this is how
-<a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a>
-works in Java.</p>
-
-<p>I introduced method <code class="language-plaintext highlighter-rouge">acquire()</code> and moved <code class="language-plaintext highlighter-rouge">sem.acquire()</code> out of the <code class="language-plaintext highlighter-rouge">Permit</code> constructor because I
-<a href="/2015/05/07/ctors-must-be-code-free.html">believe</a>
-that constructors must be code-free.</p>
-
-<p>To summarize, RAII is a perfect design <del>pattern</del> approach when you
-deal with resources that may <a href="https://en.wikipedia.org/wiki/Resource_leak">leak</a>.
-Even though Java doesn’t have it out of the box we can implement it
-via <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a> and
-<a href="https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html"><code class="language-plaintext highlighter-rouge">Closeable</code></a>.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Pay attention to the <code class="language-plaintext highlighter-rouge">try</code> block and to the <a href="https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html"><code class="language-plaintext highlighter-rouge">Closeable</code></a> interface that the class <code class="language-plaintext highlighter-rouge">Permit</code> now implements. The object <code class="language-plaintext highlighter-rouge">p</code> will be “closed” when the <code class="language-plaintext highlighter-rouge">try</code> block exits. It may exit either at the end, or by the <code class="language-plaintext highlighter-rouge">return</code> or <code class="language-plaintext highlighter-rouge">throw</code> statements. In either case <code class="language-plaintext highlighter-rouge">Permit.close()</code> will be called: this is how <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a> works in Java.<p>I introduced method <code class="language-plaintext highlighter-rouge">acquire()</code> and moved <code class="language-plaintext highlighter-rouge">sem.acquire()</code> out of the <code class="language-plaintext highlighter-rouge">Permit</code> constructor because I <a href="/2015/05/07/ctors-must-be-code-free.html">believe</a> that constructors must be code-free.<p>To summarize, RAII is a perfect design <del>pattern</del> approach when you deal with resources that may <a href="https://en.wikipedia.org/wiki/Resource_leak">leak</a>. Even though Java doesn’t have it out of the box we can implement it via <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html">try-with-resources</a> and <a href="https://docs.oracle.com/javase/7/docs/api/java/io/Closeable.html"><code class="language-plaintext highlighter-rouge">Closeable</code></a>.</article>

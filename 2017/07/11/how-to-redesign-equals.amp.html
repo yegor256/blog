@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>How I Would Re-design equals()</title>
-    <link rel="canonical" href="https://www.yegor256.com/2017/07/11/how-to-redesign-equals.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>How I Would Re-design equals()</title><link rel="canonical"href="https://www.yegor256.com/2017/07/11/how-to-redesign-equals.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,70 +33,14 @@ is far from perfect; this is how I would improve
 it and make more object-oriented.
 ",
         "keywords": ["design of equals()", "design of compareTo()", "object-oriented compare objects", "oop object comparison", "how to compare objects"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2017/07/11/how-to-redesign-equals.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>11 July 2017</p>
-      <h1>How I Would Re-design equals()</h1>
-      <p>I want to rant a bit about Java design, in particular about the methods
-<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#equals%28java.lang.Object%29"><code class="language-plaintext highlighter-rouge">Object.equals()</code></a>
-and
-<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html#compareTo%28T%29"><code class="language-plaintext highlighter-rouge">Comparable.compareTo()</code></a>.
-I’ve hated them for years, because, no matter how hard
-I try to like them, the code inside looks ugly. Now I know what exactly
-is wrong and how I would design this “object-to-object comparing” mechanism
-<em>better</em>.</p>
-
-
-
-<amp-img src="/images/2017/07/lultimo-capodanno.jpg" alt="L'ultimo capodanno (1998) by Marco Risi" height="542" width="1280" layout="responsive"></amp-img>
-
-<p>Say we have a <del>simple</del> primitive class <code class="language-plaintext highlighter-rouge">Weight</code>, objects of which
-represent the weight of something in kilos:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Weight</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2017/07/11/how-to-redesign-equals.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>11 July 2017<h1>How I Would Re-design equals()</h1><p>I want to rant a bit about Java design, in particular about the methods <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#equals%28java.lang.Object%29"><code class="language-plaintext highlighter-rouge">Object.equals()</code></a> and <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Comparable.html#compareTo%28T%29"><code class="language-plaintext highlighter-rouge">Comparable.compareTo()</code></a>. I’ve hated them for years, because, no matter how hard I try to like them, the code inside looks ugly. Now I know what exactly is wrong and how I would design this “object-to-object comparing” mechanism <em>better</em>.</p><amp-img src="/images/2017/07/lultimo-capodanno.jpg"alt="L'ultimo capodanno (1998) by Marco Risi"height="542"width="1280"layout="responsive"></amp-img><p>Say we have a <del>simple</del> primitive class <code class="language-plaintext highlighter-rouge">Weight</code>, objects of which represent the weight of something in kilos:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Weight</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kt">int</span> <span class="n">kilos</span><span class="o">;</span>
   <span class="nc">Weight</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">kilos</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Next, we want two objects of the same weight to be equal to each other:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Weight</span><span class="o">(</span><span class="mi">15</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="k">new</span> <span class="nc">Weight</span><span class="o">(</span><span class="mi">15</span><span class="o">));</span>
-</code></pre></div></div>
-
-<p>Here is how such a method may look:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Weight</span> <span class="o">{</span>
+</code></pre></div></div><p>Next, we want two objects of the same weight to be equal to each other:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Weight</span><span class="o">(</span><span class="mi">15</span><span class="o">).</span><span class="na">equals</span><span class="o">(</span><span class="k">new</span> <span class="nc">Weight</span><span class="o">(</span><span class="mi">15</span><span class="o">));</span>
+</code></pre></div></div><p>Here is how such a method may look:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Weight</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kt">int</span> <span class="n">kilos</span><span class="o">;</span>
   <span class="nc">Weight</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">kilos</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
@@ -119,25 +53,10 @@ represent the weight of something in kilos:</p>
     <span class="k">return</span> <span class="n">weight</span><span class="o">.</span><span class="na">kilos</span> <span class="o">==</span> <span class="k">this</span><span class="o">.</span><span class="na">kilos</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>The ugly part here is, first of all, the
-<a href="/2015/04/02/class-casting-is-anti-pattern.html">type casting</a>
-with <code class="language-plaintext highlighter-rouge">instanceof</code>. The second problem
-is that we touch the internals of the incoming object. This design makes
-polymorphic behavior of the <code class="language-plaintext highlighter-rouge">Weight</code> impossible. We simply can’t pass
-anything else to the <code class="language-plaintext highlighter-rouge">equals()</code> method, besides an instance of the
-class <code class="language-plaintext highlighter-rouge">Weight</code>. We can’t turn it into an interface and introduce
-multiple implementations of it:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Weight</span> <span class="o">{</span>
+</code></pre></div></div><p>The ugly part here is, first of all, the <a href="/2015/04/02/class-casting-is-anti-pattern.html">type casting</a> with <code class="language-plaintext highlighter-rouge">instanceof</code>. The second problem is that we touch the internals of the incoming object. This design makes polymorphic behavior of the <code class="language-plaintext highlighter-rouge">Weight</code> impossible. We simply can’t pass anything else to the <code class="language-plaintext highlighter-rouge">equals()</code> method, besides an instance of the class <code class="language-plaintext highlighter-rouge">Weight</code>. We can’t turn it into an interface and introduce multiple implementations of it:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Weight</span> <span class="o">{</span>
   <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>This code will not work:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DefaultWeight</span> <span class="kd">implements</span> <span class="nc">Weight</span> <span class="o">{</span>
+</code></pre></div></div><p>This code will not work:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DefaultWeight</span> <span class="kd">implements</span> <span class="nc">Weight</span> <span class="o">{</span>
   <span class="c1">// attribute and ctor skipped</span>
   <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">equals</span><span class="o">(</span><span class="nc">Object</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(!(</span><span class="n">obj</span> <span class="k">instanceof</span> <span class="nc">Weight</span><span class="o">))</span> <span class="o">{</span>
@@ -147,31 +66,10 @@ multiple implementations of it:</p>
     <span class="k">return</span> <span class="n">weight</span><span class="o">.</span><span class="na">kilos</span> <span class="o">==</span> <span class="k">this</span><span class="o">.</span><span class="na">kilos</span><span class="o">;</span> <span class="c1">// error here!</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>The problem is that one object decides for the other whether they are
-equal. This inevitably leads to a necessity to touch private attributes in order
-to do the actual comparison.</p>
-
-<p>What is the solution?</p>
-
-<p>This is what I’m offering. Any comparison, no matter what types we
-are talking about, is about comparing two digital values. Either we
-compare a weight with a weight, text with text, or a user with a user—our
-CPUs can only compare numbers. Thus, we introduce a new interface
-<code class="language-plaintext highlighter-rouge">Digitizable</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Digitizable</span> <span class="o">{</span>
+</code></pre></div></div><p>The problem is that one object decides for the other whether they are equal. This inevitably leads to a necessity to touch private attributes in order to do the actual comparison.<p>What is the solution?<p>This is what I’m offering. Any comparison, no matter what types we are talking about, is about comparing two digital values. Either we compare a weight with a weight, text with text, or a user with a user—our CPUs can only compare numbers. Thus, we introduce a new interface <code class="language-plaintext highlighter-rouge">Digitizable</code>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Digitizable</span> <span class="o">{</span>
   <span class="kt">byte</span><span class="o">[]</span> <span class="nf">digits</span><span class="o">();</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Next, we introduce a new class <code class="language-plaintext highlighter-rouge">Comparison</code>, which <em>is</em> the comparison of
-two streams of bytes (I’m not sure the code is perfect, I tested it
-<a href="https://github.com/yegor256/blog/tree/master/_samples/2017/07/equals">here</a>,
-feel free to improve and contribute with a pull request):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Comparison</span><span class="o">&lt;</span><span class="no">T</span> <span class="kd">extends</span> <span class="nc">Digitizable</span><span class="o">&gt;</span> <span class="o">{</span>
+</code></pre></div></div><p>Next, we introduce a new class <code class="language-plaintext highlighter-rouge">Comparison</code>, which <em>is</em> the comparison of two streams of bytes (I’m not sure the code is perfect, I tested it <a href="https://github.com/yegor256/blog/tree/master/_samples/2017/07/equals">here</a>, feel free to improve and contribute with a pull request):<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Comparison</span><span class="o">&lt;</span><span class="no">T</span> <span class="kd">extends</span> <span class="nc">Digitizable</span><span class="o">&gt;</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="no">T</span> <span class="n">lt</span><span class="o">;</span>
   <span class="kd">private</span> <span class="no">T</span> <span class="n">rt</span><span class="o">;</span>
   <span class="nc">Comparison</span><span class="o">(</span><span class="no">T</span> <span class="n">left</span><span class="o">,</span> <span class="no">T</span> <span class="n">right</span><span class="o">)</span> <span class="o">{</span>
@@ -200,11 +98,7 @@ feel free to improve and contribute with a pull request):</p>
     <span class="k">return</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="nc">Math</span><span class="o">.</span><span class="na">signum</span><span class="o">(</span><span class="n">result</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Now, we need <code class="language-plaintext highlighter-rouge">Weight</code> to implement <code class="language-plaintext highlighter-rouge">Digitizable</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Weight</span> <span class="kd">implements</span> <span class="nc">Digitizable</span> <span class="o">{</span>
+</code></pre></div></div><p>Now, we need <code class="language-plaintext highlighter-rouge">Weight</code> to implement <code class="language-plaintext highlighter-rouge">Digitizable</code>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Weight</span> <span class="kd">implements</span> <span class="nc">Digitizable</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kt">int</span> <span class="n">kilos</span><span class="o">;</span>
   <span class="nc">Weight</span><span class="o">(</span><span class="kt">int</span> <span class="n">k</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">kilos</span> <span class="o">=</span> <span class="n">k</span><span class="o">;</span>
@@ -215,28 +109,7 @@ feel free to improve and contribute with a pull request):</p>
       <span class="o">.</span><span class="na">putInt</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">kilos</span><span class="o">).</span><span class="na">array</span><span class="o">();</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Finally, this is how we compare them:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Comparison</span><span class="o">&lt;</span><span class="nc">Weight</span><span class="o">&gt;(</span>
+</code></pre></div></div><p>Finally, this is how we compare them:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">v</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Comparison</span><span class="o">&lt;</span><span class="nc">Weight</span><span class="o">&gt;(</span>
   <span class="k">new</span> <span class="nf">Weight</span><span class="o">(</span><span class="mi">400</span><span class="o">),</span> <span class="k">new</span> <span class="nc">Weight</span><span class="o">(</span><span class="mi">500</span><span class="o">)</span>
 <span class="o">).</span><span class="na">value</span><span class="o">();</span>
-</code></pre></div></div>
-
-<p>This <code class="language-plaintext highlighter-rouge">v</code> will either be <code class="language-plaintext highlighter-rouge">-1</code>, <code class="language-plaintext highlighter-rouge">0</code>, or <code class="language-plaintext highlighter-rouge">1</code>. In this particular case it will be <code class="language-plaintext highlighter-rouge">-1</code>,
-because <code class="language-plaintext highlighter-rouge">400</code> is less than <code class="language-plaintext highlighter-rouge">500</code>.</p>
-
-<p>No more violation of encapsulation, no more type casting, no more
-ugly code inside those <code class="language-plaintext highlighter-rouge">equals()</code> and <code class="language-plaintext highlighter-rouge">compareTo()</code> methods.
-The class <code class="language-plaintext highlighter-rouge">Comparison</code> will work with all possible types. All our objects
-need to do in order to become comparable is to implement <code class="language-plaintext highlighter-rouge">Digitizable</code> and
-“provide” their bytes for inspection/comparison.</p>
-
-<p>This approach is actually very close to the
-<a href="/2016/04/05/printers-instead-of-getters.html">printers</a>
-I described earlier.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>This <code class="language-plaintext highlighter-rouge">v</code> will either be <code class="language-plaintext highlighter-rouge">-1</code>, <code class="language-plaintext highlighter-rouge">0</code>, or <code class="language-plaintext highlighter-rouge">1</code>. In this particular case it will be <code class="language-plaintext highlighter-rouge">-1</code>, because <code class="language-plaintext highlighter-rouge">400</code> is less than <code class="language-plaintext highlighter-rouge">500</code>.<p>No more violation of encapsulation, no more type casting, no more ugly code inside those <code class="language-plaintext highlighter-rouge">equals()</code> and <code class="language-plaintext highlighter-rouge">compareTo()</code> methods. The class <code class="language-plaintext highlighter-rouge">Comparison</code> will work with all possible types. All our objects need to do in order to become comparable is to implement <code class="language-plaintext highlighter-rouge">Digitizable</code> and “provide” their bytes for inspection/comparison.<p>This approach is actually very close to the <a href="/2016/04/05/printers-instead-of-getters.html">printers</a> I described earlier.</article>

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>XCOP—XML Style Checker</title>
-    <link rel="canonical" href="https://www.yegor256.com/2017/08/29/xcop.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>XCOP—XML Style Checker</title><link rel="canonical"href="https://www.yegor256.com/2017/08/29/xcop.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,91 +33,8 @@ to read and maintain them; xcop is a command line static
 analyzer that will ensure exactly that.
 ",
         "keywords": ["xml formatting", "xml style check", "check style of xml", "validate xml formatting", "style check xml document"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2017/08/29/xcop.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>29 August 2017</p>
-      <h1>XCOP—XML Style Checker</h1>
-      <p>One of the biggest advantages of XML versus
-<a href="/2015/11/16/json-vs-xml.html">many other</a> data formats is that
-it is human-readable. Well, to some extent, you may say. Indeed, a badly
-formatted XML document may be rather difficult to digest. I’m not talking about
-XML <a href="https://en.wikipedia.org/wiki/Well-formed_document">validity</a>
-now, but about its formatting style. Just like we format our
-Java/Ruby/Python nicely and then check their “prettiness” with static analyzers,
-we can also check our XML documents. Six years ago I asked the Stack Overflow community
-for such a tool, but unfortunately
-<a href="https://stackoverflow.com/questions/6091873/">my question</a>
-was down-voted and closed
-(you will need 10K+ reputation to see it).
-Last week I finally decided to create a tool myself and I called it
-<a href="https://github.com/yegor256/xcop">xcop</a>.</p>
-
-
-
-<amp-img src="/images/2017/08/lappartement.jpg" alt="L'appartement (1996) by Gilles Mimouni" height="766" width="1200" layout="responsive"></amp-img>
-
-<p>It’s a very simple command line
-<a href="https://rubygems.org/gems/xcop">Ruby gem</a>.
-First, you install it:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem <span class="nb">install </span>xcop
-</code></pre></div></div>
-
-<p>And then you ask it to check your XML file, say <code class="language-plaintext highlighter-rouge">pom.xml</code>:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xcop pom.xml
-</code></pre></div></div>
-
-<p>If the file is not “pretty,” <code class="language-plaintext highlighter-rouge">xcop</code> will complain and
-show what’s wrong. You can ask <code class="language-plaintext highlighter-rouge">xcop</code> to fix the file:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xcop <span class="nt">--fix</span> pom.xml
-</code></pre></div></div>
-
-<p>Moreover, in most cases you may need your XML files to include a license
-in their headers, especially if it’s open source. To enforce that, just
-point <code class="language-plaintext highlighter-rouge">xcop</code> to the file with the license:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xcop <span class="nt">--license</span><span class="o">=</span>LICENSE.txt pom.xml
-</code></pre></div></div>
-
-<p>I believe it’s good practice to use <code class="language-plaintext highlighter-rouge">xcop</code> together with
-Checkstyle (for Java files), Rubocop (for Ruby files), and other static
-analyzers, to ensure that your XML files always look pretty.</p>
-
-<p><a href="https://github.com/yegor256/xcop">Read</a> how you can integrate <code class="language-plaintext highlighter-rouge">xcop</code> with
-<a href="https://github.com/ruby/rake">Rake</a>,
-<a href="https://maven.apache.org/">Maven</a>, and other builders.
-I will appreciate it if you contribute your own integrations too.</p>
-
-    </article>
-  </body>
-</html>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2017/08/29/xcop.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>29 August 2017<h1>XCOP—XML Style Checker</h1><p>One of the biggest advantages of XML versus <a href="/2015/11/16/json-vs-xml.html">many other</a> data formats is that it is human-readable. Well, to some extent, you may say. Indeed, a badly formatted XML document may be rather difficult to digest. I’m not talking about XML <a href="https://en.wikipedia.org/wiki/Well-formed_document">validity</a> now, but about its formatting style. Just like we format our Java/Ruby/Python nicely and then check their “prettiness” with static analyzers, we can also check our XML documents. Six years ago I asked the Stack Overflow community for such a tool, but unfortunately <a href="https://stackoverflow.com/questions/6091873/">my question</a> was down-voted and closed (you will need 10K+ reputation to see it). Last week I finally decided to create a tool myself and I called it <a href="https://github.com/yegor256/xcop">xcop</a>.</p><amp-img src="/images/2017/08/lappartement.jpg"alt="L'appartement (1996) by Gilles Mimouni"height="766"width="1200"layout="responsive"></amp-img><p>It’s a very simple command line <a href="https://rubygems.org/gems/xcop">Ruby gem</a>. First, you install it:<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>gem <span class="nb">install </span>xcop
+</code></pre></div></div><p>And then you ask it to check your XML file, say <code class="language-plaintext highlighter-rouge">pom.xml</code>:<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xcop pom.xml
+</code></pre></div></div><p>If the file is not “pretty,” <code class="language-plaintext highlighter-rouge">xcop</code> will complain and show what’s wrong. You can ask <code class="language-plaintext highlighter-rouge">xcop</code> to fix the file:<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xcop <span class="nt">--fix</span> pom.xml
+</code></pre></div></div><p>Moreover, in most cases you may need your XML files to include a license in their headers, especially if it’s open source. To enforce that, just point <code class="language-plaintext highlighter-rouge">xcop</code> to the file with the license:<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>xcop <span class="nt">--license</span><span class="o">=</span>LICENSE.txt pom.xml
+</code></pre></div></div><p>I believe it’s good practice to use <code class="language-plaintext highlighter-rouge">xcop</code> together with Checkstyle (for Java files), Rubocop (for Ruby files), and other static analyzers, to ensure that your XML files always look pretty.<p><a href="https://github.com/yegor256/xcop">Read</a> how you can integrate <code class="language-plaintext highlighter-rouge">xcop</code> with <a href="https://github.com/ruby/rake">Rake</a>, <a href="https://maven.apache.org/">Maven</a>, and other builders. I will appreciate it if you contribute your own integrations too.</article>

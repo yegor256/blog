@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Atomic Counters at Stateful.co</title>
-    <link rel="canonical" href="https://www.yegor256.com/2014/05/18/cloud-autoincrement-counters.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Atomic Counters at Stateful.co</title><link rel="canonical"href="https://www.yegor256.com/2014/05/18/cloud-autoincrement-counters.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,110 +33,19 @@ implement auto-increment functionality that
 is missing in, say, AWS DynamoDB
 ",
         "keywords": ["stateful counters", "auto increment dynamodb", "dynamodb auto increment", "nosql auto increment", "auto increment online", "cloud autoincrement counter"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2014/05/18/cloud-autoincrement-counters.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>18 May 2014</p>
-      <h1>Atomic Counters at Stateful.co</h1>
-      
-
-<p>Amazon DynamoDB is a great NoSQL cloud database. It is cheap,
-highly reliable and rather powerful. I’m using it in many web systems.</p>
-
-<p>There is one feature that it lacks, though—auto-increment attributes.</p>
-
-<p>Say that you have a table with a list of messages:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------+----------------------------+
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2014/05/18/cloud-autoincrement-counters.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>18 May 2014<h1>Atomic Counters at Stateful.co</h1><p>Amazon DynamoDB is a great NoSQL cloud database. It is cheap, highly reliable and rather powerful. I’m using it in many web systems.<p>There is one feature that it lacks, though—auto-increment attributes.<p>Say that you have a table with a list of messages:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+------+----------------------------+
 | id   | Attributes                 |
 +------+----------------------------+
 | 205  | author="jeff", text="..."  |
 | 206  | author="bob", text="..."   |
 | 207  | author="alice", text="..." |
 +------+----------------------------+
-</code></pre></div></div>
-
-<p>Every time you add a new item to the table, a new value
-of <code class="language-plaintext highlighter-rouge">id</code> has to be set. And this has to be done with concurrency in mind.
-SQL databases like PostgreSQL, Oracle, MySQL and others support
-auto-increment features. When you add a new record to the table,
-the value of the primary key is omitted and the server retrieves
-the next one automatically. If a number of <code class="language-plaintext highlighter-rouge">INSERT</code> requests
-arrive at the same time the server guarantees that the numbers won’t be duplicated.</p>
-
-<p>However, DynamoDB doesn’t have this feature. Instead,
-DynamoDB has <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html#WorkingWithItems.AtomicCounters">Atomic Counters</a>
-and <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html#WorkingWithItems.ConditionalUpdate">Conditional Updates</a>,
-which are very similar features. Still, they’re not exactly the same.</p>
-
-<p>In case of an atomic counter, you should create a supplementary
-table and keep the latest value of <code class="language-plaintext highlighter-rouge">id</code> in it.</p>
-
-<p>In case of conditional updates, you should
-<a href="/2014/08/15/retry-java-method-on-exception.html">retry</a>
-a few times in case of collisions.</p>
-
-
-
-<p>To make life easier in a few of my applications, I created a simple web
-service—<a href="https://www.stateful.co">stateful.co</a>.
-It provides a simple atomic counter feature through its RESTful API.</p>
-
-
-
-<p>First, you create a counter with a unique name. Then,
-you set its initial value (it is zero by default). And, that’s it.
-Every time you need to obtain a new value for <code class="language-plaintext highlighter-rouge">id</code> column in
-DynamoDB table, you make an HTTP request to <a href="https://www.stateful.co">stateful.co</a>
-asking to
-increment your counter by one and return its next value.</p>
-
-<p><a href="https://www.stateful.co">stateful.co</a> guarantees that values
-returned will never duplicate each other—no matter how many
-clients are using a counter or how fast they request increments simultaneously.</p>
-
-<p>Moreover, I designed a small <a href="https://github.com/sttc/java-sdk">Java SDK</a>
-for <a href="https://www.stateful.co">stateful.co</a>. All you need to do is add
-this <a href="https://repo1.maven.org/maven2/co/stateful/java-sdk/">java-sdk.jar</a>
-Maven dependency to your project:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+</code></pre></div></div><p>Every time you add a new item to the table, a new value of <code class="language-plaintext highlighter-rouge">id</code> has to be set. And this has to be done with concurrency in mind. SQL databases like PostgreSQL, Oracle, MySQL and others support auto-increment features. When you add a new record to the table, the value of the primary key is omitted and the server retrieves the next one automatically. If a number of <code class="language-plaintext highlighter-rouge">INSERT</code> requests arrive at the same time the server guarantees that the numbers won’t be duplicated.<p>However, DynamoDB doesn’t have this feature. Instead, DynamoDB has <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html#WorkingWithItems.AtomicCounters">Atomic Counters</a> and <a href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithItems.html#WorkingWithItems.ConditionalUpdate">Conditional Updates</a>, which are very similar features. Still, they’re not exactly the same.<p>In case of an atomic counter, you should create a supplementary table and keep the latest value of <code class="language-plaintext highlighter-rouge">id</code> in it.<p>In case of conditional updates, you should <a href="/2014/08/15/retry-java-method-on-exception.html">retry</a> a few times in case of collisions.<p>To make life easier in a few of my applications, I created a simple web service—<a href="https://www.stateful.co">stateful.co</a>. It provides a simple atomic counter feature through its RESTful API.<p>First, you create a counter with a unique name. Then, you set its initial value (it is zero by default). And, that’s it. Every time you need to obtain a new value for <code class="language-plaintext highlighter-rouge">id</code> column in DynamoDB table, you make an HTTP request to <a href="https://www.stateful.co">stateful.co</a> asking to increment your counter by one and return its next value.<p><a href="https://www.stateful.co">stateful.co</a> guarantees that values returned will never duplicate each other—no matter how many clients are using a counter or how fast they request increments simultaneously.<p>Moreover, I designed a small <a href="https://github.com/sttc/java-sdk">Java SDK</a> for <a href="https://www.stateful.co">stateful.co</a>. All you need to do is add this <a href="https://repo1.maven.org/maven2/co/stateful/java-sdk/">java-sdk.jar</a> Maven dependency to your project:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>co.stateful<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>java-sdk<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;version&gt;</span>0.6<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
-</code></pre></div></div>
-
-<p>And, you can use <a href="https://www.stateful.co">stateful.co</a> counters from Java code:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Sttc</span> <span class="n">sttc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RtSttc</span><span class="o">(</span>
+</code></pre></div></div><p>And, you can use <a href="https://www.stateful.co">stateful.co</a> counters from Java code:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Sttc</span> <span class="n">sttc</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RtSttc</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">URN</span><span class="o">(</span><span class="s">"urn:github:526301"</span><span class="o">),</span>
   <span class="s">"9FF3-41E0-73FB-F900"</span>
 <span class="o">);</span>
@@ -154,13 +53,4 @@ Maven dependency to your project:</p>
 <span class="nc">Counter</span> <span class="n">counter</span> <span class="o">=</span> <span class="n">counters</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"foo"</span><span class="o">);</span>
 <span class="kt">long</span> <span class="n">value</span> <span class="o">=</span> <span class="n">counter</span><span class="o">.</span><span class="na">incrementAndGet</span><span class="o">(</span><span class="mi">1L</span><span class="o">);</span>
 <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"new value: "</span> <span class="o">+</span> <span class="n">value</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>You can review authentication parameters for <code class="language-plaintext highlighter-rouge">RtSttc</code>
-constructor at <a href="https://www.stateful.co">stateful.co</a>.</p>
-
-<p>The service is absolutely free of charge.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>You can review authentication parameters for <code class="language-plaintext highlighter-rouge">RtSttc</code> constructor at <a href="https://www.stateful.co">stateful.co</a>.<p>The service is absolutely free of charge.</article>

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Constructors or Static Factory Methods?</title>
-    <link rel="canonical" href="https://www.yegor256.com/2017/11/14/static-factory-methods.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Constructors or Static Factory Methods?</title><link rel="canonical"href="https://www.yegor256.com/2017/11/14/static-factory-methods.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,55 +33,7 @@ replacement of object constructors; however, I disagree
 with this idea and explain why.
 ",
         "keywords": ["constructors", "factory methods", "factory method", "constructor or factory", "factories vs constructiors"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2017/11/14/static-factory-methods.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>14 November 2017</p>
-      <h1>Constructors or Static Factory Methods?</h1>
-      <p>I believe Joshua Bloch said it first in his very good book
-<a href="https://amzn.to/2zgpiRI"><em>Effective Java</em></a>: static factory methods are the preferred
-way to instantiate objects compared with constructors. I disagree.
-Not only because I believe that static methods are pure evil, but
-mostly because in this particular case they pretend to be good
-and make us think that we have to love them.</p>
-
-
-
-<amp-img src="/images/2017/11/extract.jpg" alt="Extract (2009) by Mike Judge" height="688" width="1280" layout="responsive"></amp-img>
-
-<p>Let’s analyze the reasoning and see why it’s wrong, from
-an object-oriented point of view.</p>
-
-<p>This is a class with one primary and two secondary constructors:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2017/11/14/static-factory-methods.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>14 November 2017<h1>Constructors or Static Factory Methods?</h1><p>I believe Joshua Bloch said it first in his very good book <a href="https://amzn.to/2zgpiRI"><em>Effective Java</em></a>: static factory methods are the preferred way to instantiate objects compared with constructors. I disagree. Not only because I believe that static methods are pure evil, but mostly because in this particular case they pretend to be good and make us think that we have to love them.</p><amp-img src="/images/2017/11/extract.jpg"alt="Extract (2009) by Mike Judge"height="688"width="1280"layout="responsive"></amp-img><p>Let’s analyze the reasoning and see why it’s wrong, from an object-oriented point of view.<p>This is a class with one primary and two secondary constructors:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span><span class="o">;</span>
   <span class="nc">Color</span><span class="o">(</span><span class="nc">String</span> <span class="n">rgb</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">rgb</span><span class="o">,</span> <span class="mi">16</span><span class="o">));</span>
@@ -103,11 +45,7 @@ an object-oriented point of view.</p>
     <span class="k">this</span><span class="o">.</span><span class="na">hex</span> <span class="o">=</span> <span class="n">h</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>This is a similar class with three static factory methods:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
+</code></pre></div></div><p>This is a similar class with three static factory methods:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span><span class="o">;</span>
   <span class="kd">static</span> <span class="nc">Color</span> <span class="nf">makeFromRGB</span><span class="o">(</span><span class="nc">String</span> <span class="n">rgb</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nf">Color</span><span class="o">(</span><span class="nc">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">rgb</span><span class="o">,</span> <span class="mi">16</span><span class="o">));</span>
@@ -122,52 +60,9 @@ an object-oriented point of view.</p>
     <span class="k">this</span><span class="o">.</span><span class="na">hex</span> <span class="o">=</span> <span class="n">h</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Which one do you like better?</p>
-
-
-
-<p>According to Joshua Bloch, there are three basic advantages
-to using static factory methods instead of constructors (there
-are actually four, but the fourth one is not applicable to Java
-<a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/type-inference-generic-instance-creation.html">anymore</a>):</p>
-
-<ul>
-  <li>They have names.</li>
-  <li>They can cache.</li>
-  <li>They can subtype.</li>
-</ul>
-
-<p>I believe that all three make perfect sense … if the design is wrong.
-They are good excuses for workarounds.
-Let’s take them one by one.</p>
-
-<h2 id="they-have-names">They Have Names</h2>
-
-<p>This is how you make a
-<a href="https://www.rapidtables.com/web/color/red-color.htm">red tomato</a>
-color object with a constructor:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>This is how you do it with a static factory method:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="na">makeFromPalette</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>It seems that <code class="language-plaintext highlighter-rouge">makeFromPalette()</code> is semantically richer than just <code class="language-plaintext highlighter-rouge">new Color()</code>,
-right? Well, yes. Who knows what those three numbers mean if we just pass
-them to the constructor. But the word “palette” helps us figure everything
-out immediately.</p>
-
-<p>True.</p>
-
-<p>However, the right solution would be to use polymorphism and encapsulation,
-to decompose the problem into a few semantically rich classes:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Color</span> <span class="o">{</span>
+</code></pre></div></div><p>Which one do you like better?<p>According to Joshua Bloch, there are three basic advantages to using static factory methods instead of constructors (there are actually four, but the fourth one is not applicable to Java <a href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/type-inference-generic-instance-creation.html">anymore</a>):<ul><li>They have names.<li>They can cache.<li>They can subtype.</ul><p>I believe that all three make perfect sense … if the design is wrong. They are good excuses for workarounds. Let’s take them one by one.<h2 id="they-have-names">They Have Names</h2><p>This is how you make a <a href="https://www.rapidtables.com/web/color/red-color.htm">red tomato</a> color object with a constructor:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div><p>This is how you do it with a static factory method:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="na">makeFromPalette</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div><p>It seems that <code class="language-plaintext highlighter-rouge">makeFromPalette()</code> is semantically richer than just <code class="language-plaintext highlighter-rouge">new Color()</code>, right? Well, yes. Who knows what those three numbers mean if we just pass them to the constructor. But the word “palette” helps us figure everything out immediately.<p>True.<p>However, the right solution would be to use polymorphism and encapsulation, to decompose the problem into a few semantically rich classes:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Color</span> <span class="o">{</span>
 <span class="o">}</span>
 <span class="kd">class</span> <span class="nc">HexColor</span> <span class="kd">implements</span> <span class="nc">Color</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span><span class="o">;</span>
@@ -183,38 +78,14 @@ to decompose the problem into a few semantically rich classes:</p>
     <span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Now, we use the right constructor of the right class:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RGBColor</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>See, Joshua?</p>
-
-<h2 id="they-can-cache">They Can Cache</h2>
-
-<p>Let’s say I need a red tomato color in multiple places in the application:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div><p>Now, we use the right constructor of the right class:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RGBColor</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div><p>See, Joshua?<h2 id="they-can-cache">They Can Cache</h2><p>Let’s say I need a red tomato color in multiple places in the application:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
 <span class="c1">// ... sometime later</span>
 <span class="nc">Color</span> <span class="n">red</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Color</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>Two objects will be created, which is obviously inefficient, since they are
-identical. It would be better to keep the first instance somewhere in memory
-and return it when the second call arrives. Static factory methods make
-it possible to solve this very problem:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="na">makeFromPalette</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div><p>Two objects will be created, which is obviously inefficient, since they are identical. It would be better to keep the first instance somewhere in memory and return it when the second call arrives. Static factory methods make it possible to solve this very problem:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="na">makeFromPalette</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
 <span class="c1">// ... sometime later</span>
 <span class="nc">Color</span> <span class="n">red</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="na">makeFromPalette</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>Then somewhere inside the <code class="language-plaintext highlighter-rouge">Color</code> we keep a private static <code class="language-plaintext highlighter-rouge">Map</code> with all the
-objects already instantiated:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
+</code></pre></div></div><p>Then somewhere inside the <code class="language-plaintext highlighter-rouge">Color</code> we keep a private static <code class="language-plaintext highlighter-rouge">Map</code> with all the objects already instantiated:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">Color</span><span class="o">&gt;</span> <span class="no">CACHE</span> <span class="o">=</span>
     <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span><span class="o">;</span>
@@ -228,18 +99,7 @@ objects already instantiated:</p>
     <span class="k">return</span> <span class="k">new</span> <span class="nf">Color</span><span class="o">(</span><span class="n">h</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>It is very effective performance-wise. With a small object like our
-<code class="language-plaintext highlighter-rouge">Color</code> the problem may not be so obvious, but when objects are bigger, their
-instantiation and garbage collection may waste a lot of time.</p>
-
-<p>True.</p>
-
-<p>However, there is an object-oriented way to solve this problem. We just
-introduce a new class <code class="language-plaintext highlighter-rouge">Palette</code>, which becomes a store of colors:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Palette</span> <span class="o">{</span>
+</code></pre></div></div><p>It is very effective performance-wise. With a small object like our <code class="language-plaintext highlighter-rouge">Color</code> the problem may not be so obvious, but when objects are bigger, their instantiation and garbage collection may waste a lot of time.<p>True.<p>However, there is an object-oriented way to solve this problem. We just introduce a new class <code class="language-plaintext highlighter-rouge">Palette</code>, which becomes a store of colors:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Palette</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">,</span> <span class="nc">Color</span><span class="o">&gt;</span> <span class="n">colors</span> <span class="o">=</span>
     <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;&gt;();</span>
   <span class="nc">Color</span> <span class="nf">take</span><span class="o">(</span><span class="kt">int</span> <span class="n">red</span><span class="o">,</span> <span class="kt">int</span> <span class="n">green</span><span class="o">,</span> <span class="kt">int</span> <span class="n">blue</span><span class="o">)</span> <span class="o">{</span>
@@ -249,24 +109,10 @@ introduce a new class <code class="language-plaintext highlighter-rouge">Palette
     <span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Now, we make an instance of <code class="language-plaintext highlighter-rouge">Palette</code> once and ask it to return a color
-to us every time we need it:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="n">palette</span><span class="o">.</span><span class="na">take</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
+</code></pre></div></div><p>Now, we make an instance of <code class="language-plaintext highlighter-rouge">Palette</code> once and ask it to return a color to us every time we need it:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">tomato</span> <span class="o">=</span> <span class="n">palette</span><span class="o">.</span><span class="na">take</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
 <span class="c1">// Later we will get the same instance:</span>
 <span class="nc">Color</span> <span class="n">red</span> <span class="o">=</span> <span class="n">palette</span><span class="o">.</span><span class="na">take</span><span class="o">(</span><span class="mi">255</span><span class="o">,</span> <span class="mi">99</span><span class="o">,</span> <span class="mi">71</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>See, Joshua, no static methods, no static attributes.</p>
-
-<h2 id="they-can-subtype">They Can Subtype</h2>
-
-<p>Let’s say our class <code class="language-plaintext highlighter-rouge">Color</code> has a method <code class="language-plaintext highlighter-rouge">lighter()</code>, which is supposed
-to shift the color to the next available lighter one:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
+</code></pre></div></div><p>See, Joshua, no static methods, no static attributes.<h2 id="they-can-subtype">They Can Subtype</h2><p>Let’s say our class <code class="language-plaintext highlighter-rouge">Color</code> has a method <code class="language-plaintext highlighter-rouge">lighter()</code>, which is supposed to shift the color to the next available lighter one:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
   <span class="kd">protected</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">hex</span><span class="o">;</span>
   <span class="nc">Color</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">hex</span> <span class="o">=</span> <span class="n">h</span><span class="o">;</span>
@@ -275,13 +121,7 @@ to shift the color to the next available lighter one:</p>
     <span class="k">return</span> <span class="k">new</span> <span class="nf">Color</span><span class="o">(</span><span class="n">hex</span> <span class="o">+</span> <span class="mh">0x111</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>However, sometimes it’s more desirable to pick the next lighter color
-through a set of available
-<a href="https://en.wikipedia.org/wiki/Pantone">Pantone</a> colors:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PantoneColor</span> <span class="kd">extends</span> <span class="nc">Color</span> <span class="o">{</span>
+</code></pre></div></div><p>However, sometimes it’s more desirable to pick the next lighter color through a set of available <a href="https://en.wikipedia.org/wiki/Pantone">Pantone</a> colors:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PantoneColor</span> <span class="kd">extends</span> <span class="nc">Color</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">PantoneName</span> <span class="n">pantone</span><span class="o">;</span>
   <span class="nc">PantoneColor</span><span class="o">(</span><span class="nc">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">(</span><span class="k">new</span> <span class="nc">PantoneName</span><span class="o">(</span><span class="n">name</span><span class="o">));</span>
@@ -294,12 +134,7 @@ through a set of available
     <span class="k">return</span> <span class="k">new</span> <span class="nf">PantoneColor</span><span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">pantone</span><span class="o">.</span><span class="na">up</span><span class="o">());</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Then, we create a static factory method, which will decide
-which <code class="language-plaintext highlighter-rouge">Color</code> implementation is the most suitable for us:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
+</code></pre></div></div><p>Then, we create a static factory method, which will decide which <code class="language-plaintext highlighter-rouge">Color</code> implementation is the most suitable for us:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Color</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">code</span><span class="o">;</span>
   <span class="kd">static</span> <span class="nc">Color</span> <span class="nf">make</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">h</span> <span class="o">==</span> <span class="mh">0xBF1932</span><span class="o">)</span> <span class="o">{</span>
@@ -308,34 +143,11 @@ which <code class="language-plaintext highlighter-rouge">Color</code> implementa
     <span class="k">return</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="o">(</span><span class="n">h</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>If the <a href="https://www.pantone.com/color-finder/19-1664-TPX">true red</a> color
-is requested, we return an instance of <code class="language-plaintext highlighter-rouge">PantoneColor</code>. In all other cases it’s
-just a standard <code class="language-plaintext highlighter-rouge">RGBColor</code>. The decision is made by the static factory
-method. This is how we will call it:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">color</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="na">make</span><span class="o">(</span><span class="mh">0xBF1932</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>It would not be possible to do the same “forking” with a constructor, since
-it can only return the class it is declared in. A static method has all the
-necessary freedom to return any subtype of <code class="language-plaintext highlighter-rouge">Color</code>.</p>
-
-<p>True.</p>
-
-<p>However, in an object-oriented world we can and must do it all differently.
-First, we would make <code class="language-plaintext highlighter-rouge">Color</code> an interface:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Color</span> <span class="o">{</span>
+</code></pre></div></div><p>If the <a href="https://www.pantone.com/color-finder/19-1664-TPX">true red</a> color is requested, we return an instance of <code class="language-plaintext highlighter-rouge">PantoneColor</code>. In all other cases it’s just a standard <code class="language-plaintext highlighter-rouge">RGBColor</code>. The decision is made by the static factory method. This is how we will call it:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">color</span> <span class="o">=</span> <span class="nc">Color</span><span class="o">.</span><span class="na">make</span><span class="o">(</span><span class="mh">0xBF1932</span><span class="o">);</span>
+</code></pre></div></div><p>It would not be possible to do the same “forking” with a constructor, since it can only return the class it is declared in. A static method has all the necessary freedom to return any subtype of <code class="language-plaintext highlighter-rouge">Color</code>.<p>True.<p>However, in an object-oriented world we can and must do it all differently. First, we would make <code class="language-plaintext highlighter-rouge">Color</code> an interface:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Color</span> <span class="o">{</span>
   <span class="nc">Color</span> <span class="nf">lighter</span><span class="o">();</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Next, we would move this decision making process to its own class <code class="language-plaintext highlighter-rouge">Colors</code>, just
-like we did in the previous example:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Colors</span> <span class="o">{</span>
+</code></pre></div></div><p>Next, we would move this decision making process to its own class <code class="language-plaintext highlighter-rouge">Colors</code>, just like we did in the previous example:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Colors</span> <span class="o">{</span>
   <span class="nc">Color</span> <span class="nf">make</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">h</span> <span class="o">==</span> <span class="mh">0xBF1932</span><span class="o">)</span> <span class="o">{</span>
       <span class="k">return</span> <span class="k">new</span> <span class="nf">PantoneColor</span><span class="o">(</span><span class="s">"19-1664-TPX"</span><span class="o">);</span>
@@ -343,28 +155,8 @@ like we did in the previous example:</p>
     <span class="k">return</span> <span class="k">new</span> <span class="nf">RGBColor</span><span class="o">(</span><span class="n">h</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>And we would use an instance of class <code class="language-plaintext highlighter-rouge">Colors</code> instead of a static faсtory
-method inside <code class="language-plaintext highlighter-rouge">Color</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">colors</span><span class="o">.</span><span class="na">make</span><span class="o">(</span><span class="mh">0xBF1932</span><span class="o">);</span>
-</code></pre></div></div>
-
-
-
-<p>However, this is still not really an object-oriented way of thinking, because
-we’re taking the decision-making away from the object it belongs to. Either
-through a static factory method <code class="language-plaintext highlighter-rouge">make()</code> or a new class <code class="language-plaintext highlighter-rouge">Colors</code>—it doesn’t
-really matter how—we tear our objects into two pieces. The first
-piece is the object itself and the second one is the decision
-making algorithm that stays somewhere else.</p>
-
-<p>A much more object-oriented design would be to put the logic into an
-object of class <code class="language-plaintext highlighter-rouge">PantoneColor</code> which would decorate
-the original <code class="language-plaintext highlighter-rouge">RGBColor</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PantoneColor</span> <span class="o">{</span>
+</code></pre></div></div><p>And we would use an instance of class <code class="language-plaintext highlighter-rouge">Colors</code> instead of a static faсtory method inside <code class="language-plaintext highlighter-rouge">Color</code>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">colors</span><span class="o">.</span><span class="na">make</span><span class="o">(</span><span class="mh">0xBF1932</span><span class="o">);</span>
+</code></pre></div></div><p>However, this is still not really an object-oriented way of thinking, because we’re taking the decision-making away from the object it belongs to. Either through a static factory method <code class="language-plaintext highlighter-rouge">make()</code> or a new class <code class="language-plaintext highlighter-rouge">Colors</code>—it doesn’t really matter how—we tear our objects into two pieces. The first piece is the object itself and the second one is the decision making algorithm that stays somewhere else.<p>A much more object-oriented design would be to put the logic into an object of class <code class="language-plaintext highlighter-rouge">PantoneColor</code> which would decorate the original <code class="language-plaintext highlighter-rouge">RGBColor</code>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PantoneColor</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Color</span> <span class="n">origin</span><span class="o">;</span>
   <span class="nc">PantoneColor</span><span class="o">(</span><span class="nc">Color</span> <span class="n">color</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">color</span><span class="o">;</span>
@@ -380,43 +172,8 @@ the original <code class="language-plaintext highlighter-rouge">RGBColor</code>:
     <span class="k">return</span> <span class="k">new</span> <span class="nf">PantoneColor</span><span class="o">(</span><span class="n">next</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">)</span>
-</code></pre></div></div>
-
-<p>Then, we make an instance of <code class="language-plaintext highlighter-rouge">RGBColor</code> and decorate it with <code class="language-plaintext highlighter-rouge">PantoneColor</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">red</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PantoneColor</span><span class="o">(</span>
+</code></pre></div></div><p>Then, we make an instance of <code class="language-plaintext highlighter-rouge">RGBColor</code> and decorate it with <code class="language-plaintext highlighter-rouge">PantoneColor</code>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">red</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">PantoneColor</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">RGBColor</span><span class="o">(</span><span class="mh">0xBF1932</span><span class="o">)</span>
 <span class="o">);</span>
-</code></pre></div></div>
-
-<p>We ask <code class="language-plaintext highlighter-rouge">red</code> to return a lighter color and it returns the one from
-the Pantone palette, not the one that is merely lighter in RGB coordinates:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">lighter</span> <span class="o">=</span> <span class="n">red</span><span class="o">.</span><span class="na">lighter</span><span class="o">();</span> <span class="c1">// 0xD12631</span>
-</code></pre></div></div>
-
-<p>Of course, this example is rather primitive and needs
-<a href="/2016/12/20/can-objects-be-friends.html">further improvement</a>
-if we really want it to be applicable to all Pantone colors, but I hope
-you get the idea. The logic must stay <em>inside</em> the class, not somewhere outside,
-not in static factory methods or even in some other supplementary class.
-I’m talking about the logic that belongs to this particular class, of course.
-If it’s something related to the management of class instances, then there can
-be containers and stores, just like in the previous example above.</p>
-
-<p>To summarize, I would strongly recommend you <em>never</em> use static methods, especially
-when they are going to replace object constructors. Giving birth to an
-object through its constructor is
-<a href="/2014/10/03/di-containers-are-evil.html">the most</a>
-“sacred” moment in any object-oriented
-software, don’t miss the beauty of it.</p>
-
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">The best place to make a new object is...</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1234047114252034048?ref_src=twsrc%5Etfw">March 1, 2020</a>
-</blockquote>
-
-
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>We ask <code class="language-plaintext highlighter-rouge">red</code> to return a lighter color and it returns the one from the Pantone palette, not the one that is merely lighter in RGB coordinates:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Color</span> <span class="n">lighter</span> <span class="o">=</span> <span class="n">red</span><span class="o">.</span><span class="na">lighter</span><span class="o">();</span> <span class="c1">// 0xD12631</span>
+</code></pre></div></div><p>Of course, this example is rather primitive and needs <a href="/2016/12/20/can-objects-be-friends.html">further improvement</a> if we really want it to be applicable to all Pantone colors, but I hope you get the idea. The logic must stay <em>inside</em> the class, not somewhere outside, not in static factory methods or even in some other supplementary class. I’m talking about the logic that belongs to this particular class, of course. If it’s something related to the management of class instances, then there can be containers and stores, just like in the previous example above.<p>To summarize, I would strongly recommend you <em>never</em> use static methods, especially when they are going to replace object constructors. Giving birth to an object through its constructor is <a href="/2014/10/03/di-containers-are-evil.html">the most</a> “sacred” moment in any object-oriented software, don’t miss the beauty of it.<blockquote class="twitter-tweet"><p lang="en"dir="ltr">The best place to make a new object is...</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1234047114252034048?ref_src=twsrc%5Etfw">March 1, 2020</a></blockquote></article>

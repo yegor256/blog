@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Throwing an Exception Without Proper Context Is a Bad Habit</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/12/01/rethrow-exceptions.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Throwing an Exception Without Proper Context Is a Bad Habit</title><link rel="canonical"href="https://www.yegor256.com/2015/12/01/rethrow-exceptions.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,78 +33,17 @@ message to an exception on each re-throw &dash; and
 actually, in all other situations.
 ",
         "keywords": ["rethrow exception", "rethrow exception java", "rethrow exception c++", "rethrow exception scala", "rethrow exception with new message"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/12/01/rethrow-exceptions.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>1 December 2015</p>
-      <h1>Throwing an Exception Without Proper Context Is a Bad Habit</h1>
-      <p>I keep repeating the same mistake again and again. So it’s time to
-stop and make a rule to prevent this from happening anymore. The mistake
-is not fatal, but it’s very annoying. When I look at production logs, I often see
-something like <code class="language-plaintext highlighter-rouge">"File doesn't exist"</code>, and I ask myself:
-What file? Where is it supposed to exist? What did the server try to do with it?
-What was going on a second before it crashed?
-There is no answer in the log, and it’s totally my fault.
-I either 1) don’t re-throw or 2) re-throw without providing context.
-Both are wrong.</p>
-
-
-
-<amp-img src="/images/2015/12/four-rooms.jpg" alt="Four Rooms (1995) by Allison Anders et al." height="649" width="1200" layout="responsive"></amp-img>
-
-<p>This is how the code may look:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/12/01/rethrow-exceptions.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>1 December 2015<h1>Throwing an Exception Without Proper Context Is a Bad Habit</h1><p>I keep repeating the same mistake again and again. So it’s time to stop and make a rule to prevent this from happening anymore. The mistake is not fatal, but it’s very annoying. When I look at production logs, I often see something like <code class="language-plaintext highlighter-rouge">"File doesn't exist"</code>, and I ask myself: What file? Where is it supposed to exist? What did the server try to do with it? What was going on a second before it crashed? There is no answer in the log, and it’s totally my fault. I either 1) don’t re-throw or 2) re-throw without providing context. Both are wrong.</p><amp-img src="/images/2015/12/four-rooms.jpg"alt="Four Rooms (1995) by Allison Anders et al."height="649"width="1200"layout="responsive"></amp-img><p>This is how the code may look:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
   <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
     <span class="s">"File doesn't exist"</span>
   <span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>It may also look like this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+</code></pre></div></div><p>It may also look like this:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
   <span class="nc">Files</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
 <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
   <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Both examples demonstrate an inadequate style of handling situations that
-involve exceptions and reporting them. What’s wrong here? The exception messages
-are not thorough enough. They simply don’t contain any information
-from the place where they originated from.</p>
-
-<p>This is how they should look instead:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
+</code></pre></div></div><p>Both examples demonstrate an inadequate style of handling situations that involve exceptions and reporting them. What’s wrong here? The exception messages are not thorough enough. They simply don’t contain any information from the place where they originated from.<p>This is how they should look instead:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(!</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">())</span> <span class="o">{</span>
   <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
     <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span>
       <span class="s">"User profile file %s doesn't exist"</span><span class="o">,</span>
@@ -122,11 +51,7 @@ from the place where they originated from.</p>
     <span class="o">)</span>
   <span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>And the second example should look like this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+</code></pre></div></div><p>And the second example should look like this:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
   <span class="nc">Files</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
 <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
   <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
@@ -137,57 +62,7 @@ from the place where they originated from.</p>
     <span class="n">ex</span>
   <span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>See the difference? This may look like redundant code, but it’s not.
-Of course, when I’m writing all this, I don’t really care about
-logs and exceptions. I’m not really expecting this file
-to be absent.</p>
-
-<p>But I should.</p>
-
-<p>There should be a rule: Every time we throw or re-throw, an
-exception message must describe the problem with as much
-detail as possible.</p>
-
-<p>Of course, we can’t forget about security and risk putting any
-sensitive information into the exception message, like passwords,
-credit card numbers, etc. Besides that, as much as possible
-must be exposed to the exception catcher at a higher level.</p>
-
-<p>Throwing an exception is literally an escalation of a problem
-to a higher level of management. Imagine that my boss is asking
-me to install a new server. I come back to him in a few hours
-and say, “I failed; sorry.” That would sound strange. He
-would ask for more details. Why did I fail? What exactly went wrong?
-Is it possible to do it differently? Etc.</p>
-
-<p>Such code is literally a sign of disrespect to the client:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">throw</span> <span class="k">new</span> <span class="nc">IllegalArgumentException</span><span class="o">(</span>
+</code></pre></div></div><p>See the difference? This may look like redundant code, but it’s not. Of course, when I’m writing all this, I don’t really care about logs and exceptions. I’m not really expecting this file to be absent.<p>But I should.<p>There should be a rule: Every time we throw or re-throw, an exception message must describe the problem with as much detail as possible.<p>Of course, we can’t forget about security and risk putting any sensitive information into the exception message, like passwords, credit card numbers, etc. Besides that, as much as possible must be exposed to the exception catcher at a higher level.<p>Throwing an exception is literally an escalation of a problem to a higher level of management. Imagine that my boss is asking me to install a new server. I come back to him in a few hours and say, “I failed; sorry.” That would sound strange. He would ask for more details. Why did I fail? What exactly went wrong? Is it possible to do it differently? Etc.<p>Such code is literally a sign of disrespect to the client:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">throw</span> <span class="k">new</span> <span class="nc">IllegalArgumentException</span><span class="o">(</span>
   <span class="s">"File doesn't exist"</span>
 <span class="o">);</span>
-</code></pre></div></div>
-
-<p>I have to be more verbose and give more details.</p>
-
-<p>And I’m not alone in this mistake. I see it everywhere, and it really
-makes <a href="/2016/02/09/are-you-still-debugging.html">debugging</a>
-difficult, especially in production, where it’s
-almost impossible to reproduce the problem right away.</p>
-
-<p>Thus, please be more verbose in your exception messages. I will do the same
-in my code.</p>
-
-<p>And one more thing before you go. In most OOP languages, exceptions
-are unchecked, which means that catching them is not a mandatory
-operation, <a href="/2015/07/28/checked-vs-unchecked-exceptions.html">unfortunately</a>.
-Nevertheless, I recommend you catch, add context, and
-re-throw them all, <em>always</em>. This may seem like pure noise, but it’s not!
-Just make your methods smaller and ensure all exceptions
-sent out of them have enough information about their origins.
-You will do yourself and everybody else a big favor.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>I have to be more verbose and give more details.<p>And I’m not alone in this mistake. I see it everywhere, and it really makes <a href="/2016/02/09/are-you-still-debugging.html">debugging</a> difficult, especially in production, where it’s almost impossible to reproduce the problem right away.<p>Thus, please be more verbose in your exception messages. I will do the same in my code.<p>And one more thing before you go. In most OOP languages, exceptions are unchecked, which means that catching them is not a mandatory operation, <a href="/2015/07/28/checked-vs-unchecked-exceptions.html">unfortunately</a>. Nevertheless, I recommend you catch, add context, and re-throw them all, <em>always</em>. This may seem like pure noise, but it’s not! Just make your methods smaller and ensure all exceptions sent out of them have enough information about their origins. You will do yourself and everybody else a big favor.</article>

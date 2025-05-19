@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Catch Me If You ... Can't Do Otherwise</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/07/09/catch-if-cant-otherwise.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Catch Me If You ... Can't Do Otherwise</title><link rel="canonical"href="https://www.yegor256.com/2015/07/09/catch-if-cant-otherwise.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,73 +33,17 @@ a properly designed application would catch
 exceptions in one place only.
 ",
         "keywords": ["exception catching", "catch exception", "when to catch exceptions", "catch exception java", "exceptions java"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/07/09/catch-if-cant-otherwise.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>9 July 2015</p>
-      <h1>Catch Me If You ... Can't Do Otherwise</h1>
-      <p>I don’t know whether it’s an anti-pattern or just a common and very popular
-mistake, but I see it everywhere and simply must write about it. I’m talking
-about <strong>exception catching without
-<a href="/2015/12/01/rethrow-exceptions.html">re-throwing</a></strong>. I’m talking about something like
-this Java code:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/07/09/catch-if-cant-otherwise.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>9 July 2015<h1>Catch Me If You ... Can't Do Otherwise</h1><p>I don’t know whether it’s an anti-pattern or just a common and very popular mistake, but I see it everywhere and simply must write about it. I’m talking about <strong>exception catching without <a href="/2015/12/01/rethrow-exceptions.html">re-throwing</a></strong>. I’m talking about something like this Java code:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
   <span class="n">stream</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">data</span><span class="o">);</span>
 <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
   <span class="n">ex</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-
-
-<amp-img src="/images/2015/07/catch-me-if-you-can.jpg" alt="Catch Me If You Can (2002) by Steven Spielberg" height="716" width="1200" layout="responsive"></amp-img>
-
-<p>Pay attention: I don’t have anything against this code:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+</code></pre></div></div><amp-img src="/images/2015/07/catch-me-if-you-can.jpg"alt="Catch Me If You Can (2002) by Steven Spielberg"height="716"width="1200"layout="responsive"></amp-img><p>Pay attention: I don’t have anything against this code:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
   <span class="n">stream</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="sc">'X'</span><span class="o">);</span>
 <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
   <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>This is called <a href="https://en.wikipedia.org/wiki/Exception_chaining"><em>exception chaining</em></a>
-and is a perfectly valid construct.</p>
-
-<p>So what is wrong with catching an exception and logging it? Let’s try to
-look at the bigger picture first. We’re talking about object-oriented
-programming—this means we’re dealing with objects. Here is
-how an object (its class, to be exact) would look:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Wire</span> <span class="o">{</span>
+</code></pre></div></div><p>This is called <a href="https://en.wikipedia.org/wiki/Exception_chaining"><em>exception chaining</em></a> and is a perfectly valid construct.<p>So what is wrong with catching an exception and logging it? Let’s try to look at the bigger picture first. We’re talking about object-oriented programming—this means we’re dealing with objects. Here is how an object (its class, to be exact) would look:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Wire</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">OutputStream</span> <span class="n">stream</span><span class="o">;</span>
   <span class="nc">Wire</span><span class="o">(</span><span class="kd">final</span> <span class="nc">OutputStream</span> <span class="n">stm</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">stream</span> <span class="o">=</span> <span class="n">stm</span><span class="o">;</span>
@@ -122,68 +56,8 @@ how an object (its class, to be exact) would look:</p>
     <span class="o">}</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Here is how I’m using this class:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Wire</span><span class="o">(</span><span class="n">stream</span><span class="o">).</span><span class="na">send</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>Looks nice, right? I don’t need to worry about that <code class="language-plaintext highlighter-rouge">IOException</code> when I’m
-calling <code class="language-plaintext highlighter-rouge">send(1)</code>. It will be handled internally, and if it occurs, the stacktrace
-will be logged. But this is a totally wrong way of thinking, and it’s inherited
-from languages without exceptions, like C.</p>
-
-
-
-<p>Exceptions were invented to simplify our design by moving the entire
-error handling code away from the main logic. Moreover, we’re not just moving it away but
-also concentrating it in one place—in the <code class="language-plaintext highlighter-rouge">main()</code> method, the entry
-point of the entire app.</p>
-
-<p>The primary purpose of an exception is to collect as much information as possible
-about the error and float it up to the highest level, where the user
-is capable of doing something about it. Exception chaining helps even
-further by allowing us to extend that information on its way up. We are basically
-putting our bubble (the exception) into a bigger bubble every time we
-catch it and
-<a href="/2015/12/01/rethrow-exceptions.html">re-throw</a>.
-When it hits the surface, there are many bubbles, each remaining
-inside another like a Russian doll. The original exception is the
-smallest bubble.</p>
-
-<p>When you catch an exception without re-throwing it, you basically pop the bubble.
-Everything inside it, including the original exception and all other bubbles
-with the information inside them, are in your hands.
-You don’t let me see them. You use them somehow, but I don’t know how. You’re
-doing something behind the scenes, hiding potentially important information.</p>
-
-<p>If you’re hiding that from me, I can’t promise my user that I will be honest
-with him and openly report a problem when it occurs. I simply can’t
-trust your <code class="language-plaintext highlighter-rouge">send()</code> method anymore, and my user will not trust me.</p>
-
-<p>By catching exceptions without re-throwing them, you’re basically breaking the
-chain of trust between objects.</p>
-
-<p>My suggestion is to catch exceptions as seldom as possible, and every time
-you catch them,
-<a href="/2015/12/01/rethrow-exceptions.html">re-throw</a>.</p>
-
-<p>Unfortunately, the design of Java goes against this principle in many places.
-For example, Java has checked and un-checked exceptions, while there should only
-be checked ones in my opinion (the ones you must catch or declare
-as throwable). Also, Java allows multiple exception types to be declared
-as throwable in a single method—yet another mistake; stick to declaring just
-one type. Also, there is a generic <code class="language-plaintext highlighter-rouge">Exception</code> class at the top of the hierarchy,
-which is also wrong in my opinion. Besides that, some built-in classes don’t
-allow any checked exceptions to be thrown, like <code class="language-plaintext highlighter-rouge">Runnable.run()</code>. There
-are many other problems with exceptions in Java.</p>
-
-<p>But try to keep this principle in mind and your code will be cleaner: <code class="language-plaintext highlighter-rouge">catch</code> only if you have no other choice.</p>
-
-<p>P.S. Here is how the class should look:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Wire</span> <span class="o">{</span>
+</code></pre></div></div><p>Here is how I’m using this class:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">Wire</span><span class="o">(</span><span class="n">stream</span><span class="o">).</span><span class="na">send</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+</code></pre></div></div><p>Looks nice, right? I don’t need to worry about that <code class="language-plaintext highlighter-rouge">IOException</code> when I’m calling <code class="language-plaintext highlighter-rouge">send(1)</code>. It will be handled internally, and if it occurs, the stacktrace will be logged. But this is a totally wrong way of thinking, and it’s inherited from languages without exceptions, like C.<p>Exceptions were invented to simplify our design by moving the entire error handling code away from the main logic. Moreover, we’re not just moving it away but also concentrating it in one place—in the <code class="language-plaintext highlighter-rouge">main()</code> method, the entry point of the entire app.<p>The primary purpose of an exception is to collect as much information as possible about the error and float it up to the highest level, where the user is capable of doing something about it. Exception chaining helps even further by allowing us to extend that information on its way up. We are basically putting our bubble (the exception) into a bigger bubble every time we catch it and <a href="/2015/12/01/rethrow-exceptions.html">re-throw</a>. When it hits the surface, there are many bubbles, each remaining inside another like a Russian doll. The original exception is the smallest bubble.<p>When you catch an exception without re-throwing it, you basically pop the bubble. Everything inside it, including the original exception and all other bubbles with the information inside them, are in your hands. You don’t let me see them. You use them somehow, but I don’t know how. You’re doing something behind the scenes, hiding potentially important information.<p>If you’re hiding that from me, I can’t promise my user that I will be honest with him and openly report a problem when it occurs. I simply can’t trust your <code class="language-plaintext highlighter-rouge">send()</code> method anymore, and my user will not trust me.<p>By catching exceptions without re-throwing them, you’re basically breaking the chain of trust between objects.<p>My suggestion is to catch exceptions as seldom as possible, and every time you catch them, <a href="/2015/12/01/rethrow-exceptions.html">re-throw</a>.<p>Unfortunately, the design of Java goes against this principle in many places. For example, Java has checked and un-checked exceptions, while there should only be checked ones in my opinion (the ones you must catch or declare as throwable). Also, Java allows multiple exception types to be declared as throwable in a single method—yet another mistake; stick to declaring just one type. Also, there is a generic <code class="language-plaintext highlighter-rouge">Exception</code> class at the top of the hierarchy, which is also wrong in my opinion. Besides that, some built-in classes don’t allow any checked exceptions to be thrown, like <code class="language-plaintext highlighter-rouge">Runnable.run()</code>. There are many other problems with exceptions in Java.<p>But try to keep this principle in mind and your code will be cleaner: <code class="language-plaintext highlighter-rouge">catch</code> only if you have no other choice.<p>P.S. Here is how the class should look:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="kd">class</span> <span class="nc">Wire</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">OutputStream</span> <span class="n">stream</span><span class="o">;</span>
   <span class="nc">Wire</span><span class="o">(</span><span class="kd">final</span> <span class="nc">OutputStream</span> <span class="n">stm</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">stream</span> <span class="o">=</span> <span class="n">stm</span><span class="o">;</span>
@@ -193,8 +67,4 @@ are many other problems with exceptions in Java.</p>
     <span class="k">this</span><span class="o">.</span><span class="na">stream</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div></article>

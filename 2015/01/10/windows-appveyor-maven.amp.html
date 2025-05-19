@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Continuous Integration on Windows, with Appveyor and Maven</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/01/10/windows-appveyor-maven.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Continuous Integration on Windows, with Appveyor and Maven</title><link rel="canonical"href="https://www.yegor256.com/2015/01/10/windows-appveyor-maven.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,60 +33,7 @@ hosted service; this article explains how Java Maven builds
 can be hosted there
 ",
         "keywords": ["maven appveyor", "maven windows", "continuous integration windows", "appveyor maven", "continuous integration win7"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/01/10/windows-appveyor-maven.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>10 January 2015</p>
-      <h1>Continuous Integration on Windows, with Appveyor and Maven</h1>
-      
-
-<p>The purpose of Continuous Integration is to tell us, the developers,
-when the product we’re working on is not “packagable” any more. The
-sooner we get the signal, the better. Why? Because the damage will
-be younger if we find it sooner. The younger the damage, the easier it is
-to fix. There are many modern and high-quality
-<a href="/2014/10/05/ten-hosted-continuous-integration-services.html">hosted continuous integration services</a>,
-but only one of them (to my knowledge) supports Windows as a build
-platform—<a href="https://www.appveyor.com">appveyor.com</a>. My experience
-tells me that it’s a good practice to continuously integrate on
-different platforms at the same time, especially when developing an
-open source library. That’s why, in <a href="https://www.zerocracy.com">Zerocracy</a>
-we’re using AppVeyor in combination with <a href="https://www.travis-ci.org">Travis</a>.</p>
-
-
-
-<p>This is how I managed to configure AppVeyor to build my Java Maven projects
-(this is <code class="language-plaintext highlighter-rouge">appveyor.yml</code> configuration file you’re supposed to place
-in the root directory of your GitHub repository):</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: '{build}'
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/01/10/windows-appveyor-maven.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>10 January 2015<h1>Continuous Integration on Windows, with Appveyor and Maven</h1><p>The purpose of Continuous Integration is to tell us, the developers, when the product we’re working on is not “packagable” any more. The sooner we get the signal, the better. Why? Because the damage will be younger if we find it sooner. The younger the damage, the easier it is to fix. There are many modern and high-quality <a href="/2014/10/05/ten-hosted-continuous-integration-services.html">hosted continuous integration services</a>, but only one of them (to my knowledge) supports Windows as a build platform—<a href="https://www.appveyor.com">appveyor.com</a>. My experience tells me that it’s a good practice to continuously integrate on different platforms at the same time, especially when developing an open source library. That’s why, in <a href="https://www.zerocracy.com">Zerocracy</a> we’re using AppVeyor in combination with <a href="https://www.travis-ci.org">Travis</a>.<p>This is how I managed to configure AppVeyor to build my Java Maven projects (this is <code class="language-plaintext highlighter-rouge">appveyor.yml</code> configuration file you’re supposed to place in the root directory of your GitHub repository):<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: '{build}'
 os: Windows Server 2012
 install:
   - ps: |
@@ -118,15 +55,4 @@ test_script:
 cache:
   - C:\maven\
   - C:\Users\appveyor\.m2
-</code></pre></div></div>
-
-<p>It was not that easy at all, so I decided to share. You can see
-how this configuration works in these projects:
-<a href="https://github.com/jcabi/jcabi-aspects">jcabi-aspects</a>,
-<a href="https://github.com/jcabi/jcabi-email">jcabi-email</a>,
-<a href="https://github.com/jcabi/jcabi-dynamo">jcabi-dynamo</a>, and
-<a href="https://github.com/yegor256/rultor">rultor</a>.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>It was not that easy at all, so I decided to share. You can see how this configuration works in these projects: <a href="https://github.com/jcabi/jcabi-aspects">jcabi-aspects</a>, <a href="https://github.com/jcabi/jcabi-email">jcabi-email</a>, <a href="https://github.com/jcabi/jcabi-dynamo">jcabi-dynamo</a>, and <a href="https://github.com/yegor256/rultor">rultor</a>.</article>

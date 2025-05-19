@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/03/29/rultor-with-appveyor.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them</title><link rel="canonical"href="https://www.yegor256.com/2015/03/29/rultor-with-appveyor.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,90 +33,15 @@ projects; Rultor is a Docker based DevOps assistant for merge, release and deplo
 they can work together.
 ",
         "keywords": ["appveyor", "appveyor merge pull request", "appveyor and rultor", "appveyor devops", "windows builds with docker"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/03/29/rultor-with-appveyor.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>29 March 2015</p>
-      <h1>How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them</h1>
-      
-
-<p><a href="https://www.appveyor.com">AppVeyor</a> is a great cloud
-<a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a> service that builds
-Windows projects. <a href="https://www.rultor.com">Rultor</a> is a DevOps assistant, which automates
-release, merge and deploy operations, using Docker containers. These posts
-explain how Rultor works and what it’s for:
-<a href="/2014/07/24/rultor-automated-merging.html">Rultor.com, a Merging Bot</a>
-and <a href="/2014/07/21/read-only-master-branch.html">Master Branch Must Be Read-Only</a>.</p>
-
-
-
-<p>The problem is that Rultor is running all scripts inside Docker containers
-and Docker can’t build Windows projects. The only and the best logical solution
-is to trigger AppVeyor before running all other scripts in Docker. If AppVeyor
-gives a green light, we continue with our usual in-Docker script. Otherwise,
-we fail the entire build. Below I explain how this automation was configured
-in <a href="https://www.takes.org">Takes framework</a>.</p>
-
-
-
-<p>First, I got a token from my AppVeyor account (at the time
-of writing it was <a href="https://ci.appveyor.com/api-token">here</a>). I created
-a text file <code class="language-plaintext highlighter-rouge">curl-appveyor.cfg</code> with this content (it’s not my real token inside,
-just an example):</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--silent
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/03/29/rultor-with-appveyor.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>29 March 2015<h1>How AppVeyor Helps Me to Validate Pull Requests Before Rultor Merges Them</h1><p><a href="https://www.appveyor.com">AppVeyor</a> is a great cloud <a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a> service that builds Windows projects. <a href="https://www.rultor.com">Rultor</a> is a DevOps assistant, which automates release, merge and deploy operations, using Docker containers. These posts explain how Rultor works and what it’s for: <a href="/2014/07/24/rultor-automated-merging.html">Rultor.com, a Merging Bot</a> and <a href="/2014/07/21/read-only-master-branch.html">Master Branch Must Be Read-Only</a>.<p>The problem is that Rultor is running all scripts inside Docker containers and Docker can’t build Windows projects. The only and the best logical solution is to trigger AppVeyor before running all other scripts in Docker. If AppVeyor gives a green light, we continue with our usual in-Docker script. Otherwise, we fail the entire build. Below I explain how this automation was configured in <a href="https://www.takes.org">Takes framework</a>.<p>First, I got a token from my AppVeyor account (at the time of writing it was <a href="https://ci.appveyor.com/api-token">here</a>). I created a text file <code class="language-plaintext highlighter-rouge">curl-appveyor.cfg</code> with this content (it’s not my real token inside, just an example):<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--silent
 --header "Authorization: Bearer 1hdmsfbs7xccb9x6g1y4"
 --header "Content-Type: application/json"
 --header "Accept: application/json"
-</code></pre></div></div>
-
-<p>Then, I encrypted this file, using <a href="https://github.com/yegor256/rultor-remote"><code class="language-plaintext highlighter-rouge">rultor</code></a>
-command line tool:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>rultor encrypt <span class="nt">-p</span> yegor256/takes curl-appveyor.cfg
-</code></pre></div></div>
-
-<p>The file I created was called
-<a href="https://github.com/yegor256/takes/blob/master/curl-appveyor.cfg.asc"><code class="language-plaintext highlighter-rouge">curl-appveyor.cfg.asc</code></a>.
-I committed and pushed into <a href="https://github.com/yegor256/takes">yegor256/takes</a>
-GitHub repository.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add curl-appveyor.cfg.asc
+</code></pre></div></div><p>Then, I encrypted this file, using <a href="https://github.com/yegor256/rultor-remote"><code class="language-plaintext highlighter-rouge">rultor</code></a> command line tool:<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>rultor encrypt <span class="nt">-p</span> yegor256/takes curl-appveyor.cfg
+</code></pre></div></div><p>The file I created was called <a href="https://github.com/yegor256/takes/blob/master/curl-appveyor.cfg.asc"><code class="language-plaintext highlighter-rouge">curl-appveyor.cfg.asc</code></a>. I committed and pushed into <a href="https://github.com/yegor256/takes">yegor256/takes</a> GitHub repository.<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add curl-appveyor.cfg.asc
 <span class="nv">$ </span>git commit <span class="nt">-am</span> <span class="s1">'CURL config for Appveyor'</span>
 <span class="nv">$ </span>git push origin master
-</code></pre></div></div>
-
-<p>Then, I configured AppVeyor “pinging” from Docker script.
-This is what I did in <a href="https://github.com/yegor256/takes/blob/master/.rultor.yml"><code class="language-plaintext highlighter-rouge">.rultor.yml</code></a>:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>decrypt:
+</code></pre></div></div><p>Then, I configured AppVeyor “pinging” from Docker script. This is what I did in <a href="https://github.com/yegor256/takes/blob/master/.rultor.yml"><code class="language-plaintext highlighter-rouge">.rultor.yml</code></a>:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>decrypt:
   curl-appveyor.cfg: "repo/curl-appveyor.cfg.asc"
 merge:
   script: |-
@@ -148,24 +63,4 @@ merge:
       sleep 5s
     done
     mvn clean install
-</code></pre></div></div>
-
-<p>There is no magic here, it’s very simple. First, I start a new build
-using <code class="language-plaintext highlighter-rouge">/api/builds</code> end-point of
-<a href="https://www.appveyor.com/docs/api/projects-builds#start-build-of-pull-request-github-only">AppVeyor REST API</a>.
-<code class="language-plaintext highlighter-rouge">${pull_id}</code> is an environment variable that is coming from Rultor,
-it contains an integer number of current pull request.</p>
-
-<p>I’m using <a href="http://stedolan.github.io/jq/">jq</a>
-in order to parse AppVeyor JSON output.</p>
-
-<p>Once the build is started, I’m getting its unique <code class="language-plaintext highlighter-rouge">version</code> and start
-looping to check its status. I’m waiting for <code class="language-plaintext highlighter-rouge">success</code> or <code class="language-plaintext highlighter-rouge">failed</code>. Anything
-else will mean that the build is still in progress and I should keep looping.</p>
-
-<p>You can see how it works in this pull request, for example:
-<a href="https://github.com/yegor256/takes/pull/93">yegor256/takes#93</a>.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>There is no magic here, it’s very simple. First, I start a new build using <code class="language-plaintext highlighter-rouge">/api/builds</code> end-point of <a href="https://www.appveyor.com/docs/api/projects-builds#start-build-of-pull-request-github-only">AppVeyor REST API</a>. <code class="language-plaintext highlighter-rouge">${pull_id}</code> is an environment variable that is coming from Rultor, it contains an integer number of current pull request.<p>I’m using <a href="http://stedolan.github.io/jq/">jq</a> in order to parse AppVeyor JSON output.<p>Once the build is started, I’m getting its unique <code class="language-plaintext highlighter-rouge">version</code> and start looping to check its status. I’m waiting for <code class="language-plaintext highlighter-rouge">success</code> or <code class="language-plaintext highlighter-rouge">failed</code>. Anything else will mean that the build is still in progress and I should keep looping.<p>You can see how it works in this pull request, for example: <a href="https://github.com/yegor256/takes/pull/93">yegor256/takes#93</a>.</article>

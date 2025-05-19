@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Dependency Injection Containers are Code Polluters</title>
-    <link rel="canonical" href="https://www.yegor256.com/2014/10/03/di-containers-are-evil.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Dependency Injection Containers are Code Polluters</title><link rel="canonical"href="https://www.yegor256.com/2014/10/03/di-containers-are-evil.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -42,76 +32,7 @@
 mechanism, DI frameworks turn it into an anti-pattern.
 ",
         "keywords": ["dependency injection", "dependency injection is evil", "downsides of dependency injection", "dependency injection framework", "drawbacks of dependency injection", "setter injection", "constructor injection", "field injection"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2014/10/03/di-containers-are-evil.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>3 October 2014</p>
-      <h1>Dependency Injection Containers are Code Polluters</h1>
-      <p>While <a href="https://martinfowler.com/articles/injection.html">dependency injection</a> (aka, “DI”)
-is a natural technique of composing objects in OOP
-(known long before the term was <a href="https://www.martinfowler.com/articles/injection.html">introduced by Martin Fowler</a>),
-<a href="https://www.spring.io">Spring IoC</a>,
-<a href="https://code.google.com/p/google-guice/">Google Guice</a>,
-<a href="http://docs.oracle.com/javaee/6/tutorial/doc/giwhl.html">Java EE6 CDI</a>,
-<a href="http://square.github.io/dagger/">Dagger</a> and other
-<a href="https://en.wikipedia.org/wiki/Dependency_injection">DI frameworks</a>
-turn it into an <em>anti-pattern</em>.</p>
-
-
-
-
-
-<p>I’m not going to discuss obvious arguments against
-“setter injections”
-(like in <a href="https://www.springbyexample.org/examples/intro-to-ioc-basic-setter-injection.html">Spring IoC</a>)
-and
-“field injections”
-(like in <a href="http://picocontainer.codehaus.org/annotated-field-injection.html">PicoContainer</a>).
-These mechanisms simply violate basic principles
-of object-oriented programming and encourage us to create
-incomplete, mutable objects, that get stuffed with data during the course
-of application execution. Remember: ideal objects
-<a href="/2014/06/09/objects-should-be-immutable.html">must be immutable</a>
-and <a href="/2014/09/16/getters-and-setters-are-evil.html">may not contain setters</a>.</p>
-
-<p>Instead, let’s talk about “constructor injection”
-(like in <a href="https://github.com/google/guice/wiki/Injections#constructor-injection">Google Guice</a>)
-and its use with dependency injection <em>containers</em>.
-I’ll try to show why I consider these containers a redundancy, at least.</p>
-
-<h2 id="what-is-dependency-injection">What is Dependency Injection?</h2>
-
-<p>This is what dependency injection is (not really different
-from a plain old object <a href="/2015/02/26/composable-decorators.html">composition</a>):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Budget</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2014/10/03/di-containers-are-evil.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>3 October 2014<h1>Dependency Injection Containers are Code Polluters</h1><p>While <a href="https://martinfowler.com/articles/injection.html">dependency injection</a> (aka, “DI”) is a natural technique of composing objects in OOP (known long before the term was <a href="https://www.martinfowler.com/articles/injection.html">introduced by Martin Fowler</a>), <a href="https://www.spring.io">Spring IoC</a>, <a href="https://code.google.com/p/google-guice/">Google Guice</a>, <a href="http://docs.oracle.com/javaee/6/tutorial/doc/giwhl.html">Java EE6 CDI</a>, <a href="http://square.github.io/dagger/">Dagger</a> and other <a href="https://en.wikipedia.org/wiki/Dependency_injection">DI frameworks</a> turn it into an <em>anti-pattern</em>.<p>I’m not going to discuss obvious arguments against “setter injections” (like in <a href="https://www.springbyexample.org/examples/intro-to-ioc-basic-setter-injection.html">Spring IoC</a>) and “field injections” (like in <a href="http://picocontainer.codehaus.org/annotated-field-injection.html">PicoContainer</a>). These mechanisms simply violate basic principles of object-oriented programming and encourage us to create incomplete, mutable objects, that get stuffed with data during the course of application execution. Remember: ideal objects <a href="/2014/06/09/objects-should-be-immutable.html">must be immutable</a> and <a href="/2014/09/16/getters-and-setters-are-evil.html">may not contain setters</a>.<p>Instead, let’s talk about “constructor injection” (like in <a href="https://github.com/google/guice/wiki/Injections#constructor-injection">Google Guice</a>) and its use with dependency injection <em>containers</em>. I’ll try to show why I consider these containers a redundancy, at least.<h2 id="what-is-dependency-injection">What is Dependency Injection?</h2><p>This is what dependency injection is (not really different from a plain old object <a href="/2015/02/26/composable-decorators.html">composition</a>):<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Budget</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="no">DB</span> <span class="n">db</span><span class="o">;</span>
   <span class="kd">public</span> <span class="nf">Budget</span><span class="o">(</span><span class="no">DB</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">db</span> <span class="o">=</span> <span class="n">data</span><span class="o">;</span>
@@ -122,16 +43,7 @@ from a plain old object <a href="/2015/02/26/composable-decorators.html">composi
     <span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>The object <code class="language-plaintext highlighter-rouge">data</code> is called a “dependency.”</p>
-
-<p>A <code class="language-plaintext highlighter-rouge">Budget</code> doesn’t know what kind of database it is working with. All it
-needs from the database is its ability to fetch a cell, using an
-arbitrary SQL query, via method <code class="language-plaintext highlighter-rouge">cell()</code>. We can instantiate a <code class="language-plaintext highlighter-rouge">Budget</code> with a PostgreSQL
-implementation of the <code class="language-plaintext highlighter-rouge">DB</code> interface, for example:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+</code></pre></div></div><p>The object <code class="language-plaintext highlighter-rouge">data</code> is called a “dependency.”<p>A <code class="language-plaintext highlighter-rouge">Budget</code> doesn’t know what kind of database it is working with. All it needs from the database is its ability to fetch a cell, using an arbitrary SQL query, via method <code class="language-plaintext highlighter-rouge">cell()</code>. We can instantiate a <code class="language-plaintext highlighter-rouge">Budget</code> with a PostgreSQL implementation of the <code class="language-plaintext highlighter-rouge">DB</code> interface, for example:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
     <span class="nc">Budget</span> <span class="n">budget</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Budget</span><span class="o">(</span>
       <span class="k">new</span> <span class="nf">Postgres</span><span class="o">(</span><span class="s">"jdbc:postgresql:5740/main"</span><span class="o">)</span>
@@ -139,39 +51,12 @@ implementation of the <code class="language-plaintext highlighter-rouge">DB</cod
     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Total is: "</span> <span class="o">+</span> <span class="n">budget</span><span class="o">.</span><span class="na">total</span><span class="o">());</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>In other words, we’re “injecting” a dependency into a new object <code class="language-plaintext highlighter-rouge">budget</code>.</p>
-
-<p>An alternative to this “dependency injection” approach would be
-to let <code class="language-plaintext highlighter-rouge">Budget</code> decide what database it wants to work with:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Budget</span> <span class="o">{</span>
+</code></pre></div></div><p>In other words, we’re “injecting” a dependency into a new object <code class="language-plaintext highlighter-rouge">budget</code>.<p>An alternative to this “dependency injection” approach would be to let <code class="language-plaintext highlighter-rouge">Budget</code> decide what database it wants to work with:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Budget</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="no">DB</span> <span class="n">db</span> <span class="o">=</span>
     <span class="k">new</span> <span class="nf">Postgres</span><span class="o">(</span><span class="s">"jdbc:postgresql:5740/main"</span><span class="o">);</span>
   <span class="c1">// class methods</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>This is very dirty and leads to 1) code duplication, 2) inability
-to reuse, and 3) inability to test, etc. No need to discuss
-why. It’s <a href="http://programmers.stackexchange.com/questions/19203">obvious</a>.</p>
-
-<p>Thus, dependency injection via a constructor is an amazing technique.
-Well, not even a technique, really. More like a feature of Java and all other object-oriented
-languages. It’s expected that almost any object will want to
-<a href="/2014/12/15/how-much-your-objects-encapsulate.html">encapsulate</a>
-some knowledge (aka, a “state”). That’s what
-<a href="/2015/05/07/ctors-must-be-code-free.html">constructors</a> are for.</p>
-
-<h2 id="what-is-a-di-container">What is a DI Container?</h2>
-
-<p>So far so good, but here comes the dark side—a dependency
-injection container. Here is how it works (let’s use
-<a href="https://github.com/google/guice">Google Guice</a>
-as an example):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.inject.Inject</span><span class="o">;</span>
+</code></pre></div></div><p>This is very dirty and leads to 1) code duplication, 2) inability to reuse, and 3) inability to test, etc. No need to discuss why. It’s <a href="http://programmers.stackexchange.com/questions/19203">obvious</a>.<p>Thus, dependency injection via a constructor is an amazing technique. Well, not even a technique, really. More like a feature of Java and all other object-oriented languages. It’s expected that almost any object will want to <a href="/2014/12/15/how-much-your-objects-encapsulate.html">encapsulate</a> some knowledge (aka, a “state”). That’s what <a href="/2015/05/07/ctors-must-be-code-free.html">constructors</a> are for.<h2 id="what-is-a-di-container">What is a DI Container?</h2><p>So far so good, but here comes the dark side—a dependency injection container. Here is how it works (let’s use <a href="https://github.com/google/guice">Google Guice</a> as an example):<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.inject.Inject</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Budget</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="no">DB</span> <span class="n">db</span><span class="o">;</span>
   <span class="nd">@Inject</span>
@@ -180,15 +65,7 @@ as an example):</p>
   <span class="o">}</span>
   <span class="c1">// same methods as above</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Pay attention: the constructor is annotated with
-<a href="http://docs.oracle.com/javaee/6/api/javax/inject/Inject.html"><code class="language-plaintext highlighter-rouge">@Inject</code></a>.</p>
-
-<p>Then, we’re supposed to configure a container
-somewhere, when the application starts:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Injector</span> <span class="n">injector</span> <span class="o">=</span> <span class="nc">Guice</span><span class="o">.</span><span class="na">createInjector</span><span class="o">(</span>
+</code></pre></div></div><p>Pay attention: the constructor is annotated with <a href="http://docs.oracle.com/javaee/6/api/javax/inject/Inject.html"><code class="language-plaintext highlighter-rouge">@Inject</code></a>.<p>Then, we’re supposed to configure a container somewhere, when the application starts:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Injector</span> <span class="n">injector</span> <span class="o">=</span> <span class="nc">Guice</span><span class="o">.</span><span class="na">createInjector</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">AbstractModule</span><span class="o">()</span> <span class="o">{</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">()</span> <span class="o">{</span>
@@ -198,80 +75,11 @@ somewhere, when the application starts:</p>
     <span class="o">}</span>
   <span class="o">}</span>
 <span class="o">);</span>
-</code></pre></div></div>
-
-<p>Some frameworks even allow us to configure the injector in an XML file.</p>
-
-<p>From now on, we are not allowed to instantiate <code class="language-plaintext highlighter-rouge">Budget</code> through the <code class="language-plaintext highlighter-rouge">new</code> operator,
-like we did before. Instead, we should use the injector we just created:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+</code></pre></div></div><p>Some frameworks even allow us to configure the injector in an XML file.<p>From now on, we are not allowed to instantiate <code class="language-plaintext highlighter-rouge">Budget</code> through the <code class="language-plaintext highlighter-rouge">new</code> operator, like we did before. Instead, we should use the injector we just created:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">...</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
     <span class="nc">Injection</span> <span class="n">injector</span> <span class="o">=</span> <span class="c1">// as we just did in the previous snippet</span>
     <span class="nc">Budget</span> <span class="n">budget</span> <span class="o">=</span> <span class="n">injector</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="nc">Budget</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
     <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Total is: "</span> <span class="o">+</span> <span class="n">budget</span><span class="o">.</span><span class="na">total</span><span class="o">());</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>The injection automatically finds out that in order to instantiate
-a <code class="language-plaintext highlighter-rouge">Budget</code> it has to provide an argument for its constructor. It will
-use an instance of class <code class="language-plaintext highlighter-rouge">Postgres</code>, which we instantiated in the injector.</p>
-
-
-
-<p>This is the right and recommended way to use Guice. There are
-a few even darker patterns, though, which are possible but not recommended. For example,
-you can make your injector a
-<a href="/2016/06/27/singletons-must-die.html">singleton</a> and use it right inside the <code class="language-plaintext highlighter-rouge">Budget</code> class.
-However, these mechanisms are considered wrong even by DI container makers.
-Let’s ignore them and focus on the recommended scenario.</p>
-
-<h2 id="what-is-this-for">What Is This For?</h2>
-
-<p>Let me reiterate and summarize the scenarios of <em>incorrect usage</em> of dependency
-injection containers:</p>
-
-<ul>
-  <li>
-    <p>Field injection</p>
-  </li>
-  <li>
-    <p>Setter injection</p>
-  </li>
-  <li>
-    <p>Passing injector as a dependency</p>
-  </li>
-  <li>
-    <p>Making injector a global <a href="/2016/06/27/singletons-must-die.html">singleton</a></p>
-  </li>
-</ul>
-
-<p>If we put all of them aside, all we have left is the constructor
-injection explained above. And how does that help us? Why do we need it?
-Why can’t we use plain old <code class="language-plaintext highlighter-rouge">new</code> in the main class of the application?</p>
-
-<p>The container we created simply adds more lines to the code base,
-or even more files, if we use XML. And it doesn’t add anything, except
-an additional <em>complexity</em>. We should always remember this
-if we have the question: “What database is used as an argument of a Budget?”</p>
-
-<h2 id="the-right-way">The Right Way</h2>
-
-<p>Now, let me show you a real life example of using <code class="language-plaintext highlighter-rouge">new</code> to construct
-an application. This is how we create a “thinking engine” in
-<a href="https://www.rultor.com">rultor.com</a> (full class is in
-<a href="https://github.com/yegor256/rultor/blob/1.34/src/main/java/com/rultor/agents/Agents.java"><code class="language-plaintext highlighter-rouge">Agents.java</code></a>):</p>
-
-
-
-<p>Impressive? This is a true
-<a href="/2015/02/26/composable-decorators.html">object composition</a>.
-I believe this is how a proper object-oriented application
-should be instantiated.</p>
-
-<p>And DI containers? In my opinion, they just add unnecessary noise.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>The injection automatically finds out that in order to instantiate a <code class="language-plaintext highlighter-rouge">Budget</code> it has to provide an argument for its constructor. It will use an instance of class <code class="language-plaintext highlighter-rouge">Postgres</code>, which we instantiated in the injector.<p>This is the right and recommended way to use Guice. There are a few even darker patterns, though, which are possible but not recommended. For example, you can make your injector a <a href="/2016/06/27/singletons-must-die.html">singleton</a> and use it right inside the <code class="language-plaintext highlighter-rouge">Budget</code> class. However, these mechanisms are considered wrong even by DI container makers. Let’s ignore them and focus on the recommended scenario.<h2 id="what-is-this-for">What Is This For?</h2><p>Let me reiterate and summarize the scenarios of <em>incorrect usage</em> of dependency injection containers:<ul><li><p>Field injection<li><p>Setter injection<li><p>Passing injector as a dependency<li><p>Making injector a global <a href="/2016/06/27/singletons-must-die.html">singleton</a></ul><p>If we put all of them aside, all we have left is the constructor injection explained above. And how does that help us? Why do we need it? Why can’t we use plain old <code class="language-plaintext highlighter-rouge">new</code> in the main class of the application?<p>The container we created simply adds more lines to the code base, or even more files, if we use XML. And it doesn’t add anything, except an additional <em>complexity</em>. We should always remember this if we have the question: “What database is used as an argument of a Budget?”<h2 id="the-right-way">The Right Way</h2><p>Now, let me show you a real life example of using <code class="language-plaintext highlighter-rouge">new</code> to construct an application. This is how we create a “thinking engine” in <a href="https://www.rultor.com">rultor.com</a> (full class is in <a href="https://github.com/yegor256/rultor/blob/1.34/src/main/java/com/rultor/agents/Agents.java"><code class="language-plaintext highlighter-rouge">Agents.java</code></a>):<p>Impressive? This is a true <a href="/2015/02/26/composable-decorators.html">object composition</a>. I believe this is how a proper object-oriented application should be instantiated.<p>And DI containers? In my opinion, they just add unnecessary noise.</article>

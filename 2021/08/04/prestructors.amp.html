@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Prestructors</title>
-    <link rel="canonical" href="https://www.yegor256.com/2021/08/04/prestructors.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Prestructors</title><link rel="canonical"href="https://www.yegor256.com/2021/08/04/prestructors.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,54 +33,7 @@ class that is used in constructors of other objects
 to pre-process their arguments.
 ",
         "keywords": ["oop design pattern", "constructor", "static method ctor", "oop", "oop ctor"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2021/08/04/prestructors.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>4 August 2021</p>
-      <h1>Prestructors</h1>
-      <p>Making constructors pre-process the arguments before
-encapsulating them seems to be
-<a href="/2015/05/07/ctors-must-be-code-free.html">bad practice</a>.
-However, very often it’s necessary to do exactly that: perform some manipulations
-with the objects provided as arguments and only then assign
-them to the attributes of the constructed object. For this purpose
-I suggest using prestructors, which could be methods or stand-alone
-objects.</p>
-
-
-
-<amp-img src="/images/2021/08/huge-in-france.jpg" alt="Huge in France (2019) by Gad Elmaleh et al." height="695" width="1400" layout="responsive"></amp-img>
-
-<p>Say, this is your code:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2021/08/04/prestructors.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>4 August 2021<h1>Prestructors</h1><p>Making constructors pre-process the arguments before encapsulating them seems to be <a href="/2015/05/07/ctors-must-be-code-free.html">bad practice</a>. However, very often it’s necessary to do exactly that: perform some manipulations with the objects provided as arguments and only then assign them to the attributes of the constructed object. For this purpose I suggest using prestructors, which could be methods or stand-alone objects.</p><amp-img src="/images/2021/08/huge-in-france.jpg"alt="Huge in France (2019) by Gad Elmaleh et al."height="695"width="1400"layout="responsive"></amp-img><p>Say, this is your code:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="o">;</span>
 <span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="o">;</span>
@@ -98,16 +41,7 @@ objects.</p>
     <span class="k">this</span><span class="o">.</span><span class="na">titles</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>The only constructor expects a list of titles, which is being
-encapsulated as <code class="language-plaintext highlighter-rouge">this.titles</code> for some future use. It’s also protected against
-any accidental modifications, through the JDK decorator at
-<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#unmodifiableList-java.util.List-"><code class="language-plaintext highlighter-rouge">unmodifiableList</code></a>.
-So far, so good. Now, we want to make our class a bit smarter
-and let it accept not only the <code class="language-plaintext highlighter-rouge">List</code> but an array of strings:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+</code></pre></div></div><p>The only constructor expects a list of titles, which is being encapsulated as <code class="language-plaintext highlighter-rouge">this.titles</code> for some future use. It’s also protected against any accidental modifications, through the JDK decorator at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#unmodifiableList-java.util.List-"><code class="language-plaintext highlighter-rouge">unmodifiableList</code></a>. So far, so good. Now, we want to make our class a bit smarter and let it accept not only the <code class="language-plaintext highlighter-rouge">List</code> but an array of strings:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="o">;</span>
   <span class="nc">Books</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">titles</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
@@ -120,18 +54,7 @@ and let it accept not only the <code class="language-plaintext highlighter-rouge
     <span class="k">this</span><span class="o">.</span><span class="na">titles</span> <span class="o">=</span> <span class="n">list</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>What’s wrong with this code? Those of you who have read my earlier
-<a href="/tag/oop.html">blog posts about OOP</a> most definitely know the answer. First,
-there are two primary constructors, which is another
-<a href="/2015/05/28/one-primary-constructor.html">bad practice</a>.
-Second, there is code in the second constructor, which is also a
-<a href="/2015/05/07/ctors-must-be-code-free.html">bad idea</a>.</p>
-
-<p>Here is how I usually refactor this code, to solve both mentioned problems:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+</code></pre></div></div><p>What’s wrong with this code? Those of you who have read my earlier <a href="/tag/oop.html">blog posts about OOP</a> most definitely know the answer. First, there are two primary constructors, which is another <a href="/2015/05/28/one-primary-constructor.html">bad practice</a>. Second, there is code in the second constructor, which is also a <a href="/2015/05/07/ctors-must-be-code-free.html">bad idea</a>.<p>Here is how I usually refactor this code, to solve both mentioned problems:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="o">;</span>
   <span class="nc">Books</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">titles</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
@@ -147,16 +70,7 @@ Second, there is code in the second constructor, which is also a
     <span class="k">return</span> <span class="n">list</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>I call this new static method <code class="language-plaintext highlighter-rouge">toList()</code> a <em>prestructor</em>: it is used
-only at the moment of object construction and only from the
-secondary constructor.</p>
-
-<p>An even better way to design it would be to make a new class <code class="language-plaintext highlighter-rouge">ToList</code>,
-which would do exactly the same, but in a more declarative and lazy way:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
+</code></pre></div></div><p>I call this new static method <code class="language-plaintext highlighter-rouge">toList()</code> a <em>prestructor</em>: it is used only at the moment of object construction and only from the secondary constructor.<p>An even better way to design it would be to make a new class <code class="language-plaintext highlighter-rouge">ToList</code>, which would do exactly the same, but in a more declarative and lazy way:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Books</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">titles</span><span class="o">;</span>
   <span class="nc">Books</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">titles</span> <span class="o">=</span> <span class="nc">Collections</span><span class="o">.</span><span class="na">unmodifiableList</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
@@ -172,12 +86,4 @@ which would do exactly the same, but in a more declarative and lazy way:</p>
   <span class="o">}</span>
   <span class="c1">// All required methods of the List interface</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p><a href="https://www.javadoc.io/static/org.cactoos/cactoos/0.50/org/cactoos/list/ListOf.html"><code class="language-plaintext highlighter-rouge">ListOf</code></a>
-from <a href="https://www.cactoos.org">Cactoos</a> is a perfect example
-of such a prestructor.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p><a href="https://www.javadoc.io/static/org.cactoos/cactoos/0.50/org/cactoos/list/ListOf.html"><code class="language-plaintext highlighter-rouge">ListOf</code></a> from <a href="https://www.cactoos.org">Cactoos</a> is a perfect example of such a prestructor.</article>

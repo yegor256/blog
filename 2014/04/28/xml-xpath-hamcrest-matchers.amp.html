@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>XML/XPath Matchers for Hamcrest</title>
-    <link rel="canonical" href="https://www.yegor256.com/2014/04/28/xml-xpath-hamcrest-matchers.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>XML/XPath Matchers for Hamcrest</title><link rel="canonical"href="https://www.yegor256.com/2014/04/28/xml-xpath-hamcrest-matchers.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,57 +33,7 @@ the Hamcrest arsenal with XML/XPath matchers; the article explains
 how to use the in Java projects
 ",
         "keywords": ["xml hamcrest", "xpath matchers", "junit hamcrest xml matchers", "xml matchers junit", "xml matchers hamcrest", "hamcrest xpath example", "hamcrest xpath library", "hamcrest xpath example code"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2014/04/28/xml-xpath-hamcrest-matchers.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>28 April 2014</p>
-      <h1>XML/XPath Matchers for Hamcrest</h1>
-      
-
-<p><a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a> is my favorite instrument
-in unit testing. It replaces the JUnit procedural assertions of
-<code class="language-plaintext highlighter-rouge">org.junit.Assert</code> with an object-oriented mechanism. However, I will discuss
-that subject in more detail sometime later.</p>
-
-<p>Now, though, I want to demonstrate a new library published today on GitHub and
-Maven Central: <a href="https://matchers.jcabi.com">jcabi-matchers</a>.
-jcabi-matchers is a collection of
-Hamcrest matchers to make XPath assertions in XML and XHTML documents.</p>
-
-<p>Let’s say, for instance, a class that is undergoing  testing produces an XML
-that needs to contain a single <code class="language-plaintext highlighter-rouge">&lt;message&gt;</code> element with the content <code class="language-plaintext highlighter-rouge">"hello,
-world!"</code></p>
-
-<p>This is how that code would look in a unit test:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.matchers.XhtmlMatchers</span><span class="o">;</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2014/04/28/xml-xpath-hamcrest-matchers.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>28 April 2014<h1>XML/XPath Matchers for Hamcrest</h1><p><a href="https://github.com/hamcrest/JavaHamcrest">Hamcrest</a> is my favorite instrument in unit testing. It replaces the JUnit procedural assertions of <code class="language-plaintext highlighter-rouge">org.junit.Assert</code> with an object-oriented mechanism. However, I will discuss that subject in more detail sometime later.<p>Now, though, I want to demonstrate a new library published today on GitHub and Maven Central: <a href="https://matchers.jcabi.com">jcabi-matchers</a>. jcabi-matchers is a collection of Hamcrest matchers to make XPath assertions in XML and XHTML documents.<p>Let’s say, for instance, a class that is undergoing testing produces an XML that needs to contain a single <code class="language-plaintext highlighter-rouge">&lt;message&gt;</code> element with the content <code class="language-plaintext highlighter-rouge">"hello, world!"</code><p>This is how that code would look in a unit test:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.matchers.XhtmlMatchers</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.hamcrest.MatcherAssert</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">FooTest</span> <span class="o">{</span>
@@ -108,53 +48,8 @@ world!"</code></p>
     <span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-
-
-<p>There are two alternatives to the above that I’m aware of, which are do almost the same thing:
-<a href="https://code.google.com/p/xml-matchers/">xml-matchers</a> by
-David Ehringer
-and
-<a href="https://github.com/hamcrest/JavaHamcrest/blob/hamcrest-java-1.3/hamcrest-library/src/main/java/org/hamcrest/xml/HasXPath.java"><code class="language-plaintext highlighter-rouge">hasXPath()</code></a>
-method in Hamcrest itself.</p>
-
-<p>I have tried them both, but faced a number of problems.</p>
-
-<p>First, Hamcrest <code class="language-plaintext highlighter-rouge">hasXPath()</code> works only with an instance of
-<a href="http://docs.oracle.com/javase/7/docs/api/org/w3c/dom/Node.html"><code class="language-plaintext highlighter-rouge">Node</code></a>. With
-this method, converting a <code class="language-plaintext highlighter-rouge">String</code> into <code class="language-plaintext highlighter-rouge">Node</code> becomes a repetitive and routine
-task in every unit test.</p>
-
-<p>The above is a very strange limitation of Hamcrest in contrast to
-<a href="https://matchers.jcabi.com">jcabi-matchers</a>, which works with almost anything, from a
-<code class="language-plaintext highlighter-rouge">String</code> to a
-<a href="http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html"><code class="language-plaintext highlighter-rouge">Reader</code></a> and
-even an <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html"><code class="language-plaintext highlighter-rouge">InputStream</code></a>.</p>
-
-<p>Second, <code class="language-plaintext highlighter-rouge">XmlMatchers</code> from <a href="https://code.google.com/p/xml-matchers/">xml-matchers</a>
-provides a very inconvenient way for working with namespaces. Before you can
-use an XPath query with a non-default namespace, you should create an instance
-of <code class="language-plaintext highlighter-rouge">NamespaceContext</code>.</p>
-
-<p>The library provides
-<a href="https://code.google.com/p/xml-matchers/source/browse/trunk/xml-matchers/src/main/java/org/xmlmatchers/namespace/SimpleNamespaceContext.java">a simple implementation</a> of this interface,
-but, still, it is requires extra code in every unit test.</p>
-
-<p><a href="https://matchers.jcabi.com">jcabi-matchers</a> simplifies namespace handling
-problems even further, as it pre-defines most popular namespaces, including
-<code class="language-plaintext highlighter-rouge">xhtml</code>, <code class="language-plaintext highlighter-rouge">xs</code>, <code class="language-plaintext highlighter-rouge">xsl</code>, etc.</p>
-
-<p>The following example works right out-of-the-box—without any extra configuration:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
+</code></pre></div></div><p>There are two alternatives to the above that I’m aware of, which are do almost the same thing: <a href="https://code.google.com/p/xml-matchers/">xml-matchers</a> by David Ehringer and <a href="https://github.com/hamcrest/JavaHamcrest/blob/hamcrest-java-1.3/hamcrest-library/src/main/java/org/hamcrest/xml/HasXPath.java"><code class="language-plaintext highlighter-rouge">hasXPath()</code></a> method in Hamcrest itself.<p>I have tried them both, but faced a number of problems.<p>First, Hamcrest <code class="language-plaintext highlighter-rouge">hasXPath()</code> works only with an instance of <a href="http://docs.oracle.com/javase/7/docs/api/org/w3c/dom/Node.html"><code class="language-plaintext highlighter-rouge">Node</code></a>. With this method, converting a <code class="language-plaintext highlighter-rouge">String</code> into <code class="language-plaintext highlighter-rouge">Node</code> becomes a repetitive and routine task in every unit test.<p>The above is a very strange limitation of Hamcrest in contrast to <a href="https://matchers.jcabi.com">jcabi-matchers</a>, which works with almost anything, from a <code class="language-plaintext highlighter-rouge">String</code> to a <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Reader.html"><code class="language-plaintext highlighter-rouge">Reader</code></a> and even an <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html"><code class="language-plaintext highlighter-rouge">InputStream</code></a>.<p>Second, <code class="language-plaintext highlighter-rouge">XmlMatchers</code> from <a href="https://code.google.com/p/xml-matchers/">xml-matchers</a> provides a very inconvenient way for working with namespaces. Before you can use an XPath query with a non-default namespace, you should create an instance of <code class="language-plaintext highlighter-rouge">NamespaceContext</code>.<p>The library provides <a href="https://code.google.com/p/xml-matchers/source/browse/trunk/xml-matchers/src/main/java/org/xmlmatchers/namespace/SimpleNamespaceContext.java">a simple implementation</a> of this interface, but, still, it is requires extra code in every unit test.<p><a href="https://matchers.jcabi.com">jcabi-matchers</a> simplifies namespace handling problems even further, as it pre-defines most popular namespaces, including <code class="language-plaintext highlighter-rouge">xhtml</code>, <code class="language-plaintext highlighter-rouge">xs</code>, <code class="language-plaintext highlighter-rouge">xsl</code>, etc.<p>The following example works right out-of-the-box—without any extra configuration:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">MatcherAssert</span><span class="o">.</span><span class="na">assertThat</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="s">"https://www.google.com"</span><span class="o">).</span><span class="na">getContent</span><span class="o">(),</span>
   <span class="nc">XhtmlMatchers</span><span class="o">.</span><span class="na">hasXPath</span><span class="o">(</span><span class="s">"//xhtml:body"</span><span class="o">)</span>
 <span class="o">);</span>
-</code></pre></div></div>
-
-<p>To summarize, my primary objective with the library was its simplicity of usage.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>To summarize, my primary objective with the library was its simplicity of usage.</article>

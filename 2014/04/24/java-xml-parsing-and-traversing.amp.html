@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Java XML Parsing Made Easy</title>
-    <link rel="canonical" href="https://www.yegor256.com/2014/04/24/java-xml-parsing-and-traversing.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Java XML Parsing Made Easy</title><link rel="canonical"href="https://www.yegor256.com/2014/04/24/java-xml-parsing-and-traversing.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -42,99 +32,21 @@
 and verbose operation is made easy with jcabi-xml
 ",
         "keywords": ["xml parsing java", "parse xml java", "how to parse xml in java", "java xml parsing library", "java xml parsing example", "java xml parsing library example", "java xml parsing best practices"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2014/04/24/java-xml-parsing-and-traversing.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>24 April 2014</p>
-      <h1>Java XML Parsing Made Easy</h1>
-      
-
-<p>Unlike with many other modern languages, parsing XML in Java requires  more than
-one line of code. XML traversing using XPath takes even more code,  and I find
-this is unfair and annoying.</p>
-
-<p>I’m a big fan of XML and use it it in almost every Java application. Some time
-ago, I decided to put all of that XML-to-DOM parsing code into a small library—<a href="/2014/04/24/java-xml-parsing-and-traversing.html">jcabi-xml</a>.</p>
-
-<p>Put simply, the library is a convenient wrapper for JDK-native DOM
-manipulations. That’s why it is small and dependency-free. With the following
-example, you can see just how simple XML parsing can be:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.xml.XML</span><span class="o">;</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2014/04/24/java-xml-parsing-and-traversing.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>24 April 2014<h1>Java XML Parsing Made Easy</h1><p>Unlike with many other modern languages, parsing XML in Java requires more than one line of code. XML traversing using XPath takes even more code, and I find this is unfair and annoying.<p>I’m a big fan of XML and use it it in almost every Java application. Some time ago, I decided to put all of that XML-to-DOM parsing code into a small library—<a href="/2014/04/24/java-xml-parsing-and-traversing.html">jcabi-xml</a>.<p>Put simply, the library is a convenient wrapper for JDK-native DOM manipulations. That’s why it is small and dependency-free. With the following example, you can see just how simple XML parsing can be:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.xml.XML</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">com.jcabi.xml.XMLDocument</span><span class="o">;</span>
 <span class="no">XML</span> <span class="n">xml</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">XMLDocument</span><span class="o">(</span>
   <span class="s">"&lt;root&gt;&lt;a&gt;hello&lt;/a&gt;&lt;b&gt;world!&lt;/b&gt;&lt;/root&gt;"</span>
 <span class="o">);</span>
-</code></pre></div></div>
-
-
-
-<p>Now, we have an object of interface
-<a href="https://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html"><code class="language-plaintext highlighter-rouge">XML</code></a>
-that can traverse the XML tree and convert it back to text.</p>
-
-<p>For example:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// outputs "hello"</span>
+</code></pre></div></div><p>Now, we have an object of interface <a href="https://xml.jcabi.com/apidocs-0.7.7/com/jcabi/xml/XML.html"><code class="language-plaintext highlighter-rouge">XML</code></a> that can traverse the XML tree and convert it back to text.<p>For example:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// outputs "hello"</span>
 <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">xml</span><span class="o">.</span><span class="na">xpath</span><span class="o">(</span><span class="s">"/root/a/text()"</span><span class="o">).</span><span class="na">get</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
 <span class="c1">// outputs the entire XML document</span>
 <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">xml</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
-</code></pre></div></div>
-
-<p>Method <code class="language-plaintext highlighter-rouge">xpath()</code> allows you to find a collection of text nodes
-or attributes in the document, and then convert them to
-a collection of strings, using <a href="https://en.wikipedia.org/wiki/XPath">XPath query</a>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// outputs "hello" and "world"</span>
+</code></pre></div></div><p>Method <code class="language-plaintext highlighter-rouge">xpath()</code> allows you to find a collection of text nodes or attributes in the document, and then convert them to a collection of strings, using <a href="https://en.wikipedia.org/wiki/XPath">XPath query</a>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// outputs "hello" and "world"</span>
 <span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">text</span> <span class="o">:</span> <span class="n">xml</span><span class="o">.</span><span class="na">xpath</span><span class="o">(</span><span class="s">"/root/*/text()"</span><span class="o">))</span> <span class="o">{</span>
   <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Method <code class="language-plaintext highlighter-rouge">nodes()</code> enables the same XPath search operation,
-but instead returns a collection of instances of <code class="language-plaintext highlighter-rouge">XML</code> interface:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// outputs "&lt;a&gt;hello&lt;/a&gt;" and "&lt;b&gt;world&lt;/b&gt;"</span>
+</code></pre></div></div><p>Method <code class="language-plaintext highlighter-rouge">nodes()</code> enables the same XPath search operation, but instead returns a collection of instances of <code class="language-plaintext highlighter-rouge">XML</code> interface:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// outputs "&lt;a&gt;hello&lt;/a&gt;" and "&lt;b&gt;world&lt;/b&gt;"</span>
 <span class="k">for</span> <span class="o">(</span><span class="no">XML</span> <span class="n">node</span> <span class="o">:</span> <span class="n">xml</span><span class="o">.</span><span class="na">nodes</span><span class="o">(</span><span class="s">"/root/*"</span><span class="o">))</span>
   <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">node</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Besides XML parsing, printing and XPath traversing,
-<a href="/2014/04/24/java-xml-parsing-and-traversing.html">jcabi-xml</a>
-also provides XSD validation
-and XSL transformations. I’ll write about those features in the next post.</p>
-
-<p>PS. Also, check this:
-<a href="/2014/04/28/xml-xpath-hamcrest-matchers.html">XML/XPath Matchers for Hamcrest</a>.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Besides XML parsing, printing and XPath traversing, <a href="/2014/04/24/java-xml-parsing-and-traversing.html">jcabi-xml</a> also provides XSD validation and XSL transformations. I’ll write about those features in the next post.<p>PS. Also, check this: <a href="/2014/04/28/xml-xpath-hamcrest-matchers.html">XML/XPath Matchers for Hamcrest</a>.</article>

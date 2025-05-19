@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>How to Read MANIFEST.MF Files</title>
-    <link rel="canonical" href="https://www.yegor256.com/2014/07/03/how-to-read-manifest-mf.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>How to Read MANIFEST.MF Files</title><link rel="canonical"href="https://www.yegor256.com/2014/07/03/how-to-read-manifest-mf.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,76 +33,12 @@ files can be a complex task, and their attributes may overlap;
 jcabi-manifests  library makes this process easier.
 ",
         "keywords": ["manifest.mf example", "manifest.mf maven", "manifest.mf classpath", "java manifest.mf", "java read manifest.mf", "manifest files java", "how to read manifest.mf"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2014/07/03/how-to-read-manifest-mf.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>3 July 2014</p>
-      <h1>How to Read MANIFEST.MF Files</h1>
-      
-
-<p>Every Java package (JAR, WAR, EAR, etc.) has
-a <a href="http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html"><code class="language-plaintext highlighter-rouge">MANIFEST.MF</code></a>
-file in the <code class="language-plaintext highlighter-rouge">META-INF</code> directory. The file contains a list of attributes,
-which describe this particular package. For example:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Manifest-Version: 1.0
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2014/07/03/how-to-read-manifest-mf.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>3 July 2014<h1>How to Read MANIFEST.MF Files</h1><p>Every Java package (JAR, WAR, EAR, etc.) has a <a href="http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html"><code class="language-plaintext highlighter-rouge">MANIFEST.MF</code></a> file in the <code class="language-plaintext highlighter-rouge">META-INF</code> directory. The file contains a list of attributes, which describe this particular package. For example:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Manifest-Version: 1.0
 Created-By: 1.7.0_06 (Oracle Corporation)
 Main-Class: MyPackage.MyClass
-</code></pre></div></div>
-
-<p>When your application has multiple JAR dependencies, you have multiple
-<code class="language-plaintext highlighter-rouge">MANIFEST.MF</code> files in your class path. All of them have the same location:
-<code class="language-plaintext highlighter-rouge">META-INF/MANIFEST.MF</code>. Very often it is necessary to go through all of
-them in runtime and find the attribute by its name.</p>
-
-<p><a href="https://manifests.jcabi.com">jcabi-manifests</a> makes it possible with a one-liner:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.manifests.Manifests</span><span class="o">;</span>
+</code></pre></div></div><p>When your application has multiple JAR dependencies, you have multiple <code class="language-plaintext highlighter-rouge">MANIFEST.MF</code> files in your class path. All of them have the same location: <code class="language-plaintext highlighter-rouge">META-INF/MANIFEST.MF</code>. Very often it is necessary to go through all of them in runtime and find the attribute by its name.<p><a href="https://manifests.jcabi.com">jcabi-manifests</a> makes it possible with a one-liner:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">com.jcabi.manifests.Manifests</span><span class="o">;</span>
 <span class="nc">String</span> <span class="n">created</span> <span class="o">=</span> <span class="nc">Manifests</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="s">"Created-By"</span><span class="o">);</span>
-</code></pre></div></div>
-
-
-
-<p>Let’s see why you would want to read attributes from manifest
-files, and how it works on a low level.</p>
-
-<h2 id="package-versioning">Package Versioning</h2>
-
-<p>When you package a library or even a web application,
-it is a good practice to add an attribute to its <code class="language-plaintext highlighter-rouge">MANIFEST.MF</code>
-with the package version name and build number. In Maven,
-<a href="https://maven.apache.org/plugins/maven-jar-plugin/"><code class="language-plaintext highlighter-rouge">maven-jar-plugin</code></a>
-can help you (almost the same configuration for
-<a href="https://maven.apache.org/plugins/maven-war-plugin/"><code class="language-plaintext highlighter-rouge">maven-war-plugin</code></a>):</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+</code></pre></div></div><p>Let’s see why you would want to read attributes from manifest files, and how it works on a low level.<h2 id="package-versioning">Package Versioning</h2><p>When you package a library or even a web application, it is a good practice to add an attribute to its <code class="language-plaintext highlighter-rouge">MANIFEST.MF</code> with the package version name and build number. In Maven, <a href="https://maven.apache.org/plugins/maven-jar-plugin/"><code class="language-plaintext highlighter-rouge">maven-jar-plugin</code></a> can help you (almost the same configuration for <a href="https://maven.apache.org/plugins/maven-war-plugin/"><code class="language-plaintext highlighter-rouge">maven-war-plugin</code></a>):<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>maven-jar-plugin<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;configuration&gt;</span>
     <span class="nt">&lt;archive&gt;</span>
@@ -123,12 +49,7 @@ can help you (almost the same configuration for
     <span class="nt">&lt;/archive&gt;</span>
   <span class="nt">&lt;/configuration&gt;</span>
 <span class="nt">&lt;/plugin&gt;</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">buildnumber-maven-plugin</code>
-will help you to get <code class="language-plaintext highlighter-rouge">${buildNumber}</code> from Git, SVN or Mercurial:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+</code></pre></div></div><p><code class="language-plaintext highlighter-rouge">buildnumber-maven-plugin</code> will help you to get <code class="language-plaintext highlighter-rouge">${buildNumber}</code> from Git, SVN or Mercurial:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
   <span class="nt">&lt;groupId&gt;</span>org.codehaus.mojo<span class="nt">&lt;/groupId&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>buildnumber-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;executions&gt;</span>
@@ -139,34 +60,9 @@ will help you to get <code class="language-plaintext highlighter-rouge">${buildN
     <span class="nt">&lt;/execution&gt;</span>
   <span class="nt">&lt;/executions&gt;</span>
 <span class="nt">&lt;/plugin&gt;</span>
-</code></pre></div></div>
-
-<p>After all these manipulations, <code class="language-plaintext highlighter-rouge">MANIFEST.MF</code>, in your JAR will
-contain these two extra lines (on top of all others added there by Maven by default):</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Foo-Version: 1.0-SNAPSHOT
+</code></pre></div></div><p>After all these manipulations, <code class="language-plaintext highlighter-rouge">MANIFEST.MF</code>, in your JAR will contain these two extra lines (on top of all others added there by Maven by default):<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Foo-Version: 1.0-SNAPSHOT
 Foo-Hash: 7ef4ac3
-</code></pre></div></div>
-
-<p>In runtime, you can show these values to the user to help him
-understand which version of the product he is working with at any given moment.</p>
-
-<p>Look at <a href="https://www.stateful.co">stateful.co</a>, for example. At the bottom
-of its front page, you see the version number and Git hash. They are
-retrieved from <code class="language-plaintext highlighter-rouge">MANIFEST.MF</code> of the deployed WAR package, on every page click.</p>
-
-<h2 id="credentials">Credentials</h2>
-
-<p>Although this may be considered as a bad practice
-(see <a href="https://amzn.to/2bQVmlb">Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</a>
-by Jez Humble and David Farley), sometimes it is convenient to package production
-credentials right into the JAR/WAR archive during the
-<a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a>/delivery cycle.</p>
-
-<p>For example, you can encode your PostgreSQL connection
-details right into <code class="language-plaintext highlighter-rouge">MANIFEST.MF</code>:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+</code></pre></div></div><p>In runtime, you can show these values to the user to help him understand which version of the product he is working with at any given moment.<p>Look at <a href="https://www.stateful.co">stateful.co</a>, for example. At the bottom of its front page, you see the version number and Git hash. They are retrieved from <code class="language-plaintext highlighter-rouge">MANIFEST.MF</code> of the deployed WAR package, on every page click.<h2 id="credentials">Credentials</h2><p>Although this may be considered as a bad practice (see <a href="https://amzn.to/2bQVmlb">Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</a> by Jez Humble and David Farley), sometimes it is convenient to package production credentials right into the JAR/WAR archive during the <a href="/2014/10/08/continuous-integration-is-dead.html">continuous integration</a>/delivery cycle.<p>For example, you can encode your PostgreSQL connection details right into <code class="language-plaintext highlighter-rouge">MANIFEST.MF</code>:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
   <span class="nt">&lt;artifactId&gt;</span>maven-war-plugin<span class="nt">&lt;/artifactId&gt;</span>
   <span class="nt">&lt;configuration&gt;</span>
     <span class="nt">&lt;archive&gt;</span>
@@ -176,16 +72,5 @@ details right into <code class="language-plaintext highlighter-rouge">MANIFEST.M
     <span class="nt">&lt;/archive&gt;</span>
   <span class="nt">&lt;/configuration&gt;</span>
 <span class="nt">&lt;/plugin&gt;</span>
-</code></pre></div></div>
-
-<p>Afterwards, you can retrieve them in
-runtime using <a href="https://manifests.jcabi.com"><code class="language-plaintext highlighter-rouge">jcabi-manifests</code></a>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">url</span> <span class="o">=</span> <span class="nc">Manifests</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="s">"Pgsql"</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>If you know of any other useful purposes for <code class="language-plaintext highlighter-rouge">MANIFEST.MF</code>, let me know.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Afterwards, you can retrieve them in runtime using <a href="https://manifests.jcabi.com"><code class="language-plaintext highlighter-rouge">jcabi-manifests</code></a>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">url</span> <span class="o">=</span> <span class="nc">Manifests</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="s">"Pgsql"</span><span class="o">);</span>
+</code></pre></div></div><p>If you know of any other useful purposes for <code class="language-plaintext highlighter-rouge">MANIFEST.MF</code>, let me know.</article>

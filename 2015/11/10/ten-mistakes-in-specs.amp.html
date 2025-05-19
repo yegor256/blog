@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>10 Typical Mistakes in Specs</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/11/10/ten-mistakes-in-specs.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>10 Typical Mistakes in Specs</title><link rel="canonical"href="https://www.yegor256.com/2015/11/10/ten-mistakes-in-specs.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -42,410 +32,41 @@
 for requirements, because they are very difficult to correct.
 ",
         "keywords": ["software specification", "software specification template", "software specification review", "software specification example", "software specification in software engineering"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/11/10/ten-mistakes-in-specs.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>10 November 2015</p>
-      <h1>10 Typical Mistakes in Specs</h1>
-      <p>There is a great book called
-<a href="https://amzn.to/2c5n12h">Software Requirements</a>
-written by Karl Wiegers about, well, software requirements.
-It’s a must read for every software engineer, in my opinion. There’s
-no need for me to repeat what it says, but there are a few very
-simple and very typical mistakes we keep making in our
-specs. I see them in our documents again and again,
-which is why I’ve decided to summarize them. So here they are,
-the ten most critical and typical of them,
-from the point of view of a programmer reading a specification document.</p>
-
-
-
-<amp-img src="/images/2015/11/reservoir-dogs.jpg" alt="Reservoir Dogs (1992) by Quentin Tarantino" height="510" width="1200" layout="responsive"></amp-img>
-
-<p>Chapter 4.3 of a famous standard
-<a href="https://standards.ieee.org/findstds/standard/830-1998.html">IEEE 830-1998</a>
-says that a good
-<a href="https://en.wikipedia.org/wiki/Software_requirements_specification">specification</a>
-should be <em>correct</em>, <em>unambiguous</em>, <em>complete</em>, <em>consistent</em>,
-<em>ranked</em>, <em>verifiable</em>, <em>modifiable</em>, and <em>traceable</em>.
-Eight qualities in total. Then, the standard explains them one by one
-in pretty simple English. But do we have time to read those boring standards?
-They are for university professors and certification boards.
-We are practitioners, for goodness sake! … Hold on, I’m joking.</p>
-
-
-
-<p>No matter how small the project is and how practical we are, there
-is always a document that explains what needs to be done, and it
-may be called the “software requirements specification,” or “specification,”
-or just “spec.” Of course, there is a lot of space for creativity, but
-we’re <em>engineers</em>, not artists. We must follow rules and standards,
-mostly because they make our communication easier.</p>
-
-<p>Now, I’m getting to my point. The specs I usually see violate pretty much
-<em>all</em> eight principles mentioned earlier. Below is a summary of how exactly
-they do it. By the way, all examples are taken from real documents in
-real commercial software projects.</p>
-
-<h2 id="no-glossary-or-a-messy-one">No Glossary or a Messy One</h2>
-
-<p>How about this:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UUID is set incrementally to make sure there
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/11/10/ten-mistakes-in-specs.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>10 November 2015<h1>10 Typical Mistakes in Specs</h1><p>There is a great book called <a href="https://amzn.to/2c5n12h">Software Requirements</a> written by Karl Wiegers about, well, software requirements. It’s a must read for every software engineer, in my opinion. There’s no need for me to repeat what it says, but there are a few very simple and very typical mistakes we keep making in our specs. I see them in our documents again and again, which is why I’ve decided to summarize them. So here they are, the ten most critical and typical of them, from the point of view of a programmer reading a specification document.</p><amp-img src="/images/2015/11/reservoir-dogs.jpg"alt="Reservoir Dogs (1992) by Quentin Tarantino"height="510"width="1200"layout="responsive"></amp-img><p>Chapter 4.3 of a famous standard <a href="https://standards.ieee.org/findstds/standard/830-1998.html">IEEE 830-1998</a> says that a good <a href="https://en.wikipedia.org/wiki/Software_requirements_specification">specification</a> should be <em>correct</em>, <em>unambiguous</em>, <em>complete</em>, <em>consistent</em>, <em>ranked</em>, <em>verifiable</em>, <em>modifiable</em>, and <em>traceable</em>. Eight qualities in total. Then, the standard explains them one by one in pretty simple English. But do we have time to read those boring standards? They are for university professors and certification boards. We are practitioners, for goodness sake! … Hold on, I’m joking.<p>No matter how small the project is and how practical we are, there is always a document that explains what needs to be done, and it may be called the “software requirements specification,” or “specification,” or just “spec.” Of course, there is a lot of space for creativity, but we’re <em>engineers</em>, not artists. We must follow rules and standards, mostly because they make our communication easier.<p>Now, I’m getting to my point. The specs I usually see violate pretty much <em>all</em> eight principles mentioned earlier. Below is a summary of how exactly they do it. By the way, all examples are taken from real documents in real commercial software projects.<h2 id="no-glossary-or-a-messy-one">No Glossary or a Messy One</h2><p>How about this:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UUID is set incrementally to make sure there
 are no two users with the same account number.
-</code></pre></div></div>
-
-<p>What is the difference between UUID and account number? Is it the
-same thing? It seems so, right? Or maybe they are different … it would
-be great to know what UUID stands for. Is it “unique user ID” or maybe
-“unified user identity descriptor?” I have no idea. I’m lost, and I want
-to find the author of this text and do something bad to him … or her.</p>
-
-
-
-<p>I’ve written already that the
-<a href="/2015/03/16/technical-glossaries.html">worst technical specifications have no glossaries</a>.
-In my experience, this is the biggest problem in all requirement
-documents. It’s not prose! It’s not a love letter! It’s technical
-documentation. We can’t juggle words for the sake of fun. We should
-not use product specs just to express ourselves. We’re writing in order
-to be understood, not to impress the reader. And the rule is the
-same here as with
-<a href="/2015/06/29/simple-diagrams.html">diagrams</a>:
-if I don’t understand you, it’s your fault.</p>
-
-<p>Here is how that text would look after a proper re-writing:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UUID is user unique ID, a positive 4-bytes integer.
+</code></pre></div></div><p>What is the difference between UUID and account number? Is it the same thing? It seems so, right? Or maybe they are different … it would be great to know what UUID stands for. Is it “unique user ID” or maybe “unified user identity descriptor?” I have no idea. I’m lost, and I want to find the author of this text and do something bad to him … or her.<p>I’ve written already that the <a href="/2015/03/16/technical-glossaries.html">worst technical specifications have no glossaries</a>. In my experience, this is the biggest problem in all requirement documents. It’s not prose! It’s not a love letter! It’s technical documentation. We can’t juggle words for the sake of fun. We should not use product specs just to express ourselves. We’re writing in order to be understood, not to impress the reader. And the rule is the same here as with <a href="/2015/06/29/simple-diagrams.html">diagrams</a>: if I don’t understand you, it’s your fault.<p>Here is how that text would look after a proper re-writing:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UUID is user unique ID, a positive 4-bytes integer.
 UUID is set incrementally to make sure there
 are no two users with the same UUID.
-</code></pre></div></div>
-
-<p>Better now?</p>
-
-<p>Thus, the first and biggest problem is a frivolous
-use of terms and just words, without having them pre-defined in a glossary.</p>
-
-<h2 id="questions-discussions-suggestions-opinions">Questions, Discussions, Suggestions, Opinions</h2>
-
-<p>I’ve seen this very recently in a product spec:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I believe that multiple versions of the API
+</code></pre></div></div><p>Better now?<p>Thus, the first and biggest problem is a frivolous use of terms and just words, without having them pre-defined in a glossary.<h2 id="questions-discussions-suggestions-opinions">Questions, Discussions, Suggestions, Opinions</h2><p>I’ve seen this very recently in a product spec:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I believe that multiple versions of the API
 must be supported. What options do we have? I'd
 suggest we go with versioned URLs. Feel free to
 post your thoughts here.
-</code></pre></div></div>
-
-<p>Yes, this text exists verbatim in a requirements document. First, the
-author expresses his personal opinion about the subject. Then,
-the author asks me what possible options are out there. Then,
-he suggests I consider something, and after that,
-he invites me for a talk.</p>
-
-
-
-<p>Impressive, right? Obviously, the author has a very creative personality.
-But we should keep this person as far away from project documentation as possible.
-This is not what a requirements document appreciates. Well, we appreciate
-creativity, but these four things are strictly prohibited:
-questions, discussions, suggestions, and opinions.</p>
-
-<p>Specifications can’t have any <em>questions</em> in them. Who are these questions
-addressed to? Me, a programmer? Am I supposed to implement the
-software or answer your questions? I’m not interested in brainstorming
-with you. I expect you, a requirements author, to tell me
-what needs to be done. Find all your answers before writing the document. That’s
-what you’re paid for. If you don’t have the answers, put something like
-TBD (“to be determined”) there. But don’t ask questions. It’s annoying.</p>
-
-<p>A requirements document is not a <em>discussion</em> board. As a reader of the
-spec, I expect to see exactly what needs to be done without any “maybe” or
-“we could do it differently.” Of course you need to discuss these issues,
-but do it before documenting it. Do it somewhere else, like in Skype, on Slack,
-or by email. If you really want to discuss in the document, use Google Docs or
-Word with version tracking. But when the discussion is over, remove its history
-from the document. Its presence only confuses me, a programmer.</p>
-
-<p>There’s no need to format requirements as <em>suggestions</em> either. Just say what
-needs to be done and how the software has to work without fear of being wrong.
-Usually, people resort to suggestion when they are afraid to say it straight. Instead
-of saying “the app must work on Android 3.x and higher,” they say
-“I would suggest making the app compatible with Android 3.x and higher.”
-See the difference? In the second sentence, the author is trying to avoid
-personal responsibility. He’s not saying “exactly Android 3.x;” he’s just
-suggesting. Don’t be a coward; say it straight. If you make a mistake,
-we’ll correct you.</p>
-
-<p>And, of course, <em>opinions</em> are not appreciated at all. It’s not a letter
-to a friend; it’s a formal document that belongs to the project. In a few
-months or weeks, you may leave the project, and somebody else will work with
-your document. The spec is a contract between the project sponsor and project
-team. The opinion of a document author doesn’t make any difference here.
-Instead of noting “it seems Java would be faster” and suggesting “we should use it,”
-say “Java is faster, so we must use it.” Obviously you put it there because you
-thought so. But once it’s there, we don’t care who it came from and what
-you thought about this problem. The information would just
-confuse us more, so skip it. Just facts, no opinions.</p>
-
-<p>Don’t get me wrong, I’m not against creativity. Programmers are not robots,
-quietly implementing what the document says. But a messy document has
-nothing to do with creativity. If you want me to create, define
-the limits of that creativity and let me experiment within them; for example:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Multiple versions of the API must be supported. How exactly
+</code></pre></div></div><p>Yes, this text exists verbatim in a requirements document. First, the author expresses his personal opinion about the subject. Then, the author asks me what possible options are out there. Then, he suggests I consider something, and after that, he invites me for a talk.<p>Impressive, right? Obviously, the author has a very creative personality. But we should keep this person as far away from project documentation as possible. This is not what a requirements document appreciates. Well, we appreciate creativity, but these four things are strictly prohibited: questions, discussions, suggestions, and opinions.<p>Specifications can’t have any <em>questions</em> in them. Who are these questions addressed to? Me, a programmer? Am I supposed to implement the software or answer your questions? I’m not interested in brainstorming with you. I expect you, a requirements author, to tell me what needs to be done. Find all your answers before writing the document. That’s what you’re paid for. If you don’t have the answers, put something like TBD (“to be determined”) there. But don’t ask questions. It’s annoying.<p>A requirements document is not a <em>discussion</em> board. As a reader of the spec, I expect to see exactly what needs to be done without any “maybe” or “we could do it differently.” Of course you need to discuss these issues, but do it before documenting it. Do it somewhere else, like in Skype, on Slack, or by email. If you really want to discuss in the document, use Google Docs or Word with version tracking. But when the discussion is over, remove its history from the document. Its presence only confuses me, a programmer.<p>There’s no need to format requirements as <em>suggestions</em> either. Just say what needs to be done and how the software has to work without fear of being wrong. Usually, people resort to suggestion when they are afraid to say it straight. Instead of saying “the app must work on Android 3.x and higher,” they say “I would suggest making the app compatible with Android 3.x and higher.” See the difference? In the second sentence, the author is trying to avoid personal responsibility. He’s not saying “exactly Android 3.x;” he’s just suggesting. Don’t be a coward; say it straight. If you make a mistake, we’ll correct you.<p>And, of course, <em>opinions</em> are not appreciated at all. It’s not a letter to a friend; it’s a formal document that belongs to the project. In a few months or weeks, you may leave the project, and somebody else will work with your document. The spec is a contract between the project sponsor and project team. The opinion of a document author doesn’t make any difference here. Instead of noting “it seems Java would be faster” and suggesting “we should use it,” say “Java is faster, so we must use it.” Obviously you put it there because you thought so. But once it’s there, we don’t care who it came from and what you thought about this problem. The information would just confuse us more, so skip it. Just facts, no opinions.<p>Don’t get me wrong, I’m not against creativity. Programmers are not robots, quietly implementing what the document says. But a messy document has nothing to do with creativity. If you want me to create, define the limits of that creativity and let me experiment within them; for example:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Multiple versions of the API must be supported. How exactly
 that is done doesn't really matter.
-</code></pre></div></div>
-
-<p>This is how you invite me to be creative. I realize that the user
-of the product doesn’t really have any justifications or expectations
-for the versioning mechanisms in the API. I’m free to do whatever
-I can. Great, I’ll do it my way.</p>
-
-<p>But again, let me reiterate: A specification is not a discussion board.</p>
-
-<h2 id="mixing-functional-and-quality-requirements">Mixing Functional and Quality Requirements</h2>
-
-<p>This is how it looks:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User must be able to scroll down through
+</code></pre></div></div><p>This is how you invite me to be creative. I realize that the user of the product doesn’t really have any justifications or expectations for the versioning mechanisms in the API. I’m free to do whatever I can. Great, I’ll do it my way.<p>But again, let me reiterate: A specification is not a discussion board.<h2 id="mixing-functional-and-quality-requirements">Mixing Functional and Quality Requirements</h2><p>This is how it looks:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User must be able to scroll down through
 the list of images in the profile smoothly and fast.
-</code></pre></div></div>
-
-<p>It’s a typical mistake in almost every spec I’ve seen. Here, we mix
-together a functional requirement (“to scroll images”) and
-and a non-functional one (“scrolling is smooth and fast”). Why is it
-bad? Well, there is no specific reason, but it exhibits a lack
-of discipline.</p>
-
-<p>Such a requirement is difficult to verify or test, difficult to trace,
-and difficult to implement. As a programmer, I don’t know what is more
-important: to scroll or to make sure the scrolling is fast.</p>
-
-<p>Also, it is difficult to modify such a statement. If tomorrow we add
-another functional requirement—scrolling a list
-of friends, for example—we’ll want to require this scrolling to also be smooth and fast.
-Then, a few days later, we’ll want to say that “fast” means less than
-10 milliseconds of reaction time. We’ll then have to duplicate this information
-in two places. See how messy our document may become eventually?</p>
-
-<p>Thus, I would strongly recommend you always document functional and non-functional
-requirements separately.</p>
-
-<h2 id="mixing-requirements-and-supplementary-docs">Mixing Requirements and Supplementary Docs</h2>
-
-<p>This is similar to a previous problem and may look like this:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User can download a PDF report that includes a full
+</code></pre></div></div><p>It’s a typical mistake in almost every spec I’ve seen. Here, we mix together a functional requirement (“to scroll images”) and and a non-functional one (“scrolling is smooth and fast”). Why is it bad? Well, there is no specific reason, but it exhibits a lack of discipline.<p>Such a requirement is difficult to verify or test, difficult to trace, and difficult to implement. As a programmer, I don’t know what is more important: to scroll or to make sure the scrolling is fast.<p>Also, it is difficult to modify such a statement. If tomorrow we add another functional requirement—scrolling a list of friends, for example—we’ll want to require this scrolling to also be smooth and fast. Then, a few days later, we’ll want to say that “fast” means less than 10 milliseconds of reaction time. We’ll then have to duplicate this information in two places. See how messy our document may become eventually?<p>Thus, I would strongly recommend you always document functional and non-functional requirements separately.<h2 id="mixing-requirements-and-supplementary-docs">Mixing Requirements and Supplementary Docs</h2><p>This is similar to a previous problem and may look like this:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User can download a PDF report that includes a full
 list of transactions. Each transaction has ID,
 date, description, account, and full amount. The report
 also contains a summary and a link to the user account.
-</code></pre></div></div>
-
-<p>It’s obvious there are two things described in this
-paragraph. First is that a user can download a PDF report. Second is
-how this report should look. The first thing is a functional
-requirement, and the second one must be described in a supplementary
-document (or appendix).</p>
-
-<p>In general, functional requirements must be very short:
-“user downloads,” “user saves,” “client requests and receives,” etc.
-If your text gets any longer, there is something wrong.
-Try to move part of it to a supplementary document.</p>
-
-<h2 id="un-measurable-quality-requirements">Un-measurable Quality Requirements</h2>
-
-<p>This is what I’m talking about:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Credit card numbers must be encrypted.
+</code></pre></div></div><p>It’s obvious there are two things described in this paragraph. First is that a user can download a PDF report. Second is how this report should look. The first thing is a functional requirement, and the second one must be described in a supplementary document (or appendix).<p>In general, functional requirements must be very short: “user downloads,” “user saves,” “client requests and receives,” etc. If your text gets any longer, there is something wrong. Try to move part of it to a supplementary document.<h2 id="un-measurable-quality-requirements">Un-measurable Quality Requirements</h2><p>This is what I’m talking about:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Credit card numbers must be encrypted.
 The app should launch in less than 2 seconds.
 Each web page must open in less than 500 milliseconds.
 User interface must be responsive.
-</code></pre></div></div>
-
-<p>I can find many more examples just by opening requirement specs in
-many projects I’ve seen over the past few years. They all look the same.
-And the problem is always the same: It is very difficult
-to define a truly testable and measurable non-functional requirement.</p>
-
-<p>Yes, it’s difficult. Mostly because there are many factors. Take this
-line, for example: “The app must launch in 2 seconds.” On what equipment?
-With what amount of data in the user profile? What does “launch” mean; does it include
-profile loading time? What if there are launching problems? Do they count?
-There are a lot of questions like that.</p>
-
-<p>If we answer <em>all</em> of them, the requirement text will fill an entire
-page. Nobody wants that, but having un-measurable requirements
-is a greater evil.</p>
-
-<p>Again, it’s not easy, but it’s necessary. Try to make sure all
-quality requirements are complete and without ambiguity.</p>
-
-<h2 id="implementation-instructions">Implementation Instructions</h2>
-
-<p>This example illustrates a very common pitfall:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User authenticates via Facebook login button
+</code></pre></div></div><p>I can find many more examples just by opening requirement specs in many projects I’ve seen over the past few years. They all look the same. And the problem is always the same: It is very difficult to define a truly testable and measurable non-functional requirement.<p>Yes, it’s difficult. Mostly because there are many factors. Take this line, for example: “The app must launch in 2 seconds.” On what equipment? With what amount of data in the user profile? What does “launch” mean; does it include profile loading time? What if there are launching problems? Do they count? There are a lot of questions like that.<p>If we answer <em>all</em> of them, the requirement text will fill an entire page. Nobody wants that, but having un-measurable requirements is a greater evil.<p>Again, it’s not easy, but it’s necessary. Try to make sure all quality requirements are complete and without ambiguity.<h2 id="implementation-instructions">Implementation Instructions</h2><p>This example illustrates a very common pitfall:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User authenticates via Facebook login button
 and we store username, avatar, and email in the
 database.
-</code></pre></div></div>
-
-<p>This is
-<a href="/2015/09/22/micromanagement.html">micromanagement</a>, and
-it’s something a requirements analyst should never do to a programmer.
-You shouldn’t tell me how to implement the functionality you desire.
-You want to give a user the ability to login via Facebook?
-Say so. Do you really care whether it’s going to happen through a button
-click or somehow else? Do you really care what I store in the database?
-What if I use files instead of a database? Is that important to you?</p>
-
-<p>I don’t think so. Only in very rare cases will it matter. Most
-of the time, it’s just micromanagement.</p>
-
-<p>The spec should only require what really matters for the business. Everything
-else is up to us, the programmers. We decide what database to use, where the
-button will be placed, and what information will be stored in the database.</p>
-
-
-
-<p>If you really care about that because there are certain higher-level
-limitations—say so. But again, not as implementation instructions
-to us programmers, but rather as non-functional requirements like this:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Login page must look like this (screenshot attached).
+</code></pre></div></div><p>This is <a href="/2015/09/22/micromanagement.html">micromanagement</a>, and it’s something a requirements analyst should never do to a programmer. You shouldn’t tell me how to implement the functionality you desire. You want to give a user the ability to login via Facebook? Say so. Do you really care whether it’s going to happen through a button click or somehow else? Do you really care what I store in the database? What if I use files instead of a database? Is that important to you?<p>I don’t think so. Only in very rare cases will it matter. Most of the time, it’s just micromanagement.<p>The spec should only require what really matters for the business. Everything else is up to us, the programmers. We decide what database to use, where the button will be placed, and what information will be stored in the database.<p>If you really care about that because there are certain higher-level limitations—say so. But again, not as implementation instructions to us programmers, but rather as non-functional requirements like this:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Login page must look like this (screenshot attached).
 We must store user email locally for future needs.
-</code></pre></div></div>
-
-<p>The point is that I have nothing against requirements, but I’m
-strongly against implementation instructions.</p>
-
-<h2 id="lack-of-actor-perspective">Lack of Actor Perspective</h2>
-
-<p>The text may look like:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PDF report is generated when required. It is
+</code></pre></div></div><p>The point is that I have nothing against requirements, but I’m strongly against implementation instructions.<h2 id="lack-of-actor-perspective">Lack of Actor Perspective</h2><p>The text may look like:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PDF report is generated when required. It is
 possible to download a report or save it
 in the account.
-</code></pre></div></div>
-
-<p>The problem here is that there is no “actor” involved. This functionality
-is more or less clear, but it’s not clear who is doing all this. Where
-is the user? It is just a story of something happening somewhere. That’s not
-really what programmers need in order to implement it.</p>
-
-
-
-<p>The best way to explain functionality is through user stories. And a good
-user story always has, guess what … a user. It always starts with
-“the user …,” followed by a verb. The user downloads, the user saves,
-the user clicks, prints, deletes, formats, etc.</p>
-
-<p>It’s not necessary for the user to be a human. It may be a system, a RESTful API
-client, a database, anything. But always someone. “It is possible to download …”
-is not a user story. It’s possible for who?</p>
-
-<h2 id="noise">Noise</h2>
-
-<p>How about this:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Our primary concern is performance and an attractive
+</code></pre></div></div><p>The problem here is that there is no “actor” involved. This functionality is more or less clear, but it’s not clear who is doing all this. Where is the user? It is just a story of something happening somewhere. That’s not really what programmers need in order to implement it.<p>The best way to explain functionality is through user stories. And a good user story always has, guess what … a user. It always starts with “the user …,” followed by a verb. The user downloads, the user saves, the user clicks, prints, deletes, formats, etc.<p>It’s not necessary for the user to be a human. It may be a system, a RESTful API client, a database, anything. But always someone. “It is possible to download …” is not a user story. It’s possible for who?<h2 id="noise">Noise</h2><p>How about this:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Our primary concern is performance and an attractive
 user interface.
-</code></pre></div></div>
-
-<p>This is noise. As the reader of this document, I’m neither an investor
-nor a user. I’m a programmer. I don’t care what your “primary concern” is
-in this project. My job is to implement the product so that it matches
-the specs. If performance is your primary concern, create measurable
-and testable requirements for me. I will make sure the product satisfies them.
-If you can’t create a requirement, don’t spam me with this irrelevant
-information.</p>
-
-
-
-<p>I don’t want to share your concerns, your beliefs, or your intentions. That’s your
-business. And you’re paid to properly and unambiguously translate all that
-into testable and measurable requirements. If you can’t do this, it’s
-your problem and <em>your fault</em>. Don’t try to make it mine.</p>
-
-<p>Very often … wait. Very, very often. No. Almost always. Wrong again. Always!
-That’s right, spec documents are always full of noise.
-Some of them have a bit less; some have more. I believe this
-is a symptom of <em>lazy</em> and unprofessional document authors. In most cases,
-just lazy.</p>
-
-<p>They don’t want to think and translate their concerns, ideas, thoughts,
-intentions, and objectives into functional and non-functional requirements.
-They just put them into the document and hope the programmers will
-somehow find the right solution. Good programmers should figure out
-what good performance means, right? Let’s just tell them that performance
-is a concern for us, and they will figure something out.</p>
-
-<p>No! Don’t do that. Do your job right and let programmers do theirs.</p>
-
-<p>And we, programmers, should never accept such documents. We should just reject
-them and ask requirements authors to re-work and remove noise. I would recommend not
-even starting to work on a product if there is a lot of noise in its specs.</p>
-
-<h2 id="will-work-needs-to-work-must-work">Will Work, Needs to Work, Must Work</h2>
-
-<p>This is yet another very typical mistake:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The API will support JSON and XML. Both formats
+</code></pre></div></div><p>This is noise. As the reader of this document, I’m neither an investor nor a user. I’m a programmer. I don’t care what your “primary concern” is in this project. My job is to implement the product so that it matches the specs. If performance is your primary concern, create measurable and testable requirements for me. I will make sure the product satisfies them. If you can’t create a requirement, don’t spam me with this irrelevant information.<p>I don’t want to share your concerns, your beliefs, or your intentions. That’s your business. And you’re paid to properly and unambiguously translate all that into testable and measurable requirements. If you can’t do this, it’s your problem and <em>your fault</em>. Don’t try to make it mine.<p>Very often … wait. Very, very often. No. Almost always. Wrong again. Always! That’s right, spec documents are always full of noise. Some of them have a bit less; some have more. I believe this is a symptom of <em>lazy</em> and unprofessional document authors. In most cases, just lazy.<p>They don’t want to think and translate their concerns, ideas, thoughts, intentions, and objectives into functional and non-functional requirements. They just put them into the document and hope the programmers will somehow find the right solution. Good programmers should figure out what good performance means, right? Let’s just tell them that performance is a concern for us, and they will figure something out.<p>No! Don’t do that. Do your job right and let programmers do theirs.<p>And we, programmers, should never accept such documents. We should just reject them and ask requirements authors to re-work and remove noise. I would recommend not even starting to work on a product if there is a lot of noise in its specs.<h2 id="will-work-needs-to-work-must-work">Will Work, Needs to Work, Must Work</h2><p>This is yet another very typical mistake:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The API will support JSON and XML. Both formats
 must fully support all data items. XML needs to
 be validated by XSD schema.
-</code></pre></div></div>
-
-<p>See how messy it sounds? There are three different points of view, and
-none of them are suitable for a specification document. A spec
-must describe a product as if it already exists. A spec must
-sound like a manual, a tutorial, or a reference. This text must be
-re-written like this:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The API supports JSON and XML. Both formats
+</code></pre></div></div><p>See how messy it sounds? There are three different points of view, and none of them are suitable for a specification document. A spec must describe a product as if it already exists. A spec must sound like a manual, a tutorial, or a reference. This text must be re-written like this:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The API supports JSON and XML. Both formats
 fully support all data items. XML is validated
 by XSD schema.
-</code></pre></div></div>
-
-<p>See the difference? All the “must,” “need,” and “will” words are just
-adding doubt to the document. For a reader of this spec,
-“<em>the API will support</em>” sounds like “<em>some time in the future, maybe in
-the next version, it will support</em>.” This is not what the author
-had in mind, right? There should be no doubt, no double meaning, no
-maybe. The API supports. That’s it.</p>
-
-<hr>
-
-<p>I may have forgotten something important, but these issues are so obvious
-and so annoying … I’m going to use this post as a simple guide for our
-system analysts. Feel free to share your experience with requirements
-documents below in the comments.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>See the difference? All the “must,” “need,” and “will” words are just adding doubt to the document. For a reader of this spec, “<em>the API will support</em>” sounds like “<em>some time in the future, maybe in the next version, it will support</em>.” This is not what the author had in mind, right? There should be no doubt, no double meaning, no maybe. The API supports. That’s it.<hr><p>I may have forgotten something important, but these issues are so obvious and so annoying … I’m going to use this post as a simple guide for our system analysts. Feel free to share your experience with requirements documents below in the comments.</article>

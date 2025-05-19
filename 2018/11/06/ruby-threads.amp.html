@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Do You Test Ruby Code for Thread Safety?</title>
-    <link rel="canonical" href="https://www.yegor256.com/2018/11/06/ruby-threads.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Do You Test Ruby Code for Thread Safety?</title><link rel="canonical"href="https://www.yegor256.com/2018/11/06/ruby-threads.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,52 +33,7 @@ you may find this new Ruby gem useful. It helps you start
 multiple threads, run the code inside, and validate the output.
 ",
         "keywords": ["ruby threads", "ruby thread-safety", "ruby concurrency", "test thread safety ruby", "ruby tests"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2018/11/06/ruby-threads.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>6 November 2018</p>
-      <h1>Do You Test Ruby Code for Thread Safety?</h1>
-      <p>Are you a Ruby developer? If you are, I’m pretty sure you have a very
-vague idea of what concurrency and thread safety are. No offense, but this
-is what I’ve figured out after dealing with Ruby code and speaking with Ruby
-programmers over the last half a year. I’ve been writing in Ruby pretty actively
-recently and I do like the language and the ecosystem around it.
-Zold, the experimental cryptocurrency we are creating, is written almost
-entirely in Ruby. What does that tell you? I like Ruby. But when it comes
-to concurrency, there are blank spots. Big time.</p>
-
-
-
-<p>Look at this Ruby class:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'sinatra'</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2018/11/06/ruby-threads.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>6 November 2018<h1>Do You Test Ruby Code for Thread Safety?</h1><p>Are you a Ruby developer? If you are, I’m pretty sure you have a very vague idea of what concurrency and thread safety are. No offense, but this is what I’ve figured out after dealing with Ruby code and speaking with Ruby programmers over the last half a year. I’ve been writing in Ruby pretty actively recently and I do like the language and the ecosystem around it. Zold, the experimental cryptocurrency we are creating, is written almost entirely in Ruby. What does that tell you? I like Ruby. But when it comes to concurrency, there are blank spots. Big time.<p>Look at this Ruby class:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'sinatra'</span>
 <span class="k">class</span> <span class="nc">Front</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
   <span class="n">configure</span> <span class="k">do</span>
     <span class="no">IO</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s1">'idx.txt'</span><span class="p">,</span> <span class="s1">'0'</span><span class="p">)</span>
@@ -100,24 +45,9 @@ to concurrency, there are blank spots. Big time.</p>
   <span class="k">end</span>
 <span class="k">end</span>
 <span class="no">Front</span><span class="p">.</span><span class="nf">run!</span>
-</code></pre></div></div>
-
-<p>It’s a simple web server. It does work—try to run it like this
-(you will need Ruby 2.3+ installed):</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">sinatra</span>
+</code></pre></div></div><p>It’s a simple web server. It does work—try to run it like this (you will need Ruby 2.3+ installed):<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">sinatra</span>
 <span class="err">$</span> <span class="n">ruby</span> <span class="n">server</span><span class="p">.</span><span class="nf">rb</span>
-</code></pre></div></div>
-
-<p>Then, open <code class="language-plaintext highlighter-rouge">http://localhost:4567</code> and you will see the counter. Refresh
-the page and the counter will increment. Try again. It works. The counter
-is in the file <code class="language-plaintext highlighter-rouge">idx.txt</code> and it’s essentially
-a <a href="/2018/07/03/global-variables.html">global variable</a>,
-which we increment on every HTTP request.</p>
-
-<p>Let’s create a unit test for it, to make sure it is automatically tested:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'minitest/autorun'</span>
+</code></pre></div></div><p>Then, open <code class="language-plaintext highlighter-rouge">http://localhost:4567</code> and you will see the counter. Refresh the page and the counter will increment. Try again. It works. The counter is in the file <code class="language-plaintext highlighter-rouge">idx.txt</code> and it’s essentially a <a href="/2018/07/03/global-variables.html">global variable</a>, which we increment on every HTTP request.<p>Let’s create a unit test for it, to make sure it is automatically tested:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'minitest/autorun'</span>
 <span class="nb">require</span> <span class="s1">'net/http'</span>
 <span class="nb">require</span> <span class="s1">'uri'</span>
 <span class="k">class</span> <span class="nc">FrontTest</span> <span class="o">&lt;</span> <span class="no">Minitest</span><span class="o">::</span><span class="no">Test</span>
@@ -131,20 +61,7 @@ which we increment on every HTTP request.</p>
     <span class="no">Front</span><span class="p">.</span><span class="nf">stop!</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre></div></div>
-
-<p>OK, it’s not a unit test, but more like an integration test.
-First we start a web server in a background thread. Then
-we wait for a second, to give that thread enough time to bootstrap
-the server. I know, it’s a very ugly approach, but I don’t have anything
-better for this small example. Next we make an HTTP request and
-compare it with the expected number 1. Finally, we stop the web server.</p>
-
-<p>So far so good. Now, the question is, what will happen when many
-requests are sent to the server? Will it still return the correct,
-consecutive numbers? Let’s try:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_works</span>
+</code></pre></div></div><p>OK, it’s not a unit test, but more like an integration test. First we start a web server in a background thread. Then we wait for a second, to give that thread enough time to bootstrap the server. I know, it’s a very ugly approach, but I don’t have anything better for this small example. Next we make an HTTP request and compare it with the expected number 1. Finally, we stop the web server.<p>So far so good. Now, the question is, what will happen when many requests are sent to the server? Will it still return the correct, consecutive numbers? Let’s try:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_works</span>
   <span class="n">front</span> <span class="o">=</span> <span class="no">Thread</span><span class="p">.</span><span class="nf">start</span> <span class="k">do</span>
     <span class="no">Front</span><span class="p">.</span><span class="nf">run!</span>
   <span class="k">end</span>
@@ -156,19 +73,7 @@ consecutive numbers? Let’s try:</p>
   <span class="n">assert_equal</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">numbers</span><span class="p">.</span><span class="nf">uniq</span><span class="p">.</span><span class="nf">count</span><span class="p">)</span>
   <span class="no">Front</span><span class="p">.</span><span class="nf">stop!</span>
 <span class="k">end</span>
-</code></pre></div></div>
-
-<p>Here we make a thousand requests and put all the returned numbers into an
-array. Then we <code class="language-plaintext highlighter-rouge">uniq</code> the array and <code class="language-plaintext highlighter-rouge">count</code> its elements. If there is
-a thousand of them—everything worked fine, we received a correct list
-of consecutive, unique numbers. I just tested it, and it works.</p>
-
-<p>But we are making them one by one, that’s why our server doesn’t have
-any problems. We aren’t making them concurrently. They go strictly one
-after another. Let’s try to use a few additional threads to simulate
-parallel execution of HTTP requests:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'concurrent/set'</span>
+</code></pre></div></div><p>Here we make a thousand requests and put all the returned numbers into an array. Then we <code class="language-plaintext highlighter-rouge">uniq</code> the array and <code class="language-plaintext highlighter-rouge">count</code> its elements. If there is a thousand of them—everything worked fine, we received a correct list of consecutive, unique numbers. I just tested it, and it works.<p>But we are making them one by one, that’s why our server doesn’t have any problems. We aren’t making them concurrently. They go strictly one after another. Let’s try to use a few additional threads to simulate parallel execution of HTTP requests:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'concurrent/set'</span>
 <span class="k">def</span> <span class="nf">test_works</span>
   <span class="n">front</span> <span class="o">=</span> <span class="no">Thread</span><span class="p">.</span><span class="nf">start</span> <span class="k">do</span>
     <span class="no">Front</span><span class="p">.</span><span class="nf">run!</span>
@@ -187,28 +92,7 @@ parallel execution of HTTP requests:</p>
   <span class="n">assert_equal</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">numbers</span><span class="p">.</span><span class="nf">to_a</span><span class="p">.</span><span class="nf">count</span><span class="p">)</span>
   <span class="no">Front</span><span class="p">.</span><span class="nf">stop!</span>
 <span class="k">end</span>
-</code></pre></div></div>
-
-<p>First of all, we keep the list of numbers in a
-<a href="http://ruby-concurrency.github.io/concurrent-ruby/master/Concurrent/Set.html"><code class="language-plaintext highlighter-rouge">Concurrent::Set</code></a>, which
-is a thread-safe version of Ruby <a href="http://ruby-doc.org/stdlib-2.4.0/libdoc/set/rdoc/Set.html"><code class="language-plaintext highlighter-rouge">Set</code></a>.
-Second, we start five background threads, each of which makes 200 HTTP requests.
-They all run in parallel and we wait for them to finish by calling <code class="language-plaintext highlighter-rouge">join</code> on
-each of them. Finally, we take the numbers out of the Set and validate
-the correctness of the list.</p>
-
-<p>No surprise, it fails.</p>
-
-<p>Of course, you know why. Because the implementation is not <em>thread-safe</em>. When
-one thread is reading the file, another one is writing it. Eventually, and very
-soon, they clash and the contents of the file is broken. The more threads
-we put into the test, the less accurate will be the result.</p>
-
-<p>In order to make this type of testing easier I created
-<a href="https://github.com/yegor256/threads">threads</a>,
-a simple Ruby gem. Here is how it works:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'threads'</span>
+</code></pre></div></div><p>First of all, we keep the list of numbers in a <a href="http://ruby-concurrency.github.io/concurrent-ruby/master/Concurrent/Set.html"><code class="language-plaintext highlighter-rouge">Concurrent::Set</code></a>, which is a thread-safe version of Ruby <a href="http://ruby-doc.org/stdlib-2.4.0/libdoc/set/rdoc/Set.html"><code class="language-plaintext highlighter-rouge">Set</code></a>. Second, we start five background threads, each of which makes 200 HTTP requests. They all run in parallel and we wait for them to finish by calling <code class="language-plaintext highlighter-rouge">join</code> on each of them. Finally, we take the numbers out of the Set and validate the correctness of the list.<p>No surprise, it fails.<p>Of course, you know why. Because the implementation is not <em>thread-safe</em>. When one thread is reading the file, another one is writing it. Eventually, and very soon, they clash and the contents of the file is broken. The more threads we put into the test, the less accurate will be the result.<p>In order to make this type of testing easier I created <a href="https://github.com/yegor256/threads">threads</a>, a simple Ruby gem. Here is how it works:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'threads'</span>
 <span class="k">def</span> <span class="nf">test_works</span>
   <span class="n">front</span> <span class="o">=</span> <span class="no">Thread</span><span class="p">.</span><span class="nf">start</span> <span class="k">do</span>
     <span class="no">Front</span><span class="p">.</span><span class="nf">run!</span>
@@ -221,17 +105,4 @@ a simple Ruby gem. Here is how it works:</p>
   <span class="n">assert_equal</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">numbers</span><span class="p">.</span><span class="nf">to_a</span><span class="p">.</span><span class="nf">count</span><span class="p">)</span>
   <span class="no">Front</span><span class="p">.</span><span class="nf">stop!</span>
 <span class="k">end</span>
-</code></pre></div></div>
-
-<p>That’s it. This single line with <code class="language-plaintext highlighter-rouge">Threads.new()</code> replaces all other lines,
-where we have to create threads, make sure they start at the same time,
-and then collect their results and make sure their stack traces are visible
-in the console if they crash (by default, the error log of a background
-thread is not visible).</p>
-
-<p>Try this gem in your projects, it’s pretty well tested already and I
-use it in all my concurrency tests.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>That’s it. This single line with <code class="language-plaintext highlighter-rouge">Threads.new()</code> replaces all other lines, where we have to create threads, make sure they start at the same time, and then collect their results and make sure their stack traces are visible in the console if they crash (by default, the error log of a background thread is not visible).<p>Try this gem in your projects, it’s pretty well tested already and I use it in all my concurrency tests.</article>

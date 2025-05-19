@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Vertical vs. Horizontal Decomposition of Responsibility</title>
-    <link rel="canonical" href="https://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Vertical vs. Horizontal Decomposition of Responsibility</title><link rel="canonical"href="https://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,52 +33,7 @@ to break a complex object into smaller ones, and we
 can do it right or wrong.
 ",
         "keywords": ["decomposition of responsibility", "decomposition of responsibility in oop", "god object", "single responsibility principle", "SRP in OOP"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>30 August 2016</p>
-      <h1>Vertical vs. Horizontal Decomposition of Responsibility</h1>
-      <p>Objects responsible for too many things are a problem. Because their
-complexity is high, they are difficult to maintain and extend.
-<em>Decomposition of responsibility</em> is what we do in order to break
-these overly complex objects into smaller ones. I see two types of this
-refactoring operation: vertical and horizontal. And I believe
-the former is better than the latter.</p>
-
-
-
-<amp-img src="/images/2016/08/once-upon-a-time-in-america.jpg" alt="Once Upon a Time in America (1984) by Sergio Leone" height="720" width="1280" layout="responsive"></amp-img>
-
-<p>Let’s say this is our code (it is Ruby):</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Log</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2016/08/30/decomposition-of-responsibility.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>30 August 2016<h1>Vertical vs. Horizontal Decomposition of Responsibility</h1><p>Objects responsible for too many things are a problem. Because their complexity is high, they are difficult to maintain and extend. <em>Decomposition of responsibility</em> is what we do in order to break these overly complex objects into smaller ones. I see two types of this refactoring operation: vertical and horizontal. And I believe the former is better than the latter.</p><amp-img src="/images/2016/08/once-upon-a-time-in-america.jpg"alt="Once Upon a Time in America (1984) by Sergio Leone"height="720"width="1280"layout="responsive"></amp-img><p>Let’s say this is our code (it is Ruby):<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Log</span>
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
     <span class="vi">@file</span> <span class="o">=</span> <span class="no">IO</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">)</span>
   <span class="k">end</span>
@@ -97,20 +42,7 @@ the former is better than the latter.</p>
     <span class="vi">@file</span><span class="p">.</span><span class="nf">puts</span> <span class="n">line</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre></div></div>
-
-<p>Obviously, objects of this class are doing too much.
-They save log lines to the
-file and also format them—an obvious violation of
-a famous
-<a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>.
-An object of this class would be <em>responsible</em> for too many things.
-We have to extract some functionality out of it and put that
-into another object(s). We have to <em>decompose</em> its responsibility.
-No matter where we put it, this is how the
-<code class="language-plaintext highlighter-rouge">Log</code> class will look after the extraction:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Log</span>
+</code></pre></div></div><p>Obviously, objects of this class are doing too much. They save log lines to the file and also format them—an obvious violation of a famous <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility principle</a>. An object of this class would be <em>responsible</em> for too many things. We have to extract some functionality out of it and put that into another object(s). We have to <em>decompose</em> its responsibility. No matter where we put it, this is how the <code class="language-plaintext highlighter-rouge">Log</code> class will look after the extraction:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Log</span>
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
     <span class="vi">@file</span> <span class="o">=</span> <span class="no">IO</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">)</span>
   <span class="k">end</span>
@@ -118,19 +50,8 @@ No matter where we put it, this is how the
     <span class="vi">@file</span><span class="p">.</span><span class="nf">puts</span> <span class="n">line</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre></div></div>
-
-<p>Now it only saves lines to the file, which is perfect. The class
-is cohesive and small. Let’s make an instance of it:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span> <span class="o">=</span> <span class="no">Log</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'/tmp/log.txt'</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>Next, where do we put the lines with formatting functionality that were just extracted?
-There are two approaches to decompose responsibility: horizontal and
-vertical. This one is <em>horizontal</em>:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Line</span>
+</code></pre></div></div><p>Now it only saves lines to the file, which is perfect. The class is cohesive and small. Let’s make an instance of it:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span> <span class="o">=</span> <span class="no">Log</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'/tmp/log.txt'</span><span class="p">)</span>
+</code></pre></div></div><p>Next, where do we put the lines with formatting functionality that were just extracted? There are two approaches to decompose responsibility: horizontal and vertical. This one is <em>horizontal</em>:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Line</span>
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
     <span class="vi">@line</span> <span class="o">=</span> <span class="n">text</span>
   <span class="k">end</span>
@@ -138,24 +59,8 @@ vertical. This one is <em>horizontal</em>:</p>
     <span class="no">Time</span><span class="p">.</span><span class="nf">now</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="s2">"%d/%m/%Y %H:%M "</span><span class="p">)</span> <span class="o">+</span> <span class="n">text</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre></div></div>
-
-<p>In order to use <code class="language-plaintext highlighter-rouge">Log</code> and <code class="language-plaintext highlighter-rouge">Line</code> together, we have to do this:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="no">Line</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Hello, world"</span><span class="p">))</span>
-</code></pre></div></div>
-
-<p>See why it’s horizontal? Because this script sees them
-both. They both are on the same level of visibility. We will always have
-to communicate with both of them when we want to log a line. Both
-objects of <code class="language-plaintext highlighter-rouge">Log</code> and <code class="language-plaintext highlighter-rouge">Line</code> are in front of us. We have to deal with
-two classes in order to log a line:</p>
-
-<p><object data="/uml/653125b6c32d12b7325dba52054c09ca.svg" type="image/svg+xml" class="plantuml"></object></p>
-
-<p>To the contrary, this decomposition of responsibility is <em>vertical</em>:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TimedLog</span>
+</code></pre></div></div><p>In order to use <code class="language-plaintext highlighter-rouge">Log</code> and <code class="language-plaintext highlighter-rouge">Line</code> together, we have to do this:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="no">Line</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s2">"Hello, world"</span><span class="p">))</span>
+</code></pre></div></div><p>See why it’s horizontal? Because this script sees them both. They both are on the same level of visibility. We will always have to communicate with both of them when we want to log a line. Both objects of <code class="language-plaintext highlighter-rouge">Log</code> and <code class="language-plaintext highlighter-rouge">Line</code> are in front of us. We have to deal with two classes in order to log a line:<p><object data="/uml/653125b6c32d12b7325dba52054c09ca.svg"type="image/svg+xml"class="plantuml"></object><p>To the contrary, this decomposition of responsibility is <em>vertical</em>:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TimedLog</span>
   <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
     <span class="vi">@origin</span> <span class="o">=</span> <span class="n">log</span>
   <span class="k">end</span>
@@ -163,30 +68,6 @@ two classes in order to log a line:</p>
     <span class="vi">@origin</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="no">Time</span><span class="p">.</span><span class="nf">now</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="s2">"%d/%m/%Y %H:%M "</span><span class="p">)</span> <span class="o">+</span> <span class="n">text</span><span class="p">)</span>
   <span class="k">end</span>
 <span class="k">end</span>
-</code></pre></div></div>
-
-<p>Class <code class="language-plaintext highlighter-rouge">TimedLog</code> is a decorator, and this is how we use them together:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span> <span class="o">=</span> <span class="no">TimedLog</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>Now, we just put a line in the log:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="s2">"Hello, world"</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>The responsibility is decomposed vertically. We still have one entry point
-into the <code class="language-plaintext highlighter-rouge">log</code> object, but the object “consists” of two objects, one wrapped
-into another:</p>
-
-<p><object data="/uml/cad4de541e1ab10d3d9d751c661fe63f.svg" type="image/svg+xml" class="plantuml"></object></p>
-
-<p>In general, I think horizontal decomposition of responsibility is a bad idea,
-while vertical is a much better one. That’s because a vertically
-decomposed object decreases complexity, while a horizontally decomposed
-one actually makes things more complex because its clients have to deal with
-more dependencies and more points of contact.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Class <code class="language-plaintext highlighter-rouge">TimedLog</code> is a decorator, and this is how we use them together:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span> <span class="o">=</span> <span class="no">TimedLog</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+</code></pre></div></div><p>Now, we just put a line in the log:<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">log</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="s2">"Hello, world"</span><span class="p">)</span>
+</code></pre></div></div><p>The responsibility is decomposed vertically. We still have one entry point into the <code class="language-plaintext highlighter-rouge">log</code> object, but the object “consists” of two objects, one wrapped into another:<p><object data="/uml/cad4de541e1ab10d3d9d751c661fe63f.svg"type="image/svg+xml"class="plantuml"></object><p>In general, I think horizontal decomposition of responsibility is a bad idea, while vertical is a much better one. That’s because a vertically decomposed object decreases complexity, while a horizontally decomposed one actually makes things more complex because its clients have to deal with more dependencies and more points of contact.</article>

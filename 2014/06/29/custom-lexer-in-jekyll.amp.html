@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Custom Pygments Lexer in Jekyll</title>
-    <link rel="canonical" href="https://www.yegor256.com/2014/06/29/custom-lexer-in-jekyll.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Custom Pygments Lexer in Jekyll</title><link rel="canonical"href="https://www.yegor256.com/2014/06/29/custom-lexer-in-jekyll.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -42,54 +32,10 @@
 lexer in Jekyll, this article explains how to do it.
 ",
         "keywords": ["jekyll pygments", "jekyll lexer pygments", "custom lexer pygments jekyll", "jekyll pygments custom", "how to use custom pygments in jekyll"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2014/06/29/custom-lexer-in-jekyll.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>29 June 2014</p>
-      <h1>Custom Pygments Lexer in Jekyll</h1>
-      <p>I needed to create a custom syntax highlighting
-for <a href="https://www.requs.org">requs.org</a>
-on which I’m using Jekyll for site rendering.</p>
-
-<p>This is how my code blocks look in markdown pages:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ % highlight requs %}
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2014/06/29/custom-lexer-in-jekyll.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>29 June 2014<h1>Custom Pygments Lexer in Jekyll</h1><p>I needed to create a custom syntax highlighting for <a href="https://www.requs.org">requs.org</a> on which I’m using Jekyll for site rendering.<p>This is how my code blocks look in markdown pages:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ % highlight requs %}
 User is a "human being."
 { % endhighlight %}
-</code></pre></div></div>
-
-<p>I created a custom <a href="http://pygments.org/docs/lexerdevelopment/">Pygments lexer</a>:</p>
-
-
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pygments.lexer</span> <span class="kn">import</span> <span class="n">RegexLexer</span>
+</code></pre></div></div><p>I created a custom <a href="http://pygments.org/docs/lexerdevelopment/">Pygments lexer</a>:<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">pygments.lexer</span> <span class="kn">import</span> <span class="n">RegexLexer</span>
 <span class="kn">from</span> <span class="n">pygments.token</span> <span class="kn">import</span> <span class="n">Punctuation</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">Keyword</span><span class="p">,</span> <span class="n">Name</span><span class="p">,</span> <span class="n">String</span>
 <span class="kn">from</span> <span class="n">pygments.util</span> <span class="kn">import</span> <span class="n">shebang_matches</span>
 <span class="k">class</span> <span class="nc">RequsLexer</span><span class="p">(</span><span class="n">RegexLexer</span><span class="p">):</span>
@@ -106,12 +52,7 @@ User is a "human being."
   <span class="p">}</span>
   <span class="k">def</span> <span class="nf">analyse_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="k">return</span> <span class="nf">shebang_matches</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="sa">r</span><span class="sh">'</span><span class="s">requs</span><span class="sh">'</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>Then, I packaged it for <a href="https://pypi.python.org/pypi/setuptools"><code class="language-plaintext highlighter-rouge">easy_install</code></a>
-and installed locally:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>easy_install src/requs_pygment
+</code></pre></div></div><p>Then, I packaged it for <a href="https://pypi.python.org/pypi/setuptools"><code class="language-plaintext highlighter-rouge">easy_install</code></a> and installed locally:<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>easy_install src/requs_pygment
 Processing requs_pygment
 Running setup.py <span class="nt">-q</span> bdist_egg <span class="nt">--dist-dir</span> ...
 zip_safe flag not <span class="nb">set</span><span class="p">;</span> analyzing archive contents...
@@ -119,11 +60,4 @@ Adding requs-pygment 0.1 to easy-install.pth file
 Installed /Library/Python/2.7/site-packages/requs_pygment-0.1-py2.7.egg
 Processing dependencies <span class="k">for </span>requs-pygment<span class="o">==</span>0.1
 Finished processing dependencies <span class="k">for </span>requs-pygment<span class="o">==</span>0.1
-</code></pre></div></div>
-
-<p>It’s done. Now I run <code class="language-plaintext highlighter-rouge">jekyll build</code> and my syntax
-is highlighted according to the custom rules I specified in the lexer.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>It’s done. Now I run <code class="language-plaintext highlighter-rouge">jekyll build</code> and my syntax is highlighted according to the custom rules I specified in the lexer.</article>

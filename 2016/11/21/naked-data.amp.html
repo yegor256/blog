@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Encapsulation Covers Up Naked Data</title>
-    <link rel="canonical" href="https://www.yegor256.com/2016/11/21/naked-data.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Encapsulation Covers Up Naked Data</title><link rel="canonical"href="https://www.yegor256.com/2016/11/21/naked-data.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,129 +33,18 @@ cohesive, and trustworthy; publicly accessible data
 is what breaks encapsulation.
 ",
         "keywords": ["encapsulation", "encapsulation data", "encapsulation trusted objects", "encapsulation meaning", "encapsulation violation"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2016/11/21/naked-data.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>21 November 2016</p>
-      <h1>Encapsulation Covers Up Naked Data</h1>
-      <p><a href="https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29">Encapsulation</a>
-is the core principle of object-oriented programming
-that makes objects solid, cohesive, trustworthy, etc. But
-what exactly is encapsulation? Does it only protect against access
-to private attributes from outside an object? I think it’s much more.
-Encapsulation leads to the absence of <em>naked</em> data on all levels and in all forms.</p>
-
-
-
-<amp-img src="/images/2016/11/borat.jpg" alt="Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles" height="688" width="1280" layout="responsive"></amp-img>
-
-<p>This is what naked data is (C code):</p>
-
-<pre><code class="language-C">int t;
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2016/11/21/naked-data.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>21 November 2016<h1>Encapsulation Covers Up Naked Data</h1><p><a href="https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29">Encapsulation</a> is the core principle of object-oriented programming that makes objects solid, cohesive, trustworthy, etc. But what exactly is encapsulation? Does it only protect against access to private attributes from outside an object? I think it’s much more. Encapsulation leads to the absence of <em>naked</em> data on all levels and in all forms.</p><amp-img src="/images/2016/11/borat.jpg"alt="Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan (2006) by Larry Charles"height="688"width="1280"layout="responsive"></amp-img><p>This is what naked data is (C code):<pre><code class="language-C">int t;
 t = 85;
 printf("The temperature is %d F", t);
-</code></pre>
-
-<p>Here <code class="language-plaintext highlighter-rouge">t</code> is the data, which is publicly accessible by the code around it.
-Anyone can modify it or read it.</p>
-
-<p>Why is that bad? For one reason: tight and hidden coupling.</p>
-
-<p>The code around <code class="language-plaintext highlighter-rouge">t</code> inevitably makes a lot of assumptions about the data. For
-example, both lines after <code class="language-plaintext highlighter-rouge">int t</code> decided that the temperature is in Fahrenheit.
-At the moment of writing, this may be true, but this assumption couples the
-code with the data. If tomorrow we change <code class="language-plaintext highlighter-rouge">t</code> to Celsius, the code won’t know
-about this change. That’s why I call this coupling <em>hidden</em>.</p>
-
-
-
-<p>If we change the type of <code class="language-plaintext highlighter-rouge">t</code> from <code class="language-plaintext highlighter-rouge">int</code> to, say, <code class="language-plaintext highlighter-rouge">double</code>, the <code class="language-plaintext highlighter-rouge">printf</code>
-line won’t print anything after the decimal point. Again, the coupling is
-there, but it’s hidden. Later on, we simply won’t be able to find all the places in our
-code where we made these or other assumptions about <code class="language-plaintext highlighter-rouge">t</code>.</p>
-
-<p>This will seriously affect maintainability.</p>
-
-<p>And this is not a solution, as you can imagine (Java now):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Temperature</span> <span class="o">{</span>
+</code></pre><p>Here <code class="language-plaintext highlighter-rouge">t</code> is the data, which is publicly accessible by the code around it. Anyone can modify it or read it.<p>Why is that bad? For one reason: tight and hidden coupling.<p>The code around <code class="language-plaintext highlighter-rouge">t</code> inevitably makes a lot of assumptions about the data. For example, both lines after <code class="language-plaintext highlighter-rouge">int t</code> decided that the temperature is in Fahrenheit. At the moment of writing, this may be true, but this assumption couples the code with the data. If tomorrow we change <code class="language-plaintext highlighter-rouge">t</code> to Celsius, the code won’t know about this change. That’s why I call this coupling <em>hidden</em>.<p>If we change the type of <code class="language-plaintext highlighter-rouge">t</code> from <code class="language-plaintext highlighter-rouge">int</code> to, say, <code class="language-plaintext highlighter-rouge">double</code>, the <code class="language-plaintext highlighter-rouge">printf</code> line won’t print anything after the decimal point. Again, the coupling is there, but it’s hidden. Later on, we simply won’t be able to find all the places in our code where we made these or other assumptions about <code class="language-plaintext highlighter-rouge">t</code>.<p>This will seriously affect maintainability.<p>And this is not a solution, as you can imagine (Java now):<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Temperature</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kt">int</span> <span class="n">t</span><span class="o">;</span>
   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getT</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span><span class="o">;</span> <span class="o">}</span>
   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setT</span><span class="o">(</span><span class="kt">int</span> <span class="n">t</span><span class="o">)</span> <span class="o">{</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span> <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>It looks like an object, but the data is still naked. Anyone can retrieve
-<code class="language-plaintext highlighter-rouge">t</code> from the object and decide whether it’s Fahrenheit or Celsius, whether
-it has digits after the dot or not, etc. This is not encapsulation yet!</p>
-
-<p>The only way to encapsulate <code class="language-plaintext highlighter-rouge">t</code> is to make sure nobody can touch
-it either directly or by retrieving it from an object. How do we do that?
-Just stop exposing data and start exposing functionality. Here is how,
-for example:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Temperature</span> <span class="o">{</span>
+</code></pre></div></div><p>It looks like an object, but the data is still naked. Anyone can retrieve <code class="language-plaintext highlighter-rouge">t</code> from the object and decide whether it’s Fahrenheit or Celsius, whether it has digits after the dot or not, etc. This is not encapsulation yet!<p>The only way to encapsulate <code class="language-plaintext highlighter-rouge">t</code> is to make sure nobody can touch it either directly or by retrieving it from an object. How do we do that? Just stop exposing data and start exposing functionality. Here is how, for example:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Temperature</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kt">int</span> <span class="n">t</span><span class="o">;</span>
   <span class="kd">public</span> <span class="nc">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">return</span> <span class="nc">String</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="s">"%d F"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">t</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>We don’t allow anyone to retrieve <code class="language-plaintext highlighter-rouge">t</code> anymore. All they can do is
-convert temperature to text. If and when we decide to change <code class="language-plaintext highlighter-rouge">t</code> to Celsius,
-we will do it just once and in one place: in the class <code class="language-plaintext highlighter-rouge">Temperature</code>.</p>
-
-
-
-<p>If we need other functions in the future, like math operations or conversion
-to Celsius, we add more methods to class <code class="language-plaintext highlighter-rouge">Temperature</code>. But we never
-let anyone touch or know about <code class="language-plaintext highlighter-rouge">t</code>.</p>
-
-<p>This idea is close to
-“<a href="/2016/04/05/printers-instead-of-getters.html">printers instead of getters</a>,”
-which we discussed earlier, though from a much wider perspective.
-Here I’m saying that any data elements that escape objects are <em>naked</em>
-and lead to maintainability problems.</p>
-
-<p>The question is how we can work entirely without naked data, right? Eventually
-we have to let objects exchange data, don’t we? Yes, that’s true. But not entirely.
-I’ll explain that in
-<a href="/2016/12/20/can-objects-be-friends.html">my next post</a>.</p>
-
-<blockquote class="twitter-tweet" data-lang="en">
-<p lang="en" dir="ltr">Has this Java class done enough to encapsulate the price? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a><br><br>class Book {<br>  private int price;<br>  public int getPrice() {<br>    return this.price;<br>  }<br>}</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1104652461430706177?ref_src=twsrc%5Etfw">March 10, 2019</a>
-</blockquote>
-
-
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>We don’t allow anyone to retrieve <code class="language-plaintext highlighter-rouge">t</code> anymore. All they can do is convert temperature to text. If and when we decide to change <code class="language-plaintext highlighter-rouge">t</code> to Celsius, we will do it just once and in one place: in the class <code class="language-plaintext highlighter-rouge">Temperature</code>.<p>If we need other functions in the future, like math operations or conversion to Celsius, we add more methods to class <code class="language-plaintext highlighter-rouge">Temperature</code>. But we never let anyone touch or know about <code class="language-plaintext highlighter-rouge">t</code>.<p>This idea is close to “<a href="/2016/04/05/printers-instead-of-getters.html">printers instead of getters</a>,” which we discussed earlier, though from a much wider perspective. Here I’m saying that any data elements that escape objects are <em>naked</em> and lead to maintainability problems.<p>The question is how we can work entirely without naked data, right? Eventually we have to let objects exchange data, don’t we? Yes, that’s true. But not entirely. I’ll explain that in <a href="/2016/12/20/can-objects-be-friends.html">my next post</a>.<blockquote class="twitter-tweet"data-lang="en"><p lang="en"dir="ltr">Has this Java class done enough to encapsulate the price? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a><br><br>class Book {<br>private int price;<br>public int getPrice() {<br>return this.price;<br>}<br>}</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1104652461430706177?ref_src=twsrc%5Etfw">March 10, 2019</a></blockquote></article>

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>One More Recipe Against NULL</title>
-    <link rel="canonical" href="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>One More Recipe Against NULL</title><link rel="canonical"href="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,99 +33,13 @@ is widely considered a bad practice; there are
 a number of alternatives.
 ",
         "keywords": ["oop null", "null in oop", "return null", "null is evil", "null is bad"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>22 May 2018</p>
-      <h1>One More Recipe Against NULL</h1>
-      <p>You know what NULL is, right? It’s
-<a href="https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare">evil</a>.
-In OOP, your method can return NULL,
-it can accept NULL as an argument, your object can encapsulate it as an attribute,
-or you can assign it to a variable.
-All four scenarios are bad for the maintainability of your code—there
-are no doubts about that.
-The question is what to do instead. Let’s discuss the “return it” part and
-I will suggest one more “best practice” on top of what
-<a href="/2014/05/13/why-null-is-bad.html">was discussed</a> a few years ago.</p>
-
-
-
-<amp-img src="/images/2018/05/snatch.jpg" alt="Snatch (2000) by Guy Ritchie" height="688" width="1280" layout="responsive"></amp-img>
-
-<p>Look at this code:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Integer</span> <span class="nf">max</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2018/05/22/default-arguments-against-null.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>22 May 2018<h1>One More Recipe Against NULL</h1><p>You know what NULL is, right? It’s <a href="https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare">evil</a>. In OOP, your method can return NULL, it can accept NULL as an argument, your object can encapsulate it as an attribute, or you can assign it to a variable. All four scenarios are bad for the maintainability of your code—there are no doubts about that. The question is what to do instead. Let’s discuss the “return it” part and I will suggest one more “best practice” on top of what <a href="/2014/05/13/why-null-is-bad.html">was discussed</a> a few years ago.</p><amp-img src="/images/2018/05/snatch.jpg"alt="Snatch (2000) by Guy Ritchie"height="688"width="1280"layout="responsive"></amp-img><p>Look at this code:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Integer</span> <span class="nf">max</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">)</span> <span class="o">{</span>
   <span class="c1">// Calculate the maximum of all</span>
   <span class="c1">// items and return it.</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>What should this method do if the list is empty?
-Java’s <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#max-java.util.Collection-"><code class="language-plaintext highlighter-rouge">Collections.max()</code></a>
-throws an exception.
-Ruby’s <a href="https://ruby-doc.org/core-2.5.1/Enumerable.html#method-i-max"><code class="language-plaintext highlighter-rouge">Enumerable.max()</code></a>
-returns <code class="language-plaintext highlighter-rouge">nil</code>.
-PHP’s <a href="http://php.net/manual/en/function.max.php"><code class="language-plaintext highlighter-rouge">max()</code></a>
-returns <code class="language-plaintext highlighter-rouge">FALSE</code>.
-Python’s <a href="https://docs.python.org/3/library/functions.html#max"><code class="language-plaintext highlighter-rouge">max()</code></a>
-raises an exception.
-C#’s <a href="https://msdn.microsoft.com/en-us/library/bb335614(v=vs.110).aspx"><code class="language-plaintext highlighter-rouge">Enumerable.Max()</code></a>
-also throws an exception.
-JavaScript’s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code class="language-plaintext highlighter-rouge">Math.max()</code></a>
-returns <code class="language-plaintext highlighter-rouge">NaN</code>.</p>
-
-<p>Which is the right way, huh? An exception, NULL, false or NaN?</p>
-
-<p>An exception, if you ask me.</p>
-
-<p>But there is yet another approach, which is better than an exception. This one:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Integer</span> <span class="nf">max</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">,</span> <span class="nc">Integer</span> <span class="n">def</span><span class="o">)</span> <span class="o">{</span>
+</code></pre></div></div><p>What should this method do if the list is empty? Java’s <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#max-java.util.Collection-"><code class="language-plaintext highlighter-rouge">Collections.max()</code></a> throws an exception. Ruby’s <a href="https://ruby-doc.org/core-2.5.1/Enumerable.html#method-i-max"><code class="language-plaintext highlighter-rouge">Enumerable.max()</code></a> returns <code class="language-plaintext highlighter-rouge">nil</code>. PHP’s <a href="http://php.net/manual/en/function.max.php"><code class="language-plaintext highlighter-rouge">max()</code></a> returns <code class="language-plaintext highlighter-rouge">FALSE</code>. Python’s <a href="https://docs.python.org/3/library/functions.html#max"><code class="language-plaintext highlighter-rouge">max()</code></a> raises an exception. C#’s <a href="https://msdn.microsoft.com/en-us/library/bb335614(v=vs.110).aspx"><code class="language-plaintext highlighter-rouge">Enumerable.Max()</code></a> also throws an exception. JavaScript’s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max"><code class="language-plaintext highlighter-rouge">Math.max()</code></a> returns <code class="language-plaintext highlighter-rouge">NaN</code>.<p>Which is the right way, huh? An exception, NULL, false or NaN?<p>An exception, if you ask me.<p>But there is yet another approach, which is better than an exception. This one:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Integer</span> <span class="nf">max</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">items</span><span class="o">,</span> <span class="nc">Integer</span> <span class="n">def</span><span class="o">)</span> <span class="o">{</span>
   <span class="c1">// Calculate the maximum of all</span>
   <span class="c1">// items and return it. Returns 'def' if the</span>
   <span class="c1">// list is empty.</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>The “default” object will be returned if the list is empty. This feature
-is implemented in Python’s <a href="https://docs.python.org/3/library/functions.html#max"><code class="language-plaintext highlighter-rouge">max()</code></a> function:
-it’s possible to pass both a list and a default element to return in case the list
-is empty. If the default element is not provided, the exception will be raised.</p>
-
-<blockquote class="twitter-tweet" data-lang="en">
-<p lang="en" dir="ltr">Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw">April 29, 2018</a>
-</blockquote>
-
-
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>The “default” object will be returned if the list is empty. This feature is implemented in Python’s <a href="https://docs.python.org/3/library/functions.html#max"><code class="language-plaintext highlighter-rouge">max()</code></a> function: it’s possible to pass both a list and a default element to return in case the list is empty. If the default element is not provided, the exception will be raised.<blockquote class="twitter-tweet"data-lang="en"><p lang="en"dir="ltr">Say, you are designing a method findUserByName(), which has to find a user in the database. What would you return if nothing is found? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a></p>--- Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/990459955818979329?ref_src=twsrc%5Etfw">April 29, 2018</a></blockquote></article>

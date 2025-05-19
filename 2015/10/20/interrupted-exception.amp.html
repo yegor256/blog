@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>What Do You Do With InterruptedException?</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/10/20/interrupted-exception.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>What Do You Do With InterruptedException?</title><link rel="canonical"href="https://www.yegor256.com/2015/10/20/interrupted-exception.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,64 +33,10 @@ source of pain for many of us; here is my understanding
 of how it should be handled.
 ",
         "keywords": ["InterruptedException", "InterruptedException java", "InterruptedException example", "InterruptedException checked or unchecked", "InterruptedException sleep"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/10/20/interrupted-exception.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>20 October 2015</p>
-      <h1>What Do You Do With InterruptedException?</h1>
-      <p><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html"><code class="language-plaintext highlighter-rouge">InterruptedException</code></a>
-is a permanent source of pain in Java, for
-junior developers especially. But it shouldn’t be. It’s a rather
-simple and easy-to-understand idea. Let me try to describe and
-simplify it.</p>
-
-
-
-<amp-img src="/images/2015/10/crouching-tiger-hidden-dragon.jpg" alt="Crouching Tiger, Hidden Dragon (2000) by Ang Lee" height="516" width="1200" layout="responsive"></amp-img>
-
-<p>Let’s start with this code:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/10/20/interrupted-exception.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>20 October 2015<h1>What Do You Do With InterruptedException?</h1><p><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html"><code class="language-plaintext highlighter-rouge">InterruptedException</code></a> is a permanent source of pain in Java, for junior developers especially. But it shouldn’t be. It’s a rather simple and easy-to-understand idea. Let me try to describe and simplify it.</p><amp-img src="/images/2015/10/crouching-tiger-hidden-dragon.jpg"alt="Crouching Tiger, Hidden Dragon (2000) by Ang Lee"height="516"width="1200"layout="responsive"></amp-img><p>Let’s start with this code:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="o">(</span><span class="kc">true</span><span class="o">)</span> <span class="o">{</span>
   <span class="c1">// Nothing</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>What does it do? Nothing, it just spins the CPU endlessly. Can we terminate it?
-Not in Java. It will only stop when the entire JVM stops, when you hit
-<code class="language-plaintext highlighter-rouge">Ctrl-C</code>. There is no way in Java to terminate a thread unless the
-thread exits by itself. That’s the principle we have to have in mind,
-and everything else will just be obvious.</p>
-
-<p>Let’s put this endless loop into a thread:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Thread</span> <span class="n">loop</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Thread</span><span class="o">(</span>
+</code></pre></div></div><p>What does it do? Nothing, it just spins the CPU endlessly. Can we terminate it? Not in Java. It will only stop when the entire JVM stops, when you hit <code class="language-plaintext highlighter-rouge">Ctrl-C</code>. There is no way in Java to terminate a thread unless the thread exits by itself. That’s the principle we have to have in mind, and everything else will just be obvious.<p>Let’s put this endless loop into a thread:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Thread</span> <span class="n">loop</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Thread</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">Runnable</span><span class="o">()</span> <span class="o">{</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
@@ -111,16 +47,7 @@ and everything else will just be obvious.</p>
 <span class="o">);</span>
 <span class="n">loop</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
 <span class="c1">// Now how do we stop it?</span>
-</code></pre></div></div>
-
-<p>So, how do we stop a thread when we need it to stop?</p>
-
-<p>Here is how it is designed in Java.
-There is a flag in every thread that we can set from the outside. And
-the thread may check it occasionally and stop its execution. Voluntarily!
-Here is how:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Thread</span> <span class="n">loop</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Thread</span><span class="o">(</span>
+</code></pre></div></div><p>So, how do we stop a thread when we need it to stop?<p>Here is how it is designed in Java. There is a flag in every thread that we can set from the outside. And the thread may check it occasionally and stop its execution. Voluntarily! Here is how:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Thread</span> <span class="n">loop</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Thread</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">Runnable</span><span class="o">()</span> <span class="o">{</span>
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
@@ -135,38 +62,7 @@ Here is how:</p>
 <span class="o">);</span>
 <span class="n">loop</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
 <span class="n">loop</span><span class="o">.</span><span class="na">interrupt</span><span class="o">();</span>
-</code></pre></div></div>
-
-<p>This is the only way to ask a thread to stop. There are two methods that
-are used in this example. When I call <code class="language-plaintext highlighter-rouge">loop.interrupt()</code>, a flag
-is set to <code class="language-plaintext highlighter-rouge">true</code> somewhere inside the thread <code class="language-plaintext highlighter-rouge">loop</code>. When I call
-<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupted%28%29"><code class="language-plaintext highlighter-rouge">interrupted()</code></a>,
-the flag is returned and immediately set to <code class="language-plaintext highlighter-rouge">false</code>. Yeah, that’s the design
-of the method. It checks the flag, returns it, and sets it to <code class="language-plaintext highlighter-rouge">false</code>. It’s ugly,
-I know.</p>
-
-<p>Thus, if I never call <code class="language-plaintext highlighter-rouge">Thread.interrupted()</code> inside the thread and don’t
-exit when the flag is <code class="language-plaintext highlighter-rouge">true</code>, nobody will be able to stop me. Literally,
-I will just ignore their calls to <code class="language-plaintext highlighter-rouge">interrupt()</code>. They will ask me to stop,
-but I will ignore them. They won’t be able to interrupt me.</p>
-
-<p>Thus, to summarize what we’ve learned so far, a properly designed thread
-will check that flag once in a while and stop gracefully. If the
-code doesn’t check the flag and never calls <code class="language-plaintext highlighter-rouge">Thread.interrupted()</code>, it
-accepts the fact that sooner or later it will be terminated cold turkey,
-by clicking <code class="language-plaintext highlighter-rouge">Ctrl-C</code>.</p>
-
-
-
-<p>Sound logical so far? I hope so.</p>
-
-<p>Now, there are some methods in JDK that check the flag for us and throw
-<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html"><code class="language-plaintext highlighter-rouge">InterruptedException</code></a>
-if it is set. For example, this is how the method
-<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#sleep%28long%29"><code class="language-plaintext highlighter-rouge">Thread.sleep()</code></a>
-is designed (taking a very primitive approach):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sleep</span><span class="o">(</span><span class="kt">long</span> <span class="n">millis</span><span class="o">)</span>
+</code></pre></div></div><p>This is the only way to ask a thread to stop. There are two methods that are used in this example. When I call <code class="language-plaintext highlighter-rouge">loop.interrupt()</code>, a flag is set to <code class="language-plaintext highlighter-rouge">true</code> somewhere inside the thread <code class="language-plaintext highlighter-rouge">loop</code>. When I call <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupted%28%29"><code class="language-plaintext highlighter-rouge">interrupted()</code></a>, the flag is returned and immediately set to <code class="language-plaintext highlighter-rouge">false</code>. Yeah, that’s the design of the method. It checks the flag, returns it, and sets it to <code class="language-plaintext highlighter-rouge">false</code>. It’s ugly, I know.<p>Thus, if I never call <code class="language-plaintext highlighter-rouge">Thread.interrupted()</code> inside the thread and don’t exit when the flag is <code class="language-plaintext highlighter-rouge">true</code>, nobody will be able to stop me. Literally, I will just ignore their calls to <code class="language-plaintext highlighter-rouge">interrupt()</code>. They will ask me to stop, but I will ignore them. They won’t be able to interrupt me.<p>Thus, to summarize what we’ve learned so far, a properly designed thread will check that flag once in a while and stop gracefully. If the code doesn’t check the flag and never calls <code class="language-plaintext highlighter-rouge">Thread.interrupted()</code>, it accepts the fact that sooner or later it will be terminated cold turkey, by clicking <code class="language-plaintext highlighter-rouge">Ctrl-C</code>.<p>Sound logical so far? I hope so.<p>Now, there are some methods in JDK that check the flag for us and throw <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/InterruptedException.html"><code class="language-plaintext highlighter-rouge">InterruptedException</code></a> if it is set. For example, this is how the method <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#sleep%28long%29"><code class="language-plaintext highlighter-rouge">Thread.sleep()</code></a> is designed (taking a very primitive approach):<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sleep</span><span class="o">(</span><span class="kt">long</span> <span class="n">millis</span><span class="o">)</span>
   <span class="kd">throws</span> <span class="nc">InterruptedException</span> <span class="o">{</span>
   <span class="k">while</span> <span class="o">(</span><span class="cm">/* You still need to wait */</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="nc">Thread</span><span class="o">.</span><span class="na">interrupted</span><span class="o">())</span> <span class="o">{</span>
@@ -175,47 +71,12 @@ is designed (taking a very primitive approach):</p>
     <span class="c1">// Keep waiting</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Why is it done this way? Why can’t it just wait and never check the flag?
-Well, I believe it’s done for a good reason. And the reason is the following
-(correct me if I’m wrong): The code should either be bullet-fast or
-interruption-ready, nothing in between.</p>
-
-<p>If your code is fast, you never check the interruption flag, because you
-don’t want to deal with any interruptions.
-If your code is slow and may take seconds to execute, make it explicit
-and handle interruptions somehow.</p>
-
-<p>That’s why <code class="language-plaintext highlighter-rouge">InterruptedException</code> is a
-<a href="/2015/07/28/checked-vs-unchecked-exceptions.html">checked</a>
-exception. Its design
-tells you that if you want to pause for a few milliseconds, make your
-code interruption-ready. This is how it looks in practice:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+</code></pre></div></div><p>Why is it done this way? Why can’t it just wait and never check the flag? Well, I believe it’s done for a good reason. And the reason is the following (correct me if I’m wrong): The code should either be bullet-fast or interruption-ready, nothing in between.<p>If your code is fast, you never check the interruption flag, because you don’t want to deal with any interruptions. If your code is slow and may take seconds to execute, make it explicit and handle interruptions somehow.<p>That’s why <code class="language-plaintext highlighter-rouge">InterruptedException</code> is a <a href="/2015/07/28/checked-vs-unchecked-exceptions.html">checked</a> exception. Its design tells you that if you want to pause for a few milliseconds, make your code interruption-ready. This is how it looks in practice:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
   <span class="nc">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span>
 <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">InterruptedException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
   <span class="c1">// Stop immediately and go home</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Well, you could let it float up to a higher level, where they will be
-responsible for catching it. The point is that someone will have to
-catch it and do something with the thread. Ideally, just stop it, since that’s
-what the flag is about. If <code class="language-plaintext highlighter-rouge">InterruptedException</code> is thrown, it means
-someone checked the flag and our thread has to finish what it’s doing ASAP.</p>
-
-<p>The owner of the thread
-<a href="/2014/06/20/limit-method-execution-time.html">doesn’t want to wait</a>
-any longer. And we must respect the decision of our owner.</p>
-
-<p>Thus, when you catch <code class="language-plaintext highlighter-rouge">InterruptedException</code>, you have to do whatever
-it takes to wrap up what you’re doing and exit.</p>
-
-<p>Now, look again at the code of <code class="language-plaintext highlighter-rouge">Thread.sleep()</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sleep</span><span class="o">(</span><span class="kt">long</span> <span class="n">millis</span><span class="o">)</span>
+</code></pre></div></div><p>Well, you could let it float up to a higher level, where they will be responsible for catching it. The point is that someone will have to catch it and do something with the thread. Ideally, just stop it, since that’s what the flag is about. If <code class="language-plaintext highlighter-rouge">InterruptedException</code> is thrown, it means someone checked the flag and our thread has to finish what it’s doing ASAP.<p>The owner of the thread <a href="/2014/06/20/limit-method-execution-time.html">doesn’t want to wait</a> any longer. And we must respect the decision of our owner.<p>Thus, when you catch <code class="language-plaintext highlighter-rouge">InterruptedException</code>, you have to do whatever it takes to wrap up what you’re doing and exit.<p>Now, look again at the code of <code class="language-plaintext highlighter-rouge">Thread.sleep()</code>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">sleep</span><span class="o">(</span><span class="kt">long</span> <span class="n">millis</span><span class="o">)</span>
   <span class="kd">throws</span> <span class="nc">InterruptedException</span> <span class="o">{</span>
   <span class="k">while</span> <span class="o">(</span><span class="cm">/* ... */</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="nc">Thread</span><span class="o">.</span><span class="na">interrupted</span><span class="o">())</span> <span class="o">{</span>
@@ -223,65 +84,15 @@ it takes to wrap up what you’re doing and exit.</p>
     <span class="o">}</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Remember, <code class="language-plaintext highlighter-rouge">Thread.interrupted()</code> not only returns the flag but also
-sets it to <code class="language-plaintext highlighter-rouge">false</code>. Thus, once <code class="language-plaintext highlighter-rouge">InterruptedException</code> is thrown, the
-flag is reset. The thread no longer knows anything about the
-interruption request sent by the owner.</p>
-
-<p>The owner of the thread asked us to stop,
-<code class="language-plaintext highlighter-rouge">Thread.sleep()</code> detected that request,
-removed it, and threw <code class="language-plaintext highlighter-rouge">InterruptedException</code>. If you call <code class="language-plaintext highlighter-rouge">Thread.sleep()</code>,
-again, it will not know anything about that interruption request and will
-not <a href="/2015/12/01/rethrow-exceptions.html">throw</a> anything.</p>
-
-<p>See what I’m getting at? It’s very important not to lose that
-<code class="language-plaintext highlighter-rouge">InterruptedException</code>. We can’t just swallow it and move on. That would
-be a severe violation of the entire Java multi-threading idea.
-Our owner (the owner of our thread) is
-asking us to stop, and we just ignore it. That’s a very bad idea.</p>
-
-<p>This is what most of us are doing with <code class="language-plaintext highlighter-rouge">InterruptedException</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+</code></pre></div></div><p>Remember, <code class="language-plaintext highlighter-rouge">Thread.interrupted()</code> not only returns the flag but also sets it to <code class="language-plaintext highlighter-rouge">false</code>. Thus, once <code class="language-plaintext highlighter-rouge">InterruptedException</code> is thrown, the flag is reset. The thread no longer knows anything about the interruption request sent by the owner.<p>The owner of the thread asked us to stop, <code class="language-plaintext highlighter-rouge">Thread.sleep()</code> detected that request, removed it, and threw <code class="language-plaintext highlighter-rouge">InterruptedException</code>. If you call <code class="language-plaintext highlighter-rouge">Thread.sleep()</code>, again, it will not know anything about that interruption request and will not <a href="/2015/12/01/rethrow-exceptions.html">throw</a> anything.<p>See what I’m getting at? It’s very important not to lose that <code class="language-plaintext highlighter-rouge">InterruptedException</code>. We can’t just swallow it and move on. That would be a severe violation of the entire Java multi-threading idea. Our owner (the owner of our thread) is asking us to stop, and we just ignore it. That’s a very bad idea.<p>This is what most of us are doing with <code class="language-plaintext highlighter-rouge">InterruptedException</code>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
   <span class="nc">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span>
 <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">InterruptedException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
   <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>It looks logical, but it doesn’t guarantee that the higher level will
-actually stop everything and exit. They may just catch a runtime exception
-there, and the thread will remain alive. The owner of the thread will be disappointed.</p>
-
-<p>We have to inform the higher level that we just caught an interruption
-request. We can’t just throw a runtime exception. Such behavior would
-be too <a href="/2015/11/24/imprisonment-for-irresponsible-coding.html">irresponsible</a>.
-The entire thread received an interruption request,
-and we merely swallow it and convert it into a <code class="language-plaintext highlighter-rouge">RuntimeException</code>.
-We can’t treat such a serious situation so loosely.</p>
-
-<p>This is what we have to do:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+</code></pre></div></div><p>It looks logical, but it doesn’t guarantee that the higher level will actually stop everything and exit. They may just catch a runtime exception there, and the thread will remain alive. The owner of the thread will be disappointed.<p>We have to inform the higher level that we just caught an interruption request. We can’t just throw a runtime exception. Such behavior would be too <a href="/2015/11/24/imprisonment-for-irresponsible-coding.html">irresponsible</a>. The entire thread received an interruption request, and we merely swallow it and convert it into a <code class="language-plaintext highlighter-rouge">RuntimeException</code>. We can’t treat such a serious situation so loosely.<p>This is what we have to do:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
   <span class="nc">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span>
 <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">InterruptedException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
   <span class="nc">Thread</span><span class="o">.</span><span class="na">currentThread</span><span class="o">().</span><span class="na">interrupt</span><span class="o">();</span> <span class="c1">// Here!</span>
   <span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="n">ex</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>We’re setting the flag back to <code class="language-plaintext highlighter-rouge">true</code>!</p>
-
-<p>Now, nobody will blame us for having an irresponsible attitude toward a valuable flag. We
-found it in <code class="language-plaintext highlighter-rouge">true</code> status, cleared it, set it back to <code class="language-plaintext highlighter-rouge">true</code>, and threw
-a runtime exception. What happens next, we don’t care.</p>
-
-<p>I think that’s it. You can find a more detailed and official description
-of this problem here:
-<a href="https://www.ibm.com/developerworks/library/j-jtp05236/">Java Theory and Practice: Dealing With <code class="language-plaintext highlighter-rouge">InterruptedException</code></a>.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>We’re setting the flag back to <code class="language-plaintext highlighter-rouge">true</code>!<p>Now, nobody will blame us for having an irresponsible attitude toward a valuable flag. We found it in <code class="language-plaintext highlighter-rouge">true</code> status, cleared it, set it back to <code class="language-plaintext highlighter-rouge">true</code>, and threw a runtime exception. What happens next, we don’t care.<p>I think that’s it. You can find a more detailed and official description of this problem here: <a href="https://www.ibm.com/developerworks/library/j-jtp05236/">Java Theory and Practice: Dealing With <code class="language-plaintext highlighter-rouge">InterruptedException</code></a>.</article>

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Defensive Programming via Validating Decorators</title>
-    <link rel="canonical" href="https://www.yegor256.com/2016/01/26/defensive-programming.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Defensive Programming via Validating Decorators</title><link rel="canonical"href="https://www.yegor256.com/2016/01/26/defensive-programming.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,52 +33,7 @@ it gets implemented is, in most cases, very wrong;
 here is what I'm suggesting instead.
 ",
         "keywords": ["defensive programming", "validators in oop", "check for null", "validate method arguments", "startup failure stories"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2016/01/26/defensive-programming.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>26 January 2016</p>
-      <h1>Defensive Programming via Validating Decorators</h1>
-      <p>Do you check the input parameters of your methods for validity?
-I don’t. I used to, but not anymore.
-I just let my methods crash with a null pointer and other exceptions
-when parameters are not valid.
-This may sound illogical, but only in the beginning.
-I’m suggesting you use <em>validating decorators</em> instead.</p>
-
-
-
-<amp-img src="/images/2016/01/shi-mian-mai-fu.jpg" alt="Shi mian mai fu (2004) by Yimou Zhang" height="508" width="1200" layout="responsive"></amp-img>
-
-<p>Let’s take a look at this rather typical Java example:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Report</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2016/01/26/defensive-programming.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>26 January 2016<h1>Defensive Programming via Validating Decorators</h1><p>Do you check the input parameters of your methods for validity? I don’t. I used to, but not anymore. I just let my methods crash with a null pointer and other exceptions when parameters are not valid. This may sound illogical, but only in the beginning. I’m suggesting you use <em>validating decorators</em> instead.</p><amp-img src="/images/2016/01/shi-mian-mai-fu.jpg"alt="Shi mian mai fu (2004) by Yimou Zhang"height="508"width="1200"layout="responsive"></amp-img><p>Let’s take a look at this rather typical Java example:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Report</span> <span class="o">{</span>
   <span class="kt">void</span> <span class="nf">export</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">file</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
       <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalArgumentException</span><span class="o">(</span>
@@ -103,39 +48,16 @@ I’m suggesting you use <em>validating decorators</em> instead.</p>
     <span class="c1">// Export the report to the file</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Pretty <a href="https://en.wikipedia.org/wiki/Defensive_programming">defensive</a>, right?
-If we remove these validations, the code
-will be much shorter, but it will crash with rather confusing messages
-if <code class="language-plaintext highlighter-rouge">NULL</code> is provided by the client. Moreover, if the file already exists,
-our <code class="language-plaintext highlighter-rouge">Report</code> will silently overwrite it. Pretty dangerous, right?</p>
-
-<p>Yes, we must protect ourselves, and we must be defensive.</p>
-
-<p>But not this way, not by bloating the class with validations that
-have nothing to do with its core functionality. Instead, we should
-use decorators to do the validation. Here is how. First,
-there must be an interface <code class="language-plaintext highlighter-rouge">Report</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Report</span> <span class="o">{</span>
+</code></pre></div></div><p>Pretty <a href="https://en.wikipedia.org/wiki/Defensive_programming">defensive</a>, right? If we remove these validations, the code will be much shorter, but it will crash with rather confusing messages if <code class="language-plaintext highlighter-rouge">NULL</code> is provided by the client. Moreover, if the file already exists, our <code class="language-plaintext highlighter-rouge">Report</code> will silently overwrite it. Pretty dangerous, right?<p>Yes, we must protect ourselves, and we must be defensive.<p>But not this way, not by bloating the class with validations that have nothing to do with its core functionality. Instead, we should use decorators to do the validation. Here is how. First, there must be an interface <code class="language-plaintext highlighter-rouge">Report</code>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">interface</span> <span class="nc">Report</span> <span class="o">{</span>
   <span class="kt">void</span> <span class="nf">export</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Then, a class that implements the core functionality:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DefaultReport</span> <span class="kd">implements</span> <span class="nc">Report</span> <span class="o">{</span>
+</code></pre></div></div><p>Then, a class that implements the core functionality:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DefaultReport</span> <span class="kd">implements</span> <span class="nc">Report</span> <span class="o">{</span>
   <span class="nd">@Override</span>
   <span class="kt">void</span> <span class="nf">export</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// Export the report to the file</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>And, finally, a number of decorators that will protect us:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">NoWriteOverReport</span> <span class="kd">implements</span> <span class="nc">Report</span> <span class="o">{</span>
+</code></pre></div></div><p>And, finally, a number of decorators that will protect us:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">NoWriteOverReport</span> <span class="kd">implements</span> <span class="nc">Report</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">Report</span> <span class="n">origin</span><span class="o">;</span>
   <span class="nc">NoWriteOverReport</span><span class="o">(</span><span class="nc">Report</span> <span class="n">rep</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">.</span><span class="na">origin</span> <span class="o">=</span> <span class="n">rep</span><span class="o">;</span>
@@ -150,41 +72,10 @@ there must be an interface <code class="language-plaintext highlighter-rouge">Re
     <span class="k">this</span><span class="o">.</span><span class="na">origin</span><span class="o">.</span><span class="na">export</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Now, the client has the flexibility of composing a complex object
-from decorators that perform their specific tasks. The core object
-will do the reporting, while the decorators will validate parameters:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Report</span> <span class="n">report</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NoNullReport</span><span class="o">(</span>
+</code></pre></div></div><p>Now, the client has the flexibility of composing a complex object from decorators that perform their specific tasks. The core object will do the reporting, while the decorators will validate parameters:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Report</span> <span class="n">report</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">NoNullReport</span><span class="o">(</span>
   <span class="k">new</span> <span class="nf">NoWriteOverReport</span><span class="o">(</span>
     <span class="k">new</span> <span class="nf">DefaultReport</span><span class="o">()</span>
   <span class="o">)</span>
 <span class="o">);</span>
 <span class="n">report</span><span class="o">.</span><span class="na">export</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>What do we achieve with this approach?
-First and foremost: smaller objects.
-And smaller objects always mean higher <em>maintainability</em>.
-Our <code class="language-plaintext highlighter-rouge">DefaultReport</code> class will always remain small, no matter
-how many validations we may invent in the future. The
-more things we need to validate, the more validating decorators
-we will create. All of them will be small and cohesive. And we’ll
-be able to put them together in different variations.</p>
-
-<p>Besides that, this approach makes our code much more
-<em>reusable</em>, as classes perform very few operations
-and don’t defend themselves by default. While being defensive
-is an important feature, we’ll use validating decorators. But
-this will not always be the case. Sometimes validation is just
-too expensive in terms of time and memory, and we may want to work
-directly with objects that don’t defend themselves.</p>
-
-<p>I also decided not to use the Java Validation API anymore for the
-same reason. Its annotations make classes much more verbose
-and less cohesive. I’m using validating decorators instead.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>What do we achieve with this approach? First and foremost: smaller objects. And smaller objects always mean higher <em>maintainability</em>. Our <code class="language-plaintext highlighter-rouge">DefaultReport</code> class will always remain small, no matter how many validations we may invent in the future. The more things we need to validate, the more validating decorators we will create. All of them will be small and cohesive. And we’ll be able to put them together in different variations.<p>Besides that, this approach makes our code much more <em>reusable</em>, as classes perform very few operations and don’t defend themselves by default. While being defensive is an important feature, we’ll use validating decorators. But this will not always be the case. Sometimes validation is just too expensive in terms of time and memory, and we may want to work directly with objects that don’t defend themselves.<p>I also decided not to use the Java Validation API anymore for the same reason. Its annotations make classes much more verbose and less cohesive. I’m using validating decorators instead.</article>

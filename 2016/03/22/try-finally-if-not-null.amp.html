@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Try. Finally. If. Not. Null.</title>
-    <link rel="canonical" href="https://www.yegor256.com/2016/03/22/try-finally-if-not-null.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Try. Finally. If. Not. Null.</title><link rel="canonical"href="https://www.yegor256.com/2016/03/22/try-finally-if-not-null.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,51 +33,7 @@ finally checking for null is such a typical and
 annoying mistake.
 ",
         "keywords": ["close stream java", "java try catch", "java finally", "java close stream in finally", "java close stream try catch"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2016/03/22/try-finally-if-not-null.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>22 March 2016</p>
-      <h1>Try. Finally. If. Not. Null.</h1>
-      <p>There is a very typical mistake in pre-Java7 “try/finally” scenario,
-which I keep seeing in so many code reviews. I just have to write about it.
-Java7 introduced a solution, but it doesn’t cover all situations.
-Sometimes we need to deal with non-<code class="language-plaintext highlighter-rouge">AutoCloseable</code> resources. Let’s
-open and close them correctly, please.</p>
-
-
-
-<amp-img src="/images/2016/03/lock-stock-two-smoking-barrels.jpg" alt="Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie" height="675" width="1200" layout="responsive"></amp-img>
-
-<p>This is how it looks (assuming we are in Java 6):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2016/03/22/try-finally-if-not-null.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>22 March 2016<h1>Try. Finally. If. Not. Null.</h1><p>There is a very typical mistake in pre-Java7 “try/finally” scenario, which I keep seeing in so many code reviews. I just have to write about it. Java7 introduced a solution, but it doesn’t cover all situations. Sometimes we need to deal with non-<code class="language-plaintext highlighter-rouge">AutoCloseable</code> resources. Let’s open and close them correctly, please.</p><amp-img src="/images/2016/03/lock-stock-two-smoking-barrels.jpg"alt="Lock, Stock and Two Smoking Barrels (1998) by Guy Ritchie"height="675"width="1200"layout="responsive"></amp-img><p>This is how it looks (assuming we are in Java 6):<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 <span class="k">try</span> <span class="o">{</span>
   <span class="n">input</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
   <span class="c1">// reads the stream, throws IOException</span>
@@ -98,16 +44,7 @@ open and close them correctly, please.</p>
     <span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-
-
-<p>I already wrote about <a href="/2014/05/13/why-null-is-bad.html"><code class="language-plaintext highlighter-rouge">null</code></a>
-and its evil nature. Here it comes again. If you just follow the rule
-of “not using NULL anywhere ever,” this code would need an immediate
-refactoring. Its correct version will look like this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
+</code></pre></div></div><p>I already wrote about <a href="/2014/05/13/why-null-is-bad.html"><code class="language-plaintext highlighter-rouge">null</code></a> and its evil nature. Here it comes again. If you just follow the rule of “not using NULL anywhere ever,” this code would need an immediate refactoring. Its correct version will look like this:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">input</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
 <span class="k">try</span> <span class="o">{</span>
   <span class="c1">// reads the stream, throws IOException</span>
 <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
@@ -115,15 +52,7 @@ refactoring. Its correct version will look like this:</p>
 <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
   <span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>There is no <code class="language-plaintext highlighter-rouge">null</code> anymore and it’s very clean. Isn’t it?</p>
-
-<p>There are situations when opening the resource itself throws <code class="language-plaintext highlighter-rouge">IOException</code>
-and we can’t put it outside of <code class="language-plaintext highlighter-rouge">try/catch</code>. In that case, we have to have
-<strong>two</strong> <code class="language-plaintext highlighter-rouge">try/catch</code> blocks:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">input</span><span class="o">;</span>
+</code></pre></div></div><p>There is no <code class="language-plaintext highlighter-rouge">null</code> anymore and it’s very clean. Isn’t it?<p>There are situations when opening the resource itself throws <code class="language-plaintext highlighter-rouge">IOException</code> and we can’t put it outside of <code class="language-plaintext highlighter-rouge">try/catch</code>. In that case, we have to have <strong>two</strong> <code class="language-plaintext highlighter-rouge">try/catch</code> blocks:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="nc">InputStream</span> <span class="n">input</span><span class="o">;</span>
 <span class="k">try</span> <span class="o">{</span>
   <span class="n">input</span> <span class="o">=</span> <span class="n">url</span><span class="o">.</span><span class="na">openStream</span><span class="o">();</span>
 <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">IOException</span> <span class="n">ex</span><span class="o">)</span> <span class="o">{</span>
@@ -136,17 +65,4 @@ and we can’t put it outside of <code class="language-plaintext highlighter-rou
 <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
   <span class="n">input</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>But there should be no <code class="language-plaintext highlighter-rouge">null</code>, never!</p>
-
-<p>The presence of <code class="language-plaintext highlighter-rouge">null</code> in Java code is a clear indicator of code smell. Something
-is not right if you have to use <code class="language-plaintext highlighter-rouge">null</code>. The only place where the presence of <code class="language-plaintext highlighter-rouge">null</code>
-is justified is where we’re using third-party APIs or JDK. They may return
-<code class="language-plaintext highlighter-rouge">null</code> sometimes because… well, their design is bad. We have
-no other option but to do <code class="language-plaintext highlighter-rouge">if(x==null)</code>. But that’s it. No other places
-are good for <code class="language-plaintext highlighter-rouge">null</code>.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>But there should be no <code class="language-plaintext highlighter-rouge">null</code>, never!<p>The presence of <code class="language-plaintext highlighter-rouge">null</code> in Java code is a clear indicator of code smell. Something is not right if you have to use <code class="language-plaintext highlighter-rouge">null</code>. The only place where the presence of <code class="language-plaintext highlighter-rouge">null</code> is justified is where we’re using third-party APIs or JDK. They may return <code class="language-plaintext highlighter-rouge">null</code> sometimes because… well, their design is bad. We have no other option but to do <code class="language-plaintext highlighter-rouge">if(x==null)</code>. But that’s it. No other places are good for <code class="language-plaintext highlighter-rouge">null</code>.</article>

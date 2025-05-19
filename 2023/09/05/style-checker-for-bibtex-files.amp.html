@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Bibcop: Style Checker for BibTeX</title>
-    <link rel="canonical" href="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Bibcop: Style Checker for BibTeX</title><link rel="canonical"href="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,63 +33,7 @@ may judge the quality of your research paper; bibcop helps
 you keep everything clean.
 ",
         "keywords": ["bibtex style", "bibtex static analyis", "bibtex style checker", "bib files checker", "check quality of bibtex files"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>5 September 2023</p>
-      <h1>Bibcop: Style Checker for BibTeX</h1>
-      <p>Almost every document you may write in
-<a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> format will
-have a list of references at the end. Most likely, you will
-use <a href="https://www.ctan.org/pkg/bibtex">BibTeX</a>
-or <a href="https://www.ctan.org/pkg/biblatex">BibLaTeX</a>
-to print this list of references in a nicely formatted way.
-It is also highly probable that your <code class="language-plaintext highlighter-rouge">.bib</code> file will contain
-many typographic, stylistic, and logical mistakes. I’m fairly
-certain that you won’t find the time to identify and correct them.
-As a result, the “References” section in your paper may appear sloppy.
-I suggest using the <a href="https://www.ctan.org/pkg/bibcop"><code class="language-plaintext highlighter-rouge">bibcop</code></a>
-package, which identifies mistakes in the <code class="language-plaintext highlighter-rouge">.bib</code> file
-and auto-fixes some of them.</p>
-
-
-
-<p>Here is a practical example. Let’s say, you want to
-cite a famous paper about transformers. First, you find it in
-<a href="https://scholar.google.com/">Google Scholar</a> and click “Cite”:</p>
-
-
-
-<p>Then, you put this “bib” item into your <code class="language-plaintext highlighter-rouge">main.bib</code> file:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@article</span><span class="o">{</span><span class="n">vaswani2017attention</span><span class="o">,</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2023/09/05/style-checker-for-bibtex-files.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>5 September 2023<h1>Bibcop: Style Checker for BibTeX</h1><p>Almost every document you may write in <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> format will have a list of references at the end. Most likely, you will use <a href="https://www.ctan.org/pkg/bibtex">BibTeX</a> or <a href="https://www.ctan.org/pkg/biblatex">BibLaTeX</a> to print this list of references in a nicely formatted way. It is also highly probable that your <code class="language-plaintext highlighter-rouge">.bib</code> file will contain many typographic, stylistic, and logical mistakes. I’m fairly certain that you won’t find the time to identify and correct them. As a result, the “References” section in your paper may appear sloppy. I suggest using the <a href="https://www.ctan.org/pkg/bibcop"><code class="language-plaintext highlighter-rouge">bibcop</code></a> package, which identifies mistakes in the <code class="language-plaintext highlighter-rouge">.bib</code> file and auto-fixes some of them.<p>Here is a practical example. Let’s say, you want to cite a famous paper about transformers. First, you find it in <a href="https://scholar.google.com/">Google Scholar</a> and click “Cite”:<p>Then, you put this “bib” item into your <code class="language-plaintext highlighter-rouge">main.bib</code> file:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@article</span><span class="o">{</span><span class="n">vaswani2017attention</span><span class="o">,</span>
   <span class="n">title</span><span class="o">={</span><span class="nc">Attention</span> <span class="n">is</span> <span class="n">all</span> <span class="n">you</span> <span class="n">need</span><span class="o">},</span>
   <span class="n">author</span><span class="o">={</span><span class="nc">Vaswani</span><span class="o">,</span> <span class="nc">Ashish</span> <span class="n">and</span> <span class="nc">Shazeer</span><span class="o">,</span> <span class="nc">Noam</span> <span class="n">and</span>
     <span class="nc">Parmar</span><span class="o">,</span> <span class="nc">Niki</span> <span class="n">and</span> <span class="nc">Uszkoreit</span><span class="o">,</span> <span class="nc">Jakob</span> <span class="n">and</span> <span class="nc">Jones</span><span class="o">,</span> <span class="nc">Llion</span> <span class="n">and</span>
@@ -108,11 +42,7 @@ cite a famous paper about transformers. First, you find it in
   <span class="n">volume</span><span class="o">={</span><span class="mi">30</span><span class="o">},</span>
   <span class="n">year</span><span class="o">={</span><span class="mi">2017</span><span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Then, you write something like this in your paper:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">\</span><span class="n">documentclass</span><span class="o">{</span><span class="n">article</span><span class="o">}</span>
+</code></pre></div></div><p>Then, you write something like this in your paper:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">\</span><span class="n">documentclass</span><span class="o">{</span><span class="n">article</span><span class="o">}</span>
 <span class="err">\</span><span class="n">usepackage</span><span class="o">[</span><span class="n">maxbibnames</span><span class="o">=</span><span class="mi">9</span><span class="o">]{</span><span class="n">biblatex</span><span class="o">}</span>
 <span class="err">\</span><span class="n">addbibresource</span><span class="o">{</span><span class="n">main</span><span class="o">.</span><span class="na">bib</span><span class="o">}</span>
 <span class="err">\</span><span class="n">begin</span><span class="o">{</span><span class="n">document</span><span class="o">}</span>
@@ -120,46 +50,12 @@ cite a famous paper about transformers. First, you find it in
 <span class="n">changed</span> <span class="n">everything</span><span class="o">!</span>
 <span class="err">\</span><span class="n">printbibliography</span>
 <span class="err">\</span><span class="n">end</span><span class="o">{</span><span class="n">document</span><span class="o">}</span>
-</code></pre></div></div>
-
-<p>This is what you will get:</p>
-
-
-
-<p>Looks more or less fine.
-However, if you go to <a href="https://proceedings.neurips.cc/paper_files/paper/2017">the website</a>
-of the publisher of this article, you will see that:</p>
-
-<ul>
-  <li>The name of <a href="https://proceedings.neurips.cc/">the journal</a> is typed with first letters capitalized in all major words,</li>
-  <li>The title of the paper is also capitalized,</li>
-  <li>The middle name of “Aidan N. Gomez” has a trailing dot.</li>
-</ul>
-
-<p>In other words, Google Scholar gave you the citation with a few typographic
-mistakes. While not fatal, the quality of the “References” section
-can sometimes be seen as reflective of the quality of the paper as a whole.
-Simply put, negligence is not forgivable when dealing with information about other authors.
-We must be accurate down to every letter and every dot.</p>
-
-<p>By including <code class="language-plaintext highlighter-rouge">bibcop</code> package to the document, the problem may be solved.
-First, you install it (I assume, you are using <a href="https://tug.org/texlive/">TeX Live</a>):</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>tlmgr <span class="nb">install </span>bibcop
-</code></pre></div></div>
-
-<p>Then, you add this to your document, right before the <code class="language-plaintext highlighter-rouge">\addbibresource</code> command:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">...</span>
+</code></pre></div></div><p>This is what you will get:<p>Looks more or less fine. However, if you go to <a href="https://proceedings.neurips.cc/paper_files/paper/2017">the website</a> of the publisher of this article, you will see that:<ul><li>The name of <a href="https://proceedings.neurips.cc/">the journal</a> is typed with first letters capitalized in all major words,<li>The title of the paper is also capitalized,<li>The middle name of “Aidan N. Gomez” has a trailing dot.</ul><p>In other words, Google Scholar gave you the citation with a few typographic mistakes. While not fatal, the quality of the “References” section can sometimes be seen as reflective of the quality of the paper as a whole. Simply put, negligence is not forgivable when dealing with information about other authors. We must be accurate down to every letter and every dot.<p>By including <code class="language-plaintext highlighter-rouge">bibcop</code> package to the document, the problem may be solved. First, you install it (I assume, you are using <a href="https://tug.org/texlive/">TeX Live</a>):<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>tlmgr <span class="nb">install </span>bibcop
+</code></pre></div></div><p>Then, you add this to your document, right before the <code class="language-plaintext highlighter-rouge">\addbibresource</code> command:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">...</span>
 <span class="err">\</span><span class="n">usepackage</span><span class="o">{</span><span class="n">bibcop</span><span class="o">}</span>
 <span class="err">\</span><span class="n">addbibresource</span><span class="o">{</span><span class="n">main</span><span class="o">.</span><span class="na">bib</span><span class="o">}</span>
 <span class="o">...</span>
-</code></pre></div></div>
-
-<p>When you compile the document, the following warnings will be printed
-to the console, together with other logs:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Package bibcop Warning: A shortened name must have
+</code></pre></div></div><p>When you compile the document, the following warnings will be printed to the console, together with other logs:<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Package bibcop Warning: A shortened name must have
   a tailing dot in the 6th 'author', as in 'Knuth, Donald E.',
   in the 'vaswani2017attention' entry.
 Package bibcop Warning: All major words in the 'title'
@@ -171,39 +67,6 @@ Package bibcop Warning: A mandatory 'doi' tag for '@article'
 Package bibcop Warning: The 'title' must be wrapped
   in double curled brackets,
   in the 'vaswani2017attention' entry.
-</code></pre></div></div>
-
-<p>You fix them all in the <code class="language-plaintext highlighter-rouge">main.bib</code> file and recompile the document:</p>
-
-
-
-<p>This one looks much better to me
-(especially with the <a href="https://en.wikipedia.org/wiki/Digital_object_identifier">DOI</a>, which
-was not provided by Google Scholar).</p>
-
-<p>By the way, some formatting problems may be auto-fixed by bibcop.
-You can use it from the command line, assuming you have your
-<code class="language-plaintext highlighter-rouge">main.bib</code> file in the current directory:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bibcop <span class="nt">--fix</span> <span class="nt">--in-place</span> main.bib
-</code></pre></div></div>
-
-<p>This command will make as many fixes as possible.
-Then, you can run <code class="language-plaintext highlighter-rouge">bibcop</code> again, from the command line,
-in order to check what style violations are still there:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bibcop main.bib
-</code></pre></div></div>
-
-<p>This will print the same errors as you saw earlier in the LaTeX log.</p>
-
-<hr>
-
-<p><a href="https://ctan.org/pkg/bibcop">In CTAN</a>, you can find full PDF documentation.</p>
-
-<p>You are welcome to suggest additional style checkers,
-via <a href="https://github.com/yegor256/bibcop">GitHub issues</a>.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>You fix them all in the <code class="language-plaintext highlighter-rouge">main.bib</code> file and recompile the document:<p>This one looks much better to me (especially with the <a href="https://en.wikipedia.org/wiki/Digital_object_identifier">DOI</a>, which was not provided by Google Scholar).<p>By the way, some formatting problems may be auto-fixed by bibcop. You can use it from the command line, assuming you have your <code class="language-plaintext highlighter-rouge">main.bib</code> file in the current directory:<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bibcop <span class="nt">--fix</span> <span class="nt">--in-place</span> main.bib
+</code></pre></div></div><p>This command will make as many fixes as possible. Then, you can run <code class="language-plaintext highlighter-rouge">bibcop</code> again, from the command line, in order to check what style violations are still there:<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bibcop main.bib
+</code></pre></div></div><p>This will print the same errors as you saw earlier in the LaTeX log.<hr><p><a href="https://ctan.org/pkg/bibcop">In CTAN</a>, you can find full PDF documentation.<p>You are welcome to suggest additional style checkers, via <a href="https://github.com/yegor256/bibcop">GitHub issues</a>.</article>

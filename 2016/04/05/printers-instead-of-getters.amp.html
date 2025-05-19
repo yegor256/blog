@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Printers Instead of Getters</title>
-    <link rel="canonical" href="https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Printers Instead of Getters</title><link rel="canonical"href="https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,67 +33,13 @@ to convert an object to, say, JSON or plain text?
 I'm suggesting to use printers.
 ",
         "keywords": ["getters and setters", "how to avoid getters", "alternative to getters", "getters java", "getters and setters java"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>5 April 2016</p>
-      <h1>Printers Instead of Getters</h1>
-      <p>Getters and setters <a href="/2014/09/16/getters-and-setters-are-evil.html">are evil</a>.
-No need to argue about this, it’s settled. You disagree?
-Let’s discuss that later. For now, let’s say, we want to get rid of getters.
-The key question is how is it possible at all? We do need to get
-the data out of an object, right? Nope. Wrong.</p>
-
-
-
-<amp-img src="/images/2016/04/amelie.jpg" alt="Le fabuleux destin d'Amélie Poulain (2001) by Jean-Pierre Jeunet" height="675" width="1200" layout="responsive"></amp-img>
-
-<p>I’m suggesting to use “printers” instead. Instead of exposing
-data via getters, an object will have a functionality of <em>printing</em>
-itself to some media.</p>
-
-<p>Let’s say this is our class:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2016/04/05/printers-instead-of-getters.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>5 April 2016<h1>Printers Instead of Getters</h1><p>Getters and setters <a href="/2014/09/16/getters-and-setters-are-evil.html">are evil</a>. No need to argue about this, it’s settled. You disagree? Let’s discuss that later. For now, let’s say, we want to get rid of getters. The key question is how is it possible at all? We do need to get the data out of an object, right? Nope. Wrong.</p><amp-img src="/images/2016/04/amelie.jpg"alt="Le fabuleux destin d'Amélie Poulain (2001) by Jean-Pierre Jeunet"height="675"width="1200"layout="responsive"></amp-img><p>I’m suggesting to use “printers” instead. Instead of exposing data via getters, an object will have a functionality of <em>printing</em> itself to some media.<p>Let’s say this is our class:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">isbn</span> <span class="o">=</span>
     <span class="s">"0735619654"</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span>
     <span class="s">"Object Thinking"</span><span class="o">;</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>We need it to be transferred into XML format. A more
-or less traditional way to do it is via getters and
-<a href="/2015/03/26/jaxb-vs-xembly.html">JAXB</a>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlElement</span><span class="o">;</span>
+</code></pre></div></div><p>We need it to be transferred into XML format. A more or less traditional way to do it is via getters and <a href="/2015/03/26/jaxb-vs-xembly.html">JAXB</a>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlElement</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">javax.xml.bind.annotation.XmlRootElement</span><span class="o">;</span>
 <span class="nd">@XmlRootElement</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
@@ -120,36 +56,7 @@ or less traditional way to do it is via getters and
     <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>This is a very <a href="/2014/12/01/orm-offensive-anti-pattern.html">offensive</a>
-way of treating the
-<a href="/2014/11/20/seven-virtues-of-good-object.html">object</a>. We’re basically
-exposing everything that’s inside to the public. It was a nice
-little self-sufficient solid object and we turned it into a
-<a href="/2016/07/06/data-transfer-object.html">bag of data</a>,
-which anyone can access in many possible ways. We can access it for reading, of course.</p>
-
-<p>It is convenient to have these getters, you may say. We are all used to them.
-If we want to convert it into
-<a href="/2015/11/16/json-vs-xml.html">JSON</a>,
-they will be very helpful. If we want
-to use this poor object as a data object in JSP, getters will help us. There
-are many examples in Java, where getters are being actively used.</p>
-
-
-
-<p>This is <em>not</em> because they are so effective. This is because we’re so
-<a href="/2015/02/20/utility-classes-vs-functional-programming.html"><em>procedural</em></a>
-in our way of thinking. We <em>don’t trust</em> our objects. We only trust
-the data they store. We don’t want this <code class="language-plaintext highlighter-rouge">Book</code> object to generate the XML. We
-want it to give us the data. We will build the XML. The <code class="language-plaintext highlighter-rouge">Book</code> is too stupid
-to do that job. We’re way smarter!</p>
-
-<p>I’m suggesting to stop thinking this way. Instead, let’s try to give
-this poor <code class="language-plaintext highlighter-rouge">Book</code> a chance, and equip it with a “printer”:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+</code></pre></div></div><p>This is a very <a href="/2014/12/01/orm-offensive-anti-pattern.html">offensive</a> way of treating the <a href="/2014/11/20/seven-virtues-of-good-object.html">object</a>. We’re basically exposing everything that’s inside to the public. It was a nice little self-sufficient solid object and we turned it into a <a href="/2016/07/06/data-transfer-object.html">bag of data</a>, which anyone can access in many possible ways. We can access it for reading, of course.<p>It is convenient to have these getters, you may say. We are all used to them. If we want to convert it into <a href="/2015/11/16/json-vs-xml.html">JSON</a>, they will be very helpful. If we want to use this poor object as a data object in JSP, getters will help us. There are many examples in Java, where getters are being actively used.<p>This is <em>not</em> because they are so effective. This is because we’re so <a href="/2015/02/20/utility-classes-vs-functional-programming.html"><em>procedural</em></a> in our way of thinking. We <em>don’t trust</em> our objects. We only trust the data they store. We don’t want this <code class="language-plaintext highlighter-rouge">Book</code> object to generate the XML. We want it to give us the data. We will build the XML. The <code class="language-plaintext highlighter-rouge">Book</code> is too stupid to do that job. We’re way smarter!<p>I’m suggesting to stop thinking this way. Instead, let’s try to give this poor <code class="language-plaintext highlighter-rouge">Book</code> a chance, and equip it with a “printer”:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">isbn</span> <span class="o">=</span>
     <span class="s">"0735619654"</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span>
@@ -161,16 +68,7 @@ this poor <code class="language-plaintext highlighter-rouge">Book</code> a chanc
     <span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>This isn’t the <a href="/2015/03/26/jaxb-vs-xembly.html">best</a>
-implementation, but you got the idea. The object is not
-exposing its internals any more. We can’t get its ISBN and its title. We
-can only ask it to print itself in XML format.</p>
-
-<p>We can add an additional printer, if another format is required:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+</code></pre></div></div><p>This isn’t the <a href="/2015/03/26/jaxb-vs-xembly.html">best</a> implementation, but you got the idea. The object is not exposing its internals any more. We can’t get its ISBN and its title. We can only ask it to print itself in XML format.<p>We can add an additional printer, if another format is required:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">isbn</span> <span class="o">=</span>
     <span class="s">"0735619654"</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span>
@@ -182,23 +80,7 @@ can only ask it to print itself in XML format.</p>
     <span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Again, not the best implementation, but you see what I’m trying to show.
-Each time we need a new format, we create a new printer.</p>
-
-<p>You may say that the object will be rather big if there will be many formats.
-That’s true, but a big object is a bad design in the first place. I would
-say that if there is more than one printer—it’s a problem.</p>
-
-<p>So, what to do if we need multiple formats? Use “media,” where that printers
-will be able to print to. Say, we have an object that represents a
-record in MySQL. We want it to be printable to XML, HTML, JSON, some binary
-format and God knows what else. We can add that many printers to it, but
-the object will be big and ugly. To avoid that, introduce a new object,
-that represents the media where the data will be printed to:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
+</code></pre></div></div><p>Again, not the best implementation, but you see what I’m trying to show. Each time we need a new format, we create a new printer.<p>You may say that the object will be rather big if there will be many formats. That’s true, but a big object is a bad design in the first place. I would say that if there is more than one printer—it’s a problem.<p>So, what to do if we need multiple formats? Use “media,” where that printers will be able to print to. Say, we have an object that represents a record in MySQL. We want it to be printable to XML, HTML, JSON, some binary format and God knows what else. We can add that many printers to it, but the object will be big and ugly. To avoid that, introduce a new object, that represents the media where the data will be printed to:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">isbn</span> <span class="o">=</span>
     <span class="s">"0735619654"</span><span class="o">;</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">title</span> <span class="o">=</span>
@@ -209,17 +91,7 @@ that represents the media where the data will be printed to:</p>
       <span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"title"</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">title</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Again, it’s a very primitive design of that
-<a href="/2014/06/09/objects-should-be-immutable.html">immutable</a>
-<code class="language-plaintext highlighter-rouge">Media</code> class, but you got
-the idea—the <code class="language-plaintext highlighter-rouge">media</code> accepts the data.
-Now, we want to print our object to JSON
-(this design is not really perfect, since <code class="language-plaintext highlighter-rouge">JsonObjectBuilder</code> is not immutable,
-even though it looks like one…):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">JsonMedia</span> <span class="kd">implements</span> <span class="nc">Media</span> <span class="o">{</span>
+</code></pre></div></div><p>Again, it’s a very primitive design of that <a href="/2014/06/09/objects-should-be-immutable.html">immutable</a> <code class="language-plaintext highlighter-rouge">Media</code> class, but you got the idea—the <code class="language-plaintext highlighter-rouge">media</code> accepts the data. Now, we want to print our object to JSON (this design is not really perfect, since <code class="language-plaintext highlighter-rouge">JsonObjectBuilder</code> is not immutable, even though it looks like one…):<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">JsonMedia</span> <span class="kd">implements</span> <span class="nc">Media</span> <span class="o">{</span>
   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">JsonObjectBuilder</span> <span class="n">builder</span><span class="o">;</span>
   <span class="nc">JsonMedia</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">this</span><span class="o">(</span><span class="s">"book"</span><span class="o">);</span>
@@ -240,25 +112,7 @@ even though it looks like one…):</p>
     <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">builder</span><span class="o">.</span><span class="na">build</span><span class="o">();</span>
   <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Now, we make an instance of <code class="language-plaintext highlighter-rouge">JsonMedia</code> and ask our book to print
-itself there:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">JsonMedia</span> <span class="n">media</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JsonMedia</span><span class="o">(</span><span class="s">"book"</span><span class="o">);</span>
+</code></pre></div></div><p>Now, we make an instance of <code class="language-plaintext highlighter-rouge">JsonMedia</code> and ask our book to print itself there:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">JsonMedia</span> <span class="n">media</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JsonMedia</span><span class="o">(</span><span class="s">"book"</span><span class="o">);</span>
 <span class="n">media</span> <span class="o">=</span> <span class="n">book</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">media</span><span class="o">);</span>
 <span class="nc">JsonObject</span> <span class="n">json</span> <span class="o">=</span> <span class="n">media</span><span class="o">.</span><span class="na">json</span><span class="o">();</span>
-</code></pre></div></div>
-
-<p>Voilà! The JSON object is ready and the book has no idea about what
-exactly what printed just now. We need to print the book to XML? We
-create <code class="language-plaintext highlighter-rouge">XmlMedia</code>, which will print the book to XML. The <code class="language-plaintext highlighter-rouge">Book</code> class
-stays small, while the complexity of “media” objects is unlimited.</p>
-
-<p>My point here is simple—no
-<a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a>,
-just printers!</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Voilà! The JSON object is ready and the book has no idea about what exactly what printed just now. We need to print the book to XML? We create <code class="language-plaintext highlighter-rouge">XmlMedia</code>, which will print the book to XML. The <code class="language-plaintext highlighter-rouge">Book</code> class stays small, while the complexity of “media” objects is unlimited.<p>My point here is simple—no <a href="/2014/09/16/getters-and-setters-are-evil.html">getters</a>, just printers!</article>

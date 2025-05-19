@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>How to Set Up a Private Maven Repository in Amazon S3</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>How to Set Up a Private Maven Repository in Amazon S3</title><link rel="canonical"href="https://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,67 +33,7 @@ artifacts, automatically deploying them there, and making
 them available through s3auth.com.
 ",
         "keywords": ["private maven repository", "maven repository s3", "maven repository s3auth", "amazon s3 maven", "amazon s3 maven repository"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>7 September 2015</p>
-      <h1>How to Set Up a Private Maven Repository in Amazon S3</h1>
-      <p><a href="https://aws.amazon.com/s3/">Amazon S3</a>
-is a perfect place for keeping private <a href="https://maven.apache.org/">Maven</a> artifacts.
-I assume you keep public artifacts in
-<a href="/2014/08/19/how-to-release-to-maven-central.html">Maven Central</a> because
-you want them to be available to everybody. Private artifacts
-are those you don’t want visible to anyone except members
-of your team. Thus, you want to deploy your <code class="language-plaintext highlighter-rouge">.jar</code> files there
-and make sure they are visible only by your team. Here is how we do
-this in all <a href="https://www.zerocracy.com">our</a> Java projects.</p>
-
-
-
-<h2 id="create-an-s3-bucket">Create an S3 Bucket</h2>
-
-<p>First, you create a new S3 bucket. I would recommend you name it using
-your project domain and a prefix. For example, with <code class="language-plaintext highlighter-rouge">repo.teamed.io</code>,
-<code class="language-plaintext highlighter-rouge">repo</code> is a prefix and <code class="language-plaintext highlighter-rouge">teamed.io</code> is the domain.</p>
-
-<p>There’s no need to configure any permissions for this bucket. Just create it
-through the <a href="https://console.aws.amazon.com/console/home">Amazon S3 console</a>.</p>
-
-<h2 id="create-an-iam-user">Create an IAM User</h2>
-
-<p>Create a new IAM user. I recommend you name it like <code class="language-plaintext highlighter-rouge">teamed-maven</code>
-if your project name is <code class="language-plaintext highlighter-rouge">teamed</code>.</p>
-
-<p>Add a new “inline policy” to the user:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/09/07/maven-repository-amazon-s3.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>7 September 2015<h1>How to Set Up a Private Maven Repository in Amazon S3</h1><p><a href="https://aws.amazon.com/s3/">Amazon S3</a> is a perfect place for keeping private <a href="https://maven.apache.org/">Maven</a> artifacts. I assume you keep public artifacts in <a href="/2014/08/19/how-to-release-to-maven-central.html">Maven Central</a> because you want them to be available to everybody. Private artifacts are those you don’t want visible to anyone except members of your team. Thus, you want to deploy your <code class="language-plaintext highlighter-rouge">.jar</code> files there and make sure they are visible only by your team. Here is how we do this in all <a href="https://www.zerocracy.com">our</a> Java projects.<h2 id="create-an-s3-bucket">Create an S3 Bucket</h2><p>First, you create a new S3 bucket. I would recommend you name it using your project domain and a prefix. For example, with <code class="language-plaintext highlighter-rouge">repo.teamed.io</code>, <code class="language-plaintext highlighter-rouge">repo</code> is a prefix and <code class="language-plaintext highlighter-rouge">teamed.io</code> is the domain.<p>There’s no need to configure any permissions for this bucket. Just create it through the <a href="https://console.aws.amazon.com/console/home">Amazon S3 console</a>.<h2 id="create-an-iam-user">Create an IAM User</h2><p>Create a new IAM user. I recommend you name it like <code class="language-plaintext highlighter-rouge">teamed-maven</code> if your project name is <code class="language-plaintext highlighter-rouge">teamed</code>.<p>Add a new “inline policy” to the user:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   "Statement": [
     {
       "Effect": "Allow",
@@ -115,26 +45,9 @@ if your project name is <code class="language-plaintext highlighter-rouge">teame
     }
   ]
 }
-</code></pre></div></div>
-
-<p>Here, <code class="language-plaintext highlighter-rouge">repo.teamed.io</code> is the name of the S3 bucket you
-created a minute ago.</p>
-
-<p>Make sure you have an “access key” for this new user. It must look similar
-to this:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>key: AKIAI9NNNJD5D7X4TUVA
+</code></pre></div></div><p>Here, <code class="language-plaintext highlighter-rouge">repo.teamed.io</code> is the name of the S3 bucket you created a minute ago.<p>Make sure you have an “access key” for this new user. It must look similar to this:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>key: AKIAI9NNNJD5D7X4TUVA
 secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av
-</code></pre></div></div>
-
-<p>The key is 20 characters (all caps), and the secret is 40 characters.</p>
-
-<h2 id="extend-settingsxml">Extend <code class="language-plaintext highlighter-rouge">settings.xml</code>
-</h2>
-
-<p>Add this configuration to your <code class="language-plaintext highlighter-rouge">~/.m2/settings.xml</code> file:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;settings&gt;</span>
+</code></pre></div></div><p>The key is 20 characters (all caps), and the secret is 40 characters.<h2 id="extend-settingsxml">Extend <code class="language-plaintext highlighter-rouge">settings.xml</code></h2><p>Add this configuration to your <code class="language-plaintext highlighter-rouge">~/.m2/settings.xml</code> file:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;settings&gt;</span>
   <span class="nt">&lt;servers&gt;</span>
     <span class="nt">&lt;server&gt;</span>
       <span class="nt">&lt;id&gt;</span>repo.teamed.io<span class="nt">&lt;/id&gt;</span>
@@ -145,14 +58,7 @@ secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av
   <span class="nt">&lt;/servers&gt;</span>
   [...]
 <span class="nt">&lt;/settings&gt;</span>
-</code></pre></div></div>
-
-<h2 id="configure-pomxml">Configure <code class="language-plaintext highlighter-rouge">pom.xml</code>
-</h2>
-
-<p>Add this configuration to <code class="language-plaintext highlighter-rouge">pom.xml</code>:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
+</code></pre></div></div><h2 id="configure-pomxml">Configure <code class="language-plaintext highlighter-rouge">pom.xml</code></h2><p>Add this configuration to <code class="language-plaintext highlighter-rouge">pom.xml</code>:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
   <span class="nt">&lt;distributionManagement&gt;</span>
     <span class="nt">&lt;snapshotRepository&gt;</span>
       <span class="nt">&lt;id&gt;</span>repo.teamed.io<span class="nt">&lt;/id&gt;</span>
@@ -171,12 +77,7 @@ secret: t5tZQCwuaRhmlOXfbGE5aTBMFw34iFyxfCEr32av
   <span class="nt">&lt;/repositories&gt;</span>
   [...]
 <span class="nt">&lt;/project&gt;</span>
-</code></pre></div></div>
-
-<p>Then, configure <a href="https://github.com/jcaddel/maven-s3-wagon">S3 Wagon</a>,
-also in <code class="language-plaintext highlighter-rouge">pom.xml</code>:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
+</code></pre></div></div><p>Then, configure <a href="https://github.com/jcaddel/maven-s3-wagon">S3 Wagon</a>, also in <code class="language-plaintext highlighter-rouge">pom.xml</code>:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
   <span class="nt">&lt;build&gt;</span>
     <span class="nt">&lt;extensions&gt;</span>
       <span class="nt">&lt;extension&gt;</span>
@@ -188,64 +89,13 @@ also in <code class="language-plaintext highlighter-rouge">pom.xml</code>:</p>
     [...]
   <span class="nt">&lt;/build&gt;</span>
 <span class="nt">&lt;/project&gt;</span>
-</code></pre></div></div>
-
-<p>You’re ready to go. You can deploy your artifacts just by running
-Maven from the command line:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mvn clean deploy
-</code></pre></div></div>
-
-<h2 id="configure-s3authcom">Configure <code class="language-plaintext highlighter-rouge">s3auth.com</code>
-</h2>
-
-<p>Now you want to see these artifacts in your browser, in a secure mode, by
-providing secure credentials. I recommend you use
-<a href="https://www.s3auth.com">s3auth.com</a>, as explained in
-<a href="/2014/04/21/s3-http-basic-auth.html">Basic HTTP Auth for S3 Buckets</a>.</p>
-
-<h2 id="configure-rultor">Configure Rultor</h2>
-
-
-
-<p>Another recommendation is to configure rultor.com for deployment of your
-artifacts to S3 automatically.</p>
-
-<p>First, encrypt your <code class="language-plaintext highlighter-rouge">settings.xml</code> with this
-<a href="https://github.com/yegor256/rultor-remote">Rultor remote</a>:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install rultor
+</code></pre></div></div><p>You’re ready to go. You can deploy your artifacts just by running Maven from the command line:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mvn clean deploy
+</code></pre></div></div><h2 id="configure-s3authcom">Configure <code class="language-plaintext highlighter-rouge">s3auth.com</code></h2><p>Now you want to see these artifacts in your browser, in a secure mode, by providing secure credentials. I recommend you use <a href="https://www.s3auth.com">s3auth.com</a>, as explained in <a href="/2014/04/21/s3-http-basic-auth.html">Basic HTTP Auth for S3 Buckets</a>.<h2 id="configure-rultor">Configure Rultor</h2><p>Another recommendation is to configure rultor.com for deployment of your artifacts to S3 automatically.<p>First, encrypt your <code class="language-plaintext highlighter-rouge">settings.xml</code> with this <a href="https://github.com/yegor256/rultor-remote">Rultor remote</a>:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install rultor
 $ rultor encrypt -p me/test settings.xml
-</code></pre></div></div>
-
-<p>Instead of <code class="language-plaintext highlighter-rouge">me/test</code>, you should use the name of your GitHub project.</p>
-
-<p>As a result, you will get a new file named <code class="language-plaintext highlighter-rouge">settings.xml.asc</code>. Add it to the root directory
-of your project, then commit and push. The file contains your secret information,
-but only the Rultor server can decrypt it.</p>
-
-<p>Create a <code class="language-plaintext highlighter-rouge">.rultor.yml</code> file in the root directory of your project
-(The Rultor <a href="https://doc.rultor.com/reference.html">reference page</a>
-explains this format in greater detail):</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>decrypt:
+</code></pre></div></div><p>Instead of <code class="language-plaintext highlighter-rouge">me/test</code>, you should use the name of your GitHub project.<p>As a result, you will get a new file named <code class="language-plaintext highlighter-rouge">settings.xml.asc</code>. Add it to the root directory of your project, then commit and push. The file contains your secret information, but only the Rultor server can decrypt it.<p>Create a <code class="language-plaintext highlighter-rouge">.rultor.yml</code> file in the root directory of your project (The Rultor <a href="https://doc.rultor.com/reference.html">reference page</a> explains this format in greater detail):<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>decrypt:
   settings.xml: "repo/settings.xml.asc"
 deploy:
   script: |
     mvn clean deploy --settings ../settings.xml
-</code></pre></div></div>
-
-<p>Now it’s time to see how it all works together. Create a new ticket in the
-GitHub issue tracker and post something like this into it
-(read more about <a href="https://doc.rultor.com/basics.html">Rultor commands</a>):</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@rultor deploy
-</code></pre></div></div>
-
-<p>You will get a response in a few seconds. The rest will be done by Rultor.</p>
-
-<p>That’s it.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Now it’s time to see how it all works together. Create a new ticket in the GitHub issue tracker and post something like this into it (read more about <a href="https://doc.rultor.com/basics.html">Rultor commands</a>):<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@rultor deploy
+</code></pre></div></div><p>You will get a response in a few seconds. The rest will be done by Rultor.<p>That’s it.</article>

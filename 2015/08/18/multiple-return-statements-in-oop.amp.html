@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Why Many Return Statements Are a Bad Idea in OOP</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/08/18/multiple-return-statements-in-oop.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Why Many Return Statements Are a Bad Idea in OOP</title><link rel="canonical"href="https://www.yegor256.com/2015/08/18/multiple-return-statements-in-oop.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,63 +33,13 @@ must have a single return statement---and nothing
 but a return statement.
 ",
         "keywords": ["single function exit point", "one return only", "one return statement", "single exit point", "single return in method"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/08/18/multiple-return-statements-in-oop.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>18 August 2015</p>
-      <h1>Why Many Return Statements Are a Bad Idea in OOP</h1>
-      <p>This <a href="http://programmers.stackexchange.com/questions/118703">debate</a>
-is very old, but I have something to say too. The question
-is whether a method may have multiple <code class="language-plaintext highlighter-rouge">return</code> statements or always
-just one. The answer may surprise you: In a pure object-oriented
-world, a method <em>must</em> have a <em>single</em> <code class="language-plaintext highlighter-rouge">return</code> statement and <em>nothing</em> else.
-Yes, just a <code class="language-plaintext highlighter-rouge">return</code> statement and that’s it. No other operators
-or statements. Just <code class="language-plaintext highlighter-rouge">return</code>. All arguments in favor of multiple
-<code class="language-plaintext highlighter-rouge">return</code> statements go against the very idea of object-oriented programming.</p>
-
-
-
-<p>This is a classical example:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/08/18/multiple-return-statements-in-oop.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>18 August 2015<h1>Why Many Return Statements Are a Bad Idea in OOP</h1><p>This <a href="http://programmers.stackexchange.com/questions/118703">debate</a> is very old, but I have something to say too. The question is whether a method may have multiple <code class="language-plaintext highlighter-rouge">return</code> statements or always just one. The answer may surprise you: In a pure object-oriented world, a method <em>must</em> have a <em>single</em> <code class="language-plaintext highlighter-rouge">return</code> statement and <em>nothing</em> else. Yes, just a <code class="language-plaintext highlighter-rouge">return</code> statement and that’s it. No other operators or statements. Just <code class="language-plaintext highlighter-rouge">return</code>. All arguments in favor of multiple <code class="language-plaintext highlighter-rouge">return</code> statements go against the very idea of object-oriented programming.<p>This is a classical example:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
   <span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">return</span> <span class="n">a</span><span class="o">;</span>
   <span class="o">}</span>
   <span class="k">return</span> <span class="n">b</span><span class="o">;</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>The code above has two <code class="language-plaintext highlighter-rouge">return</code> statements, and it is shorter than this one
-with a single <code class="language-plaintext highlighter-rouge">return</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+</code></pre></div></div><p>The code above has two <code class="language-plaintext highlighter-rouge">return</code> statements, and it is shorter than this one with a single <code class="language-plaintext highlighter-rouge">return</code>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
   <span class="kt">int</span> <span class="n">m</span><span class="o">;</span>
   <span class="k">if</span> <span class="o">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">m</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
@@ -108,39 +48,10 @@ with a single <code class="language-plaintext highlighter-rouge">return</code>:<
   <span class="o">}</span>
   <span class="k">return</span> <span class="n">m</span><span class="o">;</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>More verbose, less readable, and slower, right? Right.</p>
-
-<p>This is the code in a <em>pure</em> object-oriented world:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+</code></pre></div></div><p>More verbose, less readable, and slower, right? Right.<p>This is the code in a <em>pure</em> object-oriented world:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kt">int</span> <span class="nf">max</span><span class="o">(</span><span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="nf">If</span><span class="o">(</span>
     <span class="k">new</span> <span class="nf">GreaterThan</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">),</span>
     <span class="n">a</span><span class="o">,</span> <span class="n">b</span>
   <span class="o">);</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>What do you think now? There are no statements or operators. No <code class="language-plaintext highlighter-rouge">if</code> and no <code class="language-plaintext highlighter-rouge">&gt;</code>.
-Instead, there are <em>objects</em> of class <code class="language-plaintext highlighter-rouge">If</code> and <code class="language-plaintext highlighter-rouge">GreaterThan</code>.</p>
-
-<p>This is a pure and clean object-oriented approach.</p>
-
-<p>However, Java doesn’t have that. Java (and many other pseudo OOP languages)
-gives us operators like <code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">else</code>, <code class="language-plaintext highlighter-rouge">switch</code>, <code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">while</code>, etc. instead
-of giving built-in classes, which would do the same. Because of that, we continue
-to think in terms of procedures and keep talking about whether
-two <code class="language-plaintext highlighter-rouge">return</code> statements are better than one.</p>
-
-<p>If your code is truly object-oriented, you won’t be able to have more than
-one <code class="language-plaintext highlighter-rouge">return</code>. Moreover, you will have nothing except a <code class="language-plaintext highlighter-rouge">return</code> in each method.
-Actually, you will have only two operators in the entire
-software—<code class="language-plaintext highlighter-rouge">new</code> and <code class="language-plaintext highlighter-rouge">return</code>. That’s it.</p>
-
-<p>Until we’re there, let’s stick with just one <code class="language-plaintext highlighter-rouge">return</code> and at least try to look
-like pure <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>What do you think now? There are no statements or operators. No <code class="language-plaintext highlighter-rouge">if</code> and no <code class="language-plaintext highlighter-rouge">&gt;</code>. Instead, there are <em>objects</em> of class <code class="language-plaintext highlighter-rouge">If</code> and <code class="language-plaintext highlighter-rouge">GreaterThan</code>.<p>This is a pure and clean object-oriented approach.<p>However, Java doesn’t have that. Java (and many other pseudo OOP languages) gives us operators like <code class="language-plaintext highlighter-rouge">if</code>, <code class="language-plaintext highlighter-rouge">else</code>, <code class="language-plaintext highlighter-rouge">switch</code>, <code class="language-plaintext highlighter-rouge">for</code>, <code class="language-plaintext highlighter-rouge">while</code>, etc. instead of giving built-in classes, which would do the same. Because of that, we continue to think in terms of procedures and keep talking about whether two <code class="language-plaintext highlighter-rouge">return</code> statements are better than one.<p>If your code is truly object-oriented, you won’t be able to have more than one <code class="language-plaintext highlighter-rouge">return</code>. Moreover, you will have nothing except a <code class="language-plaintext highlighter-rouge">return</code> in each method. Actually, you will have only two operators in the entire software—<code class="language-plaintext highlighter-rouge">new</code> and <code class="language-plaintext highlighter-rouge">return</code>. That’s it.<p>Until we’re there, let’s stick with just one <code class="language-plaintext highlighter-rouge">return</code> and at least try to look like pure <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">OOP</a>.</article>

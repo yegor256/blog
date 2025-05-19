@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Public Static Literals ... Are Not a Solution for Data Duplication</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/07/06/public-static-literals.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Public Static Literals ... Are Not a Solution for Data Duplication</title><link rel="canonical"href="https://www.yegor256.com/2015/07/06/public-static-literals.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,142 +33,15 @@ in order to avoid duplication, but it's a bad
 practice, so use objects instead.
 ",
         "keywords": ["static constants java", "static literals java", "public static java", "public static", "public static literals"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/07/06/public-static-literals.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>6 July 2015</p>
-      <h1>Public Static Literals ... Are Not a Solution for Data Duplication</h1>
-      <p>I have a <code class="language-plaintext highlighter-rouge">new String(array,"UTF-8")</code> in one place and exactly
-the same code in another place in my app. Actually, I may have
-it in many places. And every time, I have to use that <code class="language-plaintext highlighter-rouge">"UTF-8"</code> constant
-in order to create a <code class="language-plaintext highlighter-rouge">String</code> from a byte array. It would be very
-convenient to define it once somewhere and reuse it, just like Apache Commons
-is doing; see <a href="https://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/CharEncoding.html#UTF_8"><code class="language-plaintext highlighter-rouge">CharEncoding.UTF_8</code></a>
-(There are many other static literals there).
-These guys are setting a bad example! <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">static</code>
-“properties” are as bad as
-<a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>.</p>
-
-
-
-<amp-img src="/images/2015/07/the-shining.jpg" alt="The Shining (1980) by Stanley Kubrick" height="600" width="1200" layout="responsive"></amp-img>
-
-<p>Here is what I’m talking about, specifically:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">org.apache.commons.lang3</span><span class="o">;</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/07/06/public-static-literals.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>6 July 2015<h1>Public Static Literals ... Are Not a Solution for Data Duplication</h1><p>I have a <code class="language-plaintext highlighter-rouge">new String(array,"UTF-8")</code> in one place and exactly the same code in another place in my app. Actually, I may have it in many places. And every time, I have to use that <code class="language-plaintext highlighter-rouge">"UTF-8"</code> constant in order to create a <code class="language-plaintext highlighter-rouge">String</code> from a byte array. It would be very convenient to define it once somewhere and reuse it, just like Apache Commons is doing; see <a href="https://commons.apache.org/proper/commons-lang/javadocs/api-2.6/org/apache/commons/lang/CharEncoding.html#UTF_8"><code class="language-plaintext highlighter-rouge">CharEncoding.UTF_8</code></a> (There are many other static literals there). These guys are setting a bad example! <code class="language-plaintext highlighter-rouge">public</code> <code class="language-plaintext highlighter-rouge">static</code> “properties” are as bad as <a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility classes</a>.</p><amp-img src="/images/2015/07/the-shining.jpg"alt="The Shining (1980) by Stanley Kubrick"height="600"width="1200"layout="responsive"></amp-img><p>Here is what I’m talking about, specifically:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">org.apache.commons.lang3</span><span class="o">;</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">CharEncoding</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">UTF_8</span> <span class="o">=</span> <span class="s">"UTF-8"</span><span class="o">;</span>
   <span class="c1">// some other methods and properties</span>
 <span class="o">}</span>
-</code></pre></div></div>
-
-<p>Now, when I need to create a <code class="language-plaintext highlighter-rouge">String</code> from a byte array, I use this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.apache.commons.lang3.CharEncoding</span><span class="o">;</span>
+</code></pre></div></div><p>Now, when I need to create a <code class="language-plaintext highlighter-rouge">String</code> from a byte array, I use this:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.apache.commons.lang3.CharEncoding</span><span class="o">;</span>
 <span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">String</span><span class="o">(</span><span class="n">array</span><span class="o">,</span> <span class="nc">CharEncoding</span><span class="o">.</span><span class="na">UTF_8</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>Let’s say I want to convert a <code class="language-plaintext highlighter-rouge">String</code> into a byte array:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.apache.commons.lang3.CharEncoding</span><span class="o">;</span>
+</code></pre></div></div><p>Let’s say I want to convert a <code class="language-plaintext highlighter-rouge">String</code> into a byte array:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">org.apache.commons.lang3.CharEncoding</span><span class="o">;</span>
 <span class="kt">byte</span><span class="o">[]</span> <span class="n">array</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="na">getBytes</span><span class="o">(</span><span class="nc">CharEncoding</span><span class="o">.</span><span class="na">UTF_8</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>Looks convenient, right? This is what the designers of Apache Commons think
-(one of the most popular but simply <em>terrible</em> libraries
-in the Java world). I encourage you to think differently.
-I can’t tell you to stop using Apache Commons, because we just don’t have
-a better alternative (<a href="https://www.cactoos.org">yet!</a>). But in your own code, don’t use public
-static properties—ever. Even if this code may look convenient to you,
-it’s a very bad design.</p>
-
-
-
-<p>The reason why is very similar to
-<a href="/2015/02/26/composable-decorators.html">utility classes</a>
-with public static
-methods—they are unbreakable hard-coded dependencies. Once you
-use that <code class="language-plaintext highlighter-rouge">CharEncoding.UTF_8</code>, your object starts to depend on this
-data, and its user (the user of your object) can’t break this dependency. You may say that
-this is your intention, in the case of a <code class="language-plaintext highlighter-rouge">"UTF-8"</code> constant—to make
-sure that Unicode is specifically and exclusively being used. In this particular
-example, this may be true, but look at it from a more global perspective.</p>
-
-<p>Let me show you the alternative I have in mind before we continue.
-Here is what I’m suggesting instead to convert a byte array
-into a <code class="language-plaintext highlighter-rouge">String</code>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">UTF8String</span><span class="o">(</span><span class="n">array</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>It’s pseudo-code, since Java designers made class <code class="language-plaintext highlighter-rouge">String</code> final and we
-can’t really extend it and create <code class="language-plaintext highlighter-rouge">UTF8String</code>, but you get the idea. In the real
-world, this would look like this:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">UTF8String</span><span class="o">(</span><span class="n">array</span><span class="o">).</span><span class="na">toString</span><span class="o">();</span>
-</code></pre></div></div>
-
-<p>As you see, we encapsulate the “UTF-8” constant somewhere inside the class
-<code class="language-plaintext highlighter-rouge">UTF8String</code>, and its users have no idea how exactly this “byte array to string”
-conversion is happening.</p>
-
-
-
-<p>By introducing <code class="language-plaintext highlighter-rouge">UTF8String</code>, we solved the problem of “UTF-8”
-literal duplication. But we did it in a proper object-oriented way—we encapsulated the functionality inside a class and let everybody
-instantiate its objects and use them. We resolved the problem of functionality
-duplication, not just data duplication.</p>
-
-<p>Placing data into one shared place (<code class="language-plaintext highlighter-rouge">CharEncoding.UTF_8</code>)
-doesn’t really solve the duplication problem; it actually makes it <em>worse</em>, mostly
-because it encourages everybody to duplicate functionality using the same
-piece of <a href="/2016/11/21/naked-data.html">shared data</a>.</p>
-
-<p>My point here is that every time you see that you have some data duplication
-in your application, start thinking about the functionality you’re duplicating.
-You will easily find the code that is repeated again and again. Make a new
-class for this code and place the data there, as a <code class="language-plaintext highlighter-rouge">private</code> property (or private
-<code class="language-plaintext highlighter-rouge">static</code> property). That’s how you will improve your design and truly get rid
-of duplication.</p>
-
-<p>PS. You can use a method instead of a class, but not a static literal.</p>
-
-<p>PPS. You can also use enums, but only
-<a href="https://www.g4s8.wtf/posts/2020-12-26-enum-objects/#comment-5205846133">this way</a>.</p>
-
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">How do you get rid of the duplication of magic numbers (it's Ruby)? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a><br><br>class Time<br> def hours<br> msec / (60 * 60 * 1000)<br> end<br> def days<br> msec / (24 * 60 * 60 * 1000)<br> end<br>end</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1221378774618595329?ref_src=twsrc%5Etfw">January 26, 2020</a>
-</blockquote>
-
-
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Looks convenient, right? This is what the designers of Apache Commons think (one of the most popular but simply <em>terrible</em> libraries in the Java world). I encourage you to think differently. I can’t tell you to stop using Apache Commons, because we just don’t have a better alternative (<a href="https://www.cactoos.org">yet!</a>). But in your own code, don’t use public static properties—ever. Even if this code may look convenient to you, it’s a very bad design.<p>The reason why is very similar to <a href="/2015/02/26/composable-decorators.html">utility classes</a> with public static methods—they are unbreakable hard-coded dependencies. Once you use that <code class="language-plaintext highlighter-rouge">CharEncoding.UTF_8</code>, your object starts to depend on this data, and its user (the user of your object) can’t break this dependency. You may say that this is your intention, in the case of a <code class="language-plaintext highlighter-rouge">"UTF-8"</code> constant—to make sure that Unicode is specifically and exclusively being used. In this particular example, this may be true, but look at it from a more global perspective.<p>Let me show you the alternative I have in mind before we continue. Here is what I’m suggesting instead to convert a byte array into a <code class="language-plaintext highlighter-rouge">String</code>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">UTF8String</span><span class="o">(</span><span class="n">array</span><span class="o">);</span>
+</code></pre></div></div><p>It’s pseudo-code, since Java designers made class <code class="language-plaintext highlighter-rouge">String</code> final and we can’t really extend it and create <code class="language-plaintext highlighter-rouge">UTF8String</code>, but you get the idea. In the real world, this would look like this:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">UTF8String</span><span class="o">(</span><span class="n">array</span><span class="o">).</span><span class="na">toString</span><span class="o">();</span>
+</code></pre></div></div><p>As you see, we encapsulate the “UTF-8” constant somewhere inside the class <code class="language-plaintext highlighter-rouge">UTF8String</code>, and its users have no idea how exactly this “byte array to string” conversion is happening.<p>By introducing <code class="language-plaintext highlighter-rouge">UTF8String</code>, we solved the problem of “UTF-8” literal duplication. But we did it in a proper object-oriented way—we encapsulated the functionality inside a class and let everybody instantiate its objects and use them. We resolved the problem of functionality duplication, not just data duplication.<p>Placing data into one shared place (<code class="language-plaintext highlighter-rouge">CharEncoding.UTF_8</code>) doesn’t really solve the duplication problem; it actually makes it <em>worse</em>, mostly because it encourages everybody to duplicate functionality using the same piece of <a href="/2016/11/21/naked-data.html">shared data</a>.<p>My point here is that every time you see that you have some data duplication in your application, start thinking about the functionality you’re duplicating. You will easily find the code that is repeated again and again. Make a new class for this code and place the data there, as a <code class="language-plaintext highlighter-rouge">private</code> property (or private <code class="language-plaintext highlighter-rouge">static</code> property). That’s how you will improve your design and truly get rid of duplication.<p>PS. You can use a method instead of a class, but not a static literal.<p>PPS. You can also use enums, but only <a href="https://www.g4s8.wtf/posts/2020-12-26-enum-objects/#comment-5205846133">this way</a>.<blockquote class="twitter-tweet"><p lang="en"dir="ltr">How do you get rid of the duplication of magic numbers (it's Ruby)? <a href="https://twitter.com/hashtag/elegantobjects?src=hash&amp;ref_src=twsrc%5Etfw">#elegantobjects</a><br><br>class Time<br>def hours<br>msec / (60 * 60 * 1000)<br>end<br>def days<br>msec / (24 * 60 * 60 * 1000)<br>end<br>end</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1221378774618595329?ref_src=twsrc%5Etfw">January 26, 2020</a></blockquote></article>

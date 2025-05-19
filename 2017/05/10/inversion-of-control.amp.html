@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>How Does Inversion of Control Really Work?</title>
-    <link rel="canonical" href="https://www.yegor256.com/2017/05/10/inversion-of-control.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>How Does Inversion of Control Really Work?</title><link rel="canonical"href="https://www.yegor256.com/2017/05/10/inversion-of-control.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,97 +33,7 @@ looks overcomplicated or very much coupled with
 dependency injection containers; it's not.
 ",
         "keywords": ["IoC", "inversion of control", "dependency injection", "IoC OOP", "dependency control"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2017/05/10/inversion-of-control.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>10 May 2017</p>
-      <h1>How Does Inversion of Control Really Work?</h1>
-      <p><a href="https://en.wikipedia.org/wiki/Inversion_of_control">IoC</a>
-seems to have become the cornerstone concept of many frameworks
-and object-oriented designs since it was described by
-<a href="https://martinfowler.com/bliki/InversionOfControl.html">Martin Fowler</a>,
-<a href="https://web.archive.org/web/20041221102842/https://www.objectmentor.com/resources/articles/dip.pdf">Robert Martin</a>
-and
-<a href="https://www.laputan.org/drc/drc.html">others</a>
-ten years ago. Despite its popularity IoC is
-misunderstood and overcomplicated all too often.</p>
-
-
-
-<amp-img src="/images/2017/05/le-conseguenze-dellamore.jpg" alt="Le conseguenze dell'amore (2004) by Paolo Sorrentino" height="539" width="1280" layout="responsive"></amp-img>
-
-<p>Look at this code:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">print</span><span class="o">(</span><span class="n">book</span><span class="o">.</span><span class="na">title</span><span class="o">());</span>
-</code></pre></div></div>
-
-<p>It is very straight forward: we retrieve the title from the book and
-simply give it to the <code class="language-plaintext highlighter-rouge">print()</code> procedure, or whatever else it might be. <em>We</em> are in charge,
-the <em>control</em> is in our hands.</p>
-
-<p>In contrast to this, here is the <em>inversion</em>:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">print</span><span class="o">(</span><span class="n">book</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>We give the entire book to the procedure <code class="language-plaintext highlighter-rouge">print()</code> and
-it calls <code class="language-plaintext highlighter-rouge">title()</code> when it feels like it. That is, we <em>delegate</em> control.</p>
-
-<p>This is pretty much everything you need to know about IoC.</p>
-
-
-
-<p>Does it have anything to do with
-<a href="https://en.wikipedia.org/wiki/Dependency_injection">dependency injection</a> containers?
-Well, of course, we <em>could</em> put the book into a container, inject the entire
-container into <code class="language-plaintext highlighter-rouge">print()</code>, let it retrieve the book from the container and
-then call <code class="language-plaintext highlighter-rouge">title()</code>. But that’s not what IoC is really about—it’s merely
-one of its
-<a href="/2014/10/03/di-containers-are-evil.html">perverted</a> usage scenarios.</p>
-
-<p>The main point of IoC is exactly the same as I was proposing
-in my previous posts about <a href="/2016/11/21/naked-data.html">naked data</a>
-and <a href="/2016/12/20/can-objects-be-friends.html">object friends</a>:
-we must <em>not</em> deal with <em>data</em>, but instead only with
-<a href="https://en.wikipedia.org/wiki/Object_composition">object composition</a>. In the
-given example the design would be even better if we got rid of the
-<code class="language-plaintext highlighter-rouge">print()</code> procedure altogether and replaced it with an object:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">PrintedBook</span><span class="o">(</span><span class="n">book</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>That would be pure <a href="https://en.wikipedia.org/wiki/Object_composition">object composition</a>.</p>
-
-<p>There is not much more to say on this subject; I hope I have cleared it up for you—it
-is just as simple as that.</p>
-
-    </article>
-  </body>
-</html>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2017/05/10/inversion-of-control.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>10 May 2017<h1>How Does Inversion of Control Really Work?</h1><p><a href="https://en.wikipedia.org/wiki/Inversion_of_control">IoC</a> seems to have become the cornerstone concept of many frameworks and object-oriented designs since it was described by <a href="https://martinfowler.com/bliki/InversionOfControl.html">Martin Fowler</a>, <a href="https://web.archive.org/web/20041221102842/https://www.objectmentor.com/resources/articles/dip.pdf">Robert Martin</a> and <a href="https://www.laputan.org/drc/drc.html">others</a> ten years ago. Despite its popularity IoC is misunderstood and overcomplicated all too often.</p><amp-img src="/images/2017/05/le-conseguenze-dellamore.jpg"alt="Le conseguenze dell'amore (2004) by Paolo Sorrentino"height="539"width="1280"layout="responsive"></amp-img><p>Look at this code:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">print</span><span class="o">(</span><span class="n">book</span><span class="o">.</span><span class="na">title</span><span class="o">());</span>
+</code></pre></div></div><p>It is very straight forward: we retrieve the title from the book and simply give it to the <code class="language-plaintext highlighter-rouge">print()</code> procedure, or whatever else it might be. <em>We</em> are in charge, the <em>control</em> is in our hands.<p>In contrast to this, here is the <em>inversion</em>:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">print</span><span class="o">(</span><span class="n">book</span><span class="o">);</span>
+</code></pre></div></div><p>We give the entire book to the procedure <code class="language-plaintext highlighter-rouge">print()</code> and it calls <code class="language-plaintext highlighter-rouge">title()</code> when it feels like it. That is, we <em>delegate</em> control.<p>This is pretty much everything you need to know about IoC.<p>Does it have anything to do with <a href="https://en.wikipedia.org/wiki/Dependency_injection">dependency injection</a> containers? Well, of course, we <em>could</em> put the book into a container, inject the entire container into <code class="language-plaintext highlighter-rouge">print()</code>, let it retrieve the book from the container and then call <code class="language-plaintext highlighter-rouge">title()</code>. But that’s not what IoC is really about—it’s merely one of its <a href="/2014/10/03/di-containers-are-evil.html">perverted</a> usage scenarios.<p>The main point of IoC is exactly the same as I was proposing in my previous posts about <a href="/2016/11/21/naked-data.html">naked data</a> and <a href="/2016/12/20/can-objects-be-friends.html">object friends</a>: we must <em>not</em> deal with <em>data</em>, but instead only with <a href="https://en.wikipedia.org/wiki/Object_composition">object composition</a>. In the given example the design would be even better if we got rid of the <code class="language-plaintext highlighter-rouge">print()</code> procedure altogether and replaced it with an object:<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">new</span> <span class="nc">PrintedBook</span><span class="o">(</span><span class="n">book</span><span class="o">);</span>
+</code></pre></div></div><p>That would be pure <a href="https://en.wikipedia.org/wiki/Object_composition">object composition</a>.<p>There is not much more to say on this subject; I hope I have cleared it up for you—it is just as simple as that.</article>

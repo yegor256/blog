@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>MVC vs. OOP</title>
-    <link rel="canonical" href="https://www.yegor256.com/2016/12/13/mvc-vs-oop.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>MVC vs. OOP</title><link rel="canonical"href="https://www.yegor256.com/2016/12/13/mvc-vs-oop.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,109 +33,15 @@ that goes absolutely against the spirit of object-oriented
 programming.
 ",
         "keywords": ["mvc", "mvc design pattern", "mvc in java", "mvc java", "mvc design pattern in java"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2016/12/13/mvc-vs-oop.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>13 December 2016</p>
-      <h1>MVC vs. OOP</h1>
-      <p><a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model-View-Controller</a>
-(MVC) is an architectural pattern we all are well aware of.
-It’s a de-facto standard for almost all UI and
-<a href="https://en.wikipedia.org/wiki/Web_framework">Web frameworks</a>. It is convenient
-and easy to use. It is simple and effective. It is a great concept …
-for a procedural programmer. If your software is object-oriented, you
-should dislike MVC as much as I do. Here is why.</p>
-
-
-
-<amp-img src="/images/2016/12/hot-shots.jpg" alt="Hot Shots! (1991) by Jim Abrahams" height="787" width="1192" layout="responsive"></amp-img>
-
-<p>This is how MVC architecture looks:</p>
-
-<p><object data="/uml/45d05ab3bd9a93ad88ec209352b62f60.svg" type="image/svg+xml" class="plantuml"></object></p>
-
-<p>Controller is <em>in charge</em>, taking care of the data received from Model
-and injecting it into View—and this is exactly the problem. The data escapes
-the Model and becomes “<a href="/2016/11/21/naked-data.html">naked</a>,” which is a big problem, as we
-<a href="/2016/11/21/naked-data.html">agreed earlier</a>.
-OOP is all about encapsulation—data hiding.</p>
-
-<p>MVC architecture does exactly the opposite by <em>exposing</em> the data and hiding
-behavior. The controller deals with the data directly, making decisions about
-its purpose and properties, while the objects, which are supposed to know
-everything about the data and hide it, remain <a href="/2016/07/06/data-transfer-object.html">anemic</a>.
-That is exactly the principle any procedural architecture is built upon; the
-code is in charge of the data. Take this C++ code, for example:</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">print_speed</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// controller</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2016/12/13/mvc-vs-oop.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>13 December 2016<h1>MVC vs. OOP</h1><p><a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model-View-Controller</a> (MVC) is an architectural pattern we all are well aware of. It’s a de-facto standard for almost all UI and <a href="https://en.wikipedia.org/wiki/Web_framework">Web frameworks</a>. It is convenient and easy to use. It is simple and effective. It is a great concept … for a procedural programmer. If your software is object-oriented, you should dislike MVC as much as I do. Here is why.</p><amp-img src="/images/2016/12/hot-shots.jpg"alt="Hot Shots! (1991) by Jim Abrahams"height="787"width="1192"layout="responsive"></amp-img><p>This is how MVC architecture looks:<p><object data="/uml/45d05ab3bd9a93ad88ec209352b62f60.svg"type="image/svg+xml"class="plantuml"></object><p>Controller is <em>in charge</em>, taking care of the data received from Model and injecting it into View—and this is exactly the problem. The data escapes the Model and becomes “<a href="/2016/11/21/naked-data.html">naked</a>,” which is a big problem, as we <a href="/2016/11/21/naked-data.html">agreed earlier</a>. OOP is all about encapsulation—data hiding.<p>MVC architecture does exactly the opposite by <em>exposing</em> the data and hiding behavior. The controller deals with the data directly, making decisions about its purpose and properties, while the objects, which are supposed to know everything about the data and hide it, remain <a href="/2016/07/06/data-transfer-object.html">anemic</a>. That is exactly the principle any procedural architecture is built upon; the code is in charge of the data. Take this C++ code, for example:<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">print_speed</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// controller</span>
   <span class="kt">int</span> <span class="n">s</span> <span class="o">=</span> <span class="n">load_from_engine</span><span class="p">();</span> <span class="c1">// model</span>
   <span class="n">printf</span><span class="p">(</span><span class="s">"The speed is %d mph"</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span> <span class="c1">// view</span>
 <span class="p">}</span>
-</code></pre></div></div>
-
-<p>The function <code class="language-plaintext highlighter-rouge">print_speed()</code> is the controller. It gets the data <code class="language-plaintext highlighter-rouge">s</code> from
-the model <code class="language-plaintext highlighter-rouge">load_from_engine()</code> and renders it via the view <code class="language-plaintext highlighter-rouge">printf()</code>. Only
-the controller knows that the data is in miles per hour. The engine
-returns <code class="language-plaintext highlighter-rouge">int</code> without any properties. The controller simply assumed that
-that data is in mph. If we want to create a similar controller somewhere
-else, we will have to make a similar assumption again and again. That’s what the
-“naked data” problem is about, and it leads to serious maintainability issues.</p>
-
-<p>This is an object-oriented alternative to the code above (pseudo-C++):</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span>
+</code></pre></div></div><p>The function <code class="language-plaintext highlighter-rouge">print_speed()</code> is the controller. It gets the data <code class="language-plaintext highlighter-rouge">s</code> from the model <code class="language-plaintext highlighter-rouge">load_from_engine()</code> and renders it via the view <code class="language-plaintext highlighter-rouge">printf()</code>. Only the controller knows that the data is in miles per hour. The engine returns <code class="language-plaintext highlighter-rouge">int</code> without any properties. The controller simply assumed that that data is in mph. If we want to create a similar controller somewhere else, we will have to make a similar assumption again and again. That’s what the “naked data” problem is about, and it leads to serious maintainability issues.<p>This is an object-oriented alternative to the code above (pseudo-C++):<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span>
   <span class="n">new</span> <span class="nf">PrintedSpeed</span><span class="p">(</span> <span class="c1">// view</span>
     <span class="n">new</span> <span class="n">FormattedSpeed</span><span class="p">(</span> <span class="c1">// controller</span>
       <span class="n">new</span> <span class="n">SpeedFromEngine</span><span class="p">()</span> <span class="c1">// model</span>
     <span class="p">)</span>
   <span class="p">)</span>
 <span class="p">);</span>
-</code></pre></div></div>
-
-<p>Here, <code class="language-plaintext highlighter-rouge">SpeedFromEngine.speed()</code>
-returns speed in mph, as an integer; <code class="language-plaintext highlighter-rouge">FormattedSpeed.speed()</code> returns
-<code class="language-plaintext highlighter-rouge">"%d mph"</code>; and finally, <code class="language-plaintext highlighter-rouge">PrintedSpeed.to_str()</code> returns the full text of the
-message. We can call them “model, view, and controller,” but in reality they
-are just objects decorating each other. It’s still the same entity—the speed.
-But it gets more complex and intelligent by being decorated.</p>
-
-<p>We don’t tear the concept of speed apart. The speed is the speed, no matter
-who works with it and where it is presented. It just gets new behavior
-from decorators. It grows, but never falls apart.</p>
-
-<p>To summarize, Controller is a pure <em>procedural</em> component in the MVC trio,
-which turns Model into a passive data holder and View into
-a passive data renderer. The controll<b>er</b>, the hold<b>er</b>,
-the render<b>er</b> …
-Is it <a href="/2015/03/09/objects-end-with-er.html">really OOP</a>?</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>Here, <code class="language-plaintext highlighter-rouge">SpeedFromEngine.speed()</code> returns speed in mph, as an integer; <code class="language-plaintext highlighter-rouge">FormattedSpeed.speed()</code> returns <code class="language-plaintext highlighter-rouge">"%d mph"</code>; and finally, <code class="language-plaintext highlighter-rouge">PrintedSpeed.to_str()</code> returns the full text of the message. We can call them “model, view, and controller,” but in reality they are just objects decorating each other. It’s still the same entity—the speed. But it gets more complex and intelligent by being decorated.<p>We don’t tear the concept of speed apart. The speed is the speed, no matter who works with it and where it is presented. It just gets new behavior from decorators. It grows, but never falls apart.<p>To summarize, Controller is a pure <em>procedural</em> component in the MVC trio, which turns Model into a passive data holder and View into a passive data renderer. The controll<b>er</b>, the hold<b>er</b>, the render<b>er</b> … Is it <a href="/2015/03/09/objects-end-with-er.html">really OOP</a>?</article>

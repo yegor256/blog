@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Code For the User, Not for Yourself</title>
-    <link rel="canonical" href="https://www.yegor256.com/2015/02/12/top-down-design.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Code For the User, Not for Yourself</title><link rel="canonical"href="https://www.yegor256.com/2015/02/12/top-down-design.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -43,64 +33,7 @@ to our users and customers; our technical objectives should
 take a back seat.
 ",
         "keywords": ["breaking down tasks", "tasks breaking down", "incremental delivery", "iterative and incremental", "iterative programming"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2015/02/12/top-down-design.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>12 February 2015</p>
-      <h1>Code For the User, Not for Yourself</h1>
-      <p>First, no matter what the methodology is, we all write software for our
-users (a.k.a. customers, project sponsors, end users, or
-<a href="/2015/01/26/happy-boss-false-objective.html">clients</a>). Second,
-no matter what the methodology is, we write incrementally, releasing
-features and bug fixes one by one. Maybe I’m saying something absolutely obvious here,
-but it’s important to remember that each new version should first of all satisfy
-the needs of the user, not of us programmers. In other words, the way
-we decompose a big task into smaller pieces should be user-targeted, and that’s
-why you always work <strong>top down</strong>. Let’s see what I mean through a practical example.</p>
-
-
-
-<amp-img src="/images/2015/02/delicatessen.png" alt="Delicatessen (1991) by Jean-Pierre Jeunet" height="673" width="1280" layout="responsive"></amp-img>
-
-<p>Say I’m contracted by a friend of mine to create a word-counting command line
-tool very similar to <a href="https://en.wikipedia.org/wiki/Wc_%28Unix%29">wc</a>. He
-promised to pay me $200 for this work, and I promised him I’d deliver the
-product in two increments—an alpha and beta version. I promised him
-I’d release the alpha version on Saturday and the beta version on Sunday. He is
-going to pay me $100 after the first release and the rest after the second release.</p>
-
-<p>I’ll write in C, and he will pay in cash.</p>
-
-<p>The tool is very primitive, and it only took me a few minutes to write. Take a look at it:</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2015/02/12/top-down-design.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>12 February 2015<h1>Code For the User, Not for Yourself</h1><p>First, no matter what the methodology is, we all write software for our users (a.k.a. customers, project sponsors, end users, or <a href="/2015/01/26/happy-boss-false-objective.html">clients</a>). Second, no matter what the methodology is, we write incrementally, releasing features and bug fixes one by one. Maybe I’m saying something absolutely obvious here, but it’s important to remember that each new version should first of all satisfy the needs of the user, not of us programmers. In other words, the way we decompose a big task into smaller pieces should be user-targeted, and that’s why you always work <strong>top down</strong>. Let’s see what I mean through a practical example.</p><amp-img src="/images/2015/02/delicatessen.png"alt="Delicatessen (1991) by Jean-Pierre Jeunet"height="673"width="1280"layout="responsive"></amp-img><p>Say I’m contracted by a friend of mine to create a word-counting command line tool very similar to <a href="https://en.wikipedia.org/wiki/Wc_%28Unix%29">wc</a>. He promised to pay me $200 for this work, and I promised him I’d deliver the product in two increments—an alpha and beta version. I promised him I’d release the alpha version on Saturday and the beta version on Sunday. He is going to pay me $100 after the first release and the rest after the second release.<p>I’ll write in C, and he will pay in cash.<p>The tool is very primitive, and it only took me a few minutes to write. Take a look at it:<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 #include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
 </span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
   <span class="kt">char</span> <span class="n">ch</span><span class="p">;</span>
@@ -119,86 +52,20 @@ going to pay me $100 after the first release and the rest after the second relea
   <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div>
-
-<p>But let’s be professional and not forget about build automation and unit
-testing. Here is a simple <code class="language-plaintext highlighter-rouge">Makefile</code> that does them both:</p>
-
-<div class="language-makefile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">all</span><span class="o">:</span> <span class="nf">wc test</span>
+</code></pre></div></div><p>But let’s be professional and not forget about build automation and unit testing. Here is a simple <code class="language-plaintext highlighter-rouge">Makefile</code> that does them both:<div class="language-makefile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">all</span><span class="o">:</span> <span class="nf">wc test</span>
 <span class="nl">wc</span><span class="o">:</span> <span class="nf">wc.c</span>
   <span class="err">gcc</span> <span class="err">-o</span> <span class="err">wc</span> <span class="err">wc.c</span>
 <span class="nl">test</span><span class="o">:</span> <span class="nf">wc</span>
   <span class="err">echo</span> <span class="s1">''</span> <span class="err">|</span> <span class="err">./wc</span> <span class="err">|</span> <span class="err">grep</span> <span class="s1">'0'</span>
   <span class="err">echo</span> <span class="s1">'Hello, world! How are you?'</span> <span class="err">|</span> <span class="err">./wc</span> <span class="err">|</span> <span class="err">grep</span> <span class="s1">'5'</span>
-</code></pre></div></div>
-
-<p>Now I run <code class="language-plaintext highlighter-rouge">make</code> from a command line and get this output:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ make
+</code></pre></div></div><p>Now I run <code class="language-plaintext highlighter-rouge">make</code> from a command line and get this output:<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ make
 echo '' | ./wc | grep '0'
 0
 echo 'Hello, world! How are you?' | ./wc | grep '5'
 5
-</code></pre></div></div>
-
-<p>All clean!</p>
-
-<p>I’m ready to get my $200. Wait, the deal was to deliver two
-versions and get cash in two installments. Let’s back up a little and
-think—how can we break this small tool into two parts?</p>
-
-<p>On first thought, let’s release the tool itself first and
-build automation and testing next. Is that a good idea? Can we
-deliver any software without running it first with a test? How can I be
-sure that it works if I don’t ship tests together with it? What will my friend
-think about me releasing anything without tests? This would be
-a total embarrassment.</p>
-
-<p>Okay, let’s release <code class="language-plaintext highlighter-rouge">Makefile</code> first and <code class="language-plaintext highlighter-rouge">wc.c</code> next. But what will my
-friend do with a couple of tests and no product in hand? This first
-release will be absolutely pointless, and I won’t get my $100.</p>
-
-
-
-<p>Now we’re getting to the point of this article. What I’m trying to say
-is that every new increment must add some value to the product as it
-is perceived by the customer, not by us programmers. The <code class="language-plaintext highlighter-rouge">Makefile</code> is
-definitely a valuable artifact, but it provides no value to my friend.
-He doesn’t need it, but I need it.</p>
-
-<p>Here is what I’m going to do. I’ll release a skeleton of the tool, backed
-by the tests but with an absolutely dummy implementation. Look at it:</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</code></pre></div></div><p>All clean!<p>I’m ready to get my $200. Wait, the deal was to deliver two versions and get cash in two installments. Let’s back up a little and think—how can we break this small tool into two parts?<p>On first thought, let’s release the tool itself first and build automation and testing next. Is that a good idea? Can we deliver any software without running it first with a test? How can I be sure that it works if I don’t ship tests together with it? What will my friend think about me releasing anything without tests? This would be a total embarrassment.<p>Okay, let’s release <code class="language-plaintext highlighter-rouge">Makefile</code> first and <code class="language-plaintext highlighter-rouge">wc.c</code> next. But what will my friend do with a couple of tests and no product in hand? This first release will be absolutely pointless, and I won’t get my $100.<p>Now we’re getting to the point of this article. What I’m trying to say is that every new increment must add some value to the product as it is perceived by the customer, not by us programmers. The <code class="language-plaintext highlighter-rouge">Makefile</code> is definitely a valuable artifact, but it provides no value to my friend. He doesn’t need it, but I need it.<p>Here is what I’m going to do. I’ll release a skeleton of the tool, backed by the tests but with an absolutely dummy implementation. Look at it:<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
 </span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
   <span class="n">printf</span><span class="p">(</span><span class="s">"5</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div>
-
-<p>And I will modify the <code class="language-plaintext highlighter-rouge">Makefile</code> accordingly. I will disable the first test
-to make sure the build passes.</p>
-
-<p>Does my tool work? Yes, it does. Does it count words? Yes, it does for
-some inputs. Does it have value to my friend. Obviously! He
-can run it from the command line, and he can pass a file as an input. He will
-always get number “5” as a result of counting, though. That’s a bummer, but it’s
-an alpha version. He doesn’t expect it to work perfectly.</p>
-
-<p>However, it works, it is backed by tests, and it is properly packaged.</p>
-
-<p>What I just did is a top-down approach to design. First of all, I created
-something that provides value to my customer. I made sure it also satisfies
-my technical objectives, like proper unit test coverage and build automation.
-But the most important goal for me was to make sure my friend received
-something … and paid me.</p>
-
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">What from would you start making a new webservice?</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1264577360449409024?ref_src=twsrc%5Etfw">May 24, 2020</a>
-</blockquote>
-
-
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>And I will modify the <code class="language-plaintext highlighter-rouge">Makefile</code> accordingly. I will disable the first test to make sure the build passes.<p>Does my tool work? Yes, it does. Does it count words? Yes, it does for some inputs. Does it have value to my friend. Obviously! He can run it from the command line, and he can pass a file as an input. He will always get number “5” as a result of counting, though. That’s a bummer, but it’s an alpha version. He doesn’t expect it to work perfectly.<p>However, it works, it is backed by tests, and it is properly packaged.<p>What I just did is a top-down approach to design. First of all, I created something that provides value to my customer. I made sure it also satisfies my technical objectives, like proper unit test coverage and build automation. But the most important goal for me was to make sure my friend received something … and paid me.<blockquote class="twitter-tweet"><p lang="en"dir="ltr">What from would you start making a new webservice?</p>— Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1264577360449409024?ref_src=twsrc%5Etfw">May 24, 2020</a></blockquote></article>

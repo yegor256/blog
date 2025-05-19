@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html amp lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <title>Liquibase with Maven</title>
-    <link rel="canonical" href="https://www.yegor256.com/2014/07/20/liquibase-in-maven.html">
-    <link rel="icon" type="image/png" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
+<!doctypehtml><html amp lang="en"><meta charset="utf-8"><title>Liquibase with Maven</title><link rel="canonical"href="https://www.yegor256.com/2014/07/20/liquibase-in-maven.html"><link rel="icon"type="image/png"href="/favicon.ico"><meta name="viewport"content="width=device-width,minimum-scale=1,initial-scale=1"><script type="application/ld+json">{
         "@context": "http://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage":{
@@ -42,57 +32,7 @@
 management. Here, I explain how to use it with Maven projects.
 ",
         "keywords": ["liquibase integration testing java", "liquibase java mysql", "liquibase java postgresql", "liquibase java test", "liquibase maven example", "liquibase maven integration test", "liquibase maven mysql"]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
-<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500">
-    <style amp-custom="amp-custom">
-      @font-face {
-        font-family: 'Cambria';
-        src: url('https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf');
-      }
-      body { font-family: 'Cambria', 'Times New Roman', serif; padding: .5em; font-size: 1.2em; }
-      article { width: 600px; max-width: 100%; margin-left: auto; margin-right: auto; }
-      pre, code { font-family: 'Source Code Pro', 'Courier New', monospace; font-size: .8em; }
-      code { padding: 0 .3em; background-color: lightgray; }
-      a, a:hover, a:visited { color: inherit; }
-      .intro { color: red; font-size: .75em; }
-      .photo { border-radius: 50%; }
-      pre { overflow-x:scroll; }
-    </style>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <article>
-      <p class="intro">
-        This is a mobile version, full one is
-        <a href="https://www.yegor256.com/2014/07/20/liquibase-in-maven.html">here</a>.
-      </p>
-      <p>
-        <amp-img src="/images/face-256x256.jpg" width="80" height="80" alt="Yegor Bugayenko" class="photo"></amp-img>
-      </p>
-      <p>Yegor Bugayenko<br>20 July 2014</p>
-      <h1>Liquibase with Maven</h1>
-      <p><a href="https://www.liquibase.org">Liquibase</a> is a migration management tool
-for relational databases. It versionalizes schema and data changes in
-a database; similar to the way Git or SVN works for source code.
-Thanks to their <a href="https://www.liquibase.org/documentation/maven/">Maven plugin</a>,
-Liquibase can be used as a part
-of a build automation scenario.</p>
-
-
-
-<h2 id="maven-plugin">Maven Plugin</h2>
-
-<p>Let’s assume you’re using MySQL (PostgreSQL or any other
-database configuration will be very similar.)</p>
-
-<p>Add <code class="language-plaintext highlighter-rouge">liquibase-maven-plugin</code>
-to your <a href="https://maven.apache.org/pom.html"><code class="language-plaintext highlighter-rouge">pom.xml</code></a> (get its latest
-version in <a href="http://search.maven.org/">Maven Central</a>):</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
+      }</script><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500"><style amp-custom="amp-custom">@font-face{font-family:Cambria;src:url(https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf)}body{font-family:Cambria,'Times New Roman',serif;padding:.5em;font-size:1.2em}article{width:600px;max-width:100%;margin-left:auto;margin-right:auto}code,pre{font-family:'Source Code Pro','Courier New',monospace;font-size:.8em}code{padding:0 .3em;background-color:#d3d3d3}a,a:hover,a:visited{color:inherit}.intro{color:red;font-size:.75em}.photo{border-radius:50%}pre{overflow-x:scroll}</style><script async src="https://cdn.ampproject.org/v0.js"></script><article><p class="intro">This is a mobile version, full one is <a href="https://www.yegor256.com/2014/07/20/liquibase-in-maven.html">here</a>.<p><amp-img src="/images/face-256x256.jpg"width="80"height="80"alt="Yegor Bugayenko"class="photo"></amp-img><p>Yegor Bugayenko<br>20 July 2014<h1>Liquibase with Maven</h1><p><a href="https://www.liquibase.org">Liquibase</a> is a migration management tool for relational databases. It versionalizes schema and data changes in a database; similar to the way Git or SVN works for source code. Thanks to their <a href="https://www.liquibase.org/documentation/maven/">Maven plugin</a>, Liquibase can be used as a part of a build automation scenario.<h2 id="maven-plugin">Maven Plugin</h2><p>Let’s assume you’re using MySQL (PostgreSQL or any other database configuration will be very similar.)<p>Add <code class="language-plaintext highlighter-rouge">liquibase-maven-plugin</code> to your <a href="https://maven.apache.org/pom.html"><code class="language-plaintext highlighter-rouge">pom.xml</code></a> (get its latest version in <a href="http://search.maven.org/">Maven Central</a>):<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;project&gt;</span>
   [...]
   <span class="nt">&lt;build&gt;</span>
     [...]
@@ -113,15 +53,7 @@ version in <a href="http://search.maven.org/">Maven Central</a>):</p>
     <span class="nt">&lt;/plugins&gt;</span>
   <span class="nt">&lt;/build&gt;</span>
 <span class="nt">&lt;/project&gt;</span>
-</code></pre></div></div>
-
-<p>To check that it works, run <code class="language-plaintext highlighter-rouge">mvn liquibase:help</code>.</p>
-
-<p>I would recommend you keep database credentials
-in <a href="https://maven.apache.org/settings.html"><code class="language-plaintext highlighter-rouge">settings.xml</code></a>
-and  in their respective profiles. For example:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;settings&gt;</span>
+</code></pre></div></div><p>To check that it works, run <code class="language-plaintext highlighter-rouge">mvn liquibase:help</code>.<p>I would recommend you keep database credentials in <a href="https://maven.apache.org/settings.html"><code class="language-plaintext highlighter-rouge">settings.xml</code></a> and in their respective profiles. For example:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;settings&gt;</span>
   <span class="nt">&lt;profiles&gt;</span>
     <span class="nt">&lt;profile&gt;</span>
       <span class="nt">&lt;id&gt;</span>production<span class="nt">&lt;/id&gt;</span>
@@ -141,59 +73,20 @@ and  in their respective profiles. For example:</p>
     <span class="nt">&lt;/profile&gt;</span>
   <span class="nt">&lt;/profiles&gt;</span>
 <span class="nt">&lt;/settings&gt;</span>
-</code></pre></div></div>
-
-<p>When you run Maven, don’t forget to turn
-on one of the profiles. For example: <code class="language-plaintext highlighter-rouge">mvn -Pproduction</code>.</p>
-
-<h2 id="initial-schema">Initial Schema</h2>
-
-<p>I assume you already have a database with
-a schema (tables, triggers, views, etc.) and some data.
-You should “reverse engineer” it and create an initial schema
-file for Liquibase. In other words, we should inform Liquibase
-where we are at the moment, so that it starts to apply
-changes from this point.</p>
-
-<p>Maven plugin doesn’t support it, so you will have to run
-Liquibase directly. But, it’s not that difficult. First,
-run <code class="language-plaintext highlighter-rouge">mvn liquibase:help</code> in order to download all artifacts.
-Then, replace placeholders with your actual credentials:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>java <span class="nt">-jar</span> <span class="se">\</span>
+</code></pre></div></div><p>When you run Maven, don’t forget to turn on one of the profiles. For example: <code class="language-plaintext highlighter-rouge">mvn -Pproduction</code>.<h2 id="initial-schema">Initial Schema</h2><p>I assume you already have a database with a schema (tables, triggers, views, etc.) and some data. You should “reverse engineer” it and create an initial schema file for Liquibase. In other words, we should inform Liquibase where we are at the moment, so that it starts to apply changes from this point.<p>Maven plugin doesn’t support it, so you will have to run Liquibase directly. But, it’s not that difficult. First, run <code class="language-plaintext highlighter-rouge">mvn liquibase:help</code> in order to download all artifacts. Then, replace placeholders with your actual credentials:<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>java <span class="nt">-jar</span> <span class="se">\</span>
   ~/.m2/repository/org/liquibase/liquibase-core/3.1.1/liquibase-core-3.1.1.jar <span class="se">\</span>
   <span class="nt">--driver</span><span class="o">=</span>com.mysql.jdbc.Driver <span class="se">\</span>
   <span class="nt">--url</span><span class="o">=</span>jdbc:mysql://db.example.com:3306/example <span class="se">\</span>
   <span class="nt">--username</span><span class="o">=</span>example <span class="nt">--password</span><span class="o">=</span>example <span class="se">\</span>
   generateChangeLog <span class="o">&gt;</span> src/main/liquibase/2014/000-initial-schema.xml
-</code></pre></div></div>
-
-<p>Liquibase will analyze your current database schema
-and copy its own schema into <code class="language-plaintext highlighter-rouge">src/main/liquibase/2014/000-initial-schema.xml</code>.</p>
-
-<h2 id="master-changeset">Master Changeset</h2>
-
-<p>Now, create XML master changeset and save it to <code class="language-plaintext highlighter-rouge">src/main/liquibase/master.xml</code>:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;databaseChangeLog</span>
+</code></pre></div></div><p>Liquibase will analyze your current database schema and copy its own schema into <code class="language-plaintext highlighter-rouge">src/main/liquibase/2014/000-initial-schema.xml</code>.<h2 id="master-changeset">Master Changeset</h2><p>Now, create XML master changeset and save it to <code class="language-plaintext highlighter-rouge">src/main/liquibase/master.xml</code>:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;databaseChangeLog</span>
   <span class="na">xmlns=</span><span class="s">"https://www.liquibase.org/xml/ns/dbchangelog"</span>
   <span class="na">xmlns:xsi=</span><span class="s">"https://www.w3.org/2001/XMLSchema-instance"</span>
   <span class="na">xsi:schemaLocation=</span><span class="s">"https://www.liquibase.org/xml/ns/dbchangelog
     https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;includeAll</span> <span class="na">path=</span><span class="s">"src/main/liquibase/2014"</span> <span class="nt">/&gt;</span>
 <span class="nt">&lt;/databaseChangeLog&gt;</span>
-</code></pre></div></div>
-
-<p>It is an entry point for Liquibase. It starts from this file
-and loads all other changesets available in <code class="language-plaintext highlighter-rouge">src/main/liquibase/2014</code>.
-They should be either <code class="language-plaintext highlighter-rouge">.xml</code> or <code class="language-plaintext highlighter-rouge">.sql</code>. I recommend that you use
-XML mostly because it is easier to maintain and works faster.</p>
-
-<h2 id="incremental-changesets">Incremental Changesets</h2>
-
-<p>Let’s create a simple changeset, which adds a new column to an existing table:</p>
-
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;databaseChangeLog</span> <span class="na">xmlns=</span><span class="s">'https://www.liquibase.org/xml/ns/dbchangelog'</span>
+</code></pre></div></div><p>It is an entry point for Liquibase. It starts from this file and loads all other changesets available in <code class="language-plaintext highlighter-rouge">src/main/liquibase/2014</code>. They should be either <code class="language-plaintext highlighter-rouge">.xml</code> or <code class="language-plaintext highlighter-rouge">.sql</code>. I recommend that you use XML mostly because it is easier to maintain and works faster.<h2 id="incremental-changesets">Incremental Changesets</h2><p>Let’s create a simple changeset, which adds a new column to an existing table:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;databaseChangeLog</span> <span class="na">xmlns=</span><span class="s">'https://www.liquibase.org/xml/ns/dbchangelog'</span>
   <span class="na">xmlns:xsi=</span><span class="s">'https://www.w3.org/2001/XMLSchema-instance'</span>
   <span class="na">xsi:schemaLocation=</span><span class="s">'https://www.liquibase.org/xml/ns/dbchangelog
     https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd'</span><span class="nt">&gt;</span>
@@ -203,24 +96,4 @@ XML mostly because it is easier to maintain and works faster.</p>
     <span class="nt">&lt;/sql&gt;</span>
   <span class="nt">&lt;/changeSet&gt;</span>
 <span class="nt">&lt;/databaseChangeLog&gt;</span>
-</code></pre></div></div>
-
-<p>We save this file in <code class="language-plaintext highlighter-rouge">src/main/liquibase/2014/002-add-user-address.xml</code>.
-In big projects, you can name your files by the names of the tickets
-they are produced in. For example, <code class="language-plaintext highlighter-rouge">045-3432.xml</code>, which means changeset
-number 45 coming from ticket #3432.</p>
-
-<p>The important thing is to have this numeric prefix in front of file names,
-in order to sort them correctly. We want changes to be applied in their
-correct chronological order.</p>
-
-<p>That’s it. We’re ready to run <code class="language-plaintext highlighter-rouge">mvn liquibase:update -Pproduction</code> and
-our production database will be updated—a new column will be
-added to the <code class="language-plaintext highlighter-rouge">user</code> table.</p>
-
-<p>Also, see how <a href="/2014/05/21/mysql-maven-plugin.html">MySQL Maven Plugin</a>
-can help you to automate integration testing of database-connected classes.</p>
-
-    </article>
-  </body>
-</html>
+</code></pre></div></div><p>We save this file in <code class="language-plaintext highlighter-rouge">src/main/liquibase/2014/002-add-user-address.xml</code>. In big projects, you can name your files by the names of the tickets they are produced in. For example, <code class="language-plaintext highlighter-rouge">045-3432.xml</code>, which means changeset number 45 coming from ticket #3432.<p>The important thing is to have this numeric prefix in front of file names, in order to sort them correctly. We want changes to be applied in their correct chronological order.<p>That’s it. We’re ready to run <code class="language-plaintext highlighter-rouge">mvn liquibase:update -Pproduction</code> and our production database will be updated—a new column will be added to the <code class="language-plaintext highlighter-rouge">user</code> table.<p>Also, see how <a href="/2014/05/21/mysql-maven-plugin.html">MySQL Maven Plugin</a> can help you to automate integration testing of database-connected classes.</article>
