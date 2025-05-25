@@ -14,9 +14,10 @@ module Yegor
     end
 
     def yb_movies(posts)
-      with_movies(posts).map do |p|
-        "<p><a href='#{p.url}'>#{Kramdown::Document.new(p['jb_picture']['caption']).to_html.gsub(%r{</?p>},
-                                                                                                 '')}</a></p>"
+      with_movies(posts).map do |post|
+        next if post['layout'] == 'russian'
+        lnk = Kramdown::Document.new(post['jb_picture']['caption']).to_html.gsub(%r{</?p>}, '')
+        "<p><a href='#{post.url}'>#{lnk}</a></p>"
       end
     end
 
