@@ -50,9 +50,9 @@ Here are some things to keep in mind to make your journey to success even faster
   Repository owners, especially in large projects, are not enthusiastic about teaching you or explaining how their code works.
   [Don't bother them]({% pst 2024/apr/2024-04-01-ping-me-please %}) with questions in Telegram.
   This will only demonstrate a lack of discipline.
-  Instead, formulate every question as a [new issue]{% pst 2025/may/2025-05-25-bug-driven-development %}, pointing out, for example: 1) lack of documentation, 2) inconsistent design, 3) high complexity, or anything else preventing you from quickly understanding the code and contributing.
+  Instead, formulate every question as a [new issue]({% pst 2025/may/2025-05-25-bug-driven-development %}), pointing out, for example: 1) lack of documentation, 2) inconsistent design, 3) high complexity, or anything else preventing you from quickly understanding the code and contributing.
   Such an issue is a valuable contribution in itself.
-  Read more about [bug driven development]{% pst 2025/may/2025-05-25-bug-driven-development %}.
+  Read more about [bug driven development]({% pst 2025/may/2025-05-25-bug-driven-development %}).
 
 **Blame the Code Base**.
   If `master` branch is broken (you can't build it locally due to some errors), don't get frustrated.
@@ -60,7 +60,7 @@ Here are some things to keep in mind to make your journey to success even faster
   Instead, submit an issue and ask the team to fix it.
   They will respect such a bug report, because you're, in this case, their tester, working for free.
   Don't to start your own branch if master is broken.
-  Wait [until it's fixed]{% pst 2025/apr/2025-04-19-dont-merge-into-broken-master %}.
+  Wait [until it's fixed]({% pst 2025/apr/2025-04-19-dont-merge-into-broken-master %}).
 
 **Ping Them**.
   When you submit a pull request, an issue, or a comment to existing pull requests and issues, make sure you mention the person whose attention you need.
