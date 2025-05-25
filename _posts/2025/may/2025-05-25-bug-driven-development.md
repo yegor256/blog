@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "Bug Driven Development"
+title: "Stop Asking and Suggesting—Just Complain"
 date: 2025-05-25
 place: Moscow, Russia
 tags: management testing
