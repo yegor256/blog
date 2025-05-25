@@ -20,7 +20,7 @@ layout: compress
     <meta name="twitter:account_id" content="4503599630178231" />
     <meta name="twitter:creator" content="@yegor256"/>
     <meta name="twitter:site" content="@yegor256"/>
-    <meta name="twitter:title" property="og:title" content="{{ page.title }}"/>
+    <meta name="twitter:title" property="og:title" content="{{ page.title | xml_escape }}"/>
     <meta name="twitter:description" property="og:description" content="{{ page | yb_description | xml_escape }}"/>
     <meta name="twitter:url" property="og:url" content="{{ site.url }}{{ page.url }}"/>
     <meta name="telegram:channel" content="AAAAAEJFMRzsRTRxM3ec6A"/>

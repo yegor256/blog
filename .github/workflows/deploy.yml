@@ -39,13 +39,13 @@ jobs:
           ruby-version: 2.7
           bundler-cache: false
       - run: sudo .github/install-woff.sh
-      - run: .github/make-icons.sh
+      - run: .github/make-icons.sh icons
       - uses: actions/upload-artifact@v4
         with:
           name: icons
-          path: css
+          path: icons
   publish:
-    timeout-minutes: 5
+    timeout-minutes: 15
     runs-on: ubuntu-24.04
     needs: [site, icons]
     steps:
@@ -58,6 +58,17 @@ jobs:
         with:
           name: icons
           path: gh-pages/css
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - run: sudo npm install -g html-minifier@4.0.0
+      - run: |
+          find gh-pages -name '*.html' -type f -exec \
+            html-minifier --collapse-whitespace --remove-comments \
+            --remove-optional-tags --remove-redundant-attributes \
+            --remove-script-type-attributes --remove-tag-whitespace \
+            --use-short-doctype --minify-css true --minify-js true \
+            --output {} {} \;
       - uses: JamesIves/github-pages-deploy-action@v4.7.3
         with:
           branch: gh-pages
