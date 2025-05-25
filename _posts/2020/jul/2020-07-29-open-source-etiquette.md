@@ -6,7 +6,7 @@ layout: post
 title: "Open Source Etiquette"
 date: 2020-07-29
 place: Moscow, Russia
-tags: oss
+tags: oss etiquette
 description: |
   Demonstrating respect to others in the world of
   software development means a few simple but rather hard

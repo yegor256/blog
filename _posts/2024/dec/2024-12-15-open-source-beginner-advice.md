@@ -6,7 +6,7 @@ layout: post
 title: "Advice for First-Time Open Source Contributors"
 date: 2024-12-15
 place: Moscow, Russia
-tags: oss
+tags: oss etiquette
 description: |
   Making first steps in open source is hard.
   Submitting pull requests to big and popular repositories is very hard.

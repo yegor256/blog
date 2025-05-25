@@ -5,7 +5,7 @@
 layout: post
 title: "Five Principles of Bug Tracking"
 date: 2014-11-24
-tags: management
+tags: etiquette
 description: |
   Managing work in a ticketing system requires more
   discipline than with a co-located team; this article

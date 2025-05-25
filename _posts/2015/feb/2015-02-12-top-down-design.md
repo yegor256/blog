@@ -5,7 +5,7 @@
 layout: post
 title: "Code For the User, Not for Yourself"
 date: 2015-02-12
-tags: management agile
+tags: etiquette agile
 categories: jcg
 description: |
   Each change we make to our software has to provide some value

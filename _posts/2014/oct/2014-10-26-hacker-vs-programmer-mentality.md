@@ -5,7 +5,7 @@
 layout: post
 title: "Are You a Hacker or a Designer?"
 date: 2014-10-26
-tags: management
+tags: etiquette
 description: |
   Twenty years ago we worried about performance. Now
   it is time to worry about maintainability, even though
