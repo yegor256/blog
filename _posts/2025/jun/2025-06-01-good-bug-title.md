@@ -4,7 +4,7 @@
 
 layout: post
 title: "Good Title — Good Bug Report"
-date: 2025-05-25
+date: 2025-06-01
 place: Moscow, Russia
 tags: management testing
 description: |
@@ -23,13 +23,14 @@ jb_picture:
 ---
 
 A few weeks ago, [@horw] released a new GitHub plugin that fixes GitHub issue titles: [issue-title-ai].
-Once an issue is created, the plugin asks ChatGPT---or DeepSeek, or Claude---to improve its title.
+Once an issue is created, the plugin asks [ChatGPT]---or [DeepSeek], or [Claude]---to improve its title.
 We've already integrated the plugin into [objectionary/eo] and a few other repositories.
 Works like a charm.
 What's wrong with the titles the way they are, you may ask?
 Why do we need to ask ChatGPT to make them "better"?
-We want every issue---either a bug report, a feature request, or a question---to be formulated as a complaint.
-We believe that this leads to quicker resolution of them.
+We want every issue---either a bug report, a feature request, or a question---to be formulated as a [complaint]{% pst 2025/may/2025-05-25-bug-driven-development %}.
+It seems that very few of us can do it on the first try.
+The help of AI is appreciated.
 
 <!--more-->
 
@@ -48,15 +49,17 @@ Pick one, out of these five:
 * "PNG file downloading is broken"
 
 There may be more... While the best is the last one.
+It explicitly states that something is broken.
+It demands a fix.
 
-We believe that every ticket much be a bug report.
-We---and [Mozilla]---call it **bug-driven development**.
+We believe that every ticket must be a bug report.
+We---and [Mozilla]---call it [bug-driven development]{% pst 2025/may/2025-05-25-bug-driven-development %}.
 Even if it's a feature request or a question, it must be filed as a complaint.
-This
-
-That's why we want all ticket titles to sound like complaints.
 
 [@horw]: https://github.com/horw
 [issue-title-ai]: https://github.com/horw/issue-title-ai
 [objectionary/eo]: https://github.com/objectionary/eo
 [Mozilla]: https://www.researchgate.net/publication/2559439_An_Overview_of_the_Software_Engineering_Process_and_Tools_in_the_Mozilla_Project
+[ChatGPT]: https://chatgpt.com
+[Claude]: https://claude.ai/
+[DeepSeek]: https://www.deepseek.com/
