@@ -52,7 +52,7 @@ Here are some things to keep in mind to make your journey to success even faster
   This will only demonstrate a lack of discipline.
   Instead, formulate every question as a [new issue]{% pst 2025/may/2025-05-25-bug-driven-development %}, pointing out, for example: 1) lack of documentation, 2) inconsistent design, 3) high complexity, or anything else preventing you from quickly understanding the code and contributing.
   Such an issue is a valuable contribution in itself.
-  Read morea about [bug driven development]{% pst 2025/may/2025-05-25-bug-driven-development %}.
+  Read more about [bug driven development]{% pst 2025/may/2025-05-25-bug-driven-development %}.
 
 **Blame the Code Base**.
   If `master` branch is broken (you can't build it locally due to some errors), don't get frustrated.

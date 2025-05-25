@@ -18,6 +18,15 @@ style: |-
           You can learn more about OOP from my recently published
           book <a href="/elegant-objects.html">Elegant Objects</a> too.
         </p>
+      {% elsif page.tag == 'eolang' %}
+        <h1>{{ page.posts.size }} Posts About EOLANG, Experimental Pure Object-Oriented Language</h1>
+        <p>
+          <a href="https://gitter.im/yegor256/elegantobjects"><img alt="Elegant Objects logo"
+            src="/images/books/elegant-objects/cactus.svg" style="height:150px;" class="float-ico"/></a>
+          You can learn more about EO from
+          its <a href="https://www.eolang.org">website</a>
+          or in our Telegram group: <a href="https://t.me/eolang_org">@eolang_org</a>.
+        </p>
       {% elsif page.tag == 'management' %}
         <h1>{{ page.posts.size }} Posts About Management</h1>
         <p>
