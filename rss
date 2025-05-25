@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-05-19T09:27:36+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">No BTW in Bug Reports</title><link href="https://www.yegor256.com/2025/05/18/bug-reports-as-contracts.html" rel="alternate" type="text/html" title="No BTW in Bug Reports" /><published>2025-05-18T00:00:00+00:00</published><updated>2025-05-18T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/18/bug-reports-as-contracts</id><content type="html" xml:base="https://www.yegor256.com/2025/05/18/bug-reports-as-contracts.html"><![CDATA[<p>Every ticket—a bug report or a feature request—is a short-term contract.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-05-25T13:27:07+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Stop Asking and Suggesting—Just Complain</title><link href="https://www.yegor256.com/2025/05/25/bug-driven-development.html" rel="alternate" type="text/html" title="Stop Asking and Suggesting—Just Complain" /><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/25/bug-driven-development</id><content type="html" xml:base="https://www.yegor256.com/2025/05/25/bug-driven-development.html"><![CDATA[<p>Wikipedia <a href="https://en.wikipedia.org/wiki/Tester-driven_development">says</a> that Bug Driven Development (BDD) is an anti-pattern.
+<a href="https://github.com/rajakolluru">Raja Shankar Kolluru</a> perfectly <a href="https://itmusings.com/bug-driven-development/">explains</a> why.
+However, <a href="https://github.com/FlorianRappl">Florian Rappl</a> <a href="https://www.florian-rappl.de/News/Page/227/bug-driven-development">argues</a> that it’s not.
+<a href="https://github.com/benwinding">Ben Winding</a> <a href="https://blog.benwinding.com/bug-driven-development-sometimes-its-the-best-choice/">believes</a> that it’s better than TDD.
+In simple words, BDD is kind of like trying to build a plane while it’s flying, based on passenger complaints.
+Nobody builds planes like that (well, maybe <a href="https://spectrum.ieee.org/how-the-boeing-737-max-disaster-looks-to-a-software-developer">Boeing</a> and <a href="https://www.theguardian.com/technology/2015/may/20/airbus-issues-alert-software-bug-fatal-plane-crash">Airbus</a>).
+However, a software team that practices BDD might demonstrate higher productivity.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Ghost Dog (1999) by Jim Jarmush" src="/images/2025/05/ghost-dog.jpg" longdesc="#32d0d0e9" /><figcaption id="32d0d0e9">Ghost Dog (1999) by Jim Jarmush</figcaption></figure>
+
+<p>A software team does BDD if it follows one simple principle:
+Every piece of work is formulated as a <strong>complaint</strong>.</p>
+
+<p>It started <a href="https://www.researchgate.net/publication/2559439_An_Overview_of_the_Software_Engineering_Process_and_Tools_in_the_Mozilla_Project">in 2002</a>, by Mozilla:</p>
+
+<blockquote>
+  <p>Every code change in the Mozilla codebase is made as part of a “fix” for a uniquely numbered “bug.” Though it commonly has a pejorative connotation, in the Mozilla Project the term bug is used to refer to any filed request for modification in the software, be it an actual defect, an enhancement, or a change in functionality.</p>
+</blockquote>
+
+<p>If you listen to Mozilla’s advice, you won’t have feature requests, or questions, or tasks in your <a href="https://en.wikipedia.org/wiki/Issue_tracking_system">issue tracking system</a>.
+Only bug reports.
+They may sound like “The wing is on fire!”—a perfect complaint—or “A plane doesn’t have a jacuzzi!”—a perfect feature request in the form of a complaint.
+Questions may also look like complaints: “It is unclear how to fasten the belt.”
+Whether they are coming from testers or customers, the format is the same: “I don’t like it.”</p>
+
+<p>The primary benefit that BDD can give to a project is <strong>noise reduction</strong>.
+I can think of two reasons for that:</p>
+
+<ol>
+  <li>
+    <p>Complaints, due to their rather aggressive nature, require their authors to provide strong arguments to back them up.
+They must think twice before submitting a ticket that accuses the codebase of being broken or imperfect.
+They must be specific and precise.
+No noise.</p>
+  </li>
+  <li>
+    <p>Similarly, programmers must convince a complainant that the problem is resolved.
+They can’t close the ticket with just a text answer.
+They need to demonstrate a reasonably significant contribution to the codebase.
+No noise.</p>
+  </li>
+</ol>
+
+<p>A good complaint identifies a <strong>flaw</strong> in something tangible.
+A good resolution of a good complaint is a <strong>patch</strong> to that tangible something.
+Obviously, in a software project, the <strong>source code</strong> is what is tangible.</p>
+
+<p>In a disciplined team, every ticket is a bug report that addresses a flaw in the source code.
+Every bug report leads to a patch—a contribution to the source code.
+No noise.
+The team is focused and demonstrates the best possible productivity.</p>
+
+<p>BDD also has a major drawback.
+It may be hard to train the team to use it.
+The adoption of BDD may require a change of their <strong>mindset</strong>.
+They must switch from noise-makers to flaw-finders.</p>
+
+<p><a href="https://blog.codinghorror.com/about-me/">Jeff Atwood</a>, in his blog post about <a href="https://blog.codinghorror.com/complaint-driven-development/">complaint-driven development</a>, explains it from a business point of view.
+He suggests that instead of implementing what you believe is right, it’s better to give your customers a rough draft and let them complain.
+You’re most often wrong about what they’ll actually complain about.
+The more they complain, the better you listen, the bigger the value you deliver.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="testing" /><summary type="html"><![CDATA[When every piece of work is framed as a bug report---including feature requests and questions---a software team may become more productive.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">No BTW in Bug Reports</title><link href="https://www.yegor256.com/2025/05/18/bug-reports-as-contracts.html" rel="alternate" type="text/html" title="No BTW in Bug Reports" /><published>2025-05-18T00:00:00+00:00</published><updated>2025-05-18T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/18/bug-reports-as-contracts</id><content type="html" xml:base="https://www.yegor256.com/2025/05/18/bug-reports-as-contracts.html"><![CDATA[<p>Every ticket—a bug report or a feature request—is a short-term contract.
 You, the reporter, hire them to make a fix or implement a feature.
 They, the team of developers, do it for you—provided you pay, or their motivation is intrinsic—for example, in open source.
 The discussion that happens along the way may help clarify the requirements of the contract.
@@ -902,88 +964,4 @@ remain a nice badge on your CV and your company’s website.</p>
 <p>By the way, it is important to remember that if you want to get similar protection
 in another country, you will have to pay their patent office separately.
 Just like you pay every time a different mafia boss for protection when
-you want to work in the territories they control.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="business" /><summary type="html"><![CDATA[If you are a programer, then even if a lawyer may help you write a patent application, your job is to prepare a proper patent claim, making its breadth right on.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/06/and-justice-for-all.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/06/and-justice-for-all.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Онлайн хулиганы</title><link href="https://www.yegor256.com/2024/05/27/freedom-of-speech-vs-intelligence.html" rel="alternate" type="text/html" title="Онлайн хулиганы" /><published>2024-05-27T00:00:00+00:00</published><updated>2024-05-27T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/05/27/freedom-of-speech-vs-intelligence</id><content type="html" xml:base="https://www.yegor256.com/2024/05/27/freedom-of-speech-vs-intelligence.html"><![CDATA[<p>А знаете, какое самое популярное по числу просмотров видео на YouTube?
-Вот <a href="https://www.youtube.com/watch?v=XqZsoesa55w">это</a>.
-14 миллиардов просмотров за менее чем семь лет. И таких видео
-<a href="https://en.wikipedia.org/wiki/List_of_most-liked_YouTube_videos">много</a>. Задаюсь
-вопросом, о чем эта песня? Чему она учит? Какой вообще в ней смысл? С моей
-точки зрения, сформированной когда-то давно сказками
-<a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%BB%D0%BA%D0%BE%D0%B2,_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87">Сергея Михалкова</a>,
-<a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D1%88%D0%B0%D0%BA,_%D0%A1%D0%B0%D0%BC%D1%83%D0%B8%D0%BB_%D0%AF%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2%D0%B8%D1%87">Самуила Маршака</a> и
-<a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D1%80%D1%82%D0%BE,_%D0%90%D0%B3%D0%BD%D0%B8%D1%8F_%D0%9B%D1%8C%D0%B2%D0%BE%D0%B2%D0%BD%D0%B0">Агнии Барто</a>, в этой песне смысла нет.
-Но ведь он должен быть, раз её посмотрели и оценили по достоинству сотни
-миллионов родителей и детей! Нет, не должен. Всё просто: что сейчас нравится миллионам, то и
-является эталоном качества. Но ведь так было не всегда.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Babyshark by Pinkfong" src="/images/2024/05/babyshark.jpg" longdesc="#4e17762b" /><figcaption id="4e17762b">Babyshark by Pinkfong</figcaption></figure>
-
-<p>Ещё несколько десятков лет назад, ни интернета, ни YouTube не существовало, а
-все средства массовой информации имели редакторов или даже редакционные
-коллективы, которые решали, что публиковать и доносить до зрителя, а что сразу
-в корзину. Более того, ещё раньше существовали страны, в которых на
-государственном уровне свирепствовала <a href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BD%D0%B7%D1%83%D1%80%D0%B0">цензура</a>, которая не только в
-корзину отправляла негодный материал, но и автора в лагеря.</p>
-
-<p>К счастью, скажете вы, те времена прошли. Наступило не просто время торжества
-свободы слова, но и время почти абсолютной бесполезности редакторов и цензоров.
-Несколько лет назад я испытал это на себе.
-<a href="/2018/11/20/journalism.html">Дело было так</a>. Я написал техническую
-<a href="/2018/03/06/speed-vs-quality.html">статью</a>
-и отправил её в одно онлайн-издание. Мне отказали, объяснив почему. Я
-отправил в другое издание, где мне тоже отказали, при этом назвав причину,
-которая полностью противоречила первому отказу. Редакторы советовали исправить
-статью в противоположных направлениях. В итоге я опубликовал статью у себя на
-блоге, выступил с ней на <a href="https://youtu.be/55mwAbuDrV8">конференции</a>,
-и получил куда больше просмотров
-и лайков, чем, наверное, мог бы собрать в одном из этих уважаемых изданий.</p>
-
-<p>Полагаю, что если бы подобные события происходили на 50 лет раньше,
-я бы не смог опубликовать свои мысли, не удовлетворив строгих требований одного из редакторов. Меня бы
-ограничила цензура. Более того, если бы я опубликовал свою статью
-самостоятельно методом так называемого <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B0%D0%BC%D0%B8%D0%B7%D0%B4%D0%B0%D1%82">самиздата</a>, то до лагерей было бы рукой
-подать (как минимум строгого выговора мне было бы не избежать). Казалось бы,
-какие ужасные времена остались в прошлом, и как прекрасно, что теперь нет ни
-цензуры, ни редколлегий, а есть интернет! Это только на первый взгляд.</p>
-
-<p>Как я её понимаю, задачей цензуры является не столько ограничение творческих
-порывов авторов, сколько защита всех остальных граждан от последствий этих
-порывов. Ровно как полиция наказывает хулиганов не потому, что хочет причинить
-им вред, а для того, чтобы защитить окружающих. Видео ролики, подобные тому, с
-просмотра которого мы начали эту статью, и есть, по моему мнению, самое настоящее
-онлайн-хулиганство.</p>
-
-<p>Вы скажете, но ведь люди-то довольны. Они же смотрят, ставят лайки,
-подписываются на YouTube-каналы. Какое же это хулиганство, если большинство в
-восторге и показывает этот контент своим детям, а те, надо полагать, водят
-пальцем по экрану и мычат от удовольствия? В том-то и дело, что последствия
-бытового хулиганства нам очевидны и неприятны: ни разбитые окна, ни запах в
-лифте, ни надписи на стенах в подъезде абсолютному большинству не по душе.
-Последствия же онлайн-хулиганства куда более трагические, но при этом менее
-очевидные для большинства: у населения снижается интеллект и
-пропадает тяга к прекрасному. Это страшнее запаха в подъезде.</p>
-
-<p>Но виноваты в этом не авторы этой незатейливой песенки и прочего подобного
-контента, которым заполнен YouTube! Они лишь делают свою работу, стараясь
-соответствовать запросам общества. Но вот если 50 лет назад интересы общества
-были представлены строгим редактором журнала <a href="https://ru.wikipedia.org/wiki/%D0%AE%D0%BD%D0%BE%D1%81%D1%82%D1%8C_(%D0%B6%D1%83%D1%80%D0%BD%D0%B0%D0%BB)">“Юность”</a> и художественным советом
-фестиваля <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%81%D0%BD%D1%8F_%D0%B3%D0%BE%D0%B4%D0%B0">“Песня года”</a>, то теперь интересы общества представляет YouTube,
-который выражает их через количество лайков. Что бы автор ни создал, он
-вынужден подстраиваться под вкусы толпы, которая безусловно с огромным
-восторгом будет воспринимать нецензурную лексику, шутки ниже пояса, да и просто
-во всех смыслах порнографию.</p>
-
-<p>Поскольку средний человек не способен отличить онлайн-хулиганов от достойных авторов,
-авторы вынуждены хулиганить, чтобы заслужить лайки (а значит, заработать
-гонорар). Любимая нами свобода слова, которую уважаемая нами фирма Google
-(владелец YouTube) защищает, позволяя размещать у себя контент практически
-любого качества и содержания, и есть главный виновник и провокатор
-онлайн-хулиганства.</p>
-
-<p>Дописываю эту статью, находясь в Китае. Пару дней назад беседовал с одним
-знакомым китайцем, и он рассказал, что на их онлайн-видео платформах существует
-<a href="https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BD%D0%B7%D1%83%D1%80%D0%B0_%D0%B2_%D0%9A%D0%B8%D1%82%D0%B0%D0%B5">строгая цензура</a>. Запрещено выкладывать всё, что по мнению правительства не
-соответствует моральному облику строителя <del>коммунизма</del> здорового общества. И
-конечно, запрещены любые видео ролики политического характера. Может быть,
-такие ограничения имеют смысл, учитывая всё сказанное выше?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="свобода" /><summary type="html"><![CDATA[Свобода слова помогает авторам быть услышанным, но при этом провоцирует и делает невозможным наказания онлайн хулиганов, в которых неизбежно превращаются авторы, стараясь заработать лайки.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/05/babyshark.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/05/babyshark.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+you want to work in the territories they control.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="business" /><summary type="html"><![CDATA[If you are a programer, then even if a lawyer may help you write a patent application, your job is to prepare a proper patent claim, making its breadth right on.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/06/and-justice-for-all.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/06/and-justice-for-all.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

@@ -10,6 +10,7 @@ ability
 able
 abnormal
 about
+about-me
 above
 above-average
 above-the-market
@@ -57,6 +58,7 @@ accusation
 accusations
 accuse
 accused
+accuses
 accustomed
 achievable
 achieve
@@ -140,6 +142,7 @@ admiration
 admit
 adobe
 adopt
+adoption
 adorable
 adore
 ads
@@ -209,6 +212,8 @@ aims
 aintshy
 air
 airbnb
+airbus
+airbus-issues-alert-software-bug-fatal-plane-crash
 aircraft
 aircraft-flying
 airport
@@ -776,6 +781,7 @@ BC
 bcba
 BCC
 BD
+BDD
 BDMSummit
 be
 beach
@@ -834,6 +840,7 @@ belong
 belongs
 belov
 below
+belt
 ben
 bench
 benchmark
@@ -844,6 +851,7 @@ benefits
 benevolence
 benjamin
 benner
+benwinding
 berlin
 bernie
 bertrand
@@ -962,6 +970,7 @@ bobby
 bodies
 body
 bodyguards
+boeing
 bold
 bonds
 boni
@@ -1104,6 +1113,8 @@ buffer
 buffered
 bug
 bug's
+bug-driven-development
+bug-driven-development-sometimes-its-the-best-choice
 bug-free
 bug-tracker-usage
 bugayenko
@@ -1606,6 +1617,7 @@ codex
 codexia
 coding
 coding-savvy
+codinghorror
 codota
 coen
 coffee
@@ -1740,10 +1752,13 @@ compiler
 compiles
 compiling
 complain
+complainant
 complained
 complaining
 complains
 complaint
+complaint-driven
+complaint-driven-development
 complaints
 complete
 completed
@@ -1869,6 +1884,7 @@ connecting
 connection
 connections
 connects
+connotation
 conquer
 conquest
 cons
@@ -3092,6 +3108,7 @@ engines
 english
 englishname
 enhance
+enhancement
 enhances
 enjoy
 enjoyable
@@ -3442,6 +3459,7 @@ farther
 fashion
 fast
 fast-track
+fasten
 faster
 fastest
 fastlane
@@ -3618,6 +3636,7 @@ flatter
 flattering
 flattery
 flaw
+flaw-finders
 flawed
 flaws
 fletcher
@@ -3632,6 +3651,9 @@ flirting
 float
 floating
 floor
+florian
+florian-rappl
+florianrappl
 flourish
 flow
 flowers
@@ -3944,6 +3966,7 @@ giancarlo
 giang
 giant
 giants
+gibbs
 gif
 gift
 gifts
@@ -4383,6 +4406,7 @@ house
 houses
 hovering
 how
+how-the-boeing-
 howell
 however
 HP
@@ -4940,6 +4964,7 @@ iterative
 iterator
 iterators
 iterm
+itmusings
 its
 itself
 iu
@@ -4947,6 +4972,7 @@ IV
 ivan
 jack
 jacob
+jacuzzi
 jaguar
 jail
 jaime
@@ -5197,6 +5223,7 @@ known
 knows
 knuth
 kolbin
+kolluru
 kolorz-frontend
 korean
 kotlin
@@ -6088,6 +6115,7 @@ movie
 movies
 moving
 mozilla
+mozilla's
 mph
 mr
 mr-barry
@@ -6299,6 +6327,7 @@ node
 nodes
 nods
 noise
+noise-makers
 nokia
 NOLO
 nomethoderror
@@ -6379,6 +6408,7 @@ NULL
 nullpointerexception
 NULLs
 number
+numbered
 numbers
 numeric
 numerous
@@ -6784,6 +6814,7 @@ party
 pascal
 pass
 passed
+passenger
 passenger's
 passengers
 passes
@@ -6855,6 +6886,7 @@ peer
 peers
 peet's
 peitek
+pejorative
 pen
 penalize
 penalizes
@@ -7026,6 +7058,8 @@ plaintiff
 PLaIsQH
 plan
 plan-do-check-act
+plane
+planes
 planet
 planned
 planning
@@ -7577,6 +7611,8 @@ raise
 raised
 raises
 raising
+raja
+rajakolluru
 rake
 RAM
 raman
@@ -7594,6 +7630,7 @@ rant
 rapidly
 rapist
 rapists
+rappl
 rapport
 rapportive
 rare
@@ -7752,6 +7789,7 @@ redone
 reduce
 reduced
 reducing
+reduction
 redundancy
 redundant
 reem
@@ -7812,6 +7850,7 @@ reich
 reinagel
 reinforce
 reinventing
+reis
 reiterate
 reiterates
 reject
@@ -8153,6 +8192,7 @@ rospatent
 rotate
 rotating
 rotations
+rough
 roughly
 round
 route
@@ -8558,6 +8598,7 @@ shame
 shamelessly
 shaming
 shampoo
+shankar
 shape
 share
 shared
@@ -8910,6 +8951,7 @@ specifies
 specify
 specifying
 specs
+spectrum
 speech
 speeches
 speechhacks
@@ -9518,6 +9560,7 @@ testable
 testament
 tested
 tester
+tester-driven
 testers
 testing
 testing-wise
@@ -9546,6 +9589,7 @@ that
 that's
 the
 theft
+theguardian
 their
 theirs
 them
@@ -10011,6 +10055,7 @@ unintended
 union
 uniq
 unique
+uniquely
 unit
 unite
 united
@@ -10471,8 +10516,10 @@ willis's
 win
 win-lose
 win-win
+winding
 window
 windows
+wing
 winner
 winners
 winning
