@@ -40,4 +40,3 @@ They don't even try to build locally.
 
 Then, when they see that CI jobs don't pass in their pull request, they post a message right there in the PR:
 "I don't understand why it fails".
-
