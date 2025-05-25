@@ -41,20 +41,25 @@ You want to report this problem to the team.
 How would you title such a bug report?
 Pick one, out of these five:
 
+* "CSV"
 * "CSV file downloading"
-* "Fix CSV-file downloading"
+* "Please, fix CSV-file downloading"
 * "CSV downloading must be fixed"
 * "Why I get text file instead of PNG?"
+* "How can I download PNG file?"
 * "I need text file, not PNG"
-* "PNG file downloading is broken"
+* "PNG downloading is broken, getting CSV instead"
 
-There may be more... While the best is the last one.
-It explicitly states that something is broken.
+There may be even more variations... but the best is the last one.
+It clearly states that something is broken.
 It demands a fix.
 
 We believe that every ticket must be a bug report.
-We---and [Mozilla]---call it [bug-driven development]{% pst 2025/may/2025-05-25-bug-driven-development %}.
-Even if it's a feature request or a question, it must be filed as a complaint.
+We---and [Mozilla]---call this [bug-driven development]{% pst 2025/may/2025-05-25-bug-driven-development %}.
+
+Even if it's a feature request or a question, it should be filed as a complaint.
+
+Apparently, very few programmers have this skill: formulating a problem as a complaint.
 
 [@horw]: https://github.com/horw
 [issue-title-ai]: https://github.com/horw/issue-title-ai
