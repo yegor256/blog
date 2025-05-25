@@ -23,8 +23,10 @@ module Yegor
     def yb_description(page)
       text = page['description']
       text = '' if text.nil?
-      raise "too short description in [#{page['title']}] (#{text.length} chars): \"#{text}\"" if text.length < 80
-      raise "too long description in [#{page['title']}] (#{text.length} chars): \"#{text}\"" if text.length > 200
+      unless ARGV.include?('--dirty')
+        raise "too short description in [#{page['title']}] (#{text.length} chars): \"#{text}\"" if text.length < 80
+        raise "too long description in [#{page['title']}] (#{text.length} chars): \"#{text}\"" if text.length > 200
+      end
       text.gsub(/[ \n\r\t]+/, ' ').strip
     end
 
