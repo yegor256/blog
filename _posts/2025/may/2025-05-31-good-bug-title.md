@@ -6,7 +6,7 @@ layout: post
 title: "Good Title — Good Bug Report"
 date: 2025-05-31
 place: Moscow, Russia
-tags: management testing
+tags: etiquette testing
 description: |
   ChatGPT helps us re-format GitHub issue titles
   after their authors submit them --- helping developers
