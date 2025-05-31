@@ -4,6 +4,8 @@ description: |
   Tagged articles in the blog of Yegor Bugayenko, about
   software development, object-oriented programming,
   project management, and startup investments
+style: |
+  .float-ico { float: right; margin-left: 1em; margin-bottom: 2em; }
 ---
 
 <section itemscope="" itemtype="http://schema.org/BlogPosting">
@@ -13,44 +15,58 @@ description: |
         <h1>{{ page.posts.size }} Posts About Object-Oriented Programming (OOP)</h1>
         <p>
           <a href="https://gitter.im/yegor256/elegantobjects"><img alt="Elegant Objects logo"
-            src="/images/books/elegant-objects/cactus.svg" style="height:150px;float:right;margin-left:1em"/></a>
+            src="/images/books/elegant-objects/cactus.svg" style="height:150px;" class="float-ico"/></a>
           You can learn more about OOP from my recently published
           book <a href="/elegant-objects.html">Elegant Objects</a> too.
+        </p>
+      {% elsif page.tag == 'eolang' %}
+        <h1>{{ page.posts.size }} Posts About EOLANG, Experimental Pure Object-Oriented Language</h1>
+        <p>
+          <a href="https://gitter.im/yegor256/elegantobjects"><img alt="Elegant Objects logo"
+            src="/images/books/elegant-objects/cactus.svg" style="height:150px;" class="float-ico"/></a>
+          You can learn more about EO from
+          its <a href="https://www.eolang.org">website</a>
+          or in our Telegram group: <a href="https://t.me/eolang_org">@eolang_org</a>.
         </p>
       {% elsif page.tag == 'management' %}
         <h1>{{ page.posts.size }} Posts About Management</h1>
         <p>
-          <img alt="Code Ahead logo" src="/images/icons/mushroom.svg" style="height:150px;float:right;margin-left:1em"/>
+          <img alt="Code Ahead logo" src="/images/icons/mushroom.svg" style="height:150px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'java' %}
         <h1>{{ page.posts.size }} Posts About Java&trade;</h1>
         <p>
-          <img alt="Java logo" src="/images/icons/java.svg" style="height:150px;float:right;margin-left:1em"/>
+          <img alt="Java logo" src="/images/icons/java.svg" style="height:150px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'ruby' %}
         <h1>{{ page.posts.size }} Posts About Ruby</h1>
         <p>
-          <img alt="Ruby logo" src="/images/icons/ruby.svg" style="height:150px;float:right;margin-left:1em"/>
+          <img alt="Ruby logo" src="/images/icons/ruby.svg" style="height:150px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'maven' %}
         <h1>{{ page.posts.size }} Posts About Apache Maven&trade;</h1>
         <p>
-          <img alt="Maven logo" src="/images/icons/maven.svg" style="height:150px;float:right;margin-left:1em"/>
+          <img alt="Maven logo" src="/images/icons/maven.svg" style="height:150px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'oss' %}
         <h1>{{ page.posts.size }} Posts About Open Source</h1>
         <p>
-          <img alt="GitHub logo" src="/images/icons/github.svg" style="height:150px;float:right;margin-left:1em"/>
+          <img alt="GitHub logo" src="/images/icons/github.svg" style="height:150px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'sarcasm' %}
         <h1>{{ page.posts.size }} Sarcastic Posts (don't take them too seriously ;)</h1>
         <p>
-          <img alt="Sarcasm logo" src="/images/icons/sarcasm.png" style="height:250px;float:right;margin-left:1em"/>
+          <img alt="Sarcasm logo" src="/images/icons/sarcasm.png" style="height:250px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'career' %}
         <h1>{{ page.posts.size }} Posts About Career Development</h1>
         <p>
-          <img alt="Career Development logo" src="/images/icons/career.svg" style="height:150px;float:right;margin-left:1em"/>
+          <img alt="Career Development logo" src="/images/icons/career.svg" style="height:150px;" class="float-ico"/>
+        </p>
+      {% elsif page.tag == 'etiquette' %}
+        <h1>{{ page.posts.size }} Posts About the Etiquette of Our Craftmanship</h1>
+        <p>
+          <img alt="Etiquette logo" src="/images/icons/etiquette.svg" style="height:150px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'mood' %}
         <h1>{{ page.posts.size }} Posts Written for Fun</h1>
@@ -61,43 +77,43 @@ description: |
       {% elsif page.tag == 'aws' %}
         <h1>{{ page.posts.size }} Posts About Amazon&trade; Web Services</h1>
         <p>
-          <img alt="AWS logo" src="/images/icons/aws.svg" style="height:150px;float:right;margin-left:1em"/>
+          <img alt="AWS logo" src="/images/icons/aws.svg" style="height:150px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'latex' %}
         <h1>{{ page.posts.size }} Posts About LaTeX</h1>
         <p>
-          <img alt="LaTeX logo" src="/images/icons/tex.svg" style="height:64px;float:right;margin-left:1em"/>
+          <img alt="LaTeX logo" src="/images/icons/tex.svg" style="height:64px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'jekyll' %}
         <h1>{{ page.posts.size }} Posts About Jekyll</h1>
         <p>
-          <img alt="Jekyll logo" src="/images/icons/jekyll.svg" style="height:128px;float:right;margin-left:1em"/>
+          <img alt="Jekyll logo" src="/images/icons/jekyll.svg" style="height:128px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'pdd' %}
         <h1>{{ page.posts.size }} Posts About Puzzle Driven Development (PDD)</h1>
         <p>
-          <img alt="PDD logo" src="//www.0pdd.com/images/logo.svg" style="height:150px;float:right;margin-left:1em"/>
+          <img alt="PDD logo" src="//www.0pdd.com/images/logo.svg" style="height:150px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'rultor' %}
         <h1>{{ page.posts.size }} Posts About Rultor GitHub Chatbot</h1>
         <p>
-          <img alt="Rultor logo" src="//doc.rultor.com/images/logo.svg" style="height:150px;float:right;margin-left:1em"/>
+          <img alt="Rultor logo" src="//doc.rultor.com/images/logo.svg" style="height:150px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'jcabi' %}
         <h1>{{ page.posts.size }} Posts About JCabi Libraries</h1>
         <p>
-          <img alt="JCabi logo" src="//www.jcabi.com/logo-square.svg" style="height:150px;float:right;margin-left:1em"/>
+          <img alt="JCabi logo" src="//www.jcabi.com/logo-square.svg" style="height:150px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'business' %}
         <h1>{{ page.posts.size }} Posts About Business and Startups</h1>
         <p>
-          <img alt="Business logo" src="/images/icons/business.svg" style="height:128px;float:right;margin-left:1em"/>
+          <img alt="Business logo" src="/images/icons/business.svg" style="height:128px;" class="float-ico"/>
         </p>
       {% elsif page.tag == 'zerocracy' %}
         <h1>{{ page.posts.size }} Posts About Zerocracy&trade;</h1>
         <p>
           <a href="https://www.zerocracy.com">
-            <img alt="Zerocracy logo" src="//www.0crat.com/svg/logo.svg" style="height:150px;float:right;margin-left:1em"/></a>
+            <img alt="Zerocracy logo" src="//www.0crat.com/svg/logo.svg" style="height:150px;" class="float-ico"/></a>
           <a href="https://www.zerocracy.com">Zerocracy</a>
           a project manager that
           <a href="/2018/03/21/zerocracy-announcement.html">never sleeps</a>,
@@ -108,7 +124,7 @@ description: |
         <h1>{{ page.posts.size }} Posts About eXtremely Distributed Software Development (XDSD&trade;) Methodology</h1>
         <p>
           <a href="https://www.xdsd.org/">
-            <img alt="XDSD logo" src="//www.xdsd.org/images/logo.svg" style="height:150px;float:right;margin-left:1em"/></a>
+            <img alt="XDSD logo" src="//www.xdsd.org/images/logo.svg" style="height:150px;" class="float-ico"/></a>
           <a href="https://www.xdsd.org">XDSD</a> is an open software development methodology
           that aims to reduce risks and improve quality in a project
           of almost any size.

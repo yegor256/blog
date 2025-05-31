@@ -6,7 +6,7 @@ layout: post
 title: "Either Bugs or Pull Requests ... or You Are Out"
 date: 2018-07-24
 place: Moscow, Russia
-tags: zerocracy management
+tags: zerocracy etiquette
 description: |
   You can contribute to a project by either reporting bugs
   or submitting pull requests; if you can't do either of those,

@@ -6,7 +6,7 @@ layout: post
 title: "Does Code Review Involve Testing?"
 date: 2019-12-03
 place: Moscow, Russia
-tags: management
+tags: etiquette
 description: |
   What should code reviewers do when they suspect that
   errors exist but can't be spotted by

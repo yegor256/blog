@@ -6,7 +6,7 @@ layout: post
 title: "How to Be Lazy and Stay Calm"
 date: 2018-04-17
 place: Moscow, Russia
-tags: management zerocracy
+tags: zerocracy etiquette
 description: |
   Solving technical problems in a large scope which
   is difficult to understand is a very stressful activity;

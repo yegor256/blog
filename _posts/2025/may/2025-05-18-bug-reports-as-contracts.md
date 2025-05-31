@@ -6,7 +6,7 @@ layout: post
 title: "No BTW in Bug Reports"
 date: 2025-05-18
 place: Moscow, Russia
-tags: management testing
+tags: testing etiquette
 description: |
   Keep your ticket focused---one issue per report, no distractions,
   no "by the way"---this is how you help your team achieve higher efficiency.

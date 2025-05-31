@@ -6,7 +6,7 @@ layout: post
 title: "Where Do You Seek Help First?"
 date: 2019-06-11
 place: Belgorod, Russia
-tags: management
+tags: etiquette
 description: |
   Sometimes you realize that you are not competent enough
   to solve a technical problem. What do you do? Where

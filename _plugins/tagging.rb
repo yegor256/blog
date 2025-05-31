@@ -76,7 +76,7 @@ module Yegor
 
     def tag_link(tag)
       prefix = case tag
-      when 'oop'
+      when 'oop', 'eolang'
         "<img src='/images/icons/cactus.svg' alt='OOP'/>"
       when 'management'
         "<img src='/images/icons/mushroom.svg' alt='Management'/>"
@@ -98,6 +98,8 @@ module Yegor
         "<img src='/images/icons/github-white.svg' alt='GitHub'/>"
       when 'business'
         "<img src='/images/icons/business-white.svg' alt='Business'/>"
+      when 'etiquette'
+        "<img src='/images/icons/etiquette-white.svg' alt='Etiquette'/>"
       when 'aws'
         "<img src='/images/icons/aws-white.svg' alt='Amazon Web Services'/>"
       when 'rultor'

@@ -6,7 +6,7 @@ layout: post
 title: "Are You a Coder or a Developer?"
 date: 2018-01-23
 place: Moscow, Russia
-tags: management
+tags: etiquette
 description: |
   Sociotechnical skills distinguish lines-of-code writers
   from software developers, since modern software projects
