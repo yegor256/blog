@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-05-31T11:32:38+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Stop Asking and Suggesting—Just Complain</title><link href="https://www.yegor256.com/2025/05/25/bug-driven-development.html" rel="alternate" type="text/html" title="Stop Asking and Suggesting—Just Complain" /><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/25/bug-driven-development</id><content type="html" xml:base="https://www.yegor256.com/2025/05/25/bug-driven-development.html"><![CDATA[<p>Wikipedia <a href="https://en.wikipedia.org/wiki/Tester-driven_development">says</a> that Bug Driven Development (BDD) is an anti-pattern.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-05-31T12:41:26+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Good Title — Good Bug Report</title><link href="https://www.yegor256.com/2025/05/31/good-bug-title.html" rel="alternate" type="text/html" title="Good Title — Good Bug Report" /><published>2025-05-31T00:00:00+00:00</published><updated>2025-05-31T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/31/good-bug-title</id><content type="html" xml:base="https://www.yegor256.com/2025/05/31/good-bug-title.html"><![CDATA[<p>A few weeks ago, <a href="https://github.com/horw">@horw</a> released a new GitHub plugin that fixes GitHub issue titles: <a href="https://github.com/horw/issue-title-ai">issue-title-ai</a>.
+Once an issue is created, the plugin asks <a href="https://chatgpt.com">ChatGPT</a>—or <a href="https://www.deepseek.com/">DeepSeek</a>, or <a href="https://claude.ai/">Claude</a>—to improve its title.
+We’ve already integrated the plugin into <a href="https://github.com/objectionary/eo">objectionary/eo</a> and a few other repositories.
+Works like a charm.
+What’s wrong with the titles the way they are, you may ask?
+Why do we need to ask ChatGPT to make them “better”?
+Because we want every issue—either a bug report, a feature request, or a question—to be formulated as a <a href="/2025/05/25/bug-driven-development.html">complaint</a>.
+It seems that very few of us can do it on the first try.
+The help of AI is appreciated.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Flawless (1999) by Joel Schumacher" src="/images/2025/05/flawless.jpg" longdesc="#6699c6ab" /><figcaption id="6699c6ab">Flawless (1999) by Joel Schumacher</figcaption></figure>
+
+<p>Let’s say, you try to download a PNG file from a web app, but get a text file instead.
+You want to report this problem to the team.
+How would you title such a bug report?
+Pick one, out of these eight:</p>
+
+<ul>
+  <li>“CSV”</li>
+  <li>“CSV file downloading”</li>
+  <li>“Please, fix CSV-file downloading”</li>
+  <li>“CSV downloading must be fixed”</li>
+  <li>“Why I get text file instead of PNG?”</li>
+  <li>“How can I download PNG file?”</li>
+  <li>“I need text file, not PNG”</li>
+  <li>“PNG downloading is broken, getting CSV instead”</li>
+</ul>
+
+<p>There may be even more variations… but the best is the last one.
+It clearly states that something is <strong>broken</strong>.
+It demands a fix.</p>
+
+<p>Even if it’s a feature request or a question, it should be filed as a complaint.
+This rule—known as <a href="/2025/05/25/bug-driven-development.html">bug driven development</a>—increases our productivity.
+In every request made to the team we have to explain the difference between our expectations and reality.
+The lack of such an explanation seems to be the primary source of confusion and frustration in task tracking.</p>
+
+<p>Apparently, very few programmers have this skill: formulating a problem as a complaint.
+AI should help us.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[ChatGPT helps us re-format GitHub issue titles after their authors submit them --- helping developers understand their tasks better.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/flawless.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/flawless.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Stop Asking and Suggesting — Just Complain</title><link href="https://www.yegor256.com/2025/05/25/bug-driven-development.html" rel="alternate" type="text/html" title="Stop Asking and Suggesting — Just Complain" /><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/25/bug-driven-development</id><content type="html" xml:base="https://www.yegor256.com/2025/05/25/bug-driven-development.html"><![CDATA[<p>Wikipedia <a href="https://en.wikipedia.org/wiki/Tester-driven_development">says</a> that Bug Driven Development (BDD) is an anti-pattern.
 <a href="https://github.com/rajakolluru">Raja Shankar Kolluru</a> perfectly <a href="https://itmusings.com/bug-driven-development/">explains</a> why.
 However, <a href="https://github.com/FlorianRappl">Florian Rappl</a> <a href="https://www.florian-rappl.de/News/Page/227/bug-driven-development">argues</a> that it’s not.
 <a href="https://github.com/benwinding">Ben Winding</a> <a href="https://blog.benwinding.com/bug-driven-development-sometimes-its-the-best-choice/">believes</a> that it’s better than TDD.
@@ -60,7 +100,7 @@ They must switch from noise-makers to flaw-finders.</p>
 <p><a href="https://blog.codinghorror.com/about-me/">Jeff Atwood</a>, in his blog post about <a href="https://blog.codinghorror.com/complaint-driven-development/">complaint-driven development</a>, explains it from a business point of view.
 He suggests that instead of implementing what you believe is right, it’s better to give your customers a rough draft and let them complain.
 You’re most often wrong about what they’ll actually complain about.
-The more they complain, the better you listen, the bigger the value you deliver.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[When every piece of work is framed as a bug report---including feature requests and questions---a software team may become more productive.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">No BTW in Bug Reports</title><link href="https://www.yegor256.com/2025/05/18/bug-reports-as-contracts.html" rel="alternate" type="text/html" title="No BTW in Bug Reports" /><published>2025-05-18T00:00:00+00:00</published><updated>2025-05-18T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/18/bug-reports-as-contracts</id><content type="html" xml:base="https://www.yegor256.com/2025/05/18/bug-reports-as-contracts.html"><![CDATA[<p>Every ticket—a bug report or a feature request—is a short-term contract.
+The more they complain, the better you listen, the bigger the value you deliver.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[When every piece of work is framed as a bug report --- including feature requests and questions --- a software team may become more productive.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">No BTW in Bug Reports</title><link href="https://www.yegor256.com/2025/05/18/bug-reports-as-contracts.html" rel="alternate" type="text/html" title="No BTW in Bug Reports" /><published>2025-05-18T00:00:00+00:00</published><updated>2025-05-18T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/18/bug-reports-as-contracts</id><content type="html" xml:base="https://www.yegor256.com/2025/05/18/bug-reports-as-contracts.html"><![CDATA[<p>Every ticket—a bug report or a feature request—is a short-term contract.
 You, the reporter, hire them to make a fix or implement a feature.
 They, the team of developers, do it for you—provided you pay, or their motivation is intrinsic—for example, in open source.
 The discussion that happens along the way may help clarify the requirements of the contract.
@@ -766,195 +806,4 @@ you will get even. Big time.</p>
 <a href="https://neiry.ru/about-us">Neiry</a>, who I had a chance to
 <a href="https://www.youtube.com/watch?v=wKWt9l9Ll4U">video-interview</a> recently
 (watch the video, he
-says what I’m saying in this blog post, but without as many details).</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html"><![CDATA[Chasing money early in your career is like shooting yourself in the foot. Aim for exclusive achievements instead. This list may help you chose the right one.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/06/elusive-avengers.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/06/elusive-avengers.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Patents and Their Claims</title><link href="https://www.yegor256.com/2024/06/09/patent-claim.html" rel="alternate" type="text/html" title="Patents and Their Claims" /><published>2024-06-09T00:00:00+00:00</published><updated>2024-06-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/06/09/patent-claim</id><content type="html" xml:base="https://www.yegor256.com/2024/06/09/patent-claim.html"><![CDATA[<p>If you, like me, are not a patent attorney and don’t understand patent law,
-but your boss asks you to turn your recently written piece of code into
-a patent, read on. The boss most probably won’t ask you to write the entire
-patent. Instead, he will ask you to prepare a quick summary of the invention
-(usually, a few slides) and then a hired lawyer will turn it into
-a full-scale patent application. If you understand the purpose of patents,
-the mechanics of patent offices, and the format of a patent claim, you will
-do just fine.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="And Justice for All (1979) by Norman Jewison" src="/images/2024/06/and-justice-for-all.jpg" longdesc="#03ca432c" /><figcaption id="03ca432c">And Justice for All (1979) by Norman Jewison</figcaption></figure>
-
-<p><strong>What are patents for?</strong>
-Initially invented as a tool to encourage innocent inventors,
-they are currently used mostly as a <a href="https://en.wikipedia.org/wiki/Patent_war">weapon</a>
-either to bully larger organizations or
-to defend them against bullying. It all started in Italy in 1474,
-when a three-year “grant” <a href="https://guides.slv.vic.gov.au/patents/history">was given</a>
-to Filippo Brunelleschi for “some machine or kind of ship,”
-for a period of three years. Since then, <a href="https://www.wipo.int/en/ipfactsandfigures/patents">over 3.5 million patents</a>
-have been issued by different <em>patent offices</em> around the globe to respected
-inventors.</p>
-
-<p><strong>What is a <a href="https://en.wikipedia.org/wiki/Patent_office">patent office</a>?</strong>
-It’s a security organization funded by a government:
-<a href="https://www.uspto.gov/">USPTO</a> in the United States,
-<a href="https://www.epo.org/en">EPO</a> in the European Union,
-<a href="https://english.cnipa.gov.cn/">CNIPA</a> in China,
-<a href="https://rospatent.gov.ru/en">Rospatent</a> in Russia,
-<a href="https://www.ipos.gov.sg/">IPOS</a> in Singapore,
-and a <a href="https://en.wikipedia.org/wiki/Patent_office">few dozen</a> in other countries.
-Also, there is
-<a href="https://www.wipo.int/portal/en/index.html">WIPO</a> in Geneva (Switzerland) that
-coordinates the work of all other POs, so far.
-They protect you if you pay them (no surprise it all started in Italy!)</p>
-
-<p>Let’s say you invent a new file compression algorithm and
-you don’t want anyone to use it without your permission. First, you pay
-<a href="https://www.uspto.gov/learning-and-resources/fees-and-payment/uspto-fee-schedule">$320</a>
-to USPTO and submit an application. Then, in a few months, they assign your application
-a number and call it “pending.” Then, you wait for about <a href="https://www.uspto.gov/dashboard/patents/pendency.html">3.5 years</a>
-until they reply back with a decision: either you get a patent, you get nothing,
-or they ask you to refine the application (most common case).
-You make the changes, resubmit, they criticize, you resubmit, … and eventually
-they issue a patent.</p>
-
-<p><strong>Now what?</strong>
-Your company publishes a press release, informs all investors, you
-make a Facebook post so that your mom can be proud of you,
-and in a few days everybody forgets about it. Because nobody cares. Until
-the <em>litigation</em> day comes: your company finds out that another company is
-also compressing files using the same algorithm. Or, the other way around:
-they find out that the algorithm you invented is actually the algorithm they
-have been quietly using for years. You both meet in a
-<a href="https://en.wikipedia.org/wiki/Patent_court">patent court</a>.
-The USPTO will be there too, since you paid them earlier.</p>
-
-<p>If your opponent <em>does not</em> have a patent, the judge will ask them to prove
-that their compression algorithm was publicly available prior to your
-application. If they provide such proof, your patent will be
-<a href="https://en.wikipedia.org/wiki/Patent_infringement"><em>infringed</em></a>—you will lose
-it, your $320 won’t be refunded, and you will pay everything you made over the last
-few years to the opponent.</p>
-
-<p>If your opponent <em>does</em> have a patent, you will have to prove that your
-patent is older and <em>broader</em>. USPTO attorneys most probably won’t try to help you,
-since they won’t be on your side, but simply a mediator between both of you
-(<a href="https://en.wikipedia.org/wiki/Apple_Inc._v._Samsung_Electronics_Co.">Apple vs. Samsung</a>
-litigation is a good example of such a patent war). If you win,
-their patent will be infringed and you will get all the profit they managed
-to collect over the last years. Big win!</p>
-
-<p><strong>What is patent breadth?</strong>
-First, let’s discuss what is its <em>length</em>. You may be surprised,
-but patents have pretty short lifetimes.
-If you don’t extend a patent, it will expire in just <em>three years</em>. If you do want to
-extend it, you must pay USPTO <a href="https://www.uspto.gov/patents/basics/manage">again</a>
-and much more than you paid the first time:
-<a href="https://www.uspto.gov/patents/basics/manage">$2,000</a> in 3 years,
-$3,760 in 7 years,
-$7,700 in 11 years.
-Not cheap, huh?</p>
-
-<p>Now, the breadth. Consider three <em>patent claims</em>:</p>
-
-<ul>
-  <li>“An apparatus consisting of a file reader; a file writer; and a compressor.”</li>
-  <li>“A file compressing method comprising
-a reader of JPEG files;
-a probability distribution calculator;
-a discrete transformer;
-a bla-bla-bla optimizer;
-an intermediate storage;
-a writer of JPEG files.”</li>
-  <li>“A Lempel–Ziv based data compression method comprising:
-converting input stream into ψ-tokens;
-reducing redundancy via Prishvin Ω(x) factorials;
-serializing through Turgenev 𝛾-extremums.”</li>
-</ul>
-
-<p>The first claim is much broader: it probably covers all possible file compressing
-software tools ever created. Such a broad patent claim won’t even be
-<a href="https://en.wikipedia.org/wiki/Patentability">accepted</a>
-by USPTO if you file it. They will do a quick search of <em>prior art</em> (other
-patents previously issued) and reject you on the basis of a lack of
-<a href="https://en.wikipedia.org/wiki/Novelty_%28patent%29"><em>novelty</em></a>.
-The second claim is narrower, but still pretty broad, since the architecture
-of other existing compressors may be very similar to the described one.
-The third claim is the most narrow and the most specific (although, have
-absolutely no sense, it is made up).</p>
-
-<p><strong>How to write a good patent claim?</strong>
-There is no such thing as an objectively <a href="https://support.lens.org/knowledge-base/what-are-claims/">good claim</a>,
-since it depends on the
-situation in the market. If the territory of innovation is not yet developed
-and you are a pioneer, a broader and shorter (by the length in years, not the
-number of words) patent is better. If you are making a small improvement
-to a well-developed prior art, better make the patent narrower and longer.</p>
-
-<p>A <em>patent claim</em> is the key element of a patent application. While the rest
-of the document may be written by a patent attorney, I strongly suggest
-you write the claim. At least its first version.
-There is a more or less strict structure of a claim:
-preamble, transitional phrase, and body:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Preamble</th>
-      <th>Transitional Phrase</th>
-      <th>Body</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>An apparatus</td>
-      <td>consisting of</td>
-      <td>a file reader; a file writer; and a compressor.</td>
-    </tr>
-    <tr>
-      <td>A file compressing method</td>
-      <td>comprising</td>
-      <td>a reader of JPEG files; a probability distribution calculator; a discrete transformer; a bla-bla-bla optimizer; an intermediate storage; a writer of JPEG files.</td>
-    </tr>
-    <tr>
-      <td>A Lempel–Ziv based data compression method</td>
-      <td>comprising</td>
-      <td>converting input stream into ψ-tokens, reducing redundancy via Prishvin Ω(x) factorials, serializing through Turgenev 𝛾-extremums.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>The <a href="https://www.wilmerhale.com/insights/publications/patent-claim-preambles-july-16-2003">preamble</a>
-must position your invention among all other devices
-and methods in the prior art. The “an apparatus” preamble is very broad:
-it could mean any device in the world, even not only
-from the computing domain. The “a file compressing method” preamble
-is much narrower, while “a Lempel–Ziv based data compression method” is the
-most narrow one, with almost no ambiguity for the interpretation.</p>
-
-<p>The body of a <a href="https://ocpatentlawyer.com/basics-writing-claim-patent-application/">patent claim</a>
-must iterate the elements that constitute
-the invention. The fewer elements you include in this list, the broader
-the patent will be. The broader the patent, the easier to infringe. Well, unless
-you invent something revolutionary new. On the other hand, the more elements,
-the narrower the patent, the weaker it is as a weapon. It will be very hard
-to use a narrow patent in a patent litigation.</p>
-
-<p>The claim must also be <a href="https://en.wikipedia.org/wiki/Inventive_step_and_non-obviousness"><em>non-obvious</em></a>,
-meaning that your invention has to be
-an adequate distance beyond or above the state of the art. Say, a new file
-format is invented for graphic images and you submit a patent application
-for a ZIP compressor that can also compress files in this new format.
-If there is no novelty in the compression algorithm itself, such a patent
-would be considered obvious since it’s not far away from prior art: existing
-ZIP compressors can deal with this file format, even though they don’t know
-about it yet.</p>
-
-<p><strong>How do you decide?</strong>
-It is your responsibility as a patent author to decide how broad
-and how long your patent must be. Then, a patent attorney will help you turn your
-patent claim into a patent application (charging a
-<a href="https://patentattorneyworldwide.com/us/much-patent-attorney-us-charges-stage-getting-patent/">few thousand dollars</a>
-along the way), and then, hopefully, the litigation day will come and you will win
-a lot of money. Most probably this will never happen and the patent will
-remain a nice badge on your CV and your company’s website.</p>
-
-<p>By the way, it is important to remember that if you want to get similar protection
-in another country, you will have to pay their patent office separately.
-Just like you pay every time a different mafia boss for protection when
-you want to work in the territories they control.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="business" /><summary type="html"><![CDATA[If you are a programer, then even if a lawyer may help you write a patent application, your job is to prepare a proper patent claim, making its breadth right on.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/06/and-justice-for-all.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/06/and-justice-for-all.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+says what I’m saying in this blog post, but without as many details).</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html"><![CDATA[Chasing money early in your career is like shooting yourself in the foot. Aim for exclusive achievements instead. This list may help you chose the right one.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/06/elusive-avengers.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/06/elusive-avengers.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

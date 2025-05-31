@@ -1507,6 +1507,7 @@ classify
 classifying
 classmate
 classroom
+claude
 clause
 clauses
 clean
@@ -2182,6 +2183,7 @@ cryptocurrency
 CSS
 css-min
 CSV
+CSV-file
 csvfilename
 csvline
 CTAN
@@ -2373,6 +2375,7 @@ deep
 deeper
 deeply
 deepmind
+deepseek
 def
 default
 defaultbook
@@ -4388,6 +4391,7 @@ horrible
 horrid
 horror
 horses
+horw
 hospital
 host
 hostage
@@ -4939,6 +4943,7 @@ isolating
 isolation
 ISP
 issue
+issue-title-ai
 issue-tracking
 issued
 issues
