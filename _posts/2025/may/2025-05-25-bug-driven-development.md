@@ -6,7 +6,7 @@ layout: post
 title: "Stop Asking and Suggesting—Just Complain"
 date: 2025-05-25
 place: Moscow, Russia
-tags: management testing
+tags: etiquette testing
 description: |
   When every piece of work is framed as a bug report---including
   feature requests and questions---a software team may become more productive.
