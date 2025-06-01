@@ -21,7 +21,7 @@ image: /images/andreea/yegor-is-presenting.png
 
 {% badge /images/about/yegor-speaking.jpg 300 %}
 
-[**Yegor Bugayenko**](/) is a famous software development expert, a book writer,
+[**Yegor Bugayenko**](/) is a software development expert, a book writer,
 a blogger, a conference speaker, and a CEO of [Zerocracy](https://www.zerocracy.com), AI software company.
 He is the inventor of [Elegant Objects](https://www.elegantobjects.org) paradigm of object-oriented
 programming, which radically improves the quality of code and makes
