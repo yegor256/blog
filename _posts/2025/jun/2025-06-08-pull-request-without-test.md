@@ -17,7 +17,7 @@ keywords:
   - test in pull requests
   - TDD in pull request
   - test driven development
-image: /images/2025/06/la-femme-nikia.jpg
+image: /images/2025/06/la-femme-nikita.jpg
 jb_picture:
   caption: La Femme Nikita (1990) by Luc Besson
 ---
