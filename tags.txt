@@ -1,7 +1,7 @@
 oop: 98 (20.55%)
 java: 90 (18.87%)
 management: 76 (15.93%)
-mood: 34 (7.13%)
+mood: 31 (6.50%)
 testing: 25 (5.24%)
 etiquette: 20 (4.19%)
 zerocracy: 19 (3.98%)
