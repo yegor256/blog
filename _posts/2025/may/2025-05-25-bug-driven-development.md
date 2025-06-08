@@ -63,6 +63,8 @@ A good complaint identifies a **flaw** in something tangible.
 A good resolution of a good complaint is a **patch** to that tangible something.
 Obviously, in a software project, the **source code** is what is tangible.
 
+{% quote Bug tracker is not a support line for your coding troubles. %}
+
 In a disciplined team, every ticket is a bug report that addresses a flaw in the source code.
 Every bug report leads to a patch---a contribution to the source code.
 No noise.
