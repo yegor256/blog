@@ -1172,6 +1172,7 @@ buying
 buys
 buzz
 by
+by-product
 bye
 bypassed
 byte
@@ -1954,6 +1955,7 @@ contingency
 continually
 continue
 continues
+continuing
 continuous
 continuousintegration
 continuously
@@ -8634,6 +8636,7 @@ ship
 shipment
 shippable
 shipped
+shipping
 ships
 shiralige
 shoes
@@ -10379,6 +10382,7 @@ warm
 warn
 warning
 warnings
+warranty
 wars
 was
 washington

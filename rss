@@ -1,4 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-06-08T07:46:38+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Good Title — Good Bug Report</title><link href="https://www.yegor256.com/2025/05/31/good-bug-title.html" rel="alternate" type="text/html" title="Good Title — Good Bug Report" /><published>2025-05-31T00:00:00+00:00</published><updated>2025-05-31T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/31/good-bug-title</id><content type="html" xml:base="https://www.yegor256.com/2025/05/31/good-bug-title.html"><![CDATA[<p>A few weeks ago, <a href="https://github.com/horw">@horw</a> released a new GitHub plugin that fixes GitHub issue titles: <a href="https://github.com/horw/issue-title-ai">issue-title-ai</a>.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-06-08T08:26:05+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Write Unit Tests, Don’t Waste Our Money!</title><link href="https://www.yegor256.com/2025/06/08/pull-request-without-test.html" rel="alternate" type="text/html" title="Write Unit Tests, Don’t Waste Our Money!" /><published>2025-06-08T00:00:00+00:00</published><updated>2025-06-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/06/08/pull-request-without-test</id><content type="html" xml:base="https://www.yegor256.com/2025/06/08/pull-request-without-test.html"><![CDATA[<p>Automated tests help us write code <a href="/angry-tests.html">faster</a>.
+Unit tests immediately tell us when we break something.
+Integration tests calm us down, reducing the fear of shipping a failure to a user.
+But who are “us”?
+Programmers.
+What about our employers?
+How do automated tests help them?
+Automated tests protect their investments.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="La Femme Nikita (1990) by Luc Besson" src="/images/2025/06/la-femme-nikita.jpg" longdesc="#ccb58518" /><figcaption id="ccb58518">La Femme Nikita (1990) by Luc Besson</figcaption></figure>
+
+<p>Every change we make to a codebase costs our employer money.
+Whether they pay us monthly or per line of code, the bottom line is the same:
+  it’s the code that reaches the repository and is eventually released to the end user.</p>
+
+<p>That’s what the business is investing in—new features or bug fixes.
+The code that’s written and shipped is what matters to them.</p>
+
+<p>Even when they say they’re investing in people, what they really want is the code.
+People are merely an intermediate by-product.
+The ultimate asset is the codebase.</p>
+
+<p>They want to <strong>protect</strong> that <strong>asset</strong>.</p>
+
+<p>A loss of investment could be a hundred lines written today not working tomorrow.
+Think about it this way: we expect a car to work after paying the body shop to fix it.
+We don’t mind paying again if something else breaks—but not if it’s the exact same part they fixed yesterday.
+We expect the repaired part to function properly while driving.
+We want a warranty on what’s already been fixed.</p>
+
+<p>Similarly, our employers expect our code to work once we’ve committed it and collected our paycheck.
+They want a warranty that the code won’t break again once it’s been fixed.
+Automated tests can offer that <strong>warranty</strong>.</p>
+
+<p>Continuing the metaphor: “driving” a codebase means actively modifying its parts—refactoring or extending.
+The more aggressively we drive it, the higher the risk of breaking something.
+The parts of the code not covered by tests are the first to break.</p>
+
+<p>Test coverage guarantees that what worked before—and was already paid for—continues to work even under the stress of refactoring.</p>
+
+<p>So, any contribution to a codebase without a <strong>supporting</strong> test is a waste of the employer’s money.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[If you write code without tests, you're probably wasting your employer's money---because it'll break again right where you "fixed" it.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/06/la-femme-nikita.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/06/la-femme-nikita.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Good Title — Good Bug Report</title><link href="https://www.yegor256.com/2025/05/31/good-bug-title.html" rel="alternate" type="text/html" title="Good Title — Good Bug Report" /><published>2025-05-31T00:00:00+00:00</published><updated>2025-05-31T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/31/good-bug-title</id><content type="html" xml:base="https://www.yegor256.com/2025/05/31/good-bug-title.html"><![CDATA[<p>A few weeks ago, <a href="https://github.com/horw">@horw</a> released a new GitHub plugin that fixes GitHub issue titles: <a href="https://github.com/horw/issue-title-ai">issue-title-ai</a>.
 Once an issue is created, the plugin asks <a href="https://chatgpt.com">ChatGPT</a>—or <a href="https://www.deepseek.com/">DeepSeek</a>, or <a href="https://claude.ai/">Claude</a>—to improve its title.
 We’ve already integrated the plugin into <a href="https://github.com/objectionary/eo">objectionary/eo</a> and a few other repositories.
 Works like a charm.
@@ -747,66 +789,4 @@ JDK 8 ruined it (most probably for the sake of performance).</p>
 <p>By the way, there are many more
 <a href="https://rosettacode.org/wiki/Check_that_file_exists">examples</a> of
 different “file checking” design decisions in many other programming
-languages.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[You either instantiate an object first and then check its qualities, or you check the quality and only then make an object; which way is better?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/07/capote.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/07/capote.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Win the Medals While Young</title><link href="https://www.yegor256.com/2024/06/23/medals-to-win.html" rel="alternate" type="text/html" title="Win the Medals While Young" /><published>2024-06-23T00:00:00+00:00</published><updated>2024-06-23T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/06/23/medals-to-win</id><content type="html" xml:base="https://www.yegor256.com/2024/06/23/medals-to-win.html"><![CDATA[<p>One of the most frequently asked questions I hear from junior programmers
-(no matter their age) is: What should I focus on now to build the best career I
-can? There are multiple options, including creating a startup, getting a PhD,
-contributing to open source, working for Google, and many others. In my
-opinion, the most common mistake is trying to get rich fast. Obviously,
-<em>money matters</em> and is the ultimate metric of career success, but trying to get it too
-early is nothing more than gambling with your life at stake. Instead, I suggest
-focusing on winning some “<em>medals</em>,” which can later be converted to cash, not
-the other way around.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Неуловимые мстители (1966) by Эдмонд Кеосаян" src="/images/2024/06/elusive-avengers.jpg" longdesc="#0edd73ce" /><figcaption id="0edd73ce">Неуловимые мстители (1966) by Эдмонд Кеосаян</figcaption></figure>
-
-<p>When your career is young (no matter your age), people with money, whether
-employers or investors, are very hesitant to trust you with it. Even if your
-skills are strong or your pitch looks promising, the list of achievements on
-your CV is still pretty short or simply empty. In their eyes, you are a junior
-and therefore, very unreliable.</p>
-
-<p>You may get rich from this position of zero reliability, but it will mostly be a
-matter of luck. Having no leverage, you will lose a very valuable resource—your
-time. Initially, jumping from company to company, you might get a 25% raise
-every year, but in a few years, the growth will slow down, and eventually, you
-will become a middle-level programmer with almost no chances of getting truly
-rich. You will be an old sergeant under the command of a much younger colonel.
-You don’t want this to happen.</p>
-
-<p>A much better alternative for a junior is being a hero while young. Earn some
-medals: prove your exceptional value and become a member of the elite. Here is
-a non-complete list of medals you can put on your CV as a software engineer
-(the most respected at the top):</p>
-
-<ul>
-  <li><a href="https://awards.acm.org/">ACM</a> or <a href="https://corporate-awards.ieee.org/">IEEE</a> award winner</li>
-  <li><a href="https://icpc.global/">ICPC</a> finalist or winner</li>
-  <li><a href="https://2024.splashcon.org/">SPLASH</a> best paper award winner</li>
-  <li>Creator of a 20K+ stars GitHub project (not “awesome-“)</li>
-  <li>Author of a book published by <a href="https://www.oreilly.com/">O’Reilly</a></li>
-  <li>PhD (preferably from MIT or Stanford)</li>
-  <li><a href="https://javachampions.org/">Java Champion</a></li>
-  <li>Author of 25+ merged pull requests into the Linux kernel</li>
-  <li>3000+ rating on <a href="https://codeforces.com/">Codeforces</a></li>
-  <li>Winner of $100K at <a href="https://www.kaggle.com/competitions">Kaggle</a></li>
-  <li>Oracle/IBM/Microsoft certificate holder</li>
-  <li>1K+ stars GitHub project</li>
-  <li>50K+ StackOverflow <a href="/2017/02/14/stackoverflow-is-your-tool.html">reputation</a></li>
-  <li>A-class conference org-team member</li>
-  <li>Industry conference <a href="/2016/05/10/keynote-clowns.html">speaker</a></li>
-  <li><a href="https://www.infoq.com/">InfoQ</a>, <a href="https://dzone.com/">DZone</a>, or <a href="https://habr.com/">Habr</a> <a href="/2018/11/20/journalism.html">author</a></li>
-  <li>Local workshop organizer</li>
-</ul>
-
-<p>Some of these medals may take more than five years to earn. Of course, you must
-make some money while working on them. The money may be, and will be, smaller
-than what your friends are getting. Don’t pay attention to this. Eventually,
-you will get even. Big time.</p>
-
-<p>BTW, I borrowed the idea of “medals” from Alexander Panov, the founder of
-<a href="https://neiry.ru/about-us">Neiry</a>, who I had a chance to
-<a href="https://www.youtube.com/watch?v=wKWt9l9Ll4U">video-interview</a> recently
-(watch the video, he
-says what I’m saying in this blog post, but without as many details).</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="career" /><summary type="html"><![CDATA[Chasing money early in your career is like shooting yourself in the foot. Aim for exclusive achievements instead. This list may help you chose the right one.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/06/elusive-avengers.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/06/elusive-avengers.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+languages.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[You either instantiate an object first and then check its qualities, or you check the quality and only then make an object; which way is better?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/07/capote.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/07/capote.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
