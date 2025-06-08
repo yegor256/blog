@@ -32,6 +32,13 @@ if (typeof($) != 'undefined') {
       }
       return num;
     }
+    $('article a[href]').each(function () {
+      const href = $(this).attr('href');
+      if (href.startsWith('http') && !href.includes(location.hostname)) {
+        $(this).addClass('external');
+        $(this).append('<img src="/images/icons/link.svg" class="link" alt="external"/>');
+      }
+    });
     if ($('.buttons').css('display') !== 'none') {
       $(".button[href!='#']").click(
         function (event) {
