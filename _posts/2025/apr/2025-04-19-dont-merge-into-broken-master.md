@@ -46,7 +46,7 @@ You expect us to merge your pull request.
 
 Why shouldn't we?
 
-We don’t merge them.
+We don't merge them.
 We ask you to step back---to the point before you started making changes.
 Don't make them yet.
 Instead, check the build status of the repository.
@@ -63,7 +63,7 @@ When the build is broken, we accept no new changes---except those that fix the b
 What if the team takes too long to fix it?
 What if the build never becomes green?
 Still---you wait.
-You don’t submit a pull request to a repository with a broken build.
+You don't submit a pull request to a repository with a broken build.
 
 <hr/>
 

@@ -62,7 +62,7 @@ All of these questions, complaints and suggestions are perfect candidates for ne
 
 You might think a ticket is an opportunity to [chat]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}) with the team.
 They're already responding---so why not ask all your questions while you have their attention?
-It feels like they're interested, so you don’t want to lose the momentum.
+It feels like they're interested, so you don't want to lose the momentum.
 But that's a false assumption.
 They're [not motivated]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}) to keep the discussion open.
 What they really want is to close the ticket---ASAP.
@@ -87,7 +87,7 @@ We—and [Mozilla]—believe that every ticket should be a [bug report]({% pst 2
 
 You might also consider moving the conversation to a mailing list, as [suggested by Karl Fogel].
 Or even to Slack or Telegram.
-But I [don’t recommend]({% pst 2016/aug/2016-08-23-communication-maturity %}) it.
+But I [don't recommend]({% pst 2016/aug/2016-08-23-communication-maturity %}) it.
 
 [suggested by Karl Fogel]: https://producingoss.com/da/bug-tracker-usage.html
 [Mozilla]: https://www.researchgate.net/publication/2559439_An_Overview_of_the_Software_Engineering_Process_and_Tools_in_the_Mozilla_Project
