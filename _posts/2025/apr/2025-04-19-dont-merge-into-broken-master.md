@@ -6,7 +6,7 @@ layout: post
 title: "We Don't Merge into a Broken Master Branch"
 date: 2025-04-19
 place: Sochi, Russia
-tags: mood oss etiquette
+tags: oss etiquette
 description: |
   If the build is broken, don't send any pull requests until it's fixed.
   You're welcome to fix it yourself---just don't mix build-fixing changes with
