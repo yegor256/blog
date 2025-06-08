@@ -6,7 +6,7 @@ layout: post
 title: "Let the Bug Reporter Have the Last Word"
 date: 2025-04-24
 place: Sochi, Russia
-tags: mood oss etiquette
+tags: oss etiquette
 description: |
   Even if the fix looks obvious to you, don't close the bug report;
   instead, let its author do this after your request.

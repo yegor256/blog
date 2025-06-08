@@ -139,9 +139,9 @@ module Yegor
           <li class='unprintable'>
             <a href='https://www.yegor256.com#{post.url}#disqus_thread' class='comment_count notranslate'>comments</a>
           </li>
-          #{post.content.include?('twitter-tweet') ? '<li class="has-poll" title="There is a Twitter poll inside"><i class="icon icon-twitter"></i></li>' : ''}
-          #{post.content.include?('{% youtube') ? '<li class="has-youtube" title="There is a YouTube video inside"><i class="icon icon-youtube"></i></li>' : ''}
-          #{post['chatgpt-translate'] ? '<li title="The article is translated to other languages by ChatGPT"><i class="icon icon-chatgpt"></i></li>' : ''}
+          #{'<li class="has-poll" title="There is a Twitter poll inside"><i class="icon icon-twitter"></i></li>' if post.content.include?('twitter-tweet')}
+          #{'<li class="has-youtube" title="There is a YouTube video inside"><i class="icon icon-youtube"></i></li>' if post.content.include?('{% youtube')}
+          #{'<li title="The article is translated to other languages by ChatGPT"><i class="icon icon-chatgpt"></i></li>' if post['chatgpt-translate']}
         </ul>
       </div>".delete("\n")
     end

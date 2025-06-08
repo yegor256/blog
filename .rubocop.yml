@@ -18,6 +18,8 @@ Performance/CollectionLiteralInLoop:
   Enabled: false
 Gemspec/RequiredRubyVersion:
   Enabled: false
+Naming/PredicateMethod:
+  Enabled: false
 Metrics/MethodLength:
   Enabled: false
 Style/ClassAndModuleChildren:
