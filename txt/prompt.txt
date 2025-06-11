@@ -1,0 +1,9 @@
+We don't use blank lines inside method bodies because they reduce code readability: https://www.yegor256.com/2014/11/03/empty-line-code-smell.html
+
+We don't use comments inside method bodies, because inline and between-line comments negatively affect readability.
+
+We avoid compound variable names, as they make the code harder to read; we prefer single-word nouns for variable names: https://www.yegor256.com/2015/01/12/compound-name-is-code-smell.html
+
+We design our tests to contain only one assertion.
+
+Each test ends with an assertion—there is no code after it.
