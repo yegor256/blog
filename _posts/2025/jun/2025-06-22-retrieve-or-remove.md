@@ -68,3 +68,16 @@ Here, we use the `title()` method safely because we know that book was found suc
 Object finding and its operations belong to two different places.
 The collection of books knows how to find a book.
 The book knows how to delete itself.
+
+This separation of responsibilities allows us to work with the object even after the deletion.
+It remains being a Ruby object, while its SQL record is not present anymore.
+The object remains immutable, since its ID (the state) is not changed.
+Later, we can check the presence of the SQL record:
+
+```ruby
+b = books.findById(42)
+b.remove!  # DELETE FROM book WHERE id = 42
+if b.exists?  # SELECT * FROM book WHERE id = 42
+  puts "The book is back to the library!"
+end
+```
