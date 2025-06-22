@@ -2110,6 +2110,7 @@ coworker's
 coworkers
 cozy
 CPU
+CQRS
 craft
 craigslist
 crap
@@ -2355,6 +2356,7 @@ decomposed
 decomposition
 decorate
 decorated
+decoratee
 decorates
 decorating
 decorator
@@ -2416,6 +2418,7 @@ delegation
 delete
 deleted
 deletes
+deletion
 delicatessen
 delicious
 deliver
@@ -3024,6 +3027,7 @@ embarrassment
 embed
 embedded
 embrace
+embraces
 embracing
 emerge
 emerging
@@ -3585,6 +3589,7 @@ financially
 financing
 find
 findbugs
+findbyid
 finding
 findings
 finds
@@ -6559,6 +6564,7 @@ OOPSLA
 OOPSLA'
 op
 open
+open-closed
 open-minded
 open-mindedness
 open-source
@@ -7919,6 +7925,7 @@ remote
 remotely
 removal
 remove
+removebyid
 removed
 removing
 rename
@@ -8082,6 +8089,7 @@ retired
 retirement
 retires
 retrieve
+retrieved
 retrieves
 retrospective
 retry
@@ -9683,6 +9691,7 @@ tickets
 ties
 TIFF
 tight
+tighter
 tightly
 til
 tiles

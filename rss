@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-06-22T07:14:37+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Write Unit Tests, Don’t Waste Our Money!</title><link href="https://www.yegor256.com/2025/06/08/pull-request-without-test.html" rel="alternate" type="text/html" title="Write Unit Tests, Don’t Waste Our Money!" /><published>2025-06-08T00:00:00+00:00</published><updated>2025-06-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/06/08/pull-request-without-test</id><content type="html" xml:base="https://www.yegor256.com/2025/06/08/pull-request-without-test.html"><![CDATA[<p>Automated tests help us write code <a href="/angry-tests.html">faster</a>.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-06-22T14:21:11+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">remove(42) vs. find(42).remove()</title><link href="https://www.yegor256.com/2025/06/22/retrieve-or-remove.html" rel="alternate" type="text/html" title="remove(42) vs. find(42).remove()" /><published>2025-06-22T00:00:00+00:00</published><updated>2025-06-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/06/22/retrieve-or-remove</id><content type="html" xml:base="https://www.yegor256.com/2025/06/22/retrieve-or-remove.html"><![CDATA[<p>We have a list of books in the <code class="language-plaintext highlighter-rouge">books</code> object.
+How do we remove a single book from it, given that we know its ID?
+We can do <code class="language-plaintext highlighter-rouge">books.removeById(42)</code>.
+Alternatively, we can find it with <code class="language-plaintext highlighter-rouge">books.findById(42)</code> and then call <code class="language-plaintext highlighter-rouge">b.remove()</code>.
+Which option should we prefer, and why?
+The second choice is the better one.
+Not only because it’s more object-oriented, but also due to several practical advantages.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="8 Femmes (2002) by François Ozon" src="/images/2025/06/8-femmes.jpg" longdesc="#d7e21337" /><figcaption id="d7e21337">8 Femmes (2002) by François Ozon</figcaption></figure>
+
+<h2 id="extending-the-deletion-behavior">Extending the Deletion Behavior</h2>
+
+<p>What if we want to extend the deletion algorithm?
+For example, suppose we want to print a log message every time a book is deleted.</p>
+
+<p>If we follow the <a href="https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle">open-closed principle</a>, we should avoid modifying the existing <code class="language-plaintext highlighter-rouge">Book</code> or <code class="language-plaintext highlighter-rouge">Books</code> classes.
+Instead, we want to either <a href="/2016/09/13/inheritance-is-procedural.html">extend</a> or <a href="/2015/02/26/composable-decorators.html">decorate</a> them.
+A decorator is the ideal choice if we want to avoid <a href="/2016/09/13/inheritance-is-procedural.html">implementation inheritance</a>.</p>
+
+<p>If we use <code class="language-plaintext highlighter-rouge">removeById()</code>, we must decorate the <code class="language-plaintext highlighter-rouge">books</code> object.
+If we use <code class="language-plaintext highlighter-rouge">remove()</code>, we can decorate the individual book retrieved via <code class="language-plaintext highlighter-rouge">findById()</code>.
+The latter approach may be more <strong>cohesive</strong>, since its decoratee is likely <strong>smaller</strong> and more <strong>focused</strong>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">b</span> <span class="o">=</span> <span class="n">books</span><span class="p">.</span><span class="nf">findById</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="no">Logged</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">b</span><span class="p">.</span><span class="nf">remove!</span>
+</code></pre></div></div>
+
+<h2 id="handling-missing-or-non-deletable-books">Handling Missing or Non-Deletable Books</h2>
+
+<p>What if the book isn’t found, or can’t be deleted?
+The <code class="language-plaintext highlighter-rouge">removeById()</code> approach doesn’t support the <a href="https://en.wikipedia.org/wiki/Null_object_pattern">Null Object</a> pattern well.
+It forces us to throw an exception—or worse, return <code class="language-plaintext highlighter-rouge">false</code>, which goes <a href="/2018/08/22/builders-and-manipulators.html">against</a> the <a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation">CQRS</a> principle.</p>
+
+<p>On the other hand, returning an object, even a <a href="https://en.wikipedia.org/wiki/Null_object_pattern">null</a> or <a href="/2014/09/23/built-in-fake-objects.html">fake</a> object, offers more <strong>flexible error handling</strong>.
+For instance, we can access <code class="language-plaintext highlighter-rouge">title()</code> safely, knowing that the book was found successfully—or catch and <a href="https://en.wikipedia.org/wiki/Exception_chaining">re-raise exceptions</a> with <a href="/2015/12/01/rethrow-exceptions.html">more context</a>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">b</span> <span class="o">=</span> <span class="n">books</span><span class="p">.</span><span class="nf">findById</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="k">begin</span>
+  <span class="n">b</span><span class="p">.</span><span class="nf">remove!</span>
+<span class="k">rescue</span> <span class="n">e</span>
+  <span class="k">raise</span> <span class="n">e</span><span class="p">,</span> <span class="s2">"Can't delete book </span><span class="si">#{</span><span class="n">b</span><span class="p">.</span><span class="nf">title</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h2 id="decoupling-retrieval-and-deletion">Decoupling Retrieval and Deletion</h2>
+
+<p>What if the retrieval and deletion of the object happen far apart in the code?</p>
+
+<p>If <code class="language-plaintext highlighter-rouge">books</code> knows how to find, and a <code class="language-plaintext highlighter-rouge">book</code> knows how to delete, we keep responsibilities nicely separated.
+It also allows the book to be immutable and encapsulate its own ID, reducing <a href="/2016/11/21/naked-data.html">leakage</a> of internal data:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">b</span> <span class="o">=</span> <span class="n">books</span><span class="p">.</span><span class="nf">findById</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="c1"># +100 lines here...</span>
+<span class="n">b</span><span class="p">.</span><span class="nf">remove!</span>  <span class="c1"># DELETE FROM book WHERE id = 42</span>
+<span class="c1"># +200 lines here...</span>
+<span class="k">if</span> <span class="n">b</span><span class="p">.</span><span class="nf">exists?</span>  <span class="c1"># SELECT * FROM book WHERE id = 42</span>
+  <span class="nb">puts</span> <span class="s2">"The book is back to the library!"</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Once the ID is wrapped inside the book by <code class="language-plaintext highlighter-rouge">findById()</code>, it never has to <strong>leak out</strong> again.
+This reduces the amount of <a href="/2016/11/21/naked-data.html">naked data</a> exposed to parts of the code that don’t need it.</p>
+
+<p>The less data is visible, the <a href="/2016/11/21/naked-data.html">better</a> the design—at least from an OOP perspective.</p>
+
+<p>Thus, using <code class="language-plaintext highlighter-rouge">findById()</code> followed by <code class="language-plaintext highlighter-rouge">remove()</code> embraces object-oriented principles more fully.
+It allows for cleaner extension, better error handling, and tighter encapsulation.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[Delegating behavior to objects rather than invoking utility methods leads to cleaner, more extensible, and properly encapsulated object-oriented design.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/06/8-femmes.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/06/8-femmes.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Write Unit Tests, Don’t Waste Our Money!</title><link href="https://www.yegor256.com/2025/06/08/pull-request-without-test.html" rel="alternate" type="text/html" title="Write Unit Tests, Don’t Waste Our Money!" /><published>2025-06-08T00:00:00+00:00</published><updated>2025-06-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/06/08/pull-request-without-test</id><content type="html" xml:base="https://www.yegor256.com/2025/06/08/pull-request-without-test.html"><![CDATA[<p>Automated tests help us write code <a href="/angry-tests.html">faster</a>.
 Unit tests immediately tell us when we break something.
 Integration tests calm us down, reducing the fear of shipping a failure to a user.
 But who are “us”?
@@ -625,168 +694,4 @@ At the lectures, most of the topics mentioned above are discussed in details.</p
 им только вредят, точно так же, как водка вредит детям?</p>
 
 <p>Глядишь, «осведомленных» толкователей политического хаоса
-станет поменьше, а здоровых людей будет больше.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="общество" /><summary type="html"><![CDATA[Пытаясь разобраться в происходящем, многие неизбежно сходят с ума, ибо невозможно постичь что либо, имея доступ лишь к малой части информации.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/09/chaos-of-news.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/09/chaos-of-news.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Files.fileExists or file.exists?</title><link href="https://www.yegor256.com/2024/07/07/checking-object-existence.html" rel="alternate" type="text/html" title="Files.fileExists or file.exists?" /><published>2024-07-07T00:00:00+00:00</published><updated>2024-07-07T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/07/07/checking-object-existence</id><content type="html" xml:base="https://www.yegor256.com/2024/07/07/checking-object-existence.html"><![CDATA[<p>How would you design a class that abstracts, say, a file on a disk with certain
-properties? Let’s say you need to be able to check whether the file exists on
-the disk or has already been deleted. Would you create an object first and then
-call the <code class="language-plaintext highlighter-rouge">exists()</code> method on it, or would you call <code class="language-plaintext highlighter-rouge">Disk.fileExists()</code> first
-and only then, if <code class="language-plaintext highlighter-rouge">TRUE</code> is returned, make an instance of the <code class="language-plaintext highlighter-rouge">File</code> class and
-continue working with it? This may sound like a matter of taste, but it’s not
-that simple.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Capote (2005) by Bennett Miller" src="/images/2024/07/capote.jpg" longdesc="#f65f32af" /><figcaption id="f65f32af">Capote (2005) by Bennett Miller</figcaption></figure>
-
-<p>Let’s see how we can check whether a file exists on the disk or not
-in different programming languages and their SDKs:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Language</th>
-      <th>How to check if file exists?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://docs.oracle.com/javase%2F7%2Fdocs%2Fapi%2F%2F/java/io/File.html#exists%28%29">JDK 7</a></td>
-      <td><code class="language-plaintext highlighter-rouge">Files.get("a.txt").exists()</code></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#exists-java.nio.file.Path-java.nio.file.LinkOption...-">JDK 8</a></td>
-      <td><code class="language-plaintext highlighter-rouge">Files.exists(Path.get("a.txt"))</code></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><a href="https://learn.microsoft.com/en-us/dotnet/api/system.io.file.exists?view=net-8.0">.Net</a></td>
-      <td><code class="language-plaintext highlighter-rouge">File.Exists("a.txt")</code></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><a href="https://nodejs.org/api/fs.html#fsexistssyncpath">Node</a></td>
-      <td><code class="language-plaintext highlighter-rouge">fs.existsSync('a.txt')</code></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><a href="https://docs.python.org/3/library/os.path.html#os.path.exists">Python</a></td>
-      <td><code class="language-plaintext highlighter-rouge">os.path.exists("a.txt")</code></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path">Python (3.4+)</a></td>
-      <td><code class="language-plaintext highlighter-rouge">pathlib.Path("a.txt").exists()</code></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><a href="https://ruby-doc.org/core-2.5.1/File.html#method-c-exist-3F">Ruby</a></td>
-      <td><code class="language-plaintext highlighter-rouge">File.exist?("a.txt")</code></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><a href="https://perldoc.perl.org/functions/-X">Perl</a></td>
-      <td><code class="language-plaintext highlighter-rouge">if -e "a.txt"</code></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td><a href="https://www.php.net/manual/en/function.file-exists.php">PHP</a></td>
-      <td><code class="language-plaintext highlighter-rouge">file_exists('a.txt')</code></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <td>Smalltalk</td>
-      <td><code class="language-plaintext highlighter-rouge">(File name: 'a.txt') exists ifTrue: ...</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>There are basically two different design decisions: either you make a <code class="language-plaintext highlighter-rouge">File</code>
-object first, then ask it for its existence on the disk, or you ask the disk
-whether the file is there and only after that you make an instance of the
-<code class="language-plaintext highlighter-rouge">File</code> class. Which design is better? Let’s forget for a moment that static
-methods are evil and imagine that <code class="language-plaintext highlighter-rouge">Files</code> is not a
-<a href="/2014/05/05/oop-alternative-to-utility-classes.html">utility class</a>, but an
-abstraction of a disk. How would you design the <code class="language-plaintext highlighter-rouge">exists()</code> method if you were
-the designer of a new SDK for a new programming language?</p>
-
-<p>To answer this question, we must answer a more fundamental one: what is the
-message an SDK would be sending to a programmer by placing the <code class="language-plaintext highlighter-rouge">exists
-()</code> method either on the <code class="language-plaintext highlighter-rouge">File</code> or on the <code class="language-plaintext highlighter-rouge">Disk</code>?</p>
-
-<p>This may sound like a trivial and cosmetic issue to an experienced programmer,
-but let me convince you that it’s not. Consider the design of a list of payment
-bills in a database. A bill may either be “paid” or “not yet paid,” which a
-programmer may check through the <code class="language-plaintext highlighter-rouge">paid()</code> method. The first design choice is
-this (it’s Java):</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Bill</span> <span class="n">b</span> <span class="o">=</span> <span class="n">bills</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">42</span><span class="o">)</span>
-<span class="k">if</span> <span class="o">(</span><span class="n">b</span><span class="o">.</span><span class="na">paid</span><span class="o">())</span> <span class="o">{</span>
-  <span class="c1">// do something</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>The second choice would be the following:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">(</span><span class="n">bills</span><span class="o">.</span><span class="na">paid</span><span class="o">(</span><span class="mi">42</span><span class="o">))</span> <span class="o">{</span>
-  <span class="c1">// do something</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>What is the message in the first snippet? I believe it’s the following: “A bill
-may either be paid or not.” What is the message in the second design option?
-It’s this: “If a bill exists, it is paid.” In other words, in the first
-snippet, two qualities of a bill (“I exist” and “I’m paid”) co-exist, while in
-the second snippet they are merged into one (“I’m paid”).</p>
-
-<p>At the persistence layer, this dichotomy of qualities may mean either a nullable
-column <code class="language-plaintext highlighter-rouge">paid</code> in an SQL-database table or one with the <code class="language-plaintext highlighter-rouge">NOT NULL</code> constraint.
-The first snippet may return a <code class="language-plaintext highlighter-rouge">bill</code> object that exists in the database as a
-row, but the <code class="language-plaintext highlighter-rouge">paid</code> column is set to <code class="language-plaintext highlighter-rouge">NULL</code>. A programmer who uses your design
-can easily grasp the idea of the “being paid” status of a bill: it’s not the
-same as the status of its existence. A programmer must first get the bill and
-only then check its payment status. A programmer would also expect two points
-of possible failure—a bill may be absent, or a bill may not be
-paid—throwing different exceptions or returning different types of results.</p>
-
-<p>As you see, this issue is not cosmetic but very much existential: the design of
-the methods of a <code class="language-plaintext highlighter-rouge">Bill</code> or <code class="language-plaintext highlighter-rouge">Bills</code> helps programmers understand on what terms
-the bills exist.</p>
-
-<p>Now, the answer to the original question about the <code class="language-plaintext highlighter-rouge">exists()</code> method of a file
-is easy to find. Locating a file on a disk is the first task, which checks
-whether the name of the file is correct and the file may potentially exist on
-the disk:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Here, an exception may be raised if,</span>
-<span class="c1">// for example, the name of the file is</span>
-<span class="c1">// wrong or simply a NULL.</span>
-<span class="nc">File</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"a.txt"</span><span class="o">);</span>
-</code></pre></div></div>
-
-<p>Then, the existence of the file,
-at this particular moment, on the disk, is checked:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Here, an exception may be raised if,</span>
-<span class="c1">// for example, the disk is not mount or</span>
-<span class="c1">// the permissions are not sufficient for</span>
-<span class="c1">// checking the existence of the file.</span>
-<span class="kt">boolean</span> <span class="n">e</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="na">exists</span><span class="o">();</span>
-</code></pre></div></div>
-
-<p>We may now conclude that how Python, JS, Ruby, and many others let us check the
-existence of a file on the disk is wrong. JDK 7 was right, but the inventors of
-JDK 8 ruined it (most probably for the sake of performance).</p>
-
-<p>By the way, there are many more
-<a href="https://rosettacode.org/wiki/Check_that_file_exists">examples</a> of
-different “file checking” design decisions in many other programming
-languages.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[You either instantiate an object first and then check its qualities, or you check the quality and only then make an object; which way is better?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/07/capote.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/07/capote.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+станет поменьше, а здоровых людей будет больше.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="общество" /><summary type="html"><![CDATA[Пытаясь разобраться в происходящем, многие неизбежно сходят с ума, ибо невозможно постичь что либо, имея доступ лишь к малой части информации.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/09/chaos-of-news.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/09/chaos-of-news.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
