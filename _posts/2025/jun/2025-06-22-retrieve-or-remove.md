@@ -42,12 +42,18 @@ If it's `removeById()`, you have to decorate the `books`.
 If it's `remove()` you decorate the `book` retrieved by the `findById()`.
 The former may be more **cohesive** since its decoratee is probably **smaller**.
 
+```ruby
+b = books.findById(42)
+b = Logged.new(b)
+b.remove!
+```
+
 Second, what if it's not found or can't be deleted?
 The `removeById()` doesn't allow you to use NullObject pattern.
 You can only throw an exception.
 You may return `false` but you shouldn't, respecting the CQRS principle.
 To the contrary, returning an object, even if the book is not found, gives you more flexibility of **error handling**.
-For example, exception chaining looks neat, in Ruby:
+For example, exception chaining looks neat:
 
 ```ruby
 b = books.findById(42)
