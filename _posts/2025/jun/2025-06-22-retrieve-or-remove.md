@@ -79,3 +79,4 @@ end
 ```
 
 Once the ID is encapsulated into the book by `findById()`, it never gets out.
+This reduces the amount of naked data visible to the code that doesn't need it.
