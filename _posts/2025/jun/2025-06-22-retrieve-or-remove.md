@@ -59,7 +59,12 @@ For example, exception chaining looks neat:
 b = books.findById(42)
 begin
   b.remove!
-rescue => e
-  raise e, "Can't delete book ##{b.id}"
+rescue e
+  raise e, "Can't delete book #{b.title}"
 end
 ```
+
+Here, we use the `title()` method safely because we know that book was found successfully.
+Object finding and its operations belong to two different places.
+The collection of books knows how to find a book.
+The book knows how to delete itself.
