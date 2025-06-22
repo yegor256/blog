@@ -20,11 +20,11 @@ jb_picture:
   caption:
 ---
 
-You have a list of books in the `books` object.
-How do you remove a single book from it provided you know its ID?
-You can do `books.removeById(42)`.
-Alternatively, you can find it with `books.findById(42)` and then `b.remove()`.
-Which option do you prefer and why?
+We have a list of books in the `books` object.
+How do we remove a single book from it provided we know its ID?
+We can do `books.removeById(42)`.
+Alternatively, we can find it with `books.findById(42)` and then `b.remove()`.
+Which option do we prefer and why?
 The second choice is the right one.
 Not only because it's more object-oriented.
 There are a few practical benefits.
@@ -33,14 +33,14 @@ There are a few practical benefits.
 
 {% jb_picture_body %}
 
-First, what if you want to extend the deletion algorithm?
-Let's say, you want to print a log message every time a book is deleted.
-If you respect the open-closed principle, you don't want to modify the existing `Book` or `Books` classes.
-Instead, you want to either extend or decorate them.
-A decorator is the only right choice if you don't appreciate implementation inheritance.
-If it's `removeById()`, you have to decorate the `books`.
-If it's `remove()` you decorate the `book` retrieved by the `findById()`.
-The former may be more **cohesive** since its decoratee is probably **smaller**.
+First, what if we want to extend the deletion algorithm?
+Let's say, we want to print a log message every time a book is deleted.
+If we respect the open-closed principle, we don't want to modify the existing `Book` or `Books` classes.
+Instead, we want to either extend or decorate them.
+A decorator is the only right choice if we don't appreciate implementation inheritance.
+If it's `removeById()`, we have to decorate the `books`.
+If it's `remove()` we decorate the `book` retrieved by the `findById()`.
+The former may be more **cohesive** since its decoratee is probably **smaller**:
 
 ```ruby
 b = books.findById(42)
@@ -49,10 +49,10 @@ b.remove!
 ```
 
 Second, what if it's not found or can't be deleted?
-The `removeById()` doesn't allow you to use NullObject pattern.
-You can only throw an exception.
-You may return `false` but you shouldn't, respecting the CQRS principle.
-To the contrary, returning an object, even if the book is not found, gives you more flexibility of **error handling**.
+The `removeById()` doesn't allow us to use NullObject pattern.
+We can only throw an exception.
+We may return `false` but we shouldn't, since we respect the CQRS principle.
+To the contrary, returning an object, even if the book is not found, gives us more flexibility of **error handling**.
 For example, exception chaining looks neat:
 
 ```ruby
