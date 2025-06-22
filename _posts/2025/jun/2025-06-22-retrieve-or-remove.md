@@ -53,7 +53,7 @@ The `removeById()` doesn't allow us to use NullObject pattern.
 We can only throw an exception.
 We may return `false` but we shouldn't, since we respect the CQRS principle.
 To the contrary, returning an object, even if the book is not found, gives us more flexibility of **error handling**.
-For example, exception chaining looks neat:
+For example, we can use `title()` safely because we know that book was found successfully, while chaining exception:
 
 ```ruby
 b = books.findById(42)
@@ -64,20 +64,18 @@ rescue e
 end
 ```
 
-Here, we use the `title()` method safely because we know that book was found successfully.
-Object finding and its operations belong to two different places.
-The collection of books knows how to find a book.
-The book knows how to delete itself.
-
-This separation of responsibilities allows us to work with the object even after the deletion.
-It remains being a Ruby object, while its SQL record is not present anymore.
-The object remains immutable, since its ID (the state) is not changed.
-Later, we can check the presence of the SQL record:
+Third, what if finding an object is far away from its deletion?
+If books know how to find and a book knows how to delete, the book may be immutable.
+Moreover, it encapsulates the ID, thus hiding it better:
 
 ```ruby
 b = books.findById(42)
+# +100 lines here...
 b.remove!  # DELETE FROM book WHERE id = 42
+# +200 lines here...
 if b.exists?  # SELECT * FROM book WHERE id = 42
   puts "The book is back to the library!"
 end
 ```
+
+Once the ID is encapsulated into the book by `findById()`, it never gets out.
