@@ -208,7 +208,7 @@ GEM
       ttfunk
     prism (1.4.0)
     public_suffix (6.0.2)
-    pygments.rb (3.0.0)
+    pygments.rb (4.0.0)
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.3.0)
@@ -336,7 +336,7 @@ DEPENDENCIES
   mail (~> 2.8)
   nokogiri (~> 1.18)
   nuggets (~> 1.6)
-  pygments.rb (~> 3.0)
+  pygments.rb (~> 4.0)
   rainbow (~> 3.1)
   rake (~> 13.2)
   redcarpet (~> 3.6)
