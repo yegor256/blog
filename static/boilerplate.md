@@ -21,23 +21,23 @@ nospell: true
 {% badge https://www.yegor256.com/images/about/yegor-full-size.jpg 250 %}
 
 Quick bio:<br/>
-Software developer in Huawei, founder of Zerocracy and author of Elegant Objects.
+Software developer in Huawei, founder of [Zerocracy] and author of [Elegant Objects].
 
 Short bio:<br/>
 Yegor is a software developer in Huawei,
-a founder of Zerocracy,
-an author of Elegant Objects book series about OOP,
+a founder of [Zerocracy],
+an author of [Elegant Objects] book series about OOP,
 and a hands-on Java/Ruby developer.
 
 Full bio:<br/>
 Yegor Bugayenko is a software developer in Huawei,
-a founder of Zerocracy, which replaces annoying bosses with AI bots;
-a co-author of EOLANG, a pure object-oriented programming language;
-an author of "Elegant Objects," "Code Ahead," and "Angry Test" book series;
+a founder of [Zerocracy], which replaces annoying bosses with AI bots;
+a co-author of [EOLANG], a pure object-oriented programming language;
+an author of "[Elegant Objects]," "[Code Ahead]," and "[Angry Tests]" book series;
 a provocative blogger at yegor256.com;
-a creator of Zold, a non-Blockchain cryptocurrency for fast micro-payments;
+a creator of [Zold], a non-Blockchain cryptocurrency for fast micro-payments;
 a hands-on Java and Ruby programmer;
-a creator of Cactoos, Takes, JCabi, and Rultor;
+a creator of [Takes], [JCabi], and [Rultor];
 a philanthropist donating four thousand dollars annually to an open source award.
 
 Employer:<br/>
@@ -88,21 +88,31 @@ Telegram:<br/>
 <hr/>
 
 Кратко:<br/>
-Программист в Huawei, основатель Zerocracy и автор книги Elegant Objects.
+Программист в Huawei, основатель [Zerocracy] и автор книги [Elegant Objects].
 
 Краткое описание:<br/>
 Егор---программист в Huawei,
-основатель Zerocracy,
-автор Elegant Objects, серии книг об ООП,
+основатель [Zerocracy],
+автор [Elegant Objects], серии книг об ООП,
 и программист на Java и Ruby.
 
 Полное описание:<br/>
 Егор Бугаенко---программист в Huawei,
-основатель компании Zerocracy, разрабатывающей AI роботов для управления программистами;
-со-автор EOLANG, экстремально чистого объектно-ориентированного языка программмирования;
-автор "Elegant Objects"---серии книг об объектно-ориентированном программировании;
-создатель криптовалюты Zold для быстрых микроплатежей;
+основатель компании [Zerocracy], разрабатывающей AI роботов для управления программистами;
+со-автор [EOLANG], экстремально чистого объектно-ориентированного языка программмирования;
+автор "[Elegant Objects]"---серии книг об объектно-ориентированном программировании;
+создатель криптовалюты [Zold] для быстрых микроплатежей;
 провокационный блогер на yegor256.com;
 пишущий Java и Ruby программист;
-создатель Cactoos, Takes, JCabi и Rultor;
+создатель [Takes], [JCabi] и [Rultor];
 филантроп, жертвующий ежегодно несколько тысяч долларов номинантам его собственной премии за самый качественный программный проект.
+
+[Elegant Objects]: https://www.elegantobjects.org
+[Code Ahead]: https://www.codeahead.org
+[Zerocracy]: https://www.zerocracy.com
+[EOLANG]: https://www.eolang.org
+[Zold]: https://www.zold.io
+[Angry Tests]: https://www.yegor256.com/angry-tests.html
+[Takes]: https://www.takes.org
+[JCabi]: https://www.jcabi.com
+[Rultor]: https://www.rultor.com
