@@ -7,7 +7,7 @@ title: "Films"
 description: |
   Here is a list of films I was lucky to participate
   in, mostly as a director, script writer, co-producer,
-  and sometime camera man.
+  and sometimes camera man.
 permalink: films.html
 keywords:
   - films

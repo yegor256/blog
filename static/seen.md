@@ -5,7 +5,7 @@
 layout: static
 title: "Also Seen At..."
 description: |
-  Here is a list of events I've been participating,
+  Here is a list of events I've been participating in,
   which produced some more or less valuable
   deliverables.
 permalink: seen.html

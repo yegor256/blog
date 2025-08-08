@@ -40,7 +40,7 @@ Founded 5-Jun-2013.
 
 {% badge https://www.qulice.com/logo.svg 140 https://www.qulice.com %}
 
-[Qulice](https://www.qulice.com) is a aggregate of a few popular and powerful
+[Qulice](https://www.qulice.com) is an aggregate of a few popular and powerful
 style checkers for Java, in particular Checkstyle and PMD. Qulice not only makes it
 easy to use them all in one package, but also extends them with a few dozen
 rules, which are pretty strong and rather controversial. I use Qulice in all

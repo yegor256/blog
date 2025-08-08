@@ -51,7 +51,7 @@ Since 2023, the award is renamed to [Kaicode Open Source Festival](https://www.k
 and [`@victorx64`](https://github.com/victorx64)
 were the winners in 2020 with
 [`decorators-squad/eo-yaml`](https://github.com/decorators-squad/eo-yaml) (**$1,024**),
-[`hdouss/jeometry`](https://github.com/hdouss/jeometry) (**1,024**),
+[`hdouss/jeometry`](https://github.com/hdouss/jeometry) (**$1,024**),
 and
 [`victorx64/devrating`](https://github.com/victorx64/devrating) (**$1,024**)
 projects.

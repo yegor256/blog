@@ -157,7 +157,7 @@ November 2017;
 Acrylic on canvas;
 Odessa, Ukraine.
 "Small and big losses seem to be the essence of anyone's life;
-we can learn to enjoy them or we can resent the even fact of losing;
+we can learn to enjoy them or we can resent even the fact of losing;
 it seems that Nature itself invented this drama."
 
 {% picture /images/paintings/2017/obsession.jpg 350 %}
@@ -224,7 +224,7 @@ Acrylic on canvas;
 Odessa, Ukraine.
 "We all expect ourselves to be better than we are;
 we expect our value and our uniqueness to be higher than they are;
-I had a discussion with a friend of mine about her inability to be happy because of her high expectations on herself;
+I had a discussion with a friend of mine about her inability to be happy because of her high expectations of herself;
 this painting demonstrates how easily we can imprison our growth in a jail of expectations."
 
 {% picture /images/paintings/2017/doubts.jpg 350 %}
@@ -267,7 +267,7 @@ July 2017;
 27.6 x 27.6 x 0.8 in;
 Acrylic on canvas;
 Odessa, Ukraine.
-"We had a long discussion about sexual objectification problem in the
+"We had a long discussion about the sexual objectification problem in the
 modern world and then one of the discussants agreed to be a model for me."
 
 {% picture /images/paintings/2017/love-look.jpg 350 %}

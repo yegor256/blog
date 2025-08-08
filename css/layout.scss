@@ -116,6 +116,11 @@ a:visited {
       color: gray;
     }
   }
+
+  .link {
+    height: .5 * $em;
+    width: .5 * $em;
+  }
 }
 
 del {

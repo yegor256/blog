@@ -29,7 +29,7 @@ and [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor) too.
 I'm also a co-organizer of [ICCQ](https://www.iccq.ru/).
 
 If you are a student and looking for a research topic for your diploma, or
-just want to do an interesting R&D project, pick one of the research question
+just want to do an interesting R&D project, pick one of the research questions
 from one of the lists below, and then text me [in Telegram](https://t.me/yegor256),
 we will discuss:
 
@@ -55,7 +55,7 @@ a new feature, presenting this work as engineering+science:
   * [micromap](https://github.com/yegor256/micromap) (Rust)
 
 In each of them, there are over a hundred unresolved issues and pull requests.
-I can help you figure our how to formulate your coding contribution
+I can help you figure out how to formulate your coding contribution
 such that it would look like a diploma work.
 
 <!--

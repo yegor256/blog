@@ -93,11 +93,11 @@ script: |
 Here is where I'll be speaking soon.
 I update this list very often, but
 follow me [on Twitter](https://www.twitter.com/yegor256)
-for the latest news. I'm also seen [somewhere else](/seen.html) sometimes
+for the latest news. I'm also seen [somewhere else](/seen.html) sometimes.
 
 Here is [my calendar](https://calendar.google.com/calendar/ical/mt9l1l9jdo05rnj54daq5tdsb0%40group.calendar.google.com/public/basic.ics),
 feel free to import it (to Google Calendar or iCal) and stay
-informed about everything I do publicly
+informed about everything I do publicly.
 
 <!--
 ## <span id='future-talks-total'>&nbsp;</span> Upcoming Events
@@ -284,7 +284,7 @@ to meet Russian researchers, who challenge world-size problems;
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 20 September;
 [video](https://www.youtube.com/watch?v=jZitXMQaXvE),
-[slides](https://www.slideshare.net/YegorBugayenko/quality-assurance-vs-testing)
+[slides](https://www.slideshare.net/YegorBugayenko/quality-assurance-vs-testing);
 {: .talk-event}
 
 <span class="venue-rate green">A</span>
@@ -420,7 +420,7 @@ I'm not for the first time at this event and it seems to be pretty stable
 at its quality. It is, as they claim, not-for-profit. It happens in a cinema,
 which affects the quality, I believe. The screen is huge, the light is dim,
 the sound is not so perfect. Also, the focus of the event is not clear---it is
-just about tech in general? Anyway, I keep coming because I like the city
+just about tech in general? Anyway, I keep coming because I like the city.
 {: .talk-event}
 
 <span class="venue-rate green">B-</span>
@@ -436,7 +436,7 @@ at the same venue, in Moscow. Again, as with the previous one, the quality
 of the venue seriously affected the entire impression of the event. The audience
 was pretty well prepared, but I totally missed the committee part---even though
 it did exist there. Would be great to see more attention paid to the quality
-of talks
+of talks.
 {: .talk-event}
 
 <span class="venue-rate green">B-</span>
@@ -463,7 +463,7 @@ by any committee and I'm not sure it actually exists there
 [video](https://youtu.be/KCx1o_lSMkI),
 [slides](https://www.slideshare.net/YegorBugayenko/experts-vs-expertise).
 Surprisingly, it was a very good event. Usually, as, I believe, I wrote before,
-US-based events are way worse in quality comparing to Europe and especially
+US-based events are way worse in quality compared to Europe and especially
 Eastern Europe. This one was pretty decent. The quality of the venue, the video
 (which is not published yet, which is sad), the food, and travel---everything
 was good. The audience (about 150 in my talk and about 500 in the entire event),
@@ -596,7 +596,7 @@ The conference was well organized, but rather small for five tracks. There
 were no more than 30 people at my talk. The venue was far away from the
 city center which made it difficult to see the historic center of
 St. Petersburg. The equipment was not of a high quality. The food was great,
-the audience was well prepared, the organizers werefriendly
+the audience was well prepared, the organizers were friendly.
 {: .talk-event}
 
 <span class="venue-rate green">B</span>
