@@ -123,6 +123,7 @@ desc 'Validate a few pages for W3C compliance'
 # It doesn't work now, because of: https://github.com/alexdunae/w3c_validators/issues/16
 task w3c: [:build] do
   include W3CValidators
+
   validator = MarkupValidator.new
   [
     'index.html',
