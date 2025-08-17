@@ -114,13 +114,21 @@ We can also stop using reflection.
 
 Java programmers may not be ready for such a **radical move**.
 However, if they were, they would not only help the compiler but themselves too.
+Eliminating type annotations makes code shorter and, because of that, cleaner.
+This is why `var` syntax was introduced in Java 10.
 
-Easier type inference means better **readability** of the code.
-The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too.
-The opposite is also true.
-If type inference is hard or impossible to do, the quality of the program is low.
+In the code above, variable names are nouns.
+In well-written code, nouns as names are sufficient to disambiguate variables.
+No need to call it `cityOfDelivery` or `bookToDeliver`.
+Just `book` and `city` are enough.
 
-The quality of the language that allows us to write such programs is the main concern.
+We also named variables by their types: a `book` is of type `Book`, and so on.
+By looking at the name of the variable we can tell its type.
+The `Book` type annotation looks like a syntactical redundancy.
+It only leads to lower code readability, by making it longer.
+It's reasonable to expect type inference to free our programs from this redundancy.
+
+Thus, better type inference means better **readability** of the code.
 
 ## Languages Can Do Better
 
