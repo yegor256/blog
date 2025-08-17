@@ -8,7 +8,7 @@ date: 2025-08-17
 place: Moscow, Russia
 tags: oop
 description: |
-  ...
+  Type annotations are a workaround for compiler limitations, not a feature—a well-designed language should infer all types automatically, forcing programmers to write smaller, cleaner modules.
 keywords:
   - types in oop
   - types in object-oriented programming
