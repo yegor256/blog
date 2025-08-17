@@ -4,9 +4,9 @@ GEM
     Ascii85 (2.0.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    afm (0.2.2)
+    afm (1.0.0)
     ast (2.4.3)
-    async (2.27.2)
+    async (2.27.3)
       console (~> 1.29)
       fiber-annotation
       io-event (~> 1.11)
@@ -50,25 +50,25 @@ GEM
       fiber-storage
     fiber-storage (1.0.1)
     forwardable-extended (2.6.0)
-    google-protobuf (4.31.1)
+    google-protobuf (4.32.0)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.1-aarch64-linux-gnu)
+    google-protobuf (4.32.0-aarch64-linux-gnu)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.1-arm64-darwin)
+    google-protobuf (4.32.0-arm64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.1-x64-mingw-ucrt)
+    google-protobuf (4.32.0-x64-mingw-ucrt)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.1-x86_64-darwin)
+    google-protobuf (4.32.0-x86_64-darwin)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.1-x86_64-linux-gnu)
+    google-protobuf (4.32.0-x86_64-linux-gnu)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.31.1-x86_64-linux-musl)
+    google-protobuf (4.32.0-x86_64-linux-musl)
       bigdecimal
       rake (>= 13)
     hashery (2.1.2)
@@ -200,9 +200,9 @@ GEM
       racc
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    pdf-reader (2.14.1)
+    pdf-reader (2.15.0)
       Ascii85 (>= 1.0, < 3.0, != 2.0.0)
-      afm (~> 0.2.1)
+      afm (>= 0.2.1, < 2)
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
@@ -216,7 +216,7 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     redcarpet (3.6.1)
-    regexp_parser (2.11.0)
+    regexp_parser (2.11.2)
     rexml (3.4.1)
     rouge (4.6.0)
     rss (0.3.1)
@@ -246,7 +246,7 @@ GEM
     rubocop-rake (0.7.1)
       lint_roller (~> 1.1)
       rubocop (>= 1.72.1)
-    ruby-openai (8.1.0)
+    ruby-openai (8.2.0)
       event_stream_parser (>= 0.3.0, < 2.0.0)
       faraday (>= 1)
       faraday-multipart (>= 1)
@@ -287,7 +287,7 @@ GEM
     tiktoken_ruby (0.0.11.1-x86_64-linux)
     tiktoken_ruby (0.0.11.1-x86_64-linux-musl)
     timeout (0.4.3)
-    traces (0.16.2)
+    traces (0.17.0)
     trollop (2.9.10)
     ttfunk (1.8.0)
       bigdecimal (~> 3.1)
