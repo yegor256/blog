@@ -64,7 +64,7 @@ Without types, optimization and static analysis are far weaker.
 ## Compilers Can Do Better
 
 Sometimes, a compiler can infer the type of a variable.
-For example, this code compiles in Java, starting from the 10th version:
+For example, this code compiles in Java, starting from version 10:
 
 ```
 Price priceOfDelivery(Book b, City c) {
@@ -77,10 +77,10 @@ Price priceOfDelivery(Book b, City c) {
 The type annotation used in earlier Java versions is replaced with the `var` keyword.
 
 In a small piece of code such as this one, the compiler can infer types.
-However, it can't do the same with the `book` and `city` variables.
+However, it can't do the same with the `b` and `c` parameters.
 Mostly because of Reflection: the compiler doesn't know what objects might be provided at runtime.
 
-If Java did not have Reflection, type inference would work for all variables everywhere.
+If Java did not have Reflection, type inference could potentially work for more variables.
 This is yet another argument against reflection.
 
 ## Programmers Can Do Better
