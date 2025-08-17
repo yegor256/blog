@@ -15,7 +15,7 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: npm install -g eslint@9.27.0
       - run: npm install @eslint/js
       - run: eslint --config .github/eslint.config.js
