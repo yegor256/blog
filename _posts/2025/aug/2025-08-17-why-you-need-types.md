@@ -21,13 +21,13 @@ jb_picture:
 ---
 
 Type annotations are what make statically typed object-oriented languages like Java run **faster** and **safer**.
-Without annotations, every variable would be of type `Object`.
+Without annotations, every variable would be of type `Object`, accompanied by runtime casts.
 The code would work, but slower and with more runtime errors.
 Some type annotations may be inferred instead of being explicitly specified by a programmer.
 Not all though.
 In Java, for example, a number of hard-to-resolve challenges prevent us from inferring types of all objects.
-The existence of such challenges is not a fundamental limitation of object-oriented programming.
-It's a defect of Java.
+This is not a fundamental limitation of OOP itself.
+It's a result of design trade-offs in Java and similar languages.
 In a perfect object-oriented language, all variable types would be inferrable.
 
 <!--more-->
@@ -83,10 +83,8 @@ In the general case, type inference is not decidable for Java programs.
 Because of generics, method overloading, reflection, and ... complexity.
 
 The complexity is the technical obstacle.
-The compiler can't infer types for all variables because it doesn't see the entire program.
+The compiler can't infer types for all variables because it would be too expensive to analyze the whole program.
 Instead, it compiles file by file.
-It can't compile all together because it would take too much time.
-It would be able though, if programs were smaller.
 
 All other barriers, such as generics, the compiler can't overcome:
 
@@ -120,7 +118,7 @@ The easier it is to infer the type of a variable for a compiler, the faster the 
 The opposite is also true.
 If type inference is hard or impossible to do, the quality of the program is low.
 
-The quality of the language that allows to write such programs is the main concern.
+The quality of the language that allows us to write such programs is the main concern.
 
 ## Languages Can Do Better
 
@@ -132,6 +130,17 @@ We can try to design a language that doesn't have type annotations.
 Such a language should not have generics, method overloading, reflection, and everything else that prevents 100% type inference.
 Then, we must design a compiler for this language that compiles the entire program, not single files.
 The language would be statically typed and type safe in runtime.
+
+Languages like Haskell and the ML family prove that full type inference is achievable.
+However, they still need annotations for edge cases.
+Rust takes a middle ground.
+It infers local variable types but enforces explicit annotations at public interfaces.
+Go, until recently, avoided generics, operator overloading, and heavy reflection, making inference straightforward.
+However, it forces programmers to annotate all public boundaries---function signatures, struct fields, and interfaces.
+
+I suggest making one step forward and entirely eliminate type annotations.
+By fully relying on type inference, we may gain higher code quality.
+
 This is how the book price snippet would look in such a language:
 
 ```
@@ -142,12 +151,12 @@ priceOfDelivery(book, city) {
 }
 ```
 
-To me, this seems to be a much more readable code than the original one in Java.
+To me, this seems to be much more readable than the original code in Java.
 
 Compilation time remains a limitation though.
 We turn this issue into an opportunity.
 Programmers are forced, by the timing limitations of the compiler, to write smaller modules.
-When they need larger programs, they break them into modules that communicate via IPC instead of staying in a monolithic binary.
+When they need larger programs, they break them into modules that communicate via [IPC] instead of staying in a monolithic binary.
 
 We are developing such a language: [EOLANG].
 
