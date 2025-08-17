@@ -20,9 +20,9 @@ jb_picture:
   caption: ...
 ---
 
-When object-oriented programming was born in 1967, it was already equiped with types.
+When object-oriented programming was born in 1967, it was already equipped with types.
 Types are supposed to make code easier to compile and comprehend.
-They surve the purpose, but other methods can help achieve the same goal, even better.
+They serve the purpose, but other methods can help achieve the same goal, even better.
 Instead of annotating variables with types we can disambiguate them with unique names.
 This would make code shorter, thus more readable and maintainable.
 
@@ -52,18 +52,18 @@ Without the information about `b` class, the `.price()` goes to a virtual table 
 The second scenario is more expensive.
 Type annotation attached to the `b` helps avoid it.
 
-Second, types help ourselves comprehend code better thus avoiding runtime ``Method not found'' mistakes.
-Without types, we may call `priceOfDelivery()` with the `b` as a `Integer`, meaning book's Id in the database.
-In compile time that would lead to no errors.
+Second, types help us comprehend code better, thus avoiding runtime "Method not found" mistakes.
+Without types, we may call `priceOfDelivery()` with `b` as an `Integer`, meaning the book's ID in the database.
+At compile time, that would lead to no errors.
 Later, in runtime, we get an error when `.price()` is not found in the virtual table of the `Integer` class.
 
-Similar to us programmers, IDEs also benefit when they see type annotiations.
+Similar to us programmers, IDEs also benefit when they see type annotations.
 They rely on types to provide autocomplete and refactoring tools.
 Without types, optimization and static analysis are far weaker.
 
 ## Compilers Can Do Better
 
-Sometimes, a compiler can infer a type of a variable.
+Sometimes, a compiler can infer the type of a variable.
 For example, this code compiles in Java, starting from the 10th version:
 
 ```
@@ -80,14 +80,14 @@ In a small piece of code such as this one, the compiler can infer.
 However, it can't do the same with the `book` and `city` variables.
 Mostly because of Reflection: the compiler doesn't know what objects might be provided in runtime.
 
-If Java would not have the Reflection, type inference would work for all variables, everywhere.
+If Java did not have Reflection, type inference would work for all variables everywhere.
 This is yet another argument against reflection.
 
 ## Programmers Can Do Better
 
-Instead of naming variables with single letters we can use full nouns.
+Instead of naming variables with single letters, we can use full nouns.
 By renaming `b` to `book` and `c` to `city` we can eliminate the necessity to know their types.
-The names themselves may be good enough to understand the purpose of objects and what can they do (it's pseudo-code, not Java):
+The names themselves may be good enough to understand the purpose of objects and what they can do (it's pseudo-code, not Java):
 
 ```
 Price priceOfDelivery(book, city) {
@@ -107,7 +107,7 @@ A short method of a few lines of code will always be readable with short nouns.
 Here is a metaphor that may work:
 A good method reads like a story with variables being its characters.
 In a good story, characters have easily distinguishable unique names.
-They also have  unique qualities.
+They also have unique qualities.
 Jeff is charming and handsome, Walter is fat and disgusting, while Maude is smart and pretty.
 This sounds like an interesting story.
 A story about three Jeffs would be much harder to tell so that it's not boring.
@@ -119,7 +119,7 @@ In the snippet above, both `book` and `delivery` objects have `.price()` method.
 Even though they are different methods, they have the same name.
 This is what makes the story boring.
 
-Just by renaming one of them to `.cost()`, we may enlighten the fact that they are different (pseudo-code again):
+Just by renaming one of them to `.cost()`, we may highlight the fact that they are different (pseudo-code again):
 
 ```
 costOfDelivery(book, city) {
@@ -129,7 +129,7 @@ costOfDelivery(book, city) {
 }
 ```
 
-This should also help compiler infer the type of `book`.
+This should also help the compiler infer the type of `book`.
 If `Book` is the only type with the `.price()` method in the entire program, even a naive type inference algorithm would do the job.
 
 ## Languages Can Do Better
