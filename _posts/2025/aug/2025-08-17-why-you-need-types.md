@@ -129,16 +129,21 @@ costOfDelivery(book, city) {
 }
 ```
 
-Now, compare this snippet with the one we've started from.
-It does read faster and easier.
+This should also help compiler infer the type of `book`.
+If `Book` is the only type with the `.price()` method in the entire program, even a naive type inference algorithm would do the job.
+
+## Languages Can Do Better
 
 In a good program or a library, every object has its own unique set of properties, which are method names.
 The `value()`, `get()`, and `save()` names only confuse their users.
 Instead, unique and creative names equip every object with an easy-to-remember personality.
-
-## Languages Can Do Better
-
 Thoughtful naming of variables and methods is what compilers and programmers need.
 Not types.
 
-A programming language can enforce this practice by doing this:
+A programming language and its compiler can enforce this practice.
+First, they disallow type annotations.
+Second, they refuse to compile if a type can't be inferred.
+
+If we look at `b.price()` and can't figure out what is `b`, we refuse to compile.
+
+We get higher readability and stronger type safety.
