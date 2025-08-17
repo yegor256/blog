@@ -3,30 +3,32 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "Types vs. Proper Names"
+title: "Type Annotations Are a Workaround"
 date: 2025-08-17
 place: Moscow, Russia
 tags: oop
 description: |
-  Thoughtful naming of variables and methods can replace type annotations,
-  making code shorter and more expressive while maintaining type
-  safety through compiler inference.
+  ...
 keywords:
   - types in oop
   - types in object-oriented programming
   - oop abstract types
   - type inference
   - infer types
-image:
+image: /images/2025/08/swingers.jpg
 jb_picture:
-  caption: ...
+  caption: Swingers (1996) by Doug Liman
 ---
 
-When object-oriented programming was born in 1967, it was already equipped with types.
-Types are supposed to make code easier to compile and comprehend.
-They serve the purpose, but other methods can help achieve the same goal, even better.
-Instead of annotating variables with types, we can disambiguate them with unique names.
-This would make code shorter, thus more readable and maintainable.
+Type annotaions is what makes statically typed object-oriented languages like Java run **faster** and **safer**.
+Without annotations, every variable would be of type `Object`.
+The code would work, but slower and with more runtime errors.
+Some type annotaions may be inferred instead of being explicitly specifed by a programmer.
+Not all though.
+In Java, for example, a number of hard-to-resolve challenges prevent us from infering types of all objects.
+The existence of such challenges is not a fundamental limitation of object-oriented programming.
+It's a defect of Java.
+In a perfect object-oriented language all variable types would be inferrable.
 
 <!--more-->
 
@@ -35,117 +37,119 @@ This would make code shorter, thus more readable and maintainable.
 Imagine a simple Java method:
 
 ```
-Price priceOfDelivery(Book b, City c) {
-  Price p = b.price();
-  Delivery delivery = new Delivery(p, c);
+Price priceOfDelivery(Book book, City city) {
+  Price price = book.price();
+  Delivery delivery = new Delivery(price, city);
   return delivery.price();
 }
 ```
 
-Why do we use `Book`, `City`, `Price`, and `Delivery` types?
-I can think of two reasons.
-We assist compilers and programmers.
+Two reasons justify the usage of `Book`, `City`, `Price`, and `Delivery` type annotations.
+Compilers and programmers need help.
 
-## Types Are Helpful
+## Type Annotations Are Helpful
 
-First, we help the compiler eliminate some dynamic dispatches in favor of static calls.
-If the `Book` is a class, not an interface, the `b.price()` call may be compiled into a jump to an absolute address.
-Without information about the `b` class, `.price()` goes to a virtual table first, finds the address, and only then jumps.
+First, we help the compiler eliminate some **dynamic dispatches** in favor of static calls.
+If the `Book` is a class, not an interface, the `book.price()` call may be compiled into a jump to an absolute address.
+Without information about the `book` class, `.price()` goes to a virtual table first, finds the address, and only then jumps.
 The second scenario is more expensive.
-The type annotation attached to `b` helps avoid it.
+The type annotation attached to `book` helps avoid it.
 
-Second, types help us comprehend code better, thus avoiding runtime "Method not found" mistakes.
-Without types, we may call `priceOfDelivery()` with `b` as an `Integer`, meaning the book's ID in the database.
+Second, we help ourself write safe code, avoiding "Method not found" **runtime errors**.
+If `book` is not annotated as `Book`, we may mistakenly pass `Integer`, meaning the book's ID in the database.
 At compile time, that would lead to no errors.
 Later, at runtime, we get an error when `.price()` is not found in the virtual table of the `Integer` class.
 
-Similar to us programmers, IDEs also benefit when they see type annotations.
-They rely on types to provide autocomplete and refactoring tools.
-Without types, optimization and static analysis are far weaker.
+However, both compilers and programmers can improve.
 
 ## Compilers Can Do Better
 
-Sometimes, a compiler can infer the type of a variable.
+Sometimes, a compiler can infer the type of a variable, without an explicit annotation.
 For example, this code compiles in Java, starting from version 10:
 
 ```
-Price priceOfDelivery(Book b, City c) {
-  var p = b.price();
-  var d = new Delivery(p, c);
-  return d.price();
+Price priceOfDelivery(Book book, City city) {
+  var price = b.price();
+  var delivery = new Delivery(price, city);
+  return delivery.price();
 }
 ```
 
 The type annotation used in earlier Java versions is replaced with the `var` keyword.
 
-In a small piece of code such as this one, the compiler can infer types.
-However, it can't do the same with the `b` and `c` parameters.
-Mostly because of Reflection: the compiler doesn't know what objects might be provided at runtime.
+In a small piece of code such as this one, the compiler can **infer** types.
+However, it may fall short with the `book` and `city` parameters.
+In the general case, type inference is not decidable for Java programs.
+Because of generics, method overloading, reflection, and ... complexity.
 
-If Java did not have Reflection, type inference could potentially work for more variables.
-This is yet another argument against reflection.
+The complexity is the technical obstacle.
+The compiler can't infer types for all variable because it doesn't see the entire program.
+Instead, it compiles file by file.
+It can't compile alltogether because it would take too much time.
+It would be able though, if programs would be smaller.
+
+All other barriers, such as generics, the compiler can't overcome:
+
+```
+void print(List<?> items) {
+  var x = items.get(0); // What is the type?
+}
+```
+
+No matter how hard the compiler tries, in general case, this question doesn't have an answer.
 
 ## Programmers Can Do Better
 
-Instead of naming variables with single letters, we can use full nouns.
-By renaming `b` to `book` and `c` to `city`, we can eliminate the need to know their types.
-The names themselves may be good enough to understand the purpose of objects and what they can do (it's pseudo-code, not Java):
+We, programmers, can help the compiler infer types.
+
+For example, we can stop using generics.
+Instead of `List<Book>` we can have a `Library` and instead of `Map<User, Phon>` we can have a `PhoneBook`.
+It's easier to infer the type of the object taken from a `Library` vs the object taken from a generic `List`.
+
+We can also stop using method overloading.
+Instead of `print(String x)` and `print(Integer x)` we can create `printString(x)` and `printInteger(x)`.
+Type of parameters are easier to infer in more specialized methods.
+
+We can also stop using reflection.
+
+Java programmers may not be ready for such a radical move.
+However, if they would be, they would not only help the compiler but themselves too.
+Easier type inferences means better readability of the code.
+The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantic of it too.
+
+The opposite is also true.
+If type inference is hard or impossible to do, the quality of the program is low.
+
+The quality of the language that allows to write such programs is the main concern.
+
+## Languages Can Do Better
+
+A language that we use must help us write programs that are fast and have no bugs.
+A language with type annotations is not the best possible implementation of the objective.
+Type annotations, as we just discussed, are a workaround, not a solution.
+
+We can try to design a language that doesn't have type annotations.
+Such a language should not have generics, method overloading, reflection, and everything else that prevent 100% type inference.
+Then, we must design a compiler for this language that compiles the entire program, not single files.
+The language would be statically typed and type safe in runtime.
+This is how the book price snippet would look in such a language:
 
 ```
-Price priceOfDelivery(book, city) {
-  var p = book.price();
-  var d = new Delivery(p, city);
+priceOfDelivery(book, city) {
+  p = book.price();
+  d = new Delivery(p, city);
   return d.price();
 }
 ```
 
-In larger and more complex code blocks, just nouns as variable names may not be enough.
-A number of "books" or "prices" may be present in one method.
-Just nouns may not disambiguate them.
-Longer names may be required, which allegedly decreases readability.
-This is yet another argument against complexity and long methods.
-A short method of a few lines of code will always be readable with short nouns.
+To me, this seems to be a much more readable code than the original one in Java.
 
-Here is a metaphor that may work:
-A good method reads like a story with variables being its characters.
-In a good story, characters have easily distinguishable unique names.
-They also have unique qualities.
-Jeff is charming and handsome, Walter is fat and disgusting, while Maude is smart and pretty.
-This sounds like an interesting story.
-A story about three Jeffs would be much harder to tell without being boring.
+Compilation time remains a limitation though.
+We turn this issue into an opportunity.
+Programmers are forced, by the timing limiations of the compiler, to write smaller modules.
+When they need larger programs, they break them into modules that communicate via IPC instead of staying in a monolythic binary.
 
-## Objects Can Do Better
+We are developing such a language: [EOLANG].
 
-To help story tellers---programmers---objects' qualities must be expressive.
-In the snippet above, both `book` and `delivery` objects have a `.price()` method.
-Even though they are different methods, they have the same name.
-This is what makes the story boring.
-
-Just by renaming one of them to `.cost()`, we may highlight the fact that they are different (pseudo-code again):
-
-```
-costOfDelivery(book, city) {
-  p = book.price();
-  d = new Delivery(p, city);
-  return d.cost();
-}
-```
-
-This should also help the compiler infer the type of `book`.
-If `Book` is the only type with the `.price()` method in the entire program, even a naive type inference algorithm would do the job.
-
-## Languages Can Do Better
-
-In a good program or a library, every object has its own unique set of properties, which are method names.
-The `value()`, `get()`, and `save()` names only confuse their users.
-Instead, unique and creative names equip every object with an easy-to-remember personality.
-Thoughtful naming of variables and methods is what compilers and programmers need.
-Not types.
-
-A programming language and its compiler can enforce this practice.
-First, they disallow type annotations.
-Second, they refuse to compile if a type can't be inferred.
-
-If we look at `b.price()` and can't figure out what `b` is, we refuse to compile.
-
-We get higher readability and stronger type safety.
+[IPC]: https://en.wikipedia.org/wiki/Inter-process_communication
+[EOLANG]: https://www.eolang.org
