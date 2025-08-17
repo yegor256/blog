@@ -3,12 +3,14 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "Type Annotations Are a Workaround"
+title: "The End of Type Annotations"
 date: 2025-08-17
 place: Moscow, Russia
 tags: oop
 description: |
-  Type annotations are a workaround for compiler limitations, not a feature—a well-designed language should infer all types automatically, forcing programmers to write smaller, cleaner modules.
+  Type annotations are a workaround for compiler limitations,
+  not a feature—a well-designed language should infer all types automatically,
+  forcing programmers to write smaller, cleaner modules.
 keywords:
   - types in oop
   - types in object-oriented programming
@@ -44,14 +46,14 @@ Price priceOfDelivery(Book book, City city) {
 }
 ```
 
-Two reasons justify the usage of `Book`, `City`, `Price`, and `Delivery` type annotations.
+Two reasons justify the usage of `Book`, `City`, `Price`, and `Delivery` type annotations:
 Compilers and programmers need help.
 
 ## Type Annotations Are Helpful
 
 First, we help the compiler eliminate some **dynamic dispatches** in favor of static calls.
 If the `Book` is a class, not an interface, the `book.price()` call may be compiled into a jump to an absolute address.
-Without information about the `book` class, `.price()` goes to a virtual table first, finds the address, and only then jumps.
+Without information about the `book`'s class, `.price()` goes to a virtual table first, finds the address, and only then jumps.
 The second scenario is more expensive.
 The type annotation attached to `book` helps avoid it.
 
@@ -110,7 +112,7 @@ Types of parameters are easier to infer in more specialized methods.
 
 We can also stop using reflection.
 
-Java programmers may not be ready for such a radical move.
+Java programmers may not be ready for such a **radical move**.
 However, if they were, they would not only help the compiler but themselves too.
 Easier type inference means better readability of the code.
 The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too.
@@ -125,6 +127,8 @@ The quality of the language that allows us to write such programs is the main co
 A language that we use must help us write programs that are fast and have no bugs.
 A language with type annotations is not the best possible implementation of the objective.
 Type annotations, as we just discussed, are a workaround, not a solution.
+
+{% quote The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too. %}
 
 We can try to design a language that doesn't have type annotations.
 Such a language should not have generics, method overloading, reflection, and everything else that prevents 100% type inference.
