@@ -104,7 +104,7 @@ We, programmers, can help the compiler infer types.
 
 For example, we can stop using generics.
 Instead of `List<Book>` we can have a `Library` and instead of `Map<User, Phone>` we can have a `PhoneBook`.
-It's easier to infer the type of the object taken from a `Library` vs the object taken from a generic `List`.
+It's easier to infer the type of the object taken from a `Library` versus the object taken from a generic `List`.
 
 We can also stop using method overloading.
 Instead of `print(String x)` and `print(Integer x)` we can create `printString(x)` and `printInteger(x)`.
@@ -114,9 +114,9 @@ We can also stop using reflection.
 
 Java programmers may not be ready for such a **radical move**.
 However, if they were, they would not only help the compiler but themselves too.
-Easier type inference means better readability of the code.
-The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too.
 
+Easier type inference means better **readability** of the code.
+The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too.
 The opposite is also true.
 If type inference is hard or impossible to do, the quality of the program is low.
 
@@ -126,14 +126,9 @@ The quality of the language that allows us to write such programs is the main co
 
 A language that we use must help us write programs that are fast and have no bugs.
 A language with type annotations is not the best possible implementation of the objective.
-Type annotations, as we just discussed, are a workaround, not a solution.
+Type annotations, as we just discussed, are a workaround.
 
 {% quote The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too. %}
-
-We can try to design a language that doesn't have type annotations.
-Such a language should not have generics, method overloading, reflection, and everything else that prevents 100% type inference.
-Then, we must design a compiler for this language that compiles the entire program, not single files.
-The language would be statically typed and type safe in runtime.
 
 Languages like Haskell and the ML family prove that full type inference is achievable.
 However, they still need annotations for edge cases.
@@ -142,8 +137,12 @@ It infers local variable types but enforces explicit annotations at public inter
 Go, until recently, avoided generics, operator overloading, and heavy reflection, making inference straightforward.
 However, it forces programmers to annotate all public boundaries---function signatures, struct fields, and interfaces.
 
-I suggest making one step forward and entirely eliminate type annotations.
-By fully relying on type inference, we may gain higher code quality.
+I suggest taking one step forward and designing a language that doesn't have type annotations.
+Such a language should not have generics, method overloading, reflection, and everything else that prevents 100% type inference.
+Then, we must design a compiler for this language that compiles the entire program, not single files.
+
+The language may be as strict as this:
+If the type of a variable can't be inferred, compilation fails.
 
 This is how the book price snippet would look in such a language:
 
