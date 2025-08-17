@@ -8,7 +8,9 @@ date: 2025-08-17
 place: Moscow, Russia
 tags: oop
 description: |
-  ...
+  Thoughtful naming of variables and methods can replace type annotations,
+  making code shorter and more expressive while maintaining type
+  safety through compiler inference.
 keywords:
   - types in oop
   - types in object-oriented programming
