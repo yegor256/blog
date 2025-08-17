@@ -23,7 +23,7 @@ jb_picture:
 ---
 
 Type annotations are what make statically typed object-oriented languages like Java run **faster** and **safer**.
-Without annotations, every variable would be of type `Object`, accompanied by runtime casts.
+Without annotations, every variable would effectively collapse to `Object`, forcing runtime casts.
 The code would work, but slower and with more runtime errors.
 Some type annotations may be inferred instead of being explicitly specified by a programmer.
 Not all though.
@@ -87,6 +87,8 @@ Because of generics, method overloading, reflection, and ... complexity.
 The complexity is the technical obstacle.
 The compiler can't infer types for all variables because it would be too expensive to analyze the whole program.
 Instead, it compiles file by file.
+Even if the compiler had the whole program, inference in Java would still hit undecidability in the general case.
+File-by-file compilation makes this even more restrictive.
 
 All other barriers, such as generics, the compiler can't overcome:
 
@@ -132,12 +134,6 @@ Thus, better type inference means better **readability** of the code.
 
 ## Languages Can Do Better
 
-A language that we use must help us write programs that are fast and have no bugs.
-A language with type annotations is not the best possible implementation of the objective.
-Type annotations, as we just discussed, are a workaround.
-
-{% quote The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too. %}
-
 Languages like Haskell and the ML family prove that full type inference is achievable.
 However, they still need annotations for edge cases.
 Rust takes a middle ground.
@@ -145,7 +141,9 @@ It infers local variable types but enforces explicit annotations at public inter
 Go, until recently, avoided generics, operator overloading, and heavy reflection, making inference straightforward.
 However, it forces programmers to annotate all public boundaries---function signatures, struct fields, and interfaces.
 
-I suggest taking one step forward and designing a language that doesn't have type annotations.
+{% quote The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too. %}
+
+I suggest taking one step forward and designing a language that doesn't have any type annotations.
 Such a language should not have generics, method overloading, reflection, and everything else that prevents 100% type inference.
 Then, we must design a compiler for this language that compiles the entire program, not single files.
 
@@ -169,7 +167,7 @@ We turn this issue into an opportunity.
 Programmers are forced, by the timing limitations of the compiler, to write smaller modules.
 When they need larger programs, they break them into modules that communicate via [IPC] instead of staying in a monolithic binary.
 
-We are developing such a language: [EOLANG].
+We're experimenting with this approach in [EOLANG], a language designed to maximize inference by eliminating features that make it undecidable.
 
 [IPC]: https://en.wikipedia.org/wiki/Inter-process_communication
 [EOLANG]: https://www.eolang.org
