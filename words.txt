@@ -989,6 +989,7 @@ books
 BooksDAO
 bookshelf
 booktest
+booktodeliver
 boolean
 booming
 boost
@@ -1289,6 +1290,7 @@ CasperJS
 cassandra
 casting
 castrates
+casts
 casual
 cat
 catalog
@@ -1483,6 +1485,7 @@ citing
 citizen
 citizens
 city
+cityofdelivery
 civil
 civilization
 claim
@@ -4213,6 +4216,7 @@ harassment
 harassment-free
 hard
 hard-coded
+hard-to-resolve
 hard-workers
 hard-working
 harder
@@ -4681,7 +4685,11 @@ inevitable
 inevitably
 inexpensive
 infamous
+inference
 inferior
+inferrable
+inferred
+inferring
 infinite
 infinitive
 infinity
@@ -4820,6 +4828,7 @@ intent
 intention
 intentionally
 intentions
+inter-process
 interact
 interacting
 interaction
@@ -4923,6 +4932,7 @@ iOS
 IOUtils
 IP
 ipads
+IPC
 iphone
 IPO
 IPOS
@@ -5765,6 +5775,7 @@ maven-resources-plugin
 maven-war-plugin
 max
 maxim-pr
+maximize
 maximizing
 maximum
 may
@@ -6992,6 +7003,7 @@ philosophically
 philosophy
 phing
 phone
+phonebook
 phones
 photo
 photos
@@ -7329,7 +7341,9 @@ printedspeed
 printers
 printf
 printing
+printinteger
 prints
+printstring
 printtoconsole
 prior
 priorities
@@ -9959,6 +9973,7 @@ tyasning
 tyler
 tyler's
 type
+typed
 types
 types-announce
 typescript
@@ -10019,6 +10034,7 @@ unconditional
 unconditionally
 unconscious
 uncovered
+undecidable
 undemanding
 under
 under-estimating
@@ -10233,6 +10249,7 @@ value
 values
 vancouver
 vandal
+var
 varargs
 variable
 variables
