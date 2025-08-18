@@ -120,7 +120,7 @@ Eliminating type annotations makes code shorter and, because of that, cleaner.
 This is why `var` syntax was introduced in Java 10.
 
 In the code above, variable names are nouns.
-In well-written code, nouns as names are sufficient to disambiguate variables.
+In well-written code, nouns as names are [sufficient]({% pst 2015/jan/2015-01-12-compound-name-is-code-smell %}) to disambiguate variables.
 No need to call it `cityOfDelivery` or `bookToDeliver`.
 Just `book` and `city` are enough.
 
