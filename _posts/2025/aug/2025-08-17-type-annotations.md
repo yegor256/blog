@@ -114,6 +114,8 @@ Types of parameters are easier to infer in more specialized methods.
 
 We can also stop using reflection.
 
+{% quote The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too. %}
+
 Java programmers may not be ready for such a **radical move**.
 However, if they were, they would not only help the compiler but themselves too.
 Eliminating type annotations makes code shorter and, because of that, cleaner.
@@ -141,7 +143,7 @@ It infers local variable types but enforces explicit annotations at public inter
 Go, until recently, avoided generics, operator overloading, and heavy reflection, making inference straightforward.
 However, it forces programmers to annotate all public boundaries---function signatures, struct fields, and interfaces.
 
-{% quote The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too. %}
+{% quote If the type of a variable can't be inferred, compilation fails. %}
 
 I suggest taking one step forward and designing a language that doesn't have any type annotations.
 Such a language should not have generics, method overloading, reflection, and everything else that prevents 100% type inference.
