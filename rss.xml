@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-08-17T15:50:22+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The End of Type Annotations</title><link href="https://www.yegor256.com/2025/08/17/type-annotations.html" rel="alternate" type="text/html" title="The End of Type Annotations" /><published>2025-08-17T00:00:00+00:00</published><updated>2025-08-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/08/17/type-annotations</id><content type="html" xml:base="https://www.yegor256.com/2025/08/17/type-annotations.html"><![CDATA[<p>Type annotations are what make statically typed object-oriented languages like Java run <strong>faster</strong> and <strong>safer</strong>.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-08-18T07:04:58+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The End of Type Annotations</title><link href="https://www.yegor256.com/2025/08/17/type-annotations.html" rel="alternate" type="text/html" title="The End of Type Annotations" /><published>2025-08-17T00:00:00+00:00</published><updated>2025-08-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/08/17/type-annotations</id><content type="html" xml:base="https://www.yegor256.com/2025/08/17/type-annotations.html"><![CDATA[<p>Type annotations are what make statically typed object-oriented languages like Java run <strong>faster</strong> and <strong>safer</strong>.
 Without annotations, every variable would effectively collapse to <code class="language-plaintext highlighter-rouge">Object</code>, forcing runtime casts.
 The code would work, but slower and with more runtime errors.
 Some type annotations may be inferred instead of being explicitly specified by a programmer.
@@ -87,13 +87,16 @@ Types of parameters are easier to infer in more specialized methods.</p>
 
 <p>We can also stop using reflection.</p>
 
+<aside class="quote">The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too.
+</aside>
+
 <p>Java programmers may not be ready for such a <strong>radical move</strong>.
 However, if they were, they would not only help the compiler but themselves too.
 Eliminating type annotations makes code shorter and, because of that, cleaner.
 This is why <code class="language-plaintext highlighter-rouge">var</code> syntax was introduced in Java 10.</p>
 
 <p>In the code above, variable names are nouns.
-In well-written code, nouns as names are sufficient to disambiguate variables.
+In well-written code, nouns as names are <a href="/2015/01/12/compound-name-is-code-smell.html">sufficient</a> to disambiguate variables.
 No need to call it <code class="language-plaintext highlighter-rouge">cityOfDelivery</code> or <code class="language-plaintext highlighter-rouge">bookToDeliver</code>.
 Just <code class="language-plaintext highlighter-rouge">book</code> and <code class="language-plaintext highlighter-rouge">city</code> are enough.</p>
 
@@ -114,7 +117,7 @@ It infers local variable types but enforces explicit annotations at public inter
 Go, until recently, avoided generics, operator overloading, and heavy reflection, making inference straightforward.
 However, it forces programmers to annotate all public boundaries—function signatures, struct fields, and interfaces.</p>
 
-<aside class="quote">The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too.
+<aside class="quote">If the type of a variable can’t be inferred, compilation fails.
 </aside>
 
 <p>I suggest taking one step forward and designing a language that doesn’t have any type annotations.
