@@ -2113,7 +2113,7 @@ coworker's
 coworkers
 cozy
 CPU
-CQRS
+CQS
 craft
 craigslist
 crap
