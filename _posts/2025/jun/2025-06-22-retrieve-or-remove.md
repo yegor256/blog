@@ -57,7 +57,7 @@ b.remove!
 
 What if the book isn't found, or can't be deleted?
 The `removeById()` approach doesn't support the [Null Object] pattern well.
-It forces us to throw an exception---or worse, return `false`, which goes [against]({% pst 2018/aug/2018-08-22-builders-and-manipulators%}) the [CQRS] principle.
+It forces us to throw an exception---or worse, return `false`, which goes [against]({% pst 2018/aug/2018-08-22-builders-and-manipulators%}) the [CQS] principle.
 
 On the other hand, returning an object, even a [null][Null Object] or [fake]({% pst 2014/sep/2014-09-23-built-in-fake-objects %}) object, offers more **flexible error handling**.
 For instance, we can access `title()` safely, knowing that the book was found successfully---or catch and [re-raise exceptions][exception chaining] with [more context]({% pst 2015/dec/2015-12-01-rethrow-exceptions %}):
@@ -98,5 +98,5 @@ It allows for cleaner extension, better error handling, and tighter encapsulatio
 
 [open-closed principle]: https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle
 [Null Object]: https://en.wikipedia.org/wiki/Null_object_pattern
-[CQRS]: https://en.wikipedia.org/wiki/Command%E2%80%93query_separation
 [exception chaining]: https://en.wikipedia.org/wiki/Exception_chaining
+[CQS]: https://en.wikipedia.org/wiki/Command%E2%80%93query_separation
