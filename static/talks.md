@@ -138,7 +138,7 @@ I was also seen at [these events](/seen.html).
 16 March 2024.
 Very well organized event for students, in MIPT. I enjoyed being
 there and hope that they will continue organizing it every year.
-[video](https://www.youtube.com/watch?v=gVZDBG-BInWo).
+[video](https://www.youtube.com/watch?v=VZDBG-BInWo).
 {: .talk-event}
 
 <span class="venue-rate green">B</span>
