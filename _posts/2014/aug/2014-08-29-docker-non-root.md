@@ -42,7 +42,7 @@ There are two files in the current directory: `entry.sh` and `script.sh`.
 and it contains the following:
 
 ```bash
-#!/bin/bash
+#!/usr/bin/env bash
 adduser --disabled-password --gecos '' r
 adduser r sudo
 echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
