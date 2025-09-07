@@ -7952,6 +7952,7 @@ renewed
 renounce
 rent
 renting
+reopen
 repair
 repaired
 repeat
