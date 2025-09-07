@@ -35,7 +35,7 @@ If they don't, you make another fix, until they do.
 
 {% jb_picture_body %}
 
-According to [Joel Spolsky], ``the only person who can close a bug is the person who opened it in the first place.''
+According to [Joel Spolsky], "the only person who can close a bug is the person who opened it in the first place."
 But, why?
 Why shouldn't you close it, when it's obvious that the bug is fixed?
 There are at least three reasons.
