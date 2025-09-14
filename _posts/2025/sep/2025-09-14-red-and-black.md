@@ -8,7 +8,10 @@ date: 2025-09-14
 place: Moscow, Russia
 tags: management mood
 description: |
-  ...
+  Employees in big organizations split into two tribes—reds,
+  who obey and climb by pleasing bosses, and blacks, who rebel
+  and serve the customer—and if you're black, your only
+  survival strategy is to keep your distance from the reds.
 keywords:
   - red and black employees
   - red and black management
@@ -49,7 +52,7 @@ A few examples of the rules you may need to obey:
 All of the above seem reasonable---just like prison rules.
 The difference is your attitude toward them.
 
-They are either a framework for your career or an inevitable evil.
+They are either a **framework** for your career or an inevitable **evil**.
 You either feel happy when you do what's required, or feel annoyed and do it just because it's required.
 You either fill out all the forms completely, or you cut every possible corner to get back to the real work.
 You either read an email copied to 25 people to not miss anything or immediately delete it.
