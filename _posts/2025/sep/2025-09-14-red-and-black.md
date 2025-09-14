@@ -6,7 +6,7 @@ layout: post
 title: "Red vs. Black"
 date: 2025-09-14
 place: Moscow, Russia
-tags: management
+tags: management mood
 description: |
   ...
 keywords:
@@ -21,14 +21,46 @@ jb_picture:
 ---
 
 In Soviet Russia, prisoner camps were divided to two categories: red and black.
-In a red camp, the power belonged to the prisoners who cooperated with the administration and respected the rules.
-In a black one, the power was in the hands of those criminals who resented the rules.
-In modern organizations we may also categorize employees into red and black.
-A "red" employee enjoys obeying the rules and climbs up the carreer ladder by being a good sport.
+In a red camp, the power belonged to the prisoners who cooperated with the administration and helped it maintain the discipline.
+In a black one, the power was in the hands of those criminals who resented the rules, in a permanent confrontation with the administration.
+It seems that in software companies we may also categorize employees into red and black.
+A "red" employee enjoys obeying the rules and climbs up the career ladder by making the boss happy.
 To the contrary, a "black" employee, while understands the inevitability, despises the necessity to obey.
-His career growth is driven by the value of the product he produces.
+His career growth is driven by making the customer happy.
 Which one are you?
 
 <!--more-->
 
 {% jb_picture_body %}
+
+An organization may not exist without policies and regulations.
+Especially, if it's a large organization where the percentage of underperformers is the highest.
+The clock-watchers must be disciplined so that they produce at least something.
+Let's assume you are not one of them.
+
+However, even if you are not a nine-to-five clock-watcher, you can't ignore the policies.
+A few examples of the rules you may need to obey:
+
+* Project plans must be in PowerPoint, the template is mandatory
+* Everybody must check-in the attendance tracking system
+* Job candidate must go through all mandatory HR steps
+* Every meeting must have minutes emailed to everybody
+*
+
+All of the above are reasonable.
+Just like all the regulations in a prison.
+The difference is your attitude to them.
+They either are a framework for your career or an inevitable evil.
+
+Once you find your identity---either red or black---you start dispising the other side.
+
+If you are red, you don't understand the black employees who are constantly rebeling.
+They rebel against the rules you so much enjoy following.
+You see them as dishonest, unloyal, and selfish sociopaths.
+
+If you are black, you despise the red employees who are trying so hard to associate themselves with the system.
+They study the rules and compete against each other---who knows them better.
+You see them as shallow and incompetent imposters.
+
+A piece is not possible.
+Just choose your side.
