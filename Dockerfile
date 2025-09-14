@@ -10,10 +10,11 @@ SHELL ["/bin/bash", "-e", "-c", "-o", "pipefail"]
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-COPY .github/*.sh /tmp
-RUN /tmp/install-apt.sh \
-  && /tmp/install-tidy.sh \
-  && /tmp/install-woff.sh \
+COPY .github/ .github/
+COPY _docker/ _docker/
+RUN .github/install-apt.sh \
+  && .github/install-tidy.sh \
+  && .github/install-woff.sh \
   && npm install -g cssshrink@0.0.5 \
   && gem install jgd -v 1.13.0
 
