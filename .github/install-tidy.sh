@@ -5,9 +5,7 @@
 
 set -ex -o pipefail
 
-self=$(dirname "$0")
-
-tmp=${self}/../_temp
+tmp=$(mktemp -d)
 
 cd "${tmp}"
 
