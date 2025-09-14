@@ -10,6 +10,8 @@ SHELL ["/bin/bash", "-e", "-c", "-o", "pipefail"]
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+WORKDIR /tmp
+
 COPY .github/ .github/
 COPY _docker/ _docker/
 RUN .github/install-apt.sh \
