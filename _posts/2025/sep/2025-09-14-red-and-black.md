@@ -21,13 +21,14 @@ jb_picture:
 ---
 
 In Soviet Russia, prisoner camps were divided to two categories: red and black.
-In a red camp, the power belongs to the prisoners who cooperate with the administration and respect the rules.
-In a black one, the power is in the hands of those criminals who resent the rules.
-The same happens in any modern organization.
-All employees may be divided into two categories: red an black.
+In a red camp, the power belonged to the prisoners who cooperated with the administration and respected the rules.
+In a black one, the power was in the hands of those criminals who resented the rules.
+In modern organizations we may also categorize employees into red and black.
+A "red" employee enjoys obeying the rules of the system and climbs up the carreer ladder by being a good sport.
+To the contrary, a "black" employee, while understands the inevitability of the rules, hates most of them.
+His career growth is
 Which one are you?
 
 <!--more-->
 
 {% jb_picture_body %}
-
