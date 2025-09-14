@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-09-14T08:36:54+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The End of Type Annotations</title><link href="https://www.yegor256.com/2025/08/17/type-annotations.html" rel="alternate" type="text/html" title="The End of Type Annotations" /><published>2025-08-17T00:00:00+00:00</published><updated>2025-08-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/08/17/type-annotations</id><content type="html" xml:base="https://www.yegor256.com/2025/08/17/type-annotations.html"><![CDATA[<p>Type annotations are what make statically typed object-oriented languages like Java run <strong>faster</strong> and <strong>safer</strong>.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-09-14T17:51:26+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Red vs. Black</title><link href="https://www.yegor256.com/2025/09/14/red-and-black.html" rel="alternate" type="text/html" title="Red vs. Black" /><published>2025-09-14T00:00:00+00:00</published><updated>2025-09-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/09/14/red-and-black</id><content type="html" xml:base="https://www.yegor256.com/2025/09/14/red-and-black.html"><![CDATA[<p>In Soviet Russia, prisoner camps were divided into two categories: red and black.
+In a red camp, the power belonged to the prisoners who cooperated with the administration and helped it maintain discipline.
+In a black one, the power was in the hands of criminals who resented the rules, in permanent confrontation with the administration.
+It seems that in software companies we may also categorize employees into red and black.
+A <strong>red employee</strong> enjoys obeying the rules and climbs up the career ladder by <a href="/2015/01/26/happy-boss-false-objective.html">making the boss happy</a>.
+To the contrary, a <strong>black employee</strong>, while understanding the inevitability, despises the necessity to obey.
+Their career growth is driven by <a href="/2015/02/23/haircut.html">making the customer happy</a>.
+Which one are you?</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Холодное лето пятьдесят третьего (1987) by Александр Прошкин" src="/images/2025/09/cold-summer-1953.jpg" longdesc="#ded7ba65" /><figcaption id="ded7ba65">Холодное лето пятьдесят третьего (1987) by Александр Прошкин</figcaption></figure>
+
+<p>An organization cannot exist without policies and regulations.
+Especially if it’s a large organization where the percentage of underperformers is highest.
+The clock-watchers must be disciplined so that they produce at least something.
+Let’s assume you are not one of them.</p>
+
+<p>However, even if you are not a nine-to-five clock-watcher, you can’t ignore the policies.
+A few examples of the rules you may need to obey:</p>
+
+<ul>
+  <li>All reports must follow the official PowerPoint template</li>
+  <li>Every meeting requires written minutes sent to all participants</li>
+  <li>Job candidates must pass through the full HR pipeline</li>
+  <li>Employees must re-certify their skills on a fixed schedule</li>
+</ul>
+
+<p>All of the above seem reasonable—just like prison rules.
+The difference is your attitude toward them.</p>
+
+<p>They are either a <strong>framework</strong> for your career or an inevitable <strong>evil</strong>.
+You either feel happy when you do what’s required, or feel annoyed and do it just because it’s required.
+You either fill out all the forms completely, or you cut every possible corner to get back to the real work.
+You either read an email copied to 25 people to not miss anything or immediately delete it.
+You either attend all meetings or learn to be creative in finding reasons why you can’t.</p>
+
+<p>You are either red or black.
+Once you find your <strong>identity</strong>, you start despising the other side.</p>
+
+<p>If you are red, you don’t understand the black employees who are constantly rebelling.
+They rebel against the rules you so much enjoy following.
+You see them as dishonest, disloyal, and selfish sociopaths.</p>
+
+<p>If you are black, you despise the red employees who are trying so hard to associate themselves with the system.
+They study the rules and compete against each other—who knows them better.
+You see them as <a href="/2017/08/22/to-be-nice-or-not.html">shallow</a> and incompetent <a href="/2021/03/03/imposters-to-win.html">impostors</a>.</p>
+
+<p>Peace is not possible.
+In any large organization, reds will always dominate—it’s inevitable.
+The system needs them, and they thrive inside it.
+Blacks will always be a minority, surviving at the edges.</p>
+
+<p>If you are black, don’t waste energy trying to convert or fight the reds.
+You won’t win.
+The only strategy is distance.
+Minimize contact, keep your head down when necessary, and focus on delivering real value where it matters.
+Reds will spend their lives climbing the corporate ladder.
+Blacks must learn to survive in the shadows of that ladder, working for the customer, not the boss.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="mood" /><summary type="html"><![CDATA[In big organizations, reds obey bosses while blacks serve customers—and blacks survive only by keeping their distance.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/09/cold-summer-1953.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/09/cold-summer-1953.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The End of Type Annotations</title><link href="https://www.yegor256.com/2025/08/17/type-annotations.html" rel="alternate" type="text/html" title="The End of Type Annotations" /><published>2025-08-17T00:00:00+00:00</published><updated>2025-08-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/08/17/type-annotations</id><content type="html" xml:base="https://www.yegor256.com/2025/08/17/type-annotations.html"><![CDATA[<p>Type annotations are what make statically typed object-oriented languages like Java run <strong>faster</strong> and <strong>safer</strong>.
 Without annotations, every variable would effectively collapse to <code class="language-plaintext highlighter-rouge">Object</code>, forcing runtime casts.
 The code would work, but slower and with more runtime errors.
 Some type annotations may be inferred instead of being explicitly specified by a programmer.
@@ -642,110 +700,4 @@ We enroll database changes, apply data migrations, update AWS configs, and switc
 <p>In smaller projects, cheap and preflight builds may be similar.
 In tiny projects, all three builds—cheap, preflight, and proper—may be identical.
 However, we always keep the fast build different from the others.
-The “four builds” framework may be reduced to a “two builds” one, but never to “one build fits all.”</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><summary type="html"><![CDATA[Instead of trying to shorten the time that our builds take, we order and chain them by complexity, thus gradually reducing the risk.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/04/trainspotting.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/04/trainspotting.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Advice for First-Time Open Source Contributors</title><link href="https://www.yegor256.com/2024/12/15/open-source-beginner-advice.html" rel="alternate" type="text/html" title="Advice for First-Time Open Source Contributors" /><published>2024-12-15T00:00:00+00:00</published><updated>2024-12-15T00:00:00+00:00</updated><id>https://www.yegor256.com/2024/12/15/open-source-beginner-advice</id><content type="html" xml:base="https://www.yegor256.com/2024/12/15/open-source-beginner-advice.html"><![CDATA[<p>My <a href="https://github.com/eclipse-ee4j/jersey/blob/b2c7ba6d388cb9722f39073d7e82aa818fec49d5/core-common/src/test/java/org/glassfish/jersey/uri/internal/PathTemplateTest.java#L26">first attempt</a> to contribute to an open source repository was a miserable failure.
-I picked a Java repository I was already using (<a href="https://en.wikipedia.org/wiki/Eclipse_Jersey">Glassfish Jersey</a>), created a unit test for an existing class, submitted a
-patch (there were no pull requests at that time), and… it was merged.
-I got excited and submitted another unit test in a new patch.
-No surprise, the repository owners asked me to stop fooling around: apparently, they didn’t need unit tests just for the sake of it.
-I quickly lost interest in making changes to anyone else’s code bases and started working on my own stuff instead.
-Don’t repeat my mistake!
-Becoming a contributor to an existing code base is a much faster path into the open source world and is far more rewarding.
-Here are some things to keep in mind to make your journey to success even faster—especially if you are just a beginner making your first pull requests.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Белое солнце пустыни (1970) by Владимир Мотыль" src="/images/2024/12/white-sun.jpg" longdesc="#78e09fd4" /><figcaption id="78e09fd4">Белое солнце пустыни (1970) by Владимир Мотыль</figcaption></figure>
-
-<p><strong>Study Existing Files</strong>.
-  Repository owners are usually proud of their code, no matter how ugly it might look.
-  Don’t try to impress them with your unique formatting or naming style; this will only annoy them.
-  Instead, study a few files they wrote and try to emulate their style as closely as possible.
-  It’s safer.
-  Once you’ve merged a few dozen pull requests, you can become more creative.
-  But not now.</p>
-
-<p><strong>Don’t Ask, Submit Issues</strong>.
-  You are not the first contributor, nor will you be the last.
-  Many people before you asked countless questions but wrote zero lines of code.
-  Repository owners, especially in large projects, are not enthusiastic about teaching you or explaining how their code works.
-  <a href="/2024/04/01/ping-me-please.html">Don’t bother them</a> with questions in Telegram.
-  This will only demonstrate a lack of discipline.
-  Instead, formulate every question as a <a href="/2025/05/25/bug-driven-development.html">new issue</a>, pointing out, for example: 1) lack of documentation, 2) inconsistent design, 3) high complexity, or anything else preventing you from quickly understanding the code and contributing.
-  Such an issue is a valuable contribution in itself.
-  Read more about <a href="/2025/05/25/bug-driven-development.html">bug driven development</a>.</p>
-
-<p><strong>Blame the Code Base</strong>.
-  If <code class="language-plaintext highlighter-rouge">master</code> branch is broken (you can’t build it locally due to some errors), don’t get frustrated.
-  It’s not your fault.
-  Instead, submit an issue and ask the team to fix it.
-  They will respect such a bug report, because you’re, in this case, their tester, working for free.
-  Don’t to start your own branch if master is broken.
-  Wait <a href="/2025/04/19/dont-merge-into-broken-master.html">until it’s fixed</a>.</p>
-
-<p><strong>Ping Them</strong>.
-  When you submit a pull request, an issue, or a comment to existing pull requests and issues, make sure you mention the person whose attention you need.
-  <a href="/2024/04/01/ping-me-please.html">Ping them</a>, without any hesitation.
-  Otherwise, they simply will miss your message.</p>
-
-<p><strong>Make Small Changes</strong>.
-  There is nothing more frustrating for a maintainer than a large pull request from a stranger.
-  The reasons are simple: first, strangers usually write bad code; second, they often become disappointed when told their code is bad.
-  Thus, investing time in reviewing a large pull request from a new contributor is risky.
-  At the same time, it’s sad to see potentially good code end up in the trash.
-  Do everyone a favor and start small—less than 50 <a href="/2014/11/14/hits-of-code.html">hits-of-code</a> per pull request.
-  This approach will lead to higher-quality reviews and faster merges.</p>
-
-<p><strong>Pick Easiest Problems</strong>.
-  Not sure what to contribute?
-  Scan their backlog of tickets and find the easiest ones to fix.
-  Don’t try to impress anyone with your first pull request by showing off how smart you are.
-  Instead, impress them by quickly finding a low-hanging fruit, fixing it, and getting it merged.
-  In large, high-quality projects, what really matters is your ability to get your code through the pipeline of checkers, linters, and reviewers.
-  The simpler the problem you solve, the faster your solution will be accepted.
-  This is all you care about at the beginning: being accepted.</p>
-
-<p><strong>Write Tests</strong>.
-  As simple as it sounds: every change you make should be motivated by a failing unit test that proves the code was broken before.
-  If you, as a newcomer, modify code written by the owners, you must have a good reason.
-  When they review your contribution, their first question will be: “Why did you do this?”
-  The strongest argument is a failing unit test.
-  You might even consider submitting a pull request with only a failing test first (disabled), getting it merged, and then submitting another pull request that fixes the test.</p>
-
-<p><strong>Look Like a Human</strong>.
-  Your pull request looks suspicious because you are a stranger.
-  In the age of AI, some pull requests might be coming from bots, and this trend will only grow.
-  You must prove you’re a <a href="/2020/07/29/open-source-etiquette.html">trustworthy</a> human being: set a decent avatar, put your real name in your profile, fill in all the required fields, and so forth.</p>
-
-<p><strong>Explain Your Changes</strong>.
-  When submitting a pull request, there is a text area for a description.
-  If you leave it empty or write just a few words, it sounds like this:
-    “<em>Hey guys, I wrote some code.
-    Now it’s your job to figure out what it does, why it matters, and how it works.
-    I’m off to bed because I’m sick of your codebase.
-    Cheers!</em>”
-  Needless to say, this won’t help your pull request get merged anytime soon.</p>
-
-<p><strong>Aim for Quality</strong>.
-  Studies <a href="https://ieeexplore.ieee.org/document/7202946/">show</a> that most rejections of open source pull requests happen due to formatting and stylistic mistakes, not incorrect functionality.
-  Keep this in mind.
-  Pay attention to how you format your code, how you document your changes, and how many comments you add to every new method or class.
-  This is what reviewers will look at first.
-  It will form their initial impression of you.</p>
-
-<p><strong>Be Polite and Persistent</strong>.
-  The people you submit code to <a href="https://dl.acm.org/doi/10.1145/3377816.3381732">may be rude</a>.
-  Don’t take it personally.
-  They deal with hundreds of newcomers who write poor-quality code and assume it’s beautiful.
-  No matter how <a href="https://dl.acm.org/doi/10.1145/3510003.3510111">aggressive</a> or resentful they sound, remain polite and professional.
-  Don’t walk away after the first <a href="https://dl.acm.org/doi/10.1145/3479497">negative</a> comment.
-  Keep insisting that your pull request deserves a merge.
-  Pay attention to what they say, not how they say it.
-  In the end, you want to get your code through.
-  You don’t want to become their friend; you want your code to be merged.
-  Read about <a href="/2020/07/29/open-source-etiquette.html">open source etiquette</a> too.</p>
-
-<hr />
-
-<p>You may also want to watch my course <a href="https://github.com/yegor256/osbp">“Open Source Best Practices”</a> recently taught to BSc students of <a href="https://innopolis.university/">Innopolis University</a>:
-<a href="https://www.youtube.com/playlist?list=PLaIsQH4uc08zjutyoBOtoa6fnxzrCQK2Q">eight video lectures</a>.
-At the lectures, most of the topics mentioned above are discussed in details.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><category term="etiquette" /><summary type="html"><![CDATA[Making first steps in open source is hard. Submitting pull requests to big and popular repositories is very hard. These recommendations may help you simplify this task.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2024/12/white-sun.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2024/12/white-sun.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+The “four builds” framework may be reduced to a “two builds” one, but never to “one build fits all.”</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="devops" /><summary type="html"><![CDATA[Instead of trying to shorten the time that our builds take, we order and chain them by complexity, thus gradually reducing the risk.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/04/trainspotting.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/04/trainspotting.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

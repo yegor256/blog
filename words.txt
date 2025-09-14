@@ -837,6 +837,7 @@ believes
 believing
 bells
 belong
+belonged
 belongs
 belov
 below
@@ -1225,8 +1226,10 @@ came
 camera
 camera-ready
 cameras
+camp
 campaign
 campaigns
+camps
 campuses
 can
 can't
@@ -1536,7 +1539,10 @@ clients
 clients'
 cliff
 climate
+climbing
+climbs
 clipper
+clock-watcher
 clock-watchers
 clockwise
 clone
@@ -2021,6 +2027,7 @@ cooks
 cool
 coolors
 cooperate
+cooperated
 cooperation
 coordinate
 coordinates
@@ -2516,6 +2523,8 @@ desktop
 desperate
 desperately
 despise
+despises
+despising
 despite
 destination
 destinations
@@ -2685,6 +2694,7 @@ disease
 disgusting
 dish
 dishes
+dishonest
 disillusionment
 disk
 disks
@@ -2741,6 +2751,7 @@ diverse
 diversity
 divert
 divide
+divided
 dividends
 dividing
 diving
@@ -2940,6 +2951,7 @@ ecosystem
 ed
 eden
 edge
+edges
 edison
 edit
 editable
@@ -4681,6 +4693,7 @@ ineffective
 inefficient
 inequalities
 inequality
+inevitability
 inevitable
 inevitably
 inexpensive
@@ -6444,6 +6457,7 @@ o'reilly
 OAuth
 obey
 obeyed
+obeying
 obeys
 object
 object's
@@ -7355,6 +7369,9 @@ prioritizing
 priority
 prishvin
 prism
+prison
+prisoner
+prisoners
 private
 privately
 privilege
@@ -7691,6 +7708,7 @@ RDF
 rdquo
 RDS
 re
+re-certify
 re-charge
 re-define
 re-deploy
@@ -7761,6 +7779,8 @@ reasonably
 reasoning
 reasons
 rebase
+rebel
+rebelling
 rebellion
 recall
 receive
@@ -7813,6 +7833,7 @@ redirect
 redirected
 rediscovered
 redone
+reds
 reduce
 reduced
 reducing
@@ -7871,6 +7892,7 @@ regularities
 regularly
 regulate
 regulated
+regulations
 rehearse
 ReHTTP
 reich
@@ -8028,6 +8050,7 @@ researchr
 resell
 resemble
 resent
+resented
 resentful
 resentment
 reserve
@@ -8882,6 +8905,7 @@ societies
 society
 sociocratic
 sociopath
+sociopaths
 sociotech
 sociotechnical
 socket
@@ -9387,6 +9411,7 @@ survival
 survive
 survived
 survives
+surviving
 suspect
 suspicions
 suspicious
@@ -9685,6 +9710,7 @@ three-year
 threecopies
 threshold
 thresholds
+thrive
 throttling
 through
 throughout
@@ -10049,6 +10075,7 @@ underlying
 undermined
 underpaid
 underpay
+underperformers
 underscore
 understand
 understandable
