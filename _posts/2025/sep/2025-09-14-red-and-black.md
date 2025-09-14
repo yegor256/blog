@@ -8,10 +8,9 @@ date: 2025-09-14
 place: Moscow, Russia
 tags: management mood
 description: |
-  Employees in big organizations split into two tribes—reds,
-  who obey and climb by pleasing bosses, and blacks, who rebel
-  and serve the customer—and if you're black, your only
-  survival strategy is to keep your distance from the reds.
+  In big organizations, reds obey bosses while blacks
+  serve customers—and blacks survive only by
+  keeping their distance.
 keywords:
   - red and black employees
   - red and black management
