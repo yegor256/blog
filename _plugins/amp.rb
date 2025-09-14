@@ -101,7 +101,7 @@ module Jekyll
 
   def self.image_size(src)
     path = src
-    path = File.join(Dir.pwd, path) if !path.start_with?('http://') && !path.start_with?('https://')
+    path = File.join(Dir.pwd, path) unless path.start_with?('http://', 'https://')
     FastImage.size(path)
   end
 end
