@@ -77,4 +77,3 @@ The only strategy is distance.
 Minimize contact, keep your head down when necessary, and focus on delivering real value where it matters.
 Reds will spend their lives climbing the corporate ladder.
 Blacks must learn to survive in the shadows of that ladder, working for the customer, not the boss.
-
