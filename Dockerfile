@@ -10,14 +10,17 @@ SHELL ["/bin/bash", "-e", "-c", "-o", "pipefail"]
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+WORKDIR /tmp
+
 COPY .github/ .github/
 COPY _docker/ _docker/
 RUN .github/install-apt.sh \
   && .github/install-tidy.sh \
-  && .github/install-woff.sh \
-  && npm install -g cssshrink@0.0.5 \
-  && gem install jgd -v 1.13.0
+  && .github/install-woff.sh
+
+RUN gem install jgd -v 1.13.0
 
 RUN /usr/bin/install-node.sh \
   && npm install -g eslint@8.44.0 \
+  && npm install -g cssshrink@0.0.5 \
   && eslint --version
