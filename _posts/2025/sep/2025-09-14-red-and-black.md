@@ -64,7 +64,7 @@ You see them as dishonest, disloyal, and selfish sociopaths.
 
 If you are black, you despise the red employees who are trying so hard to associate themselves with the system.
 They study the rules and compete against each other---who knows them better.
-You see them as [shallow]({% pst 2017/aug/2017-02-22-to-be-nice-or-not %}) and incompetent [impostors]({% pst 2021/mar/2021-03-03-imposters-to-win %}).
+You see them as [shallow]({% pst 2017/aug/2017-08-22-to-be-nice-or-not %}) and incompetent [impostors]({% pst 2021/mar/2021-03-03-imposters-to-win %}).
 
 Peace is not possible.
 In any large organization, reds will always dominate---it's inevitable.
