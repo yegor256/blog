@@ -43,14 +43,20 @@ A few examples of the rules you may need to obey:
 
 * Project plans must be in PowerPoint, the template is mandatory
 * Everybody must check-in the attendance tracking system
-* Job candidate must go through all mandatory HR steps
+* Individual annual plans must be written using MS Word template
+* Job candidates must go through all mandatory HR steps
 * Every meeting must have minutes emailed to everybody
-*
+* All employees must regularly confirm their life-saving qualifications
 
 All of the above are reasonable.
 Just like all the regulations in a prison.
 The difference is your attitude to them.
+
 They either are a framework for your career or an inevitable evil.
+You either feel happy when you do what's required, or feel annoyed and do it just because it's required.
+You either fill all the forms to its full, or you cut every possible corner to get back to the real work.
+You either read an email copied to 25 people to not miss a thing or immediately delete it.
+You either attend all meetings or learn to be creating in finding reasons why you can't.
 
 Once you find your identity---either red or black---you start dispising the other side.
 
@@ -64,3 +70,4 @@ You see them as shallow and incompetent imposters.
 
 A piece is not possible.
 Just choose your side.
+Guess mine.
