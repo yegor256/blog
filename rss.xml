@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-09-15T03:16:16+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Red vs. Black</title><link href="https://www.yegor256.com/2025/09/14/red-and-black.html" rel="alternate" type="text/html" title="Red vs. Black" /><published>2025-09-14T00:00:00+00:00</published><updated>2025-09-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/09/14/red-and-black</id><content type="html" xml:base="https://www.yegor256.com/2025/09/14/red-and-black.html"><![CDATA[<p>In Soviet Russia, prisoner camps were divided into two categories: red and black.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-09-17T06:27:36+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Red vs. Black</title><link href="https://www.yegor256.com/2025/09/14/red-and-black.html" rel="alternate" type="text/html" title="Red vs. Black" /><published>2025-09-14T00:00:00+00:00</published><updated>2025-09-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/09/14/red-and-black</id><content type="html" xml:base="https://www.yegor256.com/2025/09/14/red-and-black.html"><![CDATA[<p>In Soviet Russia, prisoner camps were divided into two categories: red and black.
 In a red camp, the power belonged to the prisoners who cooperated with the administration and helped it maintain discipline.
 In a black one, the power was in the hands of criminals who resented the rules, in permanent confrontation with the administration.
 It seems that in software companies we may also categorize employees into red and black.
@@ -271,23 +271,24 @@ This reduces the amount of <a href="/2016/11/21/naked-data.html">naked data</a> 
 
 <p>Thus, using <code class="language-plaintext highlighter-rouge">findById()</code> followed by <code class="language-plaintext highlighter-rouge">remove()</code> embraces object-oriented principles more fully.
 It allows for cleaner extension, better error handling, and tighter encapsulation.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[Delegating behavior to objects rather than invoking utility methods leads to cleaner, more extensible, and properly encapsulated object-oriented design.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/06/8-femmes.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/06/8-femmes.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Write Unit Tests, Don’t Waste Our Money!</title><link href="https://www.yegor256.com/2025/06/08/pull-request-without-test.html" rel="alternate" type="text/html" title="Write Unit Tests, Don’t Waste Our Money!" /><published>2025-06-08T00:00:00+00:00</published><updated>2025-06-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/06/08/pull-request-without-test</id><content type="html" xml:base="https://www.yegor256.com/2025/06/08/pull-request-without-test.html"><![CDATA[<p>Automated tests help us write code <a href="/angry-tests.html">faster</a>.
-Unit tests immediately tell us when we break something.
+Unit tests immediately <a href="/2022/07/05/safety-net.html">tell us</a> when we break something.
 Integration tests calm us down, reducing the fear of shipping a failure to a user.
 But who are “us”?
 Programmers.
 What about our employers?
 How do automated tests help them?
-Automated tests protect their investments.</p>
+Automated tests protect their <strong>investments</strong>.</p>
 
 <!--more-->
 
 <figure class="jb_picture"><img itemprop="image" alt="La Femme Nikita (1990) by Luc Besson" src="/images/2025/06/la-femme-nikita.jpg" longdesc="#ccb58518" /><figcaption id="ccb58518">La Femme Nikita (1990) by Luc Besson</figcaption></figure>
 
 <p>Every change we make to a codebase costs our employer money.
-Whether they pay us monthly or per line of code, the bottom line is the same:
+Whether they pay us <a href="/2015/07/21/hourly-pay-modern-slavery.html">monthly</a>
+  or <a href="/2014/04/11/cost-of-loc.html">per line of code</a>, the bottom line is the same:
   it’s the code that reaches the repository and is eventually released to the end user.</p>
 
-<p>That’s what the business is investing in—new features or bug fixes.
+<p>That’s what the business is investing in—new features <a href="/2018/07/24/bugs-or-pull-requests.html">or</a> bug fixes.
 The code that’s written and shipped is what matters to them.</p>
 
 <p>Even when they say they’re investing in people, what they really want is the code.
@@ -301,6 +302,9 @@ Think about it this way: we expect a car to work after paying the body shop to f
 We don’t mind paying again if something else breaks—but not if it’s the exact same part they fixed yesterday.
 We expect the repaired part to function properly while driving.
 We want a warranty on what’s already been fixed.</p>
+
+<aside class="quote">People are merely an intermediate by-product—the ultimate asset is the codebase.
+</aside>
 
 <p>Similarly, our employers expect our code to work once we’ve committed it and collected our paycheck.
 They want a warranty that the code won’t break again once it’s been fixed.
