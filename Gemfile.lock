@@ -219,7 +219,7 @@ GEM
     rb_sys (0.9.117)
       rake-compiler-dock (= 1.9.1)
     redcarpet (3.6.1)
-    regexp_parser (2.11.2)
+    regexp_parser (2.11.3)
     rexml (3.4.4)
     rouge (4.6.0)
     rss (0.3.1)
