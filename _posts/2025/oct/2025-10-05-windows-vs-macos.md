@@ -36,15 +36,14 @@ First thing first.
 This is what ChatGPT [thinks][chat] about macOS vs. Windows (I toned it down a bit and sorted by importance, keeping what matters most at the top):
 
 * It's [POSIX]-compliant
-* Tools like `grep`, `awk`, `sed`, `ssh`, and `make` work natively---no WSL hacks
-* Proper compiler toolchain (Clang, LLVM, make, [git][Git]), not bloated Visual Studio nonsense
-* You can install everything with [HomeBrew], one command away
-* Node, Python, Ruby, Go, Java --- everything just works without endless PATH hell
-* The [iTerm2] is stable, scriptable, and doesn't look like it was built in 1998
-* [Docker] runs faster and cleaner than on Windows (even with [WSL2][WSL])
+* Tools like `grep`, `awk`, `sed`, `ssh`, and `make` work natively
+* Proper compiler toolchain: Clang, LLVM, make, [git][Git]
+* Install everything with [HomeBrew], one command away
+* Node, Python, Ruby, Go, Java --- just work without PATH hell
+* The [iTerm2] doesn't look like it was built in 1998
+* [Docker] runs faster and cleaner than on Windows
 * SSH keys integrate smoothly with the system keychain
 * [Git] behaves predictably; no [CRLF vs LF nightmares]
-* Most open-source tools are made on macOS or Linux, not Windows
 
 I can hear you saying:
 What do I need it to be POSIX-compliant, and what is POSIX?
@@ -133,8 +132,7 @@ git log --pretty=format: --name-only | \
 ```
 
 Does this syntax make sense to you?
-Yes, it does and you are on Windows?
-I bet you use [WSL].
+If it does, I bet you use [WSL].
 Most serious Windows developers end up doing exactly that.
 
 The command line is the bare metal interface to Unix.
@@ -207,3 +205,4 @@ Maybe you shouldn't, since you are a programmer?
 [Rhapsody]: https://en.wikipedia.org/wiki/Rhapsody_(operating_system)
 [Cheetah]: https://en.wikipedia.org/wiki/Mac_OS_X_10.0
 [GUI]: https://en.wikipedia.org/wiki/Graphical_user_interface
+[ThinkPad]: https://en.wikipedia.org/wiki/ThinkPad
