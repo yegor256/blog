@@ -97,13 +97,13 @@ CP/M and MS-DOS were made for personal computers: hobbyists, offices, home users
 In other words, MS-DOS never ment to be a proper OS.
 It was something that can boot up a small machine and run a single program.
 
-Then, in 1985, Windows 1.0 was built.
+Then, in 1985, [Windows 1.0] was built.
 It was as a fancy GUI on top of MS-DOS, not a new OS.
-Later, in 1995, Microsoft introduced 32-bit APIs (Win32) and preemptive multitasking.
+Later, in 1995, Microsoft introduced 32-bit APIs ([Win32]) and preemptive multitasking.
 However, the DOS subsystem was still lurking underneath.
 Windows 95 looked modern but was still half-DOS zombie.
 
-At the same time, in 1993, the team of [Dave Cutler] has built Windows NT that was not based on DOS at all.
+At the same time, in 1993, the team of [Dave Cutler] has built [Windows NT] that was not based on DOS at all.
 Latest Windows versions are descends from NT, not MS-DOS.
 Under the hood it's conceptually closer to Unix than to CP/M.
 There are features like protected memory, kernel/user separation, and file handles.
@@ -115,7 +115,7 @@ Because it doesn't have pipelines.
 [Unix] was built around pipelines.
 In Unix, everything is a small tool reading stdin, writing stdout.
 At the same time, everything is a file, including sockets, devices, and processes.
-Programmers, in Unix, see every process a composition of smaller processes, glued together via pipelines.
+Programmers, in Unix, see every process as a composition of smaller processes, glued together via pipelines.
 This mindset, since 1970s, has proven to be effective, amongst a few generations of software engineering elite.
 
 Say, you want to know which parts of your codebase change the most---maybe for refactoring, testing focus, or bug-hotspot analysis.
@@ -136,12 +136,12 @@ I bet you use [WSL].
 Most serious Windows developers end up doing exactly that.
 
 The command line is the bare metal interface to Unix.
-It exposes what GUIs and IDEs hide---file structure, processes, I/O, permissions, and pipelines.
-Command-line tools are inherently composable.
-You can chain them in a pipeline and automate tasks in seconds that would take hours by hand.
+The heart of the command line is pipelines.
+Thanks to pipelines, command-line tools are inherently composable.
+You can chain them and automate tasks in seconds that would take hours by hand.
 No IDE plugin can replace this power.
 
-...
+
 
 [chat]: https://chatgpt.com/share/68e2770a-79d8-8007-96d1-3722d4d3cfcd
 [WSL]: https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
@@ -164,3 +164,6 @@ No IDE plugin can replace this power.
 [OS/360]: https://en.wikipedia.org/wiki/OS/360_and_successors
 [Bell Labs]: https://en.wikipedia.org/wiki/Bell_Labs
 [Dave Cutler]: https://en.wikipedia.org/wiki/Dave_Cutler
+[Windows 1.0]: https://en.wikipedia.org/wiki/Windows_1.0
+[Win32]: https://en.wikipedia.org/wiki/Windows_API
+[Windows NT]: https://en.wikipedia.org/wiki/Windows_NT
