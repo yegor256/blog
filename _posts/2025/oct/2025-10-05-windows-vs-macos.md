@@ -15,9 +15,9 @@ keywords:
   - macOS vs ubuntu
   - windows vs ubuntu
   - macOS vs windows
-image: /images/2025/10/...
+image: /images/2025/10/das-experiment.jpg
 jb_picture:
-  caption: ...
+  caption: Das Experiment (2001) by Oliver Hirschbiegel
 ---
 
 In 2020, in the [Junior Objects](/books/junior-objects) book I wrote this:
@@ -64,6 +64,7 @@ You click the same buttons programmers click.
 You even make the same salary they make.
 But you are not one of them.
 Yet.
+Now, read on.
 
 ## What Is Unix?
 
@@ -78,6 +79,7 @@ Earlier operating systems, like [CTSS] and [OS/360], gave them a good start.
 Unix was the first OS to say that everything is a file, including devices, directories, sockets, and processes.
 They also invented pipelines and the philosophy: "Write programs that do one thing well, and work together."
 Also they invented processes and their forking mechanism.
+
 Their names were [Ken Thompson] and [Dennis Ritchie].
 
 ## What Is Windows?
@@ -86,19 +88,19 @@ Five years later, another operating system was created, with different abstracti
 Not everything was a file anymore, processes were not parallel, and there were no pipelines.
 The name of the system was [CP/M] and the name of the inventor was [Gary Kildall].
 Then, five years later, 24-years-old [Tim Paterson] has made a copy of CP/M and called it [86-DOS].
-[Microsoft] purchased a non-exclusive license for it, changed the label, and licensed it to IBM.
+Pretty soon, [Microsoft] purchased a non-exclusive license for it, changed the label to [MS-DOS], and licensed it to IBM.
 You know this story.
 
 Why there were no proper files, no processes, and no pipelines?
 Because they weren't trying to build a "real" operating system.
 CP/M and MS-DOS were designed for tiny, single-user, single-task microcomputers, not multi-user minicomputers or mainframes.
 Unix came out of Bell Labs --- researchers, not hobbyists.
-CP/M and MS-DOS were made for personal computers: hobbyists, offices, home users.
+CP/M and MS-DOS were made for personal computers: offices and home users.
 In other words, MS-DOS never ment to be a proper OS.
 It was something that can boot up a small machine and run a single program.
 
 Then, in 1985, [Windows 1.0] was built.
-It was as a fancy GUI on top of MS-DOS, not a new OS.
+It was as a fancy [GUI] on top of MS-DOS, not a new OS.
 Later, in 1995, Microsoft introduced 32-bit APIs ([Win32]) and preemptive multitasking.
 However, the DOS subsystem was still lurking underneath.
 Windows 95 looked modern but was still half-DOS zombie.
@@ -139,13 +141,40 @@ The command line is the bare metal interface to Unix.
 The heart of the command line is pipelines.
 Thanks to pipelines, command-line tools are inherently composable.
 You can chain them and automate tasks in seconds that would take hours by hand.
-No IDE plugin can replace this power.
+No [IDE] plugin can replace this power.
 
+## What Is macOS?
 
+In 1984, [Apple] shipped their first [Macintosh] with the "System 1" operating system.
+It was no better than MS-DOS: no multitasking, no memory protection, and primitive file system.
+No surprise, it didn't fly.
+
+In 1997, Apple bought [NeXT] and adopted [NeXTSTEP] operating system.
+They made it the foundation for the new [Mac OS] --- codenamed [Rhapsody], later "Mac OS X".
+
+In 2001 they shipped Mac OS X 10.0 ("[Cheetah]").
+Five years later I threw away my ThinkPad with Windows and bought my first MacBook with [Mac OS X Leopard].
+
+Modern macOS (Catalina, Ventura, Sequoia, etc.) is still built on that NeXT foundation.
+It is POSIX-compliant and, of course, it has processes and pipelines.
+In other words, it is Unix with a pretty GUI.
+
+## What Are You?
+
+Now, you know what is the difference between Windows and macOS.
+In both of them you can code, browse Internet, and watch movies.
+However, in macOS you interact with the computer through Unix abstractions.
+You have pipelines in a terminal.
+
+Oh, wait.
+In macOS you can't really play games.
+Bummer...
+Maybe you shouldn't, since you are a programmer?
 
 [chat]: https://chatgpt.com/share/68e2770a-79d8-8007-96d1-3722d4d3cfcd
 [WSL]: https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
 [POSIX]: https://en.wikipedia.org/wiki/POSIX
+[MS-DOS]: https://en.wikipedia.org/wiki/MS-DOS
 [iTerm2]: https://iterm2.com/
 [CRLF vs LF nightmares]: https://stackoverflow.com/questions/1552749/difference-between-cr-lf-lf-and-cr-line-break-types
 [Docker]: https://www.docker.com/
@@ -160,10 +189,21 @@ No IDE plugin can replace this power.
 [86-DOS]: https://en.wikipedia.org/wiki/86-DOS
 [CP/M]: https://en.wikipedia.org/wiki/CP/M
 [Microsoft]: https://www.microsoft.com/
-[CTTS]: https://en.wikipedia.org/wiki/Compatible_Time-Sharing_System
+[CTSS]: https://en.wikipedia.org/wiki/Compatible_Time-Sharing_System
 [OS/360]: https://en.wikipedia.org/wiki/OS/360_and_successors
 [Bell Labs]: https://en.wikipedia.org/wiki/Bell_Labs
 [Dave Cutler]: https://en.wikipedia.org/wiki/Dave_Cutler
 [Windows 1.0]: https://en.wikipedia.org/wiki/Windows_1.0
 [Win32]: https://en.wikipedia.org/wiki/Windows_API
 [Windows NT]: https://en.wikipedia.org/wiki/Windows_NT
+[Mac OS X Leopard]: https://en.wikipedia.org/wiki/Mac_OS_X_Leopard
+[Macintosh]: https://en.wikipedia.org/wiki/Macintosh_128K
+[NeXTSTEP]: https://en.wikipedia.org/wiki/NeXTSTEP
+[Windows 95]: https://en.wikipedia.org/wiki/Windows_95
+[IDE]: https://en.wikipedia.org/wiki/Integrated_development_environment
+[Apple]: https://www.apple.com/
+[NeXT]: https://en.wikipedia.org/wiki/NeXT
+[Mac OS]: https://en.wikipedia.org/wiki/MacOS
+[Rhapsody]: https://en.wikipedia.org/wiki/Rhapsody_(operating_system)
+[Cheetah]: https://en.wikipedia.org/wiki/Mac_OS_X_10.0
+[GUI]: https://en.wikipedia.org/wiki/Graphical_user_interface
