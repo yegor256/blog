@@ -124,7 +124,7 @@ so why shouldn't we rate them, right? The best grade is
 Statistically speaking, I've been speaking in
 <span id="total-cities">?</span> cities
 and
-<span id="total-countries">?</span> countries
+<span id="total-countries">?</span> countries.
 
 I was also seen at [these events](/seen.html).
 
