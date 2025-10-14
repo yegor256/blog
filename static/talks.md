@@ -113,7 +113,7 @@ You will just have to pay for business-class airfare,
 a premium suite in a 5-star hotel, and a limo.
 OK, I'm kidding about the limo.
 
-## <span id='past-talks-total'>&nbsp;</span> Past Events
+## <span id='past-talks-total'>&nbsp;</span>&nbsp;Past Events
 
 This is a very opinionated and subjective list of conferences
 that I attended recently as a speaker. They rate us as speakers,
