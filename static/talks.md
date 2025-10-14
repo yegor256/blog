@@ -128,6 +128,19 @@ and
 
 I was also seen at [these events](/seen.html).
 
+### 2025
+
+<span class="venue-rate green">B</span>
+<img src="https://i.ytimg.com/vi/hkK8bvvz9OI/mqdefault.jpg" class="past-talk" alt="XX Ершовская лекция по информатике и программированию"/>
+**Взлет и падение объектно-ориентированного программирования**;
+[Ершовские лекции в НГУ](https://www.iis.nsk.su/ershov_lectures/2025);
+<span class="city">Novosibirsk</span>, <span class="country">Russia</span>;
+11 April 2025.
+The event was organized perfectly, taking into account their budgets and facilities available.
+Would definitely love to visit them again.
+[video](https://www.youtube.com/watch?v=hkK8bvvz9OI).
+{: .talk-event}
+
 ### 2024
 
 <span class="venue-rate green">B+</span>
