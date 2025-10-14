@@ -280,6 +280,7 @@ to meet Russian researchers, who challenge world-size problems;
 [slides](https://www.slideshare.net/YegorBugayenko/are-you-sure-you-are-not-a-micromanager-228232854)
 {: .talk-event}
 
+<!--
 <span class="venue-rate green">A</span>
 <img src="https://i.ytimg.com/vi/wmvLQFquHGc/mqdefault.jpg" class="past-talk" alt="EPAM Meetup 2019"/>
 **What's wrong with Java and IT career in USA/Russia**;
@@ -289,6 +290,7 @@ to meet Russian researchers, who challenge world-size problems;
 [видео-1](https://www.youtube.com/watch?v=wmvLQFquHGc),
 [видео-2](https://www.youtube.com/watch?v=VslX710UpzQ)
 {: .talk-event}
+-->
 
 <span class="venue-rate green">A</span>
 <img src="https://i.ytimg.com/vi/jZitXMQaXvE/mqdefault.jpg" class="past-talk" alt="QAFest 2019"/>
@@ -300,6 +302,7 @@ to meet Russian researchers, who challenge world-size problems;
 [slides](https://www.slideshare.net/YegorBugayenko/quality-assurance-vs-testing);
 {: .talk-event}
 
+<!--
 <span class="venue-rate green">A</span>
 <img src="https://i.ytimg.com/vi/YXqHaZJD9R8/mqdefault.jpg" class="past-talk" alt="RockStart Night"/>
 **Building Object-Oriented Java Web Framework From Scratch**;
@@ -308,6 +311,7 @@ to meet Russian researchers, who challenge world-size problems;
 20 September;
 [видео](https://www.youtube.com/watch?v=YXqHaZJD9R8)
 {: .talk-event}
+-->
 
 <span class="venue-rate green">B</span>
 <img src="https://i.ytimg.com/vi/s7QCH17lQlY/mqdefault.jpg" class="past-talk" alt="QualityConf 2019"/>
@@ -863,6 +867,7 @@ heard anything about me, etc
 [видео](https://www.youtube.com/watch?v=GQLFc-ttCX0)
 {: .talk-event}
 
+<!--
 <img src="https://i.ytimg.com/vi/qAxLtSYN0nw/mqdefault.jpg" class="past-talk" alt="UADevClub"/>
 **Make Your Java Object-Oriented, 64 Practical Steps**;
 [UADevClub](http://xpinjection.com/articles/oop-meetup-with-yegor-bugaenko-december-20th/);
@@ -870,6 +875,7 @@ heard anything about me, etc
 20 December 2016;
 [видео](https://www.youtube.com/watch?v=qAxLtSYN0nw)
 {: .talk-event}
+-->
 
 <span class="venue-rate green">B</span>
 <img src="https://i.ytimg.com/vi/7EytYc7K5JA/mqdefault.jpg" class="past-talk" alt="DevTernity 2016"/>
