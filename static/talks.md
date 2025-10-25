@@ -113,7 +113,7 @@ You will just have to pay for business-class airfare,
 a premium suite in a 5-star hotel, and a limo.
 OK, I'm kidding about the limo.
 
-## <span id='past-talks-total'>&nbsp;</span> Past Events
+## <span id='past-talks-total'>&nbsp;</span>&nbsp;Past Events
 
 This is a very opinionated and subjective list of conferences
 that I attended recently as a speaker. They rate us as speakers,
@@ -124,9 +124,22 @@ so why shouldn't we rate them, right? The best grade is
 Statistically speaking, I've been speaking in
 <span id="total-cities">?</span> cities
 and
-<span id="total-countries">?</span> countries
+<span id="total-countries">?</span> countries.
 
 I was also seen at [these events](/seen.html).
+
+### 2025
+
+<span class="venue-rate green">B</span>
+<img src="https://i.ytimg.com/vi/hkK8bvvz9OI/mqdefault.jpg" class="past-talk" alt="XX Ершовская лекция по информатике и программированию"/>
+**Взлет и падение объектно-ориентированного программирования**;
+[Ершовские лекции в НГУ](https://www.iis.nsk.su/ershov_lectures/2025);
+<span class="city">Novosibirsk</span>, <span class="country">Russia</span>;
+11 April 2025.
+The event was organized perfectly, taking into account their budgets and facilities available.
+Would definitely love to visit them again.
+[video](https://www.youtube.com/watch?v=hkK8bvvz9OI).
+{: .talk-event}
 
 ### 2024
 
@@ -267,6 +280,7 @@ to meet Russian researchers, who challenge world-size problems;
 [slides](https://www.slideshare.net/YegorBugayenko/are-you-sure-you-are-not-a-micromanager-228232854)
 {: .talk-event}
 
+<!--
 <span class="venue-rate green">A</span>
 <img src="https://i.ytimg.com/vi/wmvLQFquHGc/mqdefault.jpg" class="past-talk" alt="EPAM Meetup 2019"/>
 **What's wrong with Java and IT career in USA/Russia**;
@@ -276,6 +290,7 @@ to meet Russian researchers, who challenge world-size problems;
 [видео-1](https://www.youtube.com/watch?v=wmvLQFquHGc),
 [видео-2](https://www.youtube.com/watch?v=VslX710UpzQ)
 {: .talk-event}
+-->
 
 <span class="venue-rate green">A</span>
 <img src="https://i.ytimg.com/vi/jZitXMQaXvE/mqdefault.jpg" class="past-talk" alt="QAFest 2019"/>
@@ -287,6 +302,7 @@ to meet Russian researchers, who challenge world-size problems;
 [slides](https://www.slideshare.net/YegorBugayenko/quality-assurance-vs-testing);
 {: .talk-event}
 
+<!--
 <span class="venue-rate green">A</span>
 <img src="https://i.ytimg.com/vi/YXqHaZJD9R8/mqdefault.jpg" class="past-talk" alt="RockStart Night"/>
 **Building Object-Oriented Java Web Framework From Scratch**;
@@ -295,6 +311,7 @@ to meet Russian researchers, who challenge world-size problems;
 20 September;
 [видео](https://www.youtube.com/watch?v=YXqHaZJD9R8)
 {: .talk-event}
+-->
 
 <span class="venue-rate green">B</span>
 <img src="https://i.ytimg.com/vi/s7QCH17lQlY/mqdefault.jpg" class="past-talk" alt="QualityConf 2019"/>
@@ -850,6 +867,7 @@ heard anything about me, etc
 [видео](https://www.youtube.com/watch?v=GQLFc-ttCX0)
 {: .talk-event}
 
+<!--
 <img src="https://i.ytimg.com/vi/qAxLtSYN0nw/mqdefault.jpg" class="past-talk" alt="UADevClub"/>
 **Make Your Java Object-Oriented, 64 Practical Steps**;
 [UADevClub](http://xpinjection.com/articles/oop-meetup-with-yegor-bugaenko-december-20th/);
@@ -857,6 +875,7 @@ heard anything about me, etc
 20 December 2016;
 [видео](https://www.youtube.com/watch?v=qAxLtSYN0nw)
 {: .talk-event}
+-->
 
 <span class="venue-rate green">B</span>
 <img src="https://i.ytimg.com/vi/7EytYc7K5JA/mqdefault.jpg" class="past-talk" alt="DevTernity 2016"/>
