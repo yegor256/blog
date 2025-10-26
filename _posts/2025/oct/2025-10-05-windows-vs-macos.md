@@ -9,7 +9,7 @@ place: Moscow, Russia
 tags: mood
 description: |
   Windows turns programmers into mouse operators.
-  macOS, built on Unix, keeps the command line alive - where everything is a file,
+  macOS, built on Unix, keeps the command line alive—where everything is a file,
   tools connect through pipelines, and real programmers stay in control.
 keywords:
   - windows vs macOS
@@ -41,7 +41,7 @@ This is what ChatGPT [thinks][chat] about macOS vs. Windows (I toned it down a b
 * Tools like `grep`, `awk`, `sed`, `ssh`, and `make` work natively
 * Proper compiler toolchain: Clang, LLVM, make, [git][Git]
 * Install everything with [HomeBrew], one command away
-* Node, Python, Ruby, Go, Java --- just work without PATH hell
+* Node, Python, Ruby, Go, Java---just work without PATH hell
 * The [iTerm2] doesn't look like it was built in 1998
 * [Docker] runs faster and cleaner than on Windows
 * SSH keys integrate smoothly with the system keychain
@@ -95,7 +95,7 @@ That's how Windows was born.
 Why were there no proper files, no processes, and no pipelines?
 Because they weren't trying to build a "real" operating system.
 CP/M and MS-DOS were designed for tiny, single-user, single-task microcomputers, not multi-user minicomputers or mainframes.
-Unix came out of Bell Labs --- researchers, not hobbyists.
+Unix came out of Bell Labs---researchers, not hobbyists.
 CP/M and MS-DOS were made for personal computers: offices and home users.
 In other words, MS-DOS never meant to be a proper OS.
 It was something that can boot up a small machine and run a single program.
@@ -119,7 +119,7 @@ It was no better than MS-DOS: no multitasking, no memory protection, and primiti
 No surprise, it didn't fly.
 
 In 1997, Apple bought [NeXT] and adopted [NeXTSTEP] operating system.
-They made it the foundation for the new [Mac OS] --- codenamed [Rhapsody], later "Mac OS X".
+They made it the foundation for the new [Mac OS]---codenamed [Rhapsody], later "Mac OS X".
 
 In 2001 they shipped Mac OS X 10.0 ("[Cheetah]").
 Five years later I threw away my ThinkPad with Windows and bought my first MacBook with [Mac OS X Leopard].
