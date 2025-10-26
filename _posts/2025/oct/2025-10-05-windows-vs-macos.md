@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "Windows vs. macOS"
+title: "Programmers, Don't Use Windows!"
 date: 2025-10-05
 place: Moscow, Russia
 tags: mood
@@ -24,7 +24,7 @@ In 2020, in the [Junior Objects](/books/junior-objects) book I wrote this:
   "_Windows is not suitable for programmers.
   If you meet anyone who will tell you otherwise, you must know that you deal with a bad programmer, or a poor one, which are the same things.
   Your computer has to be MacBook._"
-Now, five years later, I still stand at the same opinion.
+Now, five years later, I still hold the same opinion.
 This blog post is supposed to be less opinionated and, because of this, more convincing.
 The point is still the same: you either use Windows or you are a professional programmer.
 
@@ -32,7 +32,7 @@ The point is still the same: you either use Windows or you are a professional pr
 
 {% jb_picture_body %}
 
-First thing first.
+First things first.
 This is what ChatGPT [thinks][chat] about macOS vs. Windows (I toned it down a bit and sorted by importance, keeping what matters most at the top):
 
 * It's [POSIX]-compliant
@@ -69,7 +69,7 @@ Now, read on.
 
 Programmers are the masters of computers.
 They tell machines what to do.
-To simplify the task of managing a compex hardware, programmers invented a few layers of abstractions.
+To simplify the task of managing a complex hardware, programmers invented a few layers of abstractions.
 The first layer is an operating system.
 Instead of dealing with the hard drive and the pixels on the screen directly, programmers invented files and stdout.
 
@@ -77,7 +77,7 @@ They did it in the [Bell Labs], during the late 1960s and early 1970s.
 Earlier operating systems, like [CTSS] and [OS/360], gave them a good start.
 Unix was the first OS to say that everything is a file, including devices, directories, sockets, and processes.
 They also invented pipelines and the philosophy: "Write programs that do one thing well, and work together."
-Also they invented processes and their forking mechanism.
+They also invented processes and their forking mechanism.
 
 Their names were [Ken Thompson] and [Dennis Ritchie].
 
@@ -86,30 +86,59 @@ Their names were [Ken Thompson] and [Dennis Ritchie].
 Five years later, another operating system was created, with different abstractions.
 Not everything was a file anymore, processes were not parallel, and there were no pipelines.
 The name of the system was [CP/M] and the name of the inventor was [Gary Kildall].
-Then, five years later, 24-years-old [Tim Paterson] has made a copy of CP/M and called it [86-DOS].
-Pretty soon, [Microsoft] purchased a non-exclusive license for it, changed the label to [MS-DOS], and licensed it to IBM.
-You know this story.
+Then, five years later, 24-year-old [Tim Paterson] has made a copy of CP/M and called it [86-DOS].
+[Microsoft] purchased a non-exclusive license, rebranded it [MS-DOS], and sold it to IBM.
+That's how Windows was born.
 
-Why there were no proper files, no processes, and no pipelines?
+Why were there no proper files, no processes, and no pipelines?
 Because they weren't trying to build a "real" operating system.
 CP/M and MS-DOS were designed for tiny, single-user, single-task microcomputers, not multi-user minicomputers or mainframes.
 Unix came out of Bell Labs --- researchers, not hobbyists.
 CP/M and MS-DOS were made for personal computers: offices and home users.
-In other words, MS-DOS never ment to be a proper OS.
+In other words, MS-DOS never meant to be a proper OS.
 It was something that can boot up a small machine and run a single program.
 
 Then, in 1985, [Windows 1.0] was built.
-It was as a fancy [GUI] on top of MS-DOS, not a new OS.
+It was a fancy [GUI] on top of MS-DOS, not a new OS.
 Later, in 1995, Microsoft introduced 32-bit APIs ([Win32]) and preemptive multitasking.
 However, the DOS subsystem was still lurking underneath.
-Windows 95 looked modern but was still half-DOS zombie.
+Windows 95 looked modern but was still a half-DOS zombie.
 
 At the same time, in 1993, the team of [Dave Cutler] has built [Windows NT] that was not based on DOS at all.
-Latest Windows versions are descends from NT, not MS-DOS.
+Latest Windows versions are descendants of NT, not MS-DOS.
 Under the hood it's conceptually closer to Unix than to CP/M.
 There are features like protected memory, kernel/user separation, and file handles.
 However, still it's not Unix.
-Because it doesn't have pipelines.
+
+## What Is macOS?
+
+In 1984, [Apple] shipped their first [Macintosh] with the "System 1" operating system.
+It was no better than MS-DOS: no multitasking, no memory protection, and primitive file system.
+No surprise, it didn't fly.
+
+In 1997, Apple bought [NeXT] and adopted [NeXTSTEP] operating system.
+They made it the foundation for the new [Mac OS] --- codenamed [Rhapsody], later "Mac OS X".
+
+In 2001 they shipped Mac OS X 10.0 ("[Cheetah]").
+Five years later I threw away my ThinkPad with Windows and bought my first MacBook with [Mac OS X Leopard].
+
+Modern macOS (Catalina, Ventura, Sequoia, etc.) is still built on that NeXT foundation.
+It is POSIX-compliant and, of course, it has processes and pipelines.
+In other words, it is Unix with a pretty GUI.
+
+## Abstractions
+
+Both Windows and macOS, in their current versions, are solid operating systems.
+The difference is in the abstractions inside them: files, sockets, processes, memory blocks, users, permissions, and so on.
+In Unix (macOS), everything is a file, while in Windows, everything is an object.
+Files in Unix are a uniform abstraction, that's why they can be chained via pipes.
+In Windows objects are not unified in practice, they have different interfaces.
+
+This is why [Unix shells][shell] and small composable tools became so powerful.
+The uniformity of "everything is a file" made composition natural.
+You can build complex workflows from simple programs.
+
+Windows, on the other hand, evolved around GUI apps and message loops, not shell pipelines.
 
 ## Pipelines
 
@@ -141,28 +170,18 @@ Thanks to pipelines, command-line tools are inherently composable.
 You can chain them and automate tasks in seconds that would take hours by hand.
 No [IDE] plugin can replace this power.
 
-## What Is macOS?
-
-In 1984, [Apple] shipped their first [Macintosh] with the "System 1" operating system.
-It was no better than MS-DOS: no multitasking, no memory protection, and primitive file system.
-No surprise, it didn't fly.
-
-In 1997, Apple bought [NeXT] and adopted [NeXTSTEP] operating system.
-They made it the foundation for the new [Mac OS] --- codenamed [Rhapsody], later "Mac OS X".
-
-In 2001 they shipped Mac OS X 10.0 ("[Cheetah]").
-Five years later I threw away my ThinkPad with Windows and bought my first MacBook with [Mac OS X Leopard].
-
-Modern macOS (Catalina, Ventura, Sequoia, etc.) is still built on that NeXT foundation.
-It is POSIX-compliant and, of course, it has processes and pipelines.
-In other words, it is Unix with a pretty GUI.
-
 ## What Are You?
 
-Now, you know what is the difference between Windows and macOS.
+Now, you know what the difference is between Windows and macOS.
 In both of them you can code, browse Internet, and watch movies.
-However, in macOS you interact with the computer through Unix abstractions.
-You have pipelines in a terminal.
+However, in macOS you interact with the computer through Unix abstractions in a [shell].
+You don't just use macOS---you inherit fifty years of disciplined abstraction.
+
+In Windows you interact with the computer through draggable GUI elements.
+A GUI makes you a consumer; a CLI makes you a creator.
+A GUI hides the logic behind gestures and icons; a CLI exposes it as text you can reason about, automate, and combine.
+You can't pipe a button click into another program, you can't grep a progress bar, and you can't version-control a mouse movement.
+Every click you make dies the moment you make it; every command you write can live forever.
 
 Oh, wait.
 In macOS you can't really play games.
@@ -206,3 +225,4 @@ Maybe you shouldn't, since you are a programmer?
 [Cheetah]: https://en.wikipedia.org/wiki/Mac_OS_X_10.0
 [GUI]: https://en.wikipedia.org/wiki/Graphical_user_interface
 [ThinkPad]: https://en.wikipedia.org/wiki/ThinkPad
+[shell]: https://en.wikipedia.org/wiki/Unix_shell
