@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v5
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.4.7
+          ruby-version: 3.3 # don't change this
           bundler-cache: true
       - run: sudo .github/install-apt.sh
       - run: bundle exec rake
@@ -36,7 +36,7 @@ jobs:
       - run: rm -f Gemfile Gemfile.lock
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.4.7
+          ruby-version: 2.7 # don't change this
           bundler-cache: false
       - run: sudo .github/install-woff.sh
       - run: .github/make-icons.sh icons
