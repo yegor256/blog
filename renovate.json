@@ -5,10 +5,16 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["github-actions"],
-      "matchPackageNames": ["ruby/setup-ruby"],
-      "matchFileNames": [".github/workflows/deploy.yml"],
-      "enabled": false
+      "enabled": false,
+      "matchFileNames": [
+        ".github/workflows/deploy.yml"
+      ],
+      "matchDatasources": [
+        "github-actions"
+      ],
+      "matchPackageNames": [
+        "ruby/setup-ruby"
+      ]
     }
   ]
 }
