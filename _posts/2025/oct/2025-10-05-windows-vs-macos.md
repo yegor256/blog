@@ -9,7 +9,7 @@ place: Moscow, Russia
 tags: mood
 description: |
   Windows turns programmers into mouse operators.
-  macOS, built on Unix, keeps the command line alive—where everything is a file,
+  macOS, built on Unix, keeps the command line alive - where everything is a file,
   tools connect through pipelines, and real programmers stay in control.
 keywords:
   - windows vs macOS
