@@ -6,11 +6,11 @@
   "packageRules": [
     {
       "enabled": false,
-      "matchFileNames": [
-        ".github/workflows/deploy.yml"
-      ],
       "matchDatasources": [
         "github-actions"
+      ],
+      "matchFileNames": [
+        ".github/workflows/deploy.yml"
       ],
       "matchPackageNames": [
         "ruby/setup-ruby"

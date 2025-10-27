@@ -77,9 +77,9 @@ Instead of dealing with the hard drive and the pixels on the screen directly, pr
 
 They did it in the [Bell Labs], during the late 1960s and early 1970s.
 Earlier operating systems, like [CTSS] and [OS/360], gave them a good start.
-Unix was the first OS to say that everything is a file, including devices, directories, sockets, and processes.
-They also invented pipelines and the philosophy: "Write programs that do one thing well, and work together."
-They also invented processes and their forking mechanism.
+Unix was the first OS to say that _everything is a file_, including devices, directories, sockets, and processes.
+They also invented _pipelines_ and the philosophy: "Write programs that do one thing well, and work together."
+They also invented _processes_ and their forking mechanism.
 
 Their names were [Ken Thompson] and [Dennis Ritchie].
 
@@ -97,7 +97,7 @@ Because they weren't trying to build a "real" operating system.
 CP/M and MS-DOS were designed for tiny, single-user, single-task microcomputers, not multi-user minicomputers or mainframes.
 Unix came out of Bell Labs---researchers, not hobbyists.
 CP/M and MS-DOS were made for personal computers: offices and home users.
-In other words, MS-DOS never meant to be a proper OS.
+In other words, _MS-DOS never meant to be a proper OS_.
 It was something that can boot up a small machine and run a single program.
 
 Then, in 1985, [Windows 1.0] was built.
@@ -132,7 +132,7 @@ In other words, it is Unix with a pretty GUI.
 
 Both Windows and macOS, in their current versions, are solid operating systems.
 The difference is in the abstractions inside them: files, sockets, processes, memory blocks, users, permissions, and so on.
-In Unix (macOS), everything is a file, while in Windows, everything is an object.
+In Unix (macOS), everything is a _file_, while in Windows, everything is an _object_.
 Files in Unix are a uniform abstraction, that's why they can be chained via pipes.
 In Windows objects are not unified in practice, they have different interfaces.
 
@@ -147,7 +147,7 @@ Windows, on the other hand, evolved around GUI apps and message loops, not shell
 [Unix] was built around pipelines.
 In Unix, everything is a small tool reading stdin, writing stdout.
 At the same time, everything is a file, including sockets, devices, and processes.
-Programmers, in Unix, see every process as a composition of smaller processes, glued together via pipelines.
+Programmers, in Unix, see every process as a _composition_ of smaller processes, glued together via pipelines.
 This mindset, since 1970s, has proven to be effective, amongst a few generations of software engineering elite.
 
 Say, you want to know which parts of your codebase change the most---maybe for refactoring, testing focus, or bug-hotspot analysis.
@@ -177,7 +177,7 @@ No [IDE] plugin can replace this power.
 Now, you know what the difference is between Windows and macOS.
 In both of them you can code, browse Internet, and watch movies.
 However, in macOS you interact with the computer through Unix abstractions in a [shell].
-You don't just use macOS---you inherit fifty years of disciplined abstraction.
+You don't just use macOS---you inherit _fifty years of disciplined abstraction_.
 
 In Windows you interact with the computer through draggable GUI elements.
 A GUI makes you a consumer; a CLI makes you a creator.
