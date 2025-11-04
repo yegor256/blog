@@ -69,7 +69,7 @@ jobs:
             --remove-script-type-attributes --remove-tag-whitespace \
             --use-short-doctype --minify-css true --minify-js true \
             --output {} {} \;
-      - uses: JamesIves/github-pages-deploy-action@v4.7.3
+      - uses: JamesIves/github-pages-deploy-action@v4.7.4
         with:
           branch: gh-pages
           folder: gh-pages
