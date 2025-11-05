@@ -3,7 +3,7 @@ entity script--><rect fill="#FEFECE" filter="url(#f1qlq5xs6ggo67)" height="36.29
 entity TimedLog--><rect fill="#FEFECE" filter="url(#f1qlq5xs6ggo67)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="88" x="6" y="104"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1" y="109"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="1" y="130.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="68" x="16" y="126.9951">TimedLog</text><!--MD5=[b3c4904b44f6c8ace2d5240b09edda39]
 entity Log--><rect fill="#FEFECE" filter="url(#f1qlq5xs6ggo67)" height="36.2969" style="stroke: #A80036; stroke-width: 1.5;" width="45" x="27.5" y="200"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="22.5" y="205"/><rect fill="#FEFECE" height="5" style="stroke: #A80036; stroke-width: 1.5;" width="10" x="22.5" y="226.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="25" x="37.5" y="222.9951">Log</text><!--MD5=[bd345351620e5c6f912e2bf4f28b1ea2]
 link script to TimedLog--><path d="M50,44.24 C50,59.48 50,81.81 50,98.46 " fill="none" id="script-&gt;TimedLog" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="50,103.87,54,94.87,50,98.87,46,94.87,50,103.87" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[f746f7e8b7aa487e77d1267718583644]
-link TimedLog to Log--><path d="M50,140.24 C50,155.48 50,177.81 50,194.46 " fill="none" id="TimedLog-&gt;Log" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="50,199.87,54,190.87,50,194.87,46,190.87,50,199.87" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[70dcbe01b018537d651e8eb50910737d]
+link TimedLog to Log--><path d="M50,140.24 C50,155.48 50,177.81 50,194.46 " fill="none" id="TimedLog-&gt;Log" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="50,199.87,54,190.87,50,194.87,46,190.87,50,199.87" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[3627aa83f45c54c3c16f289f5ba4953e]
 @startuml
 
 [script] -down-> [TimedLog]
@@ -15,7 +15,7 @@ PlantUML version 1.2020.02(Sun Mar 01 10:22:07 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
-Java Version: 17.0.16+8
+Java Version: 17.0.17+10
 Operating System: Linux
 Default Encoding: UTF-8
 Language: en

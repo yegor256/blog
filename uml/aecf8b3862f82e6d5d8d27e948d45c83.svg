@@ -7,7 +7,7 @@ entity Origin--><rect fill="#FEFECE" filter="url(#f1bp7mnwo83htt)" height="46.29
 link Browser to Edge--><path d="M43.79,31 C53.62,31 63.46,31 73.3,31 " fill="none" id="Browser-&gt;Edge" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="78.44,31,69.44,27,73.44,31,69.44,35,78.44,31" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[8c81ff6cecaaacf3ca5611af3a9b92a4]
 link Edge to Central--><path d="M154.76,31 C164.75,31 174.74,31 184.73,31 " fill="none" id="Edge-&gt;Central" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="189.96,31,180.96,27,184.96,31,180.96,35,189.96,31" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[88cf3fe20ee75ce44d7314f7e3218341]
 link Central to Relay--><path d="M234.5,54.06 C234.5,70.05 234.5,91.78 234.5,108.84 " fill="none" id="Central-&gt;Relay" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="234.5,113.98,238.5,104.98,234.5,108.98,230.5,104.98,234.5,113.98" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[909d40f9959ae0c576734dcbf69b68f9]
-link Relay to Origin--><path d="M273.24,137 C283.17,137 293.1,137 303.03,137 " fill="none" id="Relay-&gt;Origin" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="308.23,137,299.23,133,303.23,137,299.23,141,308.23,137" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[efbbbed9aceec043b58e96140a126fb9]
+link Relay to Origin--><path d="M273.24,137 C283.17,137 293.1,137 303.03,137 " fill="none" id="Relay-&gt;Origin" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="308.23,137,299.23,133,303.23,137,299.23,141,308.23,137" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[9a8b495bd3f2a38d646881ba726679fa]
 @startuml
 
 skinparam componentStyle uml2
@@ -22,7 +22,7 @@ PlantUML version 1.2020.02(Sun Mar 01 10:22:07 GMT 2020)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
-Java Version: 17.0.16+8
+Java Version: 17.0.17+10
 Operating System: Linux
 Default Encoding: UTF-8
 Language: en
