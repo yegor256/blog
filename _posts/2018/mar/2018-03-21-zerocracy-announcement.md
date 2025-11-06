@@ -88,7 +88,7 @@ result of this chaos we have restarts (94% projects!), cost overruns, and time
 overruns. The report also says that technology incompetence is the root cause of project failures only in
 7% cases. In almost all other cases the management is the source of the trouble.
 
-{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
 We, at [Zerocracy](https://www.zerocracy.com),
 believe that in the 21st century programmers (and not only them) deserve
@@ -97,8 +97,6 @@ a better and a more effective replacement for this
 needs a management model which is based
 on people's professional merits, instead of on their ability to play
 the [alpha/beta](https://en.wikipedia.org/wiki/Alpha_%28ethology%29) games.
-
-{% badge https://www.0crat.com/svg/zerocrat.svg 100 https://www.0crat.com %}
 
 Zerocracy offers exactly that: [Zerocrat](https://www.0crat.com), an automated project manager, which
 communicates as a chat bot and tells programmers what to do.
