@@ -90,7 +90,7 @@ Not everything was a file anymore, processes were not parallel, and there were n
 The name of the system was [CP/M] and the name of the inventor was [Gary Kildall].
 Then, five years later, 24-year-old [Tim Paterson] has made a copy of CP/M and called it [86-DOS].
 [Microsoft] purchased a non-exclusive license, rebranded it [MS-DOS], and sold it to IBM.
-That's how Windows was born.
+That's how Windows was born, in 1981.
 
 Why were there no proper files, no processes, and no pipelines?
 Because they weren't trying to build a "real" operating system.
