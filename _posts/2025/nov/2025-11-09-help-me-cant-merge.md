@@ -4,20 +4,21 @@
 
 layout: post
 title: "Help Me, My PR Doesn't Merge!"
-date: 2025-10-09
+date: 2025-11-09
 place: Moscow, Russia
 tags: oss etiquette
 description: |
-  ...
+  When your pull request won’t merge, don't fight it—fail fast,
+  split your changes, file bugs, and move on smarter.
 keywords:
   - merge conflict
   - pull request policy
   - discipline of pull requests
   - resolving conflicts
   - pull request
-image: /images/2025/10/...
+image: /images/2025/11/amores-perros.jpg
 jb_picture:
-  caption: ...
+  caption: Amores Perros (2000) by Alejandro González Iñárritu
 ---
 
 You've made a pull request, but it won't merge.
@@ -33,19 +34,19 @@ Try smarter tactics.
 
 ## 1. Give Up Instantly
 
-First, fail fast.
+First, [fail fast].
 Give up quickly.
 If it doesn't go through smoothly, close it.
 If the reviewers' complaints are more than stylistic issues, your understanding of the architecture is flawed.
 
 Ask yourself, how did this happen?
 Why did you, a smart programmer, get a wrong understanding of the architecture?
-Obviously, it's not your mistake.
+Obviously, it's [not your mistake]({% pst 2015/feb/2015-02-16-it-is-not-a-school %}).
 It's a bug in the repository.
 Its README isn't complete, its code isn't clean enough, its documentation is outdated.
 
 What do you do?
-You blame them by submitting bug reports.
+You [blame]({% pst 2025/may/2025-05-25-bug-driven-development %}) them by submitting [bug reports]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}).
 Then, when they fix the repository, you try again, with a new pull request.
 
 ## 2. Take a Smaller Bite
@@ -57,7 +58,7 @@ Good, remove the bad parts from your pull request.
 Don't waste time trying to sell the entire package in one go.
 Instead, give them as much as they're ready to accept.
 In the end, you will merge a few pull requests instead of one.
-The more, the better, at least for us in Zerocracy, where we reward each merged pull request.
+The more, the better, at least for us in [Zerocracy], where we [reward]({% pst 2018/jul/2018-07-24-bugs-or-pull-requests %}) each merged pull request.
 
 ## 3. Blame Them Wisely
 
@@ -70,8 +71,8 @@ Don't get negative or frustrated.
 You know that it's not your fault.
 But they don't.
 They believe that your code is defective and their code is perfect.
-Moreover, all CI workflows are green on master, while your branch is red.
-Who do we blame?
+Moreover, all CI workflows are [green]({% pst 2014/jul/2014-07-21-read-only-master-branch %}) on master, while your branch is red.
+Who do we [blame]({% pst 2025/apr/2025-04-19-dont-merge-into-broken-master %})?
 Obviously, you.
 
 You have to collect enough evidence and submit a bug report.
@@ -98,3 +99,21 @@ There will be time for them later.
 It's perfectly all right to close a pull request after a negative review.
 There's no need to feel obliged to finish it.
 It's better to spend time on easier bugs to fix and simpler functionality to implement.
+
+## 5. Don't Call for Help
+
+No matter how hard it is, don't ask them to help you.
+"I can't understand why it doesn't merge!"
+Don't say this.
+
+They [may help]({% pst 2015/feb/2015-02-16-it-is-not-a-school %}), but it will be annoying for them.
+You won't look like a reliable programmer.
+The more you ask for help, the more you ruin your reputation.
+You must know how to solve issues on your own.
+
+A failed PR isn't a setback.
+It's a lesson.
+Fail fast, blame smart, and move on stronger.
+
+[fail fast]: https://en.wikipedia.org/wiki/Fail_fast
+[Zerocracy]: https://www.zerocracy.com
