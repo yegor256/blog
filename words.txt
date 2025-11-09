@@ -927,6 +927,7 @@ bit
 bitbucket
 bitcoin
 bitcoins
+bite
 bits
 bjarne
 bla-bla-bla
@@ -3680,6 +3681,7 @@ fkregex
 flag
 flags
 flagship
+flaky
 flanagan
 flat
 flatter
@@ -4291,6 +4293,7 @@ hate
 hated
 haters
 hates
+hating
 have
 haven't
 having
@@ -8216,6 +8219,7 @@ reviewed
 reviewer
 reviewer's
 reviewers
+reviewers'
 reviewing
 reviews
 revoke
@@ -8673,6 +8677,7 @@ sessions
 SET
 set-cookie
 set-up-git
+setback
 setcharset
 setreplyto
 sets
@@ -9971,6 +9976,7 @@ transpile
 transpiled
 transport
 transsexuals
+trap
 trash
 traumatized
 travel

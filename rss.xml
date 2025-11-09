@@ -1,4 +1,96 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-11-09T12:35:17+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Programmers, Don’t Use Windows!</title><link href="https://www.yegor256.com/2025/10/05/windows-vs-macos.html" rel="alternate" type="text/html" title="Programmers, Don’t Use Windows!" /><published>2025-10-05T00:00:00+00:00</published><updated>2025-10-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/10/05/windows-vs-macos</id><content type="html" xml:base="https://www.yegor256.com/2025/10/05/windows-vs-macos.html"><![CDATA[<p>In 2020, in the <a href="/books/junior-objects">Junior Objects</a> book I wrote this:
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-11-09T16:27:42+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Help Me, My PR Doesn’t Merge!</title><link href="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html" rel="alternate" type="text/html" title="Help Me, My PR Doesn’t Merge!" /><published>2025-11-09T00:00:00+00:00</published><updated>2025-11-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/09/help-me-cant-merge</id><content type="html" xml:base="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html"><![CDATA[<p>You’ve made a pull request, but it won’t merge.
+A reviewer says it’s not good or the tests don’t pass.
+No matter what, you can’t get it into the master branch.
+You keep fixing the branch, keep convincing the reviewer, keep hating the tests.
+Stop.
+Try smarter tactics.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Amores Perros (2000) by Alejandro González Iñárritu" src="/images/2025/11/amores-perros.jpg" longdesc="#d0b0373b" /><figcaption id="d0b0373b">Amores Perros (2000) by Alejandro González Iñárritu</figcaption></figure>
+
+<h2 id="1-give-up-instantly">1. Give Up Instantly</h2>
+
+<p>First, <a href="https://en.wikipedia.org/wiki/Fail_fast">fail fast</a>.
+Give up quickly.
+If it doesn’t go through smoothly, close it.
+If the reviewers’ complaints are more than stylistic issues, your understanding of the architecture is flawed.</p>
+
+<p>Ask yourself, how did this happen?
+Why did you, a smart programmer, get a wrong understanding of the architecture?
+Obviously, it’s <a href="/2015/02/16/it-is-not-a-school.html">not your mistake</a>.
+It’s a bug in the repository.
+Its README isn’t complete, its code isn’t clean enough, its documentation is outdated.</p>
+
+<p>What do you do?
+You <a href="/2025/05/25/bug-driven-development.html">blame</a> them by submitting <a href="/2014/04/13/bugs-are-welcome.html">bug reports</a>.
+Then, when they fix the repository, you try again, with a new pull request.</p>
+
+<h2 id="2-take-a-smaller-bite">2. Take a Smaller Bite</h2>
+
+<p>Most likely they don’t complain about all the changes you’ve made.
+Something looks good to them, while they refuse to accept something else.
+Good, remove the bad parts from your pull request.</p>
+
+<p>Don’t waste time trying to sell the entire package in one go.
+Instead, give them as much as they’re ready to accept.
+In the end, you will merge a few pull requests instead of one.
+The more, the better, at least for us in <a href="https://www.zerocracy.com">Zerocracy</a>, where we <a href="/2018/07/24/bugs-or-pull-requests.html">reward</a> each merged pull request.</p>
+
+<h2 id="3-blame-them-wisely">3. Blame Them Wisely</h2>
+
+<p>This may be a defect in their existing codebase.
+Pretty often it is.
+Your code can’t merge, not because it’s broken, but because one of the existing tests is flaky.
+This is tricky and it may get ugly.</p>
+
+<p>Don’t get negative or frustrated.
+You know that it’s not your fault.
+But they don’t.
+They believe that your code is defective and their code is perfect.
+Moreover, all CI workflows are <a href="/2014/07/21/read-only-master-branch.html">green</a> on master, while your branch is red.
+Who do we <a href="/2025/04/19/dont-merge-into-broken-master.html">blame</a>?
+Obviously, you.</p>
+
+<p>You have to collect enough evidence and submit a bug report.
+It should explain what’s wrong in their master branch.
+Don’t ever mention your pull request.
+It’s a trap!
+If you try to use your pull request as a proof of their mistakes, they won’t listen.</p>
+
+<p>Forget about your pull request for a while.
+Submit a bug report as if you were a stranger who just found a bug in master.</p>
+
+<p>It may be hard, since master is green.
+However, there is no other way around it.
+Again, they won’t listen if you blame them for the failure in your pull request.
+At best, they will explain to you the basics of continuous integration.</p>
+
+<h2 id="4-move-on">4. Move On</h2>
+
+<p>Just as poker fish (immature players) try to win every hand, junior developers try to merge every pull request.
+This is a mistake.
+Some problems simply can’t be fixed and some features can’t be implemented right now.
+There will be time for them later.</p>
+
+<p>It’s perfectly all right to close a pull request after a negative review.
+There’s no need to feel obliged to finish it.
+It’s better to spend time on easier bugs to fix and simpler functionality to implement.</p>
+
+<h2 id="5-dont-call-for-help">5. Don’t Call for Help</h2>
+
+<p>No matter how hard it is, don’t ask them to help you.
+“I can’t understand why it doesn’t merge!”
+Don’t say this.</p>
+
+<p>They <a href="/2015/02/16/it-is-not-a-school.html">may help</a>, but it will be annoying for them.
+You won’t look like a reliable programmer.
+The more you ask for help, the more you ruin your reputation.
+You must know how to solve issues on your own.</p>
+
+<p>A failed PR isn’t a setback.
+It’s a lesson.
+Fail fast, blame smart, and move on stronger.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><category term="etiquette" /><summary type="html"><![CDATA[When your pull request won’t merge, don't fight it—fail fast, split your changes, file bugs, and move on smarter.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/amores-perros.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/amores-perros.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Programmers, Don’t Use Windows!</title><link href="https://www.yegor256.com/2025/10/05/windows-vs-macos.html" rel="alternate" type="text/html" title="Programmers, Don’t Use Windows!" /><published>2025-10-05T00:00:00+00:00</published><updated>2025-10-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/10/05/windows-vs-macos</id><content type="html" xml:base="https://www.yegor256.com/2025/10/05/windows-vs-macos.html"><![CDATA[<p>In 2020, in the <a href="/books/junior-objects">Junior Objects</a> book I wrote this:
   “<em>Windows is not suitable for programmers.
   If you meet anyone who will tell you otherwise, you must know that you deal with a bad programmer, or a poor one, which are the same things.
   Your computer has to be MacBook.</em>”
@@ -712,51 +804,4 @@ No need to ask its author for permission.
 If it’s a question—not a bug report—you close it with an answer.
 Also, if you aren’t planning to fix it, attach the <code class="language-plaintext highlighter-rouge">won't fix</code> badge to it and close.</p>
 
-<p>P.S. I suggest avoiding <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue">automatic issue closing</a> on pull request merge.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><category term="etiquette" /><summary type="html"><![CDATA[Even if the fix looks obvious to you, don't close the bug report; instead, let its author do this after your request.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/04/analyze-this.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/04/analyze-this.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">We Don’t Merge into a Broken Master Branch</title><link href="https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master.html" rel="alternate" type="text/html" title="We Don’t Merge into a Broken Master Branch" /><published>2025-04-19T00:00:00+00:00</published><updated>2025-04-19T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master</id><content type="html" xml:base="https://www.yegor256.com/2025/04/19/dont-merge-into-broken-master.html"><![CDATA[<p>What do you think is the most typical reason for delays in pull request reviews?
-A <a href="https://doi.org/10.1145/3183519.3183525">study</a> at Google confirms that it’s the size—the more changes, the slower the review.
-Another <a href="https://doi.org/10.1109/ACCESS.2020.3002663">study</a> shows that it’s the emotional tone—anger and dominance expressed in comments are linked to a lower likelihood of a pull request being merged.
-A more recent <a href="https://doi.org/10.1016/j.jss.2020.110806">study</a> finds that it’s the author’s reputation: we merge PRs faster if we know the author.
-All of the above is true.
-In our projects, though, what often slows down PR reviews is the message: <strong>“CI failures are not related to my changes!”</strong></p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Eye of the Beholder (1999) by Stephan Elliott" src="/images/2025/04/eye-of-the-beholder.jpg" longdesc="#343da90e" /><figcaption id="343da90e">Eye of the Beholder (1999) by Stephan Elliott</figcaption></figure>
-
-<p>Here’s how it happens:
-You fork a repo.
-You make changes to fix a bug or introduce a new feature.
-You commit them and push.
-You submit a pull request.
-You realize that some GitHub CI jobs fail.
-You read the logs.
-You don’t see any relevance between the error messages and your edits.
-You post a comment: “CI failures are not related to my changes!”
-You expect us to merge your pull request.</p>
-
-<p>Why shouldn’t we?</p>
-
-<p>We don’t merge them.
-We ask you to step back—to the point before you started making changes.
-Don’t make them yet.
-Instead, check the build status of the repository.
-Pay attention to all CI jobs, not just the one running Maven.
-They all must be green.
-Only when all jobs are green should you start editing the code.
-If any job is red, report a bug and wait until the team gets everything passing.</p>
-
-<p>Why?
-Because we try to reduce the effort required to fix the build.
-The more changes we pile onto a broken build, the higher the cost of cleaning it up.
-When the build is broken, we accept no new changes—except those that fix the build.</p>
-
-<p>What if the team takes too long to fix it?
-What if the build never becomes green?
-Still—you wait.
-You don’t submit a pull request to a repository with a broken build.</p>
-
-<hr />
-
-<p>You may fix the build yourself.
-If you do, submit it in a <strong>separate</strong> pull request.
-Don’t mix build-fixing changes with any other edits.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><category term="etiquette" /><summary type="html"><![CDATA[If the build is broken, don't send any pull requests until it's fixed. You're welcome to fix it yourself---just don't mix build-fixing changes with anything else.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/04/eye-of-the-beholder.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/04/eye-of-the-beholder.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>P.S. I suggest avoiding <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue">automatic issue closing</a> on pull request merge.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><category term="etiquette" /><summary type="html"><![CDATA[Even if the fix looks obvious to you, don't close the bug report; instead, let its author do this after your request.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/04/analyze-this.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/04/analyze-this.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
