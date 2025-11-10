@@ -139,12 +139,13 @@ will contain practical object-oriented design patterns, just like
 those GoF book suggested. The book will not criticize bad practices, like
 previous two volumes did, but will suggest what to do instead.
 <br/>
-To be published: in <del>2022</del> 2024.
+To be published: in <del>2022</del> 2026.
 {: .book-par}
 
 To be continued...
 {: .book-par}
 
+<!--
 ## How to Get a Discount
 
 All books have the same price of $40.96 (plus shipment from Amazon).
@@ -165,6 +166,7 @@ You have a few options if you want to get them cheaper than that:
     get a **student package** of 8 books for $64.00 plus shipment.
     Thus, you will get each book for **$8.00**. I will need you to confirm
     that all of you guys really are students though.
+-->
 
 Pay attention that all books are sold at
 [Amazon.com](https://www.amazon.com/Yegor-Bugayenko/e/B01AM1QMDK/),
