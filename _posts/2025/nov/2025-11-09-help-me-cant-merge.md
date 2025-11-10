@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "Help Me, My PR Doesn't Merge!"
+title: "Can’t Merge? Don't Despair."
 date: 2025-11-09
 place: Moscow, Russia
 tags: oss etiquette
@@ -26,7 +26,7 @@ A reviewer says it's not good or the tests don't pass.
 No matter what, you can't get it into the master branch.
 You keep fixing the branch, keep convincing the reviewer, keep hating the tests.
 Stop.
-Try smarter tactics.
+Try _smarter_ tactics.
 
 <!--more-->
 
@@ -36,14 +36,14 @@ Try smarter tactics.
 
 First, [fail fast].
 Give up quickly.
-If it doesn't go through smoothly, close it.
+If it doesn't go through smoothly, _close it_.
 If the reviewers' complaints are more than stylistic issues, your understanding of the architecture is flawed.
 
 Ask yourself, how did this happen?
 Why did you, a smart programmer, get a wrong understanding of the architecture?
 Obviously, it's [not your mistake]({% pst 2015/feb/2015-02-16-it-is-not-a-school %}).
 It's a bug in the repository.
-Its README isn't complete, its code isn't clean enough, its documentation is outdated.
+Its [README]({% pst 2019/apr/2019-04-23-elegant-readme %}) isn't complete, its code isn't clean enough, its documentation is outdated.
 
 What do you do?
 You [blame]({% pst 2025/may/2025-05-25-bug-driven-development %}) them by submitting [bug reports]({% pst 2014/apr/2014-04-13-bugs-are-welcome %}).
@@ -56,7 +56,7 @@ Something looks good to them, while they refuse to accept something else.
 Good, remove the bad parts from your pull request.
 
 Don't waste time trying to sell the entire package in one go.
-Instead, give them as much as they're ready to accept.
+Instead, give them as much as they're _ready to accept_.
 In the end, you will merge a few pull requests instead of one.
 The more, the better, at least for us in [Zerocracy], where we [reward]({% pst 2018/jul/2018-07-24-bugs-or-pull-requests %}) each merged pull request.
 
@@ -75,14 +75,16 @@ Moreover, all CI workflows are [green]({% pst 2014/jul/2014-07-21-read-only-mast
 Who do we [blame]({% pst 2025/apr/2025-04-19-dont-merge-into-broken-master %})?
 Obviously, you.
 
-You have to collect enough evidence and submit a bug report.
+{% quote They won't listen if you blame them for the failure in your pull request. %}
+
+You have to collect _enough evidence_ and submit a bug report.
 It should explain what's wrong in their master branch.
 Don't ever mention your pull request.
 It's a trap!
 If you try to use your pull request as a proof of their mistakes, they won't listen.
 
 Forget about your pull request for a while.
-Submit a bug report as if you were a stranger who just found a bug in master.
+Submit a bug report as if you were a stranger who just found a _bug in master_.
 
 It may be hard, since master is green.
 However, there is no other way around it.
@@ -96,7 +98,7 @@ This is a mistake.
 Some problems simply can't be fixed and some features can't be implemented right now.
 There will be time for them later.
 
-It's perfectly all right to close a pull request after a negative review.
+It's perfectly all right to _close_ a pull request after a negative review.
 There's no need to feel obliged to finish it.
 It's better to spend time on easier bugs to fix and simpler functionality to implement.
 
@@ -112,7 +114,7 @@ The more you ask for help, the more you ruin your reputation.
 You must know how to solve issues on your own.
 
 A failed PR isn't a setback.
-It's a lesson.
+It's a _lesson_.
 Fail fast, blame smart, and move on stronger.
 
 [fail fast]: https://en.wikipedia.org/wiki/Fail_fast
