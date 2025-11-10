@@ -21,18 +21,16 @@ image: /images/andreea/yegor-is-presenting.png
 
 {% badge /images/about/yegor-speaking.jpg 300 %}
 
-[**Yegor Bugayenko**](/) is a software development expert, a book writer,
-a blogger, a conference speaker, and a CEO of [Zerocracy](https://www.zerocracy.com), AI software company.
-He is the inventor of [Elegant Objects](https://www.elegantobjects.org) paradigm of object-oriented
-programming, which radically improves the quality of code and makes
-it more readable and maintainable. His [books](/books.html) collect five-star reviews
-on Amazon for the last eight years. He is managing a team of over
-300 programmers and is an active open source [contributor](https://github.com/yegor256), writing
-in Java, Ruby, JavaScript and Rust.
+[**Yegor Bugayenko**](/) is a software development expert, a book writer, a blogger, a conference speaker,
+  and a CTO of [Zerocracy](https://www.zerocracy.com), AI software company.
+He is the inventor of [Elegant Objects](https://www.elegantobjects.org) paradigm of object-oriented programming,
+  which radically improves the quality of code and makes it more readable and maintainable.
+His [books](/books.html) collect five-star reviews on Amazon for the last decade.
+He is an active open source [contributor](https://github.com/yegor256),
+  writing in Java, Ruby, JavaScript and Rust.
 
-Aside from his [regular speaking](/talks.html) at international software conferences,
-Yegor, once in a while, trains programmers in their offices. You have a chance
-to see Yegor in your office with one of these three trainings:
+Aside from his [regular speaking](/talks.html) at international software conferences, Yegor, once in a while, trains programmers in their offices.
+You have a chance to see Yegor in your office with one of these three trainings:
 
 {% badge /images/trainings/yegor-bugayenko-training-5.jpg 200 %}
 
