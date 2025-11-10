@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-11-09T16:58:18+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Help Me, My PR Doesn’t Merge!</title><link href="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html" rel="alternate" type="text/html" title="Help Me, My PR Doesn’t Merge!" /><published>2025-11-09T00:00:00+00:00</published><updated>2025-11-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/09/help-me-cant-merge</id><content type="html" xml:base="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html"><![CDATA[<p>You’ve made a pull request, but it won’t merge.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-11-10T04:41:23+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Can’t Merge? Don’t Despair.</title><link href="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html" rel="alternate" type="text/html" title="Can’t Merge? Don’t Despair." /><published>2025-11-09T00:00:00+00:00</published><updated>2025-11-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/09/help-me-cant-merge</id><content type="html" xml:base="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html"><![CDATA[<p>You’ve made a pull request, but it won’t merge.
 A reviewer says it’s not good or the tests don’t pass.
 No matter what, you can’t get it into the master branch.
 You keep fixing the branch, keep convincing the reviewer, keep hating the tests.
 Stop.
-Try smarter tactics.</p>
+Try <em>smarter</em> tactics.</p>
 
 <!--more-->
 
@@ -13,14 +13,14 @@ Try smarter tactics.</p>
 
 <p>First, <a href="https://en.wikipedia.org/wiki/Fail_fast">fail fast</a>.
 Give up quickly.
-If it doesn’t go through smoothly, close it.
+If it doesn’t go through smoothly, <em>close it</em>.
 If the reviewers’ complaints are more than stylistic issues, your understanding of the architecture is flawed.</p>
 
 <p>Ask yourself, how did this happen?
 Why did you, a smart programmer, get a wrong understanding of the architecture?
 Obviously, it’s <a href="/2015/02/16/it-is-not-a-school.html">not your mistake</a>.
 It’s a bug in the repository.
-Its README isn’t complete, its code isn’t clean enough, its documentation is outdated.</p>
+Its <a href="/2019/04/23/elegant-readme.html">README</a> isn’t complete, its code isn’t clean enough, its documentation is outdated.</p>
 
 <p>What do you do?
 You <a href="/2025/05/25/bug-driven-development.html">blame</a> them by submitting <a href="/2014/04/13/bugs-are-welcome.html">bug reports</a>.
@@ -33,7 +33,7 @@ Something looks good to them, while they refuse to accept something else.
 Good, remove the bad parts from your pull request.</p>
 
 <p>Don’t waste time trying to sell the entire package in one go.
-Instead, give them as much as they’re ready to accept.
+Instead, give them as much as they’re <em>ready to accept</em>.
 In the end, you will merge a few pull requests instead of one.
 The more, the better, at least for us in <a href="https://www.zerocracy.com">Zerocracy</a>, where we <a href="/2018/07/24/bugs-or-pull-requests.html">reward</a> each merged pull request.</p>
 
@@ -52,14 +52,17 @@ Moreover, all CI workflows are <a href="/2014/07/21/read-only-master-branch.html
 Who do we <a href="/2025/04/19/dont-merge-into-broken-master.html">blame</a>?
 Obviously, you.</p>
 
-<p>You have to collect enough evidence and submit a bug report.
+<aside class="quote">They won’t listen if you blame them for the failure in your pull request.
+</aside>
+
+<p>You have to collect <em>enough evidence</em> and submit a bug report.
 It should explain what’s wrong in their master branch.
 Don’t ever mention your pull request.
 It’s a trap!
 If you try to use your pull request as a proof of their mistakes, they won’t listen.</p>
 
 <p>Forget about your pull request for a while.
-Submit a bug report as if you were a stranger who just found a bug in master.</p>
+Submit a bug report as if you were a stranger who just found a <em>bug in master</em>.</p>
 
 <p>It may be hard, since master is green.
 However, there is no other way around it.
@@ -73,7 +76,7 @@ This is a mistake.
 Some problems simply can’t be fixed and some features can’t be implemented right now.
 There will be time for them later.</p>
 
-<p>It’s perfectly all right to close a pull request after a negative review.
+<p>It’s perfectly all right to <em>close</em> a pull request after a negative review.
 There’s no need to feel obliged to finish it.
 It’s better to spend time on easier bugs to fix and simpler functionality to implement.</p>
 
@@ -89,7 +92,7 @@ The more you ask for help, the more you ruin your reputation.
 You must know how to solve issues on your own.</p>
 
 <p>A failed PR isn’t a setback.
-It’s a lesson.
+It’s a <em>lesson</em>.
 Fail fast, blame smart, and move on stronger.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><category term="etiquette" /><summary type="html"><![CDATA[When your pull request won’t merge, don't fight it—fail fast, split your changes, file bugs, and move on smarter.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/amores-perros.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/amores-perros.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Programmers, Don’t Use Windows!</title><link href="https://www.yegor256.com/2025/10/05/windows-vs-macos.html" rel="alternate" type="text/html" title="Programmers, Don’t Use Windows!" /><published>2025-10-05T00:00:00+00:00</published><updated>2025-10-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/10/05/windows-vs-macos</id><content type="html" xml:base="https://www.yegor256.com/2025/10/05/windows-vs-macos.html"><![CDATA[<p>In 2020, in the <a href="/books/junior-objects">Junior Objects</a> book I wrote this:
   “<em>Windows is not suitable for programmers.
   If you meet anyone who will tell you otherwise, you must know that you deal with a bad programmer, or a poor one, which are the same things.
