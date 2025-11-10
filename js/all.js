@@ -32,6 +32,17 @@ if (typeof($) != 'undefined') {
       }
       return num;
     }
+    $(document).on('keydown', function(e) {
+      if ($(e.target).is('input, textarea')) {
+        return;
+      }
+      if (e.key === 'f' || e.key === 'F') {
+        e.preventDefault();
+        const $f = $('#search-query');
+        $f.focus();
+        $f.attr('placeholder', '');
+      }
+    });
     $('article a[href]').each(function () {
       const href = $(this).attr('href');
       if (!href.startsWith('http') || href.includes(location.hostname)) {
