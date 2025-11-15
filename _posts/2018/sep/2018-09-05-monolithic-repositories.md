@@ -219,21 +219,20 @@ But the benefits we are getting from it are enormous.
 This is my short list of them:
 
   * **Encapsulation**.
-    Each repo encapsulates a single problem, hiding its details from everybody
-    else. Thanks to that, the scope each repo has to deal with gets smaller.
-    The smaller the scope, just like in OOP, the easier it is to maintain and
-    modify. The easier to maintain, the cheaper the development. I guess Google
-    guys don't really worry about costs. On the contrary, they want their salaries
-    to grow. A large unmaintainable monolithic repo is a perfect tool to make
-    it happen.
+    Each repo encapsulates a single problem, hiding its details from everybody else.
+    Thanks to that, the scope each repo has to deal with gets smaller.
+    The smaller the scope, just like in OOP, the easier it is to maintain and modify.
+    The easier to maintain, the cheaper the development.
+    I guess Google guys don't really worry about costs.
+    On the contrary, they want their [salaries]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) to grow.
+    A large unmaintainable monolithic repo is a perfect tool to makeit happen.
 
   * **Fast Builds**.
-    When a repo is small, the time its automated build takes is small. Look at the
-    time Travis [spends](https://travis-ci.org/yegor256/colorizejs/builds/420726284)
-    for my jQuery plugin. It's 51 seconds. It's fast.
-    We [all know](https://mortoray.com/2015/05/06/fast-build-turnaround-time-is-essential/)
-    that the faster the build, the better it is for productivity, since it's easier to use
-    the build as a tool for development.
+    When a repo is small, the time its automated build takes is small.
+    Look at the time Travis [spends](https://travis-ci.org/yegor256/colorizejs/builds/420726284) for my jQuery plugin.
+    It's 51 seconds.
+    It's fast.
+    We [all know](https://mortoray.com/2015/05/06/fast-build-turnaround-time-is-essential/) that the faster the build, the better it is for productivity, since it's easier to use the build as a tool for development.
 
   * **Accurate Metrics**.
     I don't know whether you rely on metrics in your projects, but we at
