@@ -52,13 +52,32 @@ A pull request that affects different seemingly unrelated code parts may be a ch
 Even if you are the architect.
 Less pedantic reviews lead to more bugs.
 
-* **You can write a better README.**
+* **You can write a README.**
+Maybe you have noticed already: large open source projects have short and sketchy README files.
+They simply can't make them larger or they become as large as a book.
+All they can do it is redirecting the reader to the documentation website.
+The inability to explain the entire scope in a single file leads to scope creep.
+Contributors struggle to understand the borders of the project.
+This leads to code duplication, which leads to more bugs.
 
-You can document better.
-You can release frequently.
-You can use AI agents effectively.
-You can on-board new contributors faster.
-You can demand reponsibility.
-You can go open source.
+* **You can document better.**
 
-All of the about is harder to achive in larger repositories.
+* **You can release frequently.**
+In a larger repository, frequent reintegration may be expensive, both time and money wise.
+In a small repo, a build of a few seconds is not a dream of programmers, it's their reality.
+Not only CI is cheap, but also CD.
+After every small change you can publish a new release, with its own version.
+In a monolith, we tend to wait until a portion of changes accumulate.
+Rare releases lead to more bugs.
+
+* **You can use AI agents effectively.**
+
+* **You can on-board new contributors faster.**
+
+* **You can demand reponsibility.**
+
+* **You can go open source.**
+
+Look for an opportunity to extract a piece of code as a standalone package.
+Then, think about making it open source.
+Then, promote it in the community.
