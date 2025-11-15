@@ -76,7 +76,10 @@ By keeping a repository small we do a big favor to our little friends: AI agents
 * **You can on-board faster.**
 Larger codebases are usually older and more [chaotic]({% pst 2018/sep/2018-09-12-clear-code %}), full of legacy code.
 It takes longer to start making meaningful contribution to such a repository.
-Monoliths attract long-term [office-based]({% pst 2017/may/2017-05-02-remote-slaves %}) contributors
+Monoliths attract
+  [long-term]({% pst 2015/dec/2015-12-29-turnover-is-good-for-maintainability %})
+  [office-based]({% pst 2017/may/2017-05-02-remote-slaves %})
+  contributors
   who care about job security more than about code quality.
 
 * **You can expect responsibility.**
