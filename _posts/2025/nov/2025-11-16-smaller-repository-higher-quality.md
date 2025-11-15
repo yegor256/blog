@@ -65,7 +65,7 @@ In a larger repository, frequent reintegration may be expensive, in both time an
 In a small repo, a [build]({% pst 2025/apr/2025-04-12-four-builds %}) of a few seconds is not a dream of programmers, it's their reality.
 Not only CI is cheap, but also CD.
 After every small change you can publish a new release, with its own [version].
-In a monolith, we tend to wait until a portion of changes accumulate.
+In a monorepo, we tend to wait until a portion of changes accumulate.
 
 * **You can use AI agents effectively.**
 It is no secret that modern LLMs have limited [context windows].
@@ -76,7 +76,7 @@ By keeping a repository small we do a big favor to our little friends: AI agents
 * **You can on-board faster.**
 Larger codebases are usually older and more [chaotic]({% pst 2018/sep/2018-09-12-clear-code %}), full of legacy code.
 It takes longer to start making meaningful contribution to such a repository.
-Monoliths attract
+Monorepos attract
   [long-term]({% pst 2015/dec/2015-12-29-turnover-is-good-for-maintainability %})
   [office-based]({% pst 2017/may/2017-05-02-remote-slaves %})
   contributors
@@ -89,7 +89,7 @@ Smaller repositories, on the other hand, emotionally attach people to code.
 
 * **You can go open source.**
 No matter how much your boss [loves]({% pst 2020/may/2020-05-05-open-source-arms-race %})
-  open source, you can't put your entire enterprise monolith on GitHub.
+  open source, you can't put your entire enterprise monorepo on GitHub.
 However, if you extract a small part of it, you can.
 The code that is open, visible and criticized by many people,
   is [allegedly]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %}) of a higher quality.
