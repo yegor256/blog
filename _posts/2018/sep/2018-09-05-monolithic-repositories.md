@@ -209,13 +209,14 @@ We know that a set of smaller components is better than a larger solid piece.
 
 {% youtube zljJpADEf_E %}
 
-Why can't we apply the same logic to repositories? I believe we can.
-Of course, just like in object-oriented programming, a fine-grained design
-requires more skills and time. Look at what I had to do with this small
-jQuery plugin. I've spent hours of coding and thinking. I even had to learn
-[Gulp](https://gulpjs.com/) and [Jasmine](https://jasmine.github.io/),
-which I most probably will not use anymore. But the benefits we are getting
-from it are enormous. This is my short list of them:
+Why can't we apply the same logic to repositories?
+I believe we can.
+Of course, just like in object-oriented programming, a fine-grained design requires more skills and time.
+Look at what I had to do with this small [jQuery] plugin.
+I've spent hours of coding and thinking.
+I even had to learn [Gulp] and [Jasmine], which I most probably will not use anymore.
+But the benefits we are getting from it are enormous.
+This is my short list of them:
 
   * **Encapsulation**.
     Each repo encapsulates a single problem, hiding its details from everybody
@@ -286,3 +287,6 @@ Everything that goes above this line is a perfect candidate for decomposition.
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 [coupling]: https://en.wikipedia.org/wiki/Coupling_(computer_programming)
+[Gulp]: https://gulpjs.com/
+[Jasmine]: https://jasmine.github.io/
+[jQuery]: https://jquery.com/
