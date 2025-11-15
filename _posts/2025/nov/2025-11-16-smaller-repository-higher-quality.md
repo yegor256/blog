@@ -97,7 +97,7 @@ The code that is open, visible and criticized by many people,
 In summary, you should look for an opportunity to extract a piece of code as a standalone package.
 Then, insist on making it [open source]({% pst 2017/may/2017-05-30-why-contribute-to-open-source %}).
 Then, promote it in the community.
-Then, quit your office job and become a freelancer.
+Then, quit your office job and join [Zerocracy].
 
 [Google]: https://dl.acm.org/doi/pdf/10.1145/2854146
 [Facebook]: https://engineering.fb.com/2025/10/16/developer-tools/branching-in-a-sapling-monorepo/
@@ -107,3 +107,4 @@ Then, quit your office job and become a freelancer.
 [version]: https://semver.org/
 [context windows]: https://docs.claude.com/en/docs/build-with-claude/context-windows
 [overhead]: https://www.sonarsource.com/resources/library/monorepo/
+[Zerocracy]: https://www.zerocracy.com
