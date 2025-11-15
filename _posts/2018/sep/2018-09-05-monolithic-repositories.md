@@ -225,7 +225,7 @@ This is my short list of them:
     The easier to maintain, the cheaper the development.
     I guess Google guys don't really worry about costs.
     On the contrary, they want their [salaries]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) to grow.
-    A large unmaintainable monolithic repo is a perfect tool to makeit happen.
+    A large unmaintainable monolithic repo is a perfect tool to make it happen.
 
   * **Fast Builds**.
     When a repo is small, the time its automated build takes is small.
