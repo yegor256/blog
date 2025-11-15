@@ -72,11 +72,20 @@ Rare releases lead to more bugs.
 
 * **You can use AI agents effectively.**
 
-* **You can on-board new contributors faster.**
+* **You can on-board faster.**
+Larger codebases are usually older and more chaotic, full of legacy code.
+It takes longer to start making meaninful contribution to such a repository.
+To the contrary, in a smaller repo, you can engage programmers faster.
+Monoliths attract long-term office-based contributors who care about job security more than about code quality.
+Knowledge silos and legacy code mean more bugs.
 
-* **You can demand reponsibility.**
+* **You can demand responsibility.**
+
 
 * **You can go open source.**
+No matter how much your boss loves open source, you can't put your entire enterprise monolith on GitHub.
+However, if you extract a small part of it, you can.
+Open source, arguably, means less bugs.
 
 Look for an opportunity to extract a piece of code as a standalone package.
 Then, think about making it open source.
