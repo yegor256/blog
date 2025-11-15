@@ -20,6 +20,9 @@ jb_picture:
   caption: ..
 ---
 
+Maybe you know that I'm strongly against monolythic repositories.
+They keep multiple projects together, often written in different languages, by different teams.
+It's a shame Google, Facebook, and Yandex believe in such a monstrous design.
 
 
 <!--more-->

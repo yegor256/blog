@@ -193,18 +193,19 @@ and so on and so forth.
 
 {% quote A set of smaller components is better than a larger solid piece. %}
 
-All these "reasonable" arguments remind me of what I hear when preaching
-object decomposition and suggesting that multiple objects are better than
-a single large one. Imagine a large class of 3,000 lines of code, which
-does many things and they are all very tightly coupled. It's "easy" to test it,
-to make changes, to deploy, to review, etc. Because everything stays in one
-file, right? We don't need to jump from class to class in order to understand
-the design. We just look at one screen, scroll it up and down, and that's it.
-Right? Totally wrong!
+All these "reasonable" arguments remind me of what I hear when preaching object decomposition and suggesting that multiple objects are [better]({% pst 2017/feb/2017-02-28-too-many-classes %}) than a single large one.
+Imagine a large class of 3,000 lines of code, which does many things and they are all very tightly [coupled][coupling].
+It's "easy" to test it, to make changes, to deploy, to review, etc.
+Because everything stays in one file, right?
+We don't need to jump from class to class in order to understand the design.
+We just look at one screen, scroll it up and down, and that's it.
+Right?
+Totally wrong!
 
-I guess I don't need to explain why it's wrong. We don't design our software
-that way anymore. We know that tight coupling is a bad idea. We know that
-a set of smaller components is better than a larger solid piece.
+I guess I don't need to explain why it's wrong.
+We don't design our software that way anymore.
+We know that tight [coupling] is a bad idea.
+We know that a set of smaller components is better than a larger solid piece.
 
 {% youtube zljJpADEf_E %}
 
@@ -237,8 +238,8 @@ from it are enormous. This is my short list of them:
     I don't know whether you rely on metrics in your projects, but we at
     [Zerocracy](https://www.zerocracy.com) do pay attention to numbers, like
     lines of code, [hits of code]({% pst 2014/nov/2014-11-14-hits-of-code %}),
-    number of commits, classes, methods, cohesion,
-    coupling, etc. It's always a question whether the metrics are accurate.
+    number of commits, classes, methods, cohesion, [coupling], etc.
+    It's always a question whether the metrics are accurate.
     Calculating lines of code for a large repository doesn't make any sense, since
     the number will include a lot of files from completely different parts of
     the application. Moreover there will be different languages and file formats.
@@ -283,3 +284,5 @@ Everything that goes above this line is a perfect candidate for decomposition.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you think is better, a bigger code repository with everything inside, or many smaller ones with their own builds, dependencies, issues, and pull requests?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1053922638517731329?ref_src=twsrc%5Etfw">October 21, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+[coupling]: https://en.wikipedia.org/wiki/Coupling_(computer_programming)
