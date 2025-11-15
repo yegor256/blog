@@ -74,9 +74,8 @@ Even ten thousand lines, let alone a million, is more than an LLM can digest.
 By keeping a repository small we do a big favor to our little friends: AI agents.
 
 * **You can on-board faster.**
-Larger codebases are usually older and more chaotic, full of legacy code.
+Larger codebases are usually older and more [chaotic]({% pst 2018/sep/2018-09-12-clear-code %}), full of legacy code.
 It takes longer to start making meaningful contribution to such a repository.
-In contrast, in a smaller repo, you can engage programmers faster.
 Monoliths attract long-term [office-based]({% pst 2017/may/2017-05-02-remote-slaves %}) contributors
   who care about job security more than about code quality.
 
