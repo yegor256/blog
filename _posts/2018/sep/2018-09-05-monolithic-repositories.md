@@ -194,7 +194,7 @@ and so on and so forth.
 {% quote A set of smaller components is better than a larger solid piece. %}
 
 All these "reasonable" arguments remind me of what I hear when preaching object decomposition and suggesting that multiple objects are [better]({% pst 2017/feb/2017-02-28-too-many-classes %}) than a single large one.
-Imagine a large class of 3,000 lines of code, which does many things and they are all very tightly [coupled][coupling].
+Imagine a large class of 3,000 lines of code, which does many things and they are all tightly [coupled][coupling].
 It's "easy" to test it, to make changes, to deploy, to review, etc.
 Because everything stays in one file, right?
 We don't need to jump from class to class in order to understand the design.
@@ -268,12 +268,12 @@ from it are enormous. This is my short list of them:
     Each repository, inevitably, will have its own namespace. For example, in the
     JS repository I just created, I only have two files: `colorizejs.js` and `test-colorizejs.js`.
     I don't really care about the naming inside them, since the namespace
-    is very small. ~~I can even use global variables.~~
+    is small. ~~I can even use global variables.~~
     Shorter names and smaller namespaces mean better maintainability.
 
   * **Simple Tests**.
     The larger the code base, the more dependencies it has, which are difficult
-    to mock and test. Very large code bases become fundamentally untestable since
+    to mock and test. Large code bases become fundamentally untestable since
     they require a lot of integration tests which are difficult to maintain.
     Smaller libraries, frameworks and modules are easier to keep at the level
     of simple and fast unit testing.
