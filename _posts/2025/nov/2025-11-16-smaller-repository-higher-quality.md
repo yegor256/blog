@@ -8,9 +8,9 @@ date: 2025-11-16
 place: Moscow, Russia
 tags: oss
 description: |
-  If you split your software into a series of small
-  open source packages, the quality of the entire product
-  may be higher.
+  By breaking your software into small open-source packages,
+  you make the entire product easier
+  to maintain—and significantly higher in quality.
 keywords:
   - repository size
   - quality of code
