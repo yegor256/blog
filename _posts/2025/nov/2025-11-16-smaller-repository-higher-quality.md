@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "Repository Size Matters"
+title: "Small Repo, High Quality"
 date: 2025-11-16
 place: Moscow, Russia
 tags: oss
@@ -22,10 +22,10 @@ jb_picture:
   caption: Морфий (2008) by Алексей Балабанов
 ---
 
-I don't like monolithic repositories.
+I don't like [monolithic repositories]({% pst 2018/sep/2018-09-05-monolithic-repositories %}).
 They keep multiple projects together, often written in different languages, by different teams.
-Unfortunately, Google, Facebook, and Yandex favor them.
-Primarily, according to them, monoliths reduce integration overhead.
+Unfortunately, [Google], [Facebook], and [Yandex] favor them.
+Primarily, according to them, [monorepos] reduce integration overhead.
 They do, but at the cost of quality.
 In smaller repositories we can develop better code.
 
@@ -37,18 +37,19 @@ When a repository is smaller you can achieve higher quality, for a number of rea
 
 * **You can be stricter on style.**
 It's easier to keep a thousand lines consistently formatted than a million.
-With a thousand lines, you can configure ESLint to its maximum, enabling as many rules as you can find.
-Stricter control over code stylistics leads to cleaner code.
+With a thousand lines, you can configure [ESLint] to its maximum, enabling as many rules as you can find.
+Stricter [control]({% pst 2014/aug/2014-08-13-strict-code-quality-control %}) over code stylistics leads to cleaner code.
 
 * **You can write deeper tests.**
-Integration (or deep) tests are inevitably slow.
+Integration (or [deep]({% pst 2023/aug/2023-08-22-fast-vs-deep-testing %})) tests are inevitably slow.
 In a smaller repository, a good integration test coverage doesn't mean a slow build.
 In a larger repository---it does.
 A slow build is something a team tries to avoid, thus jeopardizing the coverage.
 
 * **You can review more pedantically.**
 In a larger repository it may be harder to remember all the aspects of design.
-A pull request that affects different seemingly unrelated code parts may be a challenge to review.
+A pull request that affects different seemingly unrelated code parts
+  may be a challenge to [review]({% pst 2015/feb/2015-02-09-serious-code-reviewer %}).
 Even if you are the architect.
 
 * **You can write a README.**
@@ -92,3 +93,9 @@ In summary, you should look for an opportunity to extract a piece of code as a s
 Then, insist on making it open source.
 Then, promote it in the community.
 Then, quit your office job and become a freelancer.
+
+[Google]: https://dl.acm.org/doi/pdf/10.1145/2854146
+[Facebook]: https://engineering.fb.com/2025/10/16/developer-tools/branching-in-a-sapling-monorepo/
+[Yandex]: https://shiftmag.dev/mono-repo-infrastructure-yandex-1011/
+[monorepos]: https://monorepo.tools/
+[ESLint]: https://eslint.org/
