@@ -25,7 +25,7 @@ jb_picture:
 I don't like [monolithic repositories]({% pst 2018/sep/2018-09-05-monolithic-repositories %}).
 They keep multiple projects together, often written in different languages, by different teams.
 Unfortunately, [Google], [Facebook], and [Yandex] favor them.
-Primarily, according to them, [monorepos] reduce integration overhead.
+Primarily, according to them, [monorepos] reduce integration [overhead].
 They do, but at the cost of quality.
 In smaller repositories we can develop better code.
 
@@ -104,3 +104,4 @@ Then, quit your office job and become a freelancer.
 [ESLint]: https://eslint.org/
 [version]: https://semver.org/
 [context windows]: https://docs.claude.com/en/docs/build-with-claude/context-windows
+[overhead]: https://www.sonarsource.com/resources/library/monorepo/
