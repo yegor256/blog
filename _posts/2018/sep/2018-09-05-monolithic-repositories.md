@@ -193,52 +193,53 @@ and so on and so forth.
 
 {% quote A set of smaller components is better than a larger solid piece. %}
 
-All these "reasonable" arguments remind me of what I hear when preaching
-object decomposition and suggesting that multiple objects are better than
-a single large one. Imagine a large class of 3,000 lines of code, which
-does many things and they are all very tightly coupled. It's "easy" to test it,
-to make changes, to deploy, to review, etc. Because everything stays in one
-file, right? We don't need to jump from class to class in order to understand
-the design. We just look at one screen, scroll it up and down, and that's it.
-Right? Totally wrong!
+All these "reasonable" arguments remind me of what I hear when preaching object decomposition and suggesting that multiple objects are [better]({% pst 2017/feb/2017-02-28-too-many-classes %}) than a single large one.
+Imagine a large class of 3,000 lines of code, which does many things and they are all tightly [coupled][coupling].
+It's "easy" to test it, to make changes, to deploy, to review, etc.
+Because everything stays in one file, right?
+We don't need to jump from class to class in order to understand the design.
+We just look at one screen, scroll it up and down, and that's it.
+Right?
+Totally wrong!
 
-I guess I don't need to explain why it's wrong. We don't design our software
-that way anymore. We know that tight coupling is a bad idea. We know that
-a set of smaller components is better than a larger solid piece.
+I guess I don't need to explain why it's wrong.
+We don't design our software that way anymore.
+We know that tight [coupling] is a bad idea.
+We know that a set of smaller components is better than a larger solid piece.
 
 {% youtube zljJpADEf_E %}
 
-Why can't we apply the same logic to repositories? I believe we can.
-Of course, just like in object-oriented programming, a fine-grained design
-requires more skills and time. Look at what I had to do with this small
-jQuery plugin. I've spent hours of coding and thinking. I even had to learn
-[Gulp](https://gulpjs.com/) and [Jasmine](https://jasmine.github.io/),
-which I most probably will not use anymore. But the benefits we are getting
-from it are enormous. This is my short list of them:
+Why can't we apply the same logic to repositories?
+I believe we can.
+Of course, just like in object-oriented programming, a fine-grained design requires more skills and time.
+Look at what I had to do with this small [jQuery] plugin.
+I've spent hours of coding and thinking.
+I even had to learn [Gulp] and [Jasmine], which I most probably will not use anymore.
+But the benefits we are getting from it are enormous.
+This is my short list of them:
 
   * **Encapsulation**.
-    Each repo encapsulates a single problem, hiding its details from everybody
-    else. Thanks to that, the scope each repo has to deal with gets smaller.
-    The smaller the scope, just like in OOP, the easier it is to maintain and
-    modify. The easier to maintain, the cheaper the development. I guess Google
-    guys don't really worry about costs. On the contrary, they want their salaries
-    to grow. A large unmaintainable monolithic repo is a perfect tool to make
-    it happen.
+    Each repo encapsulates a single problem, hiding its details from everybody else.
+    Thanks to that, the scope each repo has to deal with gets smaller.
+    The smaller the scope, just like in OOP, the easier it is to maintain and modify.
+    The easier to maintain, the cheaper the development.
+    I guess Google guys don't really worry about costs.
+    On the contrary, they want their [salaries]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) to grow.
+    A large unmaintainable monolithic repo is a perfect tool to make it happen.
 
   * **Fast Builds**.
-    When a repo is small, the time its automated build takes is small. Look at the
-    time Travis [spends](https://travis-ci.org/yegor256/colorizejs/builds/420726284)
-    for my jQuery plugin. It's 51 seconds. It's fast.
-    We [all know](https://mortoray.com/2015/05/06/fast-build-turnaround-time-is-essential/)
-    that the faster the build, the better it is for productivity, since it's easier to use
-    the build as a tool for development.
+    When a repo is small, the time its automated build takes is small.
+    Look at the time Travis [spends](https://travis-ci.org/yegor256/colorizejs/builds/420726284) for my jQuery plugin.
+    It's 51 seconds.
+    It's fast.
+    We [all know](https://mortoray.com/2015/05/06/fast-build-turnaround-time-is-essential/) that the faster the build, the better it is for productivity, since it's easier to use the build as a tool for development.
 
   * **Accurate Metrics**.
     I don't know whether you rely on metrics in your projects, but we at
     [Zerocracy](https://www.zerocracy.com) do pay attention to numbers, like
     lines of code, [hits of code]({% pst 2014/nov/2014-11-14-hits-of-code %}),
-    number of commits, classes, methods, cohesion,
-    coupling, etc. It's always a question whether the metrics are accurate.
+    number of commits, classes, methods, cohesion, [coupling], etc.
+    It's always a question whether the metrics are accurate.
     Calculating lines of code for a large repository doesn't make any sense, since
     the number will include a lot of files from completely different parts of
     the application. Moreover there will be different languages and file formats.
@@ -267,12 +268,12 @@ from it are enormous. This is my short list of them:
     Each repository, inevitably, will have its own namespace. For example, in the
     JS repository I just created, I only have two files: `colorizejs.js` and `test-colorizejs.js`.
     I don't really care about the naming inside them, since the namespace
-    is very small. ~~I can even use global variables.~~
+    is small. ~~I can even use global variables.~~
     Shorter names and smaller namespaces mean better maintainability.
 
   * **Simple Tests**.
     The larger the code base, the more dependencies it has, which are difficult
-    to mock and test. Very large code bases become fundamentally untestable since
+    to mock and test. Large code bases become fundamentally untestable since
     they require a lot of integration tests which are difficult to maintain.
     Smaller libraries, frameworks and modules are easier to keep at the level
     of simple and fast unit testing.
@@ -283,3 +284,8 @@ Everything that goes above this line is a perfect candidate for decomposition.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you think is better, a bigger code repository with everything inside, or many smaller ones with their own builds, dependencies, issues, and pull requests?</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1053922638517731329?ref_src=twsrc%5Etfw">October 21, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+[coupling]: https://en.wikipedia.org/wiki/Coupling_(computer_programming)
+[Gulp]: https://gulpjs.com/
+[Jasmine]: https://jasmine.github.io/
+[jQuery]: https://jquery.com/
