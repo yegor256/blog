@@ -51,6 +51,7 @@ account
 accountability
 accountable
 accounts
+accumulate
 accumulating
 accuracy
 accurate
@@ -247,6 +248,7 @@ all
 all-caps
 all-versions
 allconferencecfpalerts
+allegedly
 allen
 alliance
 allies
@@ -1053,6 +1055,7 @@ brainwash
 branch
 branches
 branching
+branching-in-a-sapling-monorepo
 brand
 branded
 branding
@@ -1134,6 +1137,7 @@ bugs
 build
 build-fixing
 build-helper-maven-plugin
+build-with-claude
 buildbot
 builder
 builders
@@ -1929,6 +1933,7 @@ considers
 consist
 consistency
 consistent
+consistently
 consisting
 consists
 console
@@ -1974,6 +1979,7 @@ contentreader
 contentwriter
 contest
 context
+context-windows
 contextinitialized
 continents
 contingency
@@ -2170,6 +2176,7 @@ creatures
 credentials
 credible
 credit
+creep
 crew
 cried
 crime
@@ -2575,6 +2582,7 @@ develop
 developed
 developer
 developer-tester
+developer-tools
 developers
 developers'
 developing
@@ -3252,6 +3260,7 @@ escape
 escapes
 escort
 ESEC
+ESLint
 especially
 esperanto
 essay
@@ -3434,6 +3443,7 @@ extensive
 extent
 external
 extra
+extract
 extracting
 extraordinary
 extreme
@@ -3864,6 +3874,7 @@ freer
 freire
 french
 frequency
+frequent
 frequently
 fresh
 fressermenschen
@@ -4192,6 +4203,8 @@ guilt
 guilt-driven
 guilt-triggering
 guilty
+gulp
+gulpjs
 gun
 gunshots
 gunslingers
@@ -5060,6 +5073,7 @@ jare
 jargon
 jarosz
 JARs
+jasmine
 java
 javabeans
 javac
@@ -5116,6 +5130,7 @@ jennifer
 jens
 jeopardize
 jeopardized
+jeopardizing
 JEP
 jeremy
 jerry
@@ -5550,6 +5565,7 @@ ll
 ller
 LLM
 LLM-based
+LLMs
 LLVM
 load
 loadbookbyid
@@ -6145,11 +6161,13 @@ monitors
 monkey
 monkey-feeding
 monkeys
+mono-repo-infrastructure-yandex-
 mono-tech
 monolith
 monolithic
 monopoly
 monorepo
+monorepos
 monospace
 monster
 monsters
@@ -6580,6 +6598,7 @@ offered
 offering
 offers
 office
+office-based
 officer
 officers
 offices
@@ -6604,6 +6623,7 @@ olive
 ology
 olympic
 on
+on-board
 on-boarding
 on-demand
 on-fly
@@ -6978,6 +6998,7 @@ peak
 peasants
 pedagogy
 pedal
+pedantically
 peer
 peers
 peet's
@@ -7961,6 +7982,7 @@ ReHTTP
 reich
 reinagel
 reinforce
+reintegration
 reinventing
 reis
 reiterate
@@ -8558,6 +8580,7 @@ seeking
 seeks
 seem
 seemed
+seemingly
 seems
 seen
 sees
@@ -8614,6 +8637,7 @@ semi-procedural
 seminar
 seminars
 semnasem
+semver
 send
 sender
 sender's
@@ -8743,6 +8767,7 @@ shift-m
 shifta
 shiftb
 shifting
+shiftmag
 shifts
 shine
 shines
@@ -9016,6 +9041,7 @@ sometime
 sometimes
 somewhere
 son
+sonarsource
 sonatype
 sonolabs
 soon
@@ -9350,6 +9376,7 @@ stylesheet
 stylesheets
 styling
 stylistic
+stylistics
 sub
 sub-module
 sub-projects

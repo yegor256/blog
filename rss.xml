@@ -1,4 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-11-14T03:08:47+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Can’t Merge? Don’t Despair.</title><link href="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html" rel="alternate" type="text/html" title="Can’t Merge? Don’t Despair." /><published>2025-11-09T00:00:00+00:00</published><updated>2025-11-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/09/help-me-cant-merge</id><content type="html" xml:base="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html"><![CDATA[<p>You’ve made a pull request, but it won’t merge.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-11-16T03:38:00+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Small Repo, High Quality</title><link href="https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality.html" rel="alternate" type="text/html" title="Small Repo, High Quality" /><published>2025-11-16T00:00:00+00:00</published><updated>2025-11-16T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality</id><content type="html" xml:base="https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality.html"><![CDATA[<p>I don’t like <a href="/2018/09/05/monolithic-repositories.html">monolithic repositories</a>.
+They keep multiple projects together, often written in different languages, by different teams.
+Unfortunately, <a href="https://dl.acm.org/doi/pdf/10.1145/2854146">Google</a>, <a href="https://engineering.fb.com/2025/10/16/developer-tools/branching-in-a-sapling-monorepo/">Facebook</a>, and <a href="https://shiftmag.dev/mono-repo-infrastructure-yandex-1011/">Yandex</a> favor them.
+Primarily, according to them, <a href="https://monorepo.tools/">monorepos</a> reduce integration <a href="https://www.sonarsource.com/resources/library/monorepo/">overhead</a>.
+They do, but at the cost of quality.
+In smaller repositories we can develop better code.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Морфий (2008) by Алексей Балабанов" src="/images/2025/11/morphine.jpg" longdesc="#04b3173e" /><figcaption id="04b3173e">Морфий (2008) by Алексей Балабанов</figcaption></figure>
+
+<p>When a repository is smaller you can achieve higher quality, for a number of reasons:</p>
+
+<ul>
+  <li>
+    <p><strong>You can be stricter on style.</strong>
+It’s easier to keep a thousand lines consistently formatted than a million.
+With a thousand lines, you can configure <a href="https://eslint.org/">ESLint</a> to its maximum, enabling as many rules as you can find.
+Stricter <a href="/2014/08/13/strict-code-quality-control.html">control</a> over code stylistics leads to cleaner code.</p>
+  </li>
+  <li>
+    <p><strong>You can write deeper tests.</strong>
+Integration (or <a href="/2023/08/22/fast-vs-deep-testing.html">deep</a>) tests are inevitably slow.
+In a smaller repository, a good integration test coverage doesn’t mean a slow build.
+In a larger repository—it does.
+A slow build is something a team tries to avoid, thus jeopardizing the coverage.</p>
+  </li>
+  <li>
+    <p><strong>You can review more pedantically.</strong>
+In a larger repository it may be harder to remember all the aspects of design.
+A pull request that affects different seemingly unrelated code parts
+may be a challenge to <a href="/2015/02/09/serious-code-reviewer.html">review</a>.
+Even if you are the <a href="/2014/10/12/who-is-software-architect.html">architect</a>.</p>
+  </li>
+  <li>
+    <p><strong>You can write a README.</strong>
+Maybe you have noticed already: large open source projects have short and sketchy <a href="/2019/04/23/elegant-readme.html">README</a> files.
+They can’t make them much longer without them becoming as large as a book.
+All they can do is redirect the reader to the documentation website.
+The inability to explain the entire scope in a single file leads to scope creep.
+Contributors struggle to understand the borders of the project.
+This leads, among other bad things, to code duplication.</p>
+  </li>
+  <li>
+    <p><strong>You can release frequently.</strong>
+In a larger repository, frequent reintegration may be expensive, in both time and money.
+In a small repo, a <a href="/2025/04/12/four-builds.html">build</a> of a few seconds is not a dream of programmers, it’s their reality.
+Not only CI is cheap, but also CD.
+After every small change you can publish a new release, with its own <a href="https://semver.org/">version</a>.
+In a monorepo, we tend to wait until a portion of changes accumulate.</p>
+  </li>
+  <li>
+    <p><strong>You can use AI agents effectively.</strong>
+It is no secret that modern LLMs have limited <a href="https://docs.claude.com/en/docs/build-with-claude/context-windows">context windows</a>.
+A million lines of code can’t fit into even the largest of them.
+Even ten thousand lines, let alone a million, is more than an LLM can digest.
+By keeping a repository small we do a big favor to our little friends: AI agents.</p>
+  </li>
+  <li>
+    <p><strong>You can on-board faster.</strong>
+Larger codebases are usually older and more <a href="/2018/09/12/clear-code.html">chaotic</a>, full of legacy code.
+It takes longer to start making meaningful contribution to such a repository.
+Monorepos attract
+<a href="/2015/12/29/turnover-is-good-for-maintainability.html">long-term</a>
+<a href="/2017/05/02/remote-slaves.html">office-based</a>
+contributors
+who care about job security more than about code quality.</p>
+  </li>
+  <li>
+    <p><strong>You can expect responsibility.</strong>
+In larger codebases, the very idea of code ownership is hard to maintain.
+Programmers can hardly feel responsible for the code written and modified by others.
+Smaller repositories, on the other hand, emotionally attach people to code.</p>
+  </li>
+  <li>
+    <p><strong>You can go open source.</strong>
+No matter how much your boss <a href="/2020/05/05/open-source-arms-race.html">loves</a>
+open source, you can’t put your entire enterprise monorepo on GitHub.
+However, if you extract a small part of it, you can.
+The code that is open, visible and criticized by many people,
+is <a href="/2015/12/22/why-dont-you-contribute-to-open-source.html">allegedly</a> of a higher quality.</p>
+  </li>
+</ul>
+
+<p>In summary, you should look for an opportunity to extract a piece of code as a standalone package.
+Then, insist on making it <a href="/2017/05/30/why-contribute-to-open-source.html">open source</a>.
+Then, promote it in the community.
+Then, quit your office job and join <a href="https://www.zerocracy.com">Zerocracy</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html"><![CDATA[By breaking your software into small open-source packages, you make the entire product easier to maintain—and significantly higher in quality.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/morphine.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/morphine.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Can’t Merge? Don’t Despair.</title><link href="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html" rel="alternate" type="text/html" title="Can’t Merge? Don’t Despair." /><published>2025-11-09T00:00:00+00:00</published><updated>2025-11-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/09/help-me-cant-merge</id><content type="html" xml:base="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html"><![CDATA[<p>You’ve made a pull request, but it won’t merge.
 A reviewer says it’s not good or the tests don’t pass.
 No matter what, you can’t get it into the master branch.
 You keep fixing the branch, keep convincing the reviewer, keep hating the tests.
@@ -755,56 +842,4 @@ We—and <a href="https://www.researchgate.net/publication/2559439_An_Overview_o
 
 <p>You might also consider moving the conversation to a mailing list, as <a href="https://producingoss.com/da/bug-tracker-usage.html">suggested by Karl Fogel</a>.
 Or even to Slack or Telegram.
-But I <a href="/2016/08/23/communication-maturity.html">don’t recommend</a> it.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="etiquette" /><summary type="html"><![CDATA[Keep your ticket focused---one issue per report, no distractions, no "by the way"---this is how you help your team achieve higher efficiency.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/bronx-tale.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/bronx-tale.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Let the Bug Reporter Have the Last Word</title><link href="https://www.yegor256.com/2025/04/24/dont-close-their-tickets.html" rel="alternate" type="text/html" title="Let the Bug Reporter Have the Last Word" /><published>2025-04-24T00:00:00+00:00</published><updated>2025-04-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/04/24/dont-close-their-tickets</id><content type="html" xml:base="https://www.yegor256.com/2025/04/24/dont-close-their-tickets.html"><![CDATA[<p>Someone has submitted a bug report to your repository.
-You fix the bug.
-You close the bug report.
-Stop.
-This is wrong.
-You shouldn’t close it.
-Instead, you should ask the reporter to review your fix.
-Then, maybe, they will close the ticket.
-If they don’t, you make another fix, until they do.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Analyze This (1999) by Harold Ramis" src="/images/2025/04/analyze-this.jpg" longdesc="#96fc5703" /><figcaption id="96fc5703">Analyze This (1999) by Harold Ramis</figcaption></figure>
-
-<p>According to <a href="https://www.joelonsoftware.com/2000/11/08/painless-bug-tracking/">Joel Spolsky</a>, “the only person who can close a bug is the person who opened it in the first place.”
-But, why?
-Why shouldn’t you close it, when it’s obvious that the bug is fixed?
-There are at least three reasons.</p>
-
-<p>First, this is <strong>offensive</strong> and <strong>demotivating</strong>.
-Why do I report a bug or suggest a feature?
-Because I’m not happy with your code in its current state.
-Something is broken or doesn’t work as expected.
-I want you to fix it to make me happy.
-I want you to confirm with me whether your fix has made me happy.
-If you don’t ask and simply close the ticket, I <strong>feel</strong> like I’m being <strong>ignored</strong>.
-Why would I bother reporting another bug or feature request?</p>
-
-<p>Second, this is a <strong>quality threat</strong>.
-Quality is always a product of conflict.
-The most productive conflict is the one between programmers and testers.
-Testers try to prove that the software is bad by submitting bug reports.
-Programmers try to prove that the software is good by covering it with tests.
-If you close without confirmation from the reporter, you don’t give them a chance to argue with you.
-Of course, they may shrug their shoulders and reopen the ticket.
-However, not everybody will do this, trying to avoid being disrespectful or simply not having enough permission.
-In the end, no formal acceptance—no quality.</p>
-
-<p>Third, this leads to ticket <strong>duplication</strong>.
-Most bug reporters won’t argue when you close their tickets without asking their permission.
-Instead, they will open new tickets with exactly the same or a similar description.
-The most disciplined will refer to the original ticket.
-Others will fill up the backlog with duplicates, making it messy.</p>
-
-<hr />
-
-<p>There are a few exceptions, though.
-If the ticket is an obvious duplicate, you close it right away.
-No need to ask its author for permission.
-If it’s a question—not a bug report—you close it with an answer.
-Also, if you aren’t planning to fix it, attach the <code class="language-plaintext highlighter-rouge">won't fix</code> badge to it and close.</p>
-
-<p>P.S. I suggest avoiding <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue">automatic issue closing</a> on pull request merge.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><category term="etiquette" /><summary type="html"><![CDATA[Even if the fix looks obvious to you, don't close the bug report; instead, let its author do this after your request.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/04/analyze-this.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/04/analyze-this.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+But I <a href="/2016/08/23/communication-maturity.html">don’t recommend</a> it.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="etiquette" /><summary type="html"><![CDATA[Keep your ticket focused---one issue per report, no distractions, no "by the way"---this is how you help your team achieve higher efficiency.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/bronx-tale.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/bronx-tale.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
