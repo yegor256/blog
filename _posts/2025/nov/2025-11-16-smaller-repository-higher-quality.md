@@ -17,6 +17,7 @@ keywords:
   - github quality
   - quality of software
   - high quality
+book: angry-tests-1 3.49
 image: /images/2025/11/morphine.jpg
 jb_picture:
   caption: Морфий (2008) by Алексей Балабанов
