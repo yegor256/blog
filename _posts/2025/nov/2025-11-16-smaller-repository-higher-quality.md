@@ -5,7 +5,7 @@
 layout: post
 title: "Small Repo, High Quality"
 date: 2025-11-16
-place: Moscow, Russia
+place: St. Petersburg, Russia
 tags: oss
 description: |
   By breaking your software into small open-source packages,
