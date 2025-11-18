@@ -82,7 +82,7 @@ I'm also a bit of a [scientist](/papers.html):
 [Google Scholar](https://scholar.google.com/citations?user=cYmXh60AAAAJ),
 [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor).
 Occasionally teaching in
-[HSE University](https://www.hse.ru/org/persons/776430466) (Moscow, Russia)
+[HSE University](https://www.hse.ru/ba/se/courses/835171227.html) (Moscow, Russia)
 and in
 [Innopolis University](https://innopolis.university/en/) (Kazan, Russia).
 
