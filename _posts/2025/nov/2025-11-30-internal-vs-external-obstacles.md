@@ -86,12 +86,13 @@ They can also persuade you that you must pay for their time, not their pull requ
 Which obstacle is going to be harder for them to overcome depends on *you*.
 
 First, you set up a formula for measuring their contribution.
-Second, you bind their paychecks to it: they get paid not by you, but by *merged pull requests*.
+Second, you bind their paychecks to it: they get paid [not by you]({% pst 2016/may/2016-05-24-who-is-project-manager %}),
+  but by *merged pull requests*.
 Finally, you taboo the very possibility of discussing time-based compensation.
 
 What you get is a technical team focused on resolving external problems.
-The team will *advance* because it will be pointless to *retreat*.
-You simply won't pay them for their time.
+The team will *advance* because it will be [pointless]({% pst 2018/jul/2018-07-24-bugs-or-pull-requests %}) to *retreat*.
+You simply [won't pay]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) them for their time.
 No matter how many times they repeat "I was working hard the entire weekend."
 
 Incentives shape behavior.
