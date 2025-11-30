@@ -69,6 +69,7 @@ achievement
 achievements
 achieves
 achieving
+ACID
 acknowledge
 acknowledgements
 acknowledgments
@@ -723,6 +724,7 @@ backslide
 backstabbing
 backup
 backups
+backward
 bad
 bad-mouthing
 badge
@@ -2311,6 +2313,7 @@ data-set
 database
 database-connected
 databases
+databridge
 datafile
 dataflow
 dataization
@@ -2330,8 +2333,9 @@ davvd
 day
 day-to-day
 days
-db
+DB
 DBWORLD
+DBWriter
 DDD
 de
 de-facto
@@ -2562,6 +2566,7 @@ destroyed
 destroying
 destroys
 destruct
+destruction
 destructive
 destructiveness
 destructors
@@ -3226,7 +3231,7 @@ eo-maven-plugin
 eo-runtime
 EO-SOURCES
 EOapp
-eolang
+EOLANG
 EPAM
 epidemic
 episode
@@ -4417,6 +4422,7 @@ hits
 hits-of-code
 hitsofcode
 hitter
+hitting
 HN
 hoare
 hobbies
@@ -4905,6 +4911,7 @@ interesting
 interestingly
 interests
 interface
+interface-less
 interfaces
 interfere
 interior
@@ -4914,6 +4921,7 @@ internally
 internals
 international
 internationalist
+internationalization
 internet
 interpersonal
 interpret
@@ -4952,6 +4960,7 @@ intuition
 intuitive
 invalid
 invalidate
+invariants
 invent
 invented
 inventing
@@ -5581,6 +5590,7 @@ loc
 local
 localdatetime
 localhost
+localization
 locally
 locals
 locate
@@ -5958,6 +5968,7 @@ messiness
 messy
 met
 META-INF
+metadata
 metal
 metaphor
 metaphors
@@ -6260,6 +6271,7 @@ multiple
 multiply
 multiplying
 multitasking
+multithreading
 multiton
 mumbled
 munich
@@ -6395,6 +6407,7 @@ newsone
 newton
 next
 NeXTSTEP
+nexus
 nginx
 nica
 nice
@@ -6579,6 +6592,7 @@ occurrences
 occurs
 OCD
 ocket
+OCL
 oct
 oct-
 october
@@ -7228,6 +7242,7 @@ podcast
 poetry
 point
 pointer
+pointers
 pointing
 pointless
 points
@@ -8244,6 +8259,7 @@ reviewers
 reviewers'
 reviewing
 reviews
+revision
 revoke
 revolution
 revolutionary
@@ -8391,7 +8407,7 @@ runnable
 running
 runs
 runsinthreads
-RUNTIME
+runtime
 runtime-retained
 runtimeexception
 RUP
@@ -8951,6 +8967,7 @@ slogans
 slope
 sloppy
 slot
+slotted
 slow
 slower
 slowing
@@ -9156,7 +9173,7 @@ sprintf
 sprints
 spy
 spying
-sql
+SQL
 SQL-speaking
 SQLAlchemy
 sqlarticle
@@ -9184,6 +9201,7 @@ staff
 staff-hours
 staffing
 stage
+staged
 stages
 staging
 stake
@@ -9350,6 +9368,7 @@ structuring
 struggle
 stsender
 stsubject
+stub
 stubborn
 stubbornness
 stubs
@@ -9880,6 +9899,7 @@ to
 TO-DO
 tobytearray
 today
+todo
 TODRL
 tofahrenheitstring
 together
@@ -9944,6 +9964,7 @@ trace
 traceability
 traceable
 traces
+tracing
 track
 tracked
 tracker
@@ -10670,6 +10691,7 @@ whopping
 whose
 why
 wide
+widely
 wider
 width
 wiegers
