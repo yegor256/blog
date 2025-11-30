@@ -33,7 +33,7 @@ Sales people are good at selling and the best thing they sell is the idea that t
 Even if they don't sell the product to your customers.
 If you don't buy the idea, they go find another loser who will.
 Something similar happens when you try to pay programmers by result.
-They easily convince you that you, the loser, must pay for [their time]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
+They easily convince you that you must pay for [their time]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
 And you do.
 
 <!--more-->
@@ -69,7 +69,7 @@ However, he is free to choose the *easiest* path.
 In order to make him focus on external obstacles, you should make internal ones *harder* to overcome.
 Joseph Stalin once [said][stalin] that "in the Soviet army it takes more courage to retreat than advance."
 This war-time concept seems relevant to the sales guys you hire.
-It must be harder for them to convince you to pay them a fixed salary than to convince a prospect to buy your product.
+It must be harder for them to talk you into paying them a fixed salary than to convince a prospect to buy your product.
 
 Emotionally, for you it may be rather challenging to constantly push him back.
 Just like it's often hard to say "No" to a gypsy begging for a dollar at the corner.
@@ -80,7 +80,7 @@ The begging strategy, for the gypsy and for the sales rep, is *easier* to pursue
 Programmers are not much different.
 They also have two strategies.
 They can solve technical problems by merging qualified pull requests.
-They can also convince you that you must pay for their time, not their pull requests.
+They can also persuade you that you must pay for their time, not their pull requests.
 Which obstacle is going to be harder for them to overcome depends on *you*.
 
 First, you set up a formula for measuring their contribution.
@@ -91,6 +91,12 @@ What you get is a technical team focused on resolving external problems.
 The team will *advance* because it will be pointless to *retreat*.
 You simply won't pay them for their time.
 No matter how many times they repeat "I was working hard the entire weekend."
+
+Incentives shape behavior.
+If you reward excuses, you buy excuses.
+If you reward results, you get results.
+As a founder, your job is to eliminate the temptation for your team to [sell you]{% pst 2019/jul/2019-07-10-inversive-management %}
+  anything other than tangible artifacts.
 
 [stalin]: https://www.goodreads.com/quotes/338750-in-the-soviet-army-it-takes-more-courage-to-retreat
 [zerocracy]: https://www.zerocracy.com
