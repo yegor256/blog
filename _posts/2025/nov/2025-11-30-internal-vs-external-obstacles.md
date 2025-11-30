@@ -17,9 +17,9 @@ keywords:
   - startup compensation
   - performance-based pay
   - programmer productivity
-image: /images/2025/11/...
+image: /images/2025/11/city-of-god.jpg
 jb_picture:
-  caption: ...
+  caption: City of God (2002) by Kátia Lund
 ---
 
 Let's say, you are a startup founder, like [myself][zerocracy].
