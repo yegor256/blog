@@ -97,7 +97,7 @@ No matter how many times they repeat "I was working hard the entire weekend."
 Incentives shape behavior.
 If you reward excuses, you buy excuses.
 If you reward results, you get results.
-As a founder, your job is to eliminate the temptation for your team to [sell you]{% pst 2019/jul/2019-07-10-inversive-management %}
+As a founder, your job is to eliminate the temptation for your team to [sell you]({% pst 2019/jul/2019-07-10-inversive-management %})
   anything other than tangible artifacts.
 
 [stalin]: https://www.goodreads.com/quotes/338750-in-the-soviet-army-it-takes-more-courage-to-retreat
