@@ -33,7 +33,7 @@ Sales people are good at selling and the best thing they sell is the idea that t
 Even if they don't sell the product to your customers.
 If you don't buy the idea, they go find another loser who will.
 Something similar happens when you try to pay programmers by result.
-They easily convince you that you must pay for [their time]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
+They easily convince you to pay for [their time]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
 And you do.
 
 <!--more-->
@@ -61,6 +61,8 @@ You, on the other hand, sit next to him in the same office and can't hang up.
 You are the *low-hanging fruit*.
 You are the *weakest* prey he can reach out to.
 
+{% quote In order to make him focus on external obstacles, you should make internal ones harder to overcome. %}
+
 A customer is an *external* obstacle that he must overcome in order to get paid, as a sales commission.
 You are an *internal* obstacle, which he may also overcome to get a fixed weekly payment.
 You need him to fight the external obstacle.
@@ -72,10 +74,10 @@ This war-time concept seems relevant to the sales guys you hire.
 It must be harder for them to talk you into paying them a fixed salary than to convince a prospect to buy your product.
 
 Emotionally, for you it may be rather challenging to constantly push him back.
-Just like it's often hard to say "No" to a gypsy begging for a dollar at the corner.
+Just like it's often hard to say "No" to a vagrant begging for a dollar at the corner.
 Beggars, unless they are physically disabled, also, just like sales people, have two possible life strategies.
 Either find a job or beg at the corner.
-The begging strategy, for the gypsy and for the sales rep, is *easier* to pursue.
+The begging strategy, for the vargant and for the sales rep, is *easier* to pursue.
 
 Programmers are not much different.
 They also have two strategies.
