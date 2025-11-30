@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-11-30T04:09:11+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Small Repo, High Quality</title><link href="https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality.html" rel="alternate" type="text/html" title="Small Repo, High Quality" /><published>2025-11-16T00:00:00+00:00</published><updated>2025-11-16T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality</id><content type="html" xml:base="https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality.html"><![CDATA[<p>I don’t like <a href="/2018/09/05/monolithic-repositories.html">monolithic repositories</a>.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-11-30T06:42:44+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">You Are the Low-Hanging Fruit</title><link href="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html" rel="alternate" type="text/html" title="You Are the Low-Hanging Fruit" /><published>2025-11-30T00:00:00+00:00</published><updated>2025-11-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles</id><content type="html" xml:base="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html"><![CDATA[<p>Let’s say, you are a startup founder, like <a href="https://www.zerocracy.com">myself</a>.
+Try to hire a sales guy.
+Offer him a commission-only payment scheme.
+Listen to his reaction: he will demand that you pay a fixed salary too, on top of commission.
+Try to convince him that commission-only is a more reasonable and <a href="/2014/09/24/why-monetary-awards-dont-work.html">motivating</a> setup.
+Goto 1.
+After a number of iterations you realize that the mission is impossible.
+Sales people are good at selling and the best thing they sell is the idea that their <em>time</em> must be compensated.
+Even if they don’t sell the product to your customers.
+If you don’t buy the idea, they go find another loser who will.
+Something similar happens when you try to pay programmers by result.
+They easily convince you to pay for <a href="/2015/07/21/hourly-pay-modern-slavery.html">their time</a>.
+And you do.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="City of God (2002) by Kátia Lund" src="/images/2025/11/city-of-god.jpg" longdesc="#1e31b0ff" /><figcaption id="1e31b0ff">City of God (2002) by Kátia Lund</figcaption></figure>
+
+<p>A sales rep doesn’t know how to write code.
+Most of them don’t even know how computers work.
+However, he <em>perfectly</em> knows how to bullshit people.
+That’s exactly why we need him.
+Because we don’t know how to bullshit people and we don’t want to learn it.</p>
+
+<p>Now, two strategies lie in front of him.
+He can use the skill against the prospects on the market and turn them into paying customers.
+He can also use the same selling skill against you, the owner of the startup.
+Instead of selling the product to the market he can sell <em>himself</em> to you.
+He can sell the idea that even if he fails to sell the product to the customers he still deserves a decent weekly paycheck.</p>
+
+<p>What do you think, which sale is easier to make?
+What would you do in his shoes?
+The answer is obvious.
+The customers are far away and they have no mercy.
+If they don’t like the offer, they simply hang up on him and that’s it.
+You, on the other hand, sit next to him in the same office and can’t hang up.
+You are the <em>low-hanging fruit</em>.
+You are the <em>weakest</em> prey he can reach out to.</p>
+
+<aside class="quote">In order to make him focus on external obstacles, you should make internal ones harder to overcome.
+</aside>
+
+<p>A customer is an <em>external</em> obstacle that he must overcome in order to get paid, as a sales commission.
+You are an <em>internal</em> obstacle, which he may also overcome to get a fixed weekly payment.
+You need him to fight the external obstacle.
+However, he is free to choose the <em>easiest</em> path.</p>
+
+<p>In order to make him focus on external obstacles, you should make internal ones <em>harder</em> to overcome.
+Joseph Stalin once <a href="https://www.goodreads.com/quotes/338750-in-the-soviet-army-it-takes-more-courage-to-retreat">said</a> that “in the Soviet army it takes more courage to retreat than advance.”
+This war-time concept seems relevant to the sales guys you hire.
+It must be harder for them to talk you into paying them a fixed salary than to convince a prospect to buy your product.</p>
+
+<p>Emotionally, for you it may be rather challenging to constantly push him back.
+Just like it’s often hard to say “No” to a vagrant begging for a dollar at the corner.
+Beggars, unless they are physically disabled, also, just like sales people, have two possible life strategies.
+Either find a job or beg at the corner.
+The begging strategy, for the vagrant and for the sales rep, is <em>easier</em> to pursue.</p>
+
+<p>Programmers are not much different.
+They also have two strategies.
+They can solve technical problems by merging qualified pull requests.
+They can also persuade you that you must pay for their time, not their pull requests.
+Which obstacle is going to be harder for them to overcome depends on <em>you</em>.</p>
+
+<p>First, you set up a formula for measuring their contribution.
+Second, you bind their paychecks to it: they get paid <a href="/2016/05/24/who-is-project-manager.html">not by you</a>,
+  but by <em>merged pull requests</em>.
+Finally, you taboo the very possibility of discussing time-based compensation.</p>
+
+<p>What you get is a technical team focused on resolving external problems.
+The team will <em>advance</em> because it will be <a href="/2018/07/24/bugs-or-pull-requests.html">pointless</a> to <em>retreat</em>.
+You simply <a href="/2015/07/21/hourly-pay-modern-slavery.html">won’t pay</a> them for their time.
+No matter how many times they repeat “I was working hard the entire weekend.”</p>
+
+<p>Incentives shape behavior.
+If you reward excuses, you buy excuses.
+If you reward results, you get results.
+As a founder, your job is to eliminate the temptation for your team to <a href="/2019/07/10/inversive-management.html">sell you</a>
+  anything other than tangible artifacts.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html"><![CDATA[Sales reps and programmers can either fight external obstacles to earn their pay, or convince you, the founder, to pay for their time regardless of results; make the internal path harder.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/city-of-god.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/city-of-god.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Small Repo, High Quality</title><link href="https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality.html" rel="alternate" type="text/html" title="Small Repo, High Quality" /><published>2025-11-16T00:00:00+00:00</published><updated>2025-11-16T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality</id><content type="html" xml:base="https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality.html"><![CDATA[<p>I don’t like <a href="/2018/09/05/monolithic-repositories.html">monolithic repositories</a>.
 They keep multiple projects together, often written in different languages, by different teams.
 Unfortunately, <a href="https://dl.acm.org/doi/pdf/10.1145/2854146">Google</a>, <a href="https://engineering.fb.com/2025/10/16/developer-tools/branching-in-a-sapling-monorepo/">Facebook</a>, and <a href="https://shiftmag.dev/mono-repo-infrastructure-yandex-1011/">Yandex</a> favor them.
 Primarily, according to them, <a href="https://monorepo.tools/">monorepos</a> reduce integration <a href="https://www.sonarsource.com/resources/library/monorepo/">overhead</a>.
@@ -770,76 +848,4 @@ They must switch from noise-makers to flaw-finders.</p>
 <p><a href="https://blog.codinghorror.com/about-me/">Jeff Atwood</a>, in his blog post about <a href="https://blog.codinghorror.com/complaint-driven-development/">complaint-driven development</a>, explains it from a business point of view.
 He suggests that instead of implementing what you believe is right, it’s better to give your customers a rough draft and let them complain.
 You’re most often wrong about what they’ll actually complain about.
-The more they complain, the better you listen, the bigger the value you deliver.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[When every piece of work is framed as a bug report --- including feature requests and questions --- a software team may become more productive.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">No BTW in Bug Reports</title><link href="https://www.yegor256.com/2025/05/18/bug-reports-as-contracts.html" rel="alternate" type="text/html" title="No BTW in Bug Reports" /><published>2025-05-18T00:00:00+00:00</published><updated>2025-05-18T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/18/bug-reports-as-contracts</id><content type="html" xml:base="https://www.yegor256.com/2025/05/18/bug-reports-as-contracts.html"><![CDATA[<p>Every ticket—a bug report or a feature request—is a short-term contract.
-You, the reporter, hire them to make a fix or implement a feature.
-They, the team of developers, do it for you—provided you pay, or their motivation is intrinsic—for example, in open source.
-The discussion that happens along the way may help clarify the requirements of the contract.
-It may also help the team convince you that the bug doesn’t deserve a fix.
-Also, it may help them deliver the fix to you and convince you to close the ticket.
-However, the discussion may also <strong>distract</strong> both parties if it loses focus.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Bronx Tale (1993) by Robert De Niro" src="/images/2025/05/bronx-tale.jpg" longdesc="#f1eb3b02" /><figcaption id="f1eb3b02">Bronx Tale (1993) by Robert De Niro</figcaption></figure>
-
-<p>This is how it happens:</p>
-
-<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bug #42: The CSV file is saved in the wrong format.
-Team: Can you provide an example?
-You: Sure, here it is (attached).
-Team: Looks like quotes are missing, we'll fix it.
-You: BTW, why does the file have no header line?
-Team: This is another problem, report it separately.
-</code></pre></div></div>
-
-<p>Indeed, the missing header line might also be a bug.
-It’s related to the issue you just reported—but it’s not part of the contract you’ve established with the team.
-Answering your question could distract them and blur their focus.
-You don’t want that.
-You want them to stay focused on the problem at hand.</p>
-
-<p>A few more good recipes to distract them:</p>
-
-<ul>
-  <li>
-    <p>“<strong>BTW</strong>, it would be great to have another feature that…”</p>
-  </li>
-  <li>
-    <p>“<strong>BTW</strong>, why this code is designed this way?”</p>
-  </li>
-  <li>
-    <p>“<strong>BTW</strong>, I wonder, how this works?”</p>
-  </li>
-</ul>
-
-<p>All of these questions, complaints and suggestions are perfect candidates for new bug reports.</p>
-
-<p>You might think a ticket is an opportunity to <a href="/2014/10/07/stop-chatting-start-coding.html">chat</a> with the team.
-They’re already responding—so why not ask all your questions while you have their attention?
-It feels like they’re interested, so you don’t want to lose the momentum.
-But that’s a false assumption.
-They’re <a href="/2014/11/24/principles-of-bug-tracking.html">not motivated</a> to keep the discussion open.
-What they really want is to close the ticket—ASAP.
-Dragging out the conversation only risks <strong>annoying</strong> them.</p>
-
-<aside class="quote">Nothing hurts a software team more than a silent customer and an empty bug tracker.
-</aside>
-
-<p>You might also believe that submitting a ticket offends the team.
-They already have a lot of work to do—why bother them with even more?
-Every bug report or feature request might seem like an extra burden on their shoulders.
-But again, that’s a false belief.
-Bug reports are the <a href="/2018/02/06/where-to-find-more-bugs.html">fuel</a> for their engines.
-They <a href="/2014/04/13/bugs-are-welcome.html">need</a> your tickets.
-First, because they help clarify requirements.
-Second, because they provide a sense that their work is <strong>needed</strong> and <strong>appreciated</strong>.
-Nothing hurts a software team more than a silent customer and an empty bug tracker.</p>
-
-<p>So, avoid saying “BTW” when talking to the team in a ticket.
-Stick to requesting a fix for the bug you originally reported.
-If something else comes to mind along the way—whether it’s a question, another bug, or a feature request—submit a <strong>new ticket</strong>.
-We—and <a href="https://www.researchgate.net/publication/2559439_An_Overview_of_the_Software_Engineering_Process_and_Tools_in_the_Mozilla_Project">Mozilla</a>—believe that every ticket should be a <a href="/2018/04/24/right-way-to-report-bugs.html">bug report</a>.</p>
-
-<p>You might also consider moving the conversation to a mailing list, as <a href="https://producingoss.com/da/bug-tracker-usage.html">suggested by Karl Fogel</a>.
-Or even to Slack or Telegram.
-But I <a href="/2016/08/23/communication-maturity.html">don’t recommend</a> it.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="testing" /><category term="etiquette" /><summary type="html"><![CDATA[Keep your ticket focused---one issue per report, no distractions, no "by the way"---this is how you help your team achieve higher efficiency.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/bronx-tale.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/bronx-tale.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+The more they complain, the better you listen, the bigger the value you deliver.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[When every piece of work is framed as a bug report --- including feature requests and questions --- a software team may become more productive.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

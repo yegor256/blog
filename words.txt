@@ -69,7 +69,6 @@ achievement
 achievements
 achieves
 achieving
-ACID
 acknowledge
 acknowledgements
 acknowledgments
@@ -724,7 +723,6 @@ backslide
 backstabbing
 backup
 backups
-backward
 bad
 bad-mouthing
 badge
@@ -821,6 +819,7 @@ bees
 before
 beforehand
 beg
+beggars
 begging
 begin
 beginner
@@ -1722,6 +1721,7 @@ comments
 commercial
 commies
 commission
+commission-only
 commit
 commitment
 commits
@@ -2313,7 +2313,6 @@ data-set
 database
 database-connected
 databases
-databridge
 datafile
 dataflow
 dataization
@@ -2333,9 +2332,8 @@ davvd
 day
 day-to-day
 days
-DB
+db
 DBWORLD
-DBWriter
 DDD
 de
 de-facto
@@ -2566,7 +2564,6 @@ destroyed
 destroying
 destroys
 destruct
-destruction
 destructive
 destructiveness
 destructors
@@ -3059,6 +3056,7 @@ eleventh
 eliciting
 elicits
 eligible
+eliminate
 eliminating
 elimination
 elite
@@ -3231,7 +3229,7 @@ eo-maven-plugin
 eo-runtime
 EO-SOURCES
 EOapp
-EOLANG
+eolang
 EPAM
 epidemic
 episode
@@ -4111,6 +4109,7 @@ googling
 GOP
 gosling
 got
+goto
 gotten
 gov
 governed
@@ -4422,7 +4421,6 @@ hits
 hits-of-code
 hitsofcode
 hitter
-hitting
 HN
 hoare
 hobbies
@@ -4686,6 +4684,7 @@ inbox
 inc
 incapable
 incautious
+incentives
 incentivized
 inches
 incl
@@ -4911,7 +4910,6 @@ interesting
 interestingly
 interests
 interface
-interface-less
 interfaces
 interfere
 interior
@@ -4921,7 +4919,6 @@ internally
 internals
 international
 internationalist
-internationalization
 internet
 interpersonal
 interpret
@@ -4960,7 +4957,6 @@ intuition
 intuitive
 invalid
 invalidate
-invariants
 invent
 invented
 inventing
@@ -5053,6 +5049,7 @@ iterable
 iterables
 iterate
 iteration
+iterations
 iterative
 iterator
 iterators
@@ -5590,7 +5587,6 @@ loc
 local
 localdatetime
 localhost
-localization
 locally
 locals
 locate
@@ -5945,6 +5941,7 @@ menus
 mercedes-benz
 merciful
 mercifulness
+mercy
 mere
 merely
 merge
@@ -5968,7 +5965,6 @@ messiness
 messy
 met
 META-INF
-metadata
 metal
 metaphor
 metaphors
@@ -6271,7 +6267,6 @@ multiple
 multiply
 multiplying
 multitasking
-multithreading
 multiton
 mumbled
 munich
@@ -6407,7 +6402,6 @@ newsone
 newton
 next
 NeXTSTEP
-nexus
 nginx
 nica
 nice
@@ -6592,7 +6586,6 @@ occurrences
 occurs
 OCD
 ocket
-OCL
 oct
 oct-
 october
@@ -7242,7 +7235,6 @@ podcast
 poetry
 point
 pointer
-pointers
 pointing
 pointless
 points
@@ -8075,6 +8067,7 @@ renounce
 rent
 renting
 reopen
+rep
 repair
 repaired
 repeat
@@ -8226,6 +8219,7 @@ retire
 retired
 retirement
 retires
+retreat
 retrieve
 retrieved
 retrieves
@@ -8259,7 +8253,6 @@ reviewers
 reviewers'
 reviewing
 reviews
-revision
 revoke
 revolution
 revolutionary
@@ -8407,7 +8400,7 @@ runnable
 running
 runs
 runsinthreads
-runtime
+RUNTIME
 runtime-retained
 runtimeexception
 RUP
@@ -8445,6 +8438,7 @@ said
 sake
 salaries
 salary
+sale
 sales
 sally
 salt
@@ -8967,7 +8961,6 @@ slogans
 slope
 sloppy
 slot
-slotted
 slow
 slower
 slowing
@@ -9173,7 +9166,7 @@ sprintf
 sprints
 spy
 spying
-SQL
+sql
 SQL-speaking
 SQLAlchemy
 sqlarticle
@@ -9201,7 +9194,6 @@ staff
 staff-hours
 staffing
 stage
-staged
 stages
 staging
 stake
@@ -9368,7 +9360,6 @@ structuring
 struggle
 stsender
 stsubject
-stub
 stubborn
 stubbornness
 stubs
@@ -9862,6 +9853,7 @@ till
 tim
 time
 time-and-material
+time-based
 time-consuming
 time-sharing
 time-wasting
@@ -9899,7 +9891,6 @@ to
 TO-DO
 tobytearray
 today
-todo
 TODRL
 tofahrenheitstring
 together
@@ -9964,7 +9955,6 @@ trace
 traceability
 traceable
 traces
-tracing
 track
 tracked
 tracker
@@ -10385,6 +10375,7 @@ UX
 vacation
 vacations
 vaccine
+vagrant
 vague
 vagueness
 vakhobov
@@ -10565,6 +10556,7 @@ want
 wanted
 wants
 WAR
+war-time
 warm
 warn
 warning
@@ -10691,7 +10683,6 @@ whopping
 whose
 why
 wide
-widely
 wider
 width
 wiegers
