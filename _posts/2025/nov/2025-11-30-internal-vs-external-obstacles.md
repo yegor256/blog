@@ -77,7 +77,7 @@ Emotionally, for you it may be rather challenging to constantly push him back.
 Just like it's often hard to say "No" to a vagrant begging for a dollar at the corner.
 Beggars, unless they are physically disabled, also, just like sales people, have two possible life strategies.
 Either find a job or beg at the corner.
-The begging strategy, for the vargant and for the sales rep, is *easier* to pursue.
+The begging strategy, for the vagrant and for the sales rep, is *easier* to pursue.
 
 Programmers are not much different.
 They also have two strategies.
