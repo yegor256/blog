@@ -86,6 +86,7 @@ module Jekyll
       months = {}
       words = []
       site.posts.docs.each do |doc|
+        next if doc.date.year < 2014
         m = doc.date.strftime('%Y-%m')
         months[m] = 0 unless months.key?(m)
         all = Jekyll.all_words(doc.content)
@@ -94,7 +95,6 @@ module Jekyll
       end
       years = months.keys.map { |m| m[0..4].to_i }.uniq
       return if years.empty?
-      years.select! { |y| y > 2013 }
       (years.min..years.max).each do |y|
         (1..12).each do |m|
           txt = format('%<year>4d-%<month>02d', year: y, month: m)
@@ -106,12 +106,7 @@ module Jekyll
         File.join(site.config['source'], '_temp/stats/words.txt'),
         words.sort_by(&:downcase).uniq(&:downcase).join("\n")
       )
-      File.write(
-        dat,
-        months.map do |m, c|
-          "#{m} #{c}"
-        end.join("\n")
-      )
+      File.write(dat, months.map { |m, c| "#{m} #{c}" }.join("\n"))
       qbash(
         "
         src=#{Shellwords.escape(site.config['source'])} &&
