@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: MIT
 
 require 'fileutils'
+require 'qbash'
 
 # Jekyll module
 module Jekyll
@@ -83,10 +84,8 @@ module Jekyll
       dat = File.join(site.config['source'], '_temp/stats/stats.dat')
       FileUtils.mkdir_p File.dirname(dat)
       months = {}
-      min = Time.parse('2014-04-01')
       words = []
       site.posts.docs.each do |doc|
-        next if doc.date < min
         m = doc.date.strftime('%Y-%m')
         months[m] = 0 unless months.key?(m)
         all = Jekyll.all_words(doc.content)
@@ -95,6 +94,7 @@ module Jekyll
       end
       years = months.keys.map { |m| m[0..4].to_i }.uniq
       return if years.empty?
+      years.select! { |y| y > 2013 }
       (years.min..years.max).each do |y|
         (1..12).each do |m|
           txt = format('%<year>4d-%<month>02d', year: y, month: m)
@@ -109,19 +109,20 @@ module Jekyll
       File.write(
         dat,
         months.map do |m, c|
-          "#{m}-01T00:00 #{c}"
+          "#{m} #{c}"
         end.join("\n")
       )
-      puts `
-        set -e
-        src=#{site.config['source']}
-        tmp=#{File.dirname(dat)}
-        cp ${src}/_stats/stats.gpi ${tmp}/stats.gpi
-        cd ${tmp}
-        gnuplot stats.gpi
-        mkdir -p ${src}/_site
+      qbash(
+        "
+        src=#{Shellwords.escape(site.config['source'])} &&
+        tmp=#{Shellwords.escape(File.dirname(dat))} &&
+        cp ${src}/_stats/stats.gpi ${tmp}/stats.gpi &&
+        cd ${tmp} &&
+        gnuplot stats.gpi &&
+        mkdir -p ${src}/_site &&
         cp ${tmp}/stats.svg ${src}/_site/stats.svg
-      `
+        "
+      )
       raise 'failed to build gnuplot stats image' unless $CHILD_STATUS.exitstatus
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'stats.svg')
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'words.txt')
