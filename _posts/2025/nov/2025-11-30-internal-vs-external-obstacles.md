@@ -22,18 +22,18 @@ jb_picture:
   caption: ...
 ---
 
-Let's say, you are a startup founder, like myself.
+Let's say, you are a startup founder, like [myself][zerocracy].
 Try to hire a sales guy.
 Offer him a commission-only payment scheme.
 Listen to his reaction: he will demand that you pay a fixed salary too, on top of commission.
-Try to convince him that commission-only is a more reasonable and motivating setup.
+Try to convince him that commission-only is a more reasonable and [motivating]({% pst 2014/sep/2014-09-24-why-monetary-awards-dont-work %}) setup.
 Goto 1.
 After a number of iterations you realize that the mission is impossible.
 Sales people are good at selling and the best thing they sell is the idea that their *time* must be compensated.
 Even if they don't sell the product to your customers.
 If you don't buy the idea, they go find another loser who will.
 Something similar happens when you try to pay programmers by result.
-They easily convince you that you, the loser, must pay for their time.
+They easily convince you that you, the loser, must pay for [their time]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
 And you do.
 
 <!--more-->
@@ -93,3 +93,4 @@ You simply won't pay them for their time.
 No matter how many times they repeat "I was working hard the entire weekend."
 
 [stalin]: https://www.goodreads.com/quotes/338750-in-the-soviet-army-it-takes-more-courage-to-retreat
+[zerocracy]: https://www.zerocracy.com

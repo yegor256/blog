@@ -36,7 +36,7 @@ if (typeof($) != 'undefined') {
       if ($(e.target).is('input, textarea')) {
         return;
       }
-      if (e.key === 'f' || e.key === 'F') {
+      if ((e.key === 'f' || e.key === 'F') && !e.altKey && !e.ctrlKey && !e.metaKey) {
         e.preventDefault();
         const $f = $('#search-query');
         $f.focus();
