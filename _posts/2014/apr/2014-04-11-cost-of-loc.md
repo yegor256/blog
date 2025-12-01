@@ -65,8 +65,6 @@ any chats or any other informal communications. We discussed everything in
 GitHub issues. The code base was significantly smaller with only about 30k
 lines, of which about 90% was Java and the rest in XML.
 
-{% picture /images/2014/04/shaolin-temple-jet-li.png 0 Shaolin Temple (1982) by Chang Hsin Yen %}
-
 ## Maturity of Development
 
 Both projects hosted their code bases on GitHub. Both teams were developing in
@@ -140,8 +138,6 @@ What I'm trying to express with these numbers is that distributed programming is
 money-wise, than a co-located team. Again, I can hear you
 saying that "line of code" is not a proper metric. But, come on, $0.13 vs.
 $3.98? Thirty times more expensive?
-
-{% picture /images/2014/04/lebowski-they-did-not-receive-the-money.png 0 The Big Lebowski (1998) by Joel Coen %}
 
 It's not about metrics any more. It's about preventing wasteful man hours and
 the huge waste of money that comes with them?
