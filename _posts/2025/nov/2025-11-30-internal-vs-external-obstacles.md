@@ -90,6 +90,8 @@ Second, you bind their paychecks to it: they get paid [not by you]({% pst 2016/m
   but by *merged pull requests*.
 Finally, you taboo the very possibility of discussing time-based compensation.
 
+{% quote Taboo the very possibility of discussing time-based compensation. %}
+
 What you get is a technical team focused on resolving external problems.
 The team will *advance* because it will be [pointless]({% pst 2018/jul/2018-07-24-bugs-or-pull-requests %}) to *retreat*.
 You simply [won't pay]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}) them for their time.
