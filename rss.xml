@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-12-01T08:14:38+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">You Are the Low-Hanging Fruit</title><link href="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html" rel="alternate" type="text/html" title="You Are the Low-Hanging Fruit" /><published>2025-11-30T00:00:00+00:00</published><updated>2025-11-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles</id><content type="html" xml:base="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html"><![CDATA[<p>Let’s say, you are a startup founder, like <a href="https://www.zerocracy.com">myself</a>.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-12-02T07:25:16+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">You Are the Low-Hanging Fruit</title><link href="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html" rel="alternate" type="text/html" title="You Are the Low-Hanging Fruit" /><published>2025-11-30T00:00:00+00:00</published><updated>2025-11-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles</id><content type="html" xml:base="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html"><![CDATA[<p>Let’s say, you are a startup founder, like <a href="https://www.zerocracy.com">myself</a>.
 Try to hire a sales guy.
 Offer him a commission-only payment scheme.
 Listen to his reaction: he will demand that you pay a fixed salary too, on top of commission.
@@ -66,6 +66,9 @@ Which obstacle is going to be harder for them to overcome depends on <em>you</em
 Second, you bind their paychecks to it: they get paid <a href="/2016/05/24/who-is-project-manager.html">not by you</a>,
   but by <em>merged pull requests</em>.
 Finally, you taboo the very possibility of discussing time-based compensation.</p>
+
+<aside class="quote">Taboo the very possibility of discussing time-based compensation.
+</aside>
 
 <p>What you get is a technical team focused on resolving external problems.
 The team will <em>advance</em> because it will be <a href="/2018/07/24/bugs-or-pull-requests.html">pointless</a> to <em>retreat</em>.
