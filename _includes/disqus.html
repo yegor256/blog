@@ -1,5 +1,5 @@
 {% if jekyll.environment == "production" %}
-  <script>var disqus_shortname = '{{ include.shortname }}';</script>
+  <script>const disqus_shortname = '{{ include.shortname }}';</script>
   <script id="dsq-count-scr" src="https://{{ include.shortname }}.disqus.com/count.js" async="async"></script>
 {% endif %}
 
@@ -12,12 +12,13 @@
     <a>&nbsp;</a>
   </div>
   <script>
-    var disqus_config = function () {
+    const disqus_config = function () {
       this.page.url = document.location.href.split('?')[0].split('#')[0];
       this.page.identifier = this.page.url;
     };
     (function() {
-      var d = document, s = d.createElement('script');
+      const d = document;
+      const s = d.createElement('script');
       s.src = 'https://{{ include.shortname }}.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
       (d.head || d.body).appendChild(s);
