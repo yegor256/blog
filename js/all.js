@@ -4,6 +4,9 @@
  */
 
 /*globals $:false, window:false, document:false */
+
+const disqus_shortname = 'yegor256', disqus_domain = 'yegor256.com';
+
 var VK = {};
 if (typeof($) != 'undefined') {
   $(function() {
