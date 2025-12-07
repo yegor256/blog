@@ -260,7 +260,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
   </div>
   <div class="rv">
     <a href="https://www.linkedin.com/in/johnpage76">
-      <img src="//m.c.lnkd.licdn.com/mpr/mpr/shrinknp_400_400/p/8/000/1ea/1c7/3fc7e80.jpg"
+      <img src="https://m.c.lnkd.licdn.com/mpr/mpr/shrinknp_400_400/p/8/000/1ea/1c7/3fc7e80.jpg"
         alt="John Page"/>
     </a>
     <span class="name">John Page</span>
@@ -327,7 +327,7 @@ to your application, please [email me](mailto:blog@yegor256.com).
   </div>
   <div class="rv">
     <a href="https://ph.linkedin.com/in/carlos-miguel-miranda-0b899392">
-      <img src="//www.teamed.io/images/team/carlosmiranda.png"
+      <img src="https://www.teamed.io/images/team/carlosmiranda.png"
         alt="Carlos Miranda"/>
     </a>
     <span class="name">Carlos Miranda</span>
