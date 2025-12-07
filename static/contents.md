@@ -117,6 +117,6 @@ Sort by:
 </div>
 
 {% if jekyll.environment == "production" %}
-  <script>var disqus_shortname = 'yegor256';</script>
+  <script>const disqus_shortname = 'yegor256', disqus_domain = 'yegor256.com';</script>
   <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>
 {% endif %}
