@@ -19,6 +19,6 @@ mkdir -p "${tmp}"
 target=$1
 mkdir -p "${target}"
 
-for e in svg ttf woff eot css; do
+for e in svg ttf woff woff2 eot css; do
   cp "${tmp}/icons.${e}" "${target}"
 done
