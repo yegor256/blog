@@ -117,5 +117,5 @@ Sort by:
 </div>
 
 {% if jekyll.environment == "production" %}
-  <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>
+  {% include disqus-count.html shortname="yegor256" %}
 {% endif %}
