@@ -116,6 +116,4 @@ Sort by:
 {{ site.posts | yb_tagged_list }}
 </div>
 
-{% if jekyll.environment == "production" %}
-  {% include disqus-count.html shortname="yegor256" %}
-{% endif %}
+{% include disqus-count.html shortname="yegor256" %}
