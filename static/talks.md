@@ -130,6 +130,18 @@ I was also seen at [these events](/seen.html).
 
 ### 2025
 
+<span class="venue-rate green">A</span>
+<img src="https://i.ytimg.com/vi/GPJ-LfRpxM4/mqdefault.jpg" class="past-talk" alt="Что защитит наш код от искусственного интеллекта?"/>
+**Что защитит наш код от искусственного интеллекта?**;
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
+29 October 2025.
+I was invited to this private event of The Central Bank of Russia, organized for their programmers.
+The atmosphere was suprisingly warm and welcome.
+The audience was engaged and active, even though my talk was in the evening.
+I enjoyed being there.
+[video](https://www.youtube.com/watch?v=GPJ-LfRpxM4).
+{: .talk-event}
+
 <span class="venue-rate green">B</span>
 <img src="https://i.ytimg.com/vi/hkK8bvvz9OI/mqdefault.jpg" class="past-talk" alt="XX Ершовская лекция по информатике и программированию"/>
 **Взлет и падение объектно-ориентированного программирования**;
