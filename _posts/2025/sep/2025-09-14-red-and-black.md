@@ -60,6 +60,8 @@ You either attend all meetings or learn to be creative in finding reasons why yo
 You are either red or black.
 Once you find your **identity**, you start despising the other side.
 
+{% quote Minimize contact, keep your head down when necessary, and focus on delivering real value where it matters. %}
+
 If you are red, you don't understand the black employees who are constantly rebelling.
 They rebel against the rules you so much enjoy following.
 You see them as dishonest, disloyal, and selfish sociopaths.
