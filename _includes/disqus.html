@@ -11,13 +11,12 @@
       this.page.url = document.location.href.split('?')[0].split('#')[0];
       this.page.identifier = this.page.url;
     };
-    (function() {
-      const d = document;
-      const s = d.createElement('script');
+    $(function() {
+      const s = document.createElement('script');
       s.src = 'https://{{ include.shortname }}.disqus.com/embed.js';
       s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
+      document.head.appendChild(s);
+    });
   </script>
   <noscript>
     <div>
