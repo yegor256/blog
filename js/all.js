@@ -5,7 +5,9 @@
 
 /*globals $:false, window:false, document:false */
 
-var disqus_domain = 'yegor256.com', disqus_shortname = 'yegor256';
+var disqus_domain = 'yegor256.com';
+var disqus_shortname = 'yegor256';
+this.page.identifier = location.origin + location.pathname;
 
 var VK = {};
 if (typeof($) != 'undefined') {
