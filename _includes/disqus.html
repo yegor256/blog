@@ -6,18 +6,6 @@
   <div id="disqus_thread" class="disqus-thread">
     <a>&nbsp;</a>
   </div>
-  <script>
-    const disqus_config = function () {
-      this.page.url = document.location.href.split('?')[0].split('#')[0];
-      this.page.identifier = this.page.url;
-    };
-    $(function() {
-      const s = document.createElement('script');
-      s.src = 'https://{{ include.shortname }}.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      document.head.appendChild(s);
-    });
-  </script>
   <noscript>
     <div>
       <p class="red">

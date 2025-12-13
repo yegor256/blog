@@ -8,6 +8,16 @@
 // This is Disqus configuration, to make it identify the website correctly.
 var disqus_domain = 'yegor256.com';
 var disqus_shortname = 'yegor256';
+const disqus_config = function () {
+  this.page.url = document.location.href.split('?')[0].split('#')[0];
+  this.page.identifier = this.page.url;
+};
+$(function() {
+  const s = document.createElement('script');
+  s.src = 'https://{{ include.shortname }}.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  document.head.appendChild(s);
+});
 
 var VK = {};
 if (typeof($) != 'undefined') {
