@@ -14,7 +14,7 @@ const disqus_config = function () {
 };
 $(function() {
   const s = document.createElement('script');
-  s.src = 'https://{{ include.shortname }}.disqus.com/embed.js';
+  s.src = 'https://yegor256.disqus.com/embed.js';
   s.setAttribute('data-timestamp', +new Date());
   document.head.appendChild(s);
 });
