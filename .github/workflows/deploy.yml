@@ -24,7 +24,7 @@ jobs:
           bundler-cache: true
       - run: sudo .github/install-apt.sh
       - run: bundle exec rake
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         with:
           name: site
           path: _site
@@ -40,7 +40,7 @@ jobs:
           bundler-cache: false
       - run: sudo .github/install-woff.sh
       - run: .github/make-icons.sh icons
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         with:
           name: icons
           path: icons
@@ -50,11 +50,11 @@ jobs:
     needs: [site, icons]
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/download-artifact@v6
+      - uses: actions/download-artifact@v7
         with:
           name: site
           path: gh-pages
-      - uses: actions/download-artifact@v6
+      - uses: actions/download-artifact@v7
         with:
           name: icons
           path: gh-pages/css
