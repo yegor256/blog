@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: MIT
  */
 
-/*globals $:false, document:false */
+/*globals $:false, document:false, window:false */
 
-const disqus_config = function () {
+window.disqus_config = function () {
   this.page.url = document.location.href.split('?')[0].split('#')[0];
   this.page.identifier = this.page.url;
 };
