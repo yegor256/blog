@@ -115,5 +115,3 @@ Sort by:
 <div id="all">
 {{ site.posts | yb_tagged_list }}
 </div>
-
-{% include disqus-count.html shortname="yegor256" %}

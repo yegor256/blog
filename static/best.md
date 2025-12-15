@@ -25,5 +25,3 @@ Here is the blog [contents](/contents.html).
 And don't forget to subscribe to my [monthly updates](/about-me.html).
 
 {{ site.categories['best'] | yb_tagged_list }}
-
-{% include disqus-count.html shortname="yegor256" %}
