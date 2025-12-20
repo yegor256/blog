@@ -22,12 +22,12 @@ keywords:
 
 Aside from being a programmer, I'm also a part-time researcher.
 You can find me in [Scopus], [Google Scholar], and [DBLP] too.
-I'm also a chair of organization committee of the [ICCQ] conference.
+I'm also a chair of the organization committee of the [ICCQ] conference.
 I'm interested in answering two primary research questions:
 
-* Can robots manage humans?
+* Can robots increase [η] of human teams?
 
-* Can objects be as fast as functions?
+* Can objects be faster than functions?
 
 As you can imagine, the questions are challenging, especially for a solo researcher.
 I need your help.
@@ -53,22 +53,23 @@ If we together or you alone publish it on a B+ conference, you get **$256**.
 
 If I suspect that the paper is being written by AI, I will walk away immediately.
 
-Now, the research questions, in no particular order:
+Now, the research questions, most important at the top:
 
 * Can types of _all_ objects and in _all_ programs be inferred in [EO](https://www.eolang.org),
-  a dynamically typed object-oriented programming language without type annotations?
+  a dynamically typed object-oriented programming language that doesn't have type annotations?
 
-* How do the most popular object-oriented programming languages benchmark on dynamic dispatch and object allocation features?
+* How different is the productivity of a team paid per time vs. the team paid per delivered results?
 
-* Which known optimizations of dynamic dispatch performance are implemented in modern C++ compilers?
+* How do the most popular object-oriented programming languages benchmark
+  on dynamic dispatch and object allocation features?
+
+* How does measuring work results affect human motivation?
 
 * How often are virtual table calls used in modern open source C++ projects?
 
-* How many CPU cycles it takes to allocate a memory block via `malloc()` in different Unix-family operating systems?
-
-* What object extension techniques, like decorating, inheritance, or mixins, programmers prefer?
-
 * How many design patterns, out of all known, are dataless?
+
+* How often and how objectively, in software teams, is the output of programmers' work measured?
 
 I update the list regularly.
 Please, revisit it later to check for changes.
@@ -78,3 +79,4 @@ Please, revisit it later to check for changes.
 [DBLP]: https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor
 [tg]: https://t.me/yegor256
 [ICCQ]: https://www.iccq.ru/
+[η]: https://en.wikipedia.org/wiki/Energy_conversion_efficiency
