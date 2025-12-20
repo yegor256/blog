@@ -60,7 +60,7 @@ Now, the research questions, most important at the top:
 
 * How different is the _productivity_ of a team paid per time vs. the team paid per delivered results?
 
-* Can confluence of [𝜑-calculus]() be proven using [Lean4]?
+* Can confluence of [𝜑-calculus] be proven using [Lean4]?
 
 * How do the most popular object-oriented programming languages _benchmark_
   on dynamic dispatch and object allocation features?
