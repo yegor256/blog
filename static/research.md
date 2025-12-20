@@ -60,7 +60,7 @@ Now, the research questions, most important at the top:
 
 * How different is the _productivity_ of a team paid per time vs. the team paid per delivered results?
 
-* Can we prove confluence of [𝜑-calculus]() using Lean4?
+* Can confluence of [𝜑-calculus]() be proven using [Lean4]?
 
 * How do the most popular object-oriented programming languages _benchmark_
   on dynamic dispatch and object allocation features?
@@ -83,3 +83,4 @@ Please, revisit it later to check for changes.
 [ICCQ]: https://www.iccq.ru/
 [η]: https://en.wikipedia.org/wiki/Energy_conversion_efficiency
 [𝜑-calculus]: https://arxiv.org/abs/2111.13384
+[Lean4]: https://github.com/leanprover/lean4
