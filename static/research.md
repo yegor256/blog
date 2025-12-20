@@ -23,10 +23,10 @@ keywords:
 Aside from being a programmer, I'm also a part-time researcher.
 You can find me in [Scopus], [Google Scholar], and [DBLP] too.
 I'm also a chair of organization committee of the [ICCQ] conference.
-I'm interested in answering two research questions:
+I'm interested in answering two primary research questions:
 
 * Can robots manage humans?
-* Can object-oriented code be faster than procedural?
+* Can objects be as fast as functions?
 
 As you can imagine, the questions are challenging, especially for a solo researcher.
 I need your help.
@@ -34,7 +34,7 @@ If you are a student, a practicionaire, a professor, or a team of them---we can 
 I'm not looking for a free help, though, and prepared to reward you.
 
 This is how it works:
-First, you pick up one of the research questions listed below.
+First, you pick up one of the secondary research questions listed below.
 Then, you reach out to me to get an approval to start the research ([text me][tg]).
 Then, we together do the study, write a paper, and try publish it on an A*-conference, as co-authors.
 When the paper is accepted by a conference, I pay you **$4,096** (per paper, not per author).
@@ -48,7 +48,9 @@ In this case you will get only **$1,024**.
 
 These are the research questions, in no particular order:
 
+*
 
+I update the list regularly, come back later to check for changes.
 
 [Scopus]: https://www.scopus.com/authid/detail.uri?authorId=30367443600
 [Google Scholar]: http://scholar.google.ru/citations?user=cYmXh60AAAAJ
