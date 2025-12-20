@@ -26,6 +26,7 @@ I'm also a chair of organization committee of the [ICCQ] conference.
 I'm interested in answering two primary research questions:
 
 * Can robots manage humans?
+
 * Can objects be as fast as functions?
 
 As you can imagine, the questions are challenging, especially for a solo researcher.
@@ -68,3 +69,5 @@ Now, the research questions, in no particular order:
 * What object extension techniques, like decorating, inheritance, or mixins, programmers prefer?
 
 * How many design patterns, out of all known, are dataless?
+
+*
