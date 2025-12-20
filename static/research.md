@@ -65,6 +65,8 @@ Now, the research questions, most important at the top:
 * How do the most popular object-oriented programming languages _benchmark_
   on dynamic dispatch and object allocation features?
 
+* Can any Java program be bi-directionally mapped to [𝜑-calculus]?
+
 * How does _measuring_ work results affect human motivation?
 
 * How often are _virtual table_ calls used in modern open source C++ projects?
