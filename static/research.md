@@ -25,7 +25,7 @@ You can find me in [Scopus], [Google Scholar], and [DBLP] too.
 I'm also a chair of the organization committee of the [ICCQ] conference.
 I'm interested in answering two primary research questions:
 
-* Can robots increase [η] of human teams?
+* Can robots increase [η] of humans?
 
 * Can objects be faster than functions?
 
