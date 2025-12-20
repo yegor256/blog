@@ -70,4 +70,11 @@ Now, the research questions, in no particular order:
 
 * How many design patterns, out of all known, are dataless?
 
-*
+I update the list regularly.
+Please, revisit it later to check for changes.
+
+[Scopus]: https://www.scopus.com/authid/detail.uri?authorId=30367443600
+[Google Scholar]: http://scholar.google.ru/citations?user=cYmXh60AAAAJ
+[DBLP]: https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor
+[tg]: https://t.me/yegor256
+[ICCQ]: https://www.iccq.ru/
