@@ -5,8 +5,8 @@
 layout: static
 title: "Research"
 description: |
-  If you are a student, or an enthusiast, you are welcome to pick
-  one of the research topics, write a paper together with me
+  If you are a student, or a team of students, you are welcome to pick
+  one of the research topics, write a paper together with me,
   and get a stipend of $4,096.
 permalink: research.html
 image: /images/andreea/academic-writing.png
