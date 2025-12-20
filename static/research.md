@@ -40,17 +40,23 @@ Then, we together do the study, write a paper, and try publish it on an A*-confe
 When the paper is accepted by a conference, I pay you **$4,096** (per paper, not per author).
 Let's call it a **stipend**.
 
+If you have some talent and work hard, at least 20 hours per week, a study should take about three months.
+If if takes longer or finishes sooner, the amount of reward remains the same.
+
 An important thing to note before you start: we must strictly follow the [Research Flow]({% pst 2024/feb/2024-02-06-research-flow %}) guidelines.
 If we fall off the schedule, I may stop contributing to the study.
 I simply can't afford spending time on every single project, especially if the discipline is compromised.
 However, even if I stop contributing, you may still publish the study, but without my name on it.
 In this case you will get only **$1,024**.
 
-These are the research questions, in no particular order:
+If I suspect that the paper is being written by AI, I will walk away immediately.
+
+Now, the research questions, in no particular order:
 
 *
 
-I update the list regularly, come back later to check for changes.
+I update the list regularly.
+Please, revisit it later to check for changes.
 
 [Scopus]: https://www.scopus.com/authid/detail.uri?authorId=30367443600
 [Google Scholar]: http://scholar.google.ru/citations?user=cYmXh60AAAAJ
