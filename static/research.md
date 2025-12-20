@@ -36,9 +36,8 @@ I'm not looking for a free help, though, and prepared to reward you.
 This is how it works:
 First, you pick up one of the secondary research questions listed below.
 Then, you reach out to me to get an approval to start the research ([text me][tg]).
-Then, we together do the study, write a paper, and try publish it on an A*-conference, as co-authors.
-When the paper is accepted by a conference, I pay you **$4,096** (per paper, not per author).
-Let's call it a **stipend**.
+Then, we together do the study, write a paper, and try publish it on a _Technical Track_ of an A*-conference, as co-authors.
+When the paper is accepted by a conference, I pay you a stipend of **$4,096** (per paper, not per author).
 
 If you have some talent and work hard, at least 20 hours per week, a study should take about three months.
 If if takes longer or finishes sooner, the amount of reward remains the same.
@@ -48,6 +47,8 @@ If we fall off the schedule, I may stop contributing to the study.
 I simply can't afford spending time on every single project, especially if the discipline is compromised.
 However, even if I stop contributing, you may still publish the study, but without my name on it.
 In this case you will get only **$1,024**.
+
+If we together or you alone publish it on a B+ conference, you get **256**.
 
 If I suspect that the paper is being written by AI, I will walk away immediately.
 
