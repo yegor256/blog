@@ -15,7 +15,7 @@ keywords:
   - papers
   - academic papers
   - yegor bugayenko stipend
-  - spident for research
+  - stipend for research
 ---
 
 {% badge /images/andreea/academic-writing.svg 200 %}
@@ -30,17 +30,17 @@ I'm interested in answering two primary research questions:
 
 As you can imagine, the questions are challenging, especially for a solo researcher.
 I need your help.
-If you are a student, a practicionaire, a professor, or a team of them---we can do a study together.
-I'm not looking for a free help, though, and prepared to reward you.
+If you are a student, a practitioner, a professor, or a team of them---we can do a study together.
+I'm not looking for free help, though, and am prepared to reward you.
 
 This is how it works:
 First, you pick up one of the secondary research questions listed below.
 Then, you reach out to me to get an approval to start the research ([text me][tg]).
-Then, we together do the study, write a paper, and try publish it on a _Technical Track_ of an A*-conference, as co-authors.
+Then, we together do the study, write a paper, and try to publish it on a _Technical Track_ of an A*-conference, as co-authors.
 When the paper is accepted by a conference, I pay you a stipend of **$4,096** (per paper, not per author).
 
 If you have some talent and work hard, at least 20 hours per week, a study should take about three months.
-If if takes longer or finishes sooner, the amount of reward remains the same.
+If it takes longer or finishes sooner, the amount of reward remains the same.
 
 An important thing to note before you start: we must strictly follow the [Research Flow]({% pst 2024/feb/2024-02-06-research-flow %}) guidelines.
 If we fall off the schedule, I may stop contributing to the study.
@@ -48,19 +48,23 @@ I simply can't afford spending time on every single project, especially if the d
 However, even if I stop contributing, you may still publish the study, but without my name on it.
 In this case you will get only **$1,024**.
 
-If we together or you alone publish it on a B+ conference, you get **256**.
+If we together or you alone publish it on a B+ conference, you get **$256**.
 
 If I suspect that the paper is being written by AI, I will walk away immediately.
 
 Now, the research questions, in no particular order:
 
-*
+* Can types of _all_ objects and in _all_ programs be inferred in [EO](https://www.eolang.org),
+  a dynamically typed object-oriented programming language without type annotations?
 
-I update the list regularly.
-Please, revisit it later to check for changes.
+* How do the most popular object-oriented programming languages benchmark on dynamic dispatch and object allocation features?
 
-[Scopus]: https://www.scopus.com/authid/detail.uri?authorId=30367443600
-[Google Scholar]: http://scholar.google.ru/citations?user=cYmXh60AAAAJ
-[DBLP]: https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor
-[tg]: https://t.me/yegor256
-[ICCQ]: https://www.iccq.ru/
+* Which known optimizations of dynamic dispatch performance are implemented in modern C++ compilers?
+
+* How often are virtual table calls used in modern open source C++ projects?
+
+* How many CPU cycles it takes to allocate a memory block via `malloc()` in different Unix-family operating systems?
+
+* What object extension techniques, like decorating, inheritance, or mixins, programmers prefer?
+
+* How many design patterns, out of all known, are dataless?
