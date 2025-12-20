@@ -58,18 +58,18 @@ Now, the research questions, most important at the top:
 * Can types of _all_ objects and in _all_ programs be inferred in [EO](https://www.eolang.org),
   a dynamically typed object-oriented programming language that doesn't have type annotations?
 
-* How different is the productivity of a team paid per time vs. the team paid per delivered results?
+* How different is the _productivity_ of a team paid per time vs. the team paid per delivered results?
 
-* How do the most popular object-oriented programming languages benchmark
+* How do the most popular object-oriented programming languages _benchmark_
   on dynamic dispatch and object allocation features?
 
-* How does measuring work results affect human motivation?
+* How does _measuring_ work results affect human motivation?
 
-* How often are virtual table calls used in modern open source C++ projects?
+* How often are _virtual table_ calls used in modern open source C++ projects?
 
-* How many design patterns, out of all known, are dataless?
+* How many design patterns, out of all known, are _dataless_?
 
-* How often and how objectively, in software teams, is the output of programmers' work measured?
+* How often and how objectively, in software teams, is the _output_ of programmers' work measured?
 
 I update the list regularly.
 Please, revisit it later to check for changes.
