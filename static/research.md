@@ -18,7 +18,7 @@ keywords:
   - stipend for research
 ---
 
-{% badge /images/andreea/academic-writing.svg 200 %}
+{% badge /images/andreea/academic-writing.svg 175 %}
 
 Aside from being a programmer, I'm also a part-time researcher.
 You can find me in [Scopus], [Google Scholar], and [DBLP] too.
