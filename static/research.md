@@ -25,9 +25,9 @@ You can find me in [Scopus], [Google Scholar], and [DBLP] too.
 I'm also a chair of the organization committee of the [ICCQ] conference.
 I'm interested in answering two primary research questions:
 
-* Can robots increase [η] of humans?
+* **Can robots increase [η] of humans?**
 
-* Can objects be faster than functions?
+* **Can objects be faster than functions?**
 
 As you can imagine, the questions are challenging, especially for a solo researcher.
 I need your help.
