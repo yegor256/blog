@@ -40,3 +40,7 @@ Volume 1:<br/>
 
 Apr 16, 2025:
 The first volume was published [on Amazon](https://amzn.to/4czWVkh).
+
+Dec 19, 2025:
+[Started](https://x.com/yegor256/status/2003480458940809490)
+to write the second volume.
