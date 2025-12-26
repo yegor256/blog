@@ -56,24 +56,36 @@ If I suspect that the paper is being written by AI, I will walk away immediately
 Now, the research questions, most important at the top:
 
 * Can types of _all_ objects and in _all_ programs be inferred in [EO](https://www.eolang.org),
-  a dynamically typed object-oriented programming language that doesn't have type annotations?
+  a dynamically typed object-oriented programming language that
+  [doesn't have]({% pst 2025/aug/2025-08-17-type-annotations %})
+  type annotations?
 
-* How different is the _productivity_ of a team paid per time vs. the team paid per delivered results?
+* How different is the _productivity_ of a team paid
+  per time vs. the team paid per delivered results
+  ([some data]({% pst 2014/apr/2014-04-11-cost-of-loc %}) already available)?
 
-* Can _confluence_ of [𝜑-calculus] be proven using [Lean4]?
+* Can _confluence_ of [𝜑-calculus] be proven using [Lean4]
+  (we've [tried](https://github.com/objectionary/proof))?
 
 * How do the most popular object-oriented programming languages _benchmark_
-  on dynamic dispatch and object allocation features?
+  on dynamic dispatch and object allocation features
+  ([some data](https://github.com/yegor256/fibonacci) is ready)?
 
-* Can any Java program _map_ to [𝜑-calculus] and backwards?
+* Can any Java program _map_ to [𝜑-calculus] and backwards
+  (we've [tried](https://github.com/polystat/j2eo),
+  also for [C](https://github.com/polystat/c2eo) and
+  [Python](https://github.com/polystat/py2eo))?
 
 * How does _measuring_ work results affect human motivation?
 
-* How often are _virtual table_ calls used in modern open source C++ projects?
+* How often are _virtual table_ calls used in modern open source C++ projects
+  [we've [done it](https://arxiv.org/abs/2410.05631) for Java]?
 
-* How many design patterns, out of all known, are _dataless_?
+* How many design patterns, out of all actively used ones, are _dataless_
+  (the [dataset](https://github.com/yegor256/cam) is ready)?
 
-* How often and how objectively, in software teams, is the _output_ of programmers' work measured?
+* How often and how objectively, in 50+ surveyed software teams,
+  is the _output_ of programmers' work measured?
 
 I update the list regularly.
 Please, revisit it later to check for changes.
