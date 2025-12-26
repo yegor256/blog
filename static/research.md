@@ -60,21 +60,21 @@ Now, the research questions, most important at the top:
   [doesn't have]({% pst 2025/aug/2025-08-17-type-annotations %})
   type annotations?
 
-* How different is the _productivity_ of a team paid
-  per time vs. the team paid per delivered results
-  ([some data]({% pst 2014/apr/2014-04-11-cost-of-loc %}) already available)?
-
-* Can _confluence_ of [𝜑-calculus] be proven using [Lean4]
-  (we've [tried](https://github.com/objectionary/proof))?
-
-* How do the most popular object-oriented programming languages _benchmark_
-  on dynamic dispatch and object allocation features
-  ([some data](https://github.com/yegor256/fibonacci) is ready)?
-
 * Can any Java program _map_ to [𝜑-calculus] and backwards
   (we've [tried](https://github.com/polystat/j2eo),
   also for [C](https://github.com/polystat/c2eo) and
   [Python](https://github.com/polystat/py2eo))?
+
+* Can _confluence_ of [𝜑-calculus] be proven using [Lean4]
+  (we've [tried](https://github.com/objectionary/proof))?
+
+* How different is the _productivity_ of a team paid
+  per time vs. the team paid per delivered results
+  ([some data]({% pst 2014/apr/2014-04-11-cost-of-loc %}) already available)?
+
+* How do the most popular object-oriented programming languages _benchmark_
+  on dynamic dispatch and object allocation features
+  ([some data](https://github.com/yegor256/fibonacci) is ready)?
 
 * How does _measuring_ work results affect human motivation?
 
