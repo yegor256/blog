@@ -40,7 +40,7 @@ Then, you reach out to me to get an approval to start the research ([text me][tg
 Then, we together do the study, write a paper, and try to publish it on a _Technical Track_ of an A*-conference, as co-authors.
 When the paper is accepted by a conference, I pay you a stipend of **$4,096** (per paper, not per author).
 
-If you have some talent and work hard, at least 20 hours per week, a study should take about three months.
+If you have some talent and work hard, at least 20 hours per week, a study should take about four months.
 If it takes longer or finishes sooner, the amount of reward remains the same.
 
 An important thing to note before you start: we must strictly follow the [Research Flow]({% pst 2024/feb/2024-02-06-research-flow %}) guidelines.
