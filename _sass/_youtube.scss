@@ -8,6 +8,7 @@
   @extend %desktop-only;
   @extend %unprintable;
   @extend %gray;
+
   border-left: 4 * $px solid #e52d27;
   float: right;
   font-size: .8 * $em;

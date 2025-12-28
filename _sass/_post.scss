@@ -56,15 +56,12 @@ article {
 
 .buttons {
   @extend %unprintable;
-  margin-bottom: .5 * $em;
 
-  a,
-  a:visited {
-    text-decoration: none;
-  }
+  margin-bottom: .5 * $em;
 
   a {
     position: relative;
+    text-decoration: none;
 
     .count {
       background-color: white;
@@ -82,6 +79,7 @@ article {
 
     .icon {
       $size: 1.2;
+
       border: 1 * $px solid $grey;
       border-radius: 50%;
       color: $grey;
@@ -106,6 +104,7 @@ article {
 .quote {
   @extend %desktop-only;
   @extend %unprintable;
+
   border-left: 4 * $px solid darkgreen;
   float: right;
   font-size: 1.6 * $em;
@@ -122,6 +121,7 @@ article {
 .book {
   @extend %desktop-only;
   @extend %unprintable;
+
   float: right;
   font-family: $code-font;
   margin: .5 * $em -6 * $em .5 * $em $em;

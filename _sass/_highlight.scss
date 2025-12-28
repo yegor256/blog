@@ -10,7 +10,7 @@ pre {
   font-weight: 400;
 
   @media all and (max-width: $width) {
-    font-family: 'Ubuntu Mono';
+    font-family: 'Ubuntu Mono', monospace;
     letter-spacing: -1 * $px;
   }
 }
@@ -22,6 +22,21 @@ code {
   hyphens: none;
   line-height: $em;
   padding: 0 .15 * $em;
+}
+
+pre {
+  display: block;
+  font-size: .9 * $em;
+  line-height: 1.2 * $em;
+
+  code {
+    background-color: inherit;
+    padding: 0;
+  }
+
+  @media all and (max-width: $width) {
+    line-height: 1.2 * $em;
+  }
 }
 
 .highlighter-rouge pre {
@@ -55,6 +70,7 @@ code {
   .linenos {
     @extend %gray;
     @extend %desktop-only;
+
     min-width: 2 * $em;
     padding-right: 2 * $px;
     text-align: right;
@@ -67,20 +83,5 @@ code {
 
   @media all and (max-width: $width) {
     overflow-x: auto;
-  }
-}
-
-pre {
-  display: block;
-  font-size: .9 * $em;
-  line-height: 1.2 * $em;
-
-  code {
-    background-color: inherit;
-    padding: 0;
-  }
-
-  @media all and (max-width: $width) {
-    line-height: 1.2 * $em;
   }
 }
