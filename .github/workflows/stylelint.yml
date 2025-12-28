@@ -16,5 +16,4 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
-      - run: cd node && npm install
-      - run: cd node && npx stylelint "_sass/*.scss"
+      - run: npx stylelint "_sass/*.scss"
