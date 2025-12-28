@@ -16,7 +16,5 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
-      - name: stylelint
-        uses: actions-hub/stylelint@master
-        env:
-          PATTERN: "_sass/*.scss"
+      - run: cd node && npm install
+      - run: cd node && npx stylelint "_sass/*.scss"
