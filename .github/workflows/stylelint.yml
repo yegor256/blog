@@ -19,4 +19,4 @@ jobs:
       - name: stylelint
         uses: actions-hub/stylelint@master
         env:
-          PATTERN: "*.scss"
+          PATTERN: "_sass/*.scss"
