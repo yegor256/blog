@@ -19,4 +19,5 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 20
-      - run: npx stylelint "_sass/*.scss"
+      - run: npm install stylelint-config-standard-scss
+      - run: npx stylelint -c .github/stylelint.json "_sass/*.scss"
