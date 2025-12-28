@@ -5,25 +5,16 @@
 // SPDX-License-Identifier: MIT
 
 @use "sass:color";
-
-@import 'disqus';
-@import 'defs';
-@import 'fonts';
-@import 'highlight';
-@import 'ico';
-@import 'post';
-@import 'wrapper';
-@import 'youtube';
-@import 'russian';
-
-%gray {
-  color: gray;
-
-  a,
-  a:visited {
-    color: inherit;
-  }
-}
+@use 'defs' as *;
+@use 'placeholders' as *;
+@use 'disqus';
+@use 'fonts';
+@use 'highlight';
+@use 'ico';
+@use 'post';
+@use 'wrapper' as *;
+@use 'youtube';
+@use 'russian';
 
 .em2 { font-size: 2 * $em; }
 .center { text-align: center; }
@@ -32,56 +23,13 @@
 .orange { color: orange; }
 .gray { @extend %gray; }
 
-%clear { clear: both; }
-
-%small { font-size: .85 * $em; }
-
-%strike { text-decoration: line-through; }
-
-%main-font {
-  font-family: $main-font;
-  font-style: normal;
-  font-weight: normal;
-}
-%main-font-bold {
-  // Because it doesn't work anyway. Something is wrong with this Cambria in the bold style
-  //font-family: $main-font;
-  font-style: normal;
-  //font-weight: bold;
-}
-%main-font-italic {
-  //font-family: $main-font;
-  font-style: italic;
-  //font-weight: normal;
-}
-
-%desktop-only {
-  @media all and (max-width: $width) {
-    display: none;
-  }
-}
-
 .desktop-only { @extend %desktop-only; }
 
 .jb_picture { @extend %unprintable; }
 
 twitter-widget { @extend %unprintable; }
 
-%unprintable {
-  @media print {
-    display: none !important;
-    visibility: hidden;
-  }
-}
-
 .unprintable { @extend %unprintable; }
-
-%printable {
-  @media not print  {
-    display: none !important;
-    visibility: hidden;
-  }
-}
 
 .clear { @extend %clear; }
 

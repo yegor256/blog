@@ -1,0 +1,53 @@
+// SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+// SPDX-License-Identifier: MIT
+
+@use 'defs' as *;
+
+%gray {
+  color: gray;
+
+  a,
+  a:visited {
+    color: inherit;
+  }
+}
+
+%clear { clear: both; }
+
+%small { font-size: .85 * $em; }
+
+%strike { text-decoration: line-through; }
+
+%main-font {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+}
+
+%main-font-bold {
+  font-style: normal;
+}
+
+%main-font-italic {
+  font-style: italic;
+}
+
+%desktop-only {
+  @media all and (max-width: $width) {
+    display: none;
+  }
+}
+
+%unprintable {
+  @media print {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+%printable {
+  @media not print  {
+    display: none !important;
+    visibility: hidden;
+  }
+}
