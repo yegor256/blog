@@ -8,7 +8,6 @@ require 'rake'
 require 'fileutils'
 require 'tempfile'
 require 'rake/clean'
-require 'scss_lint/rake_task'
 require 'w3c_validators'
 require 'nokogiri'
 require 'rubocop/rake_task'
@@ -24,7 +23,6 @@ task default: [
   :build,
   :pages,
   :garbage,
-  :scss_lint,
   :spell,
   :regex,
   :excerpts,
@@ -65,22 +63,6 @@ task :clean do
   rm_rf '_temp'
   rm_rf 'gnuplot'
   done 'Jekyll temporary files and directories deleted'
-end
-
-desc 'Lint SASS sources'
-SCSSLint::RakeTask.new do |t|
-  FileUtils.mkdir_p('_temp')
-  paths = []
-  Dir['css/**/*.scss'].each do |css|
-    name = File.basename(css)
-    f = File.open("_temp/#{name}", 'w')
-    f << File.open(css).drop(2).join("\n")
-    f.flush
-    f.close
-    paths << f.path
-  end
-  paths += Dir['_sass/**/*.scss']
-  t.files = Dir.glob(paths)
 end
 
 desc 'Build Jekyll site'

@@ -3,12 +3,13 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "TypeScript"
+title: "The Fall of JavaScript"
 date: 2025-12-28
 place: Istanbul, Turkey
 tags: oop
 description: |
-  ...
+  JavaScript was an elegant prototype-based class-free language
+  until TypeScript and ES6 classes ruined it.
 keywords:
   - TypeScript
   - TypeScript is ugly
@@ -24,12 +25,11 @@ In 1995, [Brendan Eich] was hired by [Netscape] and asked to create a language f
 Rumors say, he designed Mocha in [10 days], later renamed to [LiveScript], and then to [JavaScript].
 It was [planned][popularity-post] to make it similar to [Scheme], a LISP-syntax language.
 Instead, to [please][popularity-post] the crowd of C++/Java coders, it was made syntactically similar to Java.
-In 2008, Brendan has made a tragic mistake: he [donated] $1,000 in support of Californian anti-gay marriage [law].
+In 2008, Brendan made a tragic mistake: he [donated] $1,000 in support of Californian anti-gay marriage [law].
 In 2014, he joined [Mozilla] as a CEO and the crowd remembered his anti-diversity gesture.
 He had to [step down] and founded Brave Software, the developer of the [Brave] browser.
 Somewhere around that time they started to kill JavaScript.
 Still doing it pretty good, thanks to recent [ECMAScript] updates and [TypeScript].
-By "they" I mean the crowd, not gay activists specifically, of course.
 
 <!--more-->
 
@@ -48,7 +48,7 @@ And then he [concluded][popularity-post] (pay attention, it's C not C++):
 
 [Self], which he refers to a few times, is a prototype-based object-oriented language
   designed by [David Ungar] and [Randall Smith] in [Xerox PARC], then [Stanford University], and then [Sun Microsystems].
-Self doesn't have classes, such as Java or C++.
+Self doesn't have classes, unlike Java or C++.
 Instead, it only has objects.
 To create a new object in Self we make a copy of an existing object, known as prototype, and then modify some of its slots (attributes).
 
@@ -66,7 +66,7 @@ Every `rename` leads to a search in a [virtual table] of `book`.
 To the contrary, C++, where types are known in compile time, can dispatch `rename()` instantly:
 
 ```
-Book b();
+Book b;
 b.rename("Object Thinking");
 ```
 
@@ -78,19 +78,26 @@ The compiler must be smart enough to understand it without our hints.
 
 This is a debatable topic though.
 Some believe that type annotations help programmers better understand the code and make fewer mistakes.
-I'm also in favor of fewer mistakes, but would rather expect the compiler to do this work for me.
-If I do `b.rename()` and `b` is known to be a car instead of a book, I would expect the compiler to refuse to compile.
+I'm also in favor of fewer mistakes, but would rather expect the compiler to infer types automatically, without my annotations.
+If I do `b.rename()` and `b` is known to be a car instead of a book, I would expect the compiler to figure this out on its own and refuse to compile.
 
 Anyway, JavaScript was designed as a prototype-based dynamically typed language with a minimalistic syntax that resembles Java.
-It worked perfectly fine until Microsoft stepped in.
+It worked perfectly fine until the industry decided to "fix" it.
 
-First, in 2012, [Microsoft] created [TypeScript], a JavaScript with type annotations.
+In 2008, [Mozilla] and others [proposed][es4-story] ECMAScript 4, which included classes, modules, and other features.
+[Microsoft] took an [extreme position][es4-fight], refusing to accept any part of ES4.
+Chris Wilson, Microsoft's Internet Explorer platform architect, [criticized][es4-fight] ES4 for trying to introduce too many changes.
+Brendan Eich [accused][es4-fight] Wilson of spreading falsehoods and playing political games.
+ES4 was [abandoned][es4-story], and classes were dropped.
 
-Second, in 2015, [ECMAScript 6] added classes (among a ton of other features) to the JavaScript specification,
-  the development of which was led by [Allen Wirfs-Brock], Microsoft's [representative][auth0].
-Supposedly to make JavaScript more intuitive to those already traumatized by Java/C++ class hierarchies.
+Then, in 2012, Microsoft created [TypeScript], a JavaScript with type annotations and classes.
+Since classes weren't in the standard, Microsoft made their own.
 
-Let's hear what Douglas Crockford, one of the developers of JS, [said][douglas-said] in 2014:
+Finally, in 2015, [ECMAScript 6] added classes (among other features) to the JavaScript specification.
+Many ES4 features, including classes, were [revived][es4-story] in a "maximally minimal" form.
+The crowd of Java/C++ developers got what they wanted.
+
+Let's hear what Douglas Crockford, one of the evangelists of JS, [said][douglas-said] in 2014:
 
 > Class-free programming is JavaScript's contribution to humanity.
 
@@ -101,15 +108,27 @@ Maybe they just want to make the crowd happy.
 
 Type annotations and classes don't match with the concept of class-free object-based programming of JavaScript.
 They came from Java or C++ but don't fit in.
-Some programmers may find them helpful, but only because they are used to see them in other languages.
+Some programmers may find them helpful, but only because they are used to seeing them in other languages.
 JavaScript is not Java, even though the names look similar.
 
-Java, with its classes, implementation inheritance, and static methods, is OOP for dummies.
-It's object-oriented programming for those who, according to [Douglas Crockford][douglas-said], don't know what is object-oriented programming.
-JavaScript, on the other hand, is a member of conceptually solid OO languages, like Smalltalk and Self.
+Java, with its
+  [classes]({% pst 2016/sep/2016-09-20-oop-without-classes %}),
+  [implementation inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}),
+  and
+  [static methods]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}),
+  is OOP for dummies.
+It's object-oriented programming for those who, according to [Douglas Crockford][douglas-said], don't know what
+  [object-oriented programming]({% pst 2016/aug/2016-08-15-what-is-wrong-object-oriented-programming %}) is.
+JavaScript, on the other hand, is a member of conceptually solid OO languages, like [Smalltalk] and Self.
 Blending Java flavors into JavaScript only ruins the flavor of the latter.
 
-It's sad to see how once straight object-centric language paradigm turned into a diversity of unmatchable and suboptimal features.
+It's sad to see how a once straight object-centric language paradigm turned into a diversity of unmatchable and suboptimal features.
+
+P.S. JavaScript is still a great language if you ignore classes and type annotations.
+When I write in JavaScript, I don't use them.
+Look at the code in the [yegor256/jo] repository.
+It illustrates the [Junior Objects](/books/junior-objects) book of mine.
+I'm proud of this code.
 
 [Brendan Eich]: https://github.com/BrendanEich
 [JavaScript]: https://en.wikipedia.org/wiki/JavaScript
@@ -136,6 +155,8 @@ It's sad to see how once straight object-centric language paradigm turned into a
 [Self]: https://selflanguage.org/
 [duck typing]: https://en.wikipedia.org/wiki/Duck_typing
 [virtual table]: https://en.wikipedia.org/wiki/Dispatch_table
-[auth0]: https://auth0.com/blog/the-real-story-behind-es4/
-[Allen Wirfs-Brock]: https://www.linkedin.com/in/allenwb
+[es4-story]: https://auth0.com/blog/the-real-story-behind-es4/
+[es4-fight]: https://www.theregister.com/2008/08/15/adobe_microsoft_ecma_javascript/
 [ECMAScript 6]: https://262.ecma-international.org/6.0/
+[yegor256/jo]: https://github.com/yegor256/jo
+[Smalltalk]: https://en.wikipedia.org/wiki/Smalltalk

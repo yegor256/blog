@@ -1,8 +1,9 @@
 // SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
 
-@import 'defs';
-@import 'wrapper';
+@use 'defs' as *;
+@use 'wrapper' as *;
+@use 'placeholders' as *;
 
 .disqus {
   @extend %unprintable;

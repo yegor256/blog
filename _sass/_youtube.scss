@@ -1,6 +1,9 @@
 // SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
 
+@use 'defs' as *;
+@use 'placeholders' as *;
+
 .youtube {
   @extend %desktop-only;
   @extend %unprintable;
