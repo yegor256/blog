@@ -1,4 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-12-28T06:46:20+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">You Are the Low-Hanging Fruit</title><link href="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html" rel="alternate" type="text/html" title="You Are the Low-Hanging Fruit" /><published>2025-11-30T00:00:00+00:00</published><updated>2025-11-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles</id><content type="html" xml:base="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html"><![CDATA[<p>Let’s say, you are a startup founder, like <a href="https://www.zerocracy.com">myself</a>.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2025-12-28T12:44:18+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Fall of JavaScript</title><link href="https://www.yegor256.com/2025/12/28/fall-of-javascript.html" rel="alternate" type="text/html" title="The Fall of JavaScript" /><published>2025-12-28T00:00:00+00:00</published><updated>2025-12-28T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/12/28/fall-of-javascript</id><content type="html" xml:base="https://www.yegor256.com/2025/12/28/fall-of-javascript.html"><![CDATA[<p>In 1995, <a href="https://github.com/BrendanEich">Brendan Eich</a> was hired by <a href="https://en.wikipedia.org/wiki/Netscape">Netscape</a> and asked to create a language for their HTML browser.
+Rumors say, he designed Mocha in <a href="https://exploringjs.com/es5/ch04.html">10 days</a>, later renamed to <a href="https://stackoverflow.com/questions/2018731">LiveScript</a>, and then to <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>.
+It was <a href="https://brendaneich.com/2008/04/popularity/">planned</a> to make it similar to <a href="https://www.scheme.org/">Scheme</a>, a LISP-syntax language.
+Instead, to <a href="https://brendaneich.com/2008/04/popularity/">please</a> the crowd of C++/Java coders, it was made syntactically similar to Java.
+In 2008, Brendan made a tragic mistake: he <a href="https://www.theguardian.com/technology/2014/apr/02/controversial-mozilla-ceo-made-donations-right-wing-candidates-brendan-eich">donated</a> $1,000 in support of Californian anti-gay marriage <a href="https://en.wikipedia.org/wiki/2008_California_Proposition_8">law</a>.
+In 2014, he joined <a href="https://www.mozilla.org/">Mozilla</a> as a CEO and the crowd remembered his anti-diversity gesture.
+He had to <a href="https://blog.mozilla.org/en/mozilla/brendan-eich-steps-down-as-mozilla-ceo/">step down</a> and founded Brave Software, the developer of the <a href="https://brave.com/">Brave</a> browser.
+Somewhere around that time they started to kill JavaScript.
+Still doing it pretty good, thanks to recent <a href="https://en.wikipedia.org/wiki/ECMAScript">ECMAScript</a> updates and <a href="https://www.typescriptlang.org/">TypeScript</a>.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Platoon (1986) by Oliver Stone" src="/images/2025/12/platoon.jpg" longdesc="#aeacd232" /><figcaption id="aeacd232">Platoon (1986) by Oliver Stone</figcaption></figure>
+
+<p>In the JavaScript created 30 years ago, objects were primitive associative arrays of properties.
+Either data, a function, or another object may be attached to a property of an object.
+Let’s see what Brendan <a href="https://brendaneich.com/2008/04/popularity/">said</a> about JS in 2008:</p>
+
+<blockquote>
+  <p>I’m happy that I chose Scheme-ish first-class functions and Self-ish prototypes as the main ingredients.</p>
+</blockquote>
+
+<p>First-class functions mean that it’s possible to use a function as a value assignable to a variable.
+And then he <a href="https://brendaneich.com/2008/04/popularity/">concluded</a> (pay attention, it’s C not C++):</p>
+
+<blockquote>
+  <p>Yet many curse it, including me. I still think of it as a quickie love-child of C and Self.</p>
+</blockquote>
+
+<p><a href="https://selflanguage.org/">Self</a>, which he refers to a few times, is a prototype-based object-oriented language
+  designed by <a href="https://en.wikipedia.org/wiki/David_Ungar">David Ungar</a> and <a href="https://www.linkedin.com/in/randallsmith1/">Randall Smith</a> in <a href="https://en.wikipedia.org/wiki/PARC_(company)">Xerox PARC</a>, then <a href="https://www.stanford.edu/">Stanford University</a>, and then <a href="https://en.wikipedia.org/wiki/Sun_Microsystems">Sun Microsystems</a>.
+Self doesn’t have classes, unlike Java or C++.
+Instead, it only has objects.
+To create a new object in Self we make a copy of an existing object, known as prototype, and then modify some of its slots (attributes).</p>
+
+<p>In Self, objects don’t have types: all method calls are dispatched in runtime.
+For example, we ask a book to rename itself:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>book rename: "Object Thinking".
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">rename</code> is the method of the <code class="language-plaintext highlighter-rouge">book</code> that we call with a single string argument.
+The computer doesn’t know anything about the <code class="language-plaintext highlighter-rouge">book</code> until it’s time to call the <code class="language-plaintext highlighter-rouge">rename</code> method.
+Obviously, such a <a href="https://en.wikipedia.org/wiki/Duck_typing">duck typing</a> has its performance drawback.
+Every <code class="language-plaintext highlighter-rouge">rename</code> leads to a search in a <a href="https://en.wikipedia.org/wiki/Dispatch_table">virtual table</a> of <code class="language-plaintext highlighter-rouge">book</code>.
+To the contrary, C++, where types are known in compile time, can dispatch <code class="language-plaintext highlighter-rouge">rename()</code> instantly:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Book b;
+b.rename("Object Thinking");
+</code></pre></div></div>
+
+<p>Types (classes in C++ and interfaces in Java) and <a href="/2025/08/17/type-annotations.html">type annotations</a> are helpful—to the compiler.
+To us humans they are a burden.
+They require us to do the work of the compiler.
+We have to pollute our code with messages like: “This object <code class="language-plaintext highlighter-rouge">b</code> is of type <code class="language-plaintext highlighter-rouge">Book</code>, please remember.”
+The compiler must be smart enough to understand it without our hints.</p>
+
+<p>This is a debatable topic though.
+Some believe that type annotations help programmers better understand the code and make fewer mistakes.
+I’m also in favor of fewer mistakes, but would rather expect the compiler to infer types automatically, without my annotations.
+If I do <code class="language-plaintext highlighter-rouge">b.rename()</code> and <code class="language-plaintext highlighter-rouge">b</code> is known to be a car instead of a book, I would expect the compiler to figure this out on its own and refuse to compile.</p>
+
+<p>Anyway, JavaScript was designed as a prototype-based dynamically typed language with a minimalistic syntax that resembles Java.
+It worked perfectly fine until the industry decided to “fix” it.</p>
+
+<p>In 2008, <a href="https://www.mozilla.org/">Mozilla</a> and others <a href="https://auth0.com/blog/the-real-story-behind-es4/">proposed</a> ECMAScript 4, which included classes, modules, and other features.
+<a href="https://www.microsoft.com/">Microsoft</a> took an <a href="https://www.theregister.com/2008/08/15/adobe_microsoft_ecma_javascript/">extreme position</a>, refusing to accept any part of ES4.
+Chris Wilson, Microsoft’s Internet Explorer platform architect, <a href="https://www.theregister.com/2008/08/15/adobe_microsoft_ecma_javascript/">criticized</a> ES4 for trying to introduce too many changes.
+Brendan Eich <a href="https://www.theregister.com/2008/08/15/adobe_microsoft_ecma_javascript/">accused</a> Wilson of spreading falsehoods and playing political games.
+ES4 was <a href="https://auth0.com/blog/the-real-story-behind-es4/">abandoned</a>, and classes were dropped.</p>
+
+<p>Then, in 2012, Microsoft created <a href="https://www.typescriptlang.org/">TypeScript</a>, a JavaScript with type annotations and classes.
+Since classes weren’t in the standard, Microsoft made their own.</p>
+
+<p>Finally, in 2015, <a href="https://262.ecma-international.org/6.0/">ECMAScript 6</a> added classes (among other features) to the JavaScript specification.
+Many ES4 features, including classes, were <a href="https://auth0.com/blog/the-real-story-behind-es4/">revived</a> in a “maximally minimal” form.
+The crowd of Java/C++ developers got what they wanted.</p>
+
+<p>Let’s hear what Douglas Crockford, one of the evangelists of JS, <a href="https://www.youtube.com/watch?v=PSGEjv3Tqo0&amp;t=360s">said</a> in 2014:</p>
+
+<blockquote>
+  <p>Class-free programming is JavaScript’s contribution to humanity.</p>
+</blockquote>
+
+<p>Unfortunately, not anymore.
+It looks like the developers of recent versions of JS believe in something else.
+Or maybe they don’t want to make a contribution to humanity anymore.
+Maybe they just want to make the crowd happy.</p>
+
+<p>Type annotations and classes don’t match with the concept of class-free object-based programming of JavaScript.
+They came from Java or C++ but don’t fit in.
+Some programmers may find them helpful, but only because they are used to seeing them in other languages.
+JavaScript is not Java, even though the names look similar.</p>
+
+<p>Java, with its
+  <a href="/2016/09/20/oop-without-classes.html">classes</a>,
+  <a href="/2016/09/13/inheritance-is-procedural.html">implementation inheritance</a>,
+  and
+  <a href="/2014/05/05/oop-alternative-to-utility-classes.html">static methods</a>,
+  is OOP for dummies.
+It’s object-oriented programming for those who, according to <a href="https://www.youtube.com/watch?v=PSGEjv3Tqo0&amp;t=360s">Douglas Crockford</a>, don’t know what
+  <a href="/2016/08/15/what-is-wrong-object-oriented-programming.html">object-oriented programming</a> is.
+JavaScript, on the other hand, is a member of conceptually solid OO languages, like <a href="https://en.wikipedia.org/wiki/Smalltalk">Smalltalk</a> and Self.
+Blending Java flavors into JavaScript only ruins the flavor of the latter.</p>
+
+<p>It’s sad to see how a once straight object-centric language paradigm turned into a diversity of unmatchable and suboptimal features.</p>
+
+<p>P.S. JavaScript is still a great language if you ignore classes and type annotations.
+When I write in JavaScript, I don’t use them.
+Look at the code in the <a href="https://github.com/yegor256/jo">yegor256/jo</a> repository.
+It illustrates the <a href="/books/junior-objects">Junior Objects</a> book of mine.
+I’m proud of this code.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[JavaScript was an elegant prototype-based class-free language until TypeScript and ES6 classes ruined it.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/12/platoon.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/12/platoon.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">You Are the Low-Hanging Fruit</title><link href="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html" rel="alternate" type="text/html" title="You Are the Low-Hanging Fruit" /><published>2025-11-30T00:00:00+00:00</published><updated>2025-11-30T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles</id><content type="html" xml:base="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html"><![CDATA[<p>Let’s say, you are a startup founder, like <a href="https://www.zerocracy.com">myself</a>.
 Try to hire a sales guy.
 Offer him a commission-only payment scheme.
 Listen to his reaction: he will demand that you pay a fixed salary too, on top of commission.
@@ -789,69 +900,4 @@ In every request made to the team we have to explain the difference between our 
 The lack of such an explanation seems to be the primary source of confusion and frustration in task tracking.</p>
 
 <p>Apparently, very few programmers have this skill: formulating a problem as a complaint.
-AI should help us.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[ChatGPT helps us re-format GitHub issue titles after their authors submit them --- helping developers understand their tasks better.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/flawless.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/flawless.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Stop Asking and Suggesting — Just Complain</title><link href="https://www.yegor256.com/2025/05/25/bug-driven-development.html" rel="alternate" type="text/html" title="Stop Asking and Suggesting — Just Complain" /><published>2025-05-25T00:00:00+00:00</published><updated>2025-05-25T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/25/bug-driven-development</id><content type="html" xml:base="https://www.yegor256.com/2025/05/25/bug-driven-development.html"><![CDATA[<p>Wikipedia <a href="https://en.wikipedia.org/wiki/Tester-driven_development">says</a> that Bug Driven Development (BDD) is an anti-pattern.
-<a href="https://github.com/rajakolluru">Raja Shankar Kolluru</a> perfectly <a href="https://itmusings.com/bug-driven-development/">explains</a> why.
-However, <a href="https://github.com/FlorianRappl">Florian Rappl</a> <a href="https://www.florian-rappl.de/News/Page/227/bug-driven-development">argues</a> that it’s not.
-<a href="https://github.com/benwinding">Ben Winding</a> <a href="https://blog.benwinding.com/bug-driven-development-sometimes-its-the-best-choice/">believes</a> that it’s better than TDD.
-In simple words, BDD is kind of like trying to build a plane while it’s flying, based on passenger complaints.
-Nobody builds planes like that (well, maybe <a href="https://spectrum.ieee.org/how-the-boeing-737-max-disaster-looks-to-a-software-developer">Boeing</a> and <a href="https://www.theguardian.com/technology/2015/may/20/airbus-issues-alert-software-bug-fatal-plane-crash">Airbus</a>).
-However, a software team that practices BDD might demonstrate higher productivity.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Ghost Dog (1999) by Jim Jarmush" src="/images/2025/05/ghost-dog.jpg" longdesc="#32d0d0e9" /><figcaption id="32d0d0e9">Ghost Dog (1999) by Jim Jarmush</figcaption></figure>
-
-<p>A software team does BDD if it follows one simple principle:
-Every piece of work is formulated as a <strong>complaint</strong>.</p>
-
-<p>It started <a href="https://www.researchgate.net/publication/2559439_An_Overview_of_the_Software_Engineering_Process_and_Tools_in_the_Mozilla_Project">in 2002</a>, by Mozilla:</p>
-
-<blockquote>
-  <p>Every code change in the Mozilla codebase is made as part of a “fix” for a uniquely numbered “bug.” Though it commonly has a pejorative connotation, in the Mozilla Project the term bug is used to refer to any filed request for modification in the software, be it an actual defect, an enhancement, or a change in functionality.</p>
-</blockquote>
-
-<p>If you listen to Mozilla’s advice, you won’t have feature requests, or questions, or tasks in your <a href="https://en.wikipedia.org/wiki/Issue_tracking_system">issue tracking system</a>.
-Only bug reports.
-They may sound like “The wing is on fire!”—a perfect complaint—or “A plane doesn’t have a jacuzzi!”—a perfect feature request in the form of a complaint.
-Questions may also look like complaints: “It is unclear how to fasten the belt.”
-Whether they are coming from testers or customers, the format is the same: “I don’t like it.”</p>
-
-<p>The primary benefit that BDD can give to a project is <strong>noise reduction</strong>.
-I can think of two reasons for that:</p>
-
-<ol>
-  <li>
-    <p>Complaints, due to their rather aggressive nature, require their authors to provide strong arguments to back them up.
-They must think twice before submitting a ticket that accuses the codebase of being broken or imperfect.
-They must be specific and precise.
-No noise.</p>
-  </li>
-  <li>
-    <p>Similarly, programmers must convince a complainant that the problem is resolved.
-They can’t close the ticket with just a text answer.
-They need to demonstrate a reasonably significant contribution to the codebase.
-No noise.</p>
-  </li>
-</ol>
-
-<p>A good complaint identifies a <strong>flaw</strong> in something tangible.
-A good resolution of a good complaint is a <strong>patch</strong> to that tangible something.
-Obviously, in a software project, the <strong>source code</strong> is what is tangible.</p>
-
-<aside class="quote">Bug tracker is not a support line for your coding troubles.
-</aside>
-
-<p>In a disciplined team, every ticket is a bug report that addresses a flaw in the source code.
-Every bug report leads to a patch—a contribution to the source code.
-No noise.
-The team is focused and demonstrates the best possible productivity.</p>
-
-<p>BDD also has a major drawback.
-It may be hard to train the team to use it.
-The adoption of BDD may require a change of their <strong>mindset</strong>.
-They must switch from noise-makers to flaw-finders.</p>
-
-<p><a href="https://blog.codinghorror.com/about-me/">Jeff Atwood</a>, in his blog post about <a href="https://blog.codinghorror.com/complaint-driven-development/">complaint-driven development</a>, explains it from a business point of view.
-He suggests that instead of implementing what you believe is right, it’s better to give your customers a rough draft and let them complain.
-You’re most often wrong about what they’ll actually complain about.
-The more they complain, the better you listen, the bigger the value you deliver.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[When every piece of work is framed as a bug report --- including feature requests and questions --- a software team may become more productive.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/ghost-dog.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+AI should help us.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[ChatGPT helps us re-format GitHub issue titles after their authors submit them --- helping developers understand their tasks better.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/flawless.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/flawless.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

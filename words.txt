@@ -4,6 +4,7 @@ a-ha
 aa
 aaron
 abandon
+abandoned
 abdul
 abide
 abilities
@@ -380,6 +381,7 @@ anti-
 anti-defamation
 anti-depressant
 anti-depressants
+anti-diversity
 anti-gay
 anti-OOP
 anti-pattern
@@ -500,6 +502,7 @@ arrangement
 array
 arrayfromrandom
 arraynumbers
+arrays
 arrive
 arrived
 arrives
@@ -556,6 +559,7 @@ assessment
 asset
 assets
 assign
+assignable
 assigned
 assignee
 assigning
@@ -570,6 +574,7 @@ assists
 associate
 associated
 associating
+associative
 asstring
 assume
 assumed
@@ -947,6 +952,7 @@ blamed
 blames
 blaming
 blank
+blending
 blindly
 bloat
 blob
@@ -1072,6 +1078,9 @@ breaks
 breakthrough
 breathe
 breeds
+brendan
+brendan-eich-steps-down-as-mozilla-ceo
+brendaneich
 brevity
 brew
 brexit
@@ -1372,6 +1381,7 @@ cfcd
 cfg
 CFO
 CFP
+ch
 chain
 chained
 chaining
@@ -1519,6 +1529,7 @@ clarity
 clashes
 clashing
 class
+class-free
 classcastexception
 classes
 classic
@@ -2021,6 +2032,7 @@ controllers
 controlling
 controls
 controversial
+controversial-mozilla-ceo-made-donations-right-wing-candidates-brendan-eich
 convenience
 convenient
 convention
@@ -2199,6 +2211,7 @@ critiques
 critiquing
 CRLF
 CRMs
+crockford
 cron
 crooks
 cross
@@ -2254,6 +2267,7 @@ curl
 curl-appveyor
 current
 currently
+curse
 cursing
 cursors
 curtain
@@ -2739,6 +2753,8 @@ disney
 disobey
 disobeying
 disorder
+dispatch
+dispatched
 dispatcher
 dispatchers
 dispatching
@@ -2838,6 +2854,7 @@ don
 don't
 donald
 donate
+donated
 donates
 donations
 donators
@@ -2862,6 +2879,8 @@ doubt
 doubted
 doubting
 doubts
+douglas
+douglas-said
 down
 down-to-earth
 down-voted
@@ -2911,6 +2930,7 @@ drone
 DronMDF
 drop
 dropbox
+dropped
 drucker
 drunk
 DRY
@@ -2919,6 +2939,7 @@ DTO
 DTOs
 duarte
 dublin
+duck
 dude
 due
 dues
@@ -2939,6 +2960,7 @@ during
 duties
 dw
 dynamic
+dynamically
 dynamicity
 dynamics
 dynamo
@@ -2978,6 +3000,8 @@ EC
 eckel
 eclipse
 eclipse-ee
+ecma
+ecma-international
 ECMAScript
 eco-friendly
 eco-manager
@@ -3001,6 +3025,7 @@ editor-in-chief
 editors
 edits
 edsger
+edu
 educate
 educated
 educating
@@ -3027,6 +3052,7 @@ egoists
 ehcache
 ehrenreich
 ehsan
+eich
 eight
 eighth
 einstein
@@ -3298,6 +3324,7 @@ evaluates
 evaluating
 evaluation
 evangelist
+evangelists
 evans
 eve
 even
@@ -3419,6 +3446,7 @@ exploiting
 exploratory
 explore
 explorer
+exploringjs
 expo
 exponential
 expose
@@ -3506,6 +3534,7 @@ fallen
 falling
 falls
 false
+falsehoods
 familiar
 families
 family
@@ -3667,6 +3696,7 @@ firing
 firm
 firm's
 first
+first-class
 firstitem
 fischer
 fish
@@ -3700,6 +3730,8 @@ flat
 flatter
 flattering
 flattery
+flavor
+flavors
 flaw
 flaw-finders
 flawed
@@ -4513,6 +4545,7 @@ human-like
 human-readable
 humane
 humanistic
+humanity
 humans
 humble
 humbly
@@ -5088,6 +5121,7 @@ javalobby
 javaone
 javaoneconf
 javascript
+javascript's
 javax
 javazone
 javdoc
@@ -5545,6 +5579,7 @@ lions
 liquibase
 lisette
 liskov
+LISP-syntax
 list
 list-unsubscribe
 listed
@@ -5566,6 +5601,7 @@ little
 live
 lived
 lives
+livescript
 living
 ll
 ller
@@ -5647,6 +5683,7 @@ loud
 loudmouth
 lousy
 love
+love-child
 loves
 loving
 low
@@ -5855,6 +5892,7 @@ maven-resources-plugin
 maven-war-plugin
 max
 maxim-pr
+maximally
 maximize
 maximizing
 maximum
@@ -6012,6 +6050,7 @@ microscope
 microservice
 microservices
 microsoft
+microsoft's
 microsystems
 microtask
 microtaskers
@@ -6058,6 +6097,7 @@ mine
 minecraft
 miner
 minicomputers
+minimal
 minimalistic
 minimize
 minimum
@@ -6121,6 +6161,7 @@ ML
 MMMM
 mo
 mobile
+mocha
 mock
 mock-up
 mockery
@@ -6377,6 +6418,7 @@ nesting
 net
 net-social-phobic
 netbout
+netscape
 network
 networking
 networks
@@ -6542,6 +6584,8 @@ obeying
 obeys
 object
 object's
+object-based
+object-centric
 object-orientation
 object-oriented
 object-relational
@@ -6899,6 +6943,7 @@ parallel
 parallelized
 parameter
 parameters
+PARC
 parent
 parenting
 parents
@@ -7276,6 +7321,7 @@ poorly
 pope
 popular
 popularity
+popularity-post
 populate
 population
 poputchikiinno
@@ -7565,6 +7611,7 @@ promotions
 prompt
 prompts
 pronoun
+pronto
 proof
 proof-of-concept
 proofreaders
@@ -7585,6 +7632,7 @@ propose
 proposed
 proposes
 proposing
+proposition
 proprietary
 pros
 prose
@@ -7604,6 +7652,8 @@ protest
 protocol
 protocols
 prototype
+prototype-based
+prototypes
 prototyping
 proud
 prove
@@ -7634,6 +7684,7 @@ pseudo-code
 pseudo-object-oriented
 psfacebook
 psfake
+PSGEjv
 pslogout
 psychological
 psychologically
@@ -7715,6 +7766,7 @@ queue
 quick
 quickbooks
 quicker
+quickie
 quickly
 quicktalk
 quiet
@@ -7751,6 +7803,8 @@ rake
 RAM
 raman
 ran
+randall
+randallsmith
 random
 randomized
 randomly
@@ -8142,6 +8196,7 @@ researching
 researchr
 resell
 resemble
+resembles
 resent
 resented
 resentful
@@ -8253,6 +8308,7 @@ reviewers
 reviewers'
 reviewing
 reviews
+revived
 revoke
 revolution
 revolutionary
@@ -8508,6 +8564,7 @@ schedules
 scheduling
 schema
 scheme
+scheme-ish
 schemes
 schlossberg
 scholar
@@ -8616,6 +8673,7 @@ self-esteem
 self-explainable
 self-humiliation
 self-improvement
+self-ish
 self-management
 self-managing
 self-motivated
@@ -8629,6 +8687,7 @@ self-respect
 self-sufficient
 selfish
 selfishly
+selflanguage
 selflessly
 sell
 seller
@@ -8961,6 +9020,7 @@ slogans
 slope
 sloppy
 slot
+slots
 slow
 slower
 slowing
@@ -8982,6 +9042,7 @@ smelly
 smile
 smiles
 smiling
+smith
 smoke
 smoking
 smooth
@@ -9155,6 +9216,7 @@ spots
 spouse
 spouses
 spread
+spreading
 spreads
 spreadsheet
 spreadsheets
@@ -9755,6 +9817,7 @@ thanks
 that
 that's
 the
+the-real-story-behind-es
 theft
 theguardian
 their
@@ -9772,6 +9835,7 @@ there
 there's
 thereby
 therefore
+theregister
 thermometer
 these
 thesis
@@ -9950,6 +10014,7 @@ town
 toxic
 toXML
 toy
+tqo
 trac
 trace
 traceability
@@ -10122,6 +10187,7 @@ typed
 types
 types-announce
 typescript
+typescriptlang
 typesetting
 typical
 typically
@@ -10222,6 +10288,7 @@ unforgivable
 unforgiven
 unfortunate
 unfortunately
+ungar
 unhappiness
 unhappy
 unhealthy
@@ -10257,6 +10324,7 @@ unlocks
 unmaintainable
 unmanageable
 unmarshalling
+unmatchable
 unmatched
 unmitigated
 unmodifiablelist
@@ -10701,6 +10769,7 @@ willing
 willingness
 willis
 willis's
+wilson
 win
 win-lose
 win-win
