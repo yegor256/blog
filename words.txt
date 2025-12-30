@@ -3324,7 +3324,6 @@ evaluates
 evaluating
 evaluation
 evangelist
-evangelists
 evans
 eve
 even
@@ -5229,6 +5228,8 @@ jquery
 js
 JSch
 JSF
+JSLint
+jslint-org
 JSON
 json-schema
 jsonbook
