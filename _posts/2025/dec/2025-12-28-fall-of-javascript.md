@@ -97,7 +97,7 @@ Finally, in 2015, [ECMAScript 6] added classes (among other features) to the Jav
 Many ES4 features, including classes, were [revived][es4-story] in a "maximally minimal" form.
 The crowd of Java/C++ developers got what they wanted.
 
-Let's hear what Douglas Crockford, one of the evangelists of JS, [said][douglas-said] in 2014:
+Let's hear what [Douglas Crockford], the creator of [JSON] and [JSLint], [said][douglas-said] in 2014:
 
 > Class-free programming is JavaScript's contribution to humanity.
 
@@ -160,3 +160,5 @@ I'm proud of this code.
 [ECMAScript 6]: https://262.ecma-international.org/6.0/
 [yegor256/jo]: https://github.com/yegor256/jo
 [Smalltalk]: https://en.wikipedia.org/wiki/Smalltalk
+[JSON]: https://en.wikipedia.org/wiki/JSON
+[JSLint]: https://github.com/jslint-org/jslint
