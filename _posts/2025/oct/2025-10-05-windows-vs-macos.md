@@ -22,7 +22,7 @@ jb_picture:
   caption: Das Experiment (2001) by Oliver Hirschbiegel
 ---
 
-In 2020, in the [Junior Objects](/books/junior-objects) book I wrote this:
+In 2020, in the [Junior Objects](/junior-objects.html) book I wrote this:
   "_Windows is not suitable for programmers.
   If you meet anyone who will tell you otherwise, you must know that you deal with a bad programmer, or a poor one, which are the same things.
   Your computer has to be MacBook._"

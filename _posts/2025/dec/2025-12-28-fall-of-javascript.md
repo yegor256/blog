@@ -127,7 +127,7 @@ It's sad to see how a once straight object-centric language paradigm turned into
 P.S. JavaScript is still a great language if you ignore classes and type annotations.
 When I write in JavaScript, I don't use them.
 Look at the code in the [yegor256/jo] repository.
-It illustrates the [Junior Objects](/books/junior-objects) book of mine.
+It illustrates the [Junior Objects](/junior-objects.html) book of mine.
 I'm proud of this code.
 
 [Brendan Eich]: https://github.com/BrendanEich
