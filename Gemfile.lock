@@ -44,37 +44,19 @@ GEM
     faraday-net_http (3.4.2)
       net-http (~> 0.5)
     fastimage (2.4.0)
-    ffi (1.17.2-aarch64-linux-gnu)
-    ffi (1.17.2-arm-linux-gnu)
-    ffi (1.17.2-arm64-darwin)
-    ffi (1.17.2-x64-mingw-ucrt)
-    ffi (1.17.2-x86_64-darwin)
-    ffi (1.17.2-x86_64-linux-gnu)
-    ffi (1.17.2-x86_64-linux-musl)
+    ffi (1.17.3-aarch64-linux-gnu)
+    ffi (1.17.3-arm-linux-gnu)
+    ffi (1.17.3-arm64-darwin)
+    ffi (1.17.3-x64-mingw-ucrt)
+    ffi (1.17.3-x86_64-darwin)
+    ffi (1.17.3-x86_64-linux-gnu)
+    ffi (1.17.3-x86_64-linux-musl)
     fiber-annotation (0.2.0)
     fiber-local (1.1.0)
       fiber-storage
     fiber-storage (1.0.1)
     forwardable-extended (2.6.0)
     google-protobuf (4.33.2)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.2-aarch64-linux-gnu)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.2-arm64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.2-x64-mingw-ucrt)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.2-x86_64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.2-x86_64-linux-gnu)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.2-x86_64-linux-musl)
       bigdecimal
       rake (>= 13)
     hashery (2.1.2)
@@ -236,7 +218,7 @@ GEM
     redcarpet (3.6.1)
     regexp_parser (2.11.3)
     rexml (3.4.4)
-    rouge (4.6.1)
+    rouge (4.7.0)
     rss (0.3.2)
       rexml
     rubocop (1.82.1)
