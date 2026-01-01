@@ -112,7 +112,7 @@ Published: 22 June 2020.
 {: .book-par}
 
 {: .book-badge}
-{% badge /images/books/angry-tests/cover.png 125 /angry-tests.html %}
+{% badge /images/books/angry-tests/cover-1.png 125 /angry-tests.html %}
 
 It is a book about automated testing. It summarizes everything I have to say about unit testing,
 integration testing, and code quality. It is essentially a summary of my
