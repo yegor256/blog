@@ -24,7 +24,7 @@ style: |
 ---
 
 {: .book-badge}
-{% badge /images/books/angry-tests/cover.png 160 %}
+{% badge /images/books/angry-tests/cover.png 160 https://amzn.to/4czWVkh %}
 
 "Angry Tests" is a book about automated testing. I wrote it in just one month:
 January 2025. It summarizes everything I have to say about unit testing,
