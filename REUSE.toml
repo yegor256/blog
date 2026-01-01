@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 version = 1
@@ -53,5 +53,5 @@ path = [
     "renovate.json",
 ]
 precedence = "override"
-SPDX-FileCopyrightText = "Copyright (c) 2014-2025 Yegor Bugayenko"
+SPDX-FileCopyrightText = "Copyright (c) 2014-2026 Yegor Bugayenko"
 SPDX-License-Identifier = "MIT"
