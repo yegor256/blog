@@ -24,8 +24,7 @@ I'm Yegor Bugayenko (|jeɪˈɡər buːɡʌˈjenkɒ|, Russian:
   a programmer, founder, investor, and philanthropist.
 
 Update: Since September 2019, I'm a software developer
-  in [Huawei](https://www.huawei.com)
-  [RRI](https://career.huawei.ru/rri/).
+  in [Huawei](https://www.huawei.com).
 
 {% badge /images/about/yegor-speaking.jpg 300 %}
 
