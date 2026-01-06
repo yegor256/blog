@@ -44,7 +44,7 @@ you don't share it with others).
 {: .book-badge}
 {% badge /images/books/elegant-objects/cover-eo1.png 125 /elegant-objects.html %}
 
-[Elegant Objects](/elegant-objects.html) (Volume 1)
+[Elegant Objects](/elegant-objects.html) (two volumes)
 is my first book. It is about object-oriented
 programming, from an idealistic and, maybe, a bit futuristic
 point of view. There are 23 independent recommendations for
@@ -69,19 +69,6 @@ in just one go.
 Published: 6 Nov 2016.
 <br/>
 <a href="https://goo.gl/DUcXm9"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
-{: .book-par}
-
-{: .book-badge}
-{% badge /images/books/elegant-objects/cover-eo2.png 125 /elegant-objects.html %}
-
-The **2nd Volume** of [Elegant Objects](/elegant-objects.html)
-covers more object-oriented patterns and anti-patterns,
-including MVC, ORM, annotations, printers, validators, inheritance and subtyping,
-dependency injection, reflection, and others.
-<br/>
-Published: 18 Apr 2017.
-<br/>
-<a href="https://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
 {: .book-par}
 
 {: .book-badge}
@@ -123,20 +110,6 @@ make your tests more helpful---regardless of your programming language.
 Published: 16 April 2025.
 <br/>
 <a href="https://amzn.to/4czWVkh"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
-{: .book-par}
-
-{: .book-badge}
-{% badge /images/books/elegant-objects/cover-eo1.png 125 /elegant-objects.html %}
-
-The **3rd Volume** of [Elegant Objects](/elegant-objects.html)
-will contain practical object-oriented design patterns, just like
-those GoF book suggested. The book will not criticize bad practices, like
-previous two volumes did, but will suggest what to do instead.
-<br/>
-To be published: in <del>2022</del> 2026.
-{: .book-par}
-
-To be continued...
 {: .book-par}
 
 <!--
