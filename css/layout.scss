@@ -59,10 +59,9 @@ a:visited {
   // scss-lint:disable PropertySpelling
   text-decoration-thickness: $px;
   // scss-lint:enable PropertySpelling
-  &.foreign {
-    &:hover {
-      color: gray;
-    }
+  &.external {
+    text-decoration-color: $lightgray;
+    text-decoration-style: dotted;
   }
 
   .link {
@@ -94,7 +93,7 @@ del {
 
   .hot {
     @extend %unprintable;
-    font-family: 'Monaco', monospace;
+    font-family: 'Source Code Pro', monospace;
     font-size: 75%;
     line-height: $em;
     margin-bottom: 2 * $em;
@@ -339,7 +338,7 @@ sub {
 hr {
   @extend %clear;
   border: 0;
-  border-top: 1 * $px solid lightgray;
+  border-top: 1 * $px solid $lightgray;
   height: 0;
   margin-top: 2 * $em;
   text-align: left;
@@ -359,7 +358,7 @@ hr {
 
 blockquote {
   @extend %main-font-italic;
-  border-left: 3 * $px solid lightgray;
+  border-left: 3 * $px solid $lightgray;
   margin-left: 1.5 * $em;
   padding-left: .5 * $em !important;
   position: relative;
@@ -386,7 +385,7 @@ figure {
   position: relative;
 
   figcaption {
-    background-color: $lightgrey;
+    background-color: $lightgray;
     bottom: 1em;
     color: silver;
     font-size: .8em;
@@ -407,7 +406,7 @@ figure {
 }
 
 .tag {
-  background-color: gray;
+  background-color: $gray;
   color: white !important;
   font-family: $code-font;
   font-size: .8 * $em;
@@ -434,7 +433,7 @@ figure {
 }
 
 .note {
-  color: gray;
+  color: $gray;
   font-size: .8 * $em;
   line-height: $em;
   margin-top: 0;

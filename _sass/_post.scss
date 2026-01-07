@@ -11,7 +11,7 @@ article {
     margin-top: .75 * $em;
 
     del {
-      color: $grey;
+      color: $gray;
       text-decoration: line-through;
     }
 
@@ -33,7 +33,7 @@ article {
     }
 
     th {
-      border-bottom: 1px solid $grey;
+      border-bottom: 1px solid $gray;
     }
   }
 
@@ -42,7 +42,7 @@ article {
     line-height: 1em;
 
     ol {
-      color: $grey;
+      color: $gray;
       margin-top: 4em;
       padding-left: 1em;
     }
@@ -50,7 +50,7 @@ article {
 }
 
 .jekyll-chatgpt-translate {
-  color: $grey;
+  color: $gray;
   font-size: 80%;
 }
 
@@ -65,8 +65,8 @@ article {
 
     .count {
       background-color: white;
-      border: 1 * $px solid $grey;
-      color: $grey;
+      border: 1 * $px solid $gray;
+      color: $gray;
       display: none;
       font-family: $code-font;
       font-size: .6 * $em;
@@ -80,9 +80,9 @@ article {
     .icon {
       $size: 1.2;
 
-      border: 1 * $px solid $grey;
+      border: 1 * $px solid $gray;
       border-radius: 50%;
-      color: $grey;
+      color: $gray;
       display: inline-block;
       height: $size * $em;
       line-height: $size * $em;
@@ -94,7 +94,7 @@ article {
       width: $size * $em;
 
       &:hover {
-        background-color: $grey;
+        background-color: $gray;
         color: white;
       }
     }

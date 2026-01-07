@@ -109,7 +109,7 @@ https://www.ted.com/talks/alan_iny_reigniting_creativity_in_business.
 
 **Yegor**: You know what I learned from that situation? I learned that the less changes you suggest, the more likable you are in the team, so the more changes you try to initiate, the more aggression, potential enemies you earn for yourself around yourself in your team, so that's why the less you move, the less you try new things, the more stable your position is in the company which is counter-intuitive because like when you start those changes you think that you want to contribute to the team, you want to make it better, you want to improve something, but in the end, in the worst case you will be ejected by the team, because you shake it too much, you shake the ball up too much and nobody likes you anymore.
 
-**Erik**: Yes. So you have a slow moving department because we have grey mice everywhere and you are moving because if you don't move you will die out as well. But at some point you will be disrupted and you'll be disrupted if you never speak out, your company will slowly appreciate it, right? So change is needed and I can understand that if you speak out and say about everything “Okay, this is bad, and it's bad. This is bad and everything is bad.” And yes sure you would get kicked out of my team as well, but change management is probably more broader understanding of change when it's not changing. Do we need to change? No, change is needed. And how we manage that change as best as we could.
+**Erik**: Yes. So you have a slow moving department because we have gray mice everywhere and you are moving because if you don't move you will die out as well. But at some point you will be disrupted and you'll be disrupted if you never speak out, your company will slowly appreciate it, right? So change is needed and I can understand that if you speak out and say about everything “Okay, this is bad, and it's bad. This is bad and everything is bad.” And yes sure you would get kicked out of my team as well, but change management is probably more broader understanding of change when it's not changing. Do we need to change? No, change is needed. And how we manage that change as best as we could.
 
 **Yegor**: Yeah I also remember that there was like a thin line between suggesting changes and whining about everything else, like about everything. So when you say too much about changes and say that everything is so wrong that they will just call you a negative person and they will not listen to your ideas constructively, they will just expect you to say something bad every day and that's why they say “Okay let's stop listening to this dude.”
 
@@ -133,7 +133,7 @@ https://www.ted.com/talks/alan_iny_reigniting_creativity_in_business.
  
 **Yegor**: Well that's true, but you know every time in every single team I've been at, it's always the reaction like “You suggested that, remember?” And everybody looks at that person, and that person doesn't want to suggest anything else.
 
-**Erik**: So you make making grey mouse of that person and that person will never contribute anything very useful again.
+**Erik**: So you make making gray mouse of that person and that person will never contribute anything very useful again.
 
 **Yegor**: That's true, yeah.
 
@@ -177,7 +177,7 @@ https://www.ted.com/talks/alan_iny_reigniting_creativity_in_business.
 
 **Yegor**: If you are always Jeffrey, if you are the Jeffrey, and you want the changes to happen that you want to bring to the team. But you know that when they fail for some reason, you will be blamed.
  
-**Erik**: Yeah, yeah. At some point that might happen to me twice or three times before. I would start my own company and I would disrupt that company I came from. That will happen because I am a super Jeffrey, and I know what I'm doing, and I have all the power in the world currently, because I can start a company with Kickstarter. I have a good idea and I know how to develop and that is a very useful skill, so the company, you just lost one Jeffrey. Good people need to talk out. People want to speak out. So if you don't want to have good people in your team, then you will be left with all the grey mice, and that's just sad because then there will be this Jeffrey Inc. startup company that will go to the Stockholm Inc. and then run into every other company that has grey mice. Change will happen, you want it or not. And if a manager is a project manager that blames his team and he is indeed bad project manager it's not good to play the blame game because you hire that team, you put that team together, so you are out of blame if anyone should be blamed, right?
+**Erik**: Yeah, yeah. At some point that might happen to me twice or three times before. I would start my own company and I would disrupt that company I came from. That will happen because I am a super Jeffrey, and I know what I'm doing, and I have all the power in the world currently, because I can start a company with Kickstarter. I have a good idea and I know how to develop and that is a very useful skill, so the company, you just lost one Jeffrey. Good people need to talk out. People want to speak out. So if you don't want to have good people in your team, then you will be left with all the gray mice, and that's just sad because then there will be this Jeffrey Inc. startup company that will go to the Stockholm Inc. and then run into every other company that has gray mice. Change will happen, you want it or not. And if a manager is a project manager that blames his team and he is indeed bad project manager it's not good to play the blame game because you hire that team, you put that team together, so you are out of blame if anyone should be blamed, right?
 
 **Yegor**: Ok let me ask that question. Speaking about change management and project management, what do you think people, this Jeffrey for example, has to be blamed or punished for? In what situation, for what? If not for failures. We just agreed that not for failures, but for what?
 
@@ -233,7 +233,7 @@ https://www.ted.com/talks/alan_iny_reigniting_creativity_in_business.
 
 **Yegor**: Saying something to our listeners, we encourage them I think to be more open, to be more open, to be more brave and to quit the company if they're not appreciated.
 
-**Erik**: Yeah, be a startup, don't be a grey mouse. Exactly, and I don't hope that half of the people quit their job tomorrow. Well basically yeah, talk about it. Talk about it, discuss it. And if people start being negative all the time, and leave, yeah. It's a free world.
+**Erik**: Yeah, be a startup, don't be a gray mouse. Exactly, and I don't hope that half of the people quit their job tomorrow. Well basically yeah, talk about it. Talk about it, discuss it. And if people start being negative all the time, and leave, yeah. It's a free world.
 
 **Yegor**: Ok. All right thanks, Erik. Thanks for joining us.
 

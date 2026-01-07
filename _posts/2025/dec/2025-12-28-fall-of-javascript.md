@@ -26,7 +26,7 @@ Rumors say, he designed Mocha in [10 days], later renamed to [LiveScript], and t
 It was [planned][popularity-post] to make it similar to [Scheme], a LISP-syntax language.
 Instead, to [please][popularity-post] the crowd of C++/Java coders, it was made syntactically similar to Java.
 In 2008, Brendan made a tragic mistake: he [donated] $1,000 in support of Californian anti-gay marriage [law].
-In 2014, he joined [Mozilla] as a CEO and the crowd remembered his anti-diversity gesture.
+In 2014, he joined [Mozilla] as a CEO and the crowd [remembered][okcupid] his anti-diversity gesture.
 He had to [step down] and founded Brave Software, the developer of the [Brave] browser.
 Somewhere around that time they started to kill JavaScript.
 Still doing it pretty good, thanks to recent [ECMAScript] updates and [TypeScript].
@@ -164,3 +164,4 @@ I'm proud of this code.
 [Smalltalk]: https://en.wikipedia.org/wiki/Smalltalk
 [JSON]: https://en.wikipedia.org/wiki/JSON
 [JSLint]: https://github.com/jslint-org/jslint
+[okcupid]: https://www.cbc.ca/news/science/okcupid-protests-new-mozilla-ceo-s-anti-gay-marriage-donation-1.2593629

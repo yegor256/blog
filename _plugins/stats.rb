@@ -28,7 +28,7 @@ module Jekyll
       context['site'].posts.each do |doc|
         words += Jekyll.all_words(doc.content)
       end
-      puts "#{decimal(words.length)} words in the entire blog, #{decimal(words.uniq.length)} uniques"
+      puts "\n#{decimal(words.length)} words in the entire blog, #{decimal(words.uniq.length)} uniques"
       "approx. #{decimal(words.length)} words in the entire blog, \
       <a href='/words.txt'>#{decimal(words.uniq(&:downcase).length)}</a> unique ones"
     end
