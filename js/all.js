@@ -39,7 +39,8 @@ if (typeof($) != 'undefined') {
         return;
       }
       $(this).addClass('external');
-      $(this).append('<img src="/images/icons/link.svg" class="link" alt="external"/>');
+      // no need to add an image:
+      // $(this).append('<img src="/images/icons/link.svg" class="link" alt="external"/>');
     });
     if ($('.buttons').css('display') !== 'none') {
       $(".button[href!='#']").click(
@@ -155,16 +156,6 @@ if (typeof($) != 'undefined') {
               .attr('href', '#' + id)
               .append('<i class="icon icon-link notranslate"></i>')
           );
-        }
-      }
-    );
-    $('.main p a, .main ul a, .main ol a').each(
-      function (idx, a) {
-        if (a.hostname && a.hostname !== window.location.hostname) {
-          var $a = $(this);
-          if ($a.find('img').length == 0) {
-            $a.addClass('foreign');
-          }
         }
       }
     );
