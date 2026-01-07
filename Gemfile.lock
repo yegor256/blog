@@ -6,7 +6,7 @@ GEM
       public_suffix (>= 2.0.2, < 8.0)
     afm (1.0.0)
     ast (2.4.3)
-    async (2.35.0)
+    async (2.35.1)
       console (~> 1.29)
       fiber-annotation
       io-event (~> 1.11)
@@ -44,13 +44,13 @@ GEM
     faraday-net_http (3.4.2)
       net-http (~> 0.5)
     fastimage (2.4.0)
-    ffi (1.17.2-aarch64-linux-gnu)
-    ffi (1.17.2-arm-linux-gnu)
-    ffi (1.17.2-arm64-darwin)
-    ffi (1.17.2-x64-mingw-ucrt)
-    ffi (1.17.2-x86_64-darwin)
-    ffi (1.17.2-x86_64-linux-gnu)
-    ffi (1.17.2-x86_64-linux-musl)
+    ffi (1.17.3-aarch64-linux-gnu)
+    ffi (1.17.3-arm-linux-gnu)
+    ffi (1.17.3-arm64-darwin)
+    ffi (1.17.3-x64-mingw-ucrt)
+    ffi (1.17.3-x86_64-darwin)
+    ffi (1.17.3-x86_64-linux-gnu)
+    ffi (1.17.3-x86_64-linux-musl)
     fiber-annotation (0.2.0)
     fiber-local (1.1.0)
       fiber-storage
@@ -78,7 +78,7 @@ GEM
       bigdecimal
       rake (>= 13)
     hashery (2.1.2)
-    html-proofer (5.1.1)
+    html-proofer (5.2.0)
       addressable (~> 2.3)
       async (~> 2.1)
       benchmark (~> 0.5)
@@ -217,7 +217,7 @@ GEM
       ruby-rc4
       ttfunk
     prism (1.7.0)
-    public_suffix (7.0.0)
+    public_suffix (7.0.2)
     pygments.rb (4.0.0)
     qbash (0.5.0)
       backtrace (> 0)
