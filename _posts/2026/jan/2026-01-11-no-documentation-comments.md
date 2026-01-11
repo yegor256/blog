@@ -24,9 +24,9 @@ jb_picture:
 
 Writing code documentation is a pain.
 Not writing it leads to even bigger pain---we can't comprehend the code.
-However, writing it and then forgetting to update causes the ultimate pain: it lies and confuses us.
+However, writing it and then forgetting to update it causes the ultimate pain: it lies and confuses us.
 How about we cure all three pains at once: _prohibit all comments!_
-How do we know what is the intent of the code, if we don't have any comments?
+How do we know what the intent of the code is if we don't have any comments?
 We ask an LLM to explain it to us.
 What if the LLM fails to explain and confesses its inability?
 Then, we automatically fail the build and blame the author of the code.
@@ -38,7 +38,7 @@ The build passes only if this score is high enough.
 {% jb_picture_body %}
 
 The best minds in software engineering have long dreamed of self-documenting code.
-In 1974, [Brian Kernigan] and [Phillip James Plauger][Phillip] [said][eps] that
+In 1974, [Brian Kernighan] and [Phillip James Plauger][Phillip] [said][eps] that
   "the only reliable documentation of a computer program is the code itself."
 In 2004, [Steven McConnell] in [_Code Complete_][code complete] claimed that
   "the main contributor to code-level documentation isn't comments, but good programming style."
@@ -58,7 +58,7 @@ A tiny Javadoc block saves this time:
  * path between two nodes in the graph.
  */
 int[] shortest(int[][] g, int a, int b) {
-  // A hundred lines of code goes
+  // A hundred lines of code go
   // here, which we have no desire
   // to read and understand.
 }
@@ -110,7 +110,7 @@ We are thinking about making [EO], our experimental object-oriented language, th
 
 
 [eps]: https://en.wikipedia.org/wiki/The_Elements_of_Programming_Style
-[Brian Kernigan]: https://en.wikipedia.org/wiki/Brian_W._Kernighan
+[Brian Kernighan]: https://en.wikipedia.org/wiki/Brian_W._Kernighan
 [Phillip]: https://en.wikipedia.org/wiki/P._J._Plauger
 [EO]: https://www.eolang.org
 [David Parnas]: https://en.wikipedia.org/wiki/David_Parnas
