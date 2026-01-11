@@ -6,7 +6,7 @@ layout: post
 title: "Comments Considered Harmful in the Age of LLMs"
 date: 2026-01-11
 place: Kazan, Russia
-tags: oop
+tags: quality
 description: |
   Instead of writing code comments that decay and mislead, let LLMs
   generate documentation on-demand and fail the build when code is
