@@ -38,7 +38,7 @@ The build passes only if this score is high enough.
 {% jb_picture_body %}
 
 The best minds in software engineering have long dreamed of self-documenting code.
-In 1974, [Brian Kernigan] and [Phillip James Plauger] [said][eps] that
+In 1974, [Brian Kernigan] and [Phillip James Plauger][Phillip] [said][eps] that
   "the only reliable documentation of a computer program is the code itself."
 In 2004, [Steven McConnell] in [_Code Complete_][code complete] claimed that
   "the main contributor to code-level documentation isn't comments, but good programming style."
@@ -64,8 +64,7 @@ int[] shortest(int[][] g, int a, int b) {
 }
 ```
 
-Comments promise to help us.
-In practice, they fail in two distinct ways.
+Comments promise to help us but fail in two distinct ways.
 
 First, they are _unclear_.
 [David Parnas] once [said][software aging] that
@@ -105,12 +104,14 @@ He didn't know about LLMs.
 Today, we don't need better languages---we need an LLM that can interpret any language.
 If the LLM can't explain the code, we blame the programmer and stop the build.
 
-We are making [EO], our experimental object-oriented language, this restrictive.
+<hr/>
+
+We are thinking about making [EO], our experimental object-oriented language, this restrictive.
 
 
 [eps]: https://en.wikipedia.org/wiki/The_Elements_of_Programming_Style
 [Brian Kernigan]: https://en.wikipedia.org/wiki/Brian_W._Kernighan
-[Phillip James Plauger]: https://en.wikipedia.org/wiki/P._J._Plauger
+[Phillip]: https://en.wikipedia.org/wiki/P._J._Plauger
 [EO]: https://www.eolang.org
 [David Parnas]: https://en.wikipedia.org/wiki/David_Parnas
 [software aging]: https://doi.org/10.1109/icse.1994.296790
