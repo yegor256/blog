@@ -8,7 +8,9 @@ date: 2026-01-11
 place: Kazan, Russia
 tags: oop
 description: |
-  ...
+  Instead of writing code comments that decay and mislead, let LLMs
+  generate documentation on-demand and fail the build when code is
+  too obscure for them to explain.
 keywords:
   - code documentation
   - self-documenting code
