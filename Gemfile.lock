@@ -59,24 +59,6 @@ GEM
     google-protobuf (4.33.2)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.33.2-aarch64-linux-gnu)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.2-arm64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.2-x64-mingw-ucrt)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.2-x86_64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.2-x86_64-linux-gnu)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.2-x86_64-linux-musl)
-      bigdecimal
-      rake (>= 13)
     hashery (2.1.2)
     html-proofer (5.2.0)
       addressable (~> 2.3)
@@ -236,7 +218,7 @@ GEM
     redcarpet (3.6.1)
     regexp_parser (2.11.3)
     rexml (3.4.4)
-    rouge (4.6.1)
+    rouge (4.7.0)
     rss (0.3.2)
       rexml
     rubocop (1.82.1)
