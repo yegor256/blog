@@ -25,7 +25,7 @@ Then, run this:
 
 ```bash
 bundle update
-bundle exec jekyll serve --drafts --future --limit_posts 10 -- --offline --dirty
+bundle exec jekyll serve --drafts --future --limit_posts 5 -- --offline --dirty
 ```
 
 In a few minutes of building you should be able to see the blog
