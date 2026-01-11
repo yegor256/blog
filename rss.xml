@@ -1,4 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-01-11T08:27:50+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">The Fall of JavaScript</title><link href="https://www.yegor256.com/2025/12/28/fall-of-javascript.html" rel="alternate" type="text/html" title="The Fall of JavaScript" /><published>2025-12-28T00:00:00+00:00</published><updated>2025-12-28T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/12/28/fall-of-javascript</id><content type="html" xml:base="https://www.yegor256.com/2025/12/28/fall-of-javascript.html"><![CDATA[<p>In 1995, <a href="https://github.com/BrendanEich">Brendan Eich</a> was hired by <a href="https://en.wikipedia.org/wiki/Netscape">Netscape</a> and asked to create a language for their HTML browser.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-01-11T20:43:37+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Comments Considered Harmful in the Age of LLMs</title><link href="https://www.yegor256.com/2026/01/11/no-documentation-comments.html" rel="alternate" type="text/html" title="Comments Considered Harmful in the Age of LLMs" /><published>2026-01-11T00:00:00+00:00</published><updated>2026-01-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/01/11/no-documentation-comments</id><content type="html" xml:base="https://www.yegor256.com/2026/01/11/no-documentation-comments.html"><![CDATA[<p>Writing code documentation is a pain.
+Not writing it leads to even bigger pain—we can’t comprehend the code.
+However, writing it and then forgetting to update it causes the ultimate pain: it lies and confuses us.
+How about we cure all three pains at once: <em>prohibit all comments!</em>
+How do we know what the intent of the code is if we don’t have any comments?
+We ask an LLM to explain it to us.
+What if the LLM fails to explain and confesses its inability?
+Then, we automatically fail the build and blame the author of the code.
+Thus, we introduce a new quality gate: <em>Code Interpretability Score</em>.
+The build passes only if this score is high enough.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Full Metal Jacket (1987) by Stanley Kubrick" src="/images/2026/01/full-metal-jacket.jpg" longdesc="#dc7c81cb" /><figcaption id="dc7c81cb">Full Metal Jacket (1987) by Stanley Kubrick</figcaption></figure>
+
+<p>The best minds in software engineering have long dreamed of self-documenting code.
+In 1974, <a href="https://en.wikipedia.org/wiki/Brian_W._Kernighan">Brian Kernighan</a> and <a href="https://en.wikipedia.org/wiki/P._J._Plauger">Phillip James Plauger</a> <a href="https://en.wikipedia.org/wiki/The_Elements_of_Programming_Style">said</a> that
+  “the only reliable documentation of a computer program is the code itself.”
+In 2004, <a href="https://en.wikipedia.org/wiki/Steve_McConnell">Steven McConnell</a> in <a href="https://amzn.to/2cs4cXW"><em>Code Complete</em></a> claimed that
+  “the main contributor to code-level documentation isn’t comments, but good programming style.”
+In 2008, <a href="https://en.wikipedia.org/wiki/Robert_C._Martin">Robert Martin</a> in <a href="https://amzn.to/2m7LmaA"><em>Clean Code</em></a> suggested that
+  “if our programming languages were expressive enough, or if we had the talent to subtly wield those languages to express our intent,
+  we would not need comments very much—perhaps not at all.”
+They all wanted the same thing: code that explains itself.
+They just lacked the tools to enforce it.</p>
+
+<p>Why do we write comments at all?
+A Java method of a hundred lines may take hours to understand.
+A tiny Javadoc block saves this time:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * Recursively finds the shortest
+ * path between two nodes in the graph.
+ */</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="nf">shortest</span><span class="o">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">g</span><span class="o">,</span> <span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// A hundred lines of code go</span>
+  <span class="c1">// here, which we have no desire</span>
+  <span class="c1">// to read and understand.</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Comments promise to help us but fail in two distinct ways.</p>
+
+<p>First, they are <em>unclear</em>.
+<a href="https://en.wikipedia.org/wiki/David_Parnas">David Parnas</a> once <a href="https://doi.org/10.1109/icse.1994.296790">said</a> that
+  “documentation that seems clear and adequate to its authors is often about <em>as clear as mud</em> to the
+  programmer who must maintain the code six months or six years later.”
+What the author considers obvious, the reader finds cryptic.</p>
+
+<p>Second, they <em>decay</em>.
+Being static metadata, comments do not evolve automatically with the code.
+If the implementation of the <code class="language-plaintext highlighter-rouge">shortest()</code> function stops being recursive, we may forget to update the Javadoc block.
+Such negligence leads to <em>hallucinating documentation</em> that causes bugs, broken trust, and wasted debugging time.
+In 1999, <a href="https://en.wikipedia.org/wiki/Andy_Hunt_(author)">Andrew Hunt</a> and <a href="https://en.wikipedia.org/wiki/Dave_Thomas_(programmer)">Dave Thomas</a> in <a href="https://en.wikipedia.org/wiki/The_Pragmatic_Programmer"><em>The Pragmatic Programmer</em></a> warned that
+  “<em>untrustworthy</em> comments are <em>worse</em> than no comments at all.”
+A recent <a href="https://doi.org/10.1145/3663529.3664458">analysis</a> of 13 open source projects
+  demonstrated that out-of-date comments are not rare but common.</p>
+
+<p>Now we have a tool that solves both problems: the LLM.</p>
+
+<p>Instead of writing the Javadoc block manually, we let the IDE generate it on-demand.
+The LLM reads the hundred lines of code, comprehends it, and summarizes the intent in a single English sentence.
+Modern models accomplish this task better than most humans.
+The documentation is always fresh because it is generated from the current code, not from a stale comment written months ago.</p>
+
+<p>But we can go further.
+We can integrate an LLM into the build pipeline and ask it to assess the <em>Code Interpretability Score</em> (CIS) of every function.
+If the model has low confidence in explaining the logic, this signals that the code is too clever or convoluted.
+The compiler can enforce a threshold: if the CIS is too low, the build fails.
+This transforms readability from a subjective preference into an objective, measurable quality gate.</p>
+
+<p>Once this gate exists, manual comments become not just unnecessary but <em>harmful</em>.
+They introduce a second source of truth that can contradict the code.
+The logical conclusion: prohibit them entirely.
+This forces developers to write clean, structured logic that is inherently machine-interpretable.</p>
+
+<p>Robert Martin wished for more expressive languages.
+He didn’t know about LLMs.
+Today, we don’t need better languages—we need an LLM that can interpret any language.
+If the LLM can’t explain the code, we blame the programmer and stop the build.</p>
+
+<hr />
+
+<p>We are thinking about making <a href="https://www.eolang.org">EO</a>, our experimental object-oriented language, this restrictive.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="quality" /><summary type="html"><![CDATA[Instead of writing code comments that decay and mislead, let LLMs generate documentation on-demand and fail the build when code is too obscure for them to explain.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/01/full-metal-jacket.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/01/full-metal-jacket.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Fall of JavaScript</title><link href="https://www.yegor256.com/2025/12/28/fall-of-javascript.html" rel="alternate" type="text/html" title="The Fall of JavaScript" /><published>2025-12-28T00:00:00+00:00</published><updated>2025-12-28T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/12/28/fall-of-javascript</id><content type="html" xml:base="https://www.yegor256.com/2025/12/28/fall-of-javascript.html"><![CDATA[<p>In 1995, <a href="https://github.com/BrendanEich">Brendan Eich</a> was hired by <a href="https://en.wikipedia.org/wiki/Netscape">Netscape</a> and asked to create a language for their HTML browser.
 Rumors say, he designed Mocha in <a href="https://exploringjs.com/es5/ch04.html">10 days</a>, later renamed to <a href="https://stackoverflow.com/questions/2018731">LiveScript</a>, and then to <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a>.
 It was <a href="https://brendaneich.com/2008/04/popularity/">planned</a> to make it similar to <a href="https://www.scheme.org/">Scheme</a>, a LISP-syntax language.
 Instead, to <a href="https://brendaneich.com/2008/04/popularity/">please</a> the crowd of C++/Java coders, it was made syntactically similar to Java.
@@ -863,44 +946,4 @@ The parts of the code not covered by tests are the first to break.</p>
 
 <p>Test coverage guarantees that what worked before—and was already paid for—continues to work even under the stress of refactoring.</p>
 
-<p>So, any contribution to a codebase without a <strong>supporting</strong> test is a waste of the employer’s money.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[If you write code without tests, you're probably wasting your employer's money---because it'll break again right where you "fixed" it.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/06/la-femme-nikita.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/06/la-femme-nikita.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Good Title — Good Bug Report</title><link href="https://www.yegor256.com/2025/05/31/good-bug-title.html" rel="alternate" type="text/html" title="Good Title — Good Bug Report" /><published>2025-05-31T00:00:00+00:00</published><updated>2025-05-31T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/05/31/good-bug-title</id><content type="html" xml:base="https://www.yegor256.com/2025/05/31/good-bug-title.html"><![CDATA[<p>A few weeks ago, <a href="https://github.com/horw">@horw</a> released a new GitHub plugin that fixes GitHub issue titles: <a href="https://github.com/horw/issue-title-ai">issue-title-ai</a>.
-Once an issue is created, the plugin asks <a href="https://chatgpt.com">ChatGPT</a>—or <a href="https://www.deepseek.com/">DeepSeek</a>, or <a href="https://claude.ai/">Claude</a>—to improve its title.
-We’ve already integrated the plugin into <a href="https://github.com/objectionary/eo">objectionary/eo</a> and a few other repositories.
-Works like a charm.
-What’s wrong with the titles the way they are, you may ask?
-Why do we need to ask ChatGPT to make them “better”?
-Because we want every issue—either a bug report, a feature request, or a question—to be formulated as a <a href="/2025/05/25/bug-driven-development.html">complaint</a>.
-It seems that very few of us can do it on the first try.
-The help of AI is appreciated.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Flawless (1999) by Joel Schumacher" src="/images/2025/05/flawless.jpg" longdesc="#6699c6ab" /><figcaption id="6699c6ab">Flawless (1999) by Joel Schumacher</figcaption></figure>
-
-<p>Let’s say, you try to download a PNG file from a web app, but get a text file instead.
-You want to report this problem to the team.
-How would you title such a bug report?
-Pick one, out of these eight:</p>
-
-<ul>
-  <li>“CSV”</li>
-  <li>“CSV file downloading”</li>
-  <li>“Please, fix CSV-file downloading”</li>
-  <li>“CSV downloading must be fixed”</li>
-  <li>“Why I get text file instead of PNG?”</li>
-  <li>“How can I download PNG file?”</li>
-  <li>“I need text file, not PNG”</li>
-  <li>“PNG downloading is broken, getting CSV instead”</li>
-</ul>
-
-<p>There may be even more variations… but the best is the last one.
-It clearly states that something is <strong>broken</strong>.
-It demands a fix.</p>
-
-<p>Even if it’s a feature request or a question, it should be filed as a complaint.
-This rule—known as <a href="/2025/05/25/bug-driven-development.html">bug driven development</a>—increases our productivity.
-In every request made to the team we have to explain the difference between our expectations and reality.
-The lack of such an explanation seems to be the primary source of confusion and frustration in task tracking.</p>
-
-<p>Apparently, very few programmers have this skill: formulating a problem as a complaint.
-AI should help us.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[ChatGPT helps us re-format GitHub issue titles after their authors submit them --- helping developers understand their tasks better.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/05/flawless.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/05/flawless.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>So, any contribution to a codebase without a <strong>supporting</strong> test is a waste of the employer’s money.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[If you write code without tests, you're probably wasting your employer's money---because it'll break again right where you "fixed" it.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/06/la-femme-nikita.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/06/la-femme-nikita.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

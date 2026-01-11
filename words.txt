@@ -199,6 +199,7 @@ agile
 agilebuddha
 AgileEE
 agility
+aging
 agnostic
 ago
 agree
@@ -315,6 +316,7 @@ amplify
 amsterdam
 amy
 amy's
+amzn
 an
 anal
 analogy
@@ -335,9 +337,11 @@ and
 anders
 anderson
 andreea
+andrew
 android
 andronache
 andwithindex
+andy
 anemic
 angel
 anger
@@ -1506,6 +1510,7 @@ circles
 circulating
 circumstances
 circus
+CIS
 citation
 citations
 cite
@@ -1557,6 +1562,7 @@ clear
 cleared
 clearer
 clearly
+clever
 CLI
 click
 clicked
@@ -1642,6 +1648,7 @@ code
 code-auto-complete
 code-free
 code-intensive
+code-level
 code-rich
 code-to-test
 code-writing
@@ -1833,6 +1840,7 @@ composite
 composition
 compound
 comprehend
+comprehends
 comprehension
 comprehensive
 comprehensively
@@ -1890,6 +1898,7 @@ conf
 conference
 conferences
 conferencing
+confesses
 confidence
 confident
 confidential
@@ -1918,6 +1927,7 @@ conforming
 confrontation
 confuse
 confused
+confuses
 confusion
 congratulations
 conjoined
@@ -2054,6 +2064,7 @@ conveying
 convince
 convinced
 convincing
+convoluted
 cook
 cooked
 cookie
@@ -2234,6 +2245,7 @@ cryptic
 crypto-electronic-whatever-product
 crypto-startups
 cryptocurrency
+cs
 CSS
 css-min
 CSV
@@ -2292,6 +2304,7 @@ cutting
 cutting-edge
 CV
 CVs
+cXW
 cybersecurity
 cycle
 cycles
@@ -2915,6 +2928,7 @@ drawn
 draws
 DRE
 dream
+dreamed
 dreaming
 dreams
 dress
@@ -3262,6 +3276,7 @@ epidemic
 episode
 episodes
 EPO
+eps
 EPUB
 eq
 equal
@@ -3816,6 +3831,7 @@ foresee
 forever
 forget
 forgets
+forgetting
 forgive
 forgiveness
 forgot
@@ -3996,6 +4012,7 @@ garr
 garry
 gary
 gas
+gate
 gates
 gateway
 gather
@@ -4279,6 +4296,7 @@ half-measures
 half-page
 hall
 halloween
+hallucinating
 halt
 hamburgers
 hamcrest
@@ -4955,6 +4973,7 @@ internationalist
 internet
 interpersonal
 interpret
+interpretability
 interpretation
 interpreted
 interpreter
@@ -5611,6 +5630,7 @@ LLM
 LLM-based
 LLMs
 LLVM
+lmaa
 load
 loadbookbyid
 loaders
@@ -5725,6 +5745,7 @@ macbook
 macbooks
 machine
 machine's
+machine-interpretable
 machines
 macintosh
 mack
@@ -6827,6 +6848,7 @@ ours
 ourselves
 out
 out-dated
+out-of-date
 out-of-the-box
 outbound
 outcome
@@ -6915,6 +6937,7 @@ pain
 painful
 painless-bug-tracking
 painofoop
+pains
 painstaking
 painter
 painters
@@ -7971,6 +7994,7 @@ recruiting
 recruitment
 rectangle
 rectangles
+recursive
 red
 red-green-refactor
 reddit
@@ -8257,6 +8281,7 @@ restricted
 restricting
 restriction
 restrictions
+restrictive
 restroom
 restructure
 restructuring
@@ -8673,6 +8698,7 @@ self-diagnose
 self-discipline
 self-disciplined
 self-documented
+self-documenting
 self-esteem
 self-explainable
 self-humiliation
@@ -10018,6 +10044,7 @@ town
 toxic
 toXML
 toy
+tpp
 tqo
 trac
 trace
@@ -10631,6 +10658,7 @@ WAR
 war-time
 warm
 warn
+warned
 warning
 warnings
 warranty
@@ -10758,6 +10786,7 @@ wide
 wider
 width
 wiegers
+wield
 wife
 wife's
 wifi
@@ -10794,6 +10823,7 @@ wise
 wisely
 wiser
 wish
+wished
 wishes
 with
 within
