@@ -79,18 +79,20 @@ The architects of Facebook and LinkedIn are the hostages of it.
 They can't make their websites run faster, because they, by design, are built of fragments retrievable from the backend.
 They must make _multiple_ HTTP round-trips.
 
-It's not just "many trips are worse than one."
-Even if HTTP/2 [multiplexes] requests, the UI still waits for JSON to arrive in order---classic [head-of-line blocking][head-of-line blocking].
-Worse, one request often reveals IDs needed for the next, turning parallel calls into a waterfall.
-Caching doesn't help either: dozens of endpoints, each with its own TTL, rarely produce a full cache hit.
-And then there's the browser juggling layout shifts, spinners, and partial failures---all at once.
+The performance penalty of SPAs is structural, not accidental.
+Even if HTTP/2 [multiplexes] requests, the UI still waits for JSON to arrive in order---classic
+  [head-of-line blocking][head-of-line blocking] at the application layer.
+Worse, one request often reveals permissions, feature flags, or entity identifiers needed for the next, turning parallel calls into a waterfall.
+Caching doesn't help either: dozens of endpoints, each with its own TTL, rarely produce a full cache hit,
+  and partial hits still force the browser to assemble and reconcile the page at runtime
+Meanwhile, the browser must juggle layout stabilization, loading indicators, and partial failures---all before meaningful content becomes visible.
 
-What once, in the times of slow browsers and networks, was a solution for small DOM updates, turned into a dead-end for web design.
+What was once a solution for small DOM updates, in an era of slow browsers and unreliable networks, has turned into a dead-end for web design.
 
 {% quote State belongs on the server while HTML is the primary delivery artifact, not JSON. %}
 
 Most web architects simply can't make their websites as fast as [Stack Overflow], which is not an SPA.
-It delivers the entire HTML page, [built by][by-razor] server-side [Razor] framework, in one [&lt;50ms][50ms] request.
+It delivers the entire HTML page, [rendered][by-razor] on the server using [Razor], in one [&lt;50ms][50ms] request.
 It does use client-side JS components selectively, but these are isolated and don't negate the central role of server HTML for the initial experience.
 Their UX is one of the best on the modern web, if you ask me.
 
@@ -101,7 +103,7 @@ The server is in charge of the data and the state of navigation, making caching 
 
 Literally every large, content-heavy, consumer-facing SPA I can think of is horrible in terms of UX.
 Even [Gmail] is not an exception.
-Their UX would be much better if they followed the principles of Roy Fielding and reloaded the page every time I open an email.
+Their UX would be noticeably better if they followed the principles of Roy Fielding and reloaded the page every time an email is opened.
 I'm not kidding.
 
 [JSON]: https://en.wikipedia.org/wiki/JSON
