@@ -50,7 +50,7 @@ This came in handy when full page reloads stopped working well:
 * Full page reloads felt wasteful
 * Users expected "desktop-like" interactivity
 
-AJAX paved the way for the [SPA]: instead of HTML, the server sends [JSON], and the browser reconstructs the page locally.
+_AJAX_ paved the way for the [SPA]: instead of HTML, the server sends [JSON], and the browser reconstructs the page locally.
 Then came the frameworks: [Angular] (2010), [React] (2013), [Vue] (2014).
 Each formalizes the same idea: the browser hosts the application, the server delivers data.
 
@@ -59,13 +59,13 @@ No page reload.
 The [DOM] remains the same.
 The JS inside the browser changes only the result of calculation, in a single `<div/>`.
 
-The primary justification for this architecture is performance.
+The primary justification for this architecture is _performance_.
 If servers are slow, rendering a full HTML page takes longer than just a JSON with the result of calculation.
 If the network is unreliable, re-delivering the entire HTML takes longer than just a small JSON document.
 Also, if browsers are slow, making a tiny change in the DOM works faster than a full page reload.
 
 This is true, for a trivial example.
-However, when an SPA gets larger, the frontend has to make dozens of round-trips to the backend.
+However, when an SPA gets larger, the frontend has to make _dozens of round-trips_ to the backend.
 Look at what Facebook and LinkedIn are doing while rendering your home page.
 A rather simple UI with just a list of recent posts gets filled up by multiple pieces, each leading to its own HTTP request,
   sometimes taking more than a few seconds to complete rendering a page.
