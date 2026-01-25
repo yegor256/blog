@@ -6,6 +6,7 @@ layout: post
 title: No Obligations
 date: 2014-04-13
 tags: xdsd management
+place: Amsterdam, Holland
 description: |
   In XDSD projects we recommend to manage accountability
   of team members by clearly defining task scope and borders

@@ -6,6 +6,7 @@ layout: post
 title: "MySQL Maven Plugin"
 date: 2014-05-21
 tags: maven java
+place: Amsterdam, Holland
 description: |
   jcabi-mysql-maven-plugin starts a fresh instance of MySQL
   server before integration tests and shuts it down

@@ -6,6 +6,7 @@ layout: post
 title: "Fluent Java HTTP Client"
 date: 2014-04-11
 tags: jcabi http java
+place: Amsterdam, Holland
 description: |
   I created a simple fluent Java HTTP client to make things
   easier with HTTP interactions; the article explains its benefits

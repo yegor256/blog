@@ -6,6 +6,7 @@ layout: post
 title: "Incremental Billing"
 date: 2014-10-21
 tags: xdsd management
+place: Amsterdam, Holland
 description: |
   With either a Fixed Price or Time and Material contract,
   your chances of getting the project done are very low.

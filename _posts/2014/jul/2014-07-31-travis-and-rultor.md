@@ -6,6 +6,7 @@ layout: post
 title: "Rultor + Travis"
 date: 2014-07-31
 tags: docker rultor devops
+place: Amsterdam, Holland
 description: |
   Rultor is a virtual team assistant that,
   in tandem with Travis, optimizes your routine merging,

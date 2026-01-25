@@ -6,6 +6,7 @@ layout: post
 title: "Definition Of Done"
 date: 2014-04-15
 tags: management xdsd
+place: Amsterdam, Holland
 description: |
   When tasks can be considered DONE and their
   implementation paid for? This post answers both of these questions.

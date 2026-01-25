@@ -6,6 +6,7 @@ layout: post
 title: "How Immutability Helps"
 date: 2014-11-07
 tags: jcabi java oop
+place: Amsterdam, Holland
 categories: jcg
 description: |
   This article illustrates by example how immutability

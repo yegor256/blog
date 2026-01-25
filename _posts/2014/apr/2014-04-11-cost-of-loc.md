@@ -6,6 +6,7 @@ layout: post
 title: "How Much Do You Pay Per&nbsp;Line&nbsp;of&nbsp;Code?"
 date: 2014-04-11
 tags: xdsd management
+place: Amsterdam, Holland
 categories: jcg
 description: |
   This article compares two projects and calculates

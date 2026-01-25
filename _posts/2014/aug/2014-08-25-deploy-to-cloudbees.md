@@ -6,6 +6,7 @@ layout: post
 title: "How to Deploy to CloudBees, in One Click"
 date: 2014-08-25
 tags: java rultor devops
+place: Amsterdam, Holland
 description: |
   This tutorial explains how a Java web application can be
   deployed to CloudBees in just one click and

@@ -6,6 +6,7 @@ layout: post
 title: "Deploy Jekyll to GitHub Pages"
 date: 2014-06-24
 tags: jekyll github ruby
+place: Amsterdam, Holland
 description: |
   Jekyll site can easily be deployed to GitHub Pages
   even with custom plugins; just use my jgd Ruby gem

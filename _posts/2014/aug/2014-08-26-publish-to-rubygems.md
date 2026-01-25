@@ -6,6 +6,7 @@ layout: post
 title: "How to Publish to RubyGems, in One Click"
 date: 2014-08-26
 tags: rultor devops ruby
+place: Amsterdam, Holland
 description: |
   This tutorial explains how a Ruby gem can be
   released to RubyGems.org in just one click and

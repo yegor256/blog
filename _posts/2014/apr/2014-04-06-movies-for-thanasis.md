@@ -6,6 +6,7 @@ layout: post
 title: "Movies for Thanasis"
 date: 2014-04-06
 tags: mood
+place: Amsterdam, Holland
 description: |
   Most recommended movies to watch, for my friend Thanasis; the list
   is priceless, you must watch all of them before you can call

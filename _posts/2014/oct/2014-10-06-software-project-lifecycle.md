@@ -6,6 +6,7 @@ layout: post
 title: Project Lifecycle in Zerocracy
 date: 2014-10-06
 tags: management
+place: Amsterdam, Holland
 description: |
   There are four standard phases in
   a software development lifecycle for all projects

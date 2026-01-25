@@ -6,6 +6,7 @@ layout: post
 title: "You Do Need Independent Technical Reviews!"
 date: 2014-12-18
 tags: management
+place: Amsterdam, Holland
 categories: jcg
 description: |
   Regularly and systematically having your programmers' technical deliverables

@@ -6,6 +6,7 @@ layout: post
 title: "Simple Java SSH Client"
 date: 2014-09-02
 tags: java jcabi
+place: Amsterdam, Holland
 description: |
   jcabi-ssh is a simple Java SSH client that
   wraps jsch library and makes its usage more
