@@ -59,12 +59,12 @@ The [DOM] remains the same.
 The JS inside the browser changes only the result of calculation, in a single `<div/>`.
 
 The primary justification for this architecture is performance.
-If servers are slow, rendering full HTML page takes longer than just a JSON with the result of calculation.
+If servers are slow, rendering a full HTML page takes longer than just a JSON with the result of calculation.
 If the network is unreliable, re-delivering the entire HTML takes longer than just a small JSON document.
 Also, if browsers are slow, making a tiny change in the DOM works faster than a full page reload.
 
 This is true, for a trivial example.
-However, when SPA gets larger, the frontend has to make dozens of round-trips to the backend.
+However, when an SPA gets larger, the frontend has to make dozens of round-trips to the backend.
 Look at what Facebook and LinkedIn are doing while rendering your home page.
 A rather simple UI with just a list of recent posts gets filled up by multiple pieces, each leading to its own HTTP request,
   sometimes taking more than a few seconds to complete rendering a page.
@@ -81,20 +81,22 @@ They must make _multiple_ HTTP round-trips.
 
 What once, in the times of slow browsers and networks, was a solution for small DOM updates, turned into a dead-end for web design.
 
-Most of web architects simply can't make their websites as fast as [Stack Overflow], which is not an SPA.
+Most web architects simply can't make their websites as fast as [Stack Overflow], which is not an SPA.
 It delivers the entire HTML page in one request.
 Predictable layout.
 No suspense.
 Either the page loads, or it doesn't.
-UX is one of the best in modern web, if you ask me.
+UX is one of the best on the modern web, if you ask me.
 
 Rendering a full page on the server may still be a slow operation.
 It may, and it often will.
-However, this problem is _solveable_, for example, with the help of caching.
+However, this problem is _solvable_, for example, with the help of caching.
 The server is in charge of the data and the state of navigation, that's why.
 
 Literally every SPA I can think of is horrible in terms of UX.
-The only exception I can think of is [Gmail].
+Even [Gmail] is not an exception.
+Their UX would be much better if they followed the principles of Roy Fielding and reloaded the page every time I open an email.
+I'm not kidding.
 
 [JSON]: https://en.wikipedia.org/wiki/JSON
 [Angular]: https://angular.io/
@@ -113,7 +115,7 @@ The only exception I can think of is [Gmail].
 [garrett]: https://en.wikipedia.org/wiki/Jesse_James_Garrett
 [AJAX]: https://en.wikipedia.org/wiki/Ajax_(programming)
 [ajax-essay]: https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf
-[DOM]: https://ru.wikipedia.org/wiki/Document_Object_Model
+[DOM]: https://en.wikipedia.org/wiki/Document_Object_Model
 [adamsilver]: https://adamsilver.io/blog/the-problem-with-single-page-applications/
 [matuzo]: https://www.matuzo.at/blog/2023/single-page-applications-criticism/
 [Gmail]: https://gmail.com
