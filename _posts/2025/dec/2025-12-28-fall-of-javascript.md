@@ -132,7 +132,7 @@ Look at the code in the [yegor256/jo] repository.
 It illustrates the [Junior Objects](/junior-objects.html) book of mine.
 I'm proud of this code.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">“People using classes in JavaScript will go to their graves never knowing how miserable they were” — Douglas Crockford <a href="https://t.co/D2Hpegn0vY">https://t.co/D2Hpegn0vY</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/2010297169899913568?ref_src=twsrc%5Etfw">January 11, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">“People using classes in JavaScript will go to their graves never knowing how miserable they were” - Douglas Crockford <a href="https://t.co/D2Hpegn0vY">https://t.co/D2Hpegn0vY</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/2010297169899913568?ref_src=twsrc%5Etfw">January 11, 2026</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 [Brendan Eich]: https://github.com/BrendanEich
 [JavaScript]: https://en.wikipedia.org/wiki/JavaScript
