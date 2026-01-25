@@ -34,8 +34,7 @@ In 2000, [Roy Fielding][fielding], the author of [REST] and co-author of [HTTP],
 > by selecting links, resulting in the next page being transferred
 > to the user and rendered for their use.
 
-Click a link, get a page.
-Simple.
+Simply put, each action leads to an HTML page reload.
 
 In the late 2000s, this stopped working well:
 
@@ -55,12 +54,51 @@ Each formalizes the same idea: the browser hosts the application, the server del
 One HTML page.
 One textarea.
 A Save button.
-Clicking Save sends JSON to a [Node.js] backend, which writes the content to a file.
+Clicking Save sends JSON to an [Express] backend, which writes the content to a file.
+Here is the [Vue] frontend:
+
+```html
+<template>
+  <textarea v-model="text"></textarea>
+  <button @click="save">Save</button>
+</template>
+<script setup>
+import { ref, onMounted } from 'vue'
+const text = ref('')
+onMounted(async () => {
+  const res = await fetch('/api/text')
+  text.value = (await res.json()).text
+})
+const save = async () => {
+  await fetch('/api/text', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text: text.value })
+  })
+}
+</script>
+```
+
+Here is the backend:
+
+```javascript
+const express = require('express')
+const fs = require('fs')
+const app = express()
+app.use(express.json())
+app.get('/api/text', (req, res) => {
+  res.json({ text: fs.readFileSync('data.txt', 'utf8') })
+})
+app.post('/api/text', (req, res) => {
+  fs.writeFileSync('data.txt', req.body.text)
+  res.json({ ok: true })
+})
+app.listen(3000)
+```
 
 Simple.
 Clean.
 Entirely client-driven.
-
 No server-side templates.
 No page reload.
 The backend is just a REST endpoint.
@@ -159,6 +197,7 @@ That's the difference.
 [React]: https://react.dev/
 [Vue]: https://vuejs.org/
 [Node.js]: https://nodejs.org/
+[Express]: https://expressjs.com/
 [Stack Overflow]: https://stackoverflow.com/
 [fielding]: https://en.wikipedia.org/wiki/Roy_Fielding
 [fielding-dissertation]: https://roy.gbiv.com/pubs/dissertation/fielding_dissertation.pdf
