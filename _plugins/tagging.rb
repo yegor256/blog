@@ -78,6 +78,8 @@ module Yegor
       prefix = case tag
       when 'oop', 'eolang'
         "<img src='/images/icons/cactus.svg' alt='OOP'/>"
+      when 'tests'
+        "<img src='/images/icons/onion.svg' alt='Angry Tests'/>"
       when 'management'
         "<img src='/images/icons/mushroom.svg' alt='Management'/>"
       when 'java'
