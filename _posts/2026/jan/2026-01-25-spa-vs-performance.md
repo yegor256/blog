@@ -47,33 +47,40 @@ This paved the way for the [SPA]: instead of HTML, the server sends [JSON], and 
 Then came the frameworks: [Angular], [React], [Vue].
 Each formalizes the same idea: the browser hosts the application, the server delivers data.
 
-## A Trivial Example
-
-A calculator.
-One input field.
-One button.
+This is a trivial exmaple, a calculator.
+One input field and one button.
 The formula goes to the server, gets evaluated, and the result appears below.
-Here is the [Vue] frontend:
+Here is its [Vue] frontend:
 
 ```html
-<template>
-  <input v-model="formula">
-  <button @click="calc">Calculate</button>
-  <span>{{ result }}</span>
-</template>
-<script setup>
-import { ref } from 'vue'
-const formula = ref('')
-const result = ref('')
-const calc = async () => {
-  const res = await fetch('/api/calc', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ formula: formula.value })
-  })
-  result.value = (await res.json()).result
-}
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <input v-model="formula">
+    <button @click="calc">Calculate</button>
+    <span>{% raw %}{{ result }}{% endraw %}</span>
+  </div>
+  <script>
+    Vue.createApp({
+      data: () => ({ formula: '', result: '' }),
+      methods: {
+        async calc() {
+          const res = await fetch('/api/calc', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ formula: this.formula })
+          })
+          this.result = (await res.json()).result
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+</html>
 ```
 
 Here is the [Express] backend:
@@ -88,23 +95,15 @@ app.post('/api/calc', (req, res) => {
 app.listen(3000)
 ```
 
-Simple.
-Clean.
-Entirely client-driven.
-No server-side templates.
-No page reload.
-The backend is just a REST endpoint.
-If you squint, it looks elegant.
+No page reload on each click.
+The DOM remains the same.
+The JS inside the browser changes only the result of calculation, in a single `<div/>`.
 
-## The Performance Lie
-
-Here's the thing.
 The primary justification for this architecture is performance.
-Not _actual_ performance.
-_Perceived_ performance.
-
-The claim goes like this: servers are slow, rendering HTML takes time, users should see something immediately.
-Makes sense, right?
+If servers are slow, rendering full HTML page takes longer than just a JSON with the result of calculation.
+If the network is unreliable, re-delivering the entire HTML takes longer than just a small JSON document.
+Also, if browsers are slow, making a tiny change in the DOM works faster than a full page reload.
+However, there is a price we pay: maintainability of the software.
 
 But SPAs do not make backends faster.
 They hide backend latency by splitting rendering into pieces and deferring work.
