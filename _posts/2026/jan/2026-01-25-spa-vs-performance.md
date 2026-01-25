@@ -3,18 +3,19 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "SPA vs Web"
+title: "SPA vs Performance"
 date: 2026-01-25
 place: Moscow, Russia
 tags: mood
 description: |
-  ...
+  Single Page Applications, once a solution for slow browsers,
+  are now a performance bottleneck due to multiple HTTP round-trips.
 keywords:
-  - ...
-  - ...
-  - ...
-  - ...
-  - ...
+  - single page application
+  - SPA performance
+  - web architecture
+  - AJAX
+  - server-side rendering
 image: /images/2026/01/bitter-moon.jpg
 jb_picture:
   caption: Bitter Moon (1992) by Roman Polanski
@@ -40,16 +41,16 @@ In 2000, [Roy Fielding][fielding], the author of [REST] and co-author of [HTTP],
 
 Simply put, each action leads to an HTML page reload.
 
-In the early 2000s, this stopped working well:
+In 1999, Microsoft introduced [XMLHttpRequest] for [Outlook Web Access][owa], enabling background HTTP requests.
+In 2005, [Jesse James Garrett][garrett] coined the term [AJAX] in his essay "[Ajax: A New Approach to Web Applications][ajax-essay]."
+This came in handy when full page reloads stopped working well:
 
 * Browsers were slow
 * Networks were unreliable
 * Full page reloads felt wasteful
 * Users expected "desktop-like" interactivity
 
-In 1999, Microsoft introduced [XMLHttpRequest] for [Outlook Web Access][owa], enabling background HTTP requests.
-In 2005, [Jesse James Garrett][garrett] coined the term [AJAX] in his essay "[Ajax: A New Approach to Web Applications][ajax-essay]."
-This paved the way for the [SPA]: instead of HTML, the server sends [JSON], and the browser reconstructs the page locally.
+AJAX paved the way for the [SPA]: instead of HTML, the server sends [JSON], and the browser reconstructs the page locally.
 Then came the frameworks: [Angular] (2010), [React] (2013), [Vue] (2014).
 Each formalizes the same idea: the browser hosts the application, the server delivers data.
 
@@ -91,7 +92,7 @@ UX is one of the best on the modern web, if you ask me.
 Rendering a full page on the server may still be a slow operation.
 It may, and it often will.
 However, this problem is _solvable_, for example, with the help of caching.
-The server is in charge of the data and the state of navigation, that's why.
+The server is in charge of the data and the state of navigation, making caching possible.
 
 Literally every SPA I can think of is horrible in terms of UX.
 Even [Gmail] is not an exception.
