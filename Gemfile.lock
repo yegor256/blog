@@ -336,6 +336,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  elapsed (~> 0.2)
   fastimage (~> 2.4)
   html-proofer (~> 5.0)
   jekyll (~> 4.3)

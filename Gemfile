@@ -7,6 +7,7 @@ source 'https://rubygems.org'
 
 # gem 'jekyll-related-posts'
 
+gem 'elapsed', '~>0.2'
 gem 'fastimage', '~>2.4'
 gem 'html-proofer', '~>5.0'
 gem 'jekyll', '~>4.3'
