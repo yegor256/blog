@@ -6,7 +6,7 @@ layout: post
 title: "TDD Misbeliefs"
 date: 2019-07-02
 place: Minsk, Belarus
-tags: testing
+tags: tests
 description: |
   Test-driven development is a very obvious and at the same time
   very unclear territory in modern software development;

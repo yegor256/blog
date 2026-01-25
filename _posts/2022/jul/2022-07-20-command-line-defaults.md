@@ -6,7 +6,7 @@ layout: post
 title: "Command Line Default Options in Linearized Plain Text"
 date: 2022-07-20
 place: Moscow, Russia
-tags: testing
+tags: tests
 description: |
   Where to put default configuration parameters for
   a command line tool? It has to be a JSON or YAML

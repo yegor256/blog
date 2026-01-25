@@ -6,7 +6,7 @@ layout: post
 title: "On the Layout of Tests"
 date: 2023-01-19
 place: Moscow, Russia
-tags: testing
+tags: tests
 description: |
   What is the right way to keep test classes in a repository?
   There is no single canonical approach, but a few principles may help

@@ -6,7 +6,7 @@ layout: post
 title: "Automated Tests Are the Safety Net that Saves You"
 date: 2022-07-05
 place: Moscow, Russia
-tags: testing
+tags: tests
 description: |
   Modifying the source code and knowing that there are no
   automated tests in place is similar to working at height

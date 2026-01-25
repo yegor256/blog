@@ -6,7 +6,7 @@ layout: post
 title: "The TDD That Works for Me"
 date: 2017-03-24
 place: Frankfurt, Germany
-tags: testing tdd
+tags: tests tdd
 description: |
   Test-driven development is a brilliant idea...if it works;
   in reality, it doesn't work the way most software books

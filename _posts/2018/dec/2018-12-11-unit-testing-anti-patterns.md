@@ -6,7 +6,7 @@ layout: post
 title: "Unit Testing Anti-Patterns, Full List"
 date: 2018-12-11
 place: Moscow, Russia
-tags: testing
+tags: tests
 description: |
   This is a full list of unit-testing anti-patterns that I
   managed to find and collect; feel free to add your

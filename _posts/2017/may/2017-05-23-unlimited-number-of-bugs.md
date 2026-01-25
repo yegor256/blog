@@ -8,7 +8,7 @@ redirect_from:
 title: "Any Program Has an Unlimited Number of Bugs"
 date: 2017-05-23
 place: Odessa, Ukraine
-tags: testing
+tags: tests
 description: |
   Since requirements and user expectations are vague
   any piece of software may be improved a literally

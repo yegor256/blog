@@ -5,7 +5,7 @@
 layout: post
 title: "Bugs Are Welcome"
 date: 2014-04-13
-tags: testing xdsd management
+tags: tests xdsd management
 place: Amsterdam, Holland
 description: |
   Unlike a very common understanding of a software bug as something negative,

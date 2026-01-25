@@ -6,7 +6,7 @@ layout: post
 title: "The Code and Its Tests in Different Pull Requests"
 date: 2022-08-04
 place: Moscow, Russia
-tags: testing
+tags: tests
 description: |
   Always submit changes to the code in a separate pull request
   from the changes to its unit tests, in another pull request.

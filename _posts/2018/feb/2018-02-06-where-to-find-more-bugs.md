@@ -6,7 +6,7 @@ layout: post
 title: "More Bugs, Please"
 date: 2018-02-06
 place: Moscow, Russia
-tags: testing
+tags: tests
 description: |
   We encourage programmers to find bugs and report them;
   we even pay for each bug found; this article

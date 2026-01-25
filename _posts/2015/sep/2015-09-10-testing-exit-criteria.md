@@ -7,7 +7,7 @@ title: "When Do You Stop Testing?"
 date: 2015-09-10
 place: Moscow, Russia
 categories: jcg
-tags: testing
+tags: tests
 description: |
   How do you know when testing is enough? When there
   are no bugs? That is a very wrong approach! Instead, stop

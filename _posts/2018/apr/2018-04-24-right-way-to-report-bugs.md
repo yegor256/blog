@@ -6,7 +6,7 @@ layout: post
 title: "The Right Way to Report a Bug"
 date: 2018-04-24
 place: Moscow, Russia
-tags: testing zerocracy etiquette
+tags: tests zerocracy etiquette
 description: |
   Not every bug you report will be accepted by a project
   and paid for; here is a list of tricks to increase

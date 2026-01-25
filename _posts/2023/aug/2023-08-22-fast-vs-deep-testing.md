@@ -6,7 +6,7 @@ layout: post
 title: "Fast Tests Help Humans, Deep Tests Help Servers"
 date: 2023-08-22
 place: Kazan, Russia
-tags: testing java
+tags: tests java
 description: |
   Humans should run "fast" tests to catch obvious mistakes, while
   servers should execute "deep" tests to ensure the highest quality.
