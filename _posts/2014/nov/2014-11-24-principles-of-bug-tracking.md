@@ -21,7 +21,7 @@ jb_picture:
   caption: Monty Python Flying Circus, TV Series (1969-1974)
 ---
 
-A team working [remotely]({% pst 2014/sep/2014-09-22-remote-programming-interview %})
+A team working [remotely]({% pst 2017/may/2017-05-02-remote-slaves %})
 requires much stronger discipline than
 a co-located crew sitting in the same
 [office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}).

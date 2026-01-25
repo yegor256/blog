@@ -21,4 +21,4 @@ jobs:
           ruby-version: 3.4.8
           bundler-cache: true
       - run: sudo .github/install-apt.sh
-      - run: bundle exec rake
+      - run: bundle exec rake -- --offline

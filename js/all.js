@@ -19,6 +19,11 @@ if (typeof($) != 'undefined') {
       }
       return num;
     }
+    $('#search-query').focus(function() {
+      $('.google').css('visibility', 'visible');
+    }).blur(function() {
+      $('.google').css('visibility', 'hidden');
+    });
     $(document).on('keydown', function(e) {
       if ($(e.target).is('input, textarea')) {
         return;
@@ -46,71 +51,54 @@ if (typeof($) != 'undefined') {
       $(".button[href!='#']").click(
         function (event) {
           event.preventDefault();
-          var $this = $(this);
+          const $btn = $(this);
           window.open(
-            $this.attr('href'),
-            $this.attr('title'),
+            $btn.attr('href'),
+            $btn.attr('title'),
             'width=640,height=300'
           );
         }
       );
-      var url = document.location.href.split('?')[0].split('#')[0],
-        eurl = encodeURIComponent(url),
-        border = '1px solid #ffa094',
-        timeout = 5000;
-      if ($('.count-facebook').length) {
+      const url = document.location.href.split('?')[0].split('#')[0];
+      const eurl = encodeURIComponent(url);
+      const border = '1px solid #ffa094';
+      const timeout = 5000;
+      function fetchCount(name, endpoint, extractor) {
+        const $counter = $('.count-' + name);
+        if (!$counter.length) {
+          return;
+        }
         $.ajax({
           dataType: 'jsonp',
           async: true,
           timeout: timeout,
-          url: 'https://graph.facebook.com/?callback=?&ids=' + eurl,
+          url: endpoint,
           success: function(json) {
-            if (json[url]) {
-              var count = json[url].share.share_count;
-              if (count > 0) {
-                $('.count-facebook').html(number(count)).fadeIn();
-              }
-            }
-          },
-          error: function() {
-            $('.share .icon-facebook').css('border', border);
-          }
-        });
-      }
-      if ($('.count-linkedin').length) {
-        $.ajax({
-          dataType: 'json',
-          async: true,
-          timeout: timeout,
-          url: 'https://www.linkedin.com/countserv/count/share?format=jsonp&callback=?&url=' + eurl,
-          success: function(json) {
-            var count = json.count;
+            const count = extractor(json);
             if (count > 0) {
-              $('.count-linkedin').html(number(count)).fadeIn();
+              $counter.html(number(count)).fadeIn();
             }
           },
           error: function() {
-            $('.share .icon-linkedin').css('border', border);
+            $('.share .icon-' + name).css('border', border);
           }
         });
       }
-      if ($('.count-reddit').length) {
-        $.ajax({
-          dataType: 'json',
-          async: true,
-          timeout: timeout,
-          url: 'https://www.reddit.com/api/info.json?jsonp=?&url=' + eurl,
-          success: function(json) {
-            var count = json.data.children.length;
-            if (count > 0) {
-              $('.count-reddit').html(number(count)).fadeIn();
-            }
-          },
-          error: function() {
-            $('.share .icon-reddit').css('border', border);
-          }
-        });
-      }
+      fetchCount(
+        'facebook',
+        'https://graph.facebook.com/?callback=?&ids=' + eurl,
+        function(json) { return json[url] ? json[url].share.share_count : 0; }
+      );
+      fetchCount(
+        'linkedin',
+        'https://www.linkedin.com/countserv/count/share?format=jsonp&callback=?&url=' + eurl,
+        function(json) { return json.count; }
+      );
+      fetchCount(
+        'reddit',
+        'https://www.reddit.com/api/info.json?jsonp=?&url=' + eurl,
+        function(json) { return json.data.children.length; }
+      );
       if ($('.count-vk').length) {
         VK.Share = {};
         VK.Share.count = function (index, count) {
@@ -125,27 +113,6 @@ if (typeof($) != 'undefined') {
           url: 'https://vk.com/share.php?act=count&url=' + eurl
         });
       }
-      /*
-      if ($('.count-hackernews').length) {
-        $.ajax({
-          dataType: 'json',
-          async: true,
-          timeout: timeout,
-          url: ' "'
-            + encodeURIComponent(url.replace('https://www.yegor256.com', ''))
-            + '"',
-          success: function(json) {
-            var count = json.nbHits;
-            if (count > 0) {
-              $('.count-hackernews').html(number(count)).fadeIn();
-            }
-          },
-          error: function() {
-            $('.share .icon-hackernews').css('border', border);
-          }
-        });
-      }
-      */
     }
     $('h2').each(
       function (idx, element) {

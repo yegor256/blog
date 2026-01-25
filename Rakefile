@@ -3,17 +3,19 @@
 # SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
-require 'rubygems'
-require 'rake'
-require 'fileutils'
-require 'tempfile'
-require 'rake/clean'
-require 'w3c_validators'
-require 'nokogiri'
-require 'rubocop/rake_task'
 require 'English'
-require 'net/http'
+require 'fileutils'
 require 'html-proofer'
+require 'net/http'
+require 'nokogiri'
+require 'qbash'
+require 'rake'
+require 'rake/clean'
+require 'rubocop/rake_task'
+require 'rubygems'
+require 'shellwords'
+require 'tempfile'
+require 'w3c_validators'
 
 VERBOSE = false
 
@@ -71,7 +73,7 @@ task :build do
     done 'Jekyll site already exists in _site (run "rake clean" first)'
   else
     puts 'Building Jekyll site...'
-    system('jekyll build --trace --future')
+    qbash("jekyll build --trace --future -- #{ARGV.join(' ').match(/(?:^| )(-- .*)$/)}")
     raise "Jekyll failed with #{$CHILD_STATUS}" unless $CHILD_STATUS.success?
     done 'Jekyll site generated without issues'
   end
@@ -174,9 +176,9 @@ task spell: [:build] do
     tmp << text
     tmp.flush
     tmp.close
-    stdout = `cat "#{tmp.path}" \
+    stdout = qbash("cat #{Shellwords.escape(tmp.path)} \
       | aspell -a --lang=en_US -W 3 --ignore-case --encoding=utf-8 -p ./_rake/aspell.en.pws \
-      | grep ^\\&`
+      | grep ^\\&")
     found = 0
     if stdout.empty?
       puts "#{f}: OK (#{text.split.size} words)" if VERBOSE
@@ -202,11 +204,11 @@ end
 desc 'Ping some foreign links'
 task ping: [:build] do
   links = all_links.uniq
-    .reject { |a| a.start_with? 'https://www.yegor256.com/' }
-    .reject { |a| a.include? 'linkedin.com' }
-    .select { |a| (a =~ %r{^https?://.*}) }
-    .reject { |a| a.start_with? 'http://localhost' }
-    .reject { |a| a.start_with? 'https://www.youtube.com/watch?v=' }
+    .reject { |a| a.start_with?('https://www.yegor256.com/') }
+    .reject { |a| a.include?('linkedin.com') }
+    .select { |a| %r{^https?://.*}.match?(a) }
+    .reject { |a| a.start_with?('http://localhost') }
+    .reject { |a| a.start_with?('https://www.youtube.com/watch?v=') }
     .shuffle
     .take(128)
   tmp = Tempfile.new(['yegor256-', '.txt'])
@@ -216,7 +218,7 @@ task ping: [:build] do
   out = Tempfile.new(['yegor256-', '.txt'])
   out.close
   puts "#{links.size} links found, testing them..."
-  system("./_rake/ping.sh #{tmp.path} #{out.path}")
+  qbash("./_rake/ping.sh #{Shellwords.escape(tmp.path)} #{Shellwords.escape(out.path)}")
   errors = File.read(out).split("\n").reduce(0) do |cnt, p|
     code, link = p.split
     next nil if link.nil?
@@ -306,10 +308,10 @@ task orphans: [:build] do
   links += all_html.map { |f| f.gsub('_site', 'https://www.yegor256.com') }
   counts = {}
   links
-    .select { |a| a.match %r{.*/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*} }
-    .reject { |a| a.end_with? '.amp.html' }
-    .reject { |a| a.include? '2009/03/04/pdd' }
-    .reject { |a| a.include? '2017/05/02/unl' }
+    .select { |a| %r{.*/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*}.match?(a) }
+    .reject { |a| a.end_with?('.amp.html') }
+    .reject { |a| a.include?('2009/03/04/pdd') }
+    .reject { |a| a.include?('2017/05/02/unl') }
     .group_by(&:itself)
     .each { |k, v| counts[k] = v.length }
   orphans = 0
