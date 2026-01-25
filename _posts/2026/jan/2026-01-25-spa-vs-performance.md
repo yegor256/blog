@@ -15,16 +15,12 @@ keywords:
   - ...
   - ...
   - ...
-image: /images/2026/01/...
+image: /images/2026/01/bitter-moon.jpg
 jb_picture:
-  caption: ...
+  caption: Bitter Moon (1992) by Roman Polanski
 ---
 
-A Single Page Application is a website where you never leave the page.
-Click a link---the URL changes, content appears, but there's no page load.
-It's not just a website with JavaScript.
-It's a fundamentally different architecture, where the browser hosts a long-lived application and HTTP is reduced to a data transport.
-This is a choice that made backends lazy.
+...
 
 <!--more-->
 
@@ -32,43 +28,27 @@ This is a choice that made backends lazy.
 
 ## What Is an SPA?
 
-In a traditional website, you click something, the browser sends a request, and the server responds with an HTML document.
-A new page.
-A fresh start.
+In 2000, [Roy Fielding][fielding], the author of [REST] and co-author of [HTTP], described the Web in his [dissertation][fielding-dissertation]:
 
-In an SPA, it's different.
-The server sends [JSON], and the browser reconstructs the page locally.
-HTML becomes a static shell; behavior and state move to the client.
+> A network of web pages, where the user progresses through the application
+> by selecting links, resulting in the next page being transferred
+> to the user and rendered for their use.
 
-JSON is not the problem by itself.
-But its role changed.
-Instead of being a serialization format for occasional data exchange, it became _the_ representation of application state.
-HTTP stopped being an application protocol and became a pipe.
+Click a link, get a page.
+Simple.
 
-"Backend" is no longer responsible for user-facing behavior; it's reduced to a data service.
-"Frontend" becomes a full application runtime, complete with state machines, routing, and business logic.
-Two separate applications, loosely connected by JSON.
+In the late 2000s, this stopped working well:
 
-## Where Did They Come From?
+* Browsers were slow
+* Networks were unreliable
+* Full page reloads felt wasteful
+* Users expected "desktop-like" interactivity
 
-SPAs appeared in the late 2000s and early 2010s.
-Browsers were slow.
-Networks were unreliable.
-Users expected "desktop-like" interactivity.
-Full page reloads felt wasteful.
-JavaScript-driven interfaces felt snappy.
-
-The reasons made sense at the time:
-
-* Perceived responsiveness
-* Reuse of APIs across web and mobile
-* Rich client-side state
-* Easier composition of UI components
-* Organizational convenience (separate teams for backend and frontend)
-
+The [SPA] was introduced.
+Instead of HTML, the server sends [JSON].
+The browser reconstructs the HTML page locally.
 Then came the frameworks: [Angular], [React], [Vue].
-Each of them formalizes the idea that the browser hosts the application and the server delivers data.
-They differ in syntax, not in philosophy.
+Each formalizes the same idea: the browser hosts the application, the server delivers data.
 
 ## A Trivial Example
 
@@ -180,4 +160,8 @@ That's the difference.
 [Vue]: https://vuejs.org/
 [Node.js]: https://nodejs.org/
 [Stack Overflow]: https://stackoverflow.com/
-
+[fielding]: https://en.wikipedia.org/wiki/Roy_Fielding
+[fielding-dissertation]: https://roy.gbiv.com/pubs/dissertation/fielding_dissertation.pdf
+[REST]: https://en.wikipedia.org/wiki/REST
+[HTTP]: https://en.wikipedia.org/wiki/HTTP
+[SPA]: https://en.wikipedia.org/wiki/Single-page_application
