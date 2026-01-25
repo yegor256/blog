@@ -1685,7 +1685,6 @@ cola
 cold
 collaborate
 collaboration
-collaborationsuperpowers
 collaborative
 collaborators
 collapse
@@ -4194,6 +4193,7 @@ graphviz
 grasp
 grateful
 grave
+graves
 gray
 great
 greater
@@ -4540,6 +4540,7 @@ how-the-boeing-
 howell
 however
 HP
+hpegn
 hr
 HSE
 HTML
@@ -5598,7 +5599,6 @@ linus
 linux
 lions
 liquibase
-lisette
 liskov
 LISP-syntax
 list
@@ -6533,7 +6533,6 @@ non-exhaustive
 non-functional
 non-important
 non-intrusive
-non-IT
 non-local
 non-native
 non-obvious
@@ -8662,7 +8661,6 @@ secring
 sect
 section
 sections
-sector
 sectors
 secure
 security
@@ -9619,7 +9617,6 @@ suspect
 suspicions
 suspicious
 sustainable
-sutherland
 SV
 SVG
 SVN
@@ -10638,6 +10635,7 @@ VPs
 vs
 vulnerabilities
 vulnerable
+vy
 vytautas
 wages
 wait
