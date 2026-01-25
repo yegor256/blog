@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "SPA vs Performance"
+title: "SPAs Kill Web Performance"
 date: 2026-01-25
 place: Moscow, Russia
 tags: mood
@@ -69,7 +69,6 @@ However, when an SPA gets larger, the frontend has to make dozens of round-trips
 Look at what Facebook and LinkedIn are doing while rendering your home page.
 A rather simple UI with just a list of recent posts gets filled up by multiple pieces, each leading to its own HTTP request,
   sometimes taking more than a few seconds to complete rendering a page.
-The page loads in fragments, content shifts, controls appear late, some parts arrive seconds after others.
 Their UX sucks, if you ask me.
 
 Their architects are stupid?
@@ -80,21 +79,36 @@ The architects of Facebook and LinkedIn are the hostages of it.
 They can't make their websites run faster, because they, by design, are built of fragments retrievable from the backend.
 They must make _multiple_ HTTP round-trips.
 
+Aside of just a simple "many trips are worse than one" there are a few more precise issues.
+First, SPAs introduce application-level [head-of-line blocking]:
+  even if HTTP/2 [multiplexes] requests on the wire,
+  the UI cannot render until dependent JSON responses arrive
+  and client-side code processes them in the correct order.
+Second, SPAs create dependency waterfalls:
+  one request is often needed to discover identifiers,
+  permissions, or feature flags required to issue the next request,
+  serializing what could have been a single HTML response.
+Third, fragmented APIs make effective caching nearly impossible:
+  when a page is assembled from dozens of JSON endpoints,
+  each with its own cache key, TTL, and invalidation rules,
+  the probability of a full cache hit drops sharply.
+Finally, independently loaded components impose coordination costs: layout stabilization,
+  error handling, loading states, and partial failures must be orchestrated in the browser,
+  delaying meaningful rendering and producing visible content shifts.
+
 What once, in the times of slow browsers and networks, was a solution for small DOM updates, turned into a dead-end for web design.
 
 Most web architects simply can't make their websites as fast as [Stack Overflow], which is not an SPA.
-It delivers the entire HTML page in one request.
-Predictable layout.
-No suspense.
-Either the page loads, or it doesn't.
-UX is one of the best on the modern web, if you ask me.
+It delivers the entire HTML page, [built by][by-razor] server-side [Razor] framework, in one [&lt;50ms][50ms] request.
+It does use client-side JS components selectively, but these are isolated and don't negate the central role of server HTML for the initial experience.
+Their UX is one of the best on the modern web, if you ask me.
 
 Rendering a full page on the server may still be a slow operation.
 It may, and it often will.
 However, this problem is _solvable_, for example, with the help of caching.
 The server is in charge of the data and the state of navigation, making caching possible.
 
-Literally every SPA I can think of is horrible in terms of UX.
+Literally every large, content-heavy, consumer-facing SPA I can think of is horrible in terms of UX.
 Even [Gmail] is not an exception.
 Their UX would be much better if they followed the principles of Roy Fielding and reloaded the page every time I open an email.
 I'm not kidding.
@@ -120,3 +134,8 @@ I'm not kidding.
 [adamsilver]: https://adamsilver.io/blog/the-problem-with-single-page-applications/
 [matuzo]: https://www.matuzo.at/blog/2023/single-page-applications-criticism/
 [Gmail]: https://gmail.com
+[50ms]: https://highscalability.com/stackoverflow-update-560m-pageviews-a-month-25-servers-and-i/
+[Razor]: https://en.wikipedia.org/wiki/ASP.NET_Razor
+[by-razor]: https://scaleyourapp.com/svelte-at-stack-overflow/
+[head-of-line blocking]: https://en.wikipedia.org/wiki/Head-of-line_blocking
+[multiplexes]: https://stackoverflow.com/questions/36835972/is-the-per-host-connection-limit-raised-with-http-2/36847527#36847527
