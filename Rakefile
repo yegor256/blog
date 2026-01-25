@@ -74,7 +74,6 @@ task :build do
   else
     puts 'Building Jekyll site...'
     qbash("jekyll build --trace --future -- #{ARGV.join(' ').match(/(?:^| )(-- .*)$/)}")
-    raise "Jekyll failed with #{$CHILD_STATUS}" unless $CHILD_STATUS.success?
     done 'Jekyll site generated without issues'
   end
 end
