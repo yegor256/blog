@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "SPAs Kill Web Performance"
+title: "SPAs Are a Performance Dead End"
 date: 2026-01-25
 place: Moscow, Russia
 tags: mood
