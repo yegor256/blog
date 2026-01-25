@@ -87,6 +87,8 @@ And then there's the browser juggling layout shifts, spinners, and partial failu
 
 What once, in the times of slow browsers and networks, was a solution for small DOM updates, turned into a dead-end for web design.
 
+{% quote State belongs on the server while HTML is the primary delivery artifact, not JSON. %}
+
 Most web architects simply can't make their websites as fast as [Stack Overflow], which is not an SPA.
 It delivers the entire HTML page, [built by][by-razor] server-side [Razor] framework, in one [&lt;50ms][50ms] request.
 It does use client-side JS components selectively, but these are isolated and don't negate the central role of server HTML for the initial experience.
