@@ -26,8 +26,6 @@ jb_picture:
 
 {% jb_picture_body %}
 
-## What Is an SPA?
-
 In 2000, [Roy Fielding][fielding], the author of [REST] and co-author of [HTTP], described the Web in his [dissertation][fielding-dissertation]:
 
 > A network of web pages, where the user progresses through the application
@@ -36,62 +34,56 @@ In 2000, [Roy Fielding][fielding], the author of [REST] and co-author of [HTTP],
 
 Simply put, each action leads to an HTML page reload.
 
-In the late 2000s, this stopped working well:
+In the early 2000s, this stopped working well:
 
 * Browsers were slow
 * Networks were unreliable
 * Full page reloads felt wasteful
 * Users expected "desktop-like" interactivity
 
-The [SPA] was introduced.
-Instead of HTML, the server sends [JSON].
-The browser reconstructs the HTML page locally.
+In 1999, Microsoft introduced [XMLHttpRequest] for [Outlook Web Access][owa], enabling background HTTP requests.
+In 2005, [Jesse James Garrett][garrett] coined the term [AJAX] in his essay "[Ajax: A New Approach to Web Applications][ajax-essay]."
+This paved the way for the [SPA]: instead of HTML, the server sends [JSON], and the browser reconstructs the page locally.
 Then came the frameworks: [Angular], [React], [Vue].
 Each formalizes the same idea: the browser hosts the application, the server delivers data.
 
 ## A Trivial Example
 
-One HTML page.
-One textarea.
-A Save button.
-Clicking Save sends JSON to an [Express] backend, which writes the content to a file.
+A calculator.
+One input field.
+One button.
+The formula goes to the server, gets evaluated, and the result appears below.
 Here is the [Vue] frontend:
 
 ```html
 <template>
-  <textarea v-model="text"></textarea>
-  <button @click="save">Save</button>
+  <input v-model="formula">
+  <button @click="calc">Calculate</button>
+  <span>{{ result }}</span>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue'
-const text = ref('')
-onMounted(async () => {
-  const res = await fetch('/api/text')
-  text.value = (await res.json()).text
-})
-const save = async () => {
-  await fetch('/api/text', {
+import { ref } from 'vue'
+const formula = ref('')
+const result = ref('')
+const calc = async () => {
+  const res = await fetch('/api/calc', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ text: text.value })
+    body: JSON.stringify({ formula: formula.value })
   })
+  result.value = (await res.json()).result
 }
 </script>
 ```
 
-Here is the backend:
+Here is the [Express] backend:
 
 ```javascript
 const express = require('express')
-const fs = require('fs')
 const app = express()
 app.use(express.json())
-app.get('/api/text', (req, res) => {
-  res.json({ text: fs.readFileSync('data.txt', 'utf8') })
-})
-app.post('/api/text', (req, res) => {
-  fs.writeFileSync('data.txt', req.body.text)
-  res.json({ ok: true })
+app.post('/api/calc', (req, res) => {
+  res.json({ result: eval(req.body.formula) })
 })
 app.listen(3000)
 ```
@@ -204,3 +196,8 @@ That's the difference.
 [REST]: https://en.wikipedia.org/wiki/REST
 [HTTP]: https://en.wikipedia.org/wiki/HTTP
 [SPA]: https://en.wikipedia.org/wiki/Single-page_application
+[XMLHttpRequest]: https://en.wikipedia.org/wiki/XMLHttpRequest
+[owa]: https://en.wikipedia.org/wiki/Outlook_on_the_web
+[garrett]: https://en.wikipedia.org/wiki/Jesse_James_Garrett
+[AJAX]: https://en.wikipedia.org/wiki/Ajax_(programming)
+[ajax-essay]: https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf
