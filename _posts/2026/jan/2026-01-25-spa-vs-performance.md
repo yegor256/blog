@@ -79,22 +79,11 @@ The architects of Facebook and LinkedIn are the hostages of it.
 They can't make their websites run faster, because they, by design, are built of fragments retrievable from the backend.
 They must make _multiple_ HTTP round-trips.
 
-Aside of just a simple "many trips are worse than one" there are a few more precise issues.
-First, SPAs introduce application-level [head-of-line blocking]:
-  even if HTTP/2 [multiplexes] requests on the wire,
-  the UI cannot render until dependent JSON responses arrive
-  and client-side code processes them in the correct order.
-Second, SPAs create dependency waterfalls:
-  one request is often needed to discover identifiers,
-  permissions, or feature flags required to issue the next request,
-  serializing what could have been a single HTML response.
-Third, fragmented APIs make effective caching nearly impossible:
-  when a page is assembled from dozens of JSON endpoints,
-  each with its own cache key, TTL, and invalidation rules,
-  the probability of a full cache hit drops sharply.
-Finally, independently loaded components impose coordination costs: layout stabilization,
-  error handling, loading states, and partial failures must be orchestrated in the browser,
-  delaying meaningful rendering and producing visible content shifts.
+It's not just "many trips are worse than one."
+Even if HTTP/2 [multiplexes] requests, the UI still waits for JSON to arrive in order---classic [head-of-line blocking][head-of-line blocking].
+Worse, one request often reveals IDs needed for the next, turning parallel calls into a waterfall.
+Caching doesn't help either: dozens of endpoints, each with its own TTL, rarely produce a full cache hit.
+And then there's the browser juggling layout shifts, spinners, and partial failures---all at once.
 
 What once, in the times of slow browsers and networks, was a solution for small DOM updates, turned into a dead-end for web design.
 
