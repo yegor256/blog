@@ -108,8 +108,6 @@ I'm not kidding.
 [Angular]: https://angular.io/
 [React]: https://react.dev/
 [Vue]: https://vuejs.org/
-[Node.js]: https://nodejs.org/
-[Express]: https://expressjs.com/
 [Stack Overflow]: https://stackoverflow.com/
 [fielding]: https://en.wikipedia.org/wiki/Roy_Fielding
 [fielding-dissertation]: https://roy.gbiv.com/pubs/dissertation/fielding_dissertation.pdf
