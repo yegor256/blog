@@ -1,4 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-01-25T10:03:10+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Comments Considered Harmful in the Age of LLMs</title><link href="https://www.yegor256.com/2026/01/11/no-documentation-comments.html" rel="alternate" type="text/html" title="Comments Considered Harmful in the Age of LLMs" /><published>2026-01-11T00:00:00+00:00</published><updated>2026-01-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/01/11/no-documentation-comments</id><content type="html" xml:base="https://www.yegor256.com/2026/01/11/no-documentation-comments.html"><![CDATA[<p>Writing code documentation is a pain.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-01-25T15:17:26+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SPAs Are a Performance Dead End</title><link href="https://www.yegor256.com/2026/01/25/spa-vs-performance.html" rel="alternate" type="text/html" title="SPAs Are a Performance Dead End" /><published>2026-01-25T00:00:00+00:00</published><updated>2026-01-25T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/01/25/spa-vs-performance</id><content type="html" xml:base="https://www.yegor256.com/2026/01/25/spa-vs-performance.html"><![CDATA[<p>It seems to be <a href="https://adamsilver.io/blog/the-problem-with-single-page-applications/">popular</a> to design websites as Single Page Applications (SPA).
+Instead of showing a new HTML page on every click, an SPA sends a lightweight skeleton with JavaScript.
+The JS makes HTTP requests, receives JSON, and injects data into the DOM.
+On each user action, the page doesn’t reload—only the DOM changes.
+Such an architecture, once a response to slow browsers and unreliable networks, is now a <a href="https://www.matuzo.at/blog/2023/single-page-applications-criticism/">bottleneck</a>.
+The page is built of fragments, each requiring its own HTTP request.
+No matter how fast each request is, the multiplication diminishes all optimization efforts.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Bitter Moon (1992) by Roman Polanski" src="/images/2026/01/bitter-moon.jpg" longdesc="#5f60766e" /><figcaption id="5f60766e">Bitter Moon (1992) by Roman Polanski</figcaption></figure>
+
+<p>In 2000, <a href="https://en.wikipedia.org/wiki/Roy_Fielding">Roy Fielding</a>, the author of <a href="https://en.wikipedia.org/wiki/REST">REST</a> and co-author of <a href="https://en.wikipedia.org/wiki/HTTP">HTTP</a>, described the Web in his <a href="https://roy.gbiv.com/pubs/dissertation/fielding_dissertation.pdf">dissertation</a>:</p>
+
+<blockquote>
+  <p>A network of web pages, where the user progresses through the application
+by selecting links, resulting in the next page being transferred
+to the user and rendered for their use.</p>
+</blockquote>
+
+<p>Simply put, each action leads to an HTML page reload.</p>
+
+<p>In 1999, Microsoft introduced <a href="https://en.wikipedia.org/wiki/XMLHttpRequest">XMLHttpRequest</a> for <a href="https://en.wikipedia.org/wiki/Outlook_on_the_web">Outlook Web Access</a>, enabling background HTTP requests.
+In 2005, <a href="https://en.wikipedia.org/wiki/Jesse_James_Garrett">Jesse James Garrett</a> coined the term <a href="https://en.wikipedia.org/wiki/Ajax_(programming)">AJAX</a> in his essay “<a href="https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf">Ajax: A New Approach to Web Applications</a>.”
+This came in handy when full page reloads stopped working well:</p>
+
+<ul>
+  <li>Browsers were slow</li>
+  <li>Networks were unreliable</li>
+  <li>Full page reloads felt wasteful</li>
+  <li>Users expected “desktop-like” interactivity</li>
+</ul>
+
+<p><em>AJAX</em> paved the way for the <a href="https://en.wikipedia.org/wiki/Single-page_application">SPA</a>: instead of HTML, the server sends <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>, and the browser reconstructs the page locally.
+Then came the frameworks: <a href="https://angular.io/">Angular</a> (2010), <a href="https://react.dev/">React</a> (2013), <a href="https://vuejs.org/">Vue</a> (2014).
+Each formalizes the same idea: the browser hosts the application, the server delivers data.</p>
+
+<p>Imagine a simple online calculator where a user enters “2+3,” clicks “Submit,” and sees the result right next to the input field.
+No page reload.
+The <a href="https://en.wikipedia.org/wiki/Document_Object_Model">DOM</a> remains the same.
+The JS inside the browser changes only the result of calculation, in a single <code class="language-plaintext highlighter-rouge">&lt;div/&gt;</code>.</p>
+
+<p>The primary justification for this architecture is <em>performance</em>.
+If servers are slow, rendering a full HTML page takes longer than just a JSON with the result of calculation.
+If the network is unreliable, re-delivering the entire HTML takes longer than just a small JSON document.
+Also, if browsers are slow, making a tiny change in the DOM works faster than a full page reload.</p>
+
+<p>This is true, for a trivial example.
+However, when an SPA gets larger, the frontend has to make <em>dozens of round-trips</em> to the backend.
+Look at what Facebook and LinkedIn are doing while rendering your home page.
+A rather simple UI with just a list of recent posts gets filled up by multiple pieces, each leading to its own HTTP request,
+  sometimes taking more than a few seconds to complete rendering a page.
+Their UX sucks, if you ask me.</p>
+
+<p>Their architects are stupid?
+Nope.</p>
+
+<p>The very idea of SPA is flawed.
+The architects of Facebook and LinkedIn are the hostages of it.
+They can’t make their websites run faster, because they, by design, are built of fragments retrievable from the backend.
+They must make <em>multiple</em> HTTP round-trips.</p>
+
+<p>The performance penalty of SPAs is structural, not accidental.
+Even if HTTP/2 <a href="https://stackoverflow.com/questions/36835972/is-the-per-host-connection-limit-raised-with-http-2/36847527#36847527">multiplexes</a> requests, the UI still waits for JSON to arrive in order—classic
+  <a href="https://en.wikipedia.org/wiki/Head-of-line_blocking">head-of-line blocking</a> at the application layer.
+Worse, one request often reveals permissions, feature flags, or entity identifiers needed for the next, turning parallel calls into a waterfall.
+Caching doesn’t help either: dozens of endpoints, each with its own TTL, rarely produce a full cache hit,
+  and partial hits still force the browser to assemble and reconcile the page at runtime
+Meanwhile, the browser must juggle layout stabilization, loading indicators, and partial failures—all before meaningful content becomes visible.</p>
+
+<p>What was once a solution for small DOM updates, in an era of slow browsers and unreliable networks, has turned into a dead-end for web design.</p>
+
+<aside class="quote">State belongs on the server while HTML is the primary delivery artifact, not JSON.
+</aside>
+
+<p>Most web architects simply can’t make their websites as fast as <a href="https://stackoverflow.com/">Stack Overflow</a>, which is not an SPA.
+It delivers the entire HTML page, <a href="https://scaleyourapp.com/svelte-at-stack-overflow/">rendered</a> on the server using <a href="https://en.wikipedia.org/wiki/ASP.NET_Razor">Razor</a>, in one <a href="https://highscalability.com/stackoverflow-update-560m-pageviews-a-month-25-servers-and-i/">&lt;50ms</a> request.
+It does use client-side JS components selectively, but these are isolated and don’t negate the central role of server HTML for the initial experience.
+Their UX is one of the best on the modern web, if you ask me.</p>
+
+<p>Rendering a full page on the server may still be a slow operation.
+It may, and it often will.
+However, this problem is <em>solvable</em>, for example, with the help of caching.
+The server is in charge of the data and the state of navigation, making caching possible.</p>
+
+<p>Literally every large, content-heavy, consumer-facing SPA I can think of is horrible in terms of UX.
+Even <a href="https://gmail.com">Gmail</a> is not an exception.
+Their UX would be noticeably better if they followed the principles of Roy Fielding and reloaded the page every time an email is opened.
+I’m not kidding.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[Single Page Applications, once a solution for slow browsers, are now a performance bottleneck due to multiple HTTP round-trips.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/01/bitter-moon.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/01/bitter-moon.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Comments Considered Harmful in the Age of LLMs</title><link href="https://www.yegor256.com/2026/01/11/no-documentation-comments.html" rel="alternate" type="text/html" title="Comments Considered Harmful in the Age of LLMs" /><published>2026-01-11T00:00:00+00:00</published><updated>2026-01-11T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/01/11/no-documentation-comments</id><content type="html" xml:base="https://www.yegor256.com/2026/01/11/no-documentation-comments.html"><![CDATA[<p>Writing code documentation is a pain.
 Not writing it leads to even bigger pain—we can’t comprehend the code.
 However, writing it and then forgetting to update it causes the ultimate pain: it lies and confuses us.
 How about we cure all three pains at once: <em>prohibit all comments!</em>
@@ -903,50 +991,4 @@ This reduces the amount of <a href="/2016/11/21/naked-data.html">naked data</a> 
 <p>The less data is visible, the <a href="/2016/11/21/naked-data.html">better</a> the design—at least from an OOP perspective.</p>
 
 <p>Thus, using <code class="language-plaintext highlighter-rouge">findById()</code> followed by <code class="language-plaintext highlighter-rouge">remove()</code> embraces object-oriented principles more fully.
-It allows for cleaner extension, better error handling, and tighter encapsulation.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[Delegating behavior to objects rather than invoking utility methods leads to cleaner, more extensible, and properly encapsulated object-oriented design.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/06/8-femmes.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/06/8-femmes.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Write Unit Tests, Don’t Waste Our Money!</title><link href="https://www.yegor256.com/2025/06/08/pull-request-without-test.html" rel="alternate" type="text/html" title="Write Unit Tests, Don’t Waste Our Money!" /><published>2025-06-08T00:00:00+00:00</published><updated>2025-06-08T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/06/08/pull-request-without-test</id><content type="html" xml:base="https://www.yegor256.com/2025/06/08/pull-request-without-test.html"><![CDATA[<p>Automated tests help us write code <a href="/angry-tests.html">faster</a>.
-Unit tests immediately <a href="/2022/07/05/safety-net.html">tell us</a> when we break something.
-Integration tests calm us down, reducing the fear of shipping a failure to a user.
-But who are “us”?
-Programmers.
-What about our employers?
-How do automated tests help them?
-Automated tests protect their <strong>investments</strong>.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="La Femme Nikita (1990) by Luc Besson" src="/images/2025/06/la-femme-nikita.jpg" longdesc="#ccb58518" /><figcaption id="ccb58518">La Femme Nikita (1990) by Luc Besson</figcaption></figure>
-
-<p>Every change we make to a codebase costs our employer money.
-Whether they pay us <a href="/2015/07/21/hourly-pay-modern-slavery.html">monthly</a>
-  or <a href="/2014/04/11/cost-of-loc.html">per line of code</a>, the bottom line is the same:
-  it’s the code that reaches the repository and is eventually released to the end user.</p>
-
-<p>That’s what the business is investing in—new features <a href="/2018/07/24/bugs-or-pull-requests.html">or</a> bug fixes.
-The code that’s written and shipped is what matters to them.</p>
-
-<p>Even when they say they’re investing in people, what they really want is the code.
-People are merely an intermediate by-product.
-The ultimate asset is the codebase.</p>
-
-<p>They want to <strong>protect</strong> that <strong>asset</strong>.</p>
-
-<p>A loss of investment could be a hundred lines written today not working tomorrow.
-Think about it this way: we expect a car to work after paying the body shop to fix it.
-We don’t mind paying again if something else breaks—but not if it’s the exact same part they fixed yesterday.
-We expect the repaired part to function properly while driving.
-We want a warranty on what’s already been fixed.</p>
-
-<aside class="quote">People are merely an intermediate by-product—the ultimate asset is the codebase.
-</aside>
-
-<p>Similarly, our employers expect our code to work once we’ve committed it and collected our paycheck.
-They want a warranty that the code won’t break again once it’s been fixed.
-Automated tests can offer that <strong>warranty</strong>.</p>
-
-<p>Continuing the metaphor: “driving” a codebase means actively modifying its parts—refactoring or extending.
-The more aggressively we drive it, the higher the risk of breaking something.
-The parts of the code not covered by tests are the first to break.</p>
-
-<p>Test coverage guarantees that what worked before—and was already paid for—continues to work even under the stress of refactoring.</p>
-
-<p>So, any contribution to a codebase without a <strong>supporting</strong> test is a waste of the employer’s money.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="etiquette" /><category term="testing" /><summary type="html"><![CDATA[If you write code without tests, you're probably wasting your employer's money---because it'll break again right where you "fixed" it.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/06/la-femme-nikita.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/06/la-femme-nikita.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+It allows for cleaner extension, better error handling, and tighter encapsulation.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[Delegating behavior to objects rather than invoking utility methods leads to cleaner, more extensible, and properly encapsulated object-oriented design.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/06/8-femmes.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/06/8-femmes.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
