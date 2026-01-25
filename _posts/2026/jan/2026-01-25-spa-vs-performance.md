@@ -20,7 +20,13 @@ jb_picture:
   caption: Bitter Moon (1992) by Roman Polanski
 ---
 
-...
+It seems to be [popular][adamsilver] to design websites as Single Page Applications (SPA).
+Instead of showing a new HTML page on every click, an SPA sends a lightweight skeleton with JavaScript.
+The JS makes HTTP requests, receives JSON, and injects data into the DOM.
+On each user action, the page doesn't reload---only the DOM changes.
+Such an architecture, once a response to slow browsers and unreliable networks, is now a [bottleneck][matuzo].
+The page is built of fragments, each requiring its own HTTP request.
+No matter how fast each request is, the multiplication diminishes all optimization efforts.
 
 <!--more-->
 
@@ -44,144 +50,51 @@ In the early 2000s, this stopped working well:
 In 1999, Microsoft introduced [XMLHttpRequest] for [Outlook Web Access][owa], enabling background HTTP requests.
 In 2005, [Jesse James Garrett][garrett] coined the term [AJAX] in his essay "[Ajax: A New Approach to Web Applications][ajax-essay]."
 This paved the way for the [SPA]: instead of HTML, the server sends [JSON], and the browser reconstructs the page locally.
-Then came the frameworks: [Angular], [React], [Vue].
+Then came the frameworks: [Angular] (2010), [React] (2013), [Vue] (2014).
 Each formalizes the same idea: the browser hosts the application, the server delivers data.
 
-This is a trivial exmaple, a calculator.
-One input field and one button.
-The formula goes to the server, gets evaluated, and the result appears below.
-Here is its [Vue] frontend:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <script src="vue.global.js"></script>
-</head>
-<body>
-  <div id="app">
-    <input v-model="formula">
-    <button @click="calc">Calculate</button>
-    <span>{% raw %}{{ result }}{% endraw %}</span>
-  </div>
-  <script>
-    Vue.createApp({
-      data: () => ({ formula: '', result: '' }),
-      methods: {
-        async calc() {
-          const res = await fetch('/api/calc', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ formula: this.formula })
-          })
-          this.result = (await res.json()).result
-        }
-      }
-    }).mount('#app')
-  </script>
-</body>
-</html>
-```
-
-Here is the [Express] backend:
-
-```javascript
-const express = require('express')
-const app = express()
-app.use(express.json())
-app.post('/api/calc', (req, res) => {
-  res.json({ result: eval(req.body.formula) })
-})
-app.listen(3000)
-```
-
-No page reload on each click.
-The DOM remains the same.
+Imagine a simple online calculator where a user enters "2+3," clicks "Submit," and sees the result right next to the input field.
+No page reload.
+The [DOM] remains the same.
 The JS inside the browser changes only the result of calculation, in a single `<div/>`.
 
 The primary justification for this architecture is performance.
 If servers are slow, rendering full HTML page takes longer than just a JSON with the result of calculation.
 If the network is unreliable, re-delivering the entire HTML takes longer than just a small JSON document.
 Also, if browsers are slow, making a tiny change in the DOM works faster than a full page reload.
-However, there is a price we pay: maintainability of the software.
 
-But SPAs do not make backends faster.
-They hide backend latency by splitting rendering into pieces and deferring work.
-The browser gets a shell quickly; everything else arrives later.
+This is true, for a trivial example.
+However, when SPA gets larger, the frontend has to make dozens of round-trips to the backend.
+Look at what Facebook and LinkedIn are doing while rendering your home page.
+A rather simple UI with just a list of recent posts gets filled up by multiple pieces, each leading to its own HTTP request,
+  sometimes taking more than a few seconds to complete rendering a page.
+The page loads in fragments, content shifts, controls appear late, some parts arrive seconds after others.
+Their UX sucks, if you ask me.
 
-A slow backend is no longer a hard failure.
-There is no long blank page.
-No obvious bottleneck.
-Instead, there are spinners.
-Placeholders.
-Partial content.
-The system "feels alive," even if it's slow.
+Their architects are stupid?
+Nope.
 
-HTTP itself does not forbid long responses.
-Browsers will wait.
-The real problem is user perception: a blank screen looks broken.
-SPAs solve perception, not performance.
+The very idea of SPA is flawed.
+The architects of Facebook and LinkedIn are the hostages of it.
+They can't make their websites run faster, because they, by design, are built of fragments retrievable from the backend.
+They must make _multiple_ HTTP round-trips.
 
-## The Architectural Consequence
+What once, in the times of slow browsers and networks, was a solution for small DOM updates, turned into a dead-end for web design.
 
-Once partial loading is acceptable, backend execution time stops being a first-order concern.
-Latency is externalized to the user experience instead of being eliminated.
-
-Open Facebook.
-Watch the page load in fragments.
-Content shifts.
-Controls appear late.
-Some parts arrive seconds after others.
-You wait, adapt, and accept it.
-
-Same with LinkedIn.
-Same with Binance.
-The user is trained to mentally assemble the interface.
-
-Now open [Stack Overflow].
-One request.
-One HTML document.
+Most of web architects simply can't make their websites as fast as [Stack Overflow], which is not an SPA.
+It delivers the entire HTML page in one request.
 Predictable layout.
 No suspense.
 Either the page loads, or it doesn't.
+UX is one of the best in modern web, if you ask me.
 
-See the difference?
+Rendering a full page on the server may still be a slow operation.
+It may, and it often will.
+However, this problem is _solveable_, for example, with the help of caching.
+The server is in charge of the data and the state of navigation, that's why.
 
-In the traditional model, slowness is a bug.
-In the SPA model, slowness is a UX problem.
-Bugs get fixed.
-UX problems get tolerated.
-
-## The Thesis
-
-SPA architecture lowers the cost of backend inefficiency.
-It makes suboptimal design acceptable.
-It shifts the burden from engineers to users.
-
-And once that shift happens, there is little incentive to go back.
-The frontend team handles the spinners.
-The backend team ships slow APIs.
-Everyone is busy.
-Everyone is productive.
-The user waits.
-
-## The Alternative
-
-Server-rendered HTML.
-Minimal JavaScript.
-Full-page navigation.
-
-Not nostalgia.
-Discipline.
-
-Not going backwards.
-Restoring pressure where it belongs.
-
-If your page takes three seconds to render, you'll know.
-You won't hide it behind a skeleton screen.
-You'll fix it.
-
-That's the difference.
+Literally every SPA I can think of is horrible in terms of UX.
+The only exception I can think of is [Gmail].
 
 [JSON]: https://en.wikipedia.org/wiki/JSON
 [Angular]: https://angular.io/
@@ -200,3 +113,7 @@ That's the difference.
 [garrett]: https://en.wikipedia.org/wiki/Jesse_James_Garrett
 [AJAX]: https://en.wikipedia.org/wiki/Ajax_(programming)
 [ajax-essay]: https://designftw.mit.edu/lectures/apis/ajax_adaptive_path.pdf
+[DOM]: https://ru.wikipedia.org/wiki/Document_Object_Model
+[adamsilver]: https://adamsilver.io/blog/the-problem-with-single-page-applications/
+[matuzo]: https://www.matuzo.at/blog/2023/single-page-applications-criticism/
+[Gmail]: https://gmail.com
