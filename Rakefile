@@ -191,7 +191,8 @@ task spell: [:build] do
       stdout = qbash(
         "cat #{Shellwords.escape(tmp.path)} |",
         'aspell -a --lang=en_US -W 3 --ignore-case --encoding=utf-8 -p ./_rake/aspell.en.pws |',
-        'grep ^\\&'
+        'grep ^\\&',
+        accept: nil
       )
       found = 0
       if stdout.empty?
