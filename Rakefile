@@ -223,7 +223,7 @@ task ping: [:build] do
     links = all_links.uniq
       .reject { |a| a.start_with?('https://www.yegor256.com/') }
       .reject { |a| a.include?('linkedin.com') }
-      .select { |a| %r{^https?://.*}.match?(a) }
+      .grep(%r{^https?://.*})
       .reject { |a| a.start_with?('http://localhost') }
       .reject { |a| a.start_with?('https://www.youtube.com/watch?v=') }
       .shuffle
@@ -333,7 +333,7 @@ task orphans: [:build] do
     links += all_html.map { |f| f.gsub('_site', 'https://www.yegor256.com') }
     counts = {}
     links
-      .select { |a| %r{.*/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*}.match?(a) }
+      .grep(%r{.*/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*})
       .reject { |a| a.end_with?('.amp.html') }
       .reject { |a| a.include?('2009/03/04/pdd') }
       .reject { |a| a.include?('2017/05/02/unl') }
