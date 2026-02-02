@@ -60,24 +60,6 @@ GEM
     google-protobuf (4.33.4)
       bigdecimal
       rake (>= 13)
-    google-protobuf (4.33.4-aarch64-linux-gnu)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.4-arm64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.4-x64-mingw-ucrt)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.4-x86_64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.4-x86_64-linux-gnu)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.33.4-x86_64-linux-musl)
-      bigdecimal
-      rake (>= 13)
     hashery (2.1.2)
     html-proofer (5.2.0)
       addressable (~> 2.3)
