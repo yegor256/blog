@@ -11,7 +11,7 @@ no_progress = true
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
 # Accept 429 (Too Many Requests) as valid
-accept = [429]
+accept = [200, 429]
 
 # Exclude URLs
 exclude = [
