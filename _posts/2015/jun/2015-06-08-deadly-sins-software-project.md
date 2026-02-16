@@ -20,7 +20,6 @@ keywords:
   - software maintainability
 translated:
   - Russian: https://habrahabr.ru/post/260241/
-  - Japanese: http://tbd.kaitoy.xyz/2016/06/25/seven-deadly-sins-of-a-software-project/
 social:
   - reddit: https://www.reddit.com/r/programming/comments/396q18/seven_deadly_sins_of_a_software_project/
 ---

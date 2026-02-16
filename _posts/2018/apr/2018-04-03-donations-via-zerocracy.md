@@ -64,11 +64,10 @@ he fund the project and then let us use the funds for
 keeping the focus on the issue he was interested in.
 
 Moreover, this concept was
-[earlier proposed](https://github.com/zerocracy/datum/issues/212)
-by [`@skapral`](https://github.com/skapral).
+earlier proposed by [`@skapral`](https://github.com/skapral).
 
 He gladly accepted the offer.
-We [implemented](https://github.com/zerocracy/farm/issues/866) the functionality in
+We implemented the functionality in
 [Zerocrat](https://www.zerocracy.com) and he contributed $128 via Stripe.
 
 Now [anyone](https://www.zerocracy.com/how-it-works)

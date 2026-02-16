@@ -21,7 +21,6 @@ keywords:
   - morning stand-up meeting
   - scrum standup
 translated:
-  - Japanese: http://tbd.kaitoy.xyz/2015/08/11/daily-stand-up-meetings-are-a-good-tool-for-a-bad-manager/
 image: /images/2015/01/cool-hand-luke.png
 jb_picture:
   caption: Cool Hand Luke (1967) by Stuart Rosenberg

@@ -18,7 +18,6 @@ keywords:
   - orm is an anti-pattern
   - orm is antipattern
 translated:
-  - Japanese: http://tbd.kaitoy.xyz/2015/09/13/orm-is-offensive-anti-pattern/
 book: elegant-objects-2 6.5
 social:
   - hackernews: https://news.ycombinator.com/item?id=8686346

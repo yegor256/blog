@@ -85,19 +85,17 @@ the best and highly recommended):
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
-  <td><a href="https://app.shippable.com/projects/542e8fb980088cee586d3806/builds/latest">
-    <img src="https://api.shippable.com/projects/542e8fb980088cee586d3806/badge?branchName=master" class="x-build" alt='badge'/></a></td>
+  <td></td>
   </tr>
 <tr><td><a href="https://www.travis-ci.org">Travis</a></td>
-  <td class="x-right"><a href="https://travis-ci.com/plans">$69/mo</a></td>
+  <td class="x-right">$69/mo</td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
-  <td><a href="https://travis-ci.org/yegor256/rultor">
-    <img src="https://travis-ci.org/yegor256/rultor.svg?branch=master" class="x-build" alt='badge'/></a></td>
+  <td></td>
   </tr>
 <tr><td><a href="https://www.appveyor.com">AppVeyor</a></td>
   <td class="x-right"><a href="https://www.appveyor.com/pricing">$39/mo</a></td>

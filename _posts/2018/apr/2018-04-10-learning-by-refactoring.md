@@ -164,8 +164,8 @@ class from Spring Boot (there are many similar examples there, I picked this one
 
 There are five `return` statements in such a small method. For object-oriented
 code that's too much. It's OK for procedural code, which I also write
-sometimes. For example, [this Groovy script](https://github.com/zerocracy/farm/blob/master/src/main/resources/com/zerocracy/stk/pm/in/orders/start_order_if_assigned_in_github.groovy)
-of ours has five `return` keywords too:
+sometimes. For example, this Groovy script
+has five `return` keywords too:
 
 {% figure /images/2018/04/farm-listing.jpg 600 %}
 
