@@ -77,8 +77,8 @@ the best and highly recommended):
 </tr>
 </thead>
 <tbody>
-<tr><td><a href="https://www.shippable.com">Shippable</a>&#x263A;</td>
-  <td class="x-right"><a href="https://www.shippable.com/pricing.html">free</a> (!)</td>
+<tr><td>Shippable&#x263A;</td>
+  <td class="x-right">free (!)</td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -108,7 +108,7 @@ the best and highly recommended):
   <td><a href="https://ci.appveyor.com/project/yegor256/rultor/branch/master">
     <img src="https://ci.appveyor.com/api/projects/status/sulqrjerl27qqtl7/branch/master?svg=true" class="x-build" alt='badge'/></a></td>
   </tr>
-<tr><td><a href="https://www.wercker.com">Wercker</a></td>
+<tr><td>Wercker</td>
   <td class="x-right">$350/mo</td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -116,8 +116,7 @@ the best and highly recommended):
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
-  <td><a href="https://app.wercker.com/project/bykey/0e6506c69e078b7692e50b240c034524">
-    <img src="https://app.wercker.com/status/0e6506c69e078b7692e50b240c034524/s%20wercker status" class="x-build" alt='badge'/></a></td>
+  <td></td>
   </tr>
 <tr><td colspan="9" class="x-hr"></td></tr>
 <tr><td><a href="https://www.semaphoreapp.com">SemaphoreApp</a></td>
@@ -138,8 +137,8 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="https://codeship.com">Codeship</a>&#x263A;</td>
-  <td class="x-right"><a href="https://codeship.com/pricing">$49/mo</a></td>
+<tr><td>Codeship&#x263A;</td>
+  <td class="x-right">$49/mo</td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -211,9 +210,9 @@ them in the list with &#x263A; emoji.
 
 ## Best Four
 
-{% badge /images/2014/10/shippable.svg 92 https://www.shippable.com %}
+{% badge /images/2014/10/shippable.svg 92 %}
 
-[**Shippable**](https://www.shippable.com) was easy to configure
+**Shippable** was easy to configure
 since it understands `.travis.yml` out of the box.
 The user interface is easy to navigate since it doesn't
 have "settings" page at all (or I didn't find it). Everything is
@@ -233,9 +232,9 @@ say. I strongly disagree, since Jenkins will
 require a 24x7 administration, which costs way more than $129, but
 it's always difficult to explain.
 
-{% badge /images/2014/10/wercker.png 92 https://www.wercker.com %}
+{% badge /images/2014/10/wercker.png 92 %}
 
-[**Wercker**](https://www.wercker.com) is a European product
+**Wercker** was a European product
 from Amsterdam, which is still in beta and that's why free
 for all projects. The platform looks very promising. It is still
 free for private repositories and is backed up by
@@ -282,7 +281,7 @@ but they look "cool." There is also a very unfortunate limitation of
 Besides that, they don't give full access to the build server, for example
 we can't modify anything in `/etc`---it is a show-stopper for us.
 
-[**Codeship**](https://codeship.com) works fine, but their web UI
+**Codeship** worked fine, but their web UI
 looks a bit out-dated. Besides that, they promise to work with pull
 requests, but I didn't manage to configure them. They simply
 don't notify our pull requests in GitHub, even though they build them.
@@ -301,9 +300,9 @@ difficult to configure. They don't even support automatic GitHub hook
 configuration when new repository is added. However, their sales spams me
 rather aggressively.
 
-{% badge /images/2014/10/hostedci.png 64 https://www.hosted-ci.com %}
+{% badge /images/2014/10/hostedci.png 64 %}
 
-**Hosted-CI** is for iOS/OSX only. They don't
+**Hosted-CI** was for iOS/OSX only. They didn't
 give anything for free, even for open source projects. I didn't have a chance
 to test them yet.
 
