@@ -21,11 +21,11 @@ keywords:
 {% badge https://www.jcabi.com/logo-square.svg 64 https://dynamo.jcabi.com %}
 
 I'm a big fan of cloud computing in general and of
-[Amazon Web Services](http://aws.amazon.com/) in particular. I honestly believe that in a
+[Amazon Web Services](https://aws.amazon.com/) in particular. I honestly believe that in a
 few years big providers will host all, or almost all, computing and storage
 resources. When this is the case, we won't have to worry too much anymore about
 downtime, backups and system administrators.
-[DynamoDB](http://aws.amazon.com/dynamodb/) is one of the steps towards this
+[DynamoDB](https://aws.amazon.com/dynamodb/) is one of the steps towards this
 future.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">This looks cool - jcabi-dynamo - a <a href="https://twitter.com/hashtag/Java?src=hash&amp;ref_src=twsrc%5Etfw">#Java</a> Object layer atop the <a href="https://twitter.com/hashtag/DynamoDB?src=hash&amp;ref_src=twsrc%5Etfw">#DynamoDB</a> SDK - <a href="http://t.co/khRFR2joKX">http://t.co/khRFR2joKX</a> <a href="https://twitter.com/hashtag/aws?src=hash&amp;ref_src=twsrc%5Etfw">#aws</a></p>&mdash; Jeff Barr ☁️ (@jeffbarr) <a href="https://twitter.com/jeffbarr/status/380813867971915777?ref_src=twsrc%5Etfw">September 19, 2013</a></blockquote>

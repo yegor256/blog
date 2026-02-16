@@ -26,6 +26,12 @@ accept = [200, 403, 429]
 max_concurrency = 16
 host_concurrency = 2
 
+# Exclude paths (directories)
+exclude_path = [
+  '_later',
+  '_drafts'
+]
+
 # Exclude URLs
 exclude = [
   'linkedin\.com',

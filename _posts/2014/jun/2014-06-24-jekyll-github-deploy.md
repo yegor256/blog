@@ -58,8 +58,7 @@ located in the root directory of the repository. Just
 as they do on [this blog]({% pst 2014/apr/2014-04-06-introduction %});
 see [its sources in GitHub](https://github.com/yegor256/blog).
 
-You can easily integrate `jgd` with Travis. See
-[`.travis.yml`](https://github.com/yegor256/blog/blob/master/.travis.yml) of this blog.
+You can easily integrate `jgd` with Travis.
 
 Full documentation about the gem is located
 [here](https://github.com/yegor256/jekyll-github-deploy).

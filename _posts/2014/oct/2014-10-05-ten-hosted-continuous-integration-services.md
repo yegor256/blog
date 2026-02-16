@@ -173,8 +173,8 @@ the best and highly recommended):
   <td class="center">?</td>
   <td class="center"><i class="icon-no red"></i></td>
   </tr>
-<tr><td><a href="http://vexor.io">Vexor</a></td>
-  <td class="x-right"><a href="http://vexor.io/">&cent;90/hr</a></td>
+<tr><td>Vexor</td>
+  <td class="x-right">&cent;90/hr</td>
   <td class="center"><i class="icon-yes green"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
   <td class="center"><i class="icon-no red"></i></td>
@@ -317,9 +317,9 @@ I don't really like Jenkins, that's why can't recommend this platform.
 via GitHub, huh? They seem to be more "deployment" oriented, not just
 continuous integration.
 
-{% badge /images/2014/10/vexor.png 64 http://vexor.io %}
+{% badge /images/2014/10/vexor.png 64 %}
 
-[**Vexor**](http://vexor.io/) looks nice and offers a rather unique
+**Vexor** looked nice and offered a rather unique
 billing model---they charge per build, not per month. I would definitely
 recommend to give it a try. I couldn't make it work though...
 
