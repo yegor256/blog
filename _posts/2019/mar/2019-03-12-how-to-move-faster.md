@@ -60,7 +60,7 @@ co-located team of full-timers this number may sound too huge, but for a team
 of freelancers it's still a pretty small team. You definitely need more than twenty!
 Ask your architect to be more active in the area of team building and recruit
 more developers, promote the project more actively on the
-[board](https://www.zerocracy.com/board) and in [our Telegram chat](https://t.me/zerocracy), etc.
+[board](https://www.zerocracy.com/how-to-earn) and in [our Telegram chat](https://t.me/zerocracy), etc.
 
 Second, it's the rates you pay. It's simple: the higher the rates, the more motivated
 are the programmers. Even if (and it's almost always the case) they work somewhere else

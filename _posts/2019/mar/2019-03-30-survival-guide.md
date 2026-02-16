@@ -125,7 +125,7 @@ is at a huge risk of losing discipline _and_ money.
 **Keep Recruiting**.
 Even when you think your team is full and you have enough programmers,
 don't rest assured. Hire new people constantly. Publish your project
-on our [board](https://www.zerocracy.com/board) and announce it in our
+on our [board](https://www.zerocracy.com/how-to-earn) and announce it in our
 [Telegram chat](https://t.me/zerocracy). The larger the team, the
 more chances for success your project has.
 

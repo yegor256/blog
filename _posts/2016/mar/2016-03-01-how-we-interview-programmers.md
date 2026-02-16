@@ -133,4 +133,4 @@ past.
 
 <hr/>
 
-Try to apply; the form is [here](https://www.zerocracy.com/join).
+Try to apply; the form is [here](https://www.zerocracy.com/how-to-earn).

@@ -106,7 +106,7 @@ the same code would look in Lisp, a functional programming language:
 
 What's the catch? Just a difference in syntax? Not really.
 
-There are [many definitions](https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms)
+There are [many definitions](https://en.wikipedia.org/wiki/Programming_paradigm)
 of the difference between imperative and declarative styles, but I will try to
 give my own. There are basically three roles interacting in the scenario
 with this `f` function/method: a _buyer_, a _packager_ of the result,

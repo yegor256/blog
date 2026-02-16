@@ -111,7 +111,7 @@ It doesn't look boring to the robot though.
 Zerocrat is a project manager that never sleeps. It doesn't make mistakes,
 doesn't forget things, and doesn't accept excuses.
 It also doesn't know anything about hierarchies. It manages programmers
-only by their merits, which are visible via [objective metrics](https://www.zerocracy.com/team).
+only by their merits, which are visible via [objective metrics](https://www.zerocracy.com/how-to-earn).
 Thanks to this, programmers become their own bosses, reporting only to a soulless piece of software,
 which acts according to a very strict [policy](https://www.zerocracy.com/how-it-works).
 
