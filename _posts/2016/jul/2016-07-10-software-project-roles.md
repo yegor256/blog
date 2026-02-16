@@ -69,7 +69,7 @@ There are just a few roles:
   * **Quality Assurance** (`QA`)
     oversees the correctness of our process.
     The QA approves each closed task before it's officially closed by the PM.
-    The QA ensures that our process complies to [our policy](https://www.zerocracy.com/policy.html).
+    The QA ensures that our process complies to [our policy](https://www.zerocracy.com/how-it-works).
     The QA reports to the PM.
 
   * **Tester** (`TST`)

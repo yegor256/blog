@@ -80,7 +80,7 @@ Demand them to answer at least [these questions](https://www.yegor256.com/2019/0
 provide their feedback in form of GitHub tickets.
 
 **Talk to the Community**.
-When you are ready to start a project, submit the [RfP](https://www.zerocracy.com/rfp).
+When you are ready to start a project, submit the [RfP](https://www.zerocracy.com).
 Right after that, join our [Telegram chat](https://t.me/zerocracy). Stay there
 and ask all questions you have about your project, the progress you have,
 the mistakes you think your architect or your team is making. Don't be quiet,
@@ -109,9 +109,9 @@ Don't let them work without focus control. Make sure your architect
 knows which parts of the scope are the most important and focus the
 team to work with them first. This
 [video](https://www.youtube.com/watch?v=w3HwEtFU2wo) explains how
-[boost factor](http://www.zerocracy.com/policy.html#5),
+[boost factor](https://www.zerocracy.com/how-it-works),
 milestones, and
-[manual assignments](http://www.zerocracy.com/policy.html#19)
+[manual assignments](https://www.zerocracy.com/how-it-works)
 can be used for that.
 
 **Hire QA**.
@@ -125,7 +125,7 @@ is at a huge risk of losing discipline _and_ money.
 **Keep Recruiting**.
 Even when you think your team is full and you have enough programmers,
 don't rest assured. Hire new people constantly. Publish your project
-on our [board](https://www.0crat.com/board) and announce it in our
+on our [board](https://www.zerocracy.com/board) and announce it in our
 [Telegram chat](https://t.me/zerocracy). The larger the team, the
 more chances for success your project has.
 

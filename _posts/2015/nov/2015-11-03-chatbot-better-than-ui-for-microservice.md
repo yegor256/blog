@@ -281,7 +281,7 @@ can create a new discussion, invite a few friends, and post messages there.
 Both users and chatbots can do that.
 
 So, when a new candidate wants to join [Zerocracy](https://www.zerocracy.com),
-we ask that person to fill out an [online form](https://www.0crat.com/join). When
+we ask that person to fill out an [online form](https://www.zerocracy.com/join). When
 the candidate clicks the "Submit" button, a new discussion starts, and the first
 chatbot decides who should [interview]({% pst 2016/mar/2016-03-01-how-we-interview-programmers %})
 that person. The decision is made

@@ -27,8 +27,8 @@ and [we pay]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
 for each bug you find and report. Well, not quite. We pay for
 each bug report a project architect considers good enough to pay for.
 The architect's decision is totally subjective and non-disputable,
-according to [§29](https://www.zerocracy.com/policy.html#29)
-of the [Policy](https://www.zerocracy.com/policy.html).
+according to [§29](https://www.zerocracy.com/how-it-works)
+of the [Policy](https://www.zerocracy.com/how-it-works).
 Some of our developers find this unfair and ask me to explain
 how they can report bugs such that they are definitely paid.
 Here is a non-exhaustive list of my recommendations.

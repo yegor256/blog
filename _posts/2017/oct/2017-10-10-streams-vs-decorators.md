@@ -108,7 +108,7 @@ This will work, but will say `Probe #0` for all probes, because `forEach()`
 doesn't work with indexes. There is no such thing as `forEachWithIndex()`
 in the [`Stream`](https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html)
 interface as of Java&nbsp;8 (and Java&nbsp;9
-[too](http://download.java.net/java/jdk9/docs/api/java/util/stream/Stream.html)).
+[too](https://docs.oracle.com/javase/9/docs/api/java/util/stream/Stream.html)).
 Here is a [workaround](https://stackoverflow.com/a/18552071/187141) with
 an atomic counter:
 

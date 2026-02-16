@@ -42,7 +42,7 @@ and why and how we're [different]({% pst 2014/apr/2014-04-17-how-xdsd-is-differe
 from everybody else. He seemed to be impressed.
 Then, he asked, "_How much_ do you charge?"
 
-{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
 I told him that we are also different in the way we bill for our work,
 because we don't charge for the time spent by our programmers sitting

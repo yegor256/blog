@@ -289,7 +289,7 @@ down:
   * **Metrics work**.
     When one programmer closes 40-50 tasks per week and another one closes
     5-10, it does mean something, keeping in mind that all tasks are almost
-    equal in size. We use this metric (and [a few others](https://www.0crat.com/gang))
+    equal in size. We use this metric (and [a few others](https://www.zerocracy.com/gang))
     to make organizational
     and discipline decisions. In a macro-tasking environment almost no HR metrics
     really work.

@@ -25,7 +25,7 @@ related:
 image: /images/2014/11/rate-open-source-contribution.png
 ---
 
-{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
 I'm getting a few emails every day from programmers
 interested in working with [Zerocracy](https://www.zerocracy.com) remotely.

@@ -187,7 +187,7 @@ Make them happy and you lose. You must find a way to align your objectives
 (buy a new car and spend the next vacation on a beach).
 Can you do that? It's difficult. That's why we created [Zerocracy](https://www.zerocracy.com), which makes
 [incremental billing]({% pst 2014/oct/2014-10-21-incremental-billing %})
-and paying by results possible. You can either [move](https://www.zerocracy.com/rfp) your
+and paying by results possible. You can either [move](https://www.zerocracy.com) your
 project to our platform and manage your developers there, or invent something
 on your own. But remember, no monthly salaries! Only pay by results delivered.
 

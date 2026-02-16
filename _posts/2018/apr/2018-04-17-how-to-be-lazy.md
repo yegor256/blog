@@ -47,7 +47,7 @@ and the bug is very complex?
 
 {% quote This literally means that you should always and only think about yourself and your personal profit. %}
 
-One of the core [principles](https://www.zerocracy.com/toc.html) of Zerocracy is
+One of the core [principles](https://www.zerocracy.com/how-it-works) of Zerocracy is
 [#NoAltruism](https://www.youtube.com/watch?v=vXUwE3FGfpg).
 This literally means that
 you should always and only think about yourself and your personal profit. You should
