@@ -31,7 +31,6 @@ task default: [
   :excerpts,
   :snippets,
   :orphans,
-  :ping,
   # :proofer,
   :rubocop
 ]
@@ -214,42 +213,6 @@ task spell: [:build] do
       raise "#{typos.size} typo(s) in #{bad_pages} pages"
     end
     throw :'No spelling errors'
-  end
-end
-
-desc 'Ping some foreign links'
-task ping: [:build] do
-  elapsed do
-    links = all_links.uniq
-      .reject { |a| a.start_with?('https://www.yegor256.com/') }
-      .reject { |a| a.include?('linkedin.com') }
-      .grep(%r{^https?://.*})
-      .reject { |a| a.start_with?('http://localhost') }
-      .reject { |a| a.start_with?('https://www.youtube.com/watch?v=') }
-      .shuffle
-      .take(128)
-    tmp = Tempfile.new(['yegor256-', '.txt'])
-    tmp << links.join("\n")
-    tmp.flush
-    tmp.close
-    out = Tempfile.new(['yegor256-', '.txt'])
-    out.close
-    puts "#{links.size} links found, testing them..."
-    qbash("./_rake/ping.sh #{Shellwords.escape(tmp.path)} #{Shellwords.escape(out.path)}")
-    errors = File.read(out).split("\n").reduce(0) do |cnt, p|
-      code, link = p.split
-      next nil if link.nil?
-      if %w[200 403].include?(code)
-        cnt
-      else
-        puts "#{link}: #{code}"
-        cnt + 1
-      end
-    end
-    total = links.size
-    per = (100 * errors / total).to_i
-    raise "#{errors} among #{total} links are broken (#{per}%)" unless per < 16
-    throw :"#{total} links are found, #{errors} are broken, it's more or less OK (#{per}%)"
   end
 end
 
