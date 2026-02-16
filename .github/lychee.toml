@@ -6,3 +6,8 @@ scheme = ["http", "https"]
 
 # Disable progress bar
 no_progress = true
+
+# Exclude URLs
+exclude = [
+  'linkedin\.com'
+]
