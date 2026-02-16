@@ -19,3 +19,5 @@ jobs:
       - uses: lycheeverse/lychee-action@v2
         with:
           args: --config .github/lychee.toml '**/*.md' '**/*.html'
+          format: compact
+          jobSummary: false
