@@ -78,10 +78,10 @@ Try, for example, one of these buttons and you will see detailed
 financial reports of each project and will be able to add your funds:
 
 Cactoos.org:<br/>
-[![Donate via Zerocracy](https://www.zerocracy.com/contrib-badge/C63314D6Z.svg)](https://www.zerocracy.com/contrib/C63314D6Z)
+[![Donate via Zerocracy](https://www.zerocracy.com/svg/C63314D6Z.svg)](https://www.zerocracy.com/C63314D6Z)
 
 Takes.org:<br/>
-[![Donate via Zerocracy](https://www.zerocracy.com/contrib-badge/C3FFK3YAY.svg)](https://www.zerocracy.com/contrib/C3FFK3YAY)
+[![Donate via Zerocracy](https://www.zerocracy.com/svg/C3FFK3YAY.svg)](https://www.zerocracy.com/C3FFK3YAY)
 
 The advantage of this approach, compared to, for example,
 [BountySource](https://www.bountysource.com/), is that the money will
