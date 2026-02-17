@@ -54,7 +54,7 @@ String html = new JdkRequest("https://www.google.com")
 This convenient [method chaining](https://en.wikipedia.org/wiki/Method_chaining)
 makes the code short and obvious, right?
 Yes, it does, on the surface. But the _internal_ design of the library's
-classes, including [`JdkRequest`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html),
+classes, including [`JdkRequest`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html),
 which is the one you see,
 is very far from being elegant. The biggest problem is that
 they are rather big and it's ~~difficult~~ impossible
@@ -62,32 +62,32 @@ to extend them without making them even bigger.
 
 {% youtube REj8pJesMVI %}
 
-For example, right now [`JdkRequest`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html)
+For example, right now [`JdkRequest`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/request/JdkRequest.html)
 has the methods
-[`method()`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#method%28java.lang.String%29),
-[`fetch()`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#fetch%28%29),
+[`method()`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#method%28java.lang.String%29),
+[`fetch()`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#fetch%28%29),
 and a few others. What happens when new functionality is required?
 The only way to add to it would be to make the class bigger, by adding new methods,
 which is how we jeopardize its maintainability.
 [Here](https://github.com/jcabi/jcabi-http/pull/142/files),
 for example, we added
-[`multipartBody()`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#multipartBody%28%29)
+[`multipartBody()`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#multipartBody%28%29)
 and [here](https://github.com/jcabi/jcabi-http/pull/99/files) we added
-[timeout()](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#timeout%28int,%20int%29).
+[timeout()](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html#timeout%28int,%20int%29).
 
 I always feel scared when I get a new feature request in jcabi-http.
 I understand that it most probably means adding new methods to
-[`Request`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html),
-[`Response`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html),
+[`Request`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Request.html),
+[`Response`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html),
 and other already bloated interfaces and classes.
 
 I actually tried to do something in the library in order to solve this problem
 but it wasn't easy. Look at this
-[`.as(RestResponse.class)`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html#as%28java.lang.Class%29)
+[`.as(RestResponse.class)`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html#as%28java.lang.Class%29)
 method call. What it does is decorate a `Response` with
-[`RestResponse`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/RestResponse.html),
+[`RestResponse`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/RestResponse.html),
 in order to make it method-richer. I just didn't want to make
-[`Response`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html)
+[`Response`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html)
 contain 50+ methods, like many other libraries do. Here is what it
 does (this is pseudo-code):
 
@@ -107,14 +107,14 @@ class RestResponse implements Response {
 
 As you see, instead of adding all possible methods to `Response` I
 placed them in supplementary decorators
-[`RestResponse`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/RestResponse.html),
-[`JsonResponse`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/JsonResponse.html),
-[`XmlResponse`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/JsonResponse.html),
+[`RestResponse`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/RestResponse.html),
+[`JsonResponse`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/JsonResponse.html),
+[`XmlResponse`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/JsonResponse.html),
 and
-[others](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/package-frame.html).
+[others](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/response/package-frame.html).
 It helps, but in order to write these decorators with the central
 object of type `Response` we have to use that "ugly" method
-[`as()`](http://static.javadoc.io/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html#as%28java.lang.Class%29),
+[`as()`](https://javadoc.io/static/com.jcabi/jcabi-http/1.17.2/com/jcabi/http/Response.html#as%28java.lang.Class%29),
 which depends heavily on Reflection and
 [type casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %}).
 

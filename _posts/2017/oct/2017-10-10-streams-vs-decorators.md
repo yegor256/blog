@@ -172,14 +172,14 @@ new And(
 ```
 
 Let's see what's going on here. First,
-[`Filtered`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Filtered.html)
+[`Filtered`](https://javadoc.io/static/org.cactoos/cactoos/0.16/org/cactoos/iterable/Filtered.html)
 decorates our iterable `probes` to take certain items out of it.
 Notice that `Filtered` implements `Iterable`. Then
-[`Limited`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Limited.html),
+[`Limited`](https://javadoc.io/static/org.cactoos/cactoos/0.16/org/cactoos/iterable/Limited.html),
 also being an `Iterable`, takes only the first ten items out. Then
-[`Mapped`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/iterable/Mapped.html)
+[`Mapped`](https://javadoc.io/static/org.cactoos/cactoos/0.16/org/cactoos/iterable/Mapped.html)
 converts each probe into an instance of
-[`Scalar<Boolean>`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html),
+[`Scalar<Boolean>`](https://javadoc.io/static/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html),
 which does the line printing.
 
 Finally, the instance of `And` goes through the list of "scalars" and ask
@@ -211,7 +211,7 @@ new AndWithIndex(
 ```
 
 Instead of `Scalar<Boolean>` we now map our probes to
-[`Func<Integer, Boolean>`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Func.html)
+[`Func<Integer, Boolean>`](https://javadoc.io/static/org.cactoos/cactoos/0.16/org/cactoos/Func.html)
 to let them accept the index.
 
 The beauty of this approach is that all classes and interfaces are small

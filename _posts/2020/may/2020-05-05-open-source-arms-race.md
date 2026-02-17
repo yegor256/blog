@@ -162,7 +162,7 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     [Ad-selling monopoly](https://www.theverge.com/2019/9/9/20857440/google-antitrust-investigation-attorneys-general-advertising-search),
     with [questionable reputation](https://www.androidauthority.com/googles-reputation-is-becoming-its-biggest-problem-1055381/),
     but one of the largest software [philanthropists](https://ssir.org/articles/entry/open_source_software_is_philanthropy).
-    Microsoft is [catching up](https://www.businessinsider.de/international/microsoft-reputation-institute-soaring-research-2019-11/?r=US&IR=T)
+    Microsoft is [catching up](https://www.businessinsider.in/tech/enterprise/news/microsofts-reputation-is-soaring-as-trust-in-the-tech-industry-flounders-according-to-new-research/articleshow/72129884.cms)
     with its massive [code opening](https://www.techrepublic.com/article/whats-really-behind-microsofts-love-of-open-source/)
     and the [purchase](https://blogs.microsoft.com/blog/2018/10/26/microsoft-completes-github-acquisition/) of GitHub.
 
@@ -177,7 +177,7 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     I can't prove this assertion, but it's my personal observation.
 
   * **Training**.
-    It's [no secret](https://www.wired.com/insights/2013/11/open-source-a-platform-for-innovation/)
+    It's [no secret](https://web.archive.org/web/20140801084717/http://www.wired.com/2013/11/open-source-a-platform-for-innovation)
     that the [best technologies](https://www.techrepublic.com/article/the-best-open-source-innovations-of-the-last-decade/)
     nowadays are being created
     in open source projects by people contributing for free

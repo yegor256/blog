@@ -188,6 +188,6 @@ So, what do I tell those who complain about quality rules being too strict?
 I say this: "Do you want to learn and improve, or do you just want to get paid
 and get away with it?"
 
-ps. You can use my [settings.jar](http://img.teamed.io/settings.jar)
+ps. You can use my [settings.jar](/bin/settings.jar)
 for IntelliJ, they are rather strict and will help you clean your
 code even before Qulice starts to complain.

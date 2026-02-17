@@ -173,7 +173,7 @@ trust me. Unfortunately, lazy loading and NULL references always come together i
 [classic examples](https://stackoverflow.com/a/2192271/187141).
 However there is a better way to implement it.
 Let's refactor our class, this time using
-[`Scalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html)
+[`Scalar`](https://javadoc.io/static/org.cactoos/cactoos/0.16/org/cactoos/Scalar.html)
 from
 [Cactoos](https://www.cactoos.org):
 
@@ -250,7 +250,7 @@ class Encrypted5 implements Encrypted {
   // same as above in Encrypted4
 ```
 
-This [`StickyScalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html)
+This [`StickyScalar`](https://javadoc.io/static/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html)
 will make sure that only the first call to its method `value()`
 will go through to the encapsulated `Scalar`. All other calls will receive
 the result of the first call.
@@ -259,9 +259,9 @@ The last problem to solve is about concurrency. The code we have above is not
 thread safe. If I create an instance of `Encrypted5` and pass it to two threads,
 which call `asString()` simultaneously, the result will be unpredictable,
 simply because
-[`StickyScalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html)
+[`StickyScalar`](https://javadoc.io/static/org.cactoos/cactoos/0.16/org/cactoos/scalar/StickyScalar.html)
 is not thread-safe. There is another primitive to help us out though, called
-[`SyncScalar`](http://static.javadoc.io/org.cactoos/cactoos/0.16/org/cactoos/scalar/SyncScalar.html):
+[`SyncScalar`](https://javadoc.io/static/org.cactoos/cactoos/0.16/org/cactoos/scalar/SyncScalar.html):
 
 ```java
 class Encrypted5 implements Encrypted {
