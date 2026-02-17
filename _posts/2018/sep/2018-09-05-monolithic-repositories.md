@@ -122,7 +122,7 @@ which have to be loaded together into the target HTML:
 ```
 
 Two pieces are better than one? It seems that
-[Google](https://ai.google/research/pubs/pub45424),
+[Google](https://research.google/pubs/why-google-stores-billions-of-lines-of-code-in-a-single-repository/),
 [Digital Ocean](https://blog.digitalocean.com/taming-your-go-dependencies/)
 and [Mozilla](https://gregoryszorc.com/blog/2014/09/09/on-monolithic-repositories/)
 don't think so.

@@ -19,8 +19,6 @@ keywords:
   - utility classes are evil
   - utility classes are bad
   - utility classes is a bad practice
-translated:
-  - Russian: http://agorlov.ru/oop-alternative-to-utility-classes.html
 book: elegant-objects-1 3.2
 ---
 

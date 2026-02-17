@@ -224,5 +224,4 @@ And big feature requests? At this phase, we usually try to convert
 them into new projects and develop them separately, starting again
 from Thinking.
 
-BTW, the illustrations you see above are made by
-[Bárbara Lopes](https://www.behance.net/lopesbarbara).
+BTW, the illustrations you see above are made by Bárbara Lopes.

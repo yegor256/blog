@@ -29,7 +29,7 @@ From time to time someone asks me what I think about what
 [Alan Kay](https://en.wikipedia.org/wiki/Alan_Kay), the father of OOP,
 the designer of [Smalltalk](https://en.wikipedia.org/wiki/Smalltalk),
 the first object-oriented language,
-[said](http://lists.squeakfoundation.org/pipermail/squeak-dev/1998-October/017019.html)
+[said](https://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en)
 in 1998 about OOP. He literally said that the very
 term "object" was misleading and a more appropriate one would be "messaging."
 Here is what I think.
@@ -84,7 +84,7 @@ even
 [printers]({% pst 2016/apr/2016-04-05-printers-instead-of-getters %}).
 
 Let me
-[quote](http://lists.squeakfoundation.org/pipermail/squeak-dev/1998-October/017019.html)
+[quote](https://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en)
 Alan Kay again:
 
 > The key in making great and growable systems is much more to design how

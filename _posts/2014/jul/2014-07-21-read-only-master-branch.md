@@ -74,8 +74,7 @@ and install them on your own servers. For example:
 [CruiseControl](https://cruisecontrol.sourceforge.net/).
 Some of them are available as a service in cloud, such as:
 [Travis](https://www.travis-ci.org),
-[Shippable](https://www.shippable.com),
-Wercker, and
+[GitHub Actions](https://github.com/features/actions), and
 [many others]({% pst 2014/oct/2014-10-05-ten-hosted-continuous-integration-services %}).
 
 ## Why Continuous Integration Doesn't Work?

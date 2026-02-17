@@ -99,7 +99,7 @@ difficult to demonstrate significant benefits of OO outside those areas."
 
 <img src="/images/2016/08/linus-torvalds.jpg" class="quote-author" alt="Linus Torvalds"/><br/>
 [**Linus Torvalds**](https://en.wikipedia.org/wiki/Linus_Torvalds) (2007)<br/>
-[this email](http://article.gmane.org/gmane.comp.version-control.git/57918/)<br/>
+[this email](https://harmful.cat-v.org/software/c++/linus)<br/>
 "C++ is a horrible language. ...
 C++ leads to really, really bad design choices. ...
 In other words, the only way to do good, efficient, and system-level and
@@ -156,7 +156,7 @@ Sometimes data is just data and functions are just functions."
 
 <img src="/images/2016/08/john-barker.jpg" class="quote-author" alt="John Barker"/><br/>
 [**John Barker**](https://www.linkedin.com/in/johnebgood) (2013)<br/>
-[All evidence points to OOP being bullshit](https://blog.pivotal.io/labs/labs/all-evidence-points-to-oop-being-bullshit)<br/>
+[All evidence points to OOP being bullshit](https://tanzu.vmware.com/content/blog/all-evidence-points-to-oop-being-bullshit)<br/>
 "What OOP introduces are abstractions that attempt to improve code
 sharing and security. In many ways, it is still essentially procedural code."
 

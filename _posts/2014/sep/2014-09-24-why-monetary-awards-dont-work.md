@@ -25,7 +25,7 @@ better if he gets paid only when he reaches his goals and objectives?
 Much research has already been done on this subject,
 and most of it proves that connecting results with money
 is a very demotivating approach. For example, Ian Larkin
-[says](http://hbswk.hbs.edu/item/7215.html) that the most productive workers
+[says](https://www.library.hbs.edu/working-knowledge/how-to-demotivate-your-best-employees) that the most productive workers
 "suffered a 6-8% decrease in productivity after the award was instituted."
 
 I believe this is completely true. Money may become a terrible de-motivator
@@ -46,7 +46,7 @@ Why, in a [modern office]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave
 do we try to hide
 [monetary]({% pst 2016/jan/2016-01-12-good-programmers-dont-work-for-equity %})
 motivation and replace it with
-[everything else](https://www.hrworld.com/features/25-employee-rewards/),
+everything else,
 like free lunches, team building events,
 paid vacations, etc. Why don't we just say---"Jeff completed his task faster than
 everybody else. This is his $500 check. Whoever completes the

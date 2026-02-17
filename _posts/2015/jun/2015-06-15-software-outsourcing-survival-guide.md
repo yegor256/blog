@@ -165,7 +165,7 @@ Added on the 14th of October, 2018:
 Some say [12 weeks](http://12weekmvp.com/process.html), I say a month.
 And I'm [not alone](https://medium.freecodecamp.org/the-developers-workflow-in-practice-how-we-built-our-mvp-in-30-days-c60d804695a8).
 Do you know that the first version of Minecraft (which was later
-[sold](https://mojang.com/2014/09/yes-were-being-bought-by-microsoft/)
+[sold](https://news.microsoft.com/source/2014/09/15/minecraft-to-join-microsoft/)
 to Microsoft for $2.5B) was released in just [six](https://www.techradar.com/news/the-history-of-minecraft)
 days? There are many other examples, including Uber, Dropbox,
 [Buffer](https://blog.bufferapp.com/idea-to-paying-customers-in-7-weeks-how-we-did-it),

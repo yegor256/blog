@@ -48,7 +48,7 @@ To prove this claim we just need to put two thoughts together:
 
   * First, a bug is something that compromises the quality of software,
     which, according to
-    [IEEE&nbsp;610.12-1990](https://standards.ieee.org/findstds/standard/610.12-1990.html),
+    [IEEE&nbsp;610.12-1990](https://standards.ieee.org/ieee/610.12/855/),
     is "the degree to which
     a system meets specified requirements or _user expectations_."
 

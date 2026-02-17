@@ -40,7 +40,7 @@ I'm not going to discuss obvious arguments against
 (like in [Spring IoC](https://www.springbyexample.org/examples/intro-to-ioc-basic-setter-injection.html))
 and
 "field injections"
-(like in [PicoContainer](http://picocontainer.codehaus.org/annotated-field-injection.html)).
+(like in PicoContainer).
 These mechanisms simply violate basic principles
 of object-oriented programming and encourage us to create
 incomplete, mutable objects, that get stuffed with data during the course

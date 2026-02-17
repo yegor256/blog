@@ -18,8 +18,6 @@ keywords:
   - good practices in programming
   - bad practices in java
 categories: jcg
-translated:
-  - Chinese: http://blog.csdn.net/lvshuilantian/article/details/52303290
 ---
 
 This page contains most typical mistakes I see in the Java code of people

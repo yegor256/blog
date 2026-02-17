@@ -17,8 +17,6 @@ keywords:
   - controllers in oop
   - managers in oop
 book: elegant-objects-1 1.1
-translated:
-  - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52317370
 image: /images/2015/03/fight-club.jpg
 jb_picture:
   caption: Fight Club (1999) by David Fincher
@@ -41,11 +39,10 @@ Instead, they are collections of procedures pretending to be classes.
 used to say: Challenge any class name that ends in "-er." There
 are a few good articles about this subject, including
 [Your Coding Conventions Are Hurting You](https://www.carlopescio.com/2011/04/your-coding-conventions-are-hurting-you.html)
-by Carlo Pescio,
+by Carlo Pescio
+and
 [One of the Best Bits of Programming Advice I Ever Got](http://objology.blogspot.com/2011/09/one-of-best-bits-of-programming-advice.html)
-by Travis Griggs,
-and [Naming Objects – Don't Use ER in Your Object Names](https://www.benhallbenhall.com/2013/01/naming-objects-er-object-names/)
-by Ben Hall.
+by Travis Griggs.
 The main argument against this "-er" suffix is that "when you need a manager,
 it's often a sign that the managed are just plain old data structures
 and that the manager is the smart procedure doing the real work."

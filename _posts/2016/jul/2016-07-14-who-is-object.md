@@ -20,8 +20,6 @@ keywords:
 image: /images/2016/07/jackass-the-movie.jpg
 jb_picture:
   caption: "Jackass: The Movie (2002) by Jeff Tremaine"
-translated:
-  - Russian: https://agorlov.github.io/yb-object.html
 ---
 
 There are thousands of books about object-oriented programming and
