@@ -245,7 +245,7 @@ to meet Russian researchers, who challenge world-size problems;
 <span class="venue-rate green">B</span>
 <img src="https://i.ytimg.com/vi/aYXuK2do6FA/mqdefault.jpg" class="past-talk" alt="TestCon 2020"/>
 **Testing and Testers**;
-[TestCon](https://testconf.ru/schedule/);
+[TestCon](https://testconf.ru/);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 16 September;
 [видео](https://www.youtube.com/watch?v=aYXuK2do6FA)
@@ -425,7 +425,7 @@ to meet Russian researchers, who challenge world-size problems;
 <span class="venue-rate green">A</span>
 <img src="https://i.ytimg.com/vi/55mwAbuDrV8/mqdefault.jpg" class="past-talk" alt="Joker Conf 2018"/>
 **Quality vs. Quantity**;
-[Joker Conf](https://jokerconf.com/2018/talks/6lu7550n0kew2eeugei4sq/);
+[Joker Conf](https://2018.jokerconf.com/en/);
 <span class="city">St. Petersburg</span>, <span class="country">Russia</span>;
 20 October;
 [видео](https://youtu.be/55mwAbuDrV8),
@@ -538,7 +538,7 @@ organizers (my case) or paid. Maybe it's inevitable in the area of cryptocurrenc
 <span class="venue-rate green">B+</span>
 <img src="https://i.ytimg.com/vi/_cdni0NMus0/mqdefault.jpg" class="past-talk" alt="DevExperience 2018"/>
 **Math of Love?**;
-[DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
+DevExperience 2018;
 <span class="city">Iași</span>, <span class="country">Romania</span>;
 23 April 2018;
 [video](https://www.youtube.com/watch?v=_cdni0NMus0),
@@ -552,7 +552,7 @@ try to speak there again, if they organize again
 
 <img src="https://i.ytimg.com/vi/BQegLaUIvgs/mqdefault.jpg" class="past-talk" alt="DevExperience 2018"/>
 **How to Cut Corners and Stay Cool**;
-[DevExperience 2018](http://devexperience.ro/speakers/yegor-bugayenko/);
+DevExperience 2018;
 <span class="city">Iași</span>, <span class="country">Romania</span>;
 23 April 2018;
 [video](https://www.youtube.com/watch?v=BQegLaUIvgs),
@@ -591,7 +591,7 @@ try to attend next year
 <span class="venue-rate green">B+</span>
 <img src="https://i.ytimg.com/vi/3QT7jaoOa9w/mqdefault.jpg" class="past-talk" alt="DotNext 2017"/>
 **TDD Upside Down**;
-[DotNext 2017](https://dotnext-moscow.ru/2017/msk/talks/3ehxgjdfiiws4kkygqa4qc/);
+[DotNext 2017](https://dotnext.ru/en/);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 12-13 November 2017;
 [slides](https://www.slideshare.net/secret/cUPqyS0ZwPhKL6),
@@ -1012,7 +1012,7 @@ Malmö, Sweden;
 <span class="venue-rate green">B</span>
 <img src="https://i.ytimg.com/vi/4SRoLYxvIQ8/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
 **A Practical Example of AOP With Aspect (in Russian)**;
-[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
+JavaDay Kyiv 2016;
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 14 October 2016;
 [slides](https://www.slideshare.net/YegorBugayenko/practical-example-of-aop-with-aspectj),
@@ -1028,7 +1028,7 @@ the money they saved on better food
 
 <img src="https://i.ytimg.com/vi/cGcCcxx4xrg/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
 **Java vs. OOP**;
-[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
+JavaDay Kyiv 2016;
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 15 October 2016;
 [video](https://www.youtube.com/watch?v=cGcCcxx4xrg)
@@ -1036,7 +1036,7 @@ the money they saved on better food
 
 <img src="https://i.ytimg.com/vi/Y-16C5yhKLo/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
 **Trial by Combat for OOP Honor (in Russian)**;
-[JavaDay Kyiv 2016](http://javaday.org.ua/kyiv/);
+JavaDay Kyiv 2016;
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 15 October 2016;
 [video](https://www.youtube.com/watch?v=Y-16C5yhKLo)

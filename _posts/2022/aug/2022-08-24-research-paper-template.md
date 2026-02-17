@@ -22,7 +22,7 @@ jb_picture:
   caption: Il Camorrista (1986) by Giuseppe Tornatore
 ---
 
-My [first academic paper](http://dblp.uni-trier.de/db/conf/krdb/krdb98.html#Bugaenko98)
+My [first academic paper](https://dblp.org/rec/conf/krdb/Bugaenko98)
 was accepted and published in 1998. My most recent one was rejected by SPLASH just a week ago.
 I'm writing two papers right now and co-authoring about ten others.
 So far, my results are very poor: way more rejections than I expected.

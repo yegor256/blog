@@ -85,7 +85,7 @@ companies invest in open source:
     [Apache](https://www.apache.org/foundation/thanks),
     [Linux](https://www.linuxfoundation.org/membership/members/),
     [Eclipse](https://www.eclipse.org/membership/exploreMembership.php#allmembers),
-    [GNOME](https://www.gnome.org/foundation/),
+    [GNOME](https://foundation.gnome.org/),
     [OSI](https://opensource.org/sponsors),
     and [others](https://opensource.com/resources/organizations)
     are sponsored by Google, IBM, Huawei, Microsoft, and Oracle.
