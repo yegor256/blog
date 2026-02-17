@@ -167,7 +167,7 @@ in the world, but only a few percent of them are certified. Regardless of whethe
 you think it's important or not, get those certifications.
 
 As many as you like. But stay away from
-[BrainBench](https://www.brainbench.com/) and similar sites. Well,
+BrainBench and similar sites. Well,
 you can get certified there, but don't put them into your resume. That will
 only demonstrate that you are proud of a very questionable achievement. It's not
 a good sign.

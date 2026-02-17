@@ -25,7 +25,7 @@ jb_picture:
 созданная [истерия](https://hromadske.ua/ru/posts/isteriya-iz-za-malenkogo-grippa-prezident-brazilii-zayavil-chto-lyudyam-govoryat-nepravdu-ob-opasnostyah-koronavirusa),
 ни к вирусам, ни к эпидемиям [никакого](https://www.klerk.ru/blogs/turov/496842/) отношения
 не имеющая, а ее авторы преследуют цели, совершенно
-[не связанные](https://www.youtube.com/watch?v=9xvfevwDe2Q) с
+не связанные с
 охраной нашего здоровья в мировых масштабах. Я заблуждаюсь, и вы уверены,
 что дела обстоят именно так, как нам рассказывают
 [Коммерсантъ](https://www.kommersant.ru/theme/3304)
@@ -102,7 +102,7 @@ jb_picture:
     А если и [растет](http://www.ng.ru/economics/2018-12-20/4_7470_peregrev.html),
     то жди неизбежного краха в тот момент, когда его никто
     не предвидит. А значит, чтобы
-    [избежать](https://www.seb.ee/ru/forum/ekonomicheskaya-sreda/silnyy-ekonomicheskiy-rost-eto-horosho-no-stoit-zadumatsya-i-o)
+    избежать
     такого краха, нужно иногда мировую
     экономику охлаждать. Поводом для этого может быть обвал
     каких-то [инвестиционных инструментов](https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D1%80%D0%B8%D0%B7%D0%B8%D1%81_2007%E2%80%942008_%D0%B3%D0%BE%D0%B4%D0%BE%D0%B2),
