@@ -117,7 +117,7 @@ companies invest in open source:
       and
       [Kubernetes](https://github.com/kubernetes/kubernetes);
     IBM [donates](https://www.ibm.com/opensource/) to
-      [Node.js](https://xomino.com/2015/06/18/ibm-is-a-platinum-sponsor-of-the-new-node-js-foundation/)
+      [Node.js](https://www.ibm.com/blogs/bluemix/2015/06/node-js-foundation-launched/)
       and
       [TensorFlow](https://conferences.oreilly.com/tensorflow/tf-ca-2019/public/schedule/detail/81284);
     Amazon sponsors
