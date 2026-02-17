@@ -94,7 +94,7 @@ nothing else.
 
 **Don't Ask for Help**.
 Expect the same attitude from programmers around you. Again, the same argument applies:
-There are [more than 6 million accounts](https://sostats.github.io/)
+There are millions of accounts
 registered on the StackExchange platform; if you need help, ask them. Don't ask
 your friends or colleagues. Train yourself to get help from public sources
 or from your project documentation. By asking people around you, you're making

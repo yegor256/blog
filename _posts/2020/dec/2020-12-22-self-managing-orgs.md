@@ -41,7 +41,7 @@ Self-managing organization are, as some researchers
 [believe](https://www.sciencedirect.com/science/article/abs/pii/S0191308517300059),
 post-bureaucratic, humanistic, democratic, and even
 [holacratic]({% pst 2016/feb/2016-02-18-holacracy-autocracy %}).
-[Frank Martela](https://frankmartela.com/about-the-author/)
+[Frank Martela](https://www.frankmartela.com/about)
 [says](https://jorgdesign.springeropen.com/articles/10.1186/s41469-019-0062-9)
 that self-management is "an _ideal_ type of organizational form."
 The idea is trendy, especially after the publication

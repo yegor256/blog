@@ -19,8 +19,8 @@ format = "compact"
 # Use Chrome-like User-Agent to avoid being blocked
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
-# Accept common "blocked" status codes
-accept = [200, 202, 403, 429]
+# Accept common "blocked" status codes and redirects
+accept = [200, 202, 301, 302, 307, 403, 429]
 
 # Reduce concurrency to avoid triggering rate limits
 max_concurrency = 16

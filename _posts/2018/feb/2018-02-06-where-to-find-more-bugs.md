@@ -92,7 +92,7 @@ it's a bug.
 If a unit test fails sporadically
 ([yegor256/takes#506](https://github.com/yegor256/takes/issues/506))
 or doesn't work in some particular environment
-([yegor256/jpeek#151](https://github.com/yegor256/jpeek/issues/151)),
+([cqfn/jpeek#151](https://github.com/cqfn/jpeek/issues/151)),
 it's a bug.
 
 Also, it's worth mentioning that minor, cosmetic, or poorly formulated

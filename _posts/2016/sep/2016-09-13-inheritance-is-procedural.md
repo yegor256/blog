@@ -134,8 +134,6 @@ It comes as no surprise that it introduces all the problems people have been tal
 Because it is procedural!
 That's why it doesn't fit into object-oriented programming.
 
-By the way, we [discussed](https://gitter.im/yegor256/elegantobjects?at=57bcd2e4cd00bdff6e745584)
-this problem in our
-[Gitter chat](https://gitter.im/yegor256/elegantobjects) (it's dead already)
+By the way, we discussed this problem in our Gitter chat (it's dead now)
 a week ago, and that's when it became obvious to me what exactly is
-wrong with inheritance. Take a look at our discussion there.
+wrong with inheritance.

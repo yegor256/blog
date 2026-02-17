@@ -29,11 +29,6 @@ with IT-Beard:
 with Viktoria Borodina:
 [видео](https://www.youtube.com/watch?v=m5mPtC7LYiY) (in Russian).
 
-29 Aug 2019:
-[IBF](https://www.youtube.com/channel/UC3z88nnyz04kpF_xt6GyY-A)
-with Helmuts Meškonis:
-[video](https://www.youtube.com/watch?v=VsFEJRyRA9U).
-
 18 Dec 2018:
 [АйтиХайп](https://www.youtube.com/channel/UC25Ol81YfP1wvJG37mTdYww)
 with Egor Tolstoy:
@@ -49,13 +44,9 @@ with Sergey Pavlovich:
 [аудио](https://sdcast.ksdaemon.ru/2018/10/sdcast-87/) (in Russian).
 
 5 Sep 2018:
-[FrontEnd Weekend](https://www.frontendweekend.ml)
+FrontEnd Weekend
 with Andrey Smirnov:
 [аудио](https://soundcloud.com/frontend-weekend/fw-68) (in Russian).
-
-13 Nov 2017:
-DotNext 2017:
-[аудио](https://youtu.be/FMktdWexo8A?t=27076) (in Russian).
 
 21 May 2017:
 [DevZen Podcast](https://devzen.ru/)

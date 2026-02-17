@@ -78,7 +78,7 @@ I am a **philanthropist**, donating a few thousand dollars
 I'm also a bit of a [scientist](/papers.html):
   [Scopus](https://www.scopus.com/authid/detail.uri?authorId=30367443600),
   [Google Scholar](https://scholar.google.com/citations?user=cYmXh60AAAAJ),
-  [DBLP](https://dblp.uni-trier.de/pers/hd/b/Bugayenko:Yegor).
+  [DBLP](https://dblp.org/pid/17/7086.html).
 Occasionally teaching in
   [HSE University](https://www.hse.ru/ba/se/courses/835171227.html) (Moscow, Russia)
   and in
@@ -105,7 +105,7 @@ Just give me your email address and briefly explain who you are and why you're i
 I'm also visible sometimes at
   [BLOG@CACM](https://cacm.acm.org/blogs/blog-cacm/),
   [DZone](https://dzone.com/users/1023189/yegor256.html),
-  [JavaCodeGeeks](https://www.javacodegeeks.com/user/yegor-bugayenko/?profiletab=posts),
+  [JavaCodeGeeks](https://www.javacodegeeks.com/author/yegor-bugayenko/),
   [Hacker News](https://hn.algolia.com/?dateRange=all&page=0&prefix=false&query=yegor256&sort=byPopularity&type=story),
   [Reddit](https://www.reddit.com/user/yegor256),
   [Medium](https://medium.com/@yegor256),

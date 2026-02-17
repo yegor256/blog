@@ -24,7 +24,7 @@ image: /images/andreea/podcast.png
 
 [David Hillson](https://risk-doctor.com/) was our special guest.
 
-Video is [here](https://youtu.be/em2IAnBzFBg).
+Video is [here](https://www.youtube.com/watch?v=L2vUKqEgdys).
 
 This is David's YouTube channel: [@RiskDoctorVideo](https://www.youtube.com/user/RiskDoctorVideo)
 

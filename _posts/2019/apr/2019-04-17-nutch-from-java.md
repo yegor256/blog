@@ -20,8 +20,6 @@ keywords:
   - nutch apache
 ---
 
-{% badge https://upload.wikimedia.org/wikipedia/commons/8/89/Nutch_logo.svg 92 https://nutch.apache.org/ %}
-
 [Apache Nutch](https://nutch.apache.org/)
 is an open source framework written in Java. Its purpose
 is to help us crawl a set of websites (or the entire Internet), fetch

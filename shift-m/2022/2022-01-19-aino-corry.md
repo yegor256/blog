@@ -28,7 +28,7 @@ Aino's website is [here](https://metadeveloper.com).
 
 And the book is [here](https://amzn.to/3fREDOQ).
 
-Video is [here](https://youtu.be/ByatpkT2-tI) (Aino asked to take it down).
+Video was taken down at Aino's request.
 
 ## Transcript
 

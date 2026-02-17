@@ -22,7 +22,7 @@ jb_picture:
   caption: Taboo (2017) by Tom Hardy, et al.
 ---
 
-I've been writing [so much](/tags/oop.html) about object-oriented programming and its
+I've been writing [so much](/tag/oop.html) about object-oriented programming and its
 [pitfalls]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %}),
 claiming that most of the design patterns and "good practices" which we are accustomed to
 are actually [wrong and hurtful]({% pst 2014/sep/2014-09-10-anti-patterns-in-oop %}),

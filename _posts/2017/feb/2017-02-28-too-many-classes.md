@@ -71,9 +71,9 @@ the more expressive, bright, and readable your code is.
 Unfortunately, Java and many other languages are not designed with
 this concept in mind. Packages, modules, and namespaces don't really help,
 and we usually end up with names like
-[`AbstractCooKyivalueMethodArgumentResolver`](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/method/annotation/AbstractCooKyivalueMethodArgumentResolver.html) (Spring)
+`AbstractCookieValueMethodArgumentResolver` (Spring)
 or
-[`CombineFileRecordReaderWrapper`](https://hadoop.apache.org/docs/r3.0.0-alpha1/api/org/apache/hadoop/mapreduce/lib/input/CombineFileRecordReaderWrapper.html) (Hadoop).
+`CombineFileRecordReaderWrapper` (Hadoop).
 We're trying to pack as many semantics into class names as possible so
 their users won't doubt for a second. Then we're trying to put as many
 methods into one class as possible to make life easier for users; they will

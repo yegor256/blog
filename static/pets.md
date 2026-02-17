@@ -226,7 +226,7 @@ Founded 12-Apr-2019.
 
 <!--
 Others (less stable or successful):
-[jpeek](https://github.com/yegor256/jpeek),
+[jpeek](https://github.com/cqfn/jpeek),
 [xcop](https://github.com/yegor256/xcop),
 [phpRack](https://www.phpRack.com/),
 [netbout](https://www.netbout.com),
