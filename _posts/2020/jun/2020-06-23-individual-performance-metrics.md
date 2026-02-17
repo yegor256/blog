@@ -75,9 +75,8 @@ from overly-paid programmers/managers who are just trying to keep their jobs, do
     Sean McHugh, a Scrum Master at [Axosoft](https://www.axosoft.com/).
 
   * "Performance reviews are harmful and completely unnecessary,"
-    [says](https://scrumology.com/performance-evaluations-and-scrum/)
-    Kane Mar, a co-founder and principal consultant for
-    [Scrumology](https://scrumology.com/).
+    says Kane Mar, a co-founder and principal consultant for
+    Scrumology.
 
   * "Performance metrics discourage initiative, innovation and risk-taking,"
     [says](https://aeon.co/ideas/against-metrics-how-measuring-performance-by-numbers-backfires)

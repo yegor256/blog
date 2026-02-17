@@ -37,8 +37,8 @@ in ways which are different from what its original author expected.
 {% jb_picture_body %}
 
 I was recently writing a web front for [Zold](https://www.zold.io) in Ruby,
-on top of [Sinatra](http://sinatrarb.com/).
-This is how a web server starts according to [their documentation](http://sinatrarb.com/intro.html):
+on top of [Sinatra](https://sinatrarb.com/).
+This is how a web server starts according to [their documentation](https://sinatrarb.com/intro.html):
 
 ```ruby
 App.start!

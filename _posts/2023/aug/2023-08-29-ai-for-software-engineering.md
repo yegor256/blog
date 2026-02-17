@@ -32,11 +32,11 @@ The [release](https://venturebeat.com/ai/openai-debuts-chatgpt-and-gpt-3-5-serie
 of [ChatGPT](https://chat.openai.com/) 3.5 has changed everything for us programmers.
 Even though most of us (including me) don't understand how it works,
 some of us use it more frequently than Stack Overflow, Google, and IDE built-in features.
-I believe this is just the beginning. Even though, only [Microsoft](https://www.githubnext.com)
+I believe this is just the beginning. Even though, only [Microsoft](https://githubnext.com)
 knows what will happen next, let me try to make a humble prediction too.
 Below, I list what I believe robots (with Generative AI on board) will do in the future.
 The further into the future, the lower on the list.
-I tried not to repeat what [GitHubNext](https://www.githubnext.com) is already saying.
+I tried not to repeat what [GitHubNext](https://githubnext.com) is already saying.
 
 <!--more-->
 

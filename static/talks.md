@@ -217,7 +217,7 @@ to meet Russian researchers, who challenge world-size problems;
 <span class="venue-rate green">A</span>
 <img src="https://i.ytimg.com/vi/PJAzfQtxby4/mqdefault.jpg" class="past-talk" alt="code/R 2021"/>
 **Анализ качества кода и почему он не работает?**;
-[&lt;code/R&gt;](https://code-r.ru/);
+&lt;code/R&gt;;
 <span class="city">Omsk</span>, <span class="country">Russia</span>;
 18 September;
 [видео](https://www.youtube.com/watch?v=PJAzfQtxby4).
@@ -398,7 +398,7 @@ to meet Russian researchers, who challenge world-size problems;
 <span class="venue-rate orange">C</span>
 <img src="https://i.ytimg.com/vi/i1fGk8XJ7jI/mqdefault.jpg" class="past-talk" alt="Blockchain 2018"/>
 **Panel Discussion about Blockchain**;
-[Blockchain Conference 2018](https://moscow.bc.events/ru);
+Blockchain Conference 2018;
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 20 November;
 [видео](https://youtu.be/i1fGk8XJ7jI)
@@ -516,7 +516,7 @@ filming myself :( That's sad
 <span class="venue-rate green">B-</span>
 <img src="https://i.ytimg.com/vi/MCaKPYBMXyI/mqdefault.jpg" class="past-talk" alt="CryptoBBQ 2018"/>
 **Life Without Blockchain**;
-[CryptoBBQ](https://cryptoevent.io/cryptobbq);
+CryptoBBQ;
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 23 Aug 2018;
 [видео](https://www.youtube.com/watch?v=MCaKPYBMXyI).
@@ -693,6 +693,7 @@ audience was interested. Will definitely try to attend next year
 [video](https://www.youtube.com/watch?v=IWroBKW8_QI) (part 2)
 {: .talk-event}
 
+<!--
 <span class="venue-rate green">A-</span>
 <img src="https://i.ytimg.com/vi/CCr8hRE_TUs/mqdefault.jpg" class="past-talk" alt="JEEConf 2017"/>
 **Object-Oriented Flavor for JUnit Tests**;
@@ -701,6 +702,7 @@ audience was interested. Will definitely try to attend next year
 27 May 2017;
 [video](https://www.youtube.com/watch?v=CCr8hRE_TUs),
 [slides](https://www.slideshare.net/YegorBugayenko/objectoriented-flavor-for-junit-tests).
+-->
 As usual, this conference was very good, but this year something was missing.
 The venue was perfect, the accommodation, the team, the audience, the
 equipment at the highest level. I guess the content could be better with
@@ -840,7 +842,7 @@ AgileDays 2017;
 <span class="venue-rate orange">C</span>
 <img src="https://i.ytimg.com/vi/lvoQZGsY56k/mqdefault.jpg" class="past-talk" alt="Kharkiv PMDay 2017"/>
 **Management Without Managers**;
-[Kharkiv PMDay](http://kh.pmday.org/yehor-buhayenko2017s/);
+Kharkiv PMDay;
 <span class="city">Kharkiv</span>, <span class="country">Ukraine</span>;
 4 March 2017;
 [slides](https://www.slideshare.net/YegorBugayenko/management-without-managers),
@@ -1093,7 +1095,7 @@ venue was not really comfortable, and the content was mostly outdated
 <span class="venue-rate green">A+</span>
 <img src="https://i.ytimg.com/vi/7yTIWFZrXpg/mqdefault.jpg" class="past-talk" alt="GeekOUT 2016"/>
 **Chat Bots Architecture**;
-[GeekOUT 2016](http://2016.geekout.ee/speakers/yegor-bugayenko/);
+GeekOUT 2016;
 <span class="city">Tallinn</span>, <span class="country">Estonia</span>;
 9 June 2016;
 [slides](https://www.slideshare.net/YegorBugayenko/chat-bot-architecture),
@@ -1402,7 +1404,7 @@ Aside from that, everything else was good, and I liked being there
 <span class="venue-rate orange">C+</span>
 <img src="https://i.ytimg.com/vi/9j5pq71BS5U/mqdefault.jpg" class="past-talk" alt="Outsource People 2016"/>
 **Software Outsourcing, 10 Years Ahead Prediction**;
-[Outsource People 2016](http://outsource-people.com/en);
+Outsource People 2016;
 <span class="city">Minsk</span>, <span class="country">Belarus</span>;
 8 April 2016
 [slides](https://www.slideshare.net/YegorBugayenko/software-outsourcing-10-years-ahead),

@@ -175,7 +175,7 @@ walking with a girlfriend to a restaurant? All of that happened to me in
 San Francisco, which is not the
 [most criminal](https://www.statista.com/statistics/217685/most-dangerous-cities-in-north-america-by-crime-rate/)
 city in not the
-[most criminal](https://www.statista.com/statistics/200445/reported-violent-crime-rate-in-the-us-states/)
+most criminal
 state.
 
 There is a permanent feel of danger, and the police, who look and sound
@@ -201,7 +201,7 @@ On top of that, the food is expensive, unless you don't care what you eat. If yo
 do, [Whole Foods](https://eu.wholefoodsmarket.com/) is your grocery store, which has the reputation of
 a [whole paycheck](https://www.sfgate.com/business/article/Whole-Foods-whole-paycheck-Amazon-Jeff-Bezos-13181055.php)
 place, where you basically are supposed to leave your entire monthly salary.
-Check their [prices](https://www.wholefoodsmarket.com/shop/PAL/3173).
+Check their prices.
 
 Going out to a decent restaurant will cost you around $100, for two. For example,
 see the menu at [Tamarine](https://tamarinerestaurant.com/) and

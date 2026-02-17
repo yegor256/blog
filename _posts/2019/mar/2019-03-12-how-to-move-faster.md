@@ -93,7 +93,7 @@ feelings. They have [no obligations](https://www.yegor256.com/2014/04/13/no-obli
 for you, you also don't have any for them.
 You want them to produce and do it fast! If they don't, or you don't like
 the quality of work, or you have any doubts, just reject the person you don't like.
-There is a [pool](https://www.0crat/team) of others waiting to join your project. Reward those who stay
+There is a pool of others waiting to join your project. Reward those who stay
 and contribute (by increasing their rates) and discharge those who are too slow.
 The same applies to the architect. If you don't like how effective that person is,
 replace him/her.

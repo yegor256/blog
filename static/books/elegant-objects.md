@@ -189,7 +189,7 @@ you on the "acknowledgment" list. See how others have
   * [John Page](https://www.linkedin.com/in/johnpage76)
   * [Kiryl Karatsetski](https://www.linkedin.com/in/kkaratsetski)
   * [Marcos Douglas B. Santos](https://www.linkedin.com/in/mdbs99)
-  * [Oksana Semenkova](https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/005/0a7/326/2676cd2.jpg)
+  * Oksana Semenkova
   * [Piotr Chmielowski](https://www.linkedin.com/in/pchmielowski)
   * [Silas Reinagel](https://www.linkedin.com/in/silasreinagel)
 
@@ -378,10 +378,6 @@ to your application, please [email me](mailto:blog@yegor256.com).
     automation tools with Perl + Moose.</span>
   </div>
   <div class="rv">
-    <a href="https://www.linkedin.com/in/oksana-semenkova-99622bab">
-      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/005/0a7/326/2676cd2.jpg"
-        alt="Semenkova Oksana Nikolaevna"/>
-    </a>
     <span class="name">Semenkova Oksana Nikolaevna</span>
     <span class="text">I'm very passionate about software architecture and want
     to help you do your book the best. The themes from it
@@ -644,7 +640,7 @@ good, and how it could be better:
   * [Andrey Panasyuk](https://andreypanasyuk.wordpress.com/2017/08/17/elegant-objects/)
   * [Igor Grishaev](http://grishaev.me/oop-1) (in Russian)
   * [Łukasz Konopski](http://lkonopski.blogspot.ru/2018/01/oop-is-not-dead-elegant-objects.html?utm_source=jvm-bloggers.com&utm_medium=link&utm_campaign=jvm-bloggers)
-  * [Alexey Nikitin](https://www.nikialeksey.com/2018/01/30/elegant-objects-vol1-review.html) (in Russian)
+  * Alexey Nikitin (in Russian)
   * [Manu Pijierro](https://medium.com/@mpijierro/review-del-libro-elegants-objects-vol-1-c0fbc5a0359e) (in Spanish)
   * [Felix Roth](https://thinkingsideways.net/reviews/2019/02/10/elegant-objects-review.html)
 
