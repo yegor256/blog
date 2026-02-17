@@ -4,9 +4,6 @@
 # Only check absolute URLs (http/https), ignore relative URLs
 scheme = ["http", "https"]
 
-# Only include URLs starting with http
-include = ['^https?://']
-
 # Base URL to resolve relative links (then excluded by scheme filter)
 base_url = "https://www.yegor256.com"
 
@@ -35,17 +32,17 @@ exclude_path = [
 
 # Exclude URLs
 exclude = [
-  '.*linkedin\.com.*',
-  '.*twitter\.com.*',
-  '.*x\.com.*',
-  '.*facebook\.com.*',
-  '^/',
-  '.*t\.co/.*',
-  '.*s3auth\.com.*',
-  '.*img\.teamed\.io.*',
-  '.*wring\.io.*',
-  '.*rehttp\.net.*',
-  '.*threecopies\.com.*',
-  '.*zerocracy\.com.*',
-  '.*netbout\.com.*'
+  "linkedin\\.com",
+  "twitter\\.com",
+  "://x\\.com",
+  "facebook\\.com",
+  "^/",
+  "://t\\.co/",
+  "s3auth\\.com",
+  "img\\.teamed\\.io",
+  "wring\\.io",
+  "rehttp\\.net",
+  "threecopies\\.com",
+  "zerocracy\\.com",
+  "netbout\\.com"
 ]
