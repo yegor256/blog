@@ -100,7 +100,7 @@ when I have to use YourKit, I know that I'm doing something very wrong
 in my code.
 
 <img src="/images/2017/06/env-httpclient.jpg" class="env-ico" alt="icon"/><br/>
-[HTTP Client](https://itunes.apple.com/us/app/http-client/id418138339?mt=12) ($2)
+[HTTPBot](https://apps.apple.com/us/app/httpbot-api-http-client/id1232603544)
 for HTTP requests/responses debugging, when
 [`curl`](https://curl.haxx.se/) is not enough.
 
