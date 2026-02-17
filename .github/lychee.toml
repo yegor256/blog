@@ -35,17 +35,17 @@ exclude_path = [
 
 # Exclude URLs
 exclude = [
-  'linkedin\.com',
-  'twitter\.com',
-  'x\.com',
-  'facebook\.com',
+  '.*linkedin\.com.*',
+  '.*twitter\.com.*',
+  '.*x\.com.*',
+  '.*facebook\.com.*',
   '^/',
-  't\.co/',
-  's3auth\.com',
-  'img\.teamed\.io',
-  'wring\.io',
-  'rehttp\.net',
-  'threecopies\.com',
-  'zerocracy\.com',
-  'netbout\.com'
+  '.*t\.co/.*',
+  '.*s3auth\.com.*',
+  '.*img\.teamed\.io.*',
+  '.*wring\.io.*',
+  '.*rehttp\.net.*',
+  '.*threecopies\.com.*',
+  '.*zerocracy\.com.*',
+  '.*netbout\.com.*'
 ]
