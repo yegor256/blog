@@ -96,8 +96,6 @@ I started to work on the 3rd volume. It will be suggest how to refactor
 the legacy code in order to make it more object-oriented. I will try to make
 it similar to those popular refactoring books, where recommendations are
 given to improve the code. Hope to publish it in the first half of 2019.
-If you want to be a reviewer, please fill out
-[this form](https://docs.google.com/forms/d/1d1DgAj8wYOXqmg8wMw_PpPXSEWKZMIa5Y5oEmCN8I7o/).
 
 July 20, 2018:
 Русское издание [вышло](https://www.piter.com/collection/all/product/elegantnye-obekty-java-edition)
@@ -174,8 +172,6 @@ Mar 7, 2017:
 I've started to write the third volume, which will consist entirely
 of "OOP puzzles." Just like in math or chess books, there will be questions
 that you will have to think about and answers at the end of the book.
-Want to become a reviewer? Please fill out
-[this form](https://docs.google.com/forms/d/1d1DgAj8wYOXqmg8wMw_PpPXSEWKZMIa5Y5oEmCN8I7o).
 
 Feb 24, 2017:
 The list of reviewers for the second volume is ready (alphabetic order). I'm very
@@ -327,10 +323,8 @@ to your application, please [email me](mailto:blog@yegor256.com).
   </div>
   <div class="rv">
     <a href="https://ph.linkedin.com/in/carlos-miguel-miranda-0b899392">
-      <img src="https://www.teamed.io/images/team/carlosmiranda.png"
-        alt="Carlos Miranda"/>
+      <span class="name">Carlos Miranda</span>
     </a>
-    <span class="name">Carlos Miranda</span>
     <span class="text">I have been working for Teamed.io projects for two years.
     Having worked with his projects, I am very familiar with Yegor's methods. </span>
   </div>

@@ -45,7 +45,6 @@ to add yours, via a [pull request](https://github.com/yegor256/blog)):
 
   * [Felix Raab](https://medium.com/ki-labs-engineering/software-engineering-as-fiction-code-ahead-7a71e5a1bf69)
   * [Sandor Dargo](https://dev.to/sandordargo/code-ahead-by-yegor-bugayenko-2n8g)
-  * [Wojciech Adam Koszek](https://www.koszek.com/reading/2017/01/07/book-blog-hacks-256/)
   * [Vladimir Rozhkov](https://www.rozhkov.me/post/book-review-code-ahead/) (по-русски)
 
 Nov 19, 2018:
