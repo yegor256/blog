@@ -87,7 +87,7 @@ our industry has achieved in the last decade."&mdash;[Lieven D.](https://twitter
 "I bought your first book and read it for 10 mins.
 Then realized it was a copy paste from your website and
 threw it to the trash can. I regret it tho, because I now own a dog and sometimes
-I need paper for him to shit on."&mdash;[Phantom190](https://gitter.im/yegor256/elegantobjects?at=59769444714ea96f781c131f)
+I need paper for him to shit on."&mdash;[Phantom190](https://app.gitter.im/#/room/#yegor256_elegantobjects:gitter.im)
 
 "Wow, what a douche this guy is"&mdash;[@klingtnet](https://twitter.com/klingtnet/status/834907311730790400)
 

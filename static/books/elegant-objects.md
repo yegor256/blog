@@ -113,7 +113,7 @@ and print it. The book will also be extended by some questions and
 answers from the blog, for the most interesting/relevant sections.
 
 Jan 11, 2018:
-[Gitter chat room](https://gitter.im/yegor256/elegantobjects) is closed.
+[Gitter chat room](https://app.gitter.im/#/room/#yegor256_elegantobjects:gitter.im) is closed.
 For all discussions please join [Telegram group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
 For OOP related questions, please use comment sections in one
 of [these blog posts](/tag/oop.html).
@@ -655,7 +655,7 @@ good, and how it could be better:
   * [Felix Roth](https://thinkingsideways.net/reviews/2019/02/10/elegant-objects-review.html)
 
 Jun 17, 2016:
-I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects)
+I started a [Gitter chat room](https://app.gitter.im/#/room/#yegor256_elegantobjects:gitter.im)
 where we will discuss object-oriented
 programming and find out what would be appropriate to write about
 on this blog and in the next volume of the book. Join the chat and stay
