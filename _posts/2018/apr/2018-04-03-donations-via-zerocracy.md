@@ -39,7 +39,7 @@ At least that's what I feel when I see a [Patreon](https://patreon.com/) button.
 {% jb_picture_body %}
 
 [Zerocracy](https://www.zerocracy.com) is a platform that manages programmers remotely.
-Moreover, it's absolutely [free](https://www.zerocracy.com/policy.html#23) for open source projects. Take a
+Moreover, it's absolutely [free](https://www.zerocracy.com/how-it-works) for open source projects. Take a
 look at [Cactoos](https://www.cactoos.org) or [Takes](https://www.takes.org)---they
 are both managed by
 [Zerocrat]({% pst 2018/mar/2018-03-21-zerocracy-announcement %}). These projects
@@ -47,7 +47,7 @@ are funded by myself. I add money to Zerocracy out of my pocket and Zerocracy
 [pays]({% pst 2018/jan/2018-01-09-micro-budgeting %})
 programmers when they close their [microtasks]({% pst 2017/nov/2017-11-28-microtasking %}) in GitHub.
 
-{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
 A few days ago someone approached me by email and literally said: "There
 is a bug in your project, I'm happy to pay you for your time if you can come
@@ -64,27 +64,26 @@ he fund the project and then let us use the funds for
 keeping the focus on the issue he was interested in.
 
 Moreover, this concept was
-[earlier proposed](https://github.com/zerocracy/datum/issues/212)
-by [`@skapral`](https://github.com/skapral).
+earlier proposed by [`@skapral`](https://github.com/skapral).
 
 He gladly accepted the offer.
-We [implemented](https://github.com/zerocracy/farm/issues/866) the functionality in
-[Zerocrat](https://www.0crat.com) and he contributed $128 via Stripe.
+We implemented the functionality in
+[Zerocrat](https://www.zerocracy.com) and he contributed $128 via Stripe.
 
-Now [anyone](https://www.zerocracy.com/policy.html#50)
+Now [anyone](https://www.zerocracy.com/how-it-works)
 can give a few dollars to a project, if it's
 managed by Zerocracy. The contributor will see how those funds are being spent, down to each and every dollar!
 Try, for example, one of these buttons and you will see detailed
 financial reports of each project and will be able to add your funds:
 
 Cactoos.org:<br/>
-[![Donate via Zerocracy](https://www.0crat.com/contrib-badge/C63314D6Z.svg)](https://www.0crat.com/contrib/C63314D6Z)
+[![Donate via Zerocracy](https://www.zerocracy.com/svg/C63314D6Z.svg)](https://www.zerocracy.com/C63314D6Z)
 
 Takes.org:<br/>
-[![Donate via Zerocracy](https://www.0crat.com/contrib-badge/C3FFK3YAY.svg)](https://www.0crat.com/contrib/C3FFK3YAY)
+[![Donate via Zerocracy](https://www.zerocracy.com/svg/C3FFK3YAY.svg)](https://www.zerocracy.com/C3FFK3YAY)
 
 The advantage of this approach, compared to, for example,
-[BountySource](https://www.bountysource.com/), is that the money will
+[BountySource](https://en.wikipedia.org/wiki/Bountysource), is that the money will
 be distributed in micro-payments and will be fully traceable. I believe
 that this makes a difference for donators---they are interested to see
 how their money is being used.

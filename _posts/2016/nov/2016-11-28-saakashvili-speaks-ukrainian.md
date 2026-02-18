@@ -32,8 +32,8 @@ jb_picture:
 {% jb_picture_body %}
 
 Я понимаю, зачем этим занимались
-[Азаров](http://lurkmore.to/%D0%90%D0%B7%D0%B0%D1%80%D0%BE%D0%B2),
-[Янукович](http://www.segodnya.ua/politics/power/janukovich-ukrainckij-jazyk---eto-dusha-natsii.html)
+[Азаров](https://ru.wikipedia.org/wiki/%D0%90%D0%B7%D0%B0%D1%80%D0%BE%D0%B2,_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%AF%D0%BD%D0%BE%D0%B2%D0%B8%D1%87),
+[Янукович](https://web.archive.org/web/20241107194828/https://politics.segodnya.ua/politics/janukovich-ukrainckij-jazyk---eto-dusha-natsii-223283.html)
 и прочие
 [Яценюки](http://korrespondent.net/ukraine/politics/3508618-yatsenuik-ukraynskyi-yazyk-mozhet-stat-ofytsyalnym-v-es).
 Их главным инструментом удержания власти был и остается именно

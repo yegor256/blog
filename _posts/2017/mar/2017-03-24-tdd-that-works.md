@@ -27,8 +27,8 @@ was [rediscovered](https://www.quora.com/Why-does-Kent-Beck-refer-to-the-redisco
 by [Kent Beck](https://en.wikipedia.org/wiki/Kent_Beck) and explained in
 [his famous book](https://amzn.to/2mTuxCs) in 2002.
 In 2014, David Heinemeier Hansson (the creator of Ruby on Rails)
-said that TDD [is dead](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html)
-and only [harms architecture](http://david.heinemeierhansson.com/2014/test-induced-design-damage.html).
+said that TDD [is dead](https://dhh.dk/2014/tdd-is-dead-long-live-testing.html)
+and only [harms architecture](https://dhh.dk/2014/test-induced-design-damage.html).
 [Robert Martin](https://en.wikipedia.org/wiki/Robert_Cecil_Martin)
 (the inventor of the [SOLID principles]({% pst 2017/mar/2017-03-28-solid %}))
 [disagreed](https://8thlight.com/blog/uncle-bob/2014/04/25/MonogamousTDD.html)

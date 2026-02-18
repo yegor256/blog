@@ -44,15 +44,6 @@ informed about everything I do publicly, including these webinars.
 
 ## 2021
 
-<!--
-{% webinar 12-05-2021 56 rbphMrFM7W8 Inheritance vs. Composition in Object-Oriented Programming %}
-
-<a href="https://youtu.be/rbphMrFM7W8"><img src="https://i.ytimg.com/vi/rbphMrFM7W8/mqdefault.jpg" class="wnr" alt="Webinar no.56 by Yegor Bugayenko"/></a>
-May 12, 2021<br/>
-&#35;56: **Inheritance vs. Composition in Object-Oriented Programming**<br/>
-Implementation Inheritance is a mechanism of code reuse, which is very popular in OOP code. However, many practitioners believe that composition is a better and cleaner alternative.
--->
-
 <a href="https://www.youtube.com/watch?v=fJvUTlPHSvU"><img src="https://i.ytimg.com/vi/fJvUTlPHSvU/mqdefault.jpg" class="wnr" alt="Webinar no.55 by Yegor Bugayenko"/></a>
 Feb 10, 2021<br/>
 &#35;55: **Encapsulation Is Dead, Let's Use Distance of Coupling Instead**<br/>
@@ -119,16 +110,6 @@ June 12, 2019<br/>
 How do you log events from your objects? Do you use static loggers? Do
 you use static methods? If you do, you are doing it wrong. There is
 a better, a more object-oriented way to do that.
-
-<!--
-<a href="https://www.youtube.com/watch?v=xh6PSEmWcmg"><img src="https://i.ytimg.com/vi/xh6PSEmWcmg/mqdefault.jpg" class="wnr" alt="Webinar no.43 by Yegor Bugayenko"/></a>
-March 06, 2019<br/>
-&#35;43: **Adding thread-safety to existing objects, in Ruby**<br/>
-Thread-safety is a quality some objects in OOP may possess, but some may
-not need that. It's a good practice to add thread-safety (unless you really
-need something very specific and fast) via decorators. Here we demonstrate
-how this can be done in Ruby.
--->
 
 <a href="https://www.youtube.com/watch?v=bVzEPOZ_mDU"><img src="https://i.ytimg.com/vi/bVzEPOZ_mDU/mqdefault.jpg" class="wnr" alt="Webinar no.42 by Yegor Bugayenko"/></a>
 February 13, 2019<br/>

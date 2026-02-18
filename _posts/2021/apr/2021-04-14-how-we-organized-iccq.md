@@ -149,7 +149,7 @@ and
 And we also contacted two of the biggest not-for-profit Russian media organizations:
 [RUSSOFT](https://russoft.org/en/)
 and
-[SECR](https://2021.secrus.org/?lang=en).
+SECR.
 They also agreed.
 Of course, it was much harder than it sounds. Some organizations didn't even reply
 to us, some of them rejected our invitations. It was a long process that took about two months
@@ -175,7 +175,7 @@ This was the biggest challenge: to get a
 from IEEE.
 Our friends from IEEE Russia Section C Chapter helped us
 (using [this form](https://www.ieee.org/conferences/organizers/conf-app.html)), and
-[we got it](https://conferences.ieee.org/conferences_events/conferences/conferencedetails/51190).
+we got it.
 If you want to know more details about this step, [tg me](https://t.me/yegor256),
 I will try to explain.
 It took about three weeks, and they accepted our request.
@@ -228,7 +228,7 @@ call-for-papers (CFP) distribution, and paid ads.
 We made [PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Ficcq.github.io&target=cfp%2F2021%2Fcfp.tex&command=pdflatex&trackId=1617526368363) and
 [TXT](https://raw.githubusercontent.com/yegor256/iccq.github.io/master/cfp/2021/cfp.txt) versions
 of it and then posted to a few places:
-[WikiCFP](https://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=112792),
+[WikiCFP](https://web.archive.org/web/20240423173934/http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=112792),
 [call4paper](https://www.call4paper.com/detail/event/PGNZHDXH27553174),
 [AllConferenceCfpAlerts](https://allconferencecfpalerts.com/cfp/view.php?eno=22113),
 [SEWORLD](https://listserv.acm.org/scripts/wa-acmlpx.exe?A2=ind2009&L=SEWORLD&P=R5608),

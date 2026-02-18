@@ -27,7 +27,7 @@ jb_picture:
 JSON or XML? Which one is better? Which one is faster? Which
 one should I use in my next project? Stop it! These things are not comparable.
 It's similar to comparing a bicycle and an
-[AMG S65](https://www.mbusa.com/mercedes/vehicles/model/class-S/model-S65V). Seriously,
+[AMG S65](https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class). Seriously,
 which one is better? They both can take you from home to the office, right?
 In some cases, a bicycle will do it better. But does that mean
 they can be compared to each other? The same applies here with JSON and XML.

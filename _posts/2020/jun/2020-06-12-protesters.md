@@ -51,7 +51,7 @@ jb_picture:
 а по [мнению](https://www.wsj.com/articles/the-myth-of-systemic-police-racism-11591119883)
 Wall Street Journal так и вовсе "расизм в полиции --- это миф."
 
-В-третьих, согласно [статистике](https://igpa.uillinois.edu/programs/racial-attitudes)
+В-третьих, согласно [статистике](https://igpa.uillinois.edu/reports/a-portrait-of-african-american-and-white-racial-attitudes)
 расизма в США с каждым годом становится все меньше: если в 1950-м году лишь 5% белых
 одобряли браки с темнокожими, то в 2013-м году более 85% не имели ничего против них.
 На этом фоне весьма странным кажется, например,

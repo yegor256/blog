@@ -17,8 +17,6 @@ keywords:
   - pay per hour jobs
   - payroll slavery
   - pay per hour slavery
-translated:
-  - Persian: http://farzam.me/farsi/post?id=65
 image: /images/2015/07/gladiator.jpg
 jb_picture:
   caption: Gladiator (2000) by Ridley Scott

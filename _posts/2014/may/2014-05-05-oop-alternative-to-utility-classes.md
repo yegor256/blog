@@ -19,9 +19,6 @@ keywords:
   - utility classes are evil
   - utility classes are bad
   - utility classes is a bad practice
-translated:
-  - Japanese: http://tbd.kaitoy.xyz/2016/01/03/oop-alternative-to-utility-classes/
-  - Russian: http://agorlov.ru/oop-alternative-to-utility-classes.html
 book: elegant-objects-1 3.2
 ---
 
@@ -62,8 +59,7 @@ There have been many discussions of this subject; to name a few:
 [Are Helper Classes Evil?](http://blogs.msdn.com/b/nickmalik/archive/2005/09/06/461404.aspx) by Nick Malik,
 [Why helper, singletons and utility classes are mostly bad](http://smart421.wordpress.com/2011/08/31/why-helper-singletons-and-utility-classes-are-mostly-bad-2/) by Simon Hart,
 [Avoiding Utility Classes](https://github.com/marshallward/marshallward.org/blob/master/content/avoid_util_classes.rst) by Marshal Ward,
-[Kill That Util Class!](https://www.jroller.com/DhavalDalal/entry/kill_that_util_class) by Dhaval Dalal,
-[Helper Classes Are A Code Smell](https://www.robbagby.com/posts/helper-classes-are-a-code-smell/) by Rob Bagby.
+[Kill That Util Class!](https://web.archive.org/web/20201111184021/http://www.jroller.com/DhavalDalal/entry/kill_that_util_class) by Dhaval Dalal.
 
 {% youtube psrp3TtaYYI %}
 

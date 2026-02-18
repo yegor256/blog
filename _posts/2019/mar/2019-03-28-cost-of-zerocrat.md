@@ -45,7 +45,7 @@ In other words, each microtask is a small fixed-cost project. A typical
 modification to the code will involve two microtasks: implementation
 and code review. The overall cost of a single modification will cost you
 approximately that much (exact numbers you can find in our
-[Policy](https://www.zerocracy.com/policy.html)):
+[Policy](https://www.zerocracy.com/how-it-works)):
 
 {% highlight text %}
 Creating a ticket:    15 minutes

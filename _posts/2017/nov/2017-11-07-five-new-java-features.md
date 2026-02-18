@@ -218,7 +218,7 @@ must automatically have
 There should be no need
 to create them, Java will provide them out-of-the-box, just like
 [Kotlin](https://kotlinlang.org/docs/reference/properties.html)
-and [Ruby](https://www.rubyist.net/~slagell/ruby/accessors.html) do.
+and [Ruby](https://ruby-doc.org/docs/ruby-doc-bundle/UsersGuide/rg/accessors.html) do.
 What is the point of having an attribute if there are no getters and setters
 to read it and to modify it, right?
 

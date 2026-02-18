@@ -96,8 +96,6 @@ I started to work on the 3rd volume. It will be suggest how to refactor
 the legacy code in order to make it more object-oriented. I will try to make
 it similar to those popular refactoring books, where recommendations are
 given to improve the code. Hope to publish it in the first half of 2019.
-If you want to be a reviewer, please fill out
-[this form](https://docs.google.com/forms/d/1d1DgAj8wYOXqmg8wMw_PpPXSEWKZMIa5Y5oEmCN8I7o/).
 
 July 20, 2018:
 Русское издание [вышло](https://www.piter.com/collection/all/product/elegantnye-obekty-java-edition)
@@ -113,7 +111,7 @@ and print it. The book will also be extended by some questions and
 answers from the blog, for the most interesting/relevant sections.
 
 Jan 11, 2018:
-[Gitter chat room](https://gitter.im/yegor256/elegantobjects) is closed.
+[Gitter chat room](https://app.gitter.im/#/room/#yegor256_elegantobjects:gitter.im) is closed.
 For all discussions please join [Telegram group](https://t.me/joinchat/AAAAAEJFMRzsRTRxM3ec6A).
 For OOP related questions, please use comment sections in one
 of [these blog posts](/tag/oop.html).
@@ -174,8 +172,6 @@ Mar 7, 2017:
 I've started to write the third volume, which will consist entirely
 of "OOP puzzles." Just like in math or chess books, there will be questions
 that you will have to think about and answers at the end of the book.
-Want to become a reviewer? Please fill out
-[this form](https://docs.google.com/forms/d/1d1DgAj8wYOXqmg8wMw_PpPXSEWKZMIa5Y5oEmCN8I7o).
 
 Feb 24, 2017:
 The list of reviewers for the second volume is ready (alphabetic order). I'm very
@@ -193,7 +189,7 @@ you on the "acknowledgment" list. See how others have
   * [John Page](https://www.linkedin.com/in/johnpage76)
   * [Kiryl Karatsetski](https://www.linkedin.com/in/kkaratsetski)
   * [Marcos Douglas B. Santos](https://www.linkedin.com/in/mdbs99)
-  * [Oksana Semenkova](https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/005/0a7/326/2676cd2.jpg)
+  * Oksana Semenkova
   * [Piotr Chmielowski](https://www.linkedin.com/in/pchmielowski)
   * [Silas Reinagel](https://www.linkedin.com/in/silasreinagel)
 
@@ -327,10 +323,8 @@ to your application, please [email me](mailto:blog@yegor256.com).
   </div>
   <div class="rv">
     <a href="https://ph.linkedin.com/in/carlos-miguel-miranda-0b899392">
-      <img src="https://www.teamed.io/images/team/carlosmiranda.png"
-        alt="Carlos Miranda"/>
+      <span class="name">Carlos Miranda</span>
     </a>
-    <span class="name">Carlos Miranda</span>
     <span class="text">I have been working for Teamed.io projects for two years.
     Having worked with his projects, I am very familiar with Yegor's methods. </span>
   </div>
@@ -384,10 +378,6 @@ to your application, please [email me](mailto:blog@yegor256.com).
     automation tools with Perl + Moose.</span>
   </div>
   <div class="rv">
-    <a href="https://www.linkedin.com/in/oksana-semenkova-99622bab">
-      <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/005/0a7/326/2676cd2.jpg"
-        alt="Semenkova Oksana Nikolaevna"/>
-    </a>
     <span class="name">Semenkova Oksana Nikolaevna</span>
     <span class="text">I'm very passionate about software architecture and want
     to help you do your book the best. The themes from it
@@ -641,25 +631,21 @@ good, and how it could be better:
   * [Ben Nadel](https://www.bennadel.com/blog/3108-elegant-objects-by-yegor-bugayenko.htm)
   * [Alexei Vinogradov](http://qa-blog.alexei-vinogradov.de/2016/05/elegant-objects-egor-bugayenko/) (in Russian)
   * [Renaud Pradenc](https://www.renaudpradenc.com/?p=504)
-  * [Željko Vrba](http://zvrba.net/articles/eo-review.html)
   * [Руслан Кеба](http://rukeba.com/by-the-way/elegant-objects/) (in Russian)
   * [Lee Kelleher](https://leekelleher.com/2016/10/book-review-elegant-objects-vol1/)
-  * [Dmitry Bushenko](http://clojure.by/articles/2016-07/elegant-objects) (in Russian)
-  * [Koray Tugay](https://www.tugay.biz/2016/09/notes-on-elegant-objects-volume-1.html) (mostly negative)
   * [Anderson Dorow](https://adorow.github.io/blog/2017/05/28/elegant-objects-volume-1-review-chapter-1)
-  * [Enrique Pablo Molinari](https://www.copypasteisforword.com/notes/elegant-objects)
-  * [Tomasz Dziurko](http://tomaszdziurko.com/2017/07/lobotomy-to-your-object-oriented-thinking-elegant-objects-book-review/)
+  * [Tomasz Dziurko](https://tomaszdziurko.com/blog/lobotomy-to-your-object-oriented-thinking-elegant-objects-book-review)
   * [Quinn Gil](https://quinngil.com/2017/08/06/book-review-elegant-objects-vol-1/)
   * [Javin Paul](http://javarevisited.blogspot.com/2017/04/top-5-books-to-learn-object-oriented-programming.html)
   * [Andrey Panasyuk](https://andreypanasyuk.wordpress.com/2017/08/17/elegant-objects/)
   * [Igor Grishaev](http://grishaev.me/oop-1) (in Russian)
   * [Łukasz Konopski](http://lkonopski.blogspot.ru/2018/01/oop-is-not-dead-elegant-objects.html?utm_source=jvm-bloggers.com&utm_medium=link&utm_campaign=jvm-bloggers)
-  * [Alexey Nikitin](https://www.nikialeksey.com/2018/01/30/elegant-objects-vol1-review.html) (in Russian)
+  * Alexey Nikitin (in Russian)
   * [Manu Pijierro](https://medium.com/@mpijierro/review-del-libro-elegants-objects-vol-1-c0fbc5a0359e) (in Spanish)
   * [Felix Roth](https://thinkingsideways.net/reviews/2019/02/10/elegant-objects-review.html)
 
 Jun 17, 2016:
-I started a [Gitter chat room](https://gitter.im/yegor256/elegantobjects)
+I started a [Gitter chat room](https://app.gitter.im/#/room/#yegor256_elegantobjects:gitter.im)
 where we will discuss object-oriented
 programming and find out what would be appropriate to write about
 on this blog and in the next volume of the book. Join the chat and stay

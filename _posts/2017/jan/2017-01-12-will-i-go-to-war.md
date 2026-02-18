@@ -20,7 +20,7 @@ jb_picture:
   caption: allnews.com.ua
 ---
 
-Недавно [стало известно](http://www.segodnya.ua/ukraine/prizyv-oficerov-zapasa-vse-podrobnosti-786823.html),
+Недавно [стало известно](https://web.archive.org/web/20250322183847/https://www.segodnya.ua/ukraine/prizyv-oficerov-zapasa-vse-podrobnosti-786823.html),
 что Генштаб Украины собирается призвать
 на военную службу выпускников военных кафедр в возрасте до
 43-х лет. Я как раз попадаю в эту категорию и вполне могу получить
@@ -35,7 +35,7 @@ jb_picture:
 наиболее платежеспособные граждане. А значит, за освобождение
 от призыва они будут давать взятки быстрее других категорий, ранее призываемых
 на службу. Они будут
-[платить](http://dnipro.depo.ua/rus/dnipro/u-dnipropetrovsku-kontrrozvidniki-sbu-popalisya-na-habari-22092015161300)
+[платить](https://web.archive.org/web/20251008113836/https://dnipro.depo.ua/rus/dnipro/u-dnipropetrovsku-kontrrozvidniki-sbu-popalisya-na-habari-22092015161300)
 военкомам, те своему начальству, а оно в Генштаб.
 
 Вторая мысль, которая приходит в голову: а не плюнуть ли на этих коррупционеров
@@ -47,7 +47,7 @@ jb_picture:
 по оружию поможет моей стране пока еще по имени Украина?
 
 Третья мысль проще первых двух: нужно приготовить
-[$600](http://glavred.info/proisshestvija/v-zone-ato-na-vzyatke-pogorel-sotrudnik-voenkomata-treboval-dengi-za-otmazku-ot-armii-361084.html)
+[$600](https://web.archive.org/web/20180523203718/http://glavred.info/proisshestvija/v-zone-ato-na-vzyatke-pogorel-sotrudnik-voenkomata-treboval-dengi-za-otmazku-ot-armii-361084.html)
 и продолжать заниматься своими делами.
 
 Но есть еще и четвертая мысль, она самая интересная: а не пойти ли мне в армию,

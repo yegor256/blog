@@ -25,11 +25,11 @@ In addition to being a hands-on programmer, I'm also co-founder and CTO of
 I play the role of a technical and management leader in all projects
 we work with.
 
-{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
 I wrote this article for those who're interested in hiring me and/or
 my team. This article will demonstrate what happens from day one until
-the end of the project, when you choose to [work with us](https://www.0crat.com/join).
+the end of the project, when you choose to [work with us](https://www.zerocracy.com/how-to-earn).
 
 You will see below that our methods of
 software development [seriously differ]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
@@ -224,5 +224,4 @@ And big feature requests? At this phase, we usually try to convert
 them into new projects and develop them separately, starting again
 from Thinking.
 
-BTW, the illustrations you see above are made by
-[Bárbara Lopes](https://www.behance.net/lopesbarbara).
+BTW, the illustrations you see above are made by Bárbara Lopes.

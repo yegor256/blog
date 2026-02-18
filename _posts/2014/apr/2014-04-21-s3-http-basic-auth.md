@@ -18,9 +18,7 @@ keywords:
   - http basic auth
 ---
 
-{% badge http://img.s3auth.com/logo.png 200 https://www.s3auth.com %}
-
-[Amazon S3](http://aws.amazon.com/s3/) is a simple and very useful storage of
+[Amazon S3](https://aws.amazon.com/s3/) is a simple and very useful storage of
 binary objects (aka "files"). To use it, you create a "bucket" there with a
 unique name and upload your objects.
 
@@ -116,7 +114,7 @@ course, I can find their names using these numbers, but this information is
 public anyway.
 
 The server is implemented in Java6. For its hosting, I'm using a single Amazon
-EC2 [m1.small](http://aws.amazon.com/ec2/instance-types/) Ubuntu server. These
+EC2 [m1.small](https://aws.amazon.com/ec2/instance-types/) Ubuntu server. These
 days, the server seems to work properly and is stable.
 
 ## Extra Features

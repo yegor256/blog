@@ -23,7 +23,7 @@ jb_picture:
   caption: Hail, Caesar! (2016) by Coen Brothers
 ---
 
-Nowadays, [Agile Manifesto](https://www.agilemanifesto.org/) is a Bible of
+Nowadays, [Agile Manifesto](https://agilemanifesto.org/) is a Bible of
 numerous software teams. It contains
 [12 principles](http://agilemanifesto.org/principles.html) which
  show us how software development should be organized.

@@ -45,9 +45,6 @@ to add yours, via a [pull request](https://github.com/yegor256/blog)):
 
   * [Felix Raab](https://medium.com/ki-labs-engineering/software-engineering-as-fiction-code-ahead-7a71e5a1bf69)
   * [Sandor Dargo](https://dev.to/sandordargo/code-ahead-by-yegor-bugayenko-2n8g)
-  * [Vytautas Žurauskas](https://www.vzurauskas.com/2018/11/25/review-of-code-ahead-by-yegor-bugayenko/)
-  * [Wojciech Adam Koszek](https://www.koszek.com/books/2017/01/07/book-blog-hacks-256/)
-  * [Mikhail Yakushin](https://www.driver733.com/2018/11/05/256-bloghacks-book-review.html)
   * [Vladimir Rozhkov](https://www.rozhkov.me/post/book-review-code-ahead/) (по-русски)
 
 Nov 19, 2018:
@@ -90,9 +87,7 @@ Nov 20, 2016:
 I've got over 30 emails from those who are interested in **reviewing**
 this book. To make the process transparent let's make it simple. I will put
 applicants in a list and let you vote. The best 12, elected by you,
-will get the early draft of the book and will help me review it. To
-get into the list, please fill
-[this simple form](https://docs.google.com/forms/d/1nW8lD1YsW4x78iy2LreZ-FVoyoD5s5_MydVH9LGJImA).
+will get the early draft of the book and will help me review it.
 
 Aug 15, 2016:
 I finally found the right name for this book: "Code Ahead." It is derived

@@ -66,7 +66,7 @@ be accessed in runtime.
 
 For example,
 [`@Override`](http://docs.oracle.com/javase/7/docs/api/java/lang/Override.html) is of
-the first type (its retention type is [`SOURCE`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE)), while [`@Test`](http://junit.sourceforge.net/javadoc/org/junit/Test.html) from JUnit is of the second type (retention type is [`RUNTIME`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)).
+the first type (its retention type is [`SOURCE`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#SOURCE)), while [`@Test`](https://junit.org/junit4/javadoc/latest/org/junit/Test.html) from JUnit is of the second type (retention type is [`RUNTIME`](http://docs.oracle.com/javase/7/docs/api/java/lang/annotation/RetentionPolicy.html#RUNTIME)).
 [`@Loggable`](https://aspects.jcabi.com/apidocs-0.15.1/com/jcabi/aspects/Loggable.html)---the one I'm using in the script above---is an annotation of the second type,
 from [jcabi-aspects](https://aspects.jcabi.com).
 It stays with the byte-code in the `.class` file after compilation.

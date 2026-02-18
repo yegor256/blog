@@ -24,9 +24,9 @@ keywords:
 Recently, I explained a
 [fluent Java HTTP client]({% pst 2014/apr/2014-04-11-jcabi-http-intro %})
 created (mostly) to make HTTP
-interactions more object-oriented than with other available clients,including:
+interactions more object-oriented than with other available clients, including:
 [Apache Client](http://hc.apache.org/httpclient-3.x/),
-[Jersey Client](https://jersey.java.net/documentation/latest/client.html)
+[Jersey Client](https://eclipse-ee4j.github.io/jersey.github.io/documentation/latest/client.html)
 and plain old
 [`HttpURLConnection`](http://docs.oracle.com/javase/7/docs/api/java/net/HttpURLConnection.html).
 

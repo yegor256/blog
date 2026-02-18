@@ -76,7 +76,7 @@ and
 [`yegor256/takes`](https://github.com/yegor256/takes/blob/master/README.md) (this one is mine).
 A few bad examples:
 [`qos-ch/slf4j`](https://github.com/qos-ch/slf4j/blob/master/README.md),
-[`rzwitserloot/lombok`](https://github.com/rzwitserloot/lombok/blob/master/README), and
+[`rzwitserloot/lombok`](https://github.com/rzwitserloot/lombok/blob/master/README.md), and
 [`junit4/blob`](https://github.com/junit-team/junit4/blob/master/README.md) (don't be like these guys).
 
 {% quote Only if and when we get interested will we investigate further and deeper. %}

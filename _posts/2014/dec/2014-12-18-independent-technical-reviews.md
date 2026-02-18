@@ -75,7 +75,7 @@ where he would change it, and what he would do instead. Then, you pay him
 and he leaves. You may never see him again, but his conclusions and suggestions
 help you _check the reality_ of your code and evaluate how your team is really doing.
 
-{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
 
 We, at [Zerocracy](https://www.zerocracy.com), do independent reviews
 with every project of ours, and this is a list of principles we use:

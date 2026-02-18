@@ -85,7 +85,7 @@ Java is the most distressing thing to happen to computing since MS-DOS."
 verbose, less readable, less descriptive, and harder to modify and maintain."
 
 <img src="/images/2016/08/eric-raymond.jpg" class="quote-author" alt="Eric Raymond"/><br/>
-[**Eric Raymond**](https://www.catb.org/esr/) (2005)<br/>
+[**Eric Raymond**](http://www.catb.org/~esr/) (2005)<br/>
 [The Art of UNIX Programming](http://catb.org/esr/writings/taoup/html/unix_and_oo.html)<br/>
 "The OO design concept initially proved valuable in the design of graphics
 systems, graphical user interfaces, and certain kinds of simulation.
@@ -99,7 +99,7 @@ difficult to demonstrate significant benefits of OO outside those areas."
 
 <img src="/images/2016/08/linus-torvalds.jpg" class="quote-author" alt="Linus Torvalds"/><br/>
 [**Linus Torvalds**](https://en.wikipedia.org/wiki/Linus_Torvalds) (2007)<br/>
-[this email](http://article.gmane.org/gmane.comp.version-control.git/57918/)<br/>
+[this email](https://harmful.cat-v.org/software/c++/linus)<br/>
 "C++ is a horrible language. ...
 C++ leads to really, really bad design choices. ...
 In other words, the only way to do good, efficient, and system-level and
@@ -156,13 +156,13 @@ Sometimes data is just data and functions are just functions."
 
 <img src="/images/2016/08/john-barker.jpg" class="quote-author" alt="John Barker"/><br/>
 [**John Barker**](https://www.linkedin.com/in/johnebgood) (2013)<br/>
-[All evidence points to OOP being bullshit](https://blog.pivotal.io/labs/labs/all-evidence-points-to-oop-being-bullshit)<br/>
+[All evidence points to OOP being bullshit](https://tanzu.vmware.com/content/blog/all-evidence-points-to-oop-being-bullshit)<br/>
 "What OOP introduces are abstractions that attempt to improve code
 sharing and security. In many ways, it is still essentially procedural code."
 
 <img src="/images/2016/08/lawrence-krubner.jpg" class="quote-author" alt="Lawrence Krubner"/><br/>
 [**Lawrence Krubner**](https://www.linkedin.com/in/krubner) (2014)<br/>
-[Object Oriented Programming is an expensive disaster which must end](https://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end)<br/>
+[Object Oriented Programming is an expensive disaster which must end](http://www.smashcompany.com/technology/object-oriented-programming-is-an-expensive-disaster-which-must-end)<br/>
 "We now know that OOP is an experiment that failed.
 It is time to move on. It is time that we, as a community, admit that
 this idea has failed us, and we must give up on it."

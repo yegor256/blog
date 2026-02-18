@@ -92,7 +92,7 @@ You will be under our control, not the other way around.
 If you are lucky, the project will _maybe_ see its end.
 But in most cases this doesn't happen.
 
-Do you want to know what real control is? Read this [Policy](https://www.zerocracy.com/policy.html),
+Do you want to know what real control is? Read this [Policy](https://www.zerocracy.com/how-it-works),
 which is how we _control_ programming in Zerocracy. That is the level of
 control true professionals enjoy. That document, fully supported by our
 [automated chatbot]({% pst 2018/mar/2018-03-21-zerocracy-announcement %}),

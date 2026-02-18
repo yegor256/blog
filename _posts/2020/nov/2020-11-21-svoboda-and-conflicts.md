@@ -62,7 +62,7 @@ jb_picture:
 
 <aside class="quote">
 Либерализм — излишняя терпимость, вредная снисходительность, попустительство.
-<span><a href="https://classes.ru/all-russian/russian-dictionary-Efremova-term-41614.htm">Словарь</a></span>
+<span><a href="https://web.archive.org/web/20230925232615/https://classes.ru/all-russian/russian-dictionary-Efremova-term-41614.htm">Словарь</a></span>
 </aside>
 
 Таким образом, свобода возможна до тех пор, пока два "свободных" человека

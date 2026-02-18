@@ -18,9 +18,9 @@ keywords:
   - AI in management
 ---
 
-Our [Policy](http://www.zerocracy.com/policy.html) expects our developers
-to be fast. Section [§36](http://www.zerocracy.com/policy.html#36) pays for
-quicker delivery and [§8](http://www.zerocracy.com/policy.html#8) penalizes
+Our [Policy](https://www.zerocracy.com/how-it-works) expects our developers
+to be fast. Section [§36](https://www.zerocracy.com/how-it-works) pays for
+quicker delivery and [§8](https://www.zerocracy.com/how-it-works) penalizes
 slow movers by removing them if they don't close in
 ten days (at the time of writing). Why even ten days, if our tasks are
 [so small](https://www.yegor256.com/2017/11/28/microtasking.html)?
@@ -100,5 +100,5 @@ done and how. This is what sociotech skills are all about.
 
 The bottom line is that our best programmers close 30-minute micro
 tasks in 4-5 days each. Zerocrat assigns them many tasks at the same time,
-in accordance with section [§3](http://www.zerocracy.com/policy.html#3),
+in accordance with section [§3](https://www.zerocracy.com/how-it-works),
 expecting each programmer to close from six to eight tasks per day.

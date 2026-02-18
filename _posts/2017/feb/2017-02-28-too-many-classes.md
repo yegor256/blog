@@ -71,9 +71,9 @@ the more expressive, bright, and readable your code is.
 Unfortunately, Java and many other languages are not designed with
 this concept in mind. Packages, modules, and namespaces don't really help,
 and we usually end up with names like
-[`AbstractCooKyivalueMethodArgumentResolver`](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/method/annotation/AbstractCooKyivalueMethodArgumentResolver.html) (Spring)
+`AbstractCookieValueMethodArgumentResolver` (Spring)
 or
-[`CombineFileRecordReaderWrapper`](https://hadoop.apache.org/docs/r3.0.0-alpha1/api/org/apache/hadoop/mapreduce/lib/input/CombineFileRecordReaderWrapper.html) (Hadoop).
+`CombineFileRecordReaderWrapper` (Hadoop).
 We're trying to pack as many semantics into class names as possible so
 their users won't doubt for a second. Then we're trying to put as many
 methods into one class as possible to make life easier for users; they will
@@ -86,8 +86,8 @@ names must be nouns, and their method names must be just one word. Here is
 what I do in my code to make that happen:
 
 **Interfaces are nouns**.
-For example, [`Request`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/Request.html),
-[`Directive`](http://static.javadoc.io/com.jcabi.incubator/xembly/0.22/org/xembly/Directive.html), or
+For example, [`Request`](https://javadoc.io/static/org.takes/takes/1.1/org/takes/Request.html),
+[`Directive`](https://javadoc.io/static/com.jcabi.incubator/xembly/0.22/org/xembly/Directive.html), or
 [`Domain`](https://github.com/yegor256/jare/blob/0.8.4/src/main/java/io/jare/model/Domain.java).
 There are no exceptions. Types (also known as
 [interfaces](https://docs.oracle.com/javase/tutorial/java/concepts/interface.html) in Java)
@@ -98,14 +98,14 @@ My classes [always]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %})
 implement interfaces. Thanks to that, I can say they always _are_
 requests, directives, or domains. And I always want their users to remember that.
 Prefixes help. For example,
-[`RqBuffered`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqBuffered.html)
+[`RqBuffered`](https://javadoc.io/static/org.takes/takes/1.1/org/takes/rq/RqBuffered.html)
 is a buffered request,
-[`RqSimple`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqSimple.html)
+[`RqSimple`](https://javadoc.io/static/org.takes/takes/1.1/org/takes/rq/RqSimple.html)
 is a simple request,
-[`RqLive`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqLive.html)
+[`RqLive`](https://javadoc.io/static/org.takes/takes/1.1/org/takes/rq/RqLive.html)
 is a request that represents a "live" HTTP connection,
 and
-[`RqWithHeader`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqWithHeader.html)
+[`RqWithHeader`](https://javadoc.io/static/org.takes/takes/1.1/org/takes/rq/RqWithHeader.html)
 is a request with an extra header.
 
 An alternative approach is to use the type name as the central part of the
@@ -125,9 +125,9 @@ prefixes you will have to remember, no more. For example, in the
 410 Java files, and 10 prefixes: `Bc`, `Cc`, `Tk`, `Rq`, `Rs`, `Fb`,
 `Fk`, `Hm`, `Ps`, and `Xe`. Not so difficult to remember what they mean, right?
 
-Among all [240 classes](http://static.javadoc.io/org.takes/takes/1.1/allclasses-frame.html),
+Among all [240 classes](https://javadoc.io/static/org.takes/takes/1.1/allclasses-frame.html),
 the longest name is
-[`RqWithDefaultHeader`](http://static.javadoc.io/org.takes/takes/1.1/org/takes/rq/RqWithDefaultHeader.html).
+[`RqWithDefaultHeader`](https://javadoc.io/static/org.takes/takes/1.1/org/takes/rq/RqWithDefaultHeader.html).
 
 I find this approach to class naming rather convenient. I used it
 in these open source projects (in GitHub):

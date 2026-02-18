@@ -33,8 +33,8 @@ jb_picture:
 
 Здравоохранение в Украине действительно бесплатное. В недавно принятом
 бюджете на 2017-й год Минздрав получит
-[62 млрд гривен](https://delo.ua/ukraine/bjudzhet-na-medicinu-v-2017-godu-avtonomija-bolnic-i-uvelichenie-323222/)
-(8.6% от [бюджета](http://www.segodnya.ua/politics/pnews/Byudzhet-Ukrainy-2017-v-cifrah.html)
+[62 млрд гривен](https://web.archive.org/web/20170207062454/https://delo.ua/ukraine/bjudzhet-na-medicinu-v-2017-godu-avtonomija-bolnic-i-uvelichenie-323222/)
+(8.6% от [бюджета](https://web.archive.org/web/20171001030235/http://www.segodnya.ua/politics/pnews/Byudzhet-Ukrainy-2017-v-cifrah.html)
 и 2.7% от [ВВП](http://index.minfin.com.ua/index/gdp/)).
 По нынешнему курсу доллара к гривне&mdash;это $2.4 млрд.
 В Украине [живет](https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D1%8B)
@@ -70,11 +70,11 @@ $2752 на одного сингапурца. В 48 раз больше, чем 
 в Южной Корее $2060,
 в Японии $3703,
 в Израиле $2910,
-а в Швейцарии [вообще](https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5_%D1%80%D0%B0%D1%81%D1%85%D0%BE%D0%B4%D1%8B_%D0%BD%D0%B0_%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BE%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5)
+а в Швейцарии [вообще](https://web.archive.org/web/20260120094622/https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5_%D1%80%D0%B0%D1%81%D1%85%D0%BE%D0%B4%D1%8B_%D0%BD%D0%B0_%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BE%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5)
 свыше $6100.
 
 Однако, это все развитые страны. Давайте посмотрим
-[на цифры](https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5_%D1%80%D0%B0%D1%81%D1%85%D0%BE%D0%B4%D1%8B_%D0%BD%D0%B0_%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BE%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5)
+[на цифры](https://web.archive.org/web/20260120094622/https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%89%D0%B8%D0%B5_%D1%80%D0%B0%D1%81%D1%85%D0%BE%D0%B4%D1%8B_%D0%BD%D0%B0_%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BE%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5)
 развивающихся стран: в Пакистане $23, в Кении $34, в Камбодже $36,
 в Индии $40, во Вьетнаме $58 и так далее.
 Очевидно, что Украина в настоящий момент занимает почетное место

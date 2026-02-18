@@ -221,7 +221,7 @@ That's pretty much it. I'm using [jcabi-mysql-maven-plugin](https://mysql.jcabi.
 in a few projects, and it helps me to stay confident that my code works
 with a real MySQL server. I'm also using the
 [Liquibase](https://www.liquibase.org/)
-Maven [plugin](https://www.liquibase.org/documentation/maven/) in
+Maven [plugin](https://docs.liquibase.com/tools-integrations/maven/home.html) in
 order to populate an empty server with tables required for the application.
 Nevertheless, that is a story for the
 [next post]({% pst 2014/jul/2014-07-20-liquibase-in-maven %}).

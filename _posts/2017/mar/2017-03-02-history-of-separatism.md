@@ -34,8 +34,7 @@ jb_picture:
 нам сейчас как война с Россией (по
 [версии](http://korrespondent.net/ukraine/3763537-poroshenko-v-ukrayne-net-nykakoi-ato)
 [Порошенко](https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%BA%D0%BE,_%D0%9F%D1%91%D1%82%D1%80_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B5%D0%B2%D0%B8%D1%87))
-или борьба за независимость (по
-[версии](https://dan-news.info/politics/pryamaya-liniya-glavy-dnr-aleksandra-zaxarchenko-s-zhitelyami-xersonskoj-oblasti-obnovlyaetsya.html)
+или борьба за независимость (по версии
 [Захарченко](https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D1%85%D0%B0%D1%80%D1%87%D0%B5%D0%BD%D0%BA%D0%BE,_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87)).
 Что общего между этими двумя событиями?
 
@@ -52,8 +51,8 @@ jb_picture:
 содержанием (например, война может быть освободительной, гражданской, религиозной,
 или же вообще иметь природу бунта, восстания или революции),
 продолжительностью, напряженностью,
-и [бог его знает](http://voina-i-mir.ru/article/81) чем еще.
-Однако, по [мнению](http://russiancouncil.ru/inner/?id_4=1471)
+и многим другим.
+Однако, по [мнению](https://www.cambridge.org/core/journals/international-organization/article/abs/war-as-a-commitment-problem/65DFFF1CD73A16F7ED4EEF6D4F934608)
 Массимо Морелли, профессора политологии и экономики Колумбийского университета,
 большинство конфликтов порождаются проблемами _невыполнения обязательств_.
 

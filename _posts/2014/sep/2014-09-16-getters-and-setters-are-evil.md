@@ -18,7 +18,6 @@ keywords:
   - why getters and setters are evil
   - getters and setters is an anti-pattern
 translated:
-  - Japanese: http://tbd.kaitoy.xyz/2015/07/22/getters-setters-evil/
   - Russian: http://info.javarush.ru/translation/2014/12/15/%D0%93%D0%B5%D1%82%D1%82%D0%B5%D1%80%D1%8B-%D0%A1%D0%B5%D1%82%D1%82%D0%B5%D1%80%D1%8B-%D0%97%D0%BB%D0%BE-%D0%98-%D1%82%D0%BE%D1%87%D0%BA%D0%B0-.html
   - Polish: https://bulldogjob.com/news/215-gettery-i-settery-to-czyste-zlo-kropka
   - Spanish: https://medium.com/@arcanefoam/getters-setters-perversos-punto-fe889b690332

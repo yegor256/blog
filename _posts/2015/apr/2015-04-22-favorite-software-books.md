@@ -19,8 +19,7 @@ keywords:
 ---
 
 There are plenty of books about software engineering, but only a few of them rank
-among
-[my favorites](http://astore.amazon.com/yegor256com-20). I read all of those that do over and over again, and I might
+among my favorites. I read all of those that do over and over again, and I might
 just update this post in the future when I stumble upon something else that's decent.
 
 <!--more-->

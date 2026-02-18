@@ -23,7 +23,6 @@ social:
   - reddit: https://www.reddit.com/r/programming/comments/5gtd0k/how_to_pay_programmers_less/
 translated:
   - Russian: http://ebanoe.it/2016/12/08/how-to-pay-devs-less/
-  - Chinese: http://blog.csdn.net/qshn2sky/article/details/54977527
 related:
   - 2016/jan/2016-01-05-how-to-punish-employees
   - 2015/oct/2015-10-06-how-to-be-good-office-slave

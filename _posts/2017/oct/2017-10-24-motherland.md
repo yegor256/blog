@@ -92,10 +92,10 @@ jb_picture:
 и [прочим](http://gordonua.com/news/politics/spisok-rossiyskih-saytov-kotorye-zablokiruyut-v-ukraine-188414.html).
 Как когда-то
 КГБ глушило "Радио Свобода" моим родителям, сейчас мне "глушат" Вконтакте
-и [запрещают](https://strana.ua/news/70629-segodnya-v-ukraine-vstupil-v-silu-poryadok-izyatiya-iz-prodazhi-rossijskih-knig-i-zhurnalov.html)
+и запрещают
 неугодную литературу. Я не могу
 считать страну моей, если она так обращается с моим
-[конституционным правом на информацию](http://www.solor.gov.ua/info/19/8264).
+[конституционным правом на информацию](https://web.archive.org/web/20220309163203/https://solor.gov.ua/info/19/8264).
 Это не моя страна.
 
 **Политика**. То ли прогрессирующая деградация населения, то ли умелые действия

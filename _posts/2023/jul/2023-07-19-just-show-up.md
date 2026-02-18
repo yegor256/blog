@@ -22,7 +22,7 @@ jb_picture:
 ---
 
 According to a [study](https://www.emerald.com/insight/content/doi/10.1108/09534810710760045/full/html)
-conducted by [Dariusz Jemielniak](https://www.jemielniak.org/) in 2007, the majority of programmers perceive
+conducted by Dariusz Jemielniak in 2007, the majority of programmers perceive
 their own managers as highly incompetent. We don't expect our bosses to be
 coding-savvy---this level of technical competence is [not a requirement]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 for an average manager. Additionally, we don't expect them to excel in

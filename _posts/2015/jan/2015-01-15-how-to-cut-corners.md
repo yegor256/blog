@@ -18,8 +18,6 @@ keywords:
   - agile planning
   - agile task planning
   - time management agile
-translated:
-  - Spanish: https://medium.com/@izarodsos/c%C3%B3mo-tomar-atajos-y-quedarte-tranquilo-ddfc680c97e8
 image: /images/2015/01/regarding-henry.jpg
 jb_picture:
   caption: Regarding Henry (1991) by Mike Nichols

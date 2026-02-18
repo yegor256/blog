@@ -58,7 +58,7 @@ Recent episodes:
 <img src="/images/shift-m/adam-tornhill.png" class="guest-face" alt="Adam Tornhill"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>
 &#35;53: [Adam Tornhill on auto-detecting technical debt hotspots](/shift-m/2022/53.html)<br/>
-26 January 2022; 57 min; [video](https://youtu.be/AG44M1DaQXw).
+26 January 2022; 57 min.
 
 <img src="/images/shift-m/aino-corry.png" class="guest-face" alt="Aino Corry"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>
@@ -83,7 +83,7 @@ Recent episodes:
 <img src="/images/shift-m/jeff-atwood.png" class="guest-face" alt="Jeff Atwood"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>
 &#35;48: [Jeff Atwood about knowledge management in software teams](/shift-m/2021/48.html)<br/>
-23 August 2021; 58 min; [video](https://youtu.be/NGdarWF6rto).
+23 August 2021; 58 min.
 
 <img src="/images/shift-m/bjarne-stroustrup.png" class="guest-face" alt="Bjarne Stroustrup"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>
@@ -98,12 +98,12 @@ Recent episodes:
 <img src="/images/shift-m/david-hillson.png" class="guest-face" alt="David Hillson"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>
 &#35;45: [Risk Management with David Hillson, the Risk Doctor](/shift-m/2020/45.html)<br/>
-6 February 2021; 65 min; [video](https://youtu.be/em2IAnBzFBg).
+6 February 2021; 65 min; [video](https://www.youtube.com/watch?v=L2vUKqEgdys).
 
 <img src="/images/shift-m/allen-holub.png" class="guest-face" alt="Allen Holub"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>
 &#35;44: [Motivation, estimates, and Agile with Allen Holub](/shift-m/2020/44.html)<br/>
-22 December 2020; 64 min; [video](https://youtu.be/8OKdilyNOIg).
+22 December 2020; 64 min.
 
 <img src="/images/shift-m/david-west.png" class="guest-face" alt="David M. West"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>

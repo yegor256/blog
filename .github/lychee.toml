@@ -1,0 +1,60 @@
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
+# Only check absolute URLs (http/https), ignore relative URLs
+scheme = ["http", "https"]
+
+# Base URL to resolve relative links (then excluded by scheme filter)
+base_url = "https://www.yegor256.com"
+
+# Disable progress bar
+no_progress = true
+
+# Use compact output format
+format = "compact"
+
+# Use Chrome-like User-Agent to avoid being blocked
+user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+
+# Accept common "blocked" status codes and redirects
+accept = [200, 202, 301, 302, 307, 401, 403, 429, 500, 501, 502, 503, 520, 522]
+
+# Increase timeout and add retries to reduce transient failures
+timeout = 60
+max_retries = 8
+
+# Reduce concurrency to avoid triggering rate limits
+max_concurrency = 16
+host_concurrency = 2
+
+# Exclude paths (directories)
+exclude_path = [
+  '_later',
+  '_drafts',
+  '_layouts'
+]
+
+# Exclude URLs
+exclude = [
+  "linkedin\\.com",
+  "twitter\\.com",
+  "://x\\.com",
+  "facebook\\.com",
+  "^/",
+  "://t\\.co/",
+  "s3auth\\.com",
+  "img\\.teamed\\.io",
+  "wring\\.io",
+  "rehttp\\.net",
+  "threecopies\\.com",
+  "zerocracy\\.com",
+  "netbout\\.com",
+  "mailanes\\.com",
+  "uber\\.com",
+  "qbo\\.intuit\\.com",
+  "adobe\\.com",
+  "web\\.archive\\.org",
+  "rada\\.gov\\.ua",
+  "ridus\\.ru",
+  "%7B%7B"
+]

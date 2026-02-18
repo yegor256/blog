@@ -123,7 +123,7 @@ These articles and books might also be helpful:
     by Kent Beck et al.
   * [Write good papers](https://lemire.me/blog/rules-to-write-a-good-research-paper/)
     by [Daniel Lemire](https://scholar.google.com/citations?user=q1ja-G8AAAAJ)
-  * [Common mistakes in technical writing](https://cs.dartmouth.edu/~wjarosz/writing.md.html)
+  * [Common mistakes in technical writing](https://web.archive.org/web/20260212094959/https://cs.dartmouth.edu/~wjarosz/writing.md.html)
     by [Wojciech Jarosz](https://scholar.google.com/citations?user=vrjL9p0AAAAJ)
   * [How to Write a Good Scientific Paper](https://spie.org/samples/9781510619142.pdf)
     by [Chris A. Mack](https://scholar.google.com/citations?hl=en&user=kMsXV0oAAAAJ)

@@ -51,7 +51,7 @@ It's a security organization funded by a government:
 [USPTO](https://www.uspto.gov/) in the United States,
 [EPO](https://www.epo.org/en) in the European Union,
 [CNIPA](https://english.cnipa.gov.cn/) in China,
-[Rospatent](https://rospatent.gov.ru/en) in Russia,
+[Rospatent](https://web.archive.org/web/20260124165040/https://rospatent.gov.ru/en) in Russia,
 [IPOS](https://www.ipos.gov.sg/) in Singapore,
 and a [few dozen](https://en.wikipedia.org/wiki/Patent_office) in other countries.
 Also, there is

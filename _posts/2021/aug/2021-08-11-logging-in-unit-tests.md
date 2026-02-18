@@ -41,7 +41,7 @@ inside unit tests. Do we also leave them there or maybe not?
 
 Here is an example (it's a simplification of a real unit test at
 [CalcTest.java](https://github.com/polystat/polystat/blob/0.0.1/src/test/java/org/polystat/far/CalcTest.java)
-from [Polystat](https://www.polystat.org), a static analyzer we're working on right now):
+from [Polystat](https://github.com/polystat/polystat), a static analyzer we're working on right now):
 
 ```java
 import com.jcabi.log.Logger;

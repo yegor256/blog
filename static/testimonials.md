@@ -70,7 +70,7 @@ you would be imprisoned for a lifetime by me."&mdash;[David R.](https://www.yego
 
 "Do not waste your money on the book; It will teach you nothing&mdash;or worse,
 it may teach you to hold on to absurd, opinionated, borderline superstitious
-programming habits."&mdash;[Mario V.](https://www.amazon.co.uk/gp/customer-reviews/R6OIRSV3GP402/ref=cm_cr_arp_d_viewpnt?ie=UTF8&ASIN=1519166915#R6OIRSV3GP402)
+programming habits."&mdash;Mario V.
 
 "You're a smug, pontificating prick."&mdash;anonymous
 
@@ -87,7 +87,7 @@ our industry has achieved in the last decade."&mdash;[Lieven D.](https://twitter
 "I bought your first book and read it for 10 mins.
 Then realized it was a copy paste from your website and
 threw it to the trash can. I regret it tho, because I now own a dog and sometimes
-I need paper for him to shit on."&mdash;[Phantom190](https://gitter.im/yegor256/elegantobjects?at=59769444714ea96f781c131f)
+I need paper for him to shit on."&mdash;[Phantom190](https://app.gitter.im/#/room/#yegor256_elegantobjects:gitter.im)
 
 "Wow, what a douche this guy is"&mdash;[@klingtnet](https://twitter.com/klingtnet/status/834907311730790400)
 

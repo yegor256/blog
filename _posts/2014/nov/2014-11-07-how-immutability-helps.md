@@ -83,7 +83,7 @@ dealing with a monster
 that can do everything for you, including
 sending your MIME message via SMTP, creating the message, configuring
 its parameters, adding MIME parts to it, etc. The
-[`Email`](http://svn.apache.org/viewvc/commons/proper/email/tags/EMAIL_1_3_3/src/main/java/org/apache/commons/mail/Email.java?revision=1609295&view=co)
+[`Email`](https://github.com/apache/commons-email/blob/master/commons-email2-jakarta/src/main/java/org/apache/commons/mail2/jakarta/Email.java)
 class from commons-email is really a huge class---33 private properties, over
 a hundred methods, about two thousands lines of code. First, you configure
 the class through a bunch of setters and then you ask it to `send()`

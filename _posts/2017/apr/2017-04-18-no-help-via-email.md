@@ -48,7 +48,7 @@ Honestly, I believe that the more people I help, the better. The bigger my contr
 to the community is, the better---for both the community and me personally.
 That's why I try to answer every single comment on this blog,
 on my [YouTube channel](https://www.youtube.com/c/yegor256?sub_confirmation=1), in
-our [Gitter chat](https://gitter.im/yegor256/elegantobjects), and on
+our Gitter chat (now defunct), and on
 [Twitter](https://twitter.com/yegor256).
 I spend at least two hours a day on this activity.
 

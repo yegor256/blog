@@ -49,8 +49,8 @@ Every instance of `JdbcSession` is a "transaction" in a database.
 You start it by instantiating the class with a single parameter---data source.
 
 You can obtain the data source from your connection pool. There are many
-implementations of connection pools. I would recommend that you use
-[BoneCP](https://www.jolbox.com/). Below is an example of how you would connect to PostgreSQL:
+implementations of connection pools, such as
+[HikariCP](https://github.com/brettwooldridge/HikariCP). Below is an example of how you would connect to PostgreSQL:
 
 ```java
 @Cacheable(forever = true)

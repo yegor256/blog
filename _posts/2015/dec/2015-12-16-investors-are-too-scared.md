@@ -182,8 +182,7 @@ And one last thing. We will ask you to give us some
 in your startup. You decide how much, but it has to be enough to make us
 interested. It all depends on your situation. A few percent, I'd guess.
 
-We're planning to host our first interviews in the middle of January 2016.
-You can schedule them [right here](https://calendly.com/yegor256/seedramp).
+We were planning to host our first interviews in the middle of January 2016.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">What do you think you need first of all in order to get seed investments? <a href="https://twitter.com/hashtag/startup?src=hash&amp;ref_src=twsrc%5Etfw">#startup</a> <a href="https://twitter.com/hashtag/seedramp?src=hash&amp;ref_src=twsrc%5Etfw">#seedramp</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1102085076228157442?ref_src=twsrc%5Etfw">March 3, 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

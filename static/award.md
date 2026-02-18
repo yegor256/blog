@@ -97,10 +97,10 @@ projects.
 <img src="/images/award/2017/winner-mafagafogigante.png"
   style="width:203px;height:45px;" alt='badge'/>
 
-[`@itcraftsmanpl`](https://github.com/itcraftsmanpl) and [`@mafagafogigante`](https://github.com/mafagafogigante)
+`@itcraftsmanpl` and `@mafagafogigante`
 were the winners in 2017
-with [`php-ml`](https://github.com/php-ai/php-ml) (PHP)
-and [`dungeon`](https://github.com/mafagafogigante/dungeon) (Java) projects. They
+with `php-ml` (PHP)
+and [`dungeon`](https://github.com/bernardosulzbach/dungeon) (Java) projects. They
 received a cash prize of **$1,024** each.
 [More details]({% pst 2016/oct/2016-10-23-award-2017 %}).
 

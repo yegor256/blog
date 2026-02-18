@@ -50,6 +50,6 @@ Developer Advocate of [JFrog](https://www.jfrog.com/):<br/>
 Co-founder of [DevTernity](http://devternity.com/):<br/>
 "Well-written, entertaining, practical, bold and marginal at times."
 
-[Anton Chernousov](https://www.amazon.com/gp/customer-reviews/R1PLMTYQ0BP6XM/),
+Anton Chernousov,
 Founder of [The Art of Programming](https://theartofprogramming.podbean.com/):<br/>
 "It is one of the best books if you have a lot of experience in different projects."

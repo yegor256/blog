@@ -45,7 +45,7 @@ that:
 ## It is Rich
 
 The state of California is the biggest generator of GDP in the US, almost
-[80% larger](https://en.wikipedia.org/wiki/Comparison_between_U.S._states_and_countries_by_GDP_%28nominal%29)
+[80% larger](https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_GDP)
 than second place Texas, mostly thanks
 to Hollywood and Silicon Valley.
 California [has more billionaires](https://www.forbes.com/sites/katiasavchuk/2015/03/04/california-has-more-billionaires-than-every-country-except-the-u-s-and-china/)

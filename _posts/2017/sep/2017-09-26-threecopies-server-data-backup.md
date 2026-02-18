@@ -60,7 +60,7 @@ I created [ThreeCopies](https://www.threecopies.com).
 It's a very simple hosted executor of bash scripts, which you edit
 through a web interface. Then one of our servers starts a Docker
 container ([yegor256/threecopies](https://hub.docker.com/r/yegor256/threecopies/) is the image, here is the
-[`Dockerfile`](https://github.com/yegor256/threecopies/blob/master/src/docker/Dockerfile))
+[`Dockerfile`](https://github.com/yegor256/threecopies-image/blob/master/Dockerfile))
 and runs your script inside.
 
 The script starts every hour, every day and every week.

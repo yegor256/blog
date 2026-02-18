@@ -25,7 +25,7 @@ keywords:
 
 I'm a big fan of Amazon Web Services (AWS). I'm using them
 in almost all of my projects. One of their most popular
-services is [Simple Storage Service (S3)](http://aws.amazon.com/s3/).
+services is [Simple Storage Service (S3)](https://aws.amazon.com/s3/).
 It is a storage for binary objects (files) with unique names,
 accessible through HTTP or RESTful API.
 

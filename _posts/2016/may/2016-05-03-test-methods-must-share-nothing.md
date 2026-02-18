@@ -40,8 +40,8 @@ to get rid of them is via a private static literal. This is just wrong.
 
 Unit tests, naturally, duplicate a lot of code. Test methods contain
 similar or almost identical functionality and this is almost inevitable. Well,
-we can use more of that [`@Before`](http://junit.sourceforge.net/javadoc/org/junit/Before.html)
-and [`@BeforeClass`](http://junit.sourceforge.net/javadoc/org/junit/Before.html) features,
+we can use more of that [`@Before`](https://junit.org/junit4/javadoc/latest/org/junit/Before.html)
+and [`@BeforeClass`](https://junit.org/junit4/javadoc/latest/org/junit/BeforeClass.html) features,
 but sometimes it's just not possible. We may have, say, 20 test methods
 in one `FooTest.java` file. Preparing all objects in one "before" is not
 possible. So we have to do certain things again and again in our test

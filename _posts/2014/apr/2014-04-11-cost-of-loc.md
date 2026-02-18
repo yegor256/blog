@@ -157,6 +157,5 @@ By the way, this is what people say about their projects:
 
  * $12&ndash;103: [crazyontap.com](https://www.crazyontap.com/topic.php?TopicId=242135)
  * $15&ndash;40: [betterembsw.blogspot.nl](http://betterembsw.blogspot.nl/2010/10/embedded-software-costs-15-40-per-line.html)
- * over $5: [joelonsoftware.com](http://discuss.joelonsoftware.com/default.asp?biz.5.467536.25)
 
 What are your numbers? Please post your comments below.

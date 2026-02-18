@@ -28,7 +28,7 @@ tracking project issues. I moved all my projects (both private and public)
 to GitHub about three years ago and have no regrets. Moreover,
 GitHub gives access to almost all of its features through RESTful JSON API.
 
-There are [a few](https://developer.github.com/libraries/)
+There are [a few](https://docs.github.com/en/rest/using-the-rest-api/libraries-for-the-rest-api)
 Java SDK-s that wrap and expose the API. I tried to use them,
 but faced a number of issues:
 

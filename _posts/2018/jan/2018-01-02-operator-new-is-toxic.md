@@ -38,7 +38,7 @@ I'm sure you understand that the problem with this operator is that
 it couples objects, making testing and reuse very difficult or even impossible.
 Let's say there is a story in a file that we need to read as a UTF-8 text
 (I'm using
-[`TextOf`](http://static.javadoc.io/org.cactoos/cactoos/0.25.6/org/cactoos/text/TextOf.html)
+[`TextOf`](https://javadoc.io/static/org.cactoos/cactoos/0.25.6/org/cactoos/text/TextOf.html)
 from [Cactoos](https://www.cactoos.org)):
 
 ```java

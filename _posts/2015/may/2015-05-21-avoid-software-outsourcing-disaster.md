@@ -94,7 +94,7 @@ will assure you that customer satisfaction is more important than money.
 However, I'm suggesting you be strong enough to face the reality---it's all _lies_.
 
 The majority of software outsourcing projects fail.
-The vast majority (see the latest [CHAOS report](https://www.csus.edu/indiv/v/velianitis/161/ChaosReport.pdf)).
+The vast majority (see the latest [CHAOS report](https://www.standishgroup.com/)).
 Software developers realize this better than you,
 mostly because they see how it happens every day.
 And your project is not an exception. Thus, let's forget about these

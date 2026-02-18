@@ -60,7 +60,7 @@ co-located team of full-timers this number may sound too huge, but for a team
 of freelancers it's still a pretty small team. You definitely need more than twenty!
 Ask your architect to be more active in the area of team building and recruit
 more developers, promote the project more actively on the
-[board](https://www.0crat.com/board) and in [our Telegram chat](https://t.me/zerocracy), etc.
+[board](https://www.zerocracy.com/how-to-earn) and in [our Telegram chat](https://t.me/zerocracy), etc.
 
 Second, it's the rates you pay. It's simple: the higher the rates, the more motivated
 are the programmers. Even if (and it's almost always the case) they work somewhere else
@@ -71,7 +71,7 @@ Remember, that the <del>only</del> main thing that motivate freelancers is
 The more you pay, the faster they deliver and the more interested they are.
 Just play with the numbers and you will see some results.
 
-Third, you can use our ["boost"](http://www.zerocracy.com/policy.html#5)
+Third, you can use our ["boost"](https://www.zerocracy.com/how-it-works)
 feature at some tasks, which are more important.
 I've seen it working quite well. Just 2x or 3x the task microbudget when
 the task is important and you will see how its developer becomes more engaged.
@@ -79,7 +79,7 @@ Don't overplay this feature, though. Make sure you boost only those tasks
 that really are important. The architect can also use this feature, just make
 sure you all agree about the intensity of boosting.
 
-Fourth, it's the [10-days](http://www.zerocracy.com/policy.html#8) window per task.
+Fourth, it's the [10-days](https://www.zerocracy.com/how-it-works) window per task.
 It is pretty large for a project that wants to move forward really fast. You need to
 make it shorter, in order to eject slow developers from their tasks. This is
 the punishment part. Ask your architect to modify that parameter in our
@@ -93,7 +93,7 @@ feelings. They have [no obligations](https://www.yegor256.com/2014/04/13/no-obli
 for you, you also don't have any for them.
 You want them to produce and do it fast! If they don't, or you don't like
 the quality of work, or you have any doubts, just reject the person you don't like.
-There is a [pool](https://www.0crat/team) of others waiting to join your project. Reward those who stay
+There is a pool of others waiting to join your project. Reward those who stay
 and contribute (by increasing their rates) and discharge those who are too slow.
 The same applies to the architect. If you don't like how effective that person is,
 replace him/her.

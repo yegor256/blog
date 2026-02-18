@@ -183,4 +183,4 @@ Useful links:
   1. [_Spock: Up and Running_](https://amzn.to/2BaAKRB) by Rob Fletcher
   2. [_Mastering Software Testing with JUnit 5_](https://amzn.to/2DpkFc6) by Boni Garcia
   3. [_TDD Anti-Patterns_](http://archive.is/3acB#selection-119.0-119.17) by James Carr
-  4. [_Anti-Patterns_](https://www.digitaltapestry.net/testify/manual/AntiPatterns.html) by William E. Kempf
+  4. _Anti-Patterns_ by William E. Kempf (link dead)

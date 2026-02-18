@@ -35,7 +35,7 @@ String hello = new Shell.Plain(
 ```
 
 [`jcabi-ssh`](https://ssh.jcabi.com) is
-a convenient wrapper of [`JSch`](https://www.jcraft.com/jsch/),
+a convenient wrapper of [`JSch`](https://github.com/mwiede/jsch),
 a well-known pure Java implementation of SSH2.
 
 <!--more-->

@@ -48,7 +48,7 @@ jb_picture:
 в то время, как об остальной тысяче убитых в тот же день, мы никогда не узнаем.
 И о тех, кого убьют завтра, тоже. И послезавтра.
 
-Почему Останкинскую башню не [обесточивают](https://tvzvezda.ru/news/vstrane_i_mire/content/201903160322-osqv.htm)
+Почему Останкинскую башню не обесточивают
 ежедневно, в память о погибших на дорогах? А ведь только в России это
 [более ста человек](http://death-life.ru/prochie-voprosy/43-skolko-lyudey-umiraet-v-den-god-minutu-sekundu-v-mire-rossii-moskve.html)
 в сутки. Чем пятьдесят человек из Новой Зеландии лучше наших соотечественников? Почему
@@ -75,7 +75,7 @@ jb_picture:
 рака, инсульта, или ДТП) и ... государству. Фактически,
 28-летний гражданин Австралии Брентон Таррант вчера казнил без суда и следствия
 50 человек. Точнее, суд и следствие были, и их выводы Таррант оформил
-в своем [манифесте](https://observer.news/featured/the-manifesto-of-brenton-tarrant-a-right-wing-terrorist-on-a-crusade/),
+в своем [манифесте](https://web.archive.org/web/20190823222138/https://observer.news/featured/the-manifesto-of-brenton-tarrant-a-right-wing-terrorist-on-a-crusade/),
 но этот суд не входит в систему правосудия США,
 и именно это возмущает Дональда Трампа и вместе с ним весь народ США.
 
@@ -102,4 +102,4 @@ jb_picture:
 Он обращает наше внимание на то, что конкуренции он не потерпит.
 
 И, кстати, прочтите
-[манифест](https://observer.news/featured/the-manifesto-of-brenton-tarrant-a-right-wing-terrorist-on-a-crusade/).
+[манифест](https://web.archive.org/web/20190823222138/https://observer.news/featured/the-manifesto-of-brenton-tarrant-a-right-wing-terrorist-on-a-crusade/).

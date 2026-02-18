@@ -16,8 +16,6 @@ keywords:
   - naming convention
   - composite variable name
   - long variable name
-translated:
-  - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52349054
 book: elegant-objects-2 5.1
 image: /images/2015/01/meaning-of-life-every-sperm.png
 jb_picture:

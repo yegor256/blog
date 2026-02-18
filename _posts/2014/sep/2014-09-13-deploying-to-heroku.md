@@ -40,7 +40,7 @@ a free hosted DevOps assistant.
 
 Create a new project at [Heroku.com](https://www.heroku.com).
 
-Then install their [command line tool-belt](https://toolbelt.heroku.com/).
+Then install their [command line tool-belt](https://devcenter.heroku.com/articles/heroku-cli).
 
 You should authenticate your public SSH key at Heroku, using
 their command line tool-belt. The process is explained

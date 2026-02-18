@@ -122,7 +122,7 @@ which have to be loaded together into the target HTML:
 ```
 
 Two pieces are better than one? It seems that
-[Google](https://ai.google/research/pubs/pub45424),
+[Google](https://research.google/pubs/why-google-stores-billions-of-lines-of-code-in-a-single-repository/),
 [Digital Ocean](https://blog.digitalocean.com/taming-your-go-dependencies/)
 and [Mozilla](https://gregoryszorc.com/blog/2014/09/09/on-monolithic-repositories/)
 don't think so.
@@ -141,7 +141,7 @@ Here is what I did:
   * Created [`package.json`](https://github.com/yegor256/colorizejs/blob/master/package.json) for npm;
   * Renamed GitHub repo to `colorizejs` when I found out that npm package
     [`colorize`](https://www.npmjs.com/package/colorize) already exists;
-  * Configured [`.travis.yml`](https://github.com/yegor256/colorizejs/blob/master/.travis.yml) for [Travis](https://travis-ci.org/);
+  * Configured `.travis.yml` for Travis (now using GitHub Actions);
   * Created a [README.md](https://github.com/yegor256/colorizejs/blob/master/README.md) and explained how to use it and install it;
   * Decided to use the MIT license and created [LICENSE.txt](https://github.com/yegor256/colorizejs/blob/master/LICENSE.txt);
   * Configured [PDD](https://github.com/yegor256/colorizejs/blob/master/.pdd) for
@@ -173,12 +173,12 @@ For example,
 [Advantages and Disadvantages of a Monolithic Repository](https://dl.acm.org/doi/abs/10.1145/3183519.3183550)
 (a case study at Google) by Ciera Jaspan et al.,
 and
-[How Monolithic Repository in Open Source saved my Laziness](https://www.tomasvotruba.cz/blog/2017/01/31/how-monolithic-repository-in-open-source-saved-my-laziness/)
+[When You Should Use Monorepo and When Local Packages](https://tomasvotruba.com/blog/2018/11/19/when-you-should-use-monorepo-and-when-local-packages/)
 by Tomas Votruba.
 
 There are also a few good analyses of both approaches, for example
-[Monolithic repositories vs. Many repositories](https://www.dotconferences.com/2016/05/fabien-potencier-monolithic-repositories-vs-many-repositories)
-speech by Fabien Potencier at dotScale 2016
+[A Monorepo vs Manyrepos](https://speakerdeck.com/fabpot/a-monorepo-vs-manyrepos)
+slides by Fabien Potencier at dotScale 2016
 and
 [Repo Style Wars: Mono vs Multi](https://www.gigamonkeys.com/mono-vs-multi/)
 by Peter Seibel.

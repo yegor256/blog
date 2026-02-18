@@ -58,7 +58,7 @@ jb_picture:
 
 Чем запомнился нам Виктор Федорович?
 [Коррупцией](http://korrespondent.net/ukraine/3627570-yanukovych-vzghlavyl-reitynh-korruptsyonerov-myra),
-[несвободой](http://112.ua/statji/svoboda-slova-po-ukrainski-kak-strana-skolzila-po-reytingam-313342.html) слова,
+[несвободой](https://ru.wikipedia.org/wiki/%D0%A1%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0_%D1%81%D0%BB%D0%BE%D0%B2%D0%B0_%D0%BD%D0%B0_%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B5) слова,
 [Тимошенко](https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D0%BC%D0%BE%D1%88%D0%B5%D0%BD%D0%BA%D0%BE,_%D0%AE%D0%BB%D0%B8%D1%8F_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%BD%D0%B0)
 [за решеткой](http://gazeta.ua/ru/articles/politics/_vsya-istoriya-zaklyucheniya-timoshenko-sledstvie-proizvola-ukrainskogo-diktatora/417967) и...
 [ростом ВВП](http://index.minfin.com.ua/index/gdp/),

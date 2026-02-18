@@ -76,7 +76,7 @@ companies invest in open source:
     [Microsoft Ignite](https://www.microsoft.com/en-us/ignite),
     which are pure promotional events, tech giants sponsor
     community-driven conferences, like
-    [DockerCon](https://docker.events.cube365.net/docker/dockercon/),
+    [DockerCon](https://web.archive.org/web/20230225224012/https://docker.events.cube365.net/docker/dockercon),
     [KubeCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/),
     and
     [FOSDEM](https://fosdem.org/2020/).
@@ -85,7 +85,7 @@ companies invest in open source:
     [Apache](https://www.apache.org/foundation/thanks),
     [Linux](https://www.linuxfoundation.org/membership/members/),
     [Eclipse](https://www.eclipse.org/membership/exploreMembership.php#allmembers),
-    [GNOME](https://www.gnome.org/foundation/),
+    [GNOME](https://foundation.gnome.org/),
     [OSI](https://opensource.org/sponsors),
     and [others](https://opensource.com/resources/organizations)
     are sponsored by Google, IBM, Huawei, Microsoft, and Oracle.
@@ -108,7 +108,7 @@ companies invest in open source:
       ([$1b](https://techcrunch.com/2008/01/16/sun-picks-up-mysql-for-1-billion-open-source-is-a-legitimate-business-model/)),
     [Nginx](https://github.com/nginx/nginx)
       ([$670m](https://techcrunch.com/2019/03/11/f5-acquires-nginx-for-670m-to-move-into-open-source-multi-cloud-services/)),
-    and [so on](https://index.co/market/open-source/acquisitions).
+    and [so on](https://web.archive.org/web/20220809073446/https://index.co/market/open-source/acquisitions).
     The market is [booming](https://a16z.com/open-source-from-community-to-commercialization/), by the way.
 
   * **Donations**.
@@ -117,7 +117,7 @@ companies invest in open source:
       and
       [Kubernetes](https://github.com/kubernetes/kubernetes);
     IBM [donates](https://www.ibm.com/opensource/) to
-      [Node.js](https://xomino.com/2015/06/18/ibm-is-a-platinum-sponsor-of-the-new-node-js-foundation/)
+      [Node.js](https://www.ibm.com/blogs/bluemix/2015/06/node-js-foundation-launched/)
       and
       [TensorFlow](https://conferences.oreilly.com/tensorflow/tf-ca-2019/public/schedule/detail/81284);
     Amazon sponsors
@@ -162,7 +162,7 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     [Ad-selling monopoly](https://www.theverge.com/2019/9/9/20857440/google-antitrust-investigation-attorneys-general-advertising-search),
     with [questionable reputation](https://www.androidauthority.com/googles-reputation-is-becoming-its-biggest-problem-1055381/),
     but one of the largest software [philanthropists](https://ssir.org/articles/entry/open_source_software_is_philanthropy).
-    Microsoft is [catching up](https://www.businessinsider.de/international/microsoft-reputation-institute-soaring-research-2019-11/?r=US&IR=T)
+    Microsoft is [catching up](https://web.archive.org/web/20200406095011/https://www.businessinsider.in/tech/enterprise/news/microsofts-reputation-is-soaring-as-trust-in-the-tech-industry-flounders-according-to-new-research/articleshow/72129884.cms)
     with its massive [code opening](https://www.techrepublic.com/article/whats-really-behind-microsofts-love-of-open-source/)
     and the [purchase](https://blogs.microsoft.com/blog/2018/10/26/microsoft-completes-github-acquisition/) of GitHub.
 
@@ -177,7 +177,7 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     I can't prove this assertion, but it's my personal observation.
 
   * **Training**.
-    It's [no secret](https://www.wired.com/insights/2013/11/open-source-a-platform-for-innovation/)
+    It's [no secret](https://web.archive.org/web/20140801084717/http://www.wired.com/2013/11/open-source-a-platform-for-innovation)
     that the [best technologies](https://www.techrepublic.com/article/the-best-open-source-innovations-of-the-last-decade/)
     nowadays are being created
     in open source projects by people contributing for free

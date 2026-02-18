@@ -29,7 +29,7 @@ including
 [Apache Commons JCS](http://commons.apache.org/proper/commons-jcs/),
 [Ehcache](https://www.ehcache.org),
 [JSR 107](https://jcp.org/en/jsr/detail?id=107),
-[Guava Caching](https://code.google.com/p/guava-libraries/wiki/CachesExplained)
+[Guava Caching](https://github.com/google/guava/wiki/CachesExplained)
 and many others.
 
 [jcabi-aspects](https://aspects.jcabi.com/annotation-cacheable.html) offers a very simple one,

@@ -23,7 +23,7 @@ keywords:
 [Liquibase](https://www.liquibase.org) is a migration management tool
 for relational databases. It versionalizes schema and data changes in
 a database; similar to the way Git or SVN works for source code.
-Thanks to their [Maven plugin](https://www.liquibase.org/documentation/maven/),
+Thanks to their [Maven plugin](https://docs.liquibase.com/tools-integrations/maven/home.html),
 Liquibase can be used as a part
 of a build automation scenario.
 

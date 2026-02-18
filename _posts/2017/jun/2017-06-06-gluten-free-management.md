@@ -72,7 +72,7 @@ they just enjoy it. He would be happy to see
 that his prophesy finally
 [came true](https://techbeacon.com/13-ways-motivate-software-engineers):
 programmers don't work for money any more.
-They [work](https://www.verywell.com/what-is-intrinsic-motivation-2795385)
+They [work](https://en.wikipedia.org/wiki/Motivation#Intrinsic_motivation)
 for challenge, respect, curiosity, recognition, cooperation, and free beer
 on Fridays. As a modern eco-manager you must stop humiliating them
 with old-fashioned
