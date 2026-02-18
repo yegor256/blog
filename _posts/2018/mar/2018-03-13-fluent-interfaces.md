@@ -111,7 +111,7 @@ placed them in supplementary decorators
 [`JsonResponse`](https://javadoc.io/static/com.jcabi/jcabi-http/2.1.0/com/jcabi/http/response/JsonResponse.html),
 [`XmlResponse`](https://javadoc.io/static/com.jcabi/jcabi-http/2.1.0/com/jcabi/http/response/JsonResponse.html),
 and
-[others](https://javadoc.io/static/com.jcabi/jcabi-http/2.1.0/com/jcabi/http/response/package-frame.html).
+[others](https://javadoc.io/static/com.jcabi/jcabi-http/2.1.0/com/jcabi/http/response/package-summary.html).
 It helps, but in order to write these decorators with the central
 object of type `Response` we have to use that "ugly" method
 [`as()`](https://javadoc.io/static/com.jcabi/jcabi-http/2.1.0/com/jcabi/http/Response.html#as%28java.lang.Class%29),
