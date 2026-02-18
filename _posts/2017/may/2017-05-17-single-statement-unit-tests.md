@@ -109,7 +109,7 @@ and its
 of basic matchers is a perfect instrument to make our
 single-statement test methods even more cohesive and readable.
 
-{% youtube CCr8hRE_TUs %}
+{% youtube 1QTfi9kLzrM %}
 
 There are a number of practical benefits of this principle, if we
 agree to follow it:
