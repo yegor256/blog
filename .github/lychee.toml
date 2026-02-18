@@ -17,7 +17,11 @@ format = "compact"
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
 # Accept common "blocked" status codes and redirects
-accept = [200, 202, 301, 302, 307, 401, 403, 429, 503, 522, "timeout"]
+accept = [200, 202, 301, 302, 307, 401, 403, 429, 503, 522]
+
+# Increase timeout and add retries to reduce transient failures
+timeout = 30
+max_retries = 3
 
 # Reduce concurrency to avoid triggering rate limits
 max_concurrency = 16
