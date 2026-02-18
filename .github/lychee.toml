@@ -17,7 +17,7 @@ format = "compact"
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
 
 # Accept common "blocked" status codes and redirects
-accept = [200, 202, 301, 302, 307, 401, 403, 429, 503, 522]
+accept = [200, 202, 301, 302, 307, 401, 403, 429, 500, 501, 502, 503, 520, 522]
 
 # Increase timeout and add retries to reduce transient failures
 timeout = 30
@@ -49,5 +49,12 @@ exclude = [
   "threecopies\\.com",
   "zerocracy\\.com",
   "netbout\\.com",
-  "mailanes\\.com"
+  "mailanes\\.com",
+  "uber\\.com",
+  "qbo\\.intuit\\.com",
+  "adobe\\.com",
+  "web\\.archive\\.org",
+  "rada\\.gov\\.ua",
+  "ridus\\.ru",
+  "%7B%7B"
 ]

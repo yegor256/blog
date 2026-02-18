@@ -308,7 +308,7 @@ Besides being conceptually against object-oriented principles, public static
 methods have a few practical drawbacks:
 
 First, it's **impossible to mock** them
-(Well, you can use [PowerMock](https://code.google.com/p/powermock/),
+(Well, you can use [PowerMock](https://github.com/powermock/powermock),
 but this will then be the most terrible decision
 you could make in a Java project... I made it once, a few years ago).
 

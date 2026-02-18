@@ -87,7 +87,7 @@ jb_picture:
 Теперь давайте обратим внимание на интересную ситуацию с оценкой общей численности
 народов и наций на планете. По [разным мнениям](http://geography.su/books/item/f00/s00/z0000005/st071.shtml),
 в настоящий момент их в мире от 800 до 2000.
-Википедия [перечисляет](https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%BE%D0%B2_%D0%BC%D0%B8%D1%80%D0%B0)
+Википедия [перечисляет](https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D1%80%D0%BE%D0%B4%D1%8B_%D0%BC%D0%B8%D1%80%D0%B0)
 всего несколько сотен.
 В [других источниках](http://www.bolshoyvopros.ru/questions/6810-skolko-na-zemle-nacionalnostej-i-kakie.html)
 я нашел еще более неопределенные цифры:
