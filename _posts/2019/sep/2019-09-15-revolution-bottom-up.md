@@ -49,12 +49,12 @@ jb_picture:
 
 Кто же эти враги российского народа, которые берут взятки и мешают нам жить?
 Это граждане России, которым посчастливилось оказаться на государственных должностях. Их
-[приблизительно](https://yakapitalist.ru/finansy/skolko-v-rossii/)
+[приблизительно](https://web.archive.org/web/20240718105146/https://yakapitalist.ru/finansy/skolko-v-rossii/)
 140 человек на каждые десять тысяч населения. А чем же занимаются остальные
 9860 человек в России? На кого они работают и что производят? Давайте
 послушаем статистику и посчитаем.
 
-В 2018 году Россия [экспортировала](http://russian-trade.com/reports-and-reviews/2019-02/vneshnyaya-torgovlya-rossii-v-2018-godu/)
+В 2018 году Россия [экспортировала](https://web.archive.org/web/20260102144947/https://russian-trade.com/reports-and-reviews/2019-02/vneshnyaya-torgovlya-rossii-v-2018-godu/)
 товаров и услуг на 450 млрд долларов. Из них лишь 125 млрд (около четверти) составляет
 [так называемый](https://tass.ru/ekonomika/6155970) несырьевой неэнергетический экспорт,
 а именно все, [что не нефть и не газ](https://www.dp.ru/a/2019/03/24/Vse_chto_ne_neft_i_ne_gaz).
@@ -62,13 +62,13 @@ jb_picture:
 их за границу, или, как метко [обозвал](http://cherkesk.bezformata.com/listnews/torgovat-nedrami-znachit-torgovat/72596100/)
 это процесс [отец народов](https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D0%BB%D0%B8%D0%BD,_%D0%98%D0%BE%D1%81%D0%B8%D1%84_%D0%92%D0%B8%D1%81%D1%81%D0%B0%D1%80%D0%B8%D0%BE%D0%BD%D0%BE%D0%B2%D0%B8%D1%87),
 "торговлей Родиной". Совершенно логично, что при коррупционном государственном
-аппарате и государстве в качестве [главного акционера](https://moneymakerfactory.ru/spravochnik/-neftyanyie-kompanii-rossii/)
+аппарате и государстве в качестве [главного акционера](https://web.archive.org/web/20250319141721/https://moneymakerfactory.ru/spravochnik/-neftyanyie-kompanii-rossii/)
 крупнейших нефтяных компаний, главными бенефициарами торговли Родиной являются чиновники и силовики.
 
 Остальное население по большей части занято либо добычей этих ископаемых
-(лишь [2.2%](https://www.gks.ru/free_doc/doc_2018/rab_sila18.pdf) от всего трудоспособного населения),
+(лишь [2.2%](https://web.archive.org/web/20230604080828/https://www.gks.ru/free_doc/doc_2018/rab_sila18.pdf) от всего трудоспособного населения),
 либо обслуживанием означенных чиновников (более 70%, по данным Федеральной Службы Государственной Статистики,
-смотри [стр. 49](https://www.gks.ru/free_doc/doc_2018/rab_sila18.pdf)).
+смотри [стр. 49](https://web.archive.org/web/20230604080828/https://www.gks.ru/free_doc/doc_2018/rab_sila18.pdf)).
 Их нужно стричь, одевать, обувать, кормить, расселять в новые квартиры, и развлекать.
 
 Чтобы чиновник мог воровать, ему нужно помогать. Он должен быть обут и одет.

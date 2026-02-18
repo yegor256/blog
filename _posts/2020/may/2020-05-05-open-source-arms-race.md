@@ -76,7 +76,7 @@ companies invest in open source:
     [Microsoft Ignite](https://www.microsoft.com/en-us/ignite),
     which are pure promotional events, tech giants sponsor
     community-driven conferences, like
-    [DockerCon](https://docker.events.cube365.net/docker/dockercon/),
+    [DockerCon](https://web.archive.org/web/20230225224012/https://docker.events.cube365.net/docker/dockercon),
     [KubeCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/),
     and
     [FOSDEM](https://fosdem.org/2020/).
@@ -108,7 +108,7 @@ companies invest in open source:
       ([$1b](https://techcrunch.com/2008/01/16/sun-picks-up-mysql-for-1-billion-open-source-is-a-legitimate-business-model/)),
     [Nginx](https://github.com/nginx/nginx)
       ([$670m](https://techcrunch.com/2019/03/11/f5-acquires-nginx-for-670m-to-move-into-open-source-multi-cloud-services/)),
-    and [so on](https://index.co/market/open-source/acquisitions).
+    and [so on](https://web.archive.org/web/20220809073446/https://index.co/market/open-source/acquisitions).
     The market is [booming](https://a16z.com/open-source-from-community-to-commercialization/), by the way.
 
   * **Donations**.
@@ -162,7 +162,7 @@ among [other reasons](https://simplabs.com/blog/2019/11/11/why-companies-invest-
     [Ad-selling monopoly](https://www.theverge.com/2019/9/9/20857440/google-antitrust-investigation-attorneys-general-advertising-search),
     with [questionable reputation](https://www.androidauthority.com/googles-reputation-is-becoming-its-biggest-problem-1055381/),
     but one of the largest software [philanthropists](https://ssir.org/articles/entry/open_source_software_is_philanthropy).
-    Microsoft is [catching up](https://www.businessinsider.in/tech/enterprise/news/microsofts-reputation-is-soaring-as-trust-in-the-tech-industry-flounders-according-to-new-research/articleshow/72129884.cms)
+    Microsoft is [catching up](https://web.archive.org/web/20200406095011/https://www.businessinsider.in/tech/enterprise/news/microsofts-reputation-is-soaring-as-trust-in-the-tech-industry-flounders-according-to-new-research/articleshow/72129884.cms)
     with its massive [code opening](https://www.techrepublic.com/article/whats-really-behind-microsofts-love-of-open-source/)
     and the [purchase](https://blogs.microsoft.com/blog/2018/10/26/microsoft-completes-github-acquisition/) of GitHub.
 

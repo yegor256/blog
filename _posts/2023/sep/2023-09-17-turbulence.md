@@ -42,7 +42,7 @@ jb_picture:
 [продвигая](https://www.gazeta.ru/culture/2019/03/06/a_12226567.shtml) Зеленского на президентский пост,
 Коломойский связался с республиканцем, экс-мэром Нью-Йорка и адвокатом Трампа
 Руди Джулиани, и [принял](https://www.kommersant.ru/doc/4073717) активное участие в
-[сборе компромата](https://bykvu.com/ru/bukvy/firtash-otricaet-prichastnost-k-finansirovaniju-kampanii-protiv-bajdena/) о махинациях
+[сборе компромата](https://web.archive.org/web/20220125084454/https://bykvu.com/ru/bukvy/firtash-otricaet-prichastnost-k-finansirovaniju-kampanii-protiv-bajdena/) о махинациях
 Джо Байдена и его сына Хантера на Украине. Интересно, что еще
 [в 2019 году](https://www.gazeta.ru/politics/news/2019/05/18/n_12990745.shtml)
 Джулиани [требовал](https://ria.ru/20190523/1554816752.html) ареста Коломойского,
@@ -76,7 +76,7 @@ jb_picture:
 <br/>
 Зеленский в июле [раскритиковал](https://www.rbc.ru/politics/11/07/2023/64ad31c39a794716b5cf3522)
 позицию США относительно вступления Украины в НАТО.
-Это, как [считает](https://www.washingtonpost.com/politics/2023/07/11/zelensky-nato-ukraine-membership-timeline/) The Washington Post,
+Это, как [считает](https://web.archive.org/web/20231007083138/https://www.washingtonpost.com/politics/2023/07/11/zelensky-nato-ukraine-membership-timeline/) The Washington Post,
 [вызвало](https://www.tatar-inform.ru/news/wp-amerikanskuyu-delegaciyu-rasserdili-slova-zelenskogo-o-resenii-nato-po-ukraine-5912400)
 раздражение Белого дома. Палец себе отрезать Зеленский не стал,
 но сдал бывшего благотворителя, [поддержавшего](https://www.rbc.ru/politics/27/05/2019/5ceba6bc9a794732bc664098) его возвышение в 2019.
@@ -118,7 +118,7 @@ jb_picture:
 не допустив, чтобы на этот же "крючок" его раньше посадили НАБУ и американцы, которые
 могли использовать это в том числе и для получения от Коломойского показаний относительно
 его связей с Зеленским и с его окружением. Это версия
-[compromat.ru](https://www.compromat.ru/page_44600.htm) и
+[compromat.ru](https://web.archive.org/web/20240306122045/https://www.compromat.ru/page_44600.htm) и
 частично [Шария](https://www.youtube.com/watch?v=96GUI4Lv6bA).
 
 **Версия 7: Глобальный олигархат уничтожает национальный олигархат**.
@@ -147,7 +147,7 @@ jb_picture:
 или, может быть, чайный клуб [владельцев алмазных приисков](https://ru.wikipedia.org/wiki/De_Beers)
 Анголы и Южной Африки --- им совершенно неважна
 ни судьба Украины, ни дом Игоря Валерьевича [в штате Огайо](https://www.rbc.ru/rbcfreenews/5fed64fb9a794771a2876d2f),
-ни даже [миллионные взятки](https://www.compromat.ru/page_43233.htm) перемещаемые
+ни даже [миллионные взятки](https://web.archive.org/web/20240301003130/https://www.compromat.ru/page_43233.htm) перемещаемые
 со счета на счет в Bank of New York уже не один десяток лет.
 
 Им важно, чтобы народы всего мира жили в мире и согласии.

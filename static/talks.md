@@ -1085,7 +1085,7 @@ sponsor booths. Besides that, I never even met the organizers
 <span class="venue-rate orange">C+</span>
 <img src="https://i.ytimg.com/vi/APCUGQlkO3U/mqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
 **OOP Is Dead? Not Yet!**;
-[ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
+[ITEM 2016](https://web.archive.org/web/20220625165228/https://item.com.ua/);
 <span class="city">Dnipro</span>, <span class="country">Ukraine</span>;
 3 June 2016;
 [slides](https://www.slideshare.net/YegorBugayenko/oop-is-dead-not-yet),
@@ -1101,7 +1101,7 @@ with love, but the venue and speakers, unfortunately, didn't play along
 
 <img src="https://i.ytimg.com/vi/sZoJ3gO4PSo/mqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
 **Is Your CEO or Your Programmer the Boss?**;
-[ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
+[ITEM 2016](https://web.archive.org/web/20220625165228/https://item.com.ua/);
 <span class="city">Dnipro</span>, <span class="country">Ukraine</span>;
 2 June 2016;
 [slides](https://www.slideshare.net/YegorBugayenko/who-manages-who),
@@ -1110,7 +1110,7 @@ with love, but the venue and speakers, unfortunately, didn't play along
 
 <img src="https://i.ytimg.com/vi/4DCrWRuwxos/mqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
 **Don't Be Overly Excited About Amsterdam**;
-[ITEM 2016](http://item.com.ua/?utm_source=yegorbugayenko&amp;utm_medium=blog&amp;utm_campaign=item2016#speakers);
+[ITEM 2016](https://web.archive.org/web/20220625165228/https://item.com.ua/);
 <span class="city">Dnipro</span>, <span class="country">Ukraine</span>;
 2 June 2016;
 [video](https://www.youtube.com/watch?v=4DCrWRuwxos)
@@ -1456,7 +1456,7 @@ tickets
 <span class="venue-rate red">F+</span>
 <img src="https://i.ytimg.com/vi/Xj226o2xI9Y/mqdefault.jpg" class="past-talk" alt="DevNexus 2015"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**;
-[DevNexus 2016](https://www.devnexus.com/s/speakers#Yegor_Bugayenko);
+[DevNexus 2016](https://web.archive.org/web/20170707220231/http://devnexus.com:80/s/speakers);
 <span class="city">Atlanta, GA</span>, <span class="country">USA</span>;
 16 February 2016;
 [slides](https://www.slideshare.net/YegorBugayenko/chat-bots-vs-ui),

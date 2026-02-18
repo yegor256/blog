@@ -66,7 +66,7 @@ jb_picture:
 [Афганского конфликта](https://ru.wikipedia.org/wiki/%D0%90%D1%84%D0%B3%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D0%BE%D0%B9%D0%BD%D0%B0_(1979%E2%80%941989)),
 [Вьетнамской](https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B9%D0%BD%D0%B0_%D0%B2%D0%BE_%D0%92%D1%8C%D0%B5%D1%82%D0%BD%D0%B0%D0%BC%D0%B5) и
 [Корейских](https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B5%D0%B9%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D0%BE%D0%B9%D0%BD%D0%B0) войн,
-были выше политики. Например, в 1977-м году в Новосибирске [состоялась](http://ershov.iis.nsk.su/ru/node/793556)
+были выше политики. Например, в 1977-м году в Новосибирске [состоялась](https://web.archive.org/web/20251214195841/https://ershov.iis.nsk.su/ru/node/793556)
 конференция [IFIP](https://en.wikipedia.org/wiki/International_Federation_for_Information_Processing)
 посвященная "Построению качественного программного обеспечения", на которой выступали (очно!)
 [David Parnas](https://en.wikipedia.org/wiki/David_Parnas),

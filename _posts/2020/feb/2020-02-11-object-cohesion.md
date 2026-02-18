@@ -129,7 +129,7 @@ than by some experiments.
 I created an open source software library to help me do these experiments and called
 it [jPeek.org](https://www.jpeek.org). It is a calculator of cohesion metrics
 for Java code. No surprise, there are many metrics we can use to calculate cohesion. At least
-[thirty](https://www.math.md/files/csjm/v25-n1/v25-n1-%28pp44-74%29.pdf)
+[thirty](https://web.archive.org/web/20240619181537/http://www.math.md/files/csjm/v25-n1/v25-n1-(pp44-74).pdf)
 of them are published, while only a few of them were properly implemented.
 In jPeek, thanks to its contributors, we managed to implement over a dozen.
 

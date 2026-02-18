@@ -57,7 +57,7 @@ jb_picture:
 Международная реакция на крымские события очевидна &mdash; Россия
 [объявляется](https://www.kommersant.ru/doc/2754590)
 страной агрессором, а сам факт смены власти в Крыму &mdash;
-[аннексией](https://www.segodnya.ua/politics/evropa-ne-pozvolit-priznat-anneksiyu-kryma-mid-germanii-1045323.html),
+аннексией,
 нарушающей международные принципы. Первая цель достигнута &mdash;
 Россия "официально" становится
 [врагом](http://www.bbc.com/russian/features-40783386)

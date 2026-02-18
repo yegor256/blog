@@ -25,7 +25,7 @@ jb_picture:
 [стал](http://gordonua.com/news/politics/poroshenko-naznachil-saakashvili-svoim-sovetnikom-66407.html)
 советником Порошенко. Через
 три месяца из рук своего начальника он
-[получил](https://glavred.info/politics/320336-saakashvili-poluchil-ukrainskoe-grazhdanstvo-smi.html)
+[получил](https://web.archive.org/web/20240915135429/https://glavred.info/politics/320336-saakashvili-poluchil-ukrainskoe-grazhdanstvo-smi.html)
 украинское гражданство и
 [должность](http://korrespondent.net/ukraine/politics/3521333-mynystr-ekolohyy-saakashvyly-naznachen-hubernatorom-odesskoi-oblasty)
 главы Одесской ОГА с зарплатой

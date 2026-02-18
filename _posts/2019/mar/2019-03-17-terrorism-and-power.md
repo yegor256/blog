@@ -75,7 +75,7 @@ jb_picture:
 рака, инсульта, или ДТП) и ... государству. Фактически,
 28-летний гражданин Австралии Брентон Таррант вчера казнил без суда и следствия
 50 человек. Точнее, суд и следствие были, и их выводы Таррант оформил
-в своем [манифесте](https://observer.news/featured/the-manifesto-of-brenton-tarrant-a-right-wing-terrorist-on-a-crusade/),
+в своем [манифесте](https://web.archive.org/web/20190823222138/https://observer.news/featured/the-manifesto-of-brenton-tarrant-a-right-wing-terrorist-on-a-crusade/),
 но этот суд не входит в систему правосудия США,
 и именно это возмущает Дональда Трампа и вместе с ним весь народ США.
 
@@ -102,4 +102,4 @@ jb_picture:
 Он обращает наше внимание на то, что конкуренции он не потерпит.
 
 И, кстати, прочтите
-[манифест](https://observer.news/featured/the-manifesto-of-brenton-tarrant-a-right-wing-terrorist-on-a-crusade/).
+[манифест](https://web.archive.org/web/20190823222138/https://observer.news/featured/the-manifesto-of-brenton-tarrant-a-right-wing-terrorist-on-a-crusade/).

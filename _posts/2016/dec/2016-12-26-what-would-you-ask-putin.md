@@ -58,7 +58,7 @@ jb_picture:
 пошел против воли своего народа?
 
 А насчет
-[политических заключенных](http://www.politzeky.ru/politzeki/ves-spisok/22379.html),
+[политических заключенных](https://web.archive.org/web/20180310101502/http://www.politzeky.ru/politzeki/ves-spisok/22379.html),
 [похищений людей](http://112.ua/avarii-chp/poyavilos-video-pohishheniya-v-krymu-chlena-medzhlisa-ervina-ibragimova-313909.html) и
 [нападений на журналистов](http://112.ua/avarii-chp/poyavilos-video-pohishheniya-v-krymu-chlena-medzhlisa-ervina-ibragimova-313909.html),
 то это вообще вопрос не к президенту. Есть уголовный кодекс и суды, где

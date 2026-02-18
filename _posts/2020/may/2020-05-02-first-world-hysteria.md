@@ -81,7 +81,7 @@ jb_picture:
     [масонов](https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%81%D0%BE%D0%BD%D1%81%D1%82%D0%B2%D0%BE),
     [надгосударственных транснациональных элит](https://cyberleninka.ru/article/n/transnatsionalnaya-elita-kontseptualizatsiya-ponyatiya/viewer)
     --- нужное подчеркнуть)
-    [является](https://historiosophy.ru/sokrashhenie-chislennosti-naseleniya-zemli-cel-globalnoj-demograficheskoj-politiki/)
+    [является](https://web.archive.org/web/20251115081005/https://historiosophy.ru/sokrashhenie-chislennosti-naseleniya-zemli-cel-globalnoj-demograficheskoj-politiki/)
     сокращение популяции homo sapiens на этой планете. Ни война,
     ни реальная эпидемия, ни голод этого качественно сделать не могут,
     потому что, как [считают этологи](https://ru.wikipedia.org/wiki/%D0%9A%D1%8D%D0%BB%D1%85%D1%83%D0%BD,_%D0%94%D0%B6%D0%BE%D0%BD_%28%D1%8D%D1%82%D0%BE%D0%BB%D0%BE%D0%B3%29),
@@ -133,12 +133,12 @@ jb_picture:
     не выходя из офисов на Манхеттене.
 
   * **Китай**.
-    С момента [крушения](https://republic.ru/posts/89793)
+    С момента [крушения](https://web.archive.org/web/20251209002719/https://republic.ru/posts/89793)
     большевистских идей в 50-х годах прошлого века,
     [баланс сил](https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D0%BD%D1%81_%D1%81%D0%B8%D0%BB_%28%D0%B3%D0%B5%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%29)
     в мировой политике стал смещаться в сторону США и с окончательным
     уничтожением СССР в 1991-м году он [исчез](https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D1%81%D0%BF%D0%B0%D0%B4_%D0%A1%D0%A1%D0%A1%D0%A0),
-    а мир [стал](https://www.n-kurs.ru/spravka/1011/) однополярным с центром
+    а мир [стал](https://web.archive.org/web/20251211020653/https://www.n-kurs.ru/spravka/1011/) однополярным с центром
     в Вашингтоне. Однако, выжившая при крушении идей, Китайская Народная Республика,
     в последние годы [стала претендовать](https://tass.ru/politika/7380485)
     на роль альтернативного полюса, чем
@@ -152,10 +152,10 @@ jb_picture:
     [существенно](https://korrespondent.net/world/4223863-ssha-hotoviat-protyv-kytaia-sanktsyy-za-COVID-19-smy)
     навредить как репутации КНР, так и ее
     [экономике](https://www.newsru.com/finance/17apr2020/china_vvp.html)
-    (например, [аннулировав](https://strana.ua/news/260685-koronavirus-v-mire-v-ssha-vystavili-isk-kitaju-na-1-2-trilliona-dollarov.html) триллион
+    (например, [аннулировав](https://web.archive.org/web/20210506043332/https://strana.ua/news/260685-koronavirus-v-mire-v-ssha-vystavili-isk-kitaju-na-1-2-trilliona-dollarov.html) триллион
     [внешнего долга](https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B4%D0%BE%D0%BB%D0%B3_%D0%A1%D0%A8%D0%90)).
 
-Уверен, есть и [другие версии](https://vesti.ua/mir/kokain-i-satanisty-demokraty-pochemu-koronavirus-schitayut-teoriej-zagovora),
+Уверен, есть и другие версии,
 однако теории о
 [чипизации](https://www.ntv.ru/novosti/2325643/) и
 [вакцинации](https://lenta.ru/columns/2010/03/18/vaccine/)

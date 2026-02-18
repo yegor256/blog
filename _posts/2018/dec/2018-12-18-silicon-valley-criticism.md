@@ -116,7 +116,7 @@ every year.
 They are [on top of the world](https://ourworldindata.org/mental-health) in the
 insanity competition. California is not the most insane state though, it's
 somewhere in the middle of the
-[ranking](https://www.mentalhealthamerica.net/issues/2017-state-mental-health-america-ranking-states).
+[ranking](https://web.archive.org/web/20190727125228/http://www.mentalhealthamerica.net/issues/2017-state-mental-health-america-ranking-states).
 
 The statistical figures I can also confirm empirically:
 Almost every single family I've met there has their kid diagnosed with

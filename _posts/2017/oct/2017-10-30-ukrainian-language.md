@@ -55,7 +55,7 @@ jb_picture:
 <aside class="quote">
 Культура России принадлежит десяткам народов Запада и Востока. Именно
 на этой основе, на многонациональной почве, она выросла во всем своем своеобразии.
-<span><a href="http://www.wisdomcode.info/ru/quotes/authors/50026.html">Дмитрий Лихачев</a></span>
+<span><a href="https://web.archive.org/web/20190718150557/http://www.wisdomcode.info/ru/quotes/authors/50026.html">Дмитрий Лихачев</a></span>
 </aside>
 
 На украинском языке написано значительно меньше хорошей литературы, чем
@@ -112,7 +112,7 @@ jb_picture:
 на путь которых уверенно становится нынешняя украинская власть,
 запрещая русский
 [язык](http://rian.com.ua/analytics/20170929/1028107706.html),
-[книги](https://strana.ua/news/70629-segodnya-v-ukraine-vstupil-v-silu-poryadok-izyatiya-iz-prodazhi-rossijskih-knig-i-zhurnalov.html)
+книги
 и
 [кино](https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%B9%D0%BA%D0%BE%D1%82_%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BA%D0%B8%D0%BD%D0%BE),
 &mdash; это лишь
