@@ -198,7 +198,6 @@ aggregator
 aggressive
 aggressively
 agile
-agilebuddha
 AgileEE
 agility
 aging
@@ -904,7 +903,6 @@ bib
 bibcop
 biblatex
 bible
-bibrarian
 bibtex
 bicycle
 bidding
@@ -1675,7 +1673,6 @@ codexia
 coding
 coding-savvy
 codinghorror
-codota
 coen
 coffee
 cog
@@ -2035,7 +2032,6 @@ contradictory
 contradicts
 contrary
 contrast
-contrib
 contribute
 contributed
 contributes
@@ -2178,6 +2174,7 @@ coworkers
 cozy
 CP
 CPU
+cqfn
 CQS
 craft
 craigslist
@@ -2185,7 +2182,6 @@ crap
 crash
 crashed
 crashes
-crat
 crawl
 crawling
 crawls
@@ -2479,6 +2475,7 @@ definitely
 definition
 definitions
 definitive
+defunct
 degradation
 degrade
 degrades
@@ -3301,7 +3298,7 @@ equipment
 equipped
 equity
 equivalent
-ER
+er
 ER-ending
 era
 ergo
@@ -4570,6 +4567,7 @@ HSE
 HTML
 htpasswd
 HTTP
+HTTPBot
 httpclient
 httponly
 httprequest

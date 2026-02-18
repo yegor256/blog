@@ -39,7 +39,7 @@ object-oriented and convenient
     <span class="s">"yegor"</span><span class="o">,</span> <span class="s">"-----BEGIN RSA PRIVАTE KEY-----..."</span>
   <span class="o">)</span>
 <span class="o">).</span><span class="na">exec</span><span class="o">(</span><span class="s">"echo 'Hello, world!'"</span><span class="o">);</span>
-</code></pre></div></div><p><a href="https://ssh.jcabi.com"><code class="language-plaintext highlighter-rouge">jcabi-ssh</code></a> is a convenient wrapper of <a href="https://www.jcraft.com/jsch/"><code class="language-plaintext highlighter-rouge">JSch</code></a>, a well-known pure Java implementation of SSH2.<p>Here is a more complex scenario, where I upload a file via SSH and then read back its grepped content:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shell shell = new SSH(
+</code></pre></div></div><p><a href="https://ssh.jcabi.com"><code class="language-plaintext highlighter-rouge">jcabi-ssh</code></a> is a convenient wrapper of <a href="https://github.com/mwiede/jsch"><code class="language-plaintext highlighter-rouge">JSch</code></a>, a well-known pure Java implementation of SSH2.<p>Here is a more complex scenario, where I upload a file via SSH and then read back its grepped content:<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shell shell = new SSH(
   "ssh.example.com", 22,
   "yegor", "-----BEGIN RSA PRIVАTE KEY-----..."
 );
