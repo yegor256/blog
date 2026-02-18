@@ -73,7 +73,7 @@ radical changes:
     We keep everybody busy learning new tools and filling them with data.
 
   * Fourth, and most importantly, we replace office chit-chats with
-    [Slack](https://slack.com/) channels or [HipChat](https://www.hipchat.com/) groups.
+    [Slack](https://slack.com/) channels or similar group chats.
     Instead of being in the office at 9 a.m.,
     everybody will have the ability to demonstrate the level of their
     [presenteeism](https://en.wikipedia.org/wiki/Presenteeism) using emojis.

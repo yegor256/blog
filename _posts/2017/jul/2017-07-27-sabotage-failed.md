@@ -25,12 +25,12 @@ jb_picture:
 [стал](http://gordonua.com/news/politics/poroshenko-naznachil-saakashvili-svoim-sovetnikom-66407.html)
 советником Порошенко. Через
 три месяца из рук своего начальника он
-[получил](http://glavred.info/politika/saakashvili-poluchil-ukrainskoe-grazhdanstvo-smi-320336.html)
+[получил](https://glavred.info/politics/320336-saakashvili-poluchil-ukrainskoe-grazhdanstvo-smi.html)
 украинское гражданство и
 [должность](http://korrespondent.net/ukraine/politics/3521333-mynystr-ekolohyy-saakashvyly-naznachen-hubernatorom-odesskoi-oblasty)
 главы Одесской ОГА с зарплатой
 [$280 в месяц](http://korrespondent.net/city/odessa/3630276-saakashvyly-povysyl-sebe-zarplatu).
-Еще через полгода его [лишили](http://nbnews.com.ua/ru/news/167566/) грузинского гражданства.
+Еще через полгода его [лишили](https://www.rbc.ru/politics/04/12/2015/56617f829a79474493922882) грузинского гражданства.
 В течение следующего года Саакашвили
 [сделал](http://korrespondent.net/ukraine/3603566-saakashvyly-vs-avakov-chto-ne-podelyly-chynovnyky)
 ряд громких обвинений в коррупции, в том числе в адрес Авакова, Яценюка, и
@@ -51,7 +51,7 @@ jb_picture:
 уникальными достижениями последних лет, оказался бездельником и профаном,
 умеющим только говорить, а не делать?
 
-Или это личный конфликт между двумя [давними друзьями](http://vesti-ukr.com/odessa/131930-poroshenko-ja-byl-avtoritetom-dlja-saakashvili),
+Или это личный конфликт между двумя [давними друзьями](https://lenta.ru/articles/2017/07/28/miho_kaput/),
 который перерос в политическое противостояние и поражение одного из них, более
 слабого и
 [плохо]({% pst 2016/nov/2016-11-28-saakashvili-speaks-ukrainian %})

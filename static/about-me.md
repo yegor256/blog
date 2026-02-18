@@ -75,7 +75,7 @@ I am a **philanthropist**, donating a few thousand dollars
   which we pick out of about a few hundreds in
   a more or less fair [competition](https://www.kaicode.org).
 
-I'm also a bit of a [scientist](/papers.html):
+I'm also a bit of a [scientist](/research.html):
   [Scopus](https://www.scopus.com/authid/detail.uri?authorId=30367443600),
   [Google Scholar](https://scholar.google.com/citations?user=cYmXh60AAAAJ),
   [DBLP](https://dblp.org/pid/17/7086.html).

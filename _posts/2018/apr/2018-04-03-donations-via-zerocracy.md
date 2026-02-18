@@ -83,7 +83,7 @@ Takes.org:<br/>
 [![Donate via Zerocracy](https://www.zerocracy.com/svg/C3FFK3YAY.svg)](https://www.zerocracy.com/C3FFK3YAY)
 
 The advantage of this approach, compared to, for example,
-[BountySource](https://www.bountysource.com/), is that the money will
+[BountySource](https://en.wikipedia.org/wiki/Bountysource), is that the money will
 be distributed in micro-payments and will be fully traceable. I believe
 that this makes a difference for donators---they are interested to see
 how their money is being used.

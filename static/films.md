@@ -36,8 +36,8 @@ My recently made films:
   [YouTube](https://www.youtube.com/watch?v=asWCzJGyD98)
 
   Download:
-  [3840x2160](https://films.yegor256.com/mug/4k.mov) (2.4Gb) |
-  [2880x2160](https://films.yegor256.com/mug/2880.mov) (1.7Gb)
+  [3840x2160](https://films.yegor256.com/hot-stone/4k.mov) (2.4Gb) |
+  [2880x2160](https://films.yegor256.com/hot-stone/2880.mov) (1.7Gb)
 
   Subtitles:
   [Russian](https://films.yegor256.com/hot-stone/ru-captions.srt) |

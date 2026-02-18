@@ -24,7 +24,6 @@ translated:
 social:
   - hackernews: https://news.ycombinator.com/item?id=13696004
   - reddit: https://www.reddit.com/r/programming/comments/5vc1ul/why_i_dont_talk_to_google_recruiters/
-  - 4chan: http://boards.4chan.org/g/thread/59079636/dumb-java-shitskin-gets-buttblasted-because-job
 image: /images/2017/02/the-deer-hunter.jpg
 jb_picture:
   caption: The Deer Hunter (1978) by Michael Cimino
