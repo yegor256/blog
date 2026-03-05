@@ -75,7 +75,7 @@ task :build do
     done 'Jekyll site already exists in _site (run "rake clean" first)'
   else
     elapsed do
-      qbash("jekyll build --trace --future -- #{ARGV.join(' ').match(/(?:^| )(-- .*)$/)}", log: $stdout)
+      qbash("jekyll build --trace --future -- #{ARGV.join(' ').match(/(?:^| )(-- .*)$/)}", stdout: $stdout)
       throw :'Jekyll site generated without issues'
     end
   end
@@ -84,7 +84,7 @@ end
 desc 'Check the existence of all critical pages'
 task pages: [:build] do
   elapsed do
-    File.open('_rake/pages.txt').map(&:strip).each do |p|
+    File.readlines('_rake/pages.txt').map(&:strip).each do |p|
       file = "_site/#{p}"
       raise "Page/directory #{file} is not found (try to run 'rake clean' and start over)" unless File.exist?(file)
       puts "#{file}: OK" if VERBOSE
@@ -96,7 +96,7 @@ end
 desc 'Check the absence of garbage'
 task garbage: [:build] do
   elapsed do
-    File.open('_rake/garbage.txt').map(&:strip).each do |p|
+    File.readlines('_rake/garbage.txt').map(&:strip).each do |p|
       file = "_site/#{p}"
       raise "Page #{file} is still there" if File.exist? file
       puts "#{file}: absent, OK" if VERBOSE
@@ -267,7 +267,7 @@ task :snippets do
     all_html.each do |f|
       lines = Nokogiri::HTML(File.read(f)).xpath(
         '//article//figure[@class="highlight"]/pre/code[not(contains(@class,"text"))]'
-      ).to_a.map(&:to_s)
+      ).to_a
         .join("\n")
         .gsub(/<code [^>]+>/, '')
         .gsub(/<span class="[A-Za-z0-9-]+">/, '')
