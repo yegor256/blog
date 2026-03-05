@@ -18,6 +18,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: lycheeverse/lychee-action@v2
         with:
+          lycheeVersion: v0.24.0
           args: --config .github/lychee.toml '**/*.md' '**/*.html'
           format: compact
           jobSummary: false
