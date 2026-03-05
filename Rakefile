@@ -75,7 +75,7 @@ task :build do
     done 'Jekyll site already exists in _site (run "rake clean" first)'
   else
     elapsed do
-      qbash("jekyll build --trace --future -- #{ARGV.join(' ').match(/(?:^| )(-- .*)$/)}", log: $stdout)
+      qbash("jekyll build --trace --future -- #{ARGV.join(' ').match(/(?:^| )(-- .*)$/)}", stdout: $stdout)
       throw :'Jekyll site generated without issues'
     end
   end
