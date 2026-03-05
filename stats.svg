@@ -654,7 +654,10 @@
 	<path stroke='rgb(129, 179,  65)'  d='M596.29,230.00 L596.29,209.53 L598.74,209.53 L598.74,230.00 L596.29,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb(129, 179,  65)' points = '599.57,230.00 602.06,230.00 602.06,195.31 599.57,195.31 '/>
 	</g>
-	<path stroke='rgb(129, 179,  65)'  d='M599.57,230.00 L599.57,195.32 L602.05,195.32 L602.05,230.00 L599.57,230.00 Z  '/></g>
+	<path stroke='rgb(129, 179,  65)'  d='M599.57,230.00 L599.57,195.32 L602.05,195.32 L602.05,230.00 L599.57,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+		<polygon fill = 'rgb(129, 179,  65)' points = '606.00,230.00 608.38,230.00 608.38,215.41 606.00,215.41 '/>
+	</g>
+	<path stroke='rgb(129, 179,  65)'  d='M606.00,230.00 L606.00,215.42 L608.37,215.42 L608.37,230.00 L606.00,230.00 Z  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb(129, 179,  65)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>

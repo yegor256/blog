@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-02-18T13:44:00+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">SPAs Are a Performance Dead End</title><link href="https://www.yegor256.com/2026/01/25/spa-vs-performance.html" rel="alternate" type="text/html" title="SPAs Are a Performance Dead End" /><published>2026-01-25T00:00:00+00:00</published><updated>2026-01-25T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/01/25/spa-vs-performance</id><content type="html" xml:base="https://www.yegor256.com/2026/01/25/spa-vs-performance.html"><![CDATA[<p>It seems to be <a href="https://adamsilver.io/blog/the-problem-with-single-page-applications/">popular</a> to design websites as Single Page Applications (SPA).
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-03-05T09:33:47+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fast Software: More Programmers, Not Fewer</title><link href="https://www.yegor256.com/2026/03/05/fast-software.html" rel="alternate" type="text/html" title="Fast Software: More Programmers, Not Fewer" /><published>2026-03-05T00:00:00+00:00</published><updated>2026-03-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/03/05/fast-software</id><content type="html" xml:base="https://www.yegor256.com/2026/03/05/fast-software.html"><![CDATA[<p>When I was five years old, I inherited the shoes of my older brother.
+Not because our family was poor, but because the shoes were good.
+My grandma told me that when she was a fiancée her dowry consisted of a few skirts.
+Not because she was poor.
+She wasn’t.
+Because the skirts were good and rather expensive.
+Now, in 2026, to get a new pair of shoes or a new skirt, I just buy them at a mall down the street.
+I don’t hesitate to throw away the old ones.
+The same will happen with the software, thanks to AI coding agents.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="25th Hour (2002) by Spike Lee" src="/images/2026/03/25th-hour.jpg" longdesc="#5ab67d51" /><figcaption id="5ab67d51">25th Hour (2002) by Spike Lee</figcaption></figure>
+
+<p>A few days ago someone (I lost the link) shared a funny story on LinkedIn.
+He showed a message from his former boss.
+The boss was asking for a fix to software written twenty years ago.
+The author of the story proudly claimed that some software, if written properly, can <em>survive</em> a generation.</p>
+
+<p>The software in the story is similar to the skirt of my grandma.
+It was made to survive a few decades.
+Because it was <em>expensive to make</em>.</p>
+
+<p>That’s why the boss is not hiring a new programmer to re-write the software.
+He asks for a fix.
+Just like my grandma would not throw away a skirt if it got a hole.
+It would go to a tailor to get a patch.</p>
+
+<p>Many of us wonder what may happen when AI agents, like <a href="https://code.claude.com/">Claude Code</a>, dominate the market.
+Programmers, especially junior ones, may be fired en masse.
+Look at what Jack Dorsey <a href="https://x.com/jack/status/2027129697092731343">just did</a>: terminating contracts of about 40% of his tech staff.</p>
+
+<p>Large companies indeed will fire programmers, but not because the new world doesn’t need human coders.
+It’s because the new world doesn’t need <em>large</em> software companies.</p>
+
+<aside class="quote">We’ll toss our software, not update it.
+</aside>
+
+<p>What the world is looking forward to is a <em>devaluation</em> of software craftsmanship.
+Just like a skirt is no longer valuable, except for some high-end brands, software won’t be either.
+Developing a new ERP system would cost a few thousand dollars and take a few days of work.
+Just like it <a href="https://x.com/mntruell/status/2011562190286045552">recently took a week</a> to create a new web browser.</p>
+
+<p>Oracle, Adobe, Microsoft, and JetBrains will run out of business.</p>
+
+<p>When someone needs an IDE with new language support, they won’t wait for JetBrains to release it next year, maybe.
+They will go to a software shop around the corner, pay a few hundred bucks, and get it next Monday.
+When someone needs a new feature in Photoshop, they won’t wait for Adobe.
+They will <em>buy a new</em> Photoshop from a friend, with the feature and maybe a few more.
+When a company needs their accounting system to support a new logistics optimization scheme, they won’t go to Oracle.
+They will <em>re-write</em> the entire Oracle Fusion, for a few thousand dollars.</p>
+
+<p>We won’t wait for new releases of the old software we love.
+We’ll toss them away and buy new ones.</p>
+
+<p>The market will need more programmers, not fewer.
+In order to sew good skirts for all women, a city may need a few dozen tailors.
+Because every skirt costs a lot and is worn for decades.
+In order to manufacture throw-away one-time skirts, the same city needs many more people.
+Obviously, these new people are not the tailors of the good-old-days quality.
+But they make many skirts, thousands per day.</p>
+
+<p>Just like fast fashion replaced tailors with factory workers and machine operators, <strong>fast software</strong> will replace programmers with AI operators.
+And the market will demand many of them.
+Many more than large software companies employ today.</p>
+
+<p>Large companies will lose their <em>monopoly on complexity</em>.
+A small software shop will be able to build a new IDE, a new Photoshop, or even a new Linux.
+For a few thousand dollars.</p>
+
+<p>The importance of open source software will <a href="/2020/05/05/open-source-arms-race.html">continue to grow</a>.
+It will become the primary provider of ingredients for AI and its operators.</p>
+
+<p>The new world will need more programmers (AI operators) than it needs now.
+Because the demand for custom software will soon start growing.
+Everyone will want their own Photoshop.
+Every developer will want their own IDE and their own Linux.
+And they will throw them away without hesitation.
+Just like I throw away my shoes every year and get new ones.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[AI coding agents will make software disposable, like fast fashion replaced tailored clothing, creating demand for more programmers, not fewer.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/03/25th-hour.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/03/25th-hour.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SPAs Are a Performance Dead End</title><link href="https://www.yegor256.com/2026/01/25/spa-vs-performance.html" rel="alternate" type="text/html" title="SPAs Are a Performance Dead End" /><published>2026-01-25T00:00:00+00:00</published><updated>2026-01-25T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/01/25/spa-vs-performance</id><content type="html" xml:base="https://www.yegor256.com/2026/01/25/spa-vs-performance.html"><![CDATA[<p>It seems to be <a href="https://adamsilver.io/blog/the-problem-with-single-page-applications/">popular</a> to design websites as Single Page Applications (SPA).
 Instead of showing a new HTML page on every click, an SPA sends a lightweight skeleton with JavaScript.
 The JS makes HTTP requests, receives JSON, and injects data into the DOM.
 On each user action, the page doesn’t reload—only the DOM changes.
@@ -922,73 +1000,4 @@ We turn this issue into an opportunity.
 Programmers are forced, by the timing limitations of the compiler, to write smaller modules.
 When they need larger programs, they break them into modules that communicate via <a href="https://en.wikipedia.org/wiki/Inter-process_communication">IPC</a> instead of staying in a monolithic binary.</p>
 
-<p>We’re experimenting with this approach in <a href="https://www.eolang.org">EOLANG</a>, a language designed to maximize inference by eliminating features that make it undecidable.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[Type annotations are a workaround for compiler limitations, not a feature—a well-designed language should infer all types automatically, forcing programmers to write smaller, cleaner modules.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/08/swingers.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/08/swingers.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">remove(42) vs. find(42).remove()</title><link href="https://www.yegor256.com/2025/06/22/retrieve-or-remove.html" rel="alternate" type="text/html" title="remove(42) vs. find(42).remove()" /><published>2025-06-22T00:00:00+00:00</published><updated>2025-06-22T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/06/22/retrieve-or-remove</id><content type="html" xml:base="https://www.yegor256.com/2025/06/22/retrieve-or-remove.html"><![CDATA[<p>We have a list of books in the <code class="language-plaintext highlighter-rouge">books</code> object.
-How do we remove a single book from it, given that we know its ID?
-We can do <code class="language-plaintext highlighter-rouge">books.removeById(42)</code>.
-Alternatively, we can find it with <code class="language-plaintext highlighter-rouge">books.findById(42)</code> and then call <code class="language-plaintext highlighter-rouge">b.remove()</code>.
-Which option should we prefer, and why?
-The second choice is the better one.
-Not only because it’s more object-oriented, but also due to several practical advantages.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="8 Femmes (2002) by François Ozon" src="/images/2025/06/8-femmes.jpg" longdesc="#d7e21337" /><figcaption id="d7e21337">8 Femmes (2002) by François Ozon</figcaption></figure>
-
-<h2 id="extending-the-deletion-behavior">Extending the Deletion Behavior</h2>
-
-<p>What if we want to extend the deletion algorithm?
-For example, suppose we want to print a log message every time a book is deleted.</p>
-
-<p>If we follow the <a href="https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle">open-closed principle</a>, we should avoid modifying the existing <code class="language-plaintext highlighter-rouge">Book</code> or <code class="language-plaintext highlighter-rouge">Books</code> classes.
-Instead, we want to either <a href="/2016/09/13/inheritance-is-procedural.html">extend</a> or <a href="/2015/02/26/composable-decorators.html">decorate</a> them.
-A decorator is the ideal choice if we want to avoid <a href="/2016/09/13/inheritance-is-procedural.html">implementation inheritance</a>.</p>
-
-<p>If we use <code class="language-plaintext highlighter-rouge">removeById()</code>, we must decorate the <code class="language-plaintext highlighter-rouge">books</code> object.
-If we use <code class="language-plaintext highlighter-rouge">remove()</code>, we can decorate the individual book retrieved via <code class="language-plaintext highlighter-rouge">findById()</code>.
-The latter approach may be more <strong>cohesive</strong>, since its decoratee is likely <strong>smaller</strong> and more <strong>focused</strong>:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">b</span> <span class="o">=</span> <span class="n">books</span><span class="p">.</span><span class="nf">findById</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="no">Logged</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="n">b</span><span class="p">.</span><span class="nf">remove!</span>
-</code></pre></div></div>
-
-<h2 id="handling-missing-or-non-deletable-books">Handling Missing or Non-Deletable Books</h2>
-
-<p>What if the book isn’t found, or can’t be deleted?
-The <code class="language-plaintext highlighter-rouge">removeById()</code> approach doesn’t support the <a href="https://en.wikipedia.org/wiki/Null_object_pattern">Null Object</a> pattern well.
-It forces us to throw an exception—or worse, return <code class="language-plaintext highlighter-rouge">false</code>, which goes <a href="/2018/08/22/builders-and-manipulators.html">against</a> the <a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation">CQS</a> principle.</p>
-
-<p>On the other hand, returning an object, even a <a href="https://en.wikipedia.org/wiki/Null_object_pattern">null</a> or <a href="/2014/09/23/built-in-fake-objects.html">fake</a> object, offers more <strong>flexible error handling</strong>.
-For instance, we can access <code class="language-plaintext highlighter-rouge">title()</code> safely, knowing that the book was found successfully—or catch and <a href="https://en.wikipedia.org/wiki/Exception_chaining">re-raise exceptions</a> with <a href="/2015/12/01/rethrow-exceptions.html">more context</a>:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">b</span> <span class="o">=</span> <span class="n">books</span><span class="p">.</span><span class="nf">findById</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="k">begin</span>
-  <span class="n">b</span><span class="p">.</span><span class="nf">remove!</span>
-<span class="k">rescue</span> <span class="n">e</span>
-  <span class="k">raise</span> <span class="n">e</span><span class="p">,</span> <span class="s2">"Can't delete book </span><span class="si">#{</span><span class="n">b</span><span class="p">.</span><span class="nf">title</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<h2 id="decoupling-retrieval-and-deletion">Decoupling Retrieval and Deletion</h2>
-
-<p>What if the retrieval and deletion of the object happen far apart in the code?</p>
-
-<p>If <code class="language-plaintext highlighter-rouge">books</code> knows how to find, and a <code class="language-plaintext highlighter-rouge">book</code> knows how to delete, we keep responsibilities nicely separated.
-It also allows the book to be immutable and encapsulate its own ID, reducing <a href="/2016/11/21/naked-data.html">leakage</a> of internal data:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">b</span> <span class="o">=</span> <span class="n">books</span><span class="p">.</span><span class="nf">findById</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-<span class="c1"># +100 lines here...</span>
-<span class="n">b</span><span class="p">.</span><span class="nf">remove!</span>  <span class="c1"># DELETE FROM book WHERE id = 42</span>
-<span class="c1"># +200 lines here...</span>
-<span class="k">if</span> <span class="n">b</span><span class="p">.</span><span class="nf">exists?</span>  <span class="c1"># SELECT * FROM book WHERE id = 42</span>
-  <span class="nb">puts</span> <span class="s2">"The book is back to the library!"</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<p>Once the ID is wrapped inside the book by <code class="language-plaintext highlighter-rouge">findById()</code>, it never has to <strong>leak out</strong> again.
-This reduces the amount of <a href="/2016/11/21/naked-data.html">naked data</a> exposed to parts of the code that don’t need it.</p>
-
-<p>The less data is visible, the <a href="/2016/11/21/naked-data.html">better</a> the design—at least from an OOP perspective.</p>
-
-<p>Thus, using <code class="language-plaintext highlighter-rouge">findById()</code> followed by <code class="language-plaintext highlighter-rouge">remove()</code> embraces object-oriented principles more fully.
-It allows for cleaner extension, better error handling, and tighter encapsulation.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[Delegating behavior to objects rather than invoking utility methods leads to cleaner, more extensible, and properly encapsulated object-oriented design.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/06/8-femmes.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/06/8-femmes.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>We’re experimenting with this approach in <a href="https://www.eolang.org">EOLANG</a>, a language designed to maximize inference by eliminating features that make it undecidable.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[Type annotations are a workaround for compiler limitations, not a feature—a well-designed language should infer all types automatically, forcing programmers to write smaller, cleaner modules.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/08/swingers.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/08/swingers.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

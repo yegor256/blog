@@ -51,6 +51,7 @@ accordingly
 account
 accountability
 accountable
+accounting
 accounts
 accumulate
 accumulating
@@ -1074,6 +1075,7 @@ branching-in-a-sapling-monorepo
 brand
 branded
 branding
+brands
 brave
 brazil
 breach
@@ -1959,6 +1961,7 @@ considered
 considering
 considers
 consist
+consisted
 consistency
 consistent
 consistently
@@ -2177,6 +2180,7 @@ CPU
 cqfn
 CQS
 craft
+craftsmanship
 craigslist
 crap
 crash
@@ -2616,6 +2620,7 @@ deterministic
 detours
 detrimental
 DEV
+devaluation
 develop
 developed
 developer
@@ -2890,6 +2895,7 @@ door
 doors
 doris
 dorks
+dorsey
 DOS
 dosch
 dose
@@ -2917,6 +2923,7 @@ downside
 downtime
 downtimes
 downtown
+dowry
 doxia
 dozen
 dozens
@@ -3152,6 +3159,7 @@ emphasizing
 empire
 empirical
 empirically
+employ
 employed
 employee
 employees
@@ -3304,6 +3312,7 @@ era
 ergo
 eric
 ernest
+ERP
 error
 error-proneness
 errors
@@ -3642,6 +3651,7 @@ few-hour
 few-minutes-granularity
 fewer
 FFK
+fianc
 fiasco
 fibo
 fibonacci
@@ -3999,6 +4009,7 @@ funny
 furniture
 further
 furthermore
+fusion
 fuss
 future
 fuzzy
@@ -4164,6 +4175,7 @@ good-for-nothings
 good-looking
 good-looking-graphics
 good-natured
+good-old-days
 goodness
 goodreads
 goof
@@ -4200,6 +4212,7 @@ grammar
 grammarly
 grammatical
 grandchildren
+grandma
 grant
 graph
 graphic
@@ -4460,6 +4473,7 @@ hierarchical
 hierarchies
 hierarchy
 high
+high-end
 high-level
 high-quality
 higher
@@ -5692,6 +5706,7 @@ logic
 logical
 logically
 login
+logistics
 logo
 logout
 logs
@@ -5818,6 +5833,7 @@ mal-functional
 male
 male-dominated
 males
+mall
 malloc
 mallory
 malm
@@ -5859,6 +5875,7 @@ mantra
 manual
 manually
 manuals
+manufacture
 manuscript
 many
 many-hour-long
@@ -5903,6 +5920,7 @@ martinfowler
 masculine
 mask
 massage
+masse
 massive
 massively
 master
@@ -6211,6 +6229,7 @@ mkquery
 mkregion
 ML
 MMMM
+mntruell
 mo
 mobile
 mocha
@@ -6758,6 +6777,7 @@ one-page
 one-pager
 one-pagers
 one-paragraph
+one-time
 one-to-one
 one-user
 one-verb
@@ -7721,6 +7741,7 @@ prototype-based
 prototypes
 prototyping
 proud
+proudly
 prove
 proved
 proven
@@ -8872,6 +8893,7 @@ several
 severe
 severely
 severity
+sew
 SEWORLD
 sex
 sexes
@@ -9074,6 +9096,7 @@ skinparam
 skip
 skipped
 skipping
+skirt
 skirts
 skogstad
 skype
@@ -9736,6 +9759,8 @@ tactics
 tag
 tagged
 tags
+tailor
+tailors
 take
 take-away
 taken
@@ -10084,6 +10109,7 @@ tops
 torrent
 torrents
 torvalds
+toss
 tostring
 total
 totally
@@ -10934,6 +10960,7 @@ world
 world-class
 worlds
 worldwide
+worn
 worried
 worries
 worry
