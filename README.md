@@ -9,12 +9,11 @@
 [![My Twitter](https://img.shields.io/badge/Twitter-follow-active?logo=twitter)](https://twitter.com/intent/follow?screen_name=yegor256)
 [![My Telegram](https://img.shields.io/badge/Telegram-subscribe-active?logo=telegram)](https://t.me/yegor256news)
 
-This repository contains the sources of my
-blog: [www.yegor256.com](https://www.yegor256.com)
+This repository contains the sources of my blog: [www.yegor256.com]
 (the backup URL is [this one](https://yegor256.github.io/blog)).
 
 My book [_256 Bloghacks_](https://www.yegor256.com/256-bloghacks.html)
-explains how this blog is built and maintained.
+  explains how this blog is built and maintained.
 
 You are welcome to submit corrections to this blog. In order to do that,
 you will need [Ruby](https://www.ruby-lang.org/en/) 3.0+,
@@ -40,3 +39,5 @@ docker build . -t blog
 docker run -it --rm -v "$(pwd):/b" -p 4000:4000 blog \
   'cd /b && bundle lock && bundle update && bundle exec jekyll serve --trace --host=0.0.0.0'
 ```
+
+[www.yegor256.com]: https://www.yegor256.com
