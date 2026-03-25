@@ -17,9 +17,7 @@ My book [_256 Bloghacks_](https://www.yegor256.com/256-bloghacks.html)
 
 You are welcome to submit corrections to this blog. In order to do that,
 you will need [Ruby](https://www.ruby-lang.org/en/) 3.0+,
-[Bundler](https://bundler.io/),
-Woff2,
-and [PlantUML](http://plantuml.com/) installed.
+[Bundler](https://bundler.io/), Woff2, and [PlantUML] installed.
 Then, run this:
 
 ```bash
@@ -41,3 +39,4 @@ docker run -it --rm -v "$(pwd):/b" -p 4000:4000 blog \
 ```
 
 [www.yegor256.com]: https://www.yegor256.com
+[PlantUML]: http://plantuml.com/
