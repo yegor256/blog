@@ -1,0 +1,47 @@
+% SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
+% SPDX-License-Identifier: MIT
+
+\documentclass{yb}
+\usepackage{fontspec}
+\newfontfamily\cambriaFont{Cambria}[
+  Path=../fonts/cambria/,
+  Extension=.ttf,
+  UprightFont=2EAA54_2_0
+]
+\newfontfamily\cmuSerifFont{CMU Serif}
+\newfontfamily\cmuSansFont{CMU Sans Serif}
+\newfontfamily\cmuMonoFont{CMU Typewriter Text}
+
+\begin{document}
+\sffamily
+
+Fonts:
+\begin{itemize}
+\item {\cambriaFont Cambria}
+\item {\cmuSerifFont CMU Serif} + {\cmuSansFont CMU Sans Serif}
+\item Molot
+\item {\cmuMonoFont CMU Typewriter Text}
+\end{itemize}
+
+\newcommand\clr[2]{
+  #1:
+  \definecolor{yb#1}{HTML}{#2}
+  \colorbox{yb#1}{\textcolor{white}{#2}}}
+Colors:
+\begin{itemize}
+\item \clr{Black}{000000}
+\item \clr{Red}{cf021b}
+\item \clr{Blue}{053c5e}
+\item \clr{Orange}{d98324}
+\item \clr{Green}{31572c}
+\end{itemize}
+
+Style principles:
+\begin{itemize}
+\item No other colors except mentioned above and white
+\item No color gradients, only solid colors
+\item No color or bold in text, only italic for emphasis
+\item No more than two fonts and three colors in a document
+\end{itemize}
+
+\end{document}

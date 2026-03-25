@@ -1,4 +1,4 @@
-<img src="https://www.yegor256.com/images/icon.svg" width="64px" height="64px" />
+# This Is My Blog in Jekyll
 
 [![DevOps By Rultor.com](https://www.rultor.com/b/yegor256/blog)](https://www.rultor.com/p/yegor256/blog)
 
