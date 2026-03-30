@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 @use 'defs' as *;
+@use 'colors' as *;
 @use 'wrapper' as *;
 @use 'placeholders' as *;
 
@@ -23,7 +24,7 @@
 
   .disqus-thread {
     a {
-      color: steelblue;
+      color: $black;
       text-decoration: underline;
     }
   }

@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 @use 'defs' as *;
+@use 'colors' as *;
 @use 'placeholders' as *;
 
 code,
@@ -16,7 +17,7 @@ pre {
 }
 
 code {
-  background-color: lightgray;
+  background-color: $platinum;
   border-radius: 3 * $px;
   font-size: 90%;
   hyphens: none;
@@ -40,7 +41,7 @@ pre {
 }
 
 .highlighter-rouge pre {
-  border-left: 3 * $px solid lightgray;
+  border-left: 3 * $px solid $silver;
   margin-left: 2 * $em;
   padding-left: .5 * $em !important;
 
@@ -58,7 +59,7 @@ pre {
   }
 
   .c1 {
-    color: dimgray;
+    color: $gray;
   }
 }
 

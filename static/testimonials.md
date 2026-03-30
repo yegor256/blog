@@ -20,7 +20,7 @@ nospell: true
 
 {% badge /images/andreea/angry-testimonials.png 220 %}
 
-<strong class='red'>WARNING</strong>:
+**WARNING**:
 The text you are about to read is of a mature matter.
 Please be advised that the content may not be suitable for those
 under the age of 18.

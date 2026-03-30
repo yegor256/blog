@@ -6,6 +6,7 @@
 
 @use "sass:color";
 @use 'defs' as *;
+@use 'colors' as *;
 @use 'placeholders' as *;
 @use 'disqus';
 @use 'fonts';
@@ -18,9 +19,7 @@
 
 .em2 { font-size: 2 * $em; }
 .center { text-align: center; }
-.green { color: darkgreen; }
-.red { color: firebrick; }
-.orange { color: orange; }
+.red { color: $red; }
 .gray { @extend %gray; }
 
 .desktop-only { @extend %desktop-only; }
@@ -41,8 +40,8 @@ twitter-widget { @extend %unprintable; }
 
 body {
   @extend %main-font;
-  background-color: white;
-  color: black;
+  background-color: $white;
+  color: $black;
   font-size: $em;
   height: 100%;
   margin: 0;
@@ -60,7 +59,7 @@ a:visited {
   text-decoration-thickness: $px;
   // scss-lint:enable PropertySpelling
   &.external {
-    text-decoration-color: $lightgray;
+    text-decoration-color: $silver;
     text-decoration-style: dotted;
   }
 
@@ -105,13 +104,14 @@ del {
       padding-left: 0;
 
       li {
-        border-left: 4 * $px solid darkgreen;
-        color: darkgreen;
+        border-left: 4 * $px solid $gray;
+        color: $gray;
         margin-bottom: $em;
         padding-left: $em;
 
         strong {
-          color: firebrick;
+          color: $black;
+          text-weight: normal;
         }
       }
     }
@@ -127,15 +127,15 @@ del {
 
       &.selected {
         a {
-          color: darkgreen;
+          color: $red;
           text-decoration: none;
         }
       }
 
       &.highlighted {
         a {
-          background-color: firebrick;
-          color: white;
+          background-color: $red;
+          color: $white;
           padding: 0 .3em;
           text-decoration: none;
         }
@@ -179,7 +179,7 @@ del {
 
     .hire {
       @extend %desktop-only;
-      color: darkgreen;
+      color: $gray;
       left: 50%;
       margin-left: 45 * $px;
       position: absolute;
@@ -189,7 +189,7 @@ del {
 
     .sub {
       @extend %desktop-only;
-      color: darkgreen;
+      color: $gray;
       margin-right: 45 * $px;
       position: absolute;
       right: 50%;
@@ -338,7 +338,7 @@ sub {
 hr {
   @extend %clear;
   border: 0;
-  border-top: 1 * $px solid $lightgray;
+  border-top: 1 * $px solid $silver;
   height: 0;
   margin-top: 2 * $em;
   text-align: left;
@@ -358,7 +358,7 @@ hr {
 
 blockquote {
   @extend %main-font-italic;
-  border-left: 3 * $px solid $lightgray;
+  border-left: 3 * $px solid $silver;
   margin-left: 1.5 * $em;
   padding-left: .5 * $em !important;
   position: relative;
@@ -385,9 +385,9 @@ figure {
   position: relative;
 
   figcaption {
-    background-color: $lightgray;
+    background-color: $silver;
     bottom: 1em;
-    color: silver;
+    color: $platinum;
     font-size: .8em;
     left: .5em;
     line-height: 1em;
@@ -407,7 +407,7 @@ figure {
 
 .tag {
   background-color: $gray;
-  color: white !important;
+  color: $white !important;
   font-family: $code-font;
   font-size: .8 * $em;
   margin-right: .2 * $em;
@@ -424,11 +424,11 @@ figure {
   }
 
   &:visited {
-    color: white !important;
+    color: $white !important;
   }
 
   &:hover {
-    background-color: black;
+    background-color: $black;
   }
 }
 
@@ -456,9 +456,9 @@ figure {
 // see 2015-11-03-chatbot-better-than-ui-for-microservices
 .bullet {
   @extend %main-font-bold;
-  background-color: white;
+  background-color: $white;
   border-radius: 50%;
-  color: sandybrown;
+  color: $gray;
   display: inline-block;
   font-size: .8em;
   height: 1em;
