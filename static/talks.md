@@ -18,8 +18,15 @@ keywords:
 nospell: true
 image: /images/andreea/yegor-is-presenting.png
 style: |
+  .green-mark { color: darkgreen; }
+  .red-mark { color: firebrick; }
+  .orange-mark { color: orange; }
   p.talk-event {
     clear: both;
+  }
+  p.talk-event strong {
+    font-weight: normal;
+    color: firebrick;
   }
   .future-talk {
     display: block;
@@ -118,8 +125,8 @@ OK, I'm kidding about the limo.
 This is a very opinionated and subjective list of conferences
 that I attended recently as a speaker. They rate us as speakers,
 so why shouldn't we rate them, right? The best grade is
-<span class="green">**A+**</span>, while the worst is
-<span class="red">**F-**</span>
+<span class="green-mark">**A+**</span>, while the worst is
+<span class="red-mark">**F-**</span>
 
 Statistically speaking, I've been speaking in
 <span id="total-cities">?</span> cities
@@ -130,7 +137,7 @@ I was also seen at [these events](/seen.html).
 
 ### 2025
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <img src="https://i.ytimg.com/vi/GPJ-LfRpxM4/mqdefault.jpg" class="past-talk" alt="Что защитит наш код от искусственного интеллекта?"/>
 **Что защитит наш код от искусственного интеллекта?**;
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
@@ -142,7 +149,7 @@ I enjoyed being there.
 [video](https://www.youtube.com/watch?v=GPJ-LfRpxM4).
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/hkK8bvvz9OI/mqdefault.jpg" class="past-talk" alt="XX Ершовская лекция по информатике и программированию"/>
 **Взлет и падение объектно-ориентированного программирования**;
 [Ершовские лекции в НГУ](https://www.iis.nsk.su/ershov_lectures/2025);
@@ -155,7 +162,7 @@ Would definitely love to visit them again.
 
 ### 2024
 
-<span class="venue-rate green">B+</span>
+<span class="venue-rate green-mark">B+</span>
 <img src="https://i.ytimg.com/vi/VZDBG-BInWo/mqdefault.jpg" class="past-talk" alt="ITPurpleConf 2024"/>
 **Далеко ли до Стэнфорда**;
 [ITPurpleConf 2024](https://fpmiconf.ru/);
@@ -166,7 +173,7 @@ there and hope that they will continue organizing it every year.
 [video](https://www.youtube.com/watch?v=VZDBG-BInWo).
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/wO0pQWOX-Lk/mqdefault.jpg" class="past-talk" alt="ProIT Fest 2024"/>
 **Добро пожаловать в RnD**;
 [ProIT Fest 2024](https://proitfest.ru/);
@@ -180,7 +187,7 @@ in the next events.
 
 ### 2023
 
-<span class="venue-rate green">B+</span>
+<span class="venue-rate green-mark">B+</span>
 <img src="https://i.ytimg.com/vi/gHznfuhRR60/mqdefault.jpg" class="past-talk" alt="AIIN 2023"/>
 **Robots vs. Programmers**;
 [AIIN 2023](https://aiconf.innopolis.ru/eng);
@@ -194,7 +201,7 @@ to meet Russian researchers, who challenge world-size problems;
 
 ### 2022
 
-<span class="venue-rate orange">C+</span>
+<span class="venue-rate orange-mark">C+</span>
 <img src="https://i.ytimg.com/vi/KCLECWhB1-w/mqdefault.jpg" class="past-talk" alt="CIPR 2022"/>
 **Готовы ли мы к роботам, а они к нам?**;
 [CIPR 2022](https://cipr.ru);
@@ -205,7 +212,7 @@ to meet Russian researchers, who challenge world-size problems;
 
 ### 2021
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <!-- <img src="https://d3373sevsv1jc.cloudfront.net/uploads/communities_production/community/logo/33/4e737ad5-424b-468b-ac30-d62efefaa073.png" class="past-talk" alt="EngX Z-Day 2021"/> -->
 **Code Line No. 0**;
 [ENGX Z-DAY 2021](https://community-z.com/events/engx-z-day-2021);
@@ -214,7 +221,7 @@ to meet Russian researchers, who challenge world-size problems;
 [video](https://community-z.com/events/engx-z-day-2021/talks/16491).
 {: .talk-event}
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <img src="https://i.ytimg.com/vi/PJAzfQtxby4/mqdefault.jpg" class="past-talk" alt="code/R 2021"/>
 **Анализ качества кода и почему он не работает?**;
 &lt;code/R&gt;;
@@ -223,7 +230,7 @@ to meet Russian researchers, who challenge world-size problems;
 [видео](https://www.youtube.com/watch?v=PJAzfQtxby4).
 {: .talk-event}
 
-<span class="venue-rate green">A+</span>
+<span class="venue-rate green-mark">A+</span>
 <img src="https://i.ytimg.com/vi/RyTR9vYZj0o/mqdefault.jpg" class="past-talk" alt="Ruby Russia 2021"/>
 **Твой первый Ruby Gem**;
 [Ruby Russia](https://rubyrussia.club/);
@@ -232,7 +239,7 @@ to meet Russian researchers, who challenge world-size problems;
 [видео](https://youtu.be/RyTR9vYZj0o)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/9dydfF_B4DE/mqdefault.jpg" class="past-talk" alt="HighLoad++ 2020"/>
 **Decentralized Architectures: Blockchain and Beyond**;
 [HighLoad++](https://www.highload.ru/spring/2021/abstracts/6620);
@@ -242,7 +249,7 @@ to meet Russian researchers, who challenge world-size problems;
 {: .talk-event}
 ### 2020
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/aYXuK2do6FA/mqdefault.jpg" class="past-talk" alt="TestCon 2020"/>
 **Testing and Testers**;
 [TestCon](https://testconf.ru/);
@@ -251,7 +258,7 @@ to meet Russian researchers, who challenge world-size problems;
 [видео](https://www.youtube.com/watch?v=aYXuK2do6FA)
 {: .talk-event}
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <img src="https://i.ytimg.com/vi/jiJxA37hmsQ/mqdefault.jpg" class="past-talk" alt="TeamLeadConf 2020"/>
 **My experience of 1000 interviews**;
 [TeamLeadConf](http://teamleadconf.ru/moscow/2020);
@@ -263,7 +270,7 @@ to meet Russian researchers, who challenge world-size problems;
 
 ### 2019
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/w3yJUtgr-yA/mqdefault.jpg" class="past-talk" alt="ProductFest 2019"/>
 **On Requirements Management**;
 [ProductFest](https://productfest.ru/moscow/2019);
@@ -273,7 +280,7 @@ to meet Russian researchers, who challenge world-size problems;
 [slides](https://www.slideshare.net/YegorBugayenko/on-requirements-management-demotivate-them-right)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/0N-CevixhsA/mqdefault.jpg" class="past-talk" alt="DevOpsConf 2019"/>
 **Reversive Decentralized Deployment: Zold Cryptocurrency Example**;
 [DevOpsConf](http://devopsconf.io/moscow/2019/abstracts/5589);
@@ -282,7 +289,7 @@ to meet Russian researchers, who challenge world-size problems;
 [видео](https://www.youtube.com/watch?v=0N-CevixhsA)
 {: .talk-event}
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <img src="https://i.ytimg.com/vi/6DrD_FucDK4/mqdefault.jpg" class="past-talk" alt="Saint Teamlead Conf 2019"/>
 **Are You Sure You Are Not a Micromanager?**
 [Saint Teamlead Conf](https://teamleadconf.ru/spb/2019);
@@ -292,7 +299,7 @@ to meet Russian researchers, who challenge world-size problems;
 [slides](https://www.slideshare.net/YegorBugayenko/are-you-sure-you-are-not-a-micromanager-228232854)
 {: .talk-event}
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <img src="https://i.ytimg.com/vi/jZitXMQaXvE/mqdefault.jpg" class="past-talk" alt="QAFest 2019"/>
 **Quality Assurance vs. Testing**;
 [QA Fest](http://qafest.com/en/);
@@ -302,7 +309,7 @@ to meet Russian researchers, who challenge world-size problems;
 [slides](https://www.slideshare.net/YegorBugayenko/quality-assurance-vs-testing);
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/s7QCH17lQlY/mqdefault.jpg" class="past-talk" alt="QualityConf 2019"/>
 **Can Distributed Teams Deliver Quality?**
 [QualityConf'2019](http://qualityconf.ru/2019);
@@ -312,7 +319,7 @@ to meet Russian researchers, who challenge world-size problems;
 [slides](https://www.slideshare.net/YegorBugayenko/can-distributed-teams-deliver-quality)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/i84uvEWDeMc/mqdefault.jpg" class="past-talk" alt="AppsConf 2019"/>
 **Another Five Trends We Are Afraid Of**;
 [AppsConf'2019](http://appsconf.ru/moscow/2019);
@@ -321,7 +328,7 @@ to meet Russian researchers, who challenge world-size problems;
 [видео](https://youtu.be/i84uvEWDeMc)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/H0calDDfHL8/mqdefault.jpg" class="past-talk" alt="SECON 2019"/>
 **Правильно ли мы тестируем**;
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem);
@@ -331,7 +338,7 @@ to meet Russian researchers, who challenge world-size problems;
 [slides](https://www.slideshare.net/YegorBugayenko/typical-pitfalls-in-testing)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/vZtI1M2Uwco/mqdefault.jpg" class="past-talk" alt="SECON 2019"/>
 **Is Java Getting Better?**
 [SECON'2019](https://2019.secon.ru/reports/pravilno-li-my-testiruem);
@@ -341,7 +348,7 @@ to meet Russian researchers, who challenge world-size problems;
 [slides](https://www.slideshare.net/YegorBugayenko/is-java-getting-better)
 {: .talk-event}
 
-<span class="venue-rate green">A+</span>
+<span class="venue-rate green-mark">A+</span>
 <img src="https://i.ytimg.com/vi/VLaGrUsCbYo/mqdefault.jpg" class="past-talk" alt="Samara 2019"/>
 **Микротаскинг или как обмануть начальника**;
 [StartupSamara](https://startupsamara.timepad.ru/event/926814/);
@@ -350,7 +357,7 @@ to meet Russian researchers, who challenge world-size problems;
 [видео](https://youtu.be/VLaGrUsCbYo)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/9ynzUGZjKFk/mqdefault.jpg" class="past-talk" alt="JPoint 2019"/>
 **Software testing pitfalls**;
 [JPoint](https://www.youtube.com/watch?v=9ynzUGZjKFk);
@@ -360,7 +367,7 @@ to meet Russian researchers, who challenge world-size problems;
 [видео](https://www.youtube.com/watch?v=9ynzUGZjKFk)
 {: .talk-event}
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <img src="https://i.ytimg.com/vi/smThHyduuY0/mqdefault.jpg" class="past-talk" alt="CodeFest 2019"/>
 **Five Trends We Are Afraid Of**;
 [CodeFest](https://2019.codefest.ru/lecture/1515);
@@ -372,7 +379,7 @@ to meet Russian researchers, who challenge world-size problems;
 
 ### 2018
 
-<span class="venue-rate orange">C</span>
+<span class="venue-rate orange-mark">C</span>
 <img src="https://i.ytimg.com/vi/i1fGk8XJ7jI/mqdefault.jpg" class="past-talk" alt="Blockchain 2018"/>
 **Panel Discussion about Blockchain**;
 Blockchain Conference 2018;
@@ -381,7 +388,7 @@ Blockchain Conference 2018;
 [видео](https://youtu.be/i1fGk8XJ7jI)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/21vDI9L2kmI/mqdefault.jpg" class="past-talk" alt="DevOpsPro 2018"/>
 **How True Experts Manage Their Expertise**;
 [DevOpsPro](https://www.devopspro.ru/speakers/);
@@ -390,7 +397,7 @@ Blockchain Conference 2018;
 [видео](https://youtu.be/21vDI9L2kmI)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/y0X-WQ1bOUI/mqdefault.jpg" class="past-talk" alt="Bee Mobile 2018"/>
 **Software Testing Philosophy**;
 [Bee Mobile Meetup](https://www.facebook.com/events/1913869582250737/);
@@ -399,7 +406,7 @@ Blockchain Conference 2018;
 [видео](https://youtu.be/y0X-WQ1bOUI)
 {: .talk-event}
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <img src="https://i.ytimg.com/vi/55mwAbuDrV8/mqdefault.jpg" class="past-talk" alt="Joker Conf 2018"/>
 **Quality vs. Quantity**;
 [Joker Conf](https://2018.jokerconf.com/en/);
@@ -414,7 +421,7 @@ this year was the food---it was terrible, thanks to the venue providers (ExpoFor
 shame on them (that's why not A+). Aside from that, Joker rocks!
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/WwjU1ORdz4s/mqdefault.jpg" class="past-talk" alt="GeeCON Prague 2018"/>
 **Expertise vs Experts**;
 [GeeCON Prague](https://2018.geecon.cz/speakers/#bio);
@@ -429,7 +436,7 @@ the sound is not so perfect. Also, the focus of the event is not clear---it is
 just about tech in general? Anyway, I keep coming because I like the city.
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/d_gZUcpBdRM/mqdefault.jpg" class="past-talk" alt="AppsConf 2018"/>
 **Who Cares About Quality?**;
 [AppsConf](https://appsconf.ru/2018/abstracts/3721);
@@ -445,7 +452,7 @@ it did exist there. Would be great to see more attention paid to the quality
 of talks.
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/NFJNp5ke4CM/mqdefault.jpg" class="past-talk" alt="DevOpsConf 2018"/>
 **Quantity vs. Quality**;
 [DevOpsConf](https://devopsconf.io/moscow/2018/abstracts/3723);
@@ -460,7 +467,7 @@ event was focused enough on the DevOps subject. My talk wasn't really reviewed
 by any committee and I'm not sure it actually exists there
 {: .talk-event}
 
-<span class="venue-rate green">B+</span>
+<span class="venue-rate green-mark">B+</span>
 <img src="https://i.ytimg.com/vi/KCx1o_lSMkI/mqdefault.jpg" class="past-talk" alt="DevOpsDays Boston 2018"/>
 **Expertise vs Experts**;
 [DevOpsDays Boston 2018](https://www.devopsdays.org/events/2018-boston/speakers/yegor-bugayenko/);
@@ -477,7 +484,7 @@ which is the most important factor, was rather interested
 and engaged. I will definitely try to attend again
 {: .talk-event}
 
-<span class="venue-rate orange">C-</span>
+<span class="venue-rate orange-mark">C-</span>
 <!-- <img src="https://obs.com.ua/images/obs2.svg" class="past-talk" alt="Odessa Blockchain Summit 2018"/> -->
 **Zold: Experimental Cryptocurrency Without Blockchain**;
 [Odessa Blockchain Summit](https://obs.com.ua/);
@@ -490,7 +497,7 @@ lobby. Also, the video recordings of our talks were lost, for some reason. And I
 filming myself :( That's sad
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/MCaKPYBMXyI/mqdefault.jpg" class="past-talk" alt="CryptoBBQ 2018"/>
 **Life Without Blockchain**;
 CryptoBBQ;
@@ -512,7 +519,7 @@ organizers (my case) or paid. Maybe it's inevitable in the area of cryptocurrenc
 [видео](https://www.youtube.com/watch?v=klCNgqlAflI)
 {: .talk-event}
 
-<span class="venue-rate green">B+</span>
+<span class="venue-rate green-mark">B+</span>
 <img src="https://i.ytimg.com/vi/_cdni0NMus0/mqdefault.jpg" class="past-talk" alt="DevExperience 2018"/>
 **Math of Love?**;
 DevExperience 2018;
@@ -548,7 +555,7 @@ DevExperience 2018;
 [видео-2](https://www.youtube.com/watch?v=ZhWOlaMqppM)
 {: .talk-event}
 
-<span class="venue-rate green">B+</span>
+<span class="venue-rate green-mark">B+</span>
 <img src="https://i.ytimg.com/vi/6mfo_FHL3PE/mqdefault.jpg" class="past-talk" alt="DevTernity 2017"/>
 **How Much Do You Cost?**
 [DevTernity 2017](https://devternity.com/);
@@ -565,7 +572,7 @@ me with other speakers. Aside from that, they are definitely growing, I will
 try to attend next year
 {: .talk-event}
 
-<span class="venue-rate green">B+</span>
+<span class="venue-rate green-mark">B+</span>
 <img src="https://i.ytimg.com/vi/3QT7jaoOa9w/mqdefault.jpg" class="past-talk" alt="DotNext 2017"/>
 **TDD Upside Down**;
 [DotNext 2017](https://dotnext.ru/en/);
@@ -591,7 +598,7 @@ activity around the talks
 [видео](https://www.youtube.com/watch?v=VQtdNQd7wIU)
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/nVmRY4Ri4CA/mqdefault.jpg" class="past-talk" alt="PgDay 2017"/>
 **PostgreSQL + Liquibase + Docker + Maven + Java = Integration Tests**;
 [PgDay 2017](https://pgday.ru/ru/2017/speakers/136);
@@ -605,7 +612,7 @@ St. Petersburg. The equipment was not of a high quality. The food was great,
 the audience was well prepared, the organizers were friendly.
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/cv23Z6xpwDw/mqdefault.jpg" class="past-talk" alt="JDK.IO 2017"/>
 **Java Annotations Are a Bad Idea**;
 [JDK IO 2017](https://www.jdk.io/);
@@ -620,7 +627,7 @@ attendees. This year there were just two tracks, about 80 people at my talk.
 Will be glad to visit again
 {: .talk-event}
 
-<span class="venue-rate orange">C+</span>
+<span class="venue-rate orange-mark">C+</span>
 <img src="https://i.ytimg.com/vi/oiNI2jF46h0/mqdefault.jpg" class="past-talk" alt="BDMSummit 2017 Summer"/>
 **Make Customers Trust You**;
 BDMSummit 2017;
@@ -633,7 +640,7 @@ in the room, even though my talk was one of the first. The venue was
 average, the organization was good, the food was tasty
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/Rip_04Bv3Jk/mqdefault.jpg" class="past-talk" alt="PMCon 2017"/>
 **How to Be Honest and Keep a Client**;
 PMCon Kharkiv 2017;
@@ -648,7 +655,7 @@ a better warming up social procedures would be helpful next year. Would be
 glad to attend again, if they invite
 {: .talk-event}
 
-<span class="venue-rate green">A-</span>
+<span class="venue-rate green-mark">A-</span>
 <img src="https://i.ytimg.com/vi/1bAixLaOCSA/mqdefault.jpg" class="past-talk" alt="JavaDay Minsk 2017"/>
 **Object Oriented JUnit Tests**;
 [JavaDay Minsk 2017](http://javaday.by/);
@@ -687,7 +694,7 @@ Will try to attend next year
 [slides](https://www.slideshare.net/YegorBugayenko/how-much-do-you-cost)
 {: .talk-event}
 
-<span class="venue-rate orange">C-</span>
+<span class="venue-rate orange-mark">C-</span>
 <img src="https://i.ytimg.com/vi/DLk_5BmgTVk/mqdefault.jpg" class="past-talk" alt="Kyiv Outsourcing Forum 2017"/>
 **How to Avoid Outsourcing Disaster**;
 [Kyiv Outsourcing Forum 2017](http://outsourceforum.org/);
@@ -700,7 +707,7 @@ low quality, and the audience was pretty much random. Maybe that's because
 of the subject, or the time of the year
 {: .talk-event}
 
-<span class="venue-rate orange">C</span>
+<span class="venue-rate orange-mark">C</span>
 <img src="https://i.ytimg.com/vi/HSh_Gpnn6fo/mqdefault.jpg" class="past-talk" alt="GeeCON 2017"/>
 **What's This InterruptedException About?**;
 [GeeCON 2017](https://geecon.org/);
@@ -713,7 +720,7 @@ The food was average, the accommodation too. The key issue was the lack
 of social connection between speakers and attendees
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/IGbteQpTNCA/mqdefault.jpg" class="past-talk" alt="RigaDevDays 2017"/>
 **How Bright Is Your Future?**;
 [RigaDevDays 2017](http://rigadevdays.lv/);
@@ -736,7 +743,7 @@ responses
 [slides](https://www.slideshare.net/YegorBugayenko/whats-wrong-with-objectoriented-programming)
 {: .talk-event}
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <img src="https://i.ytimg.com/vi/20QBvrHq6TA/mqdefault.jpg" class="past-talk" alt="JPoint 2017"/>
 **Java Annotations Are a Big Mistake**;
 JPoint 2017;
@@ -752,7 +759,7 @@ great if they could make their events more international and less "Russian-only.
 Aside from that, this is definitely an event I would try to attend again
 {: .talk-event}
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <img src="https://i.ytimg.com/vi/85B3FV_sB60/mqdefault.jpg" class="past-talk" alt="JBreak 2017"/>
 **Utility Classes Are Killing Us**;
 JBreak 2017;
@@ -768,7 +775,7 @@ even better event than JPoint. Maybe because I like smaller one-day events more 
 bigger ones that take a few days
 {: .talk-event}
 
-<span class="venue-rate green">B+</span>
+<span class="venue-rate green-mark">B+</span>
 <img src="https://i.ytimg.com/vi/MSBf2RftCKo/mqdefault.jpg" class="past-talk" alt="DevOn Summit 2017"/>
 **A Few Best Practices for Time-Wasting on a Software Team**;
 [DevOn Summit 2017](https://www.devonsummit.com/speakers/);
@@ -783,7 +790,7 @@ my subject, but that's how it has to be with the problem I'm discussing. I'll
 definitely recommend it next year
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/TLM9eN0b6zo/mqdefault.jpg" class="past-talk" alt="AgileDays 2017"/>
 **Избавляйтесь от экспертов**;
 AgileDays 2017;
@@ -806,7 +813,7 @@ AgileDays 2017;
 [видео](https://www.youtube.com/watch?v=biE86esgFAE)
 {: .talk-event}
 
-<span class="venue-rate orange">C</span>
+<span class="venue-rate orange-mark">C</span>
 <img src="https://i.ytimg.com/vi/lvoQZGsY56k/mqdefault.jpg" class="past-talk" alt="Kharkiv PMDay 2017"/>
 **Management Without Managers**;
 Kharkiv PMDay;
@@ -848,7 +855,7 @@ heard anything about me, etc
 [видео](https://www.youtube.com/watch?v=GQLFc-ttCX0)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/7EytYc7K5JA/mqdefault.jpg" class="past-talk" alt="DevTernity 2016"/>
 **XDSD: Meetings-Free Software Development Methodology**;
 [DevTernity 2016](http://devternity.com/#/11);
@@ -861,7 +868,7 @@ was the food and the lack of "social glue" between presenters, attendees, and
 everybody involved. I'm sure next year they will do it better
 {: .talk-event}
 
-<span class="venue-rate orange">C+</span>
+<span class="venue-rate orange-mark">C+</span>
 <img src="https://i.ytimg.com/vi/R1lA7pN60xg/mqdefault.jpg" class="past-talk" alt="BuildStuff Ukraine 2016"/>
 **Who Is a Software Architect?**;
 BuildStuff Ukraine 2016;
@@ -884,7 +891,7 @@ at my presentation&mdash;that was just sad. What I did like was the food
 [video](https://www.youtube.com/watch?v=wd-SA1HVmLg)
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/hkXLOxZ6Fs4/mqdefault.jpg" class="past-talk" alt="TopConf Tallinn 2016"/>
 **Seven Sins of a Software Project**;
 [TopConf 2016](http://topconf.com/tallinn-2016/speaker/yegor-bugayenko/);
@@ -905,7 +912,7 @@ the room was full
 [video](https://www.youtube.com/watch?v=mq4bsnKK0qs)
 {: .talk-event}
 
-<span class="venue-rate orange">C</span>
+<span class="venue-rate orange-mark">C</span>
 <img src="https://i.ytimg.com/vi/_61CuGhyv-o/mqdefault.jpg" class="past-talk" alt="DevOpsPro Moscow 2016"/>
 **A Practical Example of a One-Click Release**;
 [DevOpsPro Moscow 2016](https://www.devopspro.ru/yegor-bugayenko/);
@@ -926,7 +933,7 @@ interesting, but the audience wasn't really ready
 [видео 3](https://www.youtube.com/watch?v=03l8o2uu5K4)
 {: .talk-event}
 
-<span class="venue-rate orange">B+</span>
+<span class="venue-rate orange-mark">B+</span>
 <img src="https://i.ytimg.com/vi/tCr9dtGdi2c/mqdefault.jpg" class="past-talk" alt="XP Days Ukraine 2016"/>
 **XDSD: How Extreme Is Your Team?**;
 [XP Days Ukraine](http://xpdays.com.ua/);
@@ -940,7 +947,7 @@ However, my overall impression was very good; the organizers definitely know wha
 they are doing. I will try to attend again next year
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/03PXmPc7Q3g/mqdefault.jpg" class="past-talk" alt="Øredev 2016"/>
 **ORM Is an Offensive Anti-Pattern**;
 [Øredev 2016](https://www.oredev.org/2016/speakers/yegor-bugayenko);
@@ -968,7 +975,7 @@ Malmö, Sweden;
 [video](https://www.youtube.com/watch?v=EDKbYVEInMU)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/4SRoLYxvIQ8/mqdefault.jpg" class="past-talk" alt="JavaDay Kyiv 2016"/>
 **A Practical Example of AOP With Aspect (in Russian)**;
 JavaDay Kyiv 2016;
@@ -1018,7 +1025,7 @@ JavaDay Kyiv 2016;
 [video](https://www.youtube.com/watch?v=pynZF10U880)
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/3dJP_LtUGgg/mqdefault.jpg" class="past-talk" alt="SLC DevOpsDays 2016"/>
 **Eight Maturity Levels of Continuous Integration**;
 Salt Lake City DevOpsDays;
@@ -1032,7 +1039,7 @@ the audience. However, the venue was not comfortable at all
 (It was literally a church)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/6hOBfjJ2bpw/mqdefault.jpg" class="past-talk" alt="JavaDay 2016"/>
 **Java vs. OOP**;
 [JavaDay 2016](http://javaday.by/);
@@ -1049,7 +1056,7 @@ right after the presentation and throughout the rest of the day. However, the
 venue was not really comfortable, and the content was mostly outdated
 {: .talk-event}
 
-<span class="venue-rate green">A+</span>
+<span class="venue-rate green-mark">A+</span>
 <img src="https://i.ytimg.com/vi/7yTIWFZrXpg/mqdefault.jpg" class="past-talk" alt="GeekOUT 2016"/>
 **Chat Bots Architecture**;
 GeekOUT 2016;
@@ -1067,7 +1074,7 @@ there and in permanent contact with speakers. It's absolutely a must to be there
 again
 {: .talk-event}
 
-<span class="venue-rate orange">D</span>
+<span class="venue-rate orange-mark">D</span>
 <img src="https://i.ytimg.com/vi/vU_x6oK437I/mqdefault.jpg" class="past-talk" alt="NDC Oslo 2016"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**;
 NDC Oslo;
@@ -1082,7 +1089,7 @@ no focus on content, the audience wasn't prepared at all, and there were many
 sponsor booths. Besides that, I never even met the organizers
 {: .talk-event}
 
-<span class="venue-rate orange">C+</span>
+<span class="venue-rate orange-mark">C+</span>
 <img src="https://i.ytimg.com/vi/APCUGQlkO3U/mqdefault.jpg" class="past-talk" alt="ITEM 2016"/>
 **OOP Is Dead? Not Yet!**;
 [ITEM 2016](https://web.archive.org/web/20220625165228/https://item.com.ua/);
@@ -1116,7 +1123,7 @@ with love, but the venue and speakers, unfortunately, didn't play along
 [video](https://www.youtube.com/watch?v=4DCrWRuwxos)
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/ZVn7ufg-tk0/mqdefault.jpg" class="past-talk" alt="PMDay Lviv 2016"/>
 **Micromanagement**;
 [PMDay Lviv](http://pmday.com.ua/);
@@ -1132,7 +1139,7 @@ the number of speakers. It felt too crowded. Aside from that, I would definitely
 try to visit again
 {: .talk-event}
 
-<span class="venue-rate green">B+</span>
+<span class="venue-rate green-mark">B+</span>
 <img src="https://i.ytimg.com/vi/NflR7DKwxDY/mqdefault.jpg" class="past-talk" alt="DevOpsPro 2016"/>
 **Deployment Scripts Are Dead; Meet Rultor**;
 [DevOps Pro](http://devopspro.lt/);
@@ -1146,7 +1153,7 @@ with the content. It looked like they paid too much attention to logistics
 and forgot about content. Aside from that, it's definitely a place to see again
 {: .talk-event}
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <img src="https://i.ytimg.com/vi/63tS3HNmhiE/mqdefault.jpg" class="past-talk" alt="JEEConf 2016"/>
 **ORM Is an Offensive Anti-Pattern**;
 [JEEConf 2016](http://jeeconf.com/speaker/yegor-bugayenko/);
@@ -1172,7 +1179,7 @@ very positive, and I definitely will try to attend it next year
 [video](https://www.youtube.com/watch?v=EnhRgXrHCC4)
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/nCGBgI1MNwE/mqdefault.jpg" class="past-talk" alt="DEVit 2016"/>
 **Need It Robust? Make It Fragile**;
 [DEVit 2016](http://devitconf.org/);
@@ -1188,7 +1195,7 @@ the schedule (my talk was delayed for more than 30 minutes), and an absence
 of focus on a specific subject. Aside from that, it was a positive experience
 {: .talk-event}
 
-<span class="venue-rate orange">C</span>
+<span class="venue-rate orange-mark">C</span>
 <img src="https://i.ytimg.com/vi/vOMqDcSXnT0/mqdefault.jpg" class="past-talk" alt="I T.A.K.E. Unconference 2016"/>
 **Microservices as Chat Bots**;
 [I T.A.K.E. Unconference 2016](http://itakeunconf.com/);
@@ -1213,7 +1220,7 @@ and my talk was delayed for more than 20 minutes
 [video](https://www.youtube.com/watch?v=p7m7_iiqaHI)
 {: .talk-event}
 
-<span class="venue-rate orange">C</span>
+<span class="venue-rate orange-mark">C</span>
 <img src="https://i.vimeocdn.com/video/584587968_590x332.webp" class="past-talk" alt="GeeCON 2016"/>
 **Fail Fast. Into User's Face**;
 [GeeCON](http://2016.geecon.org/speakers/info.html?id=120);
@@ -1233,7 +1240,7 @@ Besides that, the organization was rather formal and messy. There is a lot
 of room for improvement
 {: .talk-event}
 
-<span class="venue-rate orange">C+</span>
+<span class="venue-rate orange-mark">C+</span>
 <img src="https://i.ytimg.com/vi/Ht0JI41kA4I/mqdefault.jpg" class="past-talk" alt="Baltic DevOps 2016"/>
 **Continuous Integration May Have Negative Effects**;
 [Baltic DevOps](http://topconf.com/baltic-devops-2016/speaker/yegor-bugayenko/);
@@ -1249,7 +1256,7 @@ engaged nor prepared, as it seemed to me. I believe this event may improve
 and become better; the potential is definitely there
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/pt9uHp35fwM/mqdefault.jpg" class="past-talk" alt="NTPM 2016"/>
 **Meetings or Discipline**;
 [New Trends in Project Management](http://ntpm.pl/);
@@ -1265,7 +1272,7 @@ other speakers were delivering, though. I suspect that most of them were invited
 there because of their names
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/-Y4XS7ZtQ2g/mqdefault.jpg" class="past-talk" alt="JET Conference 2016"/>
 **An Immutable Object-Oriented Web Framework**;
 JET Conference;
@@ -1280,7 +1287,7 @@ that speakers were invited just because of their names, not the content they
 deliver. Aside from that, the impression was positive
 {: .talk-event}
 
-<span class="venue-rate green">A-</span>
+<span class="venue-rate green-mark">A-</span>
 <img src="https://i.ytimg.com/vi/aER4uwyFbqQ/mqdefault.jpg" class="past-talk" alt="JPoint 2016"/>
 **ORM - это обидно (ORM Is an Offensive Anti-Pattern)**;
 [JPoint 2016](http://javapoint.ru/en/);
@@ -1298,7 +1305,7 @@ known but working on something hot and interesting. Besides that, the event
 was perfect
 {: .talk-event}
 
-<span class="venue-rate green">A</span>
+<span class="venue-rate green-mark">A</span>
 <img src="https://i.ytimg.com/vi/F4N25kZ2zQU/mqdefault.jpg" class="past-talk" alt="JPoint 2016 Students Day"/>
 **Объектно-Ориентированное Вранье (Object-Oriented Lies)**;
 [Student Day](http://students.javapoint.ru/talks/bugaenko/)
@@ -1313,7 +1320,7 @@ my speech was screened beforehand. I even had to present it over Skype, and some
 corrections were received. I would suggest inviting new speakers&mdash;it seems there are almost the same faces every year
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/gL4XwP-EBOg/mqdefault.jpg" class="past-talk" alt="WEBIT.Festival 2016"/>
 **Continuous Integration May Have Negative Effects**;
 [WEBIT.Festival 2016](https://www.webit.bg/speaker.php?id=2128);
@@ -1328,7 +1335,7 @@ content. Speakers were talking about everything. I didn't even understand
 why my presentation was accepted there
 {: .talk-event}
 
-<span class="venue-rate green">B</span>
+<span class="venue-rate green-mark">B</span>
 <img src="https://i.ytimg.com/vi/b6r2W3P9vgY/mqdefault.jpg" class="past-talk" alt="NextBuild 2016"/>
 **Blame the Project**;
 NextBuild 2016<br/>
@@ -1344,7 +1351,7 @@ screening. Nobody checked my presentation beforehand, and I can only assume
 that the same happened to other speakers
 {: .talk-event}
 
-<span class="venue-rate green">B+</span>
+<span class="venue-rate green-mark">B+</span>
 <img src="https://i.ytimg.com/vi/xbovkm0tTn0/mqdefault.jpg" class="past-talk" alt="AgileEE 2016"/>
 **Meetings Are a Threat to Code Quality**;
 [AgileEE 2016](http://Kyiv2016.agileee.org/);
@@ -1358,7 +1365,7 @@ the content was rather poor. Most talks were rather boring and poorly prepared.
 Aside from that, everything else was good, and I liked being there
 {: .talk-event}
 
-<span class="venue-rate orange">C+</span>
+<span class="venue-rate orange-mark">C+</span>
 <img src="https://i.ytimg.com/vi/9j5pq71BS5U/mqdefault.jpg" class="past-talk" alt="Outsource People 2016"/>
 **Software Outsourcing, 10 Years Ahead Prediction**;
 Outsource People 2016;
@@ -1373,7 +1380,7 @@ The quality of the location was average, and my expenses
 were not reimbursed. Also, the content was not really well-prepared or monitored
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/dE0_j4Kk6jo/mqdefault.jpg" class="past-talk" alt="Agilia Conference 2016"/>
 **Meetings Help Us and Kill Our Projects**;
 [Agilia Conference 2016](http://agiliaconference.com/agilia-conference-2016/speakers/yegor-bugayenko/);
@@ -1388,7 +1395,7 @@ paid. The only problem was the content. Most presentations
 were rather boring and not well-prepared. Aside from that, I liked it
 {: .talk-event}
 
-<span class="venue-rate orange">C</span>
+<span class="venue-rate orange-mark">C</span>
 <img src="https://i.ytimg.com/vi/LB_YLWhGrco/mqdefault.jpg" class="past-talk" alt="SEDC 2016"/>
 **Meetings and Motivation, Friends or Enemies?**;
 SEDC 2016;
@@ -1404,7 +1411,7 @@ were fewer than a hundred people for four tracks. Just about 20 per
 presentation. It's not really a conference but more like a meetup
 {: .talk-event}
 
-<span class="venue-rate red">F-</span>
+<span class="venue-rate red-mark">F-</span>
 **Microservices as Chat Bots**;
 [CascadiaIT](http://casitconf.org/casitconf16/talks/);
 <span class="city">Seattle, WA</span>, <span class="country">USA</span>;
@@ -1419,7 +1426,7 @@ was the city, one of my favorites,&mdash;Seattle. Aside from that, it was
 a time-wasting event for me
 {: .talk-event}
 
-<span class="venue-rate green">B-</span>
+<span class="venue-rate green-mark">B-</span>
 <img src="https://i.ytimg.com/vi/QMcDa2eyRBY/mqdefault.jpg" class="past-talk" alt="Kyiv DevOps Day"/>
 **Need Robust Software? Make It Fragile**;
 [Kyiv DevOps Day](https://www.facebook.com/events/1492540384386929/);
@@ -1438,7 +1445,7 @@ is just trash. To be honest, the previous event at Fedoriv Hub was much better
 (I would give it an "A")
 {: .talk-event}
 
-<span class="venue-rate red">F</span>
+<span class="venue-rate red-mark">F</span>
 <img src="https://i.ytimg.com/vi/mHCwlZSlZeU/mqdefault.jpg" class="past-talk" alt="DeveloperWeek 2015"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**;
 [DeveloperWeek 2016](https://www.developerweek.com/);
@@ -1453,7 +1460,7 @@ subjects&mdash;anything that helped them make money selling
 tickets
 {: .talk-event}
 
-<span class="venue-rate red">F+</span>
+<span class="venue-rate red-mark">F+</span>
 <img src="https://i.ytimg.com/vi/Xj226o2xI9Y/mqdefault.jpg" class="past-talk" alt="DevNexus 2015"/>
 **Talk to Your Microservice Via a Chat Bot, Not UI**;
 [DevNexus 2016](https://web.archive.org/web/20170707220231/http://devnexus.com:80/s/speakers);
@@ -1471,7 +1478,7 @@ compensate travel expenses for speakers, even while making a lot of money
 on tickets. It was a waste of time and money
 {: .talk-event}
 
-<span class="venue-rate green">B+</span>
+<span class="venue-rate green-mark">B+</span>
 <img src="https://i.ytimg.com/vi/qRZYJGYdrwk/mqdefault.jpg" class="past-talk" alt="TECClub 2016"/>
 **XDSD: Meetings-Free Software Development Methodology**;
 [The Entrepreneurs' Club](https://www.facebook.com/events/166135913758018/);
@@ -1488,7 +1495,7 @@ I received a number of leads from this event
 
 ### 2015
 
-<span class="venue-rate orange">C+</span>
+<span class="venue-rate orange-mark">C+</span>
 <img src="https://i.ytimg.com/vi/6SfIc5ff-8U/mqdefault.jpg" class="past-talk" alt="DevOpsDays Warsaw 2015"/>
 **Continuous Integration May Have Negative Effects**;
 [DevOpsDays Warsaw 2015](http://devopsdays.pl/);
@@ -1503,7 +1510,7 @@ primarily to make money, which is always a downside. The location was rather
 bad&mdash;an old Soviet-time hotel
 {: .talk-event}
 
-<span class="venue-rate orange">D</span>
+<span class="venue-rate orange-mark">D</span>
 <img src="https://i.ytimg.com/vi/jUil-aTImgU/mqdefault.jpg" class="past-talk" alt="BuildStuff 2015"/>
 **How Do You Talk to Your Microservice?**;
 [BuildStuff 2015](http://buildstuff.com.ua/);
@@ -1518,7 +1525,7 @@ or any communication with speakers. These guys are just making money
 in a hyped market. It's a shame
 {: .talk-event}
 
-<span class="venue-rate orange">C</span>
+<span class="venue-rate orange-mark">C</span>
 <img src="/images/2015/dat-flock-2015.jpg" class="past-talk" alt="DATFlock 2015"/>
 **What Keeps Us Motivated and Why We Get Lazy**;
 Distributed Agile Teams, Flock 2015;
@@ -1531,7 +1538,7 @@ a very boring subject; maybe that's why the event was also rather slow, despite
 all the attempts of organizers to make it fun
 {: .talk-event}
 
-<span class="venue-rate orange">A</span>
+<span class="venue-rate orange-mark">A</span>
 <img src="https://i.ytimg.com/vi/2a2nWELIk-Y/mqdefault.jpg" class="past-talk" alt="Kyiv DevOps 2015"/>
 **Continuous Integration Is Dead**;
 [Kyiv DevOps Meetup](https://www.meetup.com/Kyiv-DevOps/events/224967053/);
@@ -1541,7 +1548,7 @@ all the attempts of organizers to make it fun
 [video](https://www.youtube.com/watch?v=2a2nWELIk-Y)
 {: .talk-event}
 
-<span class="venue-rate orange">B</span>
+<span class="venue-rate orange-mark">B</span>
 <img src="https://i.ytimg.com/vi/3IXk5yEJMIs/mqdefault.jpg" class="past-talk" alt="San Francisco DevOps 2015"/>
 **CI Is DEAD. Or Is It?!**;
 [San Francisco DevOps Meetup](https://www.meetup.com/San-Francisco-DevOps/events/221628916/);

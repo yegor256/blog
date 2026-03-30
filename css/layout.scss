@@ -415,11 +415,11 @@ figure {
   @extend %sans;
   background-color: $gray;
   color: $white !important;
-  display: inline;
+  display: inline-block;
   font-family: $sans;
   font-size: .8 * $em;
+  line-height: 1.15 * $em;
   margin-right: .2 * $em;
-  min-height: $em;
   padding: 0 .5 * $em;
   text-decoration: none;
   white-space: nowrap;
