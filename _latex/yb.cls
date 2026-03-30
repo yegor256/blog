@@ -5,6 +5,7 @@
 \ProvidesClass{yb}[21/4/2021 0.1.0 Template for my documents]
 \LoadClass[12pt]{article}
 \RequirePackage{xcolor}
+  \definecolor{yb-red}{RGB}{178,34,34}
   \definecolor{yb-gray}{RGB}{94,94,94}
 \RequirePackage{graphicx}
 \RequirePackage{svg}
