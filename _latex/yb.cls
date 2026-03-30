@@ -9,6 +9,12 @@
   \definecolor{yb-gray}{RGB}{94,94,94}
 \RequirePackage{graphicx}
 \RequirePackage{svg}
+\RequirePackage{fontspec}
+  \setmainfont{Cambria}[
+    Path=../fonts/cambria/,
+    Extension=.ttf,
+    UprightFont=2EAA54_2_0
+  ]
 \RequirePackage{microtype}
 \RequirePackage[absolute]{textpos}
   \TPGrid{16}{16}
@@ -49,8 +55,6 @@
   \endgroup\makeatother
 
 \newcommand\nospell[1]{#1}
-
-\renewcommand{\familydefault}{\sfdefault}
 
 \AtBeginDocument{%
   \setlength{\topskip}{0mm}

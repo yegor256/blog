@@ -8,9 +8,16 @@
   Extension=.ttf,
   UprightFont=2EAA54_2_0
 ]
-\newfontfamily\cmuSerifFont{CMU Serif}
-\newfontfamily\cmuSansFont{CMU Sans Serif}
-\newfontfamily\cmuMonoFont{CMU Typewriter Text}
+\newfontfamily\consolasFont{Consolas}[
+  Path=../fonts/consolas/,
+  Extension=.ttf,
+  UprightFont=Consolas-Regular
+]
+\newfontfamily\candaraFont{Candara}[
+  Path=../fonts/candara/,
+  Extension=.ttf,
+  UprightFont=Candara
+]
 \newfontfamily\molotFont{Molot}[
   Path=../fonts/molot/,
   Extension=.otf,
@@ -21,10 +28,10 @@
 
 Fonts:
 \begin{itemize}
-\item \href{https://fontlibrary.org/en/font/cmu-sans-serif}{{\cmuSansFont CMU Sans Serif}}
 \item \href{https://fonts.adobe.com/fonts/cambria}{{\cambriaFont Cambria}}
+\item \href{https://fonts.adobe.com/fonts/candara}{{\candaraFont Candara}}
+\item \href{https://fonts.adobe.com/fonts/consolas}{{\consolasFont Consolas}}
 \item \href{https://www.dafont.com/molot.font}{{\molotFont Molot}}
-\item {\cmuMonoFont CMU Typewriter Text}
 \end{itemize}
 
 \newcommand\clr[2]{
@@ -35,9 +42,9 @@ Colors:
 \begin{itemize}
 \item \clr{Red}{B22222}
 \item \clr{Black}{1B1212}
-\item \clr{Gray}{5E5E5E}
-\item \clr{Silver}{808080}
-\item \clr{Platinum}{B2B2B2}
+\item \clr{Gray}{5F5959}
+\item \clr{Silver}{B4B0B0}
+\item \clr{Platinum}{E1E0E0}
 \end{itemize}
 
 Style principles:

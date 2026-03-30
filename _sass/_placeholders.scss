@@ -20,18 +20,22 @@
 
 %strike { text-decoration: line-through; }
 
-%main-font {
-  font-family: $main-font;
+%serif {
+  font-family: $serif;
   font-style: normal;
   font-weight: normal;
 }
 
-%main-font-bold {
+%monospace {
+  font-family: $monospace;
   font-style: normal;
+  font-weight: normal;
 }
 
-%main-font-italic {
-  font-style: italic;
+%sans {
+  font-family: $sans;
+  font-style: normal;
+  font-weight: normal;
 }
 
 %desktop-only {

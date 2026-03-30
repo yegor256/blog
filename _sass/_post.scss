@@ -22,8 +22,7 @@ article {
     }
 
     strong {
-      color: $red;
-      font-weight: normal;
+      font-weight: bold;
     }
   }
 
@@ -69,7 +68,7 @@ article {
       border: 1 * $px solid $gray;
       color: $gray;
       display: none;
-      font-family: $code-font;
+      font-family: $monospace;
       font-size: .6 * $em;
       line-height: .7 * $em;
       padding: 0 .2 * $em;
@@ -124,7 +123,7 @@ article {
   @extend %unprintable;
 
   float: right;
-  font-family: $code-font;
+  font-family: $monospace;
   margin: .5 * $em -6 * $em .5 * $em $em;
   padding-left: .75 * $em;
   width: 15 * $em;
