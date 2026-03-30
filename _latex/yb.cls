@@ -50,6 +50,8 @@
 
 \newcommand\nospell[1]{#1}
 
+\renewcommand{\familydefault}{\sfdefault}
+
 \AtBeginDocument{%
   \setlength{\topskip}{0mm}
   \setlength{\parindent}{0pt}
