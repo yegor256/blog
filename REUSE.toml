@@ -23,6 +23,7 @@ path = [
     "**.png",
     "**.svg",
     "**.ttf",
+    "**.otf",
     "**.txt",
     "**.woff",
     "**.woff2",

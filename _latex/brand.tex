@@ -11,37 +11,42 @@
 \newfontfamily\cmuSerifFont{CMU Serif}
 \newfontfamily\cmuSansFont{CMU Sans Serif}
 \newfontfamily\cmuMonoFont{CMU Typewriter Text}
+\newfontfamily\molotFont{Molot}[
+  Path=../fonts/molot/,
+  Extension=.otf,
+  UprightFont=Molot
+]
 
 \begin{document}
 \sffamily
 
 Fonts:
 \begin{itemize}
-\item {\cambriaFont Cambria}
-\item {\cmuSerifFont CMU Serif} + {\cmuSansFont CMU Sans Serif}
-\item Molot
+\item \href{https://fontlibrary.org/en/font/cmu-sans-serif}{{\cmuSansFont CMU Sans Serif}}
+\item \href{https://fonts.adobe.com/fonts/cambria}{{\cambriaFont Cambria}}
+\item \href{https://www.dafont.com/molot.font}{{\molotFont Molot}}
 \item {\cmuMonoFont CMU Typewriter Text}
 \end{itemize}
 
 \newcommand\clr[2]{
   #1:
   \definecolor{yb#1}{HTML}{#2}
-  \colorbox{yb#1}{\textcolor{white}{#2}}}
+  \colorbox{yb#1}{\textcolor{white}{\texttt{#2}}}}
 Colors:
 \begin{itemize}
-\item \clr{Black}{000000}
-\item \clr{Red}{cf021b}
-\item \clr{Blue}{053c5e}
-\item \clr{Orange}{d98324}
-\item \clr{Green}{31572c}
+\item \clr{Black}{010101}
+\item \clr{Red}{B22222}
+\item \clr{Gray}{5E5E5E}
+\item \clr{Light}{808080}
+\item \clr{Silver}{A2A2A2}
 \end{itemize}
 
 Style principles:
 \begin{itemize}
 \item No other colors except mentioned above and white
 \item No color gradients, only solid colors
-\item No color or bold in text, only italic for emphasis
-\item No more than two fonts and three colors in a document
+\item No bold in text, only italic for emphasis
+\item No more than two fonts in a document
 \end{itemize}
 
 \end{document}

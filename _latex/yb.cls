@@ -5,11 +5,10 @@
 \ProvidesClass{yb}[21/4/2021 0.1.0 Template for my documents]
 \LoadClass[12pt]{article}
 \RequirePackage{xcolor}
-  \definecolor{yb-blue}{RGB}{5,60,94}
+  \definecolor{yb-gray}{RGB}{94,94,94}
 \RequirePackage{graphicx}
 \RequirePackage{svg}
 \RequirePackage{microtype}
-\RequirePackage{libertine}
 \RequirePackage[absolute]{textpos}
   \TPGrid{16}{16}
 \RequirePackage[top=2\TPVertModule, bottom=2\TPVertModule, left=3\TPHorizModule, right=2\TPHorizModule]{geometry}
@@ -25,7 +24,7 @@
   }}
   \fancyfoot[C]{
     \begin{textblock}{2}(0,0){
-      \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-blue, draw=none] (0,0) rectangle (2,16);
+      \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-gray, draw=none] (0,0) rectangle (2,16);
     }\end{textblock}
     % \ifnum\value{page}=1
     %   \begin{textblock}{2}[0,1](0,16){
