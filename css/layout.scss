@@ -7,9 +7,11 @@
 @use "sass:color";
 @use 'defs' as *;
 @use 'colors' as *;
+@use 'fonts' as *;
 @use 'placeholders' as *;
 @use 'disqus';
-@use 'fonts';
+@use 'cambria';
+@use 'cmu';
 @use 'highlight';
 @use 'ico';
 @use 'post';
@@ -92,7 +94,7 @@ del {
 
   .hot {
     @extend %unprintable;
-    font-family: 'Source Code Pro', monospace;
+    font-family: $code-font;
     font-size: 75%;
     line-height: $em;
     margin-bottom: 2 * $em;

@@ -1,52 +1,5 @@
 // SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
 
-@import 'https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500|Ubuntu+Mono:400';
-
-@font-face {
-  font-family: Cambria;
-  font-weight: normal;
-  font-style: normal;
-  src: local('Cambria'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_2_0.eot'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_2_0.eot?#iefix') format('embedded-opentype'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_2_0.woff2') format('woff2'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_2_0.woff') format('woff'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: Cambria;
-  font-weight: bold;
-  font-style: normal;
-  src: local('Cambria Bold'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_1_0.eot'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_1_0.eot?#iefix') format('embedded-opentype'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_1_0.woff2') format('woff2'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_1_0.woff') format('woff'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_1_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: Cambria;
-  font-weight: normal;
-  font-style: italic;
-  src: local('Cambria Italic'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_3_0.eot'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_3_0.eot?#iefix') format('embedded-opentype'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_3_0.woff2') format('woff2'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_3_0.woff') format('woff'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_3_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: Cambria;
-  font-weight: bold;
-  font-style: italic;
-  src: local('Cambria Bold Italic'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_0_0.eot'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_0_0.eot?#iefix') format('embedded-opentype'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_0_0.woff2') format('woff2'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_0_0.woff') format('woff'),
-    url('https://cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_0_0.ttf') format('truetype');
-}
+$main-font: 'Cambria', 'Georgia', 'Times New Roman', serif;
+$code-font: 'Computer Modern True Type', monospace;

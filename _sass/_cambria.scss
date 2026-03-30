@@ -1,0 +1,50 @@
+// SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
+// SPDX-License-Identifier: MIT
+
+@font-face {
+  font-family: Cambria;
+  font-weight: normal;
+  font-style: normal;
+  src: local('Cambria'),
+    url('/fonts/cambria/2EAA54_2_0.eot'),
+    url('/fonts/cambria/2EAA54_2_0.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/cambria/2EAA54_2_0.woff2') format('woff2'),
+    url('/fonts/cambria/2EAA54_2_0.woff') format('woff'),
+    url('/fonts/cambria/2EAA54_2_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Cambria;
+  font-weight: bold;
+  font-style: normal;
+  src: local('Cambria Bold'),
+    url('/fonts/cambria/2EAA54_1_0.eot'),
+    url('/fonts/cambria/2EAA54_1_0.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/cambria/2EAA54_1_0.woff2') format('woff2'),
+    url('/fonts/cambria/2EAA54_1_0.woff') format('woff'),
+    url('/fonts/cambria/2EAA54_1_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Cambria;
+  font-weight: normal;
+  font-style: italic;
+  src: local('Cambria Italic'),
+    url('/fonts/cambria/2EAA54_3_0.eot'),
+    url('/fonts/cambria/2EAA54_3_0.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/cambria/2EAA54_3_0.woff2') format('woff2'),
+    url('/fonts/cambria/2EAA54_3_0.woff') format('woff'),
+    url('/fonts/cambria/2EAA54_3_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Cambria;
+  font-weight: bold;
+  font-style: italic;
+  src: local('Cambria Bold Italic'),
+    url('/fonts/cambria/2EAA54_0_0.eot'),
+    url('/fonts/cambria/2EAA54_0_0.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/cambria/2EAA54_0_0.woff2') format('woff2'),
+    url('/fonts/cambria/2EAA54_0_0.woff') format('woff'),
+    url('/fonts/cambria/2EAA54_0_0.ttf') format('truetype');
+}

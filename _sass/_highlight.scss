@@ -3,15 +3,14 @@
 
 @use 'defs' as *;
 @use 'colors' as *;
+@use 'fonts' as *;
 @use 'placeholders' as *;
 
 code,
 pre {
   font-family: $code-font;
-  font-weight: 400;
 
   @media all and (max-width: $width) {
-    font-family: 'Ubuntu Mono', monospace;
     letter-spacing: -1 * $px;
   }
 }

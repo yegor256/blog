@@ -3,6 +3,7 @@
 
 @use 'defs' as *;
 @use 'colors' as *;
+@use 'fonts' as *;
 @use 'placeholders' as *;
 
 article {
@@ -21,7 +22,7 @@ article {
     }
 
     strong {
-      font-color: $red;
+      color: $red;
       font-weight: normal;
     }
   }
