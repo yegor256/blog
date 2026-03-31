@@ -34,7 +34,7 @@
   }}
   \fancyfoot[C]{
     \begin{textblock}{2}(0,0){
-      \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-gray, draw=none] (0,0) rectangle (2,16);
+      \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-silver, draw=none] (0,0) rectangle (2,16);
     }\end{textblock}
     % \ifnum\value{page}=1
     %   \begin{textblock}{2}[0,1](0,16){
@@ -71,7 +71,7 @@
 
 \newcommand\ybPrintPhoto{%
   \begin{textblock}{2.4}[1,0](14,1.5){
-    \includegraphics[width=\textwidth]{../images/face-1024x1024.jpg}
+    \includegraphics[width=\textwidth]{../images/face-monochrome-1024x1024.jpg}
   }\end{textblock}
 }
 
