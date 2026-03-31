@@ -129,7 +129,7 @@ I've got some of them and I'm planning to get more, even though I'm not really
 a programmer [on a payroll]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
 and I'm not going to be employed by any enterprise that
 cares about badges in
-[my CV](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume-boring.tex&command=pdflatex&trackId=1520166474432).
+[my CV](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fboring.tex&command=pdflatex&trackId=1520166474432).
 Still, I want more certificates. Why? Because I learn a lot when I pass them.
 Also when I fail (I have done, twice, up to now). There are two things certificates
 give you: 1) they help you fill up your knowledge gaps, and 2) they boost your

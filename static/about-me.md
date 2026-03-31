@@ -149,5 +149,5 @@ BTW, if you wonder why 256, the answer is simple---this is my [FIDOnet](https://
 I was [2:464/256](http://nodehist.fidonet.org.ua/?address=2%3A464%2F256) over there, and this is where my network presence has started.
 
 [cv]: https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume.tex&command=pdflatex&trackId=1520158941887
-[cv-boring]: https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume-boring.tex&command=pdflatex&trackId=1520166474432
+[cv-boring]: https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fboring.tex&command=pdflatex&trackId=1520166474432
 [026E65F3]: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x82a1a9d03a09b8334650940fb8283801026e65f3
