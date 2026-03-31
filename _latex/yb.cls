@@ -5,15 +5,18 @@
 \ProvidesClass{yb}[21/4/2021 0.1.0 Template for my documents]
 \LoadClass[12pt]{article}
 \RequirePackage{xcolor}
-  \definecolor{yb-red}{RGB}{178,34,34}
-  \definecolor{yb-gray}{RGB}{94,94,94}
+  \definecolor{yb-red}{HTML}{B22222}
+  \definecolor{yb-black}{HTML}{1B1212}
+  \definecolor{yb-gray}{HTML}{4F4949}
+  \definecolor{yb-silver}{HTML}{A4A0A0}
+  \definecolor{yb-platinum}{HTML}{E1E0E0}
 \RequirePackage{graphicx}
 \RequirePackage{svg}
 \RequirePackage{fontspec}
   \setmainfont{Cambria}[
     Path=../fonts/cambria/,
     Extension=.ttf,
-    UprightFont=2EAA54_2_0
+    UprightFont=regular
   ]
 \RequirePackage{microtype}
 \RequirePackage[absolute]{textpos}
@@ -57,6 +60,7 @@
 \newcommand\nospell[1]{#1}
 
 \AtBeginDocument{%
+  \color{yb-black}
   \setlength{\topskip}{0mm}
   \setlength{\parindent}{0pt}
   \setlength{\parskip}{5pt}

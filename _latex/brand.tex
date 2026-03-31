@@ -3,6 +3,7 @@
 
 \documentclass{yb}
 \usepackage{fontspec}
+\usepackage{svg}
 \newfontfamily\cambriaFont{Cambria}[
   Path=../fonts/cambria/,
   Extension=.ttf,
@@ -25,6 +26,10 @@
 ]
 
 \begin{document}
+
+\begin{textblock}{2.4}[1,0](14,1.5){
+  \includesvg[width=\textwidth]{../images/icon.svg}
+}\end{textblock}
 
 Fonts:
 \begin{itemize}
@@ -53,6 +58,7 @@ Style principles:
 \item No color gradients, only solid colors
 \item No bold in text, only italic for emphasis
 \item No more than two fonts in a document
+\item All human photos must be monochrome
 \end{itemize}
 
 \end{document}
