@@ -26,6 +26,7 @@ style: |
     margin-right: 1em;
     display: block;
     float: left;
+    filter: grayscale(100%);
   }
 ---
 

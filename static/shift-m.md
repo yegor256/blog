@@ -26,6 +26,7 @@ style: |
     margin-right: .5em;
     margin-top: 1em;
     border-radius: 50%;
+    filter: grayscale(100%);
   }
 ---
 

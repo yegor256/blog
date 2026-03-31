@@ -113,8 +113,9 @@ del {
         padding-left: $em;
 
         strong {
-          color: $black;
-          text-weight: normal;
+          color: $red;
+          font-style: normal;
+          font-weight: normal;
         }
       }
     }
@@ -176,6 +177,7 @@ del {
 
     .photo {
       border-radius: 50%;
+      filter: grayscale(100%);
       height: 80 * $px;
       width: 80 * $px;
     }
@@ -236,7 +238,9 @@ fieldset {
 
 b,
 strong {
-  font-weight: bold;
+  color: $red;
+  font-style: normal;
+  font-weight: normal;
 }
 
 h1 {
