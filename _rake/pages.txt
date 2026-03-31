@@ -20,7 +20,7 @@ p/10/index.html
 pdf
 pdf/2014/guard-article.pdf
 fonts
-fonts/cambria/2EAA54_0_0.woff
+fonts/cambria/regular.woff
 images
 images/face-256x256.jpg
 tag
