@@ -5,46 +5,26 @@
   font-family: Cambria;
   font-weight: normal;
   font-style: normal;
-  src: local('Cambria'),
-    url('/fonts/cambria/regular.eot'),
-    url('/fonts/cambria/regular.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/cambria/regular.woff2') format('woff2'),
-    url('/fonts/cambria/regular.woff') format('woff'),
-    url('/fonts/cambria/regular.ttf') format('truetype');
+  src: url('/fonts/cambria/regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Cambria;
   font-weight: bold;
   font-style: normal;
-  src: local('Cambria Bold'),
-    url('/fonts/cambria/bold.eot'),
-    url('/fonts/cambria/bold.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/cambria/bold.woff2') format('woff2'),
-    url('/fonts/cambria/bold.woff') format('woff'),
-    url('/fonts/cambria/bold.ttf') format('truetype');
+  src: url('/fonts/cambria/bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Cambria;
   font-weight: normal;
   font-style: italic;
-  src: local('Cambria Italic'),
-    url('/fonts/cambria/italic.eot'),
-    url('/fonts/cambria/italic.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/cambria/italic.woff2') format('woff2'),
-    url('/fonts/cambria/italic.woff') format('woff'),
-    url('/fonts/cambria/italic.ttf') format('truetype');
+  src: url('/fonts/cambria/italic.ttf') format('truetype');
 }
 
 @font-face {
   font-family: Cambria;
   font-weight: bold;
   font-style: italic;
-  src: local('Cambria Bold Italic'),
-    url('/fonts/cambria/bitalic.eot'),
-    url('/fonts/cambria/bitalic.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/cambria/bitalic.woff2') format('woff2'),
-    url('/fonts/cambria/bitalic.woff') format('woff'),
-    url('/fonts/cambria/bitalic.ttf') format('truetype');
+  src: url('/fonts/cambria/both.ttf') format('truetype');
 }
