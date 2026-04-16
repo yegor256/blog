@@ -13,11 +13,27 @@
 \RequirePackage{graphicx}
 \RequirePackage{svg}
 \RequirePackage{fontspec}
-  \setmainfont{Cambria}[
+  \newfontfamily\cambriaFont{Cambria}[
     Path=../fonts/cambria/,
     Extension=.ttf,
-    UprightFont=regular
+    UprightFont=cambria-regular
   ]
+  \newfontfamily\consolasFont{Consolas}[
+    Path=../fonts/consolas/,
+    Extension=.ttf,
+    UprightFont=consolas-regular
+  ]
+  \newfontfamily\candaraFont{Candara}[
+    Path=../fonts/candara/,
+    Extension=.ttf,
+    UprightFont=candara-regular
+  ]
+  \newfontfamily\molotFont{Molot}[
+    Path=../fonts/molot/,
+    Extension=.otf,
+    UprightFont=molot-regular
+  ]
+  \setmainfont{Cambria}
 \RequirePackage{microtype}
 \RequirePackage[absolute]{textpos}
   \TPGrid{16}{16}
