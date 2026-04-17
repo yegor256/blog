@@ -52,7 +52,8 @@ module Yegor
       hash = orig_to_liquid
       count = data['posts'].size
       tag = data['tag']
-      hash['title'] = "#{count} Blog Posts About \"#{tag}\""
+      words = %w[Zero One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve]
+      hash['title'] = "#{count < 13 ? words[count] : count} Blog Posts About \"#{tag}\""
       hash['tag'] = tag
       hash['description'] = [
         "This collection of #{count} blog posts about \"#{tag}\"",

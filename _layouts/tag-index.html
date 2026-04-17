@@ -13,11 +13,15 @@ description: |
   .ico-large { height: 10em; }
 </style>
 
+{% assign words = "Zero,One,Two,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Eleven,Twelve" | split: "," %}
+{% assign count = page.posts.size %}
+{% if count < 13 %}{% assign count_word = words[count] %}{% else %}{% assign count_word = count %}{% endif %}
+
 <section itemscope="" itemtype="http://schema.org/BlogPosting">
   <div class="wrapper">
     <header itemprop="name">
       {% if page.tag == 'oop' %}
-        <h1>{{ page.posts.size }} Posts About Object-Oriented Programming (OOP)</h1>
+        <h1>{{ count_word }} Posts About Object-Oriented Programming (OOP)</h1>
         <p>
           <a href="https://www.elegantobject.org"><img alt="Elegant Objects logo"
             src="/images/books/elegant-objects/cactus.svg" class="float-ico ico-large"/></a>
@@ -25,7 +29,7 @@ description: |
           <a href="/elegant-objects.html">Elegant Objects</a> book series.
         </p>
       {% elsif page.tag == 'eolang' %}
-        <h1>{{ page.posts.size }} Posts About EOLANG, Experimental Pure Object-Oriented Language</h1>
+        <h1>{{ count_word }} Posts About EOLANG, Experimental Pure Object-Oriented Language</h1>
         <p>
           <a href="https://www.elegantobject.org"><img alt="Elegant Objects logo"
             src="/images/books/elegant-objects/cactus.svg" class="float-ico ico-large"/></a>
@@ -34,95 +38,95 @@ description: |
           or in our Telegram group: <a href="https://t.me/eolang_org">@eolang_org</a>.
         </p>
       {% elsif page.tag == 'tests' %}
-        <h1>{{ page.posts.size }} Posts About Tests and Automated Testing</h1>
+        <h1>{{ count_word }} Posts About Tests and Automated Testing</h1>
         <p>
           <a href="/books/angry-tests.html"><img alt="Angry Tests logo"
             src="/images/books/angry-tests/onion.svg" class="float-ico ico-large"/></a>
           You can learn more from the <a href="/books/angry-tests.html">Angry Tests</a> book series of mine.
         </p>
       {% elsif page.tag == 'management' %}
-        <h1>{{ page.posts.size }} Posts About Management</h1>
+        <h1>{{ count_word }} Posts About Management</h1>
         <p>
           <img alt="Code Ahead logo" src="/images/icons/mushroom.svg" class="float-ico ico-large"/>
         </p>
       {% elsif page.tag == 'java' %}
-        <h1>{{ page.posts.size }} Posts About Java&trade;</h1>
+        <h1>{{ count_word }} Posts About Java&trade;</h1>
         <p>
           <img alt="Java logo" src="/images/icons/java.svg" class="float-ico ico-medium"/>
         </p>
       {% elsif page.tag == 'ruby' %}
-        <h1>{{ page.posts.size }} Posts About Ruby</h1>
+        <h1>{{ count_word }} Posts About Ruby</h1>
         <p>
           <img alt="Ruby logo" src="/images/icons/ruby.svg" class="float-ico ico-medium"/>
         </p>
       {% elsif page.tag == 'maven' %}
-        <h1>{{ page.posts.size }} Posts About Apache Maven&trade;</h1>
+        <h1>{{ count_word }} Posts About Apache Maven&trade;</h1>
         <p>
           <img alt="Maven logo" src="/images/icons/maven.svg" class="float-ico ico-medium"/>
         </p>
       {% elsif page.tag == 'oss' %}
-        <h1>{{ page.posts.size }} Posts About Open Source</h1>
+        <h1>{{ count_word }} Posts About Open Source</h1>
         <p>
           <img alt="GitHub logo" src="/images/icons/github.svg" class="float-ico ico-medium"/>
         </p>
       {% elsif page.tag == 'sarcasm' %}
-        <h1>{{ page.posts.size }} Sarcastic Posts (don't take them too seriously ;)</h1>
+        <h1>{{ count_word }} Sarcastic Posts (don't take them too seriously ;)</h1>
         <p>
           <img alt="Sarcasm logo" src="/images/icons/sarcasm.png" class="float-ico ico-large"/>
         </p>
       {% elsif page.tag == 'career' %}
-        <h1>{{ page.posts.size }} Posts About Career Development</h1>
+        <h1>{{ count_word }} Posts About Career Development</h1>
         <p>
           <img alt="Career Development logo" src="/images/icons/career.svg" class="float-ico ico-medium"/>
         </p>
       {% elsif page.tag == 'etiquette' %}
-        <h1>{{ page.posts.size }} Posts About the Etiquette of Our Craftmanship</h1>
+        <h1>{{ count_word }} Posts About the Etiquette of Our Craftmanship</h1>
         <p>
           <img alt="Etiquette logo" src="/images/icons/etiquette.svg" class="float-ico ico-medium"/>
         </p>
       {% elsif page.tag == 'mood' %}
-        <h1>{{ page.posts.size }} Posts Written for Fun</h1>
+        <h1>{{ count_word }} Posts Written for Fun</h1>
       {% elsif page.tag == 'tdd' %}
-        <h1>{{ page.posts.size }} Posts About Test Driven Development (TDD)</h1>
+        <h1>{{ count_word }} Posts About Test Driven Development (TDD)</h1>
       {% elsif page.tag == 'xml' %}
-        <h1>{{ page.posts.size }} Posts About eXtensible Markup Language (XML)</h1>
+        <h1>{{ count_word }} Posts About eXtensible Markup Language (XML)</h1>
       {% elsif page.tag == 'aws' %}
-        <h1>{{ page.posts.size }} Posts About Amazon&trade; Web Services</h1>
+        <h1>{{ count_word }} Posts About Amazon&trade; Web Services</h1>
         <p>
           <img alt="AWS logo" src="/images/icons/aws.svg" class="float-ico ico-medium"/>
         </p>
       {% elsif page.tag == 'latex' %}
-        <h1>{{ page.posts.size }} Posts About LaTeX</h1>
+        <h1>{{ count_word }} Posts About LaTeX</h1>
         <p>
           <img alt="LaTeX logo" src="/images/icons/tex.svg" class="float-ico ico-small"/>
         </p>
       {% elsif page.tag == 'jekyll' %}
-        <h1>{{ page.posts.size }} Posts About Jekyll</h1>
+        <h1>{{ count_word }} Posts About Jekyll</h1>
         <p>
           <img alt="Jekyll logo" src="/images/icons/jekyll.svg" class="float-ico ico-medium"/>
         </p>
       {% elsif page.tag == 'pdd' %}
-        <h1>{{ page.posts.size }} Posts About Puzzle Driven Development (PDD)</h1>
+        <h1>{{ count_word }} Posts About Puzzle Driven Development (PDD)</h1>
         <p>
           <img alt="PDD logo" src="https://www.0pdd.com/images/logo.svg" class="float-ico ico-medium"/>
         </p>
       {% elsif page.tag == 'rultor' %}
-        <h1>{{ page.posts.size }} Posts About Rultor GitHub Chatbot</h1>
+        <h1>{{ count_word }} Posts About Rultor GitHub Chatbot</h1>
         <p>
           <img alt="Rultor logo" src="https://doc.rultor.com/images/logo.svg" class="float-ico ico-medium"/>
         </p>
       {% elsif page.tag == 'jcabi' %}
-        <h1>{{ page.posts.size }} Posts About JCabi Libraries</h1>
+        <h1>{{ count_word }} Posts About JCabi Libraries</h1>
         <p>
           <img alt="JCabi logo" src="https://www.jcabi.com/logo-square.svg" class="float-ico ico-medium"/>
         </p>
       {% elsif page.tag == 'business' %}
-        <h1>{{ page.posts.size }} Posts About Business and Startups</h1>
+        <h1>{{ count_word }} Posts About Business and Startups</h1>
         <p>
           <img alt="Business logo" src="/images/icons/business.svg" class="float-ico ico-mediumem"/>
         </p>
       {% elsif page.tag == 'zerocracy' %}
-        <h1>{{ page.posts.size }} Posts About Zerocracy&trade;</h1>
+        <h1>{{ count_word }} Posts About Zerocracy&trade;</h1>
         <p>
           <a href="https://www.zerocracy.com">
             <img alt="Zerocracy logo" src="https://www.zerocracy.com/svg/logo.svg" class="float-ico ico-medium"/></a>
@@ -133,7 +137,7 @@ description: |
           optimizes costs, and increases quality.
         </p>
       {% elsif page.tag == 'xdsd' %}
-        <h1>{{ page.posts.size }} Posts About eXtremely Distributed Software Development (XDSD&trade;) Methodology</h1>
+        <h1>{{ count_word }} Posts About eXtremely Distributed Software Development (XDSD&trade;) Methodology</h1>
         <p>
           <a href="https://www.xdsd.org/">
             <img alt="XDSD logo" src="https://www.xdsd.org/images/logo.svg" class="float-ico ico-medium"/></a>
@@ -144,7 +148,7 @@ description: |
       {% elsif page.tag == 'unknown' %}
         <h1>unknown</h1>
       {% else %}
-        <h1>{{ page.posts.size }} posts about &ldquo;{{ page.tag }}&rdquo;</h1>
+        <h1>{{ count_word }} posts about &ldquo;{{ page.tag }}&rdquo;</h1>
       {% endif %}
     </header>
     <article itemprop="articleBody">
