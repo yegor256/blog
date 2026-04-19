@@ -30,7 +30,7 @@
   ]
   \newfontfamily\molotFont{Molot}[
     Path=../fonts/molot/,
-    Extension=.otf,
+    Extension=.ttf,
     UprightFont=molot-regular
   ]
   \setmainfont{Cambria}
