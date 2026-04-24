@@ -13,8 +13,8 @@ module Yegor
     end
 
     def render(_context)
-      "<img src='http://latex.codecogs.com/svg.image?#{CGI.escape(@tex).gsub('+',
-                                                                             '%20')}' class='eqtn' alt='equation'/>"
+      "<img src='https://latex.codecogs.com/svg.image?#{CGI.escape(@tex).gsub('+',
+                                                                              '%20')}' class='eqtn' alt='equation'/>"
     end
   end
 end
