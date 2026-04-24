@@ -11,7 +11,7 @@ module Yegor
       list = page['keywords']
       list = [] if list.nil?
       raise "too many keywords in [#{page['url']}]: #{list}" if list.length > 8
-      raise "too few keywords in [#{page['title']}]: #{list.length}" if list.length > 1 && list.length < 3
+      raise "too few keywords in [#{page['title']}]: #{list.length}" if list.length.positive? && list.length < 3
       # list.each { |word|
       #   if page['content'].index(word).nil? && page['description'].index(word).nil?
       #     fail "keyword '#{word}' is not found in #{page['title']}"
