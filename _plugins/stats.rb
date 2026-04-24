@@ -118,7 +118,7 @@ module Jekyll
         cp ${tmp}/stats.svg ${src}/_site/stats.svg
         "
       )
-      raise 'failed to build gnuplot stats image' unless $CHILD_STATUS.exitstatus
+      raise 'failed to build gnuplot stats image' unless $CHILD_STATUS.success?
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'stats.svg')
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'words.txt')
       puts 'stats.svg generated'
