@@ -41,7 +41,6 @@ end
 
 def all_html
   Dir['_site/**/*.html']
-    .reject { |f| f.end_with?('.amp.html') }
     .reject { |f| f.start_with?('_site/en/') }
     .reject { |f| f.start_with?('_site/zh/') }
     .reject { |f| f.start_with?('_site/ru/') }
@@ -297,7 +296,6 @@ task orphans: [:build] do
     counts = {}
     links
       .grep(%r{.*/[0-9]{4}/[0-9]{2}/[0-9]{2}/.*})
-      .reject { |a| a.end_with?('.amp.html') }
       .reject { |a| a.include?('2009/03/04/pdd') }
       .reject { |a| a.include?('2017/05/02/unl') }
       .group_by(&:itself)

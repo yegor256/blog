@@ -12,28 +12,13 @@
   \definecolor{yb-platinum}{HTML}{E1E0E0}
 \RequirePackage{graphicx}
 \RequirePackage{svg}
+\RequirePackage{paratype}
 \RequirePackage{fontspec}
-  \newfontfamily\ptSerifFont{PT Serif}[
-    Path=../fonts/pt-serif/,
-    Extension=.ttf,
-    UprightFont=pt-serif-regular
-  ]
-  \newfontfamily\ptMonoFont{PT Mono}[
-    Path=../fonts/pt-mono/,
-    Extension=.ttf,
-    UprightFont=pt-mono-regular
-  ]
-  \newfontfamily\ptSansFont{PT Sans}[
-    Path=../fonts/pt-sans/,
-    Extension=.ttf,
-    UprightFont=pt-sans-regular
-  ]
   \newfontfamily\molotFont{Molot}[
     Path=../fonts/molot/,
     Extension=.ttf,
     UprightFont=molot-regular
   ]
-  \setmainfont{PT Serif}
 \RequirePackage{microtype}
 \RequirePackage[absolute]{textpos}
   \TPGrid{16}{16}
