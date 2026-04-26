@@ -11,6 +11,9 @@ description: |
   email per month and you can always unsubscribe.
 keywords:
   - unsubscribe
+  - mailing list
+  - email subscription
+  - newsletter
 ---
 
 Thanks for subscribing! I will send you an email soon (on the closest
