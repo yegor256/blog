@@ -8,15 +8,12 @@ module Yegor
   # The class
   class Img
     def initialize(src, _ctx)
-      if src.index('/').zero? && src.index('//') != 0
-        @url = src
-        raise "File doesn't exist: #{src}" unless
-          File.exist?("./_site#{src}") ||
-          File.exist?(".#{src}") ||
-          src.include?('gnuplot')
-      else
-        @url = src
-      end
+      @url = src
+      return unless src.start_with?('/') && !src.start_with?('//')
+      raise "File doesn't exist: #{src}" unless
+        File.exist?("./_site#{src}") ||
+        File.exist?(".#{src}") ||
+        src.include?('gnuplot')
     end
 
     def to_s

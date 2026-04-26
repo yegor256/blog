@@ -210,7 +210,7 @@ task spell: [:build] do
     end
     unless typos.zero?
       puts "All typos:\n  #{bad_words.uniq.join("\n  ")}"
-      raise "#{typos.size} typo(s) in #{bad_pages} pages"
+      raise "#{typos} typo(s) in #{bad_pages} pages"
     end
     throw :'No spelling errors'
   end
