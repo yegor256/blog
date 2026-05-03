@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-05-03T08:34:50+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fast Software: More Programmers, Not Fewer</title><link href="https://www.yegor256.com/2026/03/05/fast-software.html" rel="alternate" type="text/html" title="Fast Software: More Programmers, Not Fewer" /><published>2026-03-05T00:00:00+00:00</published><updated>2026-03-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/03/05/fast-software</id><content type="html" xml:base="https://www.yegor256.com/2026/03/05/fast-software.html"><![CDATA[<p>When I was five years old, I inherited the shoes of my older brother.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-05-03T10:10:50+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fast Software: More Programmers, Not Fewer</title><link href="https://www.yegor256.com/2026/03/05/fast-software.html" rel="alternate" type="text/html" title="Fast Software: More Programmers, Not Fewer" /><published>2026-03-05T00:00:00+00:00</published><updated>2026-03-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/03/05/fast-software</id><content type="html" xml:base="https://www.yegor256.com/2026/03/05/fast-software.html"><![CDATA[<p>When I was five years old, I inherited the shoes of my older brother.
 Not because our family was poor, but because the shoes were good.
 My grandma told me that when she was a fiancée her dowry consisted of a few skirts.
 Not because she was poor.
@@ -33,7 +33,7 @@ Look at what Jack Dorsey <a href="https://x.com/jack/status/2027129697092731343"
 <p>Large companies indeed will fire programmers, but not because the new world doesn’t need human coders.
 It’s because the new world doesn’t need <em>large</em> software companies.</p>
 
-<aside class="quote">We’ll toss our software, not update it.
+<aside class="quote">We’ll toss our software, not update it
 </aside>
 
 <p>What the world is looking forward to is a <em>devaluation</em> of software craftsmanship.
@@ -148,7 +148,7 @@ Meanwhile, the browser must juggle layout stabilization, loading indicators, and
 
 <p>What was once a solution for small DOM updates, in an era of slow browsers and unreliable networks, has turned into a dead-end for web design.</p>
 
-<aside class="quote">State belongs on the server while HTML is the primary delivery artifact, not JSON.
+<aside class="quote">State belongs on the server while HTML is the primary delivery artifact, not JSON
 </aside>
 
 <p>Most web architects simply can’t make their websites as fast as <a href="https://stackoverflow.com/">Stack Overflow</a>, which is not an SPA.
@@ -312,7 +312,7 @@ If I do <code class="language-plaintext highlighter-rouge">b.rename()</code> and
 <p>Anyway, JavaScript was designed as a prototype-based dynamically typed language with a minimalistic syntax that resembles Java.
 It worked perfectly fine until the industry decided to “fix” it.</p>
 
-<aside class="quote">JavaScript worked perfectly fine until the industry decided to fix it.
+<aside class="quote">JavaScript worked perfectly fine until the industry decided to fix it
 </aside>
 
 <p>In 2008, <a href="https://www.mozilla.org/">Mozilla</a> and others <a href="https://auth0.com/blog/the-real-story-behind-es4/">proposed</a> ECMAScript 4, which included classes, modules, and other features.
@@ -403,7 +403,7 @@ You, on the other hand, sit next to him in the same office and can’t hang up.
 You are the <em>low-hanging fruit</em>.
 You are the <em>weakest</em> prey he can reach out to.</p>
 
-<aside class="quote">In order to make him focus on external obstacles, you should make internal ones harder to overcome.
+<aside class="quote">In order to make him focus on external obstacles, you should make internal ones harder to overcome
 </aside>
 
 <p>A customer is an <em>external</em> obstacle that he must overcome in order to get paid, as a sales commission.
@@ -433,7 +433,7 @@ Second, you bind their paychecks to it: they get paid <a href="/2016/05/24/who-i
   but by <em>merged pull requests</em>.
 Finally, you taboo the very possibility of discussing time-based compensation.</p>
 
-<aside class="quote">Taboo the very possibility of discussing time-based compensation.
+<aside class="quote">Taboo the very possibility of discussing time-based compensation
 </aside>
 
 <p>What you get is a technical team focused on resolving external problems.
@@ -586,7 +586,7 @@ Moreover, all CI workflows are <a href="/2014/07/21/read-only-master-branch.html
 Who do we <a href="/2025/04/19/dont-merge-into-broken-master.html">blame</a>?
 Obviously, you.</p>
 
-<aside class="quote">They won’t listen if you blame them for the failure in your pull request.
+<aside class="quote">They won’t listen if you blame them for the failure in your pull request
 </aside>
 
 <p>You have to collect <em>enough evidence</em> and submit a bug report.
@@ -834,7 +834,7 @@ You either attend all meetings or learn to be creative in finding reasons why yo
 <p>You are either red or black.
 Once you find your <strong>identity</strong>, you start despising the other side.</p>
 
-<aside class="quote">Minimize contact, keep your head down when necessary, and focus on delivering real value where it matters.
+<aside class="quote">Minimize contact, keep your head down when necessary, and focus on delivering real value where it matters
 </aside>
 
 <p>If you are red, you don’t understand the black employees who are constantly rebelling.
@@ -944,7 +944,7 @@ Types of parameters are easier to infer in more specialized methods.</p>
 
 <p>We can also stop using reflection.</p>
 
-<aside class="quote">The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too.
+<aside class="quote">The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too
 </aside>
 
 <p>Java programmers may not be ready for such a <strong>radical move</strong>.
@@ -974,7 +974,7 @@ It infers local variable types but enforces explicit annotations at public inter
 Go, until recently, avoided generics, operator overloading, and heavy reflection, making inference straightforward.
 However, it forces programmers to annotate all public boundaries—function signatures, struct fields, and interfaces.</p>
 
-<aside class="quote">If the type of a variable can’t be inferred, compilation fails.
+<aside class="quote">If the type of a variable can’t be inferred, compilation fails
 </aside>
 
 <p>I suggest taking one step forward and designing a language that doesn’t have any type annotations.
