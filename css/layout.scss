@@ -358,7 +358,6 @@ blockquote {
   p::before {
     @extend %gray;
     @extend %desktop-only;
-    content: 'ˮ';
     font-size: 2.5 * $em;
     left: -1.5 * $em;
     position: absolute;
