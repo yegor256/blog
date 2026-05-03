@@ -356,8 +356,9 @@ blockquote {
   position: relative;
 
   p::before {
-    @extend %gray;
     @extend %desktop-only;
+    @extend %gray;
+    @extend %sans;
     font-size: 2.5 * $em;
     left: -1.5 * $em;
     position: absolute;
