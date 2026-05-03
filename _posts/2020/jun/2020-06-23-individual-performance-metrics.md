@@ -186,7 +186,7 @@ bug reports are to be rejected. The same is true for every metric:
 [trust]({% pst 2019/may/2019-05-28-trust-or-not %}) without control
 leads to [cheating]({% pst 2017/nov/2017-11-21-trust-pay-lose %}).
 
-{% quote Trust without control leads to cheating. %}
+{% quote Trust without control leads to cheating %}
 
 It is also worth mentioning that features,
 bugs, pull requests, and documentation pages may have different

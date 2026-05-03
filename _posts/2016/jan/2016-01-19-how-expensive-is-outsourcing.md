@@ -57,7 +57,7 @@ Still, the question remained---how much?
 
 What could I do? I had to give him an answer.
 
-{% quote Under different management, programmers deliver very different results in the same 60 minutes. %}
+{% quote Under different management, programmers deliver very different results in the same 60 minutes %}
 
 I told him that our best Java programmers earn $30 to $50 per hour and
 we add our margin on top of that, in the amount of 100 percent, for management.

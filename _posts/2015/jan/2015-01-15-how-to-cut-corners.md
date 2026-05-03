@@ -74,7 +74,7 @@ whatever. Be creative and offensive---in a constructive and professional way,
 of course. Don't get personal. No matter who cooked that spaghetti, you have
 nothing against him or her personally. You just want another dish, that's all.
 
-{% quote If you don't know how this damn code works, it's a fault of the code, not you. %}
+{% quote If you don't know how this damn code works, it's a fault of the code, not you %}
 
 Once you have those dependencies reported, explain in the main ticket
 that you can't continue until all of them are resolved. You will
@@ -157,7 +157,7 @@ highly recommend you read
 [Working Effectively with Legacy Code](https://amzn.to/1SdcZ8M)
 by Michael Feathers. There are many different patterns, and most of them work.
 
-{% quote Catching a bug with a unit test is, in most cases, more than 80% of success. %}
+{% quote Catching a bug with a unit test is, in most cases, more than 80% of success %}
 
 Once you manage to reproduce the bug and the build fails, stop right there.
 That's more than enough for a single piece of work. Skip the test
@@ -217,7 +217,7 @@ And they will also say they don't really care about your bloody
 unit tests. All they care about is that PDF document that should be
 downloadable. So the trick with a unit test won't work. What do you do?
 
-{% quote Production errors are not programmers' mistakes, though delayed tickets are. %}
+{% quote Production errors are not programmers' mistakes, though delayed tickets are %}
 
 It depends on many factors, and most of these factors are not technical.
 They are political, organizational, managerial, social, you name it. However,
@@ -266,7 +266,7 @@ you. He decided to give you this
 task. He estimated your abilities and your skills.
 So it's payback time.
 
-{% quote Being a professional developer doesn't mean being able to fix any problem. %}
+{% quote Being a professional developer doesn't mean being able to fix any problem %}
 
 Your "No!" will be very valuable feedback for him. It will help him
 make his next important management [decisions]({% pst 2023/aug/2023-08-15-decision-making-process %}).

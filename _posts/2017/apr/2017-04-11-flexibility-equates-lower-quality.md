@@ -106,7 +106,7 @@ On the other hand, if we're designers and happen to _read_ the code that is
 full of sugar, which "just works," we'll be very annoyed and
 frustrated. Well, maybe I have to speak for myself, but I definitely will be.
 
-{% quote Simply put, higher quality comes from simpler languages. %}
+{% quote Simply put, higher quality comes from simpler languages %}
 
 This overly-sugared Ruby syntax is a perfect example of "works vs. good"
 positioning. Ruby philosophy is this: It doesn't matter how you write it, as long

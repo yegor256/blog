@@ -89,7 +89,7 @@ Meanwhile, the browser must juggle layout stabilization, loading indicators, and
 
 What was once a solution for small DOM updates, in an era of slow browsers and unreliable networks, has turned into a dead-end for web design.
 
-{% quote State belongs on the server while HTML is the primary delivery artifact, not JSON. %}
+{% quote State belongs on the server while HTML is the primary delivery artifact, not JSON %}
 
 Most web architects simply can't make their websites as fast as [Stack Overflow], which is not an SPA.
 It delivers the entire HTML page, [rendered][by-razor] on the server using [Razor], in one [&lt;50ms][50ms] request.

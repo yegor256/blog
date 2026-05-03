@@ -57,7 +57,7 @@ question is: What do you think in general about managers?  Are they good
 creatures or they are problems and are you one of them?  Do you consider
 yourself as a manager, as a project manager?
 
-{% quote Some people are just the managers who try to pass their problems down to the software development. %}
+{% quote Some people are just the managers who try to pass their problems down to the software development %}
 
 **Yakov**: Well, I think that they are needed, first of all.  Second of all, I think
 it depends on the manager.  Some managers are problems and some managers are not.
@@ -115,7 +115,7 @@ opportunity comes to become a manager, they go for it.
 project, you would recommend to become a project manager.  So, it's kind of a logical step
 after being a programmer?
 
-{% quote For some people it's the worst nightmare to go and look for a job. %}
+{% quote For some people it's the worst nightmare to go and look for a job %}
 
 **Yakov**: I don't recommend that because this is not what I do.  I spent many,
 many years working as an independent consultant and I am not afraid of going and
@@ -129,7 +129,7 @@ their career and maybe they will become manager.
 interesting than this?  Maybe management is also going to be boring if it's the
 same company, the same team?
 
-{% quote Being a manager can be more rewarding than just coming to your desk every morning and writing code. %}
+{% quote Being a manager can be more rewarding than just coming to your desk every morning and writing code %}
 
 **Yakov**: In my opinion, it's a livelier job because it requires communication
 with many people.  When I worked for example as an independent consultant, I
@@ -183,7 +183,7 @@ just change these 15 people and some people just don't deliver, don't do
 what they have to do.  Do you think I have, as a manager, to punish them
 somehow?  I mean maybe that's not the best word but still.  What would you do?
 
-{% quote Whenever developers have a problem they need to share it with either a more senior developer or with the team. %}
+{% quote Whenever developers have a problem they need to share it with either a more senior developer or with the team %}
 
 **Yakov**: You don't have to punish them.  You have to find the reason why they
 don't deliver. Also, I wanted to mention maybe it's more related to the
@@ -212,7 +212,7 @@ share with either a more senior developer or with the team.
 sometimes let people go.  So, you sometimes fire programmers for some reasons,
 right?
 
-{% quote You can't teach a programmer to be a nice man and a good team player. %}
+{% quote You can't teach a programmer to be a nice man and a good team player %}
 
 **Yakov**: Really it's very rare where we have to fire a person because of his
 technical abilities.  First of all we try not to hire a person if he is
@@ -286,7 +286,7 @@ better for you that people sit together instead of being remote because they're
 easily accessible, they're close, you can, not control, but you can see what
 they're doing.  Is it still true or...?
 
-{% quote I don't think it's the right thing to have everybody work in the same office. %}
+{% quote I don't think it's the right thing to have everybody work in the same office %}
 
 **Yakov**: I think you misunderstood me.  It's not "better" I'm saying.  We live
 in a real world.  In 2017 it's very difficult for you to work in a setup where
@@ -317,7 +317,7 @@ disciplines the people and they work better.  That's what most books and studies
 say but you're saying quite the opposite.  Just let them do what they want and
 just...
 
-{% quote If they cannot behave as professionals, for us it's easier to fire them. %}
+{% quote If they cannot behave as professionals, for us it's easier to fire them %}
 
 **Yakov**: Right, but again don't forget that we are at a luxury to hire, to
 cherry pick people.  So, it's not like somebody gave me a team and I say all
@@ -388,7 +388,7 @@ Yes.
 people also decent money, not the average money but because they are the best
 people so you are paying them best salaries I guess?
 
-{% quote I don't believe that they stay in our company because they like me. %}
+{% quote I don't believe that they stay in our company because they like me %}
 
 **Yakov**: Again, I'm very pragmatic in this regard.  We are paying them, I guess,
 competitive rates; otherwise they wouldn't stick to us.  I don't believe in fact
@@ -578,7 +578,7 @@ and quality and risks but also to lead them, and the leadership is way more
 important now than all these project management documents and everything?  I've
 heard that many times.
 
-{% quote If you can be hired in a team where you are the least skillful person, you got lucky. %}
+{% quote If you can be hired in a team where you are the least skillful person, you got lucky %}
 
 **Yakov**: In my opinion, it's BS especially when I go to large companies and
 they come up with different mottos for our company, these three phrases and they

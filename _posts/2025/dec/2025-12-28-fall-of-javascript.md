@@ -84,7 +84,7 @@ If I do `b.rename()` and `b` is known to be a car instead of a book, I would exp
 Anyway, JavaScript was designed as a prototype-based dynamically typed language with a minimalistic syntax that resembles Java.
 It worked perfectly fine until the industry decided to "fix" it.
 
-{% quote JavaScript worked perfectly fine until the industry decided to fix it. %}
+{% quote JavaScript worked perfectly fine until the industry decided to fix it %}
 
 In 2008, [Mozilla] and others [proposed][es4-story] ECMAScript 4, which included classes, modules, and other features.
 [Microsoft] took an [extreme position][es4-fight], refusing to accept any part of ES4.

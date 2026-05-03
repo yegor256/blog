@@ -58,7 +58,7 @@ clear enough. It doesn't say anything about performance, but I
 can assume that it has to be as fast as Google. The same goes
 for scalability, stress resilience, etc.
 
-{% quote For each decision I made, there has to be at least one alternative that I considered and rejected. %}
+{% quote For each decision I made, there has to be at least one alternative that I considered and rejected %}
 
 I'm not going to discuss how the software is created in a specific
 technical stack. That's not important for this article. What's important now
@@ -89,7 +89,7 @@ Java 8 is a programming language, and JVM is a
   Ruby, Python, Go, Scala, and tons of others.
 ```
 
-{% quote Each decision must be traceable to the person who made it. %}
+{% quote Each decision must be traceable to the person who made it %}
 
 These decisions are very high-level, but I still need to document them. As you
 see, I'm not explaining
@@ -213,7 +213,7 @@ coming from our server or not. Maybe it will ban us; I don't know. I don't
 have to evaluate this and find an exact answer. I just made an _assumption_
 and documented it.
 
-{% quote I just make an assumption and call it a day. %}
+{% quote I just make an assumption and call it a day %}
 
 Will it be enough to have Lucene only, without any additional data persistence
 layer? I don't know, but I _hope_ so. I don't have time to do a detailed
@@ -263,7 +263,7 @@ covers all critical areas, including:
  * Collecting test coverage.
  * Generating documentation.
 
-{% quote The goal is to make the continuous integration pipeline as fragile as possible. %}
+{% quote The goal is to make the continuous integration pipeline as fragile as possible %}
 
 The stricter the pipeline, the better it is for the project. At this stage, my job,
 as an architect, is to build a "guard wall" around the product to protect
@@ -286,7 +286,7 @@ In the most primitive approach, a static analysis will check the formatting
 of your source code and fail the build when that formatting is broken. However,
 in a more advanced variant, static analysis will catch many important bugs.
 
-{% quote The fragility of the build is a key success factor in software development. %}
+{% quote The fragility of the build is a key success factor in software development %}
 
 It is called "static" because it doesn't require the software to be running.
 To the contrary, unit tests validate software quality in runtime

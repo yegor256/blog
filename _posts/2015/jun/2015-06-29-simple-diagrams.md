@@ -65,7 +65,7 @@ When the problem is properly decomposed (broken down into smaller, isolated
 and properly decoupled pieces), the complexity _decreases_, and it becomes
 easier for everybody to understand and resolve.
 
-{% quote If I don't understand you, it's your fault. %}
+{% quote If I don't understand you, it's your fault %}
 
 The main virtue of an architect is the ability to _reduce_ complexity. Thus,
 a good architect would never be proud of a complex diagram. Instead, he would
@@ -105,7 +105,7 @@ of data? Is it a compile-time dependency? There are many possible meanings.
 Always use arrows, and always annotate them---this will help me
 understand you much faster.
 
-{% quote A good architect would never be proud of a complex diagram. %}
+{% quote A good architect would never be proud of a complex diagram %}
 
 **Don't Use Colors**.
 Or let me put it this way: Don't abuse colors. And in order to avoid abusing

@@ -74,7 +74,7 @@ is a dictator and we are not supposed to argue. We can't tell the architect
 that the decision is wrong. Moreover, we should not ask the architect to
 [convince]({% pst 2016/jul/2016-07-21-convince-me %}) us. The decision is made. It's done.
 
-{% quote The only real boss of the architect is requirements. %}
+{% quote The only real boss of the architect is requirements %}
 
 What can we do?
 
@@ -119,7 +119,7 @@ architect. Either the analysis will have
 to be improved, or the decision will have to be changed, if the facts start
 stacking up against it.
 
-{% quote The lower the risk tolerance in the project, the more pairs of eyes we need to look at the decisions the architect is making. %}
+{% quote The lower the risk tolerance in the project, the more pairs of eyes we need to look at the decisions the architect is making %}
 
 The lower the risk tolerance in the project, the more pairs of eyes we need
 to look at the decisions the architect is making. If the quality is very

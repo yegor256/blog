@@ -75,7 +75,7 @@ the existing cart and re-adds it to the end of the cart? Or perhaps it searches
 the orders previously placed by the user and extracts the n-th product from there?
 We simply don't know when we examine the method's signature.
 
-{% quote When something is obscured, it prompts assumptions, which in turn lead to misunderstandings, and eventually to bugs. %}
+{% quote When something is obscured, it prompts assumptions, which in turn lead to misunderstandings, and eventually to bugs %}
 
 In order to comprehend what the `add(int)` method does, we must refer to
 its Javadoc block, which may not be sufficiently accurate. Furthermore,

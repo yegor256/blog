@@ -110,7 +110,7 @@ programmers. Automated tests, meant to assist coders, turn into a hindrance.
 If a coder has to wait several minutes after every code change to ensure nothing broke,
 frustration ensues. Often, the frustrated coder might remove those slow tests.
 
-{% quote It's impossible to make integration tests faster since they are inherently slow for a reason. %}
+{% quote It's impossible to make integration tests faster since they are inherently slow for a reason %}
 
 It goes without saying that deleting slow tests isn't the solution.
 So, what is? Speeding them up? Not quite. It's almost always challenging,

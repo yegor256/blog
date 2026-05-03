@@ -62,7 +62,7 @@ should be fixed, how, and when. It's
 [micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}) in its worst form.
 We see it very often. What do we do?
 
-{% quote The simplest answer is that the client is a moron. Sometimes this is exactly the case, but it's a rare one. %}
+{% quote The simplest answer is that the client is a moron. Sometimes this is exactly the case, but it's a rare one %}
 
 First, we try to understand why it's happening. The simplest answer
 is that the client is a moron. Sometimes this is exactly the case, but it's a rare one. Much more
@@ -171,7 +171,7 @@ by the client himself, because he will realize they are pointless or too expensi
 a few of them will survive, since they will be reasonable enough. And they will
 help the project. So it is also a _win-win_ solution.
 
-{% quote Never take a client's demands directly to execution, but rather use them first to amend the requirements documentation. %}
+{% quote Never take a client's demands directly to execution, but rather use them first to amend the requirements documentation %}
 
 For example, he says that "you should use MySQL because it's great." You tell
 him that the project requirements document doesn't limit you to choose whichever
@@ -213,7 +213,7 @@ to work with you. That's why most
 prefer to keep their sources
 private until the very end of the project, when the final invoice is paid.
 
-{% quote No matter how beautiful your architecture and your source code is, the "friend" will always be right. %}
+{% quote No matter how beautiful your architecture and your source code is, the "friend" will always be right %}
 
 I think that an accidental appearance of a "friend" with a negative opinion
 is un-preventable. If it happens, it happens. You can't avoid it.

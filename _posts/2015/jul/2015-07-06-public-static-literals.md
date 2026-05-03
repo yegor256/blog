@@ -70,7 +70,7 @@ a better alternative ([yet!](https://www.cactoos.org)). But in your own code, do
 static properties---ever. Even if this code may look convenient to you,
 it's a very bad design.
 
-{% quote Every time you see data duplication, start thinking about the functionality you're duplicating. %}
+{% quote Every time you see data duplication, start thinking about the functionality you're duplicating %}
 
 The reason why is very similar to
 [utility classes]({% pst 2015/feb/2015-02-26-composable-decorators %})

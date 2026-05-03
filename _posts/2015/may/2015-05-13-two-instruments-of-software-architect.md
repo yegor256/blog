@@ -52,7 +52,7 @@ a software architect enforce his or her technical vision for the team
 if he can't communicate with the team? Here is our answer:
 the architect must use _bugs_.
 
-{% quote Bugs reported by an architect serve as communication channels between him and the team. %}
+{% quote Bugs reported by an architect serve as communication channels between him and the team %}
 
 A bug is a ticket that has a reporter, a problem, and a resolver, just
 like [this post]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}) explains.
@@ -93,7 +93,7 @@ implementation is done, all tickets pass mandatory code peer review. In other
 words, developers review each others' code. An architect is not involved
 in this process.
 
-{% quote Through strict and non-compromising code reviews, an architect enforces his design and architectural principles. %}
+{% quote Through strict and non-compromising code reviews, an architect enforces his design and architectural principles %}
 
 But when peer review is done, each ticket goes to an architect and he
 has to give a final "OK" before the code goes to the `master` branch through

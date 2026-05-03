@@ -60,7 +60,7 @@ search function to someone for $30K?
 
 Well, yes and no.
 
-{% quote IT recruiters stay between us, stealing our money and protecting that position for themselves. %}
+{% quote IT recruiters stay between us, stealing our money and protecting that position for themselves %}
 
 On one hand, there are plenty of job sites and rather powerful
 technologies for finding the right person.
@@ -130,7 +130,7 @@ involved. Can we? I'm sure we can, and that's the future.
 What will the army of real estate agents do? Well, maybe something useful,
 like _cleaning streets_.
 
-{% quote $25 out of my $40 will be spent not writing code but rather on something else. %}
+{% quote $25 out of my $40 will be spent not writing code but rather on something else %}
 
 The very existence of this mayonnaise in our modern business environment
 is a very negative thing. Money is simply not working the way it should.

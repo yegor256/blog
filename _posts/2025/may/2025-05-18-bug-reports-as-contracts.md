@@ -68,7 +68,7 @@ They're [not motivated]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}
 What they really want is to close the ticket---ASAP.
 Dragging out the conversation only risks **annoying** them.
 
-{% quote Nothing hurts a software team more than a silent customer and an empty bug tracker. %}
+{% quote Nothing hurts a software team more than a silent customer and an empty bug tracker %}
 
 You might also believe that submitting a ticket offends the team.
 They already have a lot of work to do---why bother them with even more?

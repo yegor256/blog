@@ -49,7 +49,7 @@ they get nothing. There could be
 [slight modifications](https://medium.com/@ipaullee/let-s-revise-the-vesting-schedule-for-startup-founders-and-employees-7817fcb301ea)
 to the numbers, of course.
 
-{% quote Most vesting formulas are perfectly aligned with the popular "be nice" paradigm and is not beneficial, either to the company or to its slaves. %}
+{% quote Most vesting formulas are perfectly aligned with the popular "be nice" paradigm and is not beneficial, either to the company or to its slaves %}
 
 The disadvantage of this approach is that their primary motivation is
 to stay in the company, instead of achieving results. This vesting
@@ -78,7 +78,7 @@ investments come to those who can ~~fool~~
 not to those who write the best Java code. Thus, the work programmers do
 and the "value events" the startup is aiming to reach are pretty much disconnected.
 
-{% quote Using microvesting with valuation and hourly rate the company can influence programmers' motivation. %}
+{% quote Using microvesting with valuation and hourly rate the company can influence programmers' motivation %}
 
 A more logical formula is _microvesting_, which we practice in projects managed
 by [Zerocracy](https://www.zerocracy.com). It is as simple as that: A company has

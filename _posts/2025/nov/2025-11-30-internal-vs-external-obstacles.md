@@ -61,7 +61,7 @@ You, on the other hand, sit next to him in the same office and can't hang up.
 You are the *low-hanging fruit*.
 You are the *weakest* prey he can reach out to.
 
-{% quote In order to make him focus on external obstacles, you should make internal ones harder to overcome. %}
+{% quote In order to make him focus on external obstacles, you should make internal ones harder to overcome %}
 
 A customer is an *external* obstacle that he must overcome in order to get paid, as a sales commission.
 You are an *internal* obstacle, which he may also overcome to get a fixed weekly payment.
@@ -90,7 +90,7 @@ Second, you bind their paychecks to it: they get paid [not by you]({% pst 2016/m
   but by *merged pull requests*.
 Finally, you taboo the very possibility of discussing time-based compensation.
 
-{% quote Taboo the very possibility of discussing time-based compensation. %}
+{% quote Taboo the very possibility of discussing time-based compensation %}
 
 What you get is a technical team focused on resolving external problems.
 The team will *advance* because it will be [pointless]({% pst 2018/jul/2018-07-24-bugs-or-pull-requests %}) to *retreat*.

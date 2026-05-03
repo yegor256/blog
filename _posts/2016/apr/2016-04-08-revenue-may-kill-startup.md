@@ -96,7 +96,7 @@ If that's not happening, close the business and start something else. The
 valuation must _skyrocket_ or you have to abandon the startup and try your
 hand on another one as soon as possible.
 
-{% quote The revenue is good for you but not really good for investors. %}
+{% quote The revenue is good for you but not really good for investors %}
 
 One of the biggest mistakes a startup founder can make is to forget
 about this "skyrocketing valuation" principle and focus on making

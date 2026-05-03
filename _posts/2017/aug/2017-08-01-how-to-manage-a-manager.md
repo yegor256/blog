@@ -63,7 +63,7 @@ soon he gave up this idea and stopped giving me anything. I basically
 created an image of a very skilled engineer who didn't write code. No matter
 how much you asked.
 
-{% quote Guilt is a very powerful management instrument. %}
+{% quote Guilt is a very powerful management instrument %}
 
 **Meetings**.
 At the beginning he was calling me to all possible meetings,

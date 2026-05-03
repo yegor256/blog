@@ -52,7 +52,7 @@ Do you really understand exactly what these words mean? I don't.
 I would actually suggest we replace them all with the "do the right thing"
 mantra and call it a day.
 
-{% quote Smiling in the office and not cursing at a stupid boss helps, but this is not what soft skills are about. %}
+{% quote Smiling in the office and not cursing at a stupid boss helps, but this is not what soft skills are about %}
 
 I have my own list of soft skills though. I also
 [strongly believe]({% pst 2018/jan/2018-01-23-sociotech-skills %}) that tech skills
@@ -122,7 +122,7 @@ improves the quality of the software under development. There is a
 [well known](https://www.sciencedirect.com/science/article/abs/pii/S0378720613000967)
 developer-tester conflict, which good programmers know how to deal with.
 
-{% quote Still working in a single master branch? Still an amateur. %}
+{% quote Still working in a single master branch? Still an amateur %}
 
 **Branching**.
 Still working in a single `master` branch? Still an amateur. You have to

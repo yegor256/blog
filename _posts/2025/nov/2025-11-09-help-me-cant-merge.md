@@ -75,7 +75,7 @@ Moreover, all CI workflows are [green]({% pst 2014/jul/2014-07-21-read-only-mast
 Who do we [blame]({% pst 2025/apr/2025-04-19-dont-merge-into-broken-master %})?
 Obviously, you.
 
-{% quote They won't listen if you blame them for the failure in your pull request. %}
+{% quote They won't listen if you blame them for the failure in your pull request %}
 
 You have to collect _enough evidence_ and submit a bug report.
 It should explain what's wrong in their master branch.

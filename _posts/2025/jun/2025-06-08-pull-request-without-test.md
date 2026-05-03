@@ -55,7 +55,7 @@ We don't mind paying again if something else breaks---but not if it's the exact 
 We expect the repaired part to function properly while driving.
 We want a warranty on what's already been fixed.
 
-{% quote People are merely an intermediate by-product---the ultimate asset is the codebase. %}
+{% quote People are merely an intermediate by-product---the ultimate asset is the codebase %}
 
 Similarly, our employers expect our code to work once we've committed it and collected our paycheck.
 They want a warranty that the code won't break again once it's been fixed.

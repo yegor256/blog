@@ -191,7 +191,7 @@ a single merge, deploy and release. Also it will be easier to test, both
 manually and via unit testing. Continuous integration is easier to configure,
 and so on and so forth.
 
-{% quote A set of smaller components is better than a larger solid piece. %}
+{% quote A set of smaller components is better than a larger solid piece %}
 
 All these "reasonable" arguments remind me of what I hear when preaching object decomposition and suggesting that multiple objects are [better]({% pst 2017/feb/2017-02-28-too-many-classes %}) than a single large one.
 Imagine a large class of 3,000 lines of code, which does many things and they are all tightly [coupled][coupling].
@@ -248,7 +248,7 @@ This is my short list of them:
     large? Is it a Java repo? And, more importantly, can it be compared with other
     repositories? Not really. It's just a big messy storage of files.
 
-{% quote The preferred situation is one language or technology per repository. %}
+{% quote The preferred situation is one language or technology per repository %}
 
   * **Homogeneous Tasks**.
     Smaller repositories tend to have smaller tech stacks, meaning that each of

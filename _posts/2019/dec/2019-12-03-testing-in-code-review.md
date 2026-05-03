@@ -71,7 +71,7 @@ to watch [this video](https://www.youtube.com/watch?v=jZitXMQaXvE).
 
 Now, where is the place for a code reviewer in this conflict?
 
-{% quote The objective of a merge pipeline is to protect the code repository from programmers. %}
+{% quote The objective of a merge pipeline is to protect the code repository from programmers %}
 
 I believe code review is part of the merge pipeline, together with unit
 tests, static analyzers, linters, coverage control tools, mutation
@@ -108,7 +108,7 @@ difficult to explain in the code review format. The discussion with the
 author of the branch will take longer, which means more time to complete
 the code review, which means lower effectiveness of the code reviewer.
 
-{% quote An effective, responsible and greedy code reviewer doesn't explain to the author of the code what is wrong. %}
+{% quote An effective, responsible and greedy code reviewer doesn't explain to the author of the code what is wrong %}
 
 My point is that smart code reviewers don't do that, because it's not efficient.
 Pay attention, not because they don't care, but because they know a better

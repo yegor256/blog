@@ -129,7 +129,7 @@ skills. The manager will call more meetings largely in order to convince
 himself that the team is actually working; hearing your voice many times a day is
 a perfect confirmation that you are busy and he is a good manager.
 
-{% quote Remote work will happen automatically as soon as everybody starts getting their paychecks for the results they deliver, not the time they spend. %}
+{% quote Remote work will happen automatically as soon as everybody starts getting their paychecks for the results they deliver, not the time they spend %}
 
 On a more serious note, I believe that working remotely
 only makes things _worse_ when the motivation of the team

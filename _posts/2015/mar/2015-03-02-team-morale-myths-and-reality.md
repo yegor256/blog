@@ -74,7 +74,7 @@ your people about problems you're facing and
 risks you're trying to prevent. They will appreciate it and respect you.
 A strong, professional manager deals with risks instead of ignoring them.
 
-{% quote A strong manager isn't afraid to look stupid in front of the team. %}
+{% quote A strong manager isn't afraid to look stupid in front of the team %}
 
 **Failures Are Yours; Success Is Theirs**.
 Always remember that when someone on your team makes a mistake,
@@ -136,7 +136,7 @@ of abstract principles that you should understand and digest. But then,
 after you chew them properly, convert them to specific and
 very unambiguous rules of work. Don't talk about Agile; be agile.
 
-{% quote Give everybody an assurance that none of them will be terminated behind a closed door. %}
+{% quote Give everybody an assurance that none of them will be terminated behind a closed door %}
 
 **Don't Close the Door**.
 Responsibility is personal,
@@ -200,7 +200,7 @@ of terrain you're going to cross with your team. When it's time to make
 a decision, everybody will understand why it's made and will respect you
 as a manager who predicted the situation and managed it professionally.
 
-{% quote Everybody should know everybody's salaries, bonuses, and benefits. %}
+{% quote Everybody should know everybody's salaries, bonuses, and benefits %}
 
 **Put Money on the Table**.
 Discuss money openly and freely, right in the office, right in front

@@ -71,7 +71,7 @@ Then, using this information you create the plan and calculate the
 timeline of the project. They tell you what they _want_ to earn
 and you _know_ what results you will get.
 
-{% quote You identify the points of reward and observe the intentions of the team to earn them. %}
+{% quote You identify the points of reward and observe the intentions of the team to earn them %}
 
 Thus, instead of making plans and making the team deliver according
 to them, you identify the points of reward and observe the

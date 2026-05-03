@@ -41,7 +41,7 @@ I enjoy _building_ things. If I need to learn something new in order to make
 new things happen, I will do it and I will enjoy learning, because it leads
 to practical results: new things.
 
-{% quote Studying for the sake of learning new things is not fun at all. %}
+{% quote Studying for the sake of learning new things is not fun at all %}
 
 For example, [Kotlin](https://kotlinlang.org/) has been on the market for a few years already. It's
 a new programming language. I do realize that it may eventually replace
@@ -78,7 +78,7 @@ The majority of my projects are not alive anymore, especially the ones
 I created when I was a kid and a student (and I feel so sad about that).
 However, the outcome is obvious: I'm in the tech industry now and I can code in Java.
 
-{% quote Your job, as their parents, is to help them identify the right goals---this is where kids usually fail. %}
+{% quote Your job, as their parents, is to help them identify the right goals---this is where kids usually fail %}
 
 So don't expect your kids to enjoy studying. Expect them to be interested
 in _building_ things and making ~~money~~ profit. Your job, as their parents, is

@@ -45,7 +45,7 @@ to develop the software for you? I can tell you why.
 
 Because you don't [trust]({% pst 2017/nov/2017-11-21-trust-pay-lose %}) me.
 
-{% quote Any software, no matter how big or good it is, always needs more and more improvements and bug fixes. %}
+{% quote Any software, no matter how big or good it is, always needs more and more improvements and bug fixes %}
 
 And obviously you have good reasons for that, simply because we both
 know that a software product is something that can stay in development forever
@@ -94,7 +94,7 @@ asking for an estimate. I'm telling you that your software will be ready
 for $40K, and you sleep well. Until the moment you realize you've been
 fooled. By your own self.
 
-{% quote The development will take forever and will consume all your money. %}
+{% quote The development will take forever and will consume all your money %}
 
 Your concern is perfectly valid. You want to spend no more than $40K, and you want
 to get a product that will help you achieve your business goals. For example,

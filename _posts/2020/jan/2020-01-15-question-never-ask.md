@@ -49,7 +49,7 @@ for a while, comes back to me with a plan for achieving this goal. A good one
 _tells_ me what is next, instead of asking. All I need to do is to approve
 or reject the plan proposed.
 
-{% quote Good soldiers pro-actively build their own plans and do everything to convince me that they make sense. %}
+{% quote Good soldiers pro-actively build their own plans and do everything to convince me that they make sense %}
 
 Good soldiers don't sit and passively wait until I come to them and say what exactly
 needs to be done. Good soldiers pro-actively build their own plans by themselves and

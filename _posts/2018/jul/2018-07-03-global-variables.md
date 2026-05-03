@@ -81,7 +81,7 @@ Ruby global variables, I believe, because they know that they are bad.
 Why exactly they are bad and what the
 [alternatives]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}) are---slipped through their fingers.
 
-{% quote While the application is small and its test coverage is low, global variables may not hurt. %}
+{% quote While the application is small and its test coverage is low, global variables may not hurt %}
 
 Technically speaking, their design is "globally scoped."
 `Sinatra::Base` treats the entire application as its scope of visibility.

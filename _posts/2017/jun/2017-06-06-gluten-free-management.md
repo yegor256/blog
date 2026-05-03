@@ -48,7 +48,7 @@ making them happy. You must be a permanent source of good news, funny
 stories, and smiles, shielding your ~~slaves~~ people
 from the reality and its threats.
 
-{% quote Truth hurts and modern management is not about hurting people, it's about making them happy. %}
+{% quote Truth hurts and modern management is not about hurting people, it's about making them happy %}
 
 **Be Politically Correct**.
 How many [latinx](https://www.huffingtonpost.com/entry/why-people-are-using-the-term-latinx_us_57753328e4b0cc0fa136a159)
@@ -95,7 +95,7 @@ Of course, you will still use fear and guilt to keep your
 [slaves]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) under control,
 but new eco-titles will help you keep them less aware of what's going on.
 
-{% quote You still use fear and guilt to keep your slaves under control, but new eco-titles help you keep them less aware of what's going on. %}
+{% quote You still use fear and guilt to keep your slaves under control, but new eco-titles help you keep them less aware of what's going on %}
 
 **Be a Leader**.
 Traditional [project management]({% pst 2016/may/2016-05-24-who-is-project-manager %})
@@ -139,7 +139,7 @@ who they will associate you with when the guilt kicks in---with their
 mothers. They won't disobey, won't quit, and will never ask for
 [more money]({% pst 2016/dec/2016-12-06-how-to-pay-programmers-less %}).
 
-{% quote Don't worry about the future, when projects fail good committers just commit themselves to new projects. %}
+{% quote Don't worry about the future, when projects fail good committers just commit themselves to new projects %}
 
 **Be Responsible**.
 In the brick-and-mortar management era responsibility was

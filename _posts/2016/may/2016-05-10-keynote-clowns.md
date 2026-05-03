@@ -48,7 +48,7 @@ more valuable than the content you will be talking about. Nobody will remember
 the content, but the jokes will definitely be re-tweeted. When a good speaker
 is talking, the room is laughing every 60 seconds.
 
-{% quote A well-prepared collection of jokes is much more valuable than the content you will be talking about. %}
+{% quote A well-prepared collection of jokes is much more valuable than the content you will be talking about %}
 
 **Swear!**
 Don't be too formal and boring, show a slide with a picture of
@@ -89,7 +89,7 @@ cases just making money, delivering the same "fun" again and again.
 They make $2-3K a speech and we, the listeners, get absolutely
 nothing new out of them.
 
-{% quote Retired losers with good presentation skills. %}
+{% quote Retired losers with good presentation skills %}
 
 Conference organizers keep inviting them, just
 because of the names. And we keep attending that conferences also just

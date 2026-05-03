@@ -100,7 +100,7 @@ judgment. This actually is the key problem: jealousy. If you see
 that someone, who you don't respect due to his/her bad results and lack
 of skills, is appreciated more than yourself by your boss---you get jealous and quit.
 
-{% quote When they can't objectively evaluate your performance, they judge you irrationally and emotionally. %}
+{% quote When they can't objectively evaluate your performance, they judge you irrationally and emotionally %}
 
 Teal [gluten-free]({% pst 2017/jun/2017-06-06-gluten-free-management %})
 managers can't objectively evaluate your performance.

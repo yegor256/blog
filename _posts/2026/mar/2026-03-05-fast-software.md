@@ -57,7 +57,7 @@ Look at what Jack Dorsey [just did][dorsey]: terminating contracts of about 40% 
 Large companies indeed will fire programmers, but not because the new world doesn't need human coders.
 It's because the new world doesn't need _large_ software companies.
 
-{% quote We'll toss our software, not update it. %}
+{% quote We'll toss our software, not update it %}
 
 What the world is looking forward to is a _devaluation_ of software craftsmanship.
 Just like a skirt is no longer valuable, except for some high-end brands, software won't be either.

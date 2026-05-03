@@ -56,7 +56,7 @@ when we're in a good mood and have nothing else to do. And this is only logical,
 if we understand TDD literally, by
 [the book](https://en.wikipedia.org/wiki/Kent_Beck).
 
-{% quote I have never done TDD by the book: tests first and code next. %}
+{% quote I have never done TDD by the book: tests first and code next %}
 
 Writing a test for a class without having that class in front of you is
 _difficult_. I would even say impossible, if we are talking about real code,
@@ -117,7 +117,7 @@ to fix only what's visible and intolerable by the business. If the business
 doesn't care or our users/testers don't see our bugs---we must not
 _waste_ project resources on fixing them.
 
-{% quote I only create tests later when my users express the need for them by reporting bugs. %}
+{% quote I only create tests later when my users express the need for them by reporting bugs %}
 
 On the other hand, when the business or our users/testers are complaining,
 we have to be very strict with ourselves; our testing system is weak and

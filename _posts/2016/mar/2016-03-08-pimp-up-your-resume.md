@@ -54,7 +54,7 @@ Four-page brochures have far fewer chances than one-pagers.
 
 ## Don't Lie
 
-{% quote You can tell half of the truth, you can hide some information, and you can rephrase the truth, but never lie. %}
+{% quote You can tell half of the truth, you can hide some information, and you can rephrase the truth, but never lie %}
 
 No matter what you do with your resume, never lie about a single word. You
 can tell half of the truth, you can hide some information, and you can rephrase
@@ -140,7 +140,7 @@ software developer, you must be on GitHub. You
 to some open source. You have to be visible in the open source world if you
 want to sell yourself high.
 
-{% quote You don't have to spend all your time on open source projects, just contribute to the ones you're using already. %}
+{% quote You don't have to spend all your time on open source projects, just contribute to the ones you're using already %}
 
 Your potential employer wants to see what the _market_ is thinking about
 your code and about you. They are afraid of making a mistake by hiring you.

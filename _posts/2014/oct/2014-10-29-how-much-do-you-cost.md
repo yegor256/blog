@@ -109,7 +109,7 @@ expensive countries. When I'm getting resumes from San Francisco programmers,
 their rates are $70+ per hour. The same skills and experience cost
 $15-20 in Karachi. The reason here is the cost of living---it is much higher in the US than in Pakistan.
 
-{% quote We prefer to work with people whose expenses are lower. %}
+{% quote We prefer to work with people whose expenses are lower %}
 
 However, this reason doesn't sound logical to me. If you're driving a more
 expensive car, we have to pay you a
@@ -143,7 +143,7 @@ Or maybe you're too shy to ask? Or you can't describe your questions
 in an accurate and precise format? Or maybe all your questions already
 have answers? In any case, it's sad.
 
-{% quote SO reputation is proof that you can find answers to your questions by communicating with people you don't know. %}
+{% quote SO reputation is proof that you can find answers to your questions by communicating with people you don't know %}
 
 Second, if you're not answering, you simply have nothing to say. In most cases,
 this means that you're not solving complex and unique problems.

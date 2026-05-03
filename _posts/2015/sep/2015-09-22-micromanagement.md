@@ -42,7 +42,7 @@ about the small stuff while a micromanager employs
 "excessive control or attention to details," as
 [Merriam-Webster](https://www.merriam-webster.com/dictionary/micromanage) says.
 
-{% quote A good manager declares what needs to be done, never telling me how I must achieve it. %}
+{% quote A good manager declares what needs to be done, never telling me how I must achieve it %}
 
 It seems that in order to become a good manager, one should just
 stop paying attention to details. Huh?
@@ -94,7 +94,7 @@ Thus, this "micro" prefix is not really about the size of the tasks a manager
 keeps under control. It is about what a manager wants to see
 inside them---a black box or a glass box under a _microscope_.
 
-{% quote A good manager pays extreme attention to defining quality standards for my work. %}
+{% quote A good manager pays extreme attention to defining quality standards for my work %}
 
 A good manager doesn't care about what I'm doing now, what tasks I'm working on,
 or what my plans, problems, and risks are. Instead, a good manager cares about my

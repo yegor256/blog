@@ -67,7 +67,7 @@ me and help me stay focused and interested. I want to see them in writing
 Simply put, what should I do in order for a task to be considered as
 completed?
 
-{% quote I hate to be afraid, especially if I don't really know what I'm supposed to be afraid of. %}
+{% quote I hate to be afraid, especially if I don't really know what I'm supposed to be afraid of %}
 
 **Responsibility borders**.
 I hate to be afraid, especially if I don't really know what I'm supposed to be
@@ -134,7 +134,7 @@ motivate at all, even if my pay is
 It would be much easier for me
 if I knew everything from the first day.
 
-{% quote I hate working for big ideas, if they are not mine. %}
+{% quote I hate working for big ideas, if they are not mine %}
 
 **Business transparency**.
 I hate working for big ideas, if they are not mine. Mostly because I know
@@ -179,7 +179,7 @@ to become a CTO. So it's your job to make that career growth obvious for me.
 If it will never be possible for me to become the CTO, make that obvious too.
 The truth is better anyway.
 
-{% quote A strong manager is someone who is ready to fight for their own ideas, rights, thoughts, and decisions. %}
+{% quote A strong manager is someone who is ready to fight for their own ideas, rights, thoughts, and decisions %}
 
 **A strong boss**.
 This is probably the most important requirement I would have. I can't work

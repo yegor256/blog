@@ -45,7 +45,7 @@ This is rather annoying and turns me off. It would be much better to feel
 that there is a team with real people, who want to see me as a speaker.
 I would be way more dedicated and motivated.
 
-{% quote Four talks per day is an absolute maximum for a serious listener. %}
+{% quote Four talks per day is an absolute maximum for a serious listener %}
 
 **Short breaks**.
 Breaks between presentations that are too short give listeners an impression that
@@ -64,7 +64,7 @@ understand why most industry events don't do the same. A speaker must feel
 comfortable on the stage. Being there alone doesn't help at all. Also, the
 moderator will promote me to better engage with the audience.
 
-{% quote I'm not only attending your event, but also associating my name with it. %}
+{% quote I'm not only attending your event, but also associating my name with it %}
 
 **Boring website**.
 The higher the level of the conference, the more modern and beautiful their
@@ -93,7 +93,7 @@ the speakers, very pro-actively.
 **Slow WiFi**.
 It's just very annoying.
 
-{% quote Just make 5-10 such short intros and I will be busy talking to these guys for the whole day. %}
+{% quote Just make 5-10 such short intros and I will be busy talking to these guys for the whole day %}
 
 **No networking**.
 Conference organizers know all speakers who are attending and most of the
@@ -143,7 +143,7 @@ my presentation into a show and play with their emotions, not their brains.
 This is actually what most [keynote speakers]({% pst 2016/may/2016-05-10-keynote-clowns %})
 are usually doing.
 
-{% quote A perfect conference must have one track, a room for 250-300 listeners, and a very well selected list of speakers. %}
+{% quote A perfect conference must have one track, a room for 250-300 listeners, and a very well selected list of speakers %}
 
 **Too many tracks**.
 Honestly, I think that the very idea of having multiple tracks is very bad.

@@ -47,7 +47,7 @@ and
 believe that despite all the risks, we have no other choice: students will use
 it, no matter what teachers think about it.
 
-{% quote Most of them will never read what the robot wrote. %}
+{% quote Most of them will never read what the robot wrote %}
 
 Indeed, why not? What's wrong with letting kids write those boring documents
 faster? Nothing, if we ignore the obvious threat: most of them will never read
@@ -75,7 +75,7 @@ can quickly understand who I'm dealing with and stop paying attention to them.
 The students who are smart and enthusiastic _win_, because they get my entire
 attention. The unmotivated ones _lose_, ... but who cares.
 
-{% quote Now, it takes much more time for me to understand who is who. %}
+{% quote Now, it takes much more time for me to understand who is who %}
 
 However, with the help of ChatGPT, the situation changes dramatically. Now, the
 papers I have to review _all_ look _perfect_: the grammar is spotless, the

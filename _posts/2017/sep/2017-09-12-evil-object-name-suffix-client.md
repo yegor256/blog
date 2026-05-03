@@ -139,7 +139,7 @@ exposes the functionality of real
 [versions](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html),
 which the AWS S3 can expose.
 
-{% quote The right design would be to replace clients with client-side objects that represent entities of the server side. %}
+{% quote The right design would be to replace clients with client-side objects that represent entities of the server side %}
 
 Of course, we will need a high-level object that somehow represents the
 entire API/server, but it should be small. For example, in the S3 SDK example

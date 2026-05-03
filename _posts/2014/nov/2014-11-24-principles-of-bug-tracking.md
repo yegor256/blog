@@ -51,7 +51,7 @@ is a task, I'm ordering you to do it---you're doing it. In any case,
 there are two main characters. No matter how many people are involved in the ticket
 resolution, only these two characters have formal roles.
 
-{% quote Remember what is happening there — one person is selling his solution to another person. %}
+{% quote Remember what is happening there — one person is selling his solution to another person %}
 
 The responsibility of the ticket reporter is to _defend the problem_. When I
 [report a bug]({% pst 2018/apr/2018-04-24-right-way-to-report-bugs %}),
@@ -106,7 +106,7 @@ short and focused---1) a problem, 2) a refinement
 question, 3) a short explanation, 4) a solution, 5) closed, thanks everybody.
 This is an ideal scenario.
 
-{% quote Long-living tickets are a management nightmare. %}
+{% quote Long-living tickets are a management nightmare %}
 
 As soon as you realize that your ticket is turning into a long discussion,
 try to close it even faster. How can I close it if the reporter doesn't
@@ -131,7 +131,7 @@ of the ticket solver, who is trying to understand your report and provide
 a solution; and also 4) for the time of everybody else who will participate
 in the discussion.
 
-{% quote Anything would work, but not nothing. %}
+{% quote Anything would work, but not nothing %}
 
 If you close the ticket without a problem being properly solved,
 you put this money into the _trash_ bin. Once the ticket is started, there
@@ -165,7 +165,7 @@ or "I remember I had a similar issue some time ago" are very annoying
 and distracting. Let's be honest, nobody really needs or cares about "opinions."
 All we need in a ticket is a solution(s).
 
-{% quote Don't pollute the air with generic opinions. %}
+{% quote Don't pollute the air with generic opinions %}
 
 If you think the ticket should be closed because the introduced solution
 is good enough, [address]({% pst 2024/apr/2024-04-01-ping-me-please %})
@@ -203,7 +203,7 @@ at that point B. So it's obvious that you have to explain where these points
 A and B are. It is highly desirable if you can explain
 how to get there---how to reproduce a problem and how to fix it.
 
-{% quote Your job, as a ticket reporter, is to draw that line from point A to point B. %}
+{% quote Your job, as a ticket reporter, is to draw that line from point A to point B %}
 
 Even when you have a question, you should also follow that format. If you
 have a question, it means the project documentation is not sufficient

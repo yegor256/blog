@@ -76,7 +76,7 @@ be great to know what UUID stands for. Is it "unique user ID" or maybe
 "unified user identity descriptor?" I have no idea. I'm lost, and I want
 to find the author of this text and do something bad to him ... or her.
 
-{% quote We're writing in order to be understood, not to impress the reader. %}
+{% quote We're writing in order to be understood, not to impress the reader %}
 
 I've written already that the
 [worst technical specifications have no glossaries]({% pst 2015/mar/2015-03-16-technical-glossaries %}).
@@ -119,7 +119,7 @@ the author asks me what possible options are out there. Then,
 he suggests I consider something, and after that,
 he invites me for a talk.
 
-{% quote Find all your answers before writing the document, that's what you're paid for. %}
+{% quote Find all your answers before writing the document, that's what you're paid for %}
 
 Impressive, right? Obviously, the author has a very creative personality.
 But we should keep this person as far away from project documentation as possible.
@@ -287,7 +287,7 @@ The spec should only require what really matters for the business. Everything
 else is up to us, the programmers. We decide what database to use, where the
 button will be placed, and what information will be stored in the database.
 
-{% quote You shouldn't tell me how to implement the functionality you desire. %}
+{% quote You shouldn't tell me how to implement the functionality you desire %}
 
 If you really care about that because there are certain higher-level
 limitations---say so. But again, not as implementation instructions
@@ -316,7 +316,7 @@ is more or less clear, but it's not clear who is doing all this. Where
 is the user? It is just a story of something happening somewhere. That's not
 really what programmers need in order to implement it.
 
-{% quote A good user story always has, guess what ... a user. %}
+{% quote A good user story always has, guess what ... a user %}
 
 The best way to explain functionality is through user stories. And a good
 user story always has, guess what ... a user. It always starts with

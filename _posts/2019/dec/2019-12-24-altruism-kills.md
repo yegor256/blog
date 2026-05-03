@@ -49,7 +49,7 @@ against the perceived inputs and outcomes of others."
 In other words, we feel motivated to contribute only when we
 know that we take back an _equal_ amount of benefits.
 
-{% quote Modern leadership is not about giving and taking, but about sharing and helping? I don't buy this. %}
+{% quote Modern leadership is not about giving and taking, but about sharing and helping? I don't buy this %}
 
 You may say that [transactional management](https://en.wikipedia.org/wiki/Transactional_leadership)
 is in the past and modern
@@ -97,7 +97,7 @@ Theory) won't contribute properly. If the team doesn't reward correctly, it's
 a defect in the system. Just like a bug in source code, this defect in
 the motivational system can either be 1) concealed (Fail Safe) or 2) revealed (Fail Fast).
 
-{% quote Encouraging team members to contribute altruistically means concealing management defects. %}
+{% quote Encouraging team members to contribute altruistically means concealing management defects %}
 
 Encouraging team members to contribute altruistically means concealing the defect.
 Programmers will keep working, slowly losing their motivation over a long

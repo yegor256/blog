@@ -66,7 +66,7 @@ We don't use **any** (I mean it!) [informal communication channels]({% pst 2016/
 XDSD projects. We don't do meetings or conference calls. We never discuss
 any technical issues on Skype or by phone.
 
-{% quote Every hour spent by a team member is traceable to the line of code produced. %}
+{% quote Every hour spent by a team member is traceable to the line of code produced %}
 
 So, how do we resolve problems and share information?
 

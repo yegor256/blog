@@ -46,7 +46,7 @@ to correct, to improve, to be more effective, to be more responsive,
 to commit, and to stay focused. You may even hire an Agile coach to train them.
 They improve, but not for long.
 
-{% quote Bad managers, together with Peter Drucker, believe that management is art. %}
+{% quote Bad managers, together with Peter Drucker, believe that management is art %}
 
 You have "to stay on top of things" and never miss anything, if you want the project to succeed.
 You have to _care_. You have to be in the office all the time.
@@ -91,7 +91,7 @@ you don't need them [_to work_]({% pst 2015/jul/2015-07-21-hourly-pay-modern-sla
 you need their _results_, such as a list of emails, a new
 feature, a bug fix, a new document, or maybe a new UI mock-up.
 
-{% quote This is the cure for all management problems: make them chase you. %}
+{% quote This is the cure for all management problems: make them chase you %}
 
 You, as a pragmatic and smart project manager, define what the project
 needs from its participants, you put a _price tag_ on each need, and let programmers

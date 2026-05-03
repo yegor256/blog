@@ -58,7 +58,7 @@ your resume says so, and you're in the list of contributors---your
 hourly rate or your salary will
 [definitely]({% pst 2014/oct/2014-10-29-how-much-do-you-cost %}) be higher.
 
-{% quote If you contribute out of pure altruism, you will lose the motivation very soon. %}
+{% quote If you contribute out of pure altruism, you will lose the motivation very soon %}
 
 I would recommend, before becoming a contributor, you ask yourself a question: How will
 this affect my resume, my profile, and my reputation on the market? Will they
