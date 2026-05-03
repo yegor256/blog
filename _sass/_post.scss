@@ -103,10 +103,6 @@ article {
   margin: .5 * $em -5 * $em .5 * $em $em;
   padding-left: .75 * $em;
   width: 15 * $em;
-
-  &::before {
-    content: 'ˮ';
-  }
 }
 
 .book {
