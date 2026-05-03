@@ -348,7 +348,7 @@ hr {
 }
 
 blockquote {
-  @extend %serif;
+  @extend %sans;
   border-left: 3 * $px solid $silver;
   font-style: italic;
   margin-left: 1.5 * $em;
@@ -358,7 +358,6 @@ blockquote {
   p::before {
     @extend %desktop-only;
     @extend %gray;
-    @extend %sans;
     font-size: 2.5 * $em;
     left: -1.5 * $em;
     position: absolute;
