@@ -90,10 +90,11 @@ del {
   }
 
   .hot {
+    @extend %gray;
+    @extend %sans;
     @extend %unprintable;
-    font-family: $monospace;
-    font-size: .75 * $em;
-    line-height: .8 * $em;
+    font-size: .9 * $em;
+    line-height: $em;
     margin-bottom: 2 * $em;
     margin-top: 2 * $em;
     text-align: left;

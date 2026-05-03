@@ -30,6 +30,12 @@
   font-weight: normal;
 }
 
+%mono {
+  font-family: $mono;
+  font-style: normal;
+  font-weight: normal;
+}
+
 %desktop-only {
   @media all and (max-width: $width) {
     display: none;
