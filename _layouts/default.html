@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebSite">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebSite">
   <head>
     <meta charset="utf-8"/>
     <meta name="description" content="{{ page | yb_description | xml_escape }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
@@ -14,9 +14,9 @@ layout: compress
       <meta name="article:published_time" content="{{ page.date }}">
     {% endif %}
     <meta name="yandex-verification" content="7d2a0afee14d72bc" />
-    <meta name="og:site_name" content="{{ site.author.name }}"/>
-    <meta name="og:type" content="article" />
-    <meta name="og:locale" content="en_US" />
+    <meta property="og:site_name" content="{{ site.author.name }}"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:account_id" content="4503599630178231" />
     <meta name="twitter:creator" content="@yegor256"/>
     <meta name="twitter:site" content="@yegor256"/>
@@ -29,6 +29,8 @@ layout: compress
     <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="apple-touch-icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="{{ site.url }}/rss.xml"/>
+    <link rel="preload" href="/fonts/cmu-concrete/cmu-concrete-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="preload" href="/fonts/cmu-concrete/cmu-concrete-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
     {% for css in page.stylesheets %}
       <link rel="stylesheet" href="{{ css }}"/>
     {% endfor %}
@@ -44,8 +46,8 @@ layout: compress
     {{ page | jb_picture_head }}
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"></script>
-    <script src="/js/all.js?{{ site.data['hash'] }}"></script>
+      crossorigin="anonymous" defer="defer"></script>
+    <script src="/js/all.js?{{ site.data['hash'] }}" defer="defer"></script>
     <!-- see https://help.disqus.com/en/articles/1717274-adding-comment-count-links-to-your-home-page -->
     <script id="dsq-count-scr" src="https://yegor256.disqus.com/count.js" async="async"></script>
     {% if page.script %}
