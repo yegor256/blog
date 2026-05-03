@@ -33,7 +33,7 @@
     .play {
       color: $white;
       height: 100%;
-      line-height: 1 * $em;
+      line-height: $em;
       padding-top: 21%;
       position: absolute;
       text-align: center;
@@ -43,7 +43,7 @@
 
       i::before {
         font-size: 3 * $em;
-        line-height: 1 * $em;
+        line-height: $em;
       }
     }
   }

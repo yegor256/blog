@@ -12,8 +12,39 @@
   \definecolor{yb-platinum}{HTML}{E1E0E0}
 \RequirePackage{graphicx}
 \RequirePackage{svg}
-\RequirePackage{paratype}
 \RequirePackage{fontspec}
+  \setmainfont{CMU Concrete}[
+    Path=../fonts/cmu-concrete/,
+    Extension=.ttf,
+    UprightFont=cmu-concrete-regular,
+    BoldFont=cmu-concrete-bold,
+    ItalicFont=cmu-concrete-italic,
+    BoldItalicFont=cmu-concrete-bold-italic
+  ]
+  \setsansfont{CMU Sans}[
+    Path=../fonts/cmu-sans/,
+    Extension=.ttf,
+    UprightFont=cmu-sans-regular,
+    BoldFont=cmu-sans-bold,
+    ItalicFont=cmu-sans-italic,
+    BoldItalicFont=cmu-sans-bold-italic
+  ]
+  \setmonofont{CMU Typewriter}[
+    Path=../fonts/cmu-typewriter/,
+    Extension=.ttf,
+    UprightFont=cmu-typewriter-regular,
+    BoldFont=cmu-typewriter-bold,
+    ItalicFont=cmu-typewriter-italic,
+    BoldItalicFont=cmu-typewriter-bold-italic
+  ]
+  \newfontfamily\cmuSerifFont{CMU Serif}[
+    Path=../fonts/cmu-serif/,
+    Extension=.ttf,
+    UprightFont=cmu-serif-regular,
+    BoldFont=cmu-serif-bold,
+    ItalicFont=cmu-serif-italic,
+    BoldItalicFont=cmu-serif-bold-italic
+  ]
   \newfontfamily\molotFont{Molot}[
     Path=../fonts/molot/,
     Extension=.ttf,

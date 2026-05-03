@@ -18,7 +18,7 @@ pre {
 code {
   background-color: $platinum;
   border-radius: 3 * $px;
-  font-size: 90%;
+  font-size: .9 * $em;
   hyphens: none;
   line-height: $em;
   padding: 0 .15 * $em;
@@ -26,16 +26,11 @@ code {
 
 pre {
   display: block;
-  font-size: .9 * $em;
   line-height: 1.2 * $em;
 
   code {
     background-color: inherit;
     padding: 0;
-  }
-
-  @media all and (max-width: $width) {
-    line-height: 1.2 * $em;
   }
 }
 

@@ -1,8 +1,118 @@
 // SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
 
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+  font-family: 'CMU Serif';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/cmu-serif/cmu-serif-regular.ttf') format('truetype');
+}
 
-$serif: 'PT Serif', serif;
-$sans: 'PT Sans', sans serif;
-$monospace: 'PT Mono', monospace;
+@font-face {
+  font-family: 'CMU Serif';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/fonts/cmu-serif/cmu-serif-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Serif';
+  font-weight: normal;
+  font-style: italic;
+  src: url('/fonts/cmu-serif/cmu-serif-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Serif';
+  font-weight: bold;
+  font-style: italic;
+  src: url('/fonts/cmu-serif/cmu-serif-bold-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Concrete';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/cmu-concrete/cmu-concrete-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Concrete';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/fonts/cmu-concrete/cmu-concrete-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Concrete';
+  font-weight: normal;
+  font-style: italic;
+  src: url('/fonts/cmu-concrete/cmu-concrete-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Concrete';
+  font-weight: bold;
+  font-style: italic;
+  src: url('/fonts/cmu-concrete/cmu-concrete-bold-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Sans';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/cmu-sans/cmu-sans-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Sans';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/fonts/cmu-sans/cmu-sans-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Sans';
+  font-weight: normal;
+  font-style: italic;
+  src: url('/fonts/cmu-sans/cmu-sans-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Sans';
+  font-weight: bold;
+  font-style: italic;
+  src: url('/fonts/cmu-sans/cmu-sans-bold-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Typewriter';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/fonts/cmu-typewriter/cmu-typewriter-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Typewriter';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/fonts/cmu-typewriter/cmu-typewriter-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Typewriter';
+  font-weight: normal;
+  font-style: italic;
+  src: url('/fonts/cmu-typewriter/cmu-typewriter-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Typewriter';
+  font-weight: bold;
+  font-style: italic;
+  src: url('/fonts/cmu-typewriter/cmu-typewriter-bold-italic.ttf') format('truetype');
+}
+
+$serif: 'CMU Concrete', serif;
+$sans: 'CMU Sans', sans-serif;
+$monospace: 'CMU Typewriter', monospace;

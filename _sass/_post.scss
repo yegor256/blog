@@ -14,17 +14,6 @@ article {
 
     del {
       color: $gray;
-      text-decoration: line-through;
-    }
-
-    em {
-      font-style: italic;
-    }
-
-    strong {
-      color: $red;
-      font-style: normal;
-      font-weight: normal;
     }
   }
 
@@ -40,20 +29,20 @@ article {
   }
 
   .footnotes {
-    font-size: .8em;
-    line-height: 1em;
+    font-size: .8 * $em;
+    line-height: $em;
 
     ol {
       color: $gray;
-      margin-top: 4em;
-      padding-left: 1em;
+      margin-top: 4 * $em;
+      padding-left: $em;
     }
   }
 }
 
 .jekyll-chatgpt-translate {
   color: $gray;
-  font-size: 80%;
+  font-size: .8 * $em;
 }
 
 .buttons {
@@ -131,7 +120,7 @@ article {
   width: 15 * $em;
 
   .book-cover {
-    border: 1 * $px solid lightgray;
+    border: 1 * $px solid $silver;
     float: left;
     height: 160 * $px;
     margin-right: .6 * $em;

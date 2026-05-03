@@ -15,7 +15,6 @@
 @use 'post';
 @use 'wrapper' as *;
 @use 'youtube';
-@use 'russian';
 
 .em2 { font-size: 2 * $em; }
 .center { text-align: center; }
@@ -108,12 +107,6 @@ del {
         color: $gray;
         margin-bottom: $em;
         padding-left: $em;
-
-        strong {
-          color: $red;
-          font-style: normal;
-          font-weight: normal;
-        }
       }
     }
   }
@@ -288,14 +281,6 @@ h2 {
     display: inline-block;
     margin-right: .5 * $em;
     white-space: nowrap;
-
-    &.has-poll {
-      // nothing yet
-    }
-
-    &.tags {
-      // nothing yet
-    }
   }
 }
 
@@ -400,7 +385,7 @@ figure {
     line-height: 1em;
     max-width: 90%;
     position: absolute;
-    text-shadow: .2 * $px .2 * $px dimgray;
+    text-shadow: .2 * $px .2 * $px $gray;
   }
 
   figcaption::before {
@@ -417,7 +402,6 @@ figure {
   background-color: $gray;
   color: $white !important;
   display: inline-block;
-  font-family: $sans;
   font-size: .8 * $em;
   line-height: 1.15 * $em;
   margin-right: .2 * $em;

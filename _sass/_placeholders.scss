@@ -18,16 +18,8 @@
 
 %small { font-size: .85 * $em; }
 
-%strike { text-decoration: line-through; }
-
 %serif {
   font-family: $serif;
-  font-style: normal;
-  font-weight: normal;
-}
-
-%monospace {
-  font-family: $monospace;
   font-style: normal;
   font-weight: normal;
 }
