@@ -92,7 +92,7 @@ del {
   .hot {
     @extend %unprintable;
     font-family: $monospace;
-    font-size: 75%;
+    font-size: .75 * $em;
     line-height: $em;
     margin-bottom: 2 * $em;
     margin-top: 2 * $em;
@@ -130,7 +130,7 @@ del {
         a {
           background-color: $red;
           color: $white;
-          padding: 0 .3em;
+          padding: 0 .3 * $em;
           text-decoration: none;
         }
       }
@@ -312,18 +312,18 @@ h2 {
 
 sup,
 sub {
-  font-size: .6em;
+  font-size: .6 * $em;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
 sup {
-  top: -.3em;
+  top: -.3 * $em;
 }
 
 sub {
-  top: .3em;
+  top: .3 * $em;
 }
 
 hr {
@@ -338,7 +338,7 @@ hr {
 
 .badge {
   float: right;
-  margin-left: 2em;
+  margin-left: 2 * $em;
   @media all and (max-width: $width) {
     float: none;
     margin-bottom: $em;
@@ -378,11 +378,11 @@ figure {
 
   figcaption {
     background-color: $silver;
-    bottom: 1em;
+    bottom: $em;
     color: $platinum;
-    font-size: .8em;
-    left: .5em;
-    line-height: 1em;
+    font-size: .8 * $em;
+    left: .5 * $em;
+    line-height: $em;
     max-width: 90%;
     position: absolute;
     text-shadow: .2 * $px .2 * $px $gray;
@@ -411,9 +411,9 @@ figure {
 
   img {
     display: inline-block;
-    height: 1em;
-    margin-right: .2em;
-    margin-top: -.25em;
+    height: $em;
+    margin-right: .2 * $em;
+    margin-top: -.25 * $em;
     vertical-align: middle;
   }
 
@@ -454,14 +454,14 @@ figure {
   border-radius: 50%;
   color: $gray;
   display: inline-block;
-  font-size: .8em;
+  font-size: .8 * $em;
   font-weight: bold;
-  height: 1em;
-  line-height: 1em;
-  padding: .2em;
+  height: $em;
+  line-height: $em;
+  padding: .2 * $em;
   text-align: center;
   vertical-align: middle;
-  width: 1em;
+  width: $em;
 }
 
 table {
