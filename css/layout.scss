@@ -93,7 +93,7 @@ del {
     @extend %unprintable;
     font-family: $monospace;
     font-size: .75 * $em;
-    line-height: $em;
+    line-height: .8 * $em;
     margin-bottom: 2 * $em;
     margin-top: 2 * $em;
     text-align: left;
