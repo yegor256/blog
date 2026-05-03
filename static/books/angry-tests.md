@@ -38,9 +38,15 @@ Volume 1:<br/>
 
 <!--more-->
 
+Dec 29, 2024:
+Started to write it.
+
 Apr 16, 2025:
 The first volume was published [on Amazon](https://amzn.to/4czWVkh).
 
 Dec 19, 2025:
 [Started](https://x.com/yegor256/status/2003480458940809490)
 to write the second volume.
+
+Mar 23, 2026:
+The second volume was sent to 20 reviewers.
