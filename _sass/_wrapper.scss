@@ -6,17 +6,17 @@
 %wrapper {
   box-sizing: border-box;
   clear: both;
-  line-height: 1.35 * $em;
+  line-height: 1.35 * $rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2 * $em;
-  padding-right: 2 * $em;
+  padding-left: 2 * $rem;
+  padding-right: 2 * $rem;
   width: $width;
 
   @media all and (max-width: $width) {
-    line-height: 1.6 * $em;
-    padding-left: $em;
-    padding-right: $em;
+    line-height: 1.6 * $rem;
+    padding-left: $rem;
+    padding-right: $rem;
     width: 100%;
   }
 }

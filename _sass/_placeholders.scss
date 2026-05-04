@@ -16,7 +16,7 @@
 
 %clear { clear: both; }
 
-%small { font-size: .85 * $em; }
+%small { font-size: .85 * $rem; }
 
 %serif {
   font-family: $serif;

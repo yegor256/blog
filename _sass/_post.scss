@@ -9,8 +9,8 @@
 article {
   p {
     hyphens: auto;
-    margin-bottom: .75 * $em;
-    margin-top: .75 * $em;
+    margin-bottom: .75 * $rem;
+    margin-top: .75 * $rem;
 
     del {
       color: $gray;
@@ -29,26 +29,26 @@ article {
   }
 
   .footnotes {
-    font-size: .8 * $em;
-    line-height: $em;
+    font-size: .8 * $rem;
+    line-height: $rem;
 
     ol {
       color: $gray;
-      margin-top: 4 * $em;
-      padding-left: $em;
+      margin-top: 4 * $rem;
+      padding-left: $rem;
     }
   }
 }
 
 .jekyll-chatgpt-translate {
   color: $gray;
-  font-size: .8 * $em;
+  font-size: .8 * $rem;
 }
 
 .buttons {
   @extend %unprintable;
 
-  margin-bottom: .5 * $em;
+  margin-bottom: .5 * $rem;
 
   a {
     position: relative;
@@ -61,12 +61,12 @@ article {
       border: 1 * $px solid $gray;
       color: $gray;
       display: none;
-      font-size: .6 * $em;
-      line-height: .7 * $em;
-      padding: 0 .2 * $em;
+      font-size: .6 * $rem;
+      line-height: .7 * $rem;
+      padding: 0 .2 * $rem;
       position: absolute;
-      right: .3 * $em;
-      top: -.7 * $em;
+      right: .3 * $rem;
+      top: -.7 * $rem;
     }
 
     .icon {
@@ -76,14 +76,14 @@ article {
       border-radius: 50%;
       color: $gray;
       display: inline-block;
-      height: $size * $em;
-      line-height: $size * $em;
-      margin-bottom: .2 * $em;
-      margin-right: .2 * $em;
-      padding: .4 * $size * $em;
+      height: $size * $rem;
+      line-height: $size * $rem;
+      margin-bottom: .2 * $rem;
+      margin-right: .2 * $rem;
+      padding: .4 * $size * $rem;
       text-align: center;
       vertical-align: middle;
-      width: $size * $em;
+      width: $size * $rem;
 
       &:hover {
         background-color: $gray;
@@ -99,11 +99,11 @@ article {
 
   border-left: 4 * $px solid $silver;
   float: right;
-  font-size: 1.6 * $em;
-  line-height: 1.6 * $em;
-  margin: .5 * $em -5 * $em .5 * $em $em;
-  padding-left: .75 * $em;
-  width: 15 * $em;
+  font-size: 1.6 * $rem;
+  line-height: 1.6 * $rem;
+  margin: .5 * $rem -5 * $rem .5 * $rem $rem;
+  padding-left: .75 * $rem;
+  width: 15 * $rem;
 }
 
 .book {
@@ -112,15 +112,15 @@ article {
   @extend %unprintable;
 
   float: right;
-  margin: .5 * $em -6 * $em .5 * $em $em;
-  padding-left: .75 * $em;
-  width: 15 * $em;
+  margin: .5 * $rem -6 * $rem .5 * $rem $rem;
+  padding-left: .75 * $rem;
+  width: 15 * $rem;
 
   .book-cover {
     border: 1 * $px solid $silver;
     float: left;
     height: 160 * $px;
-    margin-right: .6 * $em;
+    margin-right: .6 * $rem;
     width: 108 * $px;
   }
 
