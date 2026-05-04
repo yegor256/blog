@@ -12,17 +12,17 @@
 
   border-left: 4 * $px solid #e52d27;
   float: right;
-  font-size: .8 * $em;
-  line-height: $em;
-  margin: .5 * $em -5 * $em .5 * $em $em;
-  padding-left: $em;
+  font-size: .8 * $rem;
+  line-height: $rem;
+  margin: .5 * $rem -5 * $rem .5 * $rem $rem;
+  padding-left: $rem;
   text-align: left;
-  width: 10 * $em;
+  width: 10 * $rem;
 
   .box {
     display: block;
     line-height: 0;
-    margin-bottom: .4 * $em;
+    margin-bottom: .4 * $rem;
     position: relative;
     width: 100%;
 
@@ -33,7 +33,7 @@
     .play {
       color: $white;
       height: 100%;
-      line-height: $em;
+      line-height: $rem;
       padding-top: 21%;
       position: absolute;
       text-align: center;
@@ -42,8 +42,8 @@
       width: 100%;
 
       i::before {
-        font-size: 3 * $em;
-        line-height: $em;
+        font-size: 3 * $rem;
+        line-height: $rem;
       }
     }
   }

@@ -4,8 +4,8 @@
 @use 'defs' as *;
 
 .icon::before {
-  font-size: $em;
-  line-height: 1.2 * $em;
+  font-size: $rem;
+  line-height: 1.2 * $rem;
 }
 
 .icon-twitter:hover { color: #00aced; }
