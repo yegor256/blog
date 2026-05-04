@@ -384,6 +384,7 @@ answered
 answering
 answers
 anthony
+anthropics
 anthropomorphic
 anti-
 anti-defamation
@@ -1556,6 +1557,7 @@ classifying
 classmate
 classroom
 claude
+claude-code
 clause
 clauses
 clean
@@ -2156,6 +2158,8 @@ couples
 coupling
 courage
 courageous
+courier
+couriers
 course
 courses
 coursework
@@ -3772,6 +3776,7 @@ flavors
 flaw
 flaw-finders
 flawed
+flawless
 flaws
 fletcher
 flexibility
@@ -3851,6 +3856,7 @@ foreigner
 foremost
 foresee
 forever
+forgave
 forget
 forgets
 forgetting
@@ -6957,6 +6963,7 @@ overruns
 overseas
 oversees
 oversimplified
+oversized
 overtime
 overview
 overwhelming
@@ -7026,6 +7033,8 @@ parallelized
 parameter
 parameters
 PARC
+parcel
+parcels
 parent
 parenting
 parents
@@ -7941,6 +7950,7 @@ RDS
 re
 re-certify
 re-charge
+re-checking
 re-define
 re-delivering
 re-deploy
@@ -8445,6 +8455,7 @@ rigid
 ringelmann
 riot
 rise
+rises
 rising
 risk
 risk-driven
@@ -10345,6 +10356,7 @@ unannounced
 unanswered
 unappetizing
 unappreciated
+unapproved
 unaware
 unawareness
 unbeatable
@@ -10728,6 +10740,7 @@ vulnerabilities
 vulnerable
 vy
 vytautas
+wage
 wages
 wait
 waited

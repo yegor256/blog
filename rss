@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-05-03T12:06:21+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Fast Software: More Programmers, Not Fewer</title><link href="https://www.yegor256.com/2026/03/05/fast-software.html" rel="alternate" type="text/html" title="Fast Software: More Programmers, Not Fewer" /><published>2026-03-05T00:00:00+00:00</published><updated>2026-03-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/03/05/fast-software</id><content type="html" xml:base="https://www.yegor256.com/2026/03/05/fast-software.html"><![CDATA[<p>When I was five years old, I inherited the shoes of my older brother.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-05-04T07:39:24+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Couriers, Not Coders</title><link href="https://www.yegor256.com/2026/05/03/no-mercy.html" rel="alternate" type="text/html" title="Couriers, Not Coders" /><published>2026-05-03T00:00:00+00:00</published><updated>2026-05-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/05/03/no-mercy</id><content type="html" xml:base="https://www.yegor256.com/2026/05/03/no-mercy.html"><![CDATA[<p>Someone submitted an issue to one of our open GitHub repositories a week ago,
+  suggesting a new feature.
+We didn’t respond, since we
+  <a href="/2024/04/01/ping-me-please.html">didn’t notice it</a>.
+Today, someone else submitted an implementation of the feature in a pull request.
+I rejected it and explained that the feature request must first be
+  accepted by the
+  <a href="/2014/10/12/who-is-software-architect.html">project architect</a>,
+  and only then would it be worth
+  making a pull request.
+The author of the PR got offended.
+He won’t be back.
+Good.
+A year ago, we would have been sad to lose an
+  <a href="/2019/01/01/hazardous-enthusiasm.html">enthusiastic</a> contributor.
+Today, we don’t care.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Cruel Intentions (1999) by Roger Kumble" src="/images/2026/05/cruel-intentions.jpg" longdesc="#73b21b12" /><figcaption id="73b21b12">Cruel Intentions (1999) by Roger Kumble</figcaption></figure>
+
+<p>For years you sold coding skill at $50 an hour.
+AI now codes for cents.
+But you still want $50.</p>
+
+<p>We are still ready to pay.
+Not for the code—the code is free.
+For the <em>delivery</em>.</p>
+
+<p>You take what <a href="https://github.com/anthropics/claude-code">Claude Code</a> wrote and you walk it to our door.
+You are the <em>courier</em>, not the coder.</p>
+
+<p>The margin is what we pay for trust:
+  that what you deliver, we can merge without re-checking.
+So the delivery must be flawless.</p>
+
+<aside class="quote">We pay for the delivery, not the code
+</aside>
+
+<p>A PR without a description is a package with no label—refused.
+An unfocused PR is two parcels in one box—refused.
+A PR too large to read is an oversized package—refused.
+A PR sitting in review for weeks is a delivery that never arrived—refused.
+A PR for an unapproved feature is a parcel for an address we never accepted—refused.</p>
+
+<p>What we forgave yesterday, when we still needed the code, we no longer forgive.
+The market for couriers is huge.
+We can afford to choose.
+So the bar rises, not falls.</p>
+
+<p>Working code is now the minimum.
+We expect discipline, speed of delivery, clear and detailed communication,
+  and readiness to re-work.
+Above all, we expect you to understand our
+  <a href="/2015/10/13/competition-without-rules.html">rules</a>
+  and <em>obey</em> them.</p>
+
+<p>No mercy for mess.
+Not anymore.</p>
+
+<p>If you want the wage, earn the margin.</p>
+
+<p>Be proud of the delivery, not the code.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html"><![CDATA[Now that AI codes for cents, contributors are paid for the delivery, not the code—so no mercy for sloppy pull requests anymore.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/05/cruel-intentions.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/05/cruel-intentions.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fast Software: More Programmers, Not Fewer</title><link href="https://www.yegor256.com/2026/03/05/fast-software.html" rel="alternate" type="text/html" title="Fast Software: More Programmers, Not Fewer" /><published>2026-03-05T00:00:00+00:00</published><updated>2026-03-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/03/05/fast-software</id><content type="html" xml:base="https://www.yegor256.com/2026/03/05/fast-software.html"><![CDATA[<p>When I was five years old, I inherited the shoes of my older brother.
 Not because our family was poor, but because the shoes were good.
 My grandma told me that when she was a fiancée her dowry consisted of a few skirts.
 Not because she was poor.
@@ -855,149 +917,4 @@ You won’t win.
 The only strategy is distance.
 Minimize contact, keep your head down when necessary, and focus on delivering real value where it matters.
 Reds will spend their lives climbing the corporate ladder.
-Blacks must learn to survive in the shadows of that ladder, working for the customer, not the boss.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="mood" /><summary type="html"><![CDATA[In big organizations, reds obey bosses while blacks serve customers—and blacks survive only by keeping their distance.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/09/cold-summer-1953.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/09/cold-summer-1953.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The End of Type Annotations</title><link href="https://www.yegor256.com/2025/08/17/type-annotations.html" rel="alternate" type="text/html" title="The End of Type Annotations" /><published>2025-08-17T00:00:00+00:00</published><updated>2025-08-17T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/08/17/type-annotations</id><content type="html" xml:base="https://www.yegor256.com/2025/08/17/type-annotations.html"><![CDATA[<p>Type annotations are what make statically typed object-oriented languages like Java run <strong>faster</strong> and <strong>safer</strong>.
-Without annotations, every variable would effectively collapse to <code class="language-plaintext highlighter-rouge">Object</code>, forcing runtime casts.
-The code would work, but slower and with more runtime errors.
-Some type annotations may be inferred instead of being explicitly specified by a programmer.
-Not all though.
-In Java, for example, a number of hard-to-resolve challenges prevent us from inferring types of all objects.
-This is not a fundamental limitation of OOP itself.
-It’s a result of design trade-offs in Java and similar languages.
-In a perfect object-oriented language, all variable types would be inferrable.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Swingers (1996) by Doug Liman" src="/images/2025/08/swingers.jpg" longdesc="#4225221a" /><figcaption id="4225221a">Swingers (1996) by Doug Liman</figcaption></figure>
-
-<p>Imagine a simple Java method:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Price priceOfDelivery(Book book, City city) {
-  Price price = book.price();
-  Delivery delivery = new Delivery(price, city);
-  return delivery.price();
-}
-</code></pre></div></div>
-
-<p>Two reasons justify the usage of <code class="language-plaintext highlighter-rouge">Book</code>, <code class="language-plaintext highlighter-rouge">City</code>, <code class="language-plaintext highlighter-rouge">Price</code>, and <code class="language-plaintext highlighter-rouge">Delivery</code> type annotations:
-Compilers and programmers need help.</p>
-
-<h2 id="type-annotations-are-helpful">Type Annotations Are Helpful</h2>
-
-<p>First, we help the compiler eliminate some <strong>dynamic dispatches</strong> in favor of static calls.
-If the <code class="language-plaintext highlighter-rouge">Book</code> is a class, not an interface, the <code class="language-plaintext highlighter-rouge">book.price()</code> call may be compiled into a jump to an absolute address.
-Without information about the <code class="language-plaintext highlighter-rouge">book</code>’s class, <code class="language-plaintext highlighter-rouge">.price()</code> goes to a virtual table first, finds the address, and only then jumps.
-The second scenario is more expensive.
-The type annotation attached to <code class="language-plaintext highlighter-rouge">book</code> helps avoid it.</p>
-
-<p>Second, we help ourselves write safe code, avoiding “Method not found” <strong>runtime errors</strong>.
-If <code class="language-plaintext highlighter-rouge">book</code> is not annotated as <code class="language-plaintext highlighter-rouge">Book</code>, we may mistakenly pass <code class="language-plaintext highlighter-rouge">Integer</code>, meaning the book’s ID in the database.
-At compile time, that would lead to no errors.
-Later, at runtime, we get an error when <code class="language-plaintext highlighter-rouge">.price()</code> is not found in the virtual table of the <code class="language-plaintext highlighter-rouge">Integer</code> class.</p>
-
-<p>However, both compilers and programmers can improve.</p>
-
-<h2 id="compilers-can-do-better">Compilers Can Do Better</h2>
-
-<p>Sometimes, a compiler can infer the type of a variable, without an explicit annotation.
-For example, this code compiles in Java, starting from version 10:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Price priceOfDelivery(Book book, City city) {
-  var price = book.price();
-  var delivery = new Delivery(price, city);
-  return delivery.price();
-}
-</code></pre></div></div>
-
-<p>The type annotation used in earlier Java versions is replaced with the <code class="language-plaintext highlighter-rouge">var</code> keyword.</p>
-
-<p>In a small piece of code such as this one, the compiler can <strong>infer</strong> types.
-However, it may fall short with the <code class="language-plaintext highlighter-rouge">book</code> and <code class="language-plaintext highlighter-rouge">city</code> parameters.
-In the general case, type inference is not decidable for Java programs.
-Because of generics, method overloading, reflection, and … complexity.</p>
-
-<p>The complexity is the technical obstacle.
-The compiler can’t infer types for all variables because it would be too expensive to analyze the whole program.
-Instead, it compiles file by file.
-Even if the compiler had the whole program, inference in Java would still hit undecidability in the general case.
-File-by-file compilation makes this even more restrictive.</p>
-
-<p>All other barriers, such as generics, the compiler can’t overcome:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void print(List&lt;?&gt; items) {
-  var x = items.get(0); // What is the type?
-}
-</code></pre></div></div>
-
-<p>No matter how hard the compiler tries, in the general case, this question doesn’t have an answer.</p>
-
-<h2 id="programmers-can-do-better">Programmers Can Do Better</h2>
-
-<p>We, programmers, can help the compiler infer types.</p>
-
-<p>For example, we can stop using generics.
-Instead of <code class="language-plaintext highlighter-rouge">List&lt;Book&gt;</code> we can have a <code class="language-plaintext highlighter-rouge">Library</code> and instead of <code class="language-plaintext highlighter-rouge">Map&lt;User, Phone&gt;</code> we can have a <code class="language-plaintext highlighter-rouge">PhoneBook</code>.
-It’s easier to infer the type of the object taken from a <code class="language-plaintext highlighter-rouge">Library</code> versus the object taken from a generic <code class="language-plaintext highlighter-rouge">List</code>.</p>
-
-<p>We can also stop using method overloading.
-Instead of <code class="language-plaintext highlighter-rouge">print(String x)</code> and <code class="language-plaintext highlighter-rouge">print(Integer x)</code> we can create <code class="language-plaintext highlighter-rouge">printString(x)</code> and <code class="language-plaintext highlighter-rouge">printInteger(x)</code>.
-Types of parameters are easier to infer in more specialized methods.</p>
-
-<p>We can also stop using reflection.</p>
-
-<aside class="quote">The easier it is to infer the type of a variable for a compiler, the faster the programmer gets the semantics of it too
-</aside>
-
-<p>Java programmers may not be ready for such a <strong>radical move</strong>.
-However, if they were, they would not only help the compiler but themselves too.
-Eliminating type annotations makes code shorter and, because of that, cleaner.
-This is why <code class="language-plaintext highlighter-rouge">var</code> syntax was introduced in Java 10.</p>
-
-<p>In the code above, variable names are nouns.
-In well-written code, nouns as names are <a href="/2015/01/12/compound-name-is-code-smell.html">sufficient</a> to disambiguate variables.
-No need to call it <code class="language-plaintext highlighter-rouge">cityOfDelivery</code> or <code class="language-plaintext highlighter-rouge">bookToDeliver</code>.
-Just <code class="language-plaintext highlighter-rouge">book</code> and <code class="language-plaintext highlighter-rouge">city</code> are enough.</p>
-
-<p>We also named variables by their types: a <code class="language-plaintext highlighter-rouge">book</code> is of type <code class="language-plaintext highlighter-rouge">Book</code>, and so on.
-By looking at the name of the variable we can tell its type.
-The <code class="language-plaintext highlighter-rouge">Book</code> type annotation looks like a syntactical redundancy.
-It only leads to lower code readability, by making it longer.
-It’s reasonable to expect type inference to free our programs from this redundancy.</p>
-
-<p>Thus, better type inference means better <strong>readability</strong> of the code.</p>
-
-<h2 id="languages-can-do-better">Languages Can Do Better</h2>
-
-<p>Languages like Haskell and the ML family prove that full type inference is achievable.
-However, they still need annotations for edge cases.
-Rust takes a middle ground.
-It infers local variable types but enforces explicit annotations at public interfaces.
-Go, until recently, avoided generics, operator overloading, and heavy reflection, making inference straightforward.
-However, it forces programmers to annotate all public boundaries—function signatures, struct fields, and interfaces.</p>
-
-<aside class="quote">If the type of a variable can’t be inferred, compilation fails
-</aside>
-
-<p>I suggest taking one step forward and designing a language that doesn’t have any type annotations.
-Such a language should not have generics, method overloading, reflection, and everything else that prevents 100% type inference.
-Then, we must design a compiler for this language that compiles the entire program, not single files.</p>
-
-<p>The language may be as strict as this:
-If the type of a variable can’t be inferred, compilation fails.</p>
-
-<p>This is how the book price snippet would look in such a language:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>priceOfDelivery(book, city) {
-  p = book.price();
-  d = new Delivery(p, city);
-  return d.price();
-}
-</code></pre></div></div>
-
-<p>To me, this seems to be much more readable than the original code in Java.</p>
-
-<p>Compilation time remains a limitation though.
-We turn this issue into an opportunity.
-Programmers are forced, by the timing limitations of the compiler, to write smaller modules.
-When they need larger programs, they break them into modules that communicate via <a href="https://en.wikipedia.org/wiki/Inter-process_communication">IPC</a> instead of staying in a monolithic binary.</p>
-
-<p>We’re experimenting with this approach in <a href="https://www.eolang.org">EOLANG</a>, a language designed to maximize inference by eliminating features that make it undecidable.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[Type annotations are a workaround for compiler limitations, not a feature—a well-designed language should infer all types automatically, forcing programmers to write smaller, cleaner modules.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/08/swingers.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/08/swingers.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+Blacks must learn to survive in the shadows of that ladder, working for the customer, not the boss.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="mood" /><summary type="html"><![CDATA[In big organizations, reds obey bosses while blacks serve customers—and blacks survive only by keeping their distance.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/09/cold-summer-1953.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/09/cold-summer-1953.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
