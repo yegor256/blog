@@ -279,7 +279,7 @@ decrypt:
   secring.gpg: "repo/secring.gpg.asc"
 release:
   script: |
-    mvn versions:set "-DnewVersion=${tag}"
+    mvn -ntp versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
     mvn clean deploy -Pjcabi --settings /home/r/settings.xml
 ```

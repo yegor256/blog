@@ -193,7 +193,7 @@ decrypt:
   settings.xml: "repo/settings.xml.asc"
 release:
   script: |
-    mvn versions:set "-DnewVersion=${tag}"
+    mvn -ntp versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
     mvn clean deploy --settings /home/r/settings.xml
 ```

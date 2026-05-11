@@ -77,7 +77,7 @@ decrypt:
   id_rsa.pub: "repo/id_rsa.pub.asc"
 release:
   script: |
-    mvn versions:set "-DnewVersion=${tag}"
+    mvn -ntp versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
     mvn clean install -Pqulice --errors
     git remote add heroku git@heroku.com:aintshy.git
