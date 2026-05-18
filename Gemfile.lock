@@ -154,7 +154,7 @@ GEM
     jgd (1.14.0)
       jekyll (>= 1)
       trollop (>= 2)
-    json (2.19.4)
+    json (2.19.5)
     kramdown (2.5.2)
       rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
