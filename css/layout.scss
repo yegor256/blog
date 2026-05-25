@@ -54,9 +54,6 @@ a,
 a:visited {
   color: inherit;
   text-decoration: underline;
-  // scss-lint:disable PropertySpelling
-  text-decoration-thickness: $px;
-  // scss-lint:enable PropertySpelling
   &.external {
     text-decoration-color: $silver;
     text-decoration-style: dotted;
