@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-05-22T07:52:58+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Couriers, Not Coders</title><link href="https://www.yegor256.com/2026/05/03/no-mercy.html" rel="alternate" type="text/html" title="Couriers, Not Coders" /><published>2026-05-03T00:00:00+00:00</published><updated>2026-05-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/05/03/no-mercy</id><content type="html" xml:base="https://www.yegor256.com/2026/05/03/no-mercy.html"><![CDATA[<p>Someone submitted an issue to one of our open GitHub repositories a week ago,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-05-25T09:40:09+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Monotonic Indentation</title><link href="https://www.yegor256.com/2026/05/24/monotonic-indentation.html" rel="alternate" type="text/html" title="Monotonic Indentation" /><published>2026-05-24T00:00:00+00:00</published><updated>2026-05-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/05/24/monotonic-indentation</id><content type="html" xml:base="https://www.yegor256.com/2026/05/24/monotonic-indentation.html"><![CDATA[<p>People have been arguing about how to indent code for as long as there’s been code,
+  and nobody has settled it.
+Java’s <a href="https://checkstyle.org">Checkstyle</a> aligns continuations under the open paren,
+  <a href="https://eslint.org">ESLint</a> and <a href="https://prettier.io">Prettier</a> each invent their own rules,
+  Go’s <a href="https://pkg.go.dev/cmd/gofmt">gofmt</a> uses tabs and shrugs,
+  <a href="https://rubocop.org">RuboCop</a> hands you a menu,
+  Python’s <a href="https://peps.python.org/pep-0008/">PEP 8</a> picks four spaces and leaves the rest to taste.
+Every tool has its own dialect, and teams waste hours fighting over the details.
+I suggest a simple rule of <em>monotonic</em> indentation for source code of any programming language:</p>
+
+<blockquote>
+  <p>Between any two adjacent lines, indentation may increase by exactly one unit.</p>
+</blockquote>
+
+<p>This rule should resolve most disputes about code formatting style.
+It is easy to add as an extra check to any existing style checker,
+  or to deploy on its own as a small standalone tool.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Покровские ворота (1983) by Михаил Козаков" src="/images/2026/05/pokrovskie-vorota.jpg" longdesc="#961f3dbf" /><figcaption id="961f3dbf">Покровские ворота (1983) by Михаил Козаков</figcaption></figure>
+
+<p>According to the rule, this Java code is illegal:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Repository</span> <span class="o">{</span>
+    <span class="kt">void</span> <span class="nf">save</span><span class="o">(</span><span class="nc">File</span> <span class="n">file</span><span class="o">,</span>
+              <span class="nc">String</span> <span class="n">text</span><span class="o">,</span> <span class="nc">String</span> <span class="n">summary</span><span class="o">,</span>
+              <span class="kt">boolean</span> <span class="n">overwrite</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">exists</span><span class="o">()</span>
+                <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">overwrite</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">throw</span> <span class="k">new</span> <span class="nf">IllegalStateException</span><span class="o">(</span>
+                    <span class="s">"file already exists"</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="n">update</span><span class="o">(</span><span class="n">file</span><span class="o">,</span>
+               <span class="n">text</span><span class="o">,</span>
+               <span class="n">summary</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This one is legal (and pretty, if you ask me):</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Repository {
+<span class="tab">→→</span>void save(File file,
+  <span class="tab">→→</span>String text, String summary,
+    boolean overwrite) {
+    if (file.exists()
+    <span class="tab">→→</span>&amp;&amp; !overwrite) {
+      throw new IllegalStateException(
+      <span class="tab">→→</span>"file already exists");
+    }
+    update(file,
+    <span class="tab">→→</span>text,
+      summary);
+  }
+}
+</code></pre></div></div>
+
+<p>The idea is simple: going down the code, you may step right by one notch at a time,
+  but you may jump back left by as many notches as you want.
+You can’t skip steps on the way in, but you can leap out freely.
+Every line still lands on a grid, never in between.</p>
+
+<p>Together with the <a href="/2014/10/23/paired-brackets-notation.html">Paired Brackets</a> rule,
+  this makes the code look ideal:
+  brackets line up vertically and indentation never jumps further than necessary.</p>
+
+<p>BTW, the parser of <a href="https://www.eolang.org">EO</a>, our experimental language, enforces this rule syntactically.
+This is similar to the <a href="https://en.wikipedia.org/wiki/Off-side_rule">off-side rule</a> of Python,
+  where indentation defines block structure rather than braces.
+However, in EO everything is an object, while in Python it is not.
+That’s why EO can afford to be stricter and demand monotonic steps everywhere.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="style" /><summary type="html"><![CDATA[Between two adjacent lines, indentation may grow by one unit only, but may shrink by any number of units — a rule that resolves most code formatting disputes.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/05/pokrovskie-vorota.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/05/pokrovskie-vorota.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Couriers, Not Coders</title><link href="https://www.yegor256.com/2026/05/03/no-mercy.html" rel="alternate" type="text/html" title="Couriers, Not Coders" /><published>2026-05-03T00:00:00+00:00</published><updated>2026-05-03T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/05/03/no-mercy</id><content type="html" xml:base="https://www.yegor256.com/2026/05/03/no-mercy.html"><![CDATA[<p>Someone submitted an issue to one of our open GitHub repositories a week ago,
   suggesting a new feature.
 We didn’t respond, since we
   <a href="/2024/04/01/ping-me-please.html">didn’t notice it</a>.
@@ -856,65 +927,4 @@ Every click you make dies the moment you make it; every command you write can li
 <p>Oh, wait.
 In macOS you can’t really play games.
 Bummer…
-Maybe you shouldn’t, since you are a programmer?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[Windows turns programmers into mouse operators. macOS, built on Unix, keeps the command line alive—where everything is a file, tools connect through pipelines, and real programmers stay in control.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/10/das-experiment.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/10/das-experiment.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Red vs. Black</title><link href="https://www.yegor256.com/2025/09/14/red-and-black.html" rel="alternate" type="text/html" title="Red vs. Black" /><published>2025-09-14T00:00:00+00:00</published><updated>2025-09-14T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/09/14/red-and-black</id><content type="html" xml:base="https://www.yegor256.com/2025/09/14/red-and-black.html"><![CDATA[<p>In Soviet Russia, prisoner camps were divided into two categories: red and black.
-In a red camp, the power belonged to the prisoners who cooperated with the administration and helped it maintain discipline.
-In a black one, the power was in the hands of criminals who resented the rules, in permanent confrontation with the administration.
-It seems that in software companies we may also categorize employees into red and black.
-A <strong>red employee</strong> enjoys obeying the rules and climbs up the career ladder by <a href="/2015/01/26/happy-boss-false-objective.html">making the boss happy</a>.
-To the contrary, a <strong>black employee</strong>, while understanding the inevitability, despises the necessity to obey.
-Their career growth is driven by <a href="/2015/02/23/haircut.html">making the customer happy</a>.
-Which one are you?</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Холодное лето пятьдесят третьего (1987) by Александр Прошкин" src="/images/2025/09/cold-summer-1953.jpg" longdesc="#ded7ba65" /><figcaption id="ded7ba65">Холодное лето пятьдесят третьего (1987) by Александр Прошкин</figcaption></figure>
-
-<p>An organization cannot exist without policies and regulations.
-Especially if it’s a large organization where the percentage of underperformers is highest.
-The clock-watchers must be disciplined so that they produce at least something.
-Let’s assume you are not one of them.</p>
-
-<p>However, even if you are not a nine-to-five clock-watcher, you can’t ignore the policies.
-A few examples of the rules you may need to obey:</p>
-
-<ul>
-  <li>All reports must follow the official PowerPoint template</li>
-  <li>Every meeting requires written minutes sent to all participants</li>
-  <li>Job candidates must pass through the full HR pipeline</li>
-  <li>Employees must re-certify their skills on a fixed schedule</li>
-</ul>
-
-<p>All of the above seem reasonable—just like prison rules.
-The difference is your attitude toward them.</p>
-
-<p>They are either a <strong>framework</strong> for your career or an inevitable <strong>evil</strong>.
-You either feel happy when you do what’s required, or feel annoyed and do it just because it’s required.
-You either fill out all the forms completely, or you cut every possible corner to get back to the real work.
-You either read an email copied to 25 people to not miss anything or immediately delete it.
-You either attend all meetings or learn to be creative in finding reasons why you can’t.</p>
-
-<p>You are either red or black.
-Once you find your <strong>identity</strong>, you start despising the other side.</p>
-
-<aside class="quote">Minimize contact, keep your head down when necessary, and focus on delivering real value where it matters
-</aside>
-
-<p>If you are red, you don’t understand the black employees who are constantly rebelling.
-They rebel against the rules you so much enjoy following.
-You see them as dishonest, disloyal, and selfish sociopaths.</p>
-
-<p>If you are black, you despise the red employees who are trying so hard to associate themselves with the system.
-They study the rules and compete against each other—who knows them better.
-You see them as <a href="/2017/08/22/to-be-nice-or-not.html">shallow</a> and incompetent <a href="/2021/03/03/imposters-to-win.html">impostors</a>.</p>
-
-<p>Peace is not possible.
-In any large organization, reds will always dominate—it’s inevitable.
-The system needs them, and they thrive inside it.
-Blacks will always be a minority, surviving at the edges.</p>
-
-<p>If you are black, don’t waste energy trying to convert or fight the reds.
-You won’t win.
-The only strategy is distance.
-Minimize contact, keep your head down when necessary, and focus on delivering real value where it matters.
-Reds will spend their lives climbing the corporate ladder.
-Blacks must learn to survive in the shadows of that ladder, working for the customer, not the boss.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><category term="mood" /><summary type="html"><![CDATA[In big organizations, reds obey bosses while blacks serve customers—and blacks survive only by keeping their distance.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/09/cold-summer-1953.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/09/cold-summer-1953.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+Maybe you shouldn’t, since you are a programmer?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[Windows turns programmers into mouse operators. macOS, built on Unix, keeps the command line alive—where everything is a file, tools connect through pipelines, and real programmers stay in control.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/10/das-experiment.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/10/das-experiment.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

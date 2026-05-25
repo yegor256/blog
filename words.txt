@@ -138,6 +138,7 @@ ADHD
 adhere
 adherence
 adheres
+adjacent
 adjectives
 adjusts
 admin
@@ -1462,6 +1463,7 @@ check
 check-in
 checkbook
 checked
+checker
 checkers
 checking
 checking-in
@@ -1619,6 +1621,7 @@ clumsy
 cluster
 clusterer
 clutters
+cmd
 CMMI
 cmple
 CNAME
@@ -2019,6 +2022,7 @@ contextinitialized
 continents
 contingency
 continually
+continuations
 continue
 continues
 continuing
@@ -2653,6 +2657,7 @@ diagnosis
 diagnostic
 diagram
 diagrams
+dialect
 dialects
 dialog
 dialogue
@@ -4160,6 +4165,7 @@ gmail
 GNOME
 GNU
 go
+go's
 goal
 goal-oriented
 goals
@@ -4170,6 +4176,7 @@ godsend
 goebbels
 goes
 goetz
+gofmt
 goggles
 going
 gold
@@ -4247,6 +4254,7 @@ GreetingsITCase
 greetingstest
 grep
 grew
+grid
 grids
 griggs
 grocery
@@ -4686,6 +4694,7 @@ ignoring
 II
 ill-advised
 illegal
+illegalstateexception
 illinois
 illness
 illnesses
@@ -4814,6 +4823,7 @@ incubator
 incurred
 indeed
 indefinitely
+indent
 indentation
 independent
 independently
@@ -5179,6 +5189,7 @@ jarosz
 JARs
 jasmine
 java
+java's
 javabeans
 javac
 javadoc
@@ -5532,6 +5543,7 @@ leakage
 leaking
 lean
 leaning
+leap
 learn
 learned
 learning
@@ -6294,6 +6306,7 @@ monopoly
 monorepo
 monorepos
 monospace
+monotonic
 monster
 monsters
 month
@@ -6617,6 +6630,8 @@ not-yet-implemented
 notable
 notation
 notations
+notch
+notches
 note
 noted
 notes
@@ -6718,6 +6733,7 @@ ODD
 odds
 of
 off
+off-side
 offend
 offended
 offending
@@ -6967,6 +6983,7 @@ oversized
 overtime
 overview
 overwhelming
+overwrite
 overwrites
 owa
 owe
@@ -7035,6 +7052,7 @@ parameters
 PARC
 parcel
 parcels
+paren
 parent
 parenting
 parents
@@ -7164,7 +7182,9 @@ pentad
 people
 people's
 pep
+pep-
 pepper
+peps
 per
 perceive
 perceived
@@ -7309,6 +7329,7 @@ pixelmator
 pixels
 pizza
 pizzas
+pkg
 place
 placed
 placement
@@ -7556,6 +7577,7 @@ pretend
 pretended
 pretending
 pretends
+prettier
 prettiness
 pretty
 prevent
@@ -7838,6 +7860,7 @@ pycharm
 pylint
 pyramid
 python
+python's
 QA
 qayyum
 QCon
@@ -8991,6 +9014,7 @@ showman
 shows
 shrinks
 shrug
+shrugs
 shut
 shutdown
 shuts
@@ -9763,6 +9787,7 @@ table
 tables
 tabnine
 taboo
+tabs
 tabular
 tacit
 tackles
