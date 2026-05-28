@@ -54,9 +54,6 @@ a,
 a:visited {
   color: inherit;
   text-decoration: underline;
-  // scss-lint:disable PropertySpelling
-  text-decoration-thickness: $px;
-  // scss-lint:enable PropertySpelling
   &.external {
     text-decoration-color: $silver;
     text-decoration-style: dotted;
@@ -91,7 +88,7 @@ del {
 
   .hot {
     @extend %gray;
-    @extend %sans;
+    @extend %mono;
     @extend %unprintable;
     font-size: .9 * $rem;
     line-height: $rem;
@@ -398,7 +395,7 @@ figure {
 }
 
 .tag {
-  @extend %sans;
+  @extend %mono;
   background-color: $gray;
   color: $white !important;
   display: inline-block;

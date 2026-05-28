@@ -1,4 +1,4 @@
-# Example
+# Sticky Sample
 
 This simple Java/Maven project illustrates what I
 suggested in this blog post:
