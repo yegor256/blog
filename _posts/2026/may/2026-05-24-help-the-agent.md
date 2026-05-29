@@ -4,7 +4,7 @@
 
 layout: post
 title: "Help the Agent to Feel You"
-date: 2026-03-24
+date: 2026-05-24
 place: Moscow, Russia
 tags: ai architect
 description: |
@@ -109,20 +109,32 @@ I was forced to use PMD, Checkstyle, Rubocop, Pylint, and whatever else the mark
 Making my own checkers was a complex task that I didn't have the time or skills for.
 Today, I can make my own checkers, because I have Claude.
 
-A few examples.
+Here is an example.
 Recently I've launched a new version of Qulice, a checker for Java code.
-It extends PMD and Checkstyle with 77 additional checkers.
+It extends PMD and Checkstyle with 59 additional checkers.
 New checkers express my personal taste for Java code,
   which sometimes contradicts what the community believes is right.
+Qulice is not a new project.
+It's 14 years old.
+However, I was only recently able to implement all these additional checkers.
+Because I didn't have Claude for 14 years.
+
+Yet another example.
+I've been using Rubocop for more than 10 years.
+An amazing style checker for Ruby code.
+However, it lacks a few important rules that my personal taste demands.
+A month ago I implemented [an extension][rubocop-elegant] for Rubocop.
+Now I'm fully equipped.
+Of course, Claude implemented it, not me.
 
 A combination of both, the carrot (manifesto) and the stick (checkers) does the job.
 The manifesto inspires Claude to do the right thing.
 The checkers punish him for doing wrong things.
 
-Eventually, when the manifesto is inspirational enough and the checkers are strong,
-  Claude starts feeling me.
+When the manifesto is inspirational and the checkers are strong, Claude starts feeling me.
 Well, at least that's what it seems.
 He appreciates my views and rarely writes anything that contradicts them.
+When he does, the checkers punish him, and he [remembers][claude-mem].
 
 I can't imagine a human reacting the same way.
 A few years ago I hired a guy who didn't care much about code elegance.
@@ -134,3 +146,5 @@ Claude doesn't quit.
 And he costs just $108 a month.
 
 [prompt]: https://github.com/yegor256/prompt
+[rubocop-elegant]: https://github.com/yegor256/rubocop-elegant
+[claude-mem]: https://github.com/thedotmack/claude-mem
