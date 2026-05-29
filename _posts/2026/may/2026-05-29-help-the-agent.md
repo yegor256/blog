@@ -84,11 +84,11 @@ I also mean lack of modularity, inadequate error handling, inconsistent naming,
   tight coupling, low cohesion, and high complexity.
 If you read [Code Complete (2004)] and [Object Thinking (2004)], you know what I'm talking about.
 Software may be correct functionality-wise even if most of the principles are violated.
-But it would be ugly software.
+But it would be _ugly_ software.
 For me and maybe for some of you.
 Not for Claude.
 
-A billion Java programs taught him to see source code as an intermediate byproduct
+A billion Java programs taught him to see source code as an _intermediate byproduct_
   between user's intent and the computer.
 However, I prefer working with programmers
   who see source code as a piece of art, a product by itself.
