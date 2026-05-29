@@ -8,13 +8,15 @@ date: 2026-05-24
 place: Moscow, Russia
 tags: ai architect
 description: |
-  ...
+  Claude Code programs better than me but with no taste,
+  so I train it to feel my sense of code beauty
+  through a CLAUDE.md manifesto and custom style checkers.
 keywords:
-  - ...
-  - ...
-  - ...
-  - ...
-  - ...
+  - AI coding agents
+  - Claude Code
+  - code aesthetics
+  - CLAUDE.md manifesto
+  - custom style checkers
 image: /images/2026/05/crocodile-dundee.jpg
 jb_picture:
   caption: Crocodile Dundee (1986) by Peter Faiman
