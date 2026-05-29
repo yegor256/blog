@@ -140,7 +140,7 @@ Tight coupling, low cohesion, or clumsy error handling — no checker can feel t
 That heavier half stays on the manifesto.
 
 When the manifesto is inspirational and the checkers are strong, Claude starts "feeling" me.
-Well, at least that's what it seems (or maybe it trully does feel me?!).
+Well, at least that's what it seems (or maybe it truly does feel me?!).
 He appreciates my views and rarely writes anything that contradicts them.
 When he does, the checkers punish him, and he [remembers][claude-mem].
 
