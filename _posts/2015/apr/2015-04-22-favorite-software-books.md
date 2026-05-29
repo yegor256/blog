@@ -103,8 +103,8 @@ very useful. It makes many important suggestions about better C++ coding. If
 you understand most of them, your Java/Ruby/Python/Scala coding skills will
 improve significantly.
 
-{% badge /images/2015/04/book-code-complete.jpg 96 https://amzn.to/2cs4cXW %}
-[**Code Complete: A Practical Handbook of Software Construction, Second Edition**](https://amzn.to/2cs4cXW)
+{% badge /images/2015/04/book-code-complete.jpg 96 https://jttu.net/mcconnell2004code %}
+[**Code Complete: A Practical Handbook of Software Construction, Second Edition**](https://jttu.net/mcconnell2004code)
 by Steve McConnell.
 Consider this the bible of clean coding. Read it a few times and use it as a reference
 manual in debates with your colleagues. It mentions the most terrible anti-patterns

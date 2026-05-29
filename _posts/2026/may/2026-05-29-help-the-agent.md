@@ -4,7 +4,7 @@
 
 layout: post
 title: "Help the Agent to Feel You"
-date: 2026-05-24
+date: 2026-05-29
 place: Moscow, Russia
 tags: ai architect
 description: |
@@ -22,13 +22,13 @@ jb_picture:
   caption: Crocodile Dundee (1986) by Peter Faiman
 ---
 
-Since the release of Opus 4.7 in April, I don't write code by hand anymore.
-I only talk to Claude Code.
+Since the [release of Opus 4.7] in April, I don't write code by hand anymore.
+I only talk to [Claude Code].
 Not because I'm lazy or don't like coding, but because he is a better programmer than I.
 Also faster and much cheaper.
-However, for most tasks I can't let it fly solo in an "auto mode."
+However, for most tasks I can't let it fly solo in an "[auto mode]."
 Because his standards are lower than I would expect even in a junior developer.
-He is like Mowgli: smart and strong, but rude and clumsy.
+He is like [Mowgli]: smart and strong, but rude and clumsy.
 My job is to teach him elegance, my way.
 And unlike with most developers, with him I can do this.
 
@@ -49,18 +49,18 @@ You either feel it or you don't.
 
 Let me give you an example by sharing a list of what I'm allergic to in programming:
 
-* The absence of tests
+* The [absence]({% pst 2015/jul/2015-07-16-fools-dont-write-unit-tests %}) of tests
 * Knowledge duplication
-* Global state
-* Mutable object attributes
+* [Global]({% pst 2018/jul/2018-07-03-global-variables %}) state
+* [Mutable]({% pst 2014/jun/2014-06-09-objects-should-be-immutable %}) object attributes
 * Swallowed exceptions
-* NULL references
-* A class inheriting another class
-* Type casting or introspection
+* [NULL references]({% pst 2014/may/2014-05-13-why-null-is-bad %})
+* A class [inheriting]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}) another class
+* Type [casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %}) or introspection
 * Methods of 100+ lines long
 * Functions accepting 10+ arguments
-* Compound variable names
-* Comments in the code
+* [Compound]({% pst 2015/jan/2015-01-12-compound-name-is-code-smell %}) variable names
+* [Comments]({% pst 2026/jan/2026-01-11-no-documentation-comments %}) in the code
 * Emojis in documentation 😢
 
 This is a tiny part of what I can call source code _ugly_ for.
@@ -80,8 +80,7 @@ Simply because elegantly designed software is easier to fix
 By a lack of elegance I mean not only inconsistent indentation, though that's an obvious sin.
 I also mean lack of modularity, inadequate error handling, inconsistent naming,
   tight coupling, low cohesion, and high complexity.
-If you read Code Complete (2004), Object Thinking (2004), and Clean Code (2008),
-  you know what I'm talking about.
+If you read [Code Complete (2004)] and [Object Thinking (2004)], you know what I'm talking about.
 Software may be correct functionality-wise even if most of the principles are violated.
 But it would be ugly software.
 For me and maybe for some of you.
@@ -97,7 +96,8 @@ It's hard to find and recruit such people.
 It's even harder to convert a regular programmer who doesn't care into an aesthete.
 Unlike most people, Claude Code can be converted.
 
-With the help of the carrot-and-stick method, as usual.
+With the help of the carrot-and-stick method,
+  [as usual]({% pst 2016/sep/2016-09-27-command-control-innovate %}).
 
 The _carrot_ is the `CLAUDE.md` file, the agentic manifesto.
 Here is mine, at [this repo][prompt].
@@ -107,12 +107,12 @@ That's why I sound pretty abrupt, as you can see.
 
 The _stick_ is style checkers and static analyzers.
 I used to have them for years in my repositories, but my arsenal was limited.
-I was forced to use PMD, Checkstyle, Rubocop, Pylint, and whatever else the market provided.
+I was forced to use [PMD], [Checkstyle], [Rubocop], [Pylint], and whatever else the market provided.
 Making my own checkers was a complex task that I didn't have the time or skills for.
 Today, I can make my own checkers, because I have Claude.
 
 Here is an example.
-Recently I've launched a new version of Qulice, a checker for Java code.
+Recently I've launched a new version of [Qulice], a checker for Java code.
 It extends PMD and Checkstyle with 59 additional checkers.
 New checkers express my personal taste for Java code,
   which sometimes contradicts what the community believes is right.
@@ -154,3 +154,18 @@ And he costs just $108 a month.
 [prompt]: https://github.com/yegor256/prompt
 [rubocop-elegant]: https://github.com/yegor256/rubocop-elegant
 [claude-mem]: https://github.com/thedotmack/claude-mem
+[PMD]: https://pmd.github.io
+[Checkstyle]: https://checkstyle.org
+[Rubocop]: https://rubocop.org
+[Pylint]: https://pylint.readthedocs.io
+[Qulice]: https://www.qulice.com
+[Mowgli]: https://en.wikipedia.org/wiki/Mowgli
+[Claude Code]: https://github.com/anthropics/claude-code
+[release of Opus 4.7]: https://www.anthropic.com/news/claude-opus-4-7
+[auto mode]: https://code.claude.com/docs/en/auto-mode-config
+[Code Complete (2004)]: https://jttu.net/mcconnell2004code
+[Object Thinking (2004)]: https://jttu.net/west2004object
+[PMD]:
+[Checkstyle]:
+[Rubocop]:
+[Pylint]:
