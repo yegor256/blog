@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "Help the Agent to Feel You"
+title: "Help the Agent to Feel"
 date: 2026-05-29
 place: Moscow, Russia
 tags: ai architect
