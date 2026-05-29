@@ -130,8 +130,12 @@ Of course, Claude implemented it, not me.
 A combination of both, the carrot (manifesto) and the stick (checkers) does the job.
 The manifesto inspires Claude to do the right thing.
 The checkers punish him for doing wrong things.
+Of course, the checkers cover only the formalizable part of beauty.
+Inconsistent indentation, a NULL reference, or a type cast — a tool can catch these.
+Tight coupling, low cohesion, or clumsy error handling — no checker can feel them (so far!).
+That heavier half stays on the manifesto.
 
-When the manifesto is inspirational and the checkers are strong, Claude starts feeling me.
+When the manifesto is inspirational and the checkers are strong, Claude starts "feeling" me.
 Well, at least that's what it seems.
 He appreciates my views and rarely writes anything that contradicts them.
 When he does, the checkers punish him, and he [remembers][claude-mem].
