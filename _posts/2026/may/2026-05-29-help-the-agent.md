@@ -77,6 +77,8 @@ I believe in the opposite: aesthetics over functionality.
 Simply because elegantly designed software is easier to fix
   than to make working software elegant.
 
+{% quote In software development I believe in aesthetics over functionality %}
+
 By a lack of elegance I mean not only inconsistent indentation, though that's an obvious sin.
 I also mean lack of modularity, inadequate error handling, inconsistent naming,
   tight coupling, low cohesion, and high complexity.
@@ -92,16 +94,14 @@ However, I prefer working with programmers
   who see source code as a piece of art, a product by itself.
 I expect them to _feel_ the beauty of the code they write.
 
-{% quote In software development I believe in aesthetics over functionality %}
-
 It's hard to find and recruit such people.
-It's even harder to convert a regular programmer who doesn't care into an aesthete.
+It's even harder to convert a regular programmer who doesn't care into an _aesthete_.
 Unlike most people, Claude Code can be converted.
 
 With the help of the carrot-and-stick method,
   [as usual]({% pst 2016/sep/2016-09-27-command-control-innovate %}).
 
-The _carrot_ is the `CLAUDE.md` file, the agentic manifesto.
+The _carrot_ is the `CLAUDE.md` file, the [agentic manifesto].
 Here is mine, at [this repo][prompt].
 In the file I preach to Claude, trying to formulate what beauty means for me.
 It's hard, since I have to stay short in the system prompt.
@@ -167,3 +167,5 @@ And he costs just $108 a month.
 [auto mode]: https://code.claude.com/docs/en/auto-mode-config
 [Code Complete (2004)]: https://jttu.net/mcconnell2004code
 [Object Thinking (2004)]: https://jttu.net/west2004object
+[agentic manifesto]: https://www.agenticmanifesto.org/
+[carrot-and-stick]: https://en.wikipedia.org/wiki/Carrot_and_stick
