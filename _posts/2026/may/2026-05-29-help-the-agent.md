@@ -44,10 +44,10 @@ We can't even expect them to be correct.
 
 However, while correctness is a verifiable deterministic category, code prettiness is not.
 It's not only almost impossible to validate, but also hard to formulate.
-Not only because it's a matter of personal taste, but because it's an emotion, not an algorithm.
+Not only because it's a matter of personal taste, but because it's an _emotion_, not an algorithm.
 You either feel it or you don't.
 
-Let me give you an example by sharing a list of what I'm allergic to in programming:
+Let me give you an example by sharing a list of what I'm particular allergic to in programming:
 
 * The [absence]({% pst 2015/jul/2015-07-16-fools-dont-write-unit-tests %}) of tests
 * Knowledge duplication
@@ -57,8 +57,8 @@ Let me give you an example by sharing a list of what I'm allergic to in programm
 * [NULL references]({% pst 2014/may/2014-05-13-why-null-is-bad %})
 * A class [inheriting]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}) another class
 * Type [casting]({% pst 2015/apr/2015-04-02-class-casting-is-anti-pattern %}) or introspection
-* Methods of 100+ lines long
 * Functions accepting 10+ arguments
+* Objects encapsulating 10+ attributes
 * [Compound]({% pst 2015/jan/2015-01-12-compound-name-is-code-smell %}) variable names
 * [Comments]({% pst 2026/jan/2026-01-11-no-documentation-comments %}) in the code
 * Emojis in documentation 😢
@@ -91,6 +91,8 @@ A billion Java programs taught him to see source code as an intermediate byprodu
 However, I prefer working with programmers
   who see source code as a piece of art, a product by itself.
 I expect them to _feel_ the beauty of the code they write.
+
+{% quote In software development I believe in aesthetics over functionality %}
 
 It's hard to find and recruit such people.
 It's even harder to convert a regular programmer who doesn't care into an aesthete.
@@ -165,7 +167,3 @@ And he costs just $108 a month.
 [auto mode]: https://code.claude.com/docs/en/auto-mode-config
 [Code Complete (2004)]: https://jttu.net/mcconnell2004code
 [Object Thinking (2004)]: https://jttu.net/west2004object
-[PMD]:
-[Checkstyle]:
-[Rubocop]:
-[Pylint]:
