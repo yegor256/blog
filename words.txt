@@ -16,6 +16,7 @@ about-me
 above
 above-average
 above-the-market
+abrupt
 absence
 absent
 absolute
@@ -170,6 +171,8 @@ advocate
 advocates
 adwords
 AE
+aesthete
+aesthetics
 AF
 affairs
 affect
@@ -190,6 +193,8 @@ age-old
 agenda
 agendas
 agent
+agentic
+agenticmanifesto
 agents
 ages
 aggregate
@@ -256,6 +261,7 @@ all-versions
 allconferencecfpalerts
 allegedly
 allen
+allergic
 alliance
 allies
 allman
@@ -295,6 +301,7 @@ alwayshtml
 alwaystextpage
 am
 amateur
+amazing
 amazon
 amazons
 ambassadors
@@ -385,6 +392,7 @@ answered
 answering
 answers
 anthony
+anthropic
 anthropics
 anthropomorphic
 anti-
@@ -679,6 +687,7 @@ auto-fixes
 auto-formatting
 auto-generated
 auto-increment
+auto-mode-config
 auto-scale
 auto-testing
 auto-wiring
@@ -979,6 +988,7 @@ bloggers
 blogging
 bloghacks
 blogosphere
+blogs
 blogspot
 blood
 bloody
@@ -1212,6 +1222,7 @@ by-product
 by-razor
 bye
 bypassed
+byproduct
 byte
 byte-code
 bytearrayoutputstream
@@ -1326,6 +1337,7 @@ cashback
 casio
 CasperJS
 cassandra
+cast
 casting
 castrates
 casts
@@ -1560,6 +1572,8 @@ classmate
 classroom
 claude
 claude-code
+claude-mem
+claude-opus-
 clause
 clauses
 clean
@@ -3111,6 +3125,7 @@ electrician
 electricity
 elegance
 elegant
+elegantly
 elegantobjects
 element
 elementary
@@ -3879,6 +3894,7 @@ form-data
 formal
 formalities
 formality
+formalizable
 formalize
 formalizes
 formally
@@ -4007,6 +4023,7 @@ functional
 functionalities
 functionality
 functionality-related
+functionality-wise
 functions
 fund
 fundamental
@@ -4438,6 +4455,7 @@ hears
 heart
 hearted
 heartless
+heavier
 heavily
 heavy
 height
@@ -4739,6 +4757,7 @@ implementing
 implements
 implication
 implicit
+implicitly
 implied
 implies
 import
@@ -4892,6 +4911,7 @@ inherently
 inherit
 inheritance
 inherited
+inheriting
 inherits
 ini
 init
@@ -4946,6 +4966,7 @@ inspiration
 inspirational
 inspire
 inspired
+inspires
 inspiring
 instability
 instagram
@@ -5059,6 +5080,7 @@ introducing
 introduction
 introductory
 intros
+introspection
 introverts
 intuition
 intuitive
@@ -5320,6 +5342,7 @@ JSP
 JSR
 JSR-
 jss
+jttu
 judge
 judging
 judgment
@@ -6270,6 +6293,7 @@ modifications
 modified
 modify
 modifying
+modularity
 module
 modules
 mom
@@ -6356,6 +6380,7 @@ moves
 movie
 movies
 moving
+mowgli
 mozilla
 mozilla's
 mph
@@ -6861,6 +6886,7 @@ optimizing
 option
 optional
 options
+opus
 or
 oracle
 oral
@@ -7999,6 +8025,7 @@ reached
 reaches
 reaching
 react
+reacting
 reaction
 reactions
 reactive
@@ -8021,6 +8048,7 @@ READMEs
 readNBytes
 reads
 readstring
+readthedocs
 readwords
 ready
 real
@@ -8566,6 +8594,7 @@ rtvi
 ru
 rubensson
 rubocop
+rubocop-elegant
 rubocop-hq
 ruby
 ruby's
@@ -9740,6 +9769,7 @@ svelte-at-stack-overflow
 SVG
 SVN
 swallow
+swallowed
 swallowing
 swallows
 swear
@@ -9968,6 +9998,7 @@ that's
 the
 the-problem-with-single-page-applications
 the-real-story-behind-es
+thedotmack
 theft
 theguardian
 their

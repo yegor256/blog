@@ -1,4 +1,136 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-05-28T06:40:47+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Monotonic Indentation</title><link href="https://www.yegor256.com/2026/05/24/monotonic-indentation.html" rel="alternate" type="text/html" title="Monotonic Indentation" /><published>2026-05-24T00:00:00+00:00</published><updated>2026-05-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/05/24/monotonic-indentation</id><content type="html" xml:base="https://www.yegor256.com/2026/05/24/monotonic-indentation.html"><![CDATA[<p>People have been arguing about how to indent code for as long as there’s been code,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-05-29T11:32:49+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Help the Agent to Feel</title><link href="https://www.yegor256.com/2026/05/29/help-the-agent.html" rel="alternate" type="text/html" title="Help the Agent to Feel" /><published>2026-05-29T00:00:00+00:00</published><updated>2026-05-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/05/29/help-the-agent</id><content type="html" xml:base="https://www.yegor256.com/2026/05/29/help-the-agent.html"><![CDATA[<p>Since the <a href="https://www.anthropic.com/news/claude-opus-4-7">release of Opus 4.7</a> in April, I don’t write code by hand anymore.
+I only talk to <a href="https://github.com/anthropics/claude-code">Claude Code</a>.
+Not because I’m lazy or don’t like coding, but because he is a better programmer than I.
+Also faster and much cheaper.
+However, for most tasks I can’t let it fly solo in an “<a href="https://code.claude.com/docs/en/auto-mode-config">auto mode</a>.”
+Because his standards are lower than I would expect even in a junior developer.
+He is like <a href="https://en.wikipedia.org/wiki/Mowgli">Mowgli</a>: smart and strong, but rude and clumsy.
+My job is to teach him elegance, my way.
+And unlike with most developers, with him I can do this.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Crocodile Dundee (1986) by Peter Faiman" src="/images/2026/05/crocodile-dundee.jpg" longdesc="#bf724596" /><figcaption id="bf724596">Crocodile Dundee (1986) by Peter Faiman</figcaption></figure>
+
+<p>I know that he spent the first few months of his life in the wild.
+Technically, in GitHub, StackOverflow, and software development blogs and books.
+This is where he learned how others code, by looking at billions of lines of code.
+Obviously, we can’t expect most of the lines to be pretty.
+We can’t even expect them to be correct.</p>
+
+<p>However, while correctness is a verifiable deterministic category, code prettiness is not.
+It’s not only almost impossible to validate, but also hard to formulate.
+Not only because it’s a matter of personal taste, but because it’s an <em>emotion</em>, not an algorithm.
+You either feel it or you don’t.</p>
+
+<p>Let me give you an example by sharing a list of what I’m particularly allergic to in programming:</p>
+
+<ul>
+  <li>The <a href="/2015/07/16/fools-dont-write-unit-tests.html">absence</a> of tests</li>
+  <li>Knowledge duplication</li>
+  <li><a href="/2018/07/03/global-variables.html">Global</a> state</li>
+  <li><a href="/2014/06/09/objects-should-be-immutable.html">Mutable</a> object attributes</li>
+  <li>Swallowed exceptions</li>
+  <li><a href="/2014/05/13/why-null-is-bad.html">NULL references</a></li>
+  <li>A class <a href="/2016/09/13/inheritance-is-procedural.html">inheriting</a> another class</li>
+  <li>Type <a href="/2015/04/02/class-casting-is-anti-pattern.html">casting</a> or introspection</li>
+  <li>Functions accepting 10+ arguments</li>
+  <li>Objects encapsulating 10+ attributes</li>
+  <li><a href="/2015/01/12/compound-name-is-code-smell.html">Compound</a> variable names</li>
+  <li><a href="/2026/01/11/no-documentation-comments.html">Comments</a> in the code</li>
+  <li>Emojis in documentation 😢</li>
+</ul>
+
+<p>This is a tiny part of what I can call source code <em>ugly</em> for.
+I’m sure you agree with a few items, disagree with a few others, and don’t understand the rest.
+Claude would react similarly if he saw this list.</p>
+
+<p>Functionality goes first, aesthetics next.
+We implicitly teach this principle in programming schools.
+Claude learned it too by looking at those billions of lines.
+If an algorithm doesn’t work, it doesn’t matter how pretty your code is.
+This is his philosophy, and that of a million human programmers.</p>
+
+<p>I believe in the opposite: aesthetics over functionality.
+Simply because elegantly designed software is easier to fix
+  than to make working software elegant.</p>
+
+<aside class="quote">In software development I believe in aesthetics over functionality
+</aside>
+
+<p>By a lack of elegance I mean not only inconsistent indentation, though that’s an obvious sin.
+I also mean lack of modularity, inadequate error handling, inconsistent naming,
+  tight coupling, low cohesion, and high complexity.
+If you read <a href="https://jttu.net/mcconnell2004code">Code Complete (2004)</a> and <a href="https://jttu.net/west2004object">Object Thinking (2004)</a>, you know what I’m talking about.
+Software may be correct functionality-wise even if most of the principles are violated.
+But it would be <em>ugly</em> software.
+For me and maybe for some of you.
+Not for Claude.</p>
+
+<p>A billion Java programs taught him to see source code as an <em>intermediate byproduct</em>
+  between user’s intent and the computer.
+However, I prefer working with programmers
+  who see source code as a piece of art, a product by itself.
+I expect them to <em>feel</em> the beauty of the code they write.</p>
+
+<p>It’s hard to find and recruit such people.
+It’s even harder to convert a regular programmer who doesn’t care into an <em>aesthete</em>.
+Unlike most people, Claude Code can be converted.</p>
+
+<p>With the help of the carrot-and-stick method,
+  <a href="/2016/09/27/command-control-innovate.html">as usual</a>.</p>
+
+<p>The <em>carrot</em> is the <code class="language-plaintext highlighter-rouge">CLAUDE.md</code> file, the <a href="https://www.agenticmanifesto.org/">agentic manifesto</a>.
+Here is mine, at <a href="https://github.com/yegor256/prompt">this repo</a>.
+In the file I preach to Claude, trying to formulate what beauty means for me.
+It’s hard, since I have to stay short in the system prompt.
+That’s why I sound pretty abrupt, as you can see.</p>
+
+<p>The <em>stick</em> is style checkers and static analyzers.
+I used to have them for years in my repositories, but my arsenal was limited.
+I was forced to use <a href="https://pmd.github.io">PMD</a>, <a href="https://checkstyle.org">Checkstyle</a>, <a href="https://rubocop.org">Rubocop</a>, <a href="https://pylint.readthedocs.io">Pylint</a>, and whatever else the market provided.
+Making my own checkers was a complex task that I didn’t have the time or skills for.
+Today, I can make my own checkers, because I have Claude.</p>
+
+<p>Here is an example.
+Recently I’ve launched a new version of <a href="https://www.qulice.com">Qulice</a>, a checker for Java code.
+It extends PMD and Checkstyle with 59 additional checkers.
+New checkers express my personal taste for Java code,
+  which sometimes contradicts what the community believes is right.
+Qulice is not a new project.
+It’s 14 years old.
+However, I was only recently able to implement all these additional checkers.
+Because I didn’t have Claude for 14 years.</p>
+
+<p>Yet another example.
+I’ve been using Rubocop for more than 10 years.
+An amazing style checker for Ruby code.
+However, it lacks a few important rules that my personal taste demands.
+A month ago I implemented <a href="https://github.com/yegor256/rubocop-elegant">an extension</a> for Rubocop.
+Now I’m fully equipped.
+Of course, Claude implemented it, not me.</p>
+
+<p>A combination of both, the carrot (manifesto) and the stick (checkers) does the job.
+The manifesto inspires Claude to do the right thing.
+The checkers punish him for doing wrong things.
+Of course, the checkers cover only the formalizable part of beauty.
+Inconsistent indentation, a NULL reference, or a type cast—a tool can catch these.
+Tight coupling, low cohesion, or clumsy error handling—no checker can feel them (so far!).
+That heavier half stays on the manifesto.</p>
+
+<p>When the manifesto is inspirational and the checkers are strong, Claude starts “feeling” me.
+Well, at least that’s what it seems (or maybe it truly does feel me?!).
+He appreciates my views and rarely writes anything that contradicts them.
+When he does, the checkers punish him, and he <a href="https://github.com/thedotmack/claude-mem">remembers</a>.</p>
+
+<p>I can’t imagine a human reacting the same way.
+A few years ago I hired a guy who didn’t care much about code elegance.
+However, he was good with algorithms and knew Java pretty well.
+Apparently, he wasn’t ready to put aesthetics over functionality.
+He quit in two weeks.</p>
+
+<p>Claude doesn’t quit.
+And he costs just $108 a month.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><category term="architect" /><summary type="html"><![CDATA[Claude Code programs better than me but with no taste, so I train it to feel my sense of code beauty through a CLAUDE.md manifesto and custom style checkers.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/05/crocodile-dundee.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/05/crocodile-dundee.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Monotonic Indentation</title><link href="https://www.yegor256.com/2026/05/24/monotonic-indentation.html" rel="alternate" type="text/html" title="Monotonic Indentation" /><published>2026-05-24T00:00:00+00:00</published><updated>2026-05-24T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/05/24/monotonic-indentation</id><content type="html" xml:base="https://www.yegor256.com/2026/05/24/monotonic-indentation.html"><![CDATA[<p>People have been arguing about how to indent code for as long as there’s been code,
   and nobody has settled it.
 Java’s <a href="https://checkstyle.org">Checkstyle</a> aligns continuations under the open paren,
   <a href="https://eslint.org">ESLint</a> and <a href="https://prettier.io">Prettier</a> each invent their own rules,
@@ -760,171 +892,4 @@ You must know how to solve issues on your own.</p>
 
 <p>A failed PR isn’t a setback.
 It’s a <em>lesson</em>.
-Fail fast, blame smart, and move on stronger.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><category term="etiquette" /><summary type="html"><![CDATA[When your pull request won’t merge, don't fight it—fail fast, split your changes, file bugs, and move on smarter.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/amores-perros.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/amores-perros.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Programmers, Don’t Use Windows!</title><link href="https://www.yegor256.com/2025/10/05/windows-vs-macos.html" rel="alternate" type="text/html" title="Programmers, Don’t Use Windows!" /><published>2025-10-05T00:00:00+00:00</published><updated>2025-10-05T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/10/05/windows-vs-macos</id><content type="html" xml:base="https://www.yegor256.com/2025/10/05/windows-vs-macos.html"><![CDATA[<p>In 2020, in the <a href="/junior-objects.html">Junior Objects</a> book I wrote this:
-  “<em>Windows is not suitable for programmers.
-  If you meet anyone who will tell you otherwise, you must know that you deal with a bad programmer, or a poor one, which are the same things.
-  Your computer has to be MacBook.</em>”
-Now, five years later, I still hold the same opinion.
-This blog post is supposed to be less opinionated and, because of this, more convincing.
-The point is still the same: you either use Windows or you are a professional programmer.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Das Experiment (2001) by Oliver Hirschbiegel" src="/images/2025/10/das-experiment.jpg" longdesc="#f88f9b9a" /><figcaption id="f88f9b9a">Das Experiment (2001) by Oliver Hirschbiegel</figcaption></figure>
-
-<p>First things first.
-This is what ChatGPT <a href="https://chatgpt.com/share/68e2770a-79d8-8007-96d1-3722d4d3cfcd">thinks</a> about macOS vs. Windows (I toned it down a bit and sorted by importance, keeping what matters most at the top):</p>
-
-<ul>
-  <li>It’s <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a>-compliant</li>
-  <li>Tools like <code class="language-plaintext highlighter-rouge">grep</code>, <code class="language-plaintext highlighter-rouge">awk</code>, <code class="language-plaintext highlighter-rouge">sed</code>, <code class="language-plaintext highlighter-rouge">ssh</code>, and <code class="language-plaintext highlighter-rouge">make</code> work natively</li>
-  <li>Proper compiler toolchain: Clang, LLVM, make, <a href="https://git-scm.com/">git</a></li>
-  <li>Install everything with <a href="https://brew.sh/">HomeBrew</a>, one command away</li>
-  <li>Node, Python, Ruby, Go, Java—just work without PATH hell</li>
-  <li>The <a href="https://iterm2.com/">iTerm2</a> doesn’t look like it was built in 1998</li>
-  <li><a href="https://www.docker.com/">Docker</a> runs faster and cleaner than on Windows</li>
-  <li>SSH keys integrate smoothly with the system keychain</li>
-  <li><a href="https://git-scm.com/">Git</a> behaves predictably; no <a href="https://stackoverflow.com/questions/1552749/difference-between-cr-lf-lf-and-cr-line-break-types">CRLF vs LF nightmares</a></li>
-</ul>
-
-<p>I can hear you saying:
-What do I need it to be POSIX-compliant, and what is POSIX?
-Why do I need <code class="language-plaintext highlighter-rouge">grep</code>, <code class="language-plaintext highlighter-rouge">sed</code>, and <code class="language-plaintext highlighter-rouge">awk</code>?
-Am I a 60 years old Unix admin?
-Why would I ever need <code class="language-plaintext highlighter-rouge">git</code> and <code class="language-plaintext highlighter-rouge">make</code> in the command line?
-I don’t use command line at all.
-I stay in the <a href="https://code.visualstudio.com/">VS Code</a> that works like a charm and helps me make a living.</p>
-
-<p>I hear you. I do.</p>
-
-<p>Now, hear me out.
-You are not a programmer.
-You look like one.
-You walk like one.
-You click the same buttons programmers click.
-You even make the same salary they make.
-But you are not one of them.
-Yet.
-Now, read on.</p>
-
-<h2 id="what-is-unix">What Is Unix?</h2>
-
-<p>Programmers are the masters of computers.
-They tell machines what to do.
-To simplify the task of managing a complex hardware, programmers invented a few layers of abstractions.
-The first layer is an operating system.
-Instead of dealing with the hard drive and the pixels on the screen directly, programmers invented files and stdout.</p>
-
-<p>They did it in the <a href="https://en.wikipedia.org/wiki/Bell_Labs">Bell Labs</a>, during the late 1960s and early 1970s.
-Earlier operating systems, like <a href="https://en.wikipedia.org/wiki/Compatible_Time-Sharing_System">CTSS</a> and <a href="https://en.wikipedia.org/wiki/OS/360_and_successors">OS/360</a>, gave them a good start.
-Unix was the first OS to say that <em>everything is a file</em>, including devices, directories, sockets, and processes.
-They also invented <em>pipelines</em> and the philosophy: “Write programs that do one thing well, and work together.”
-They also invented <em>processes</em> and their forking mechanism.</p>
-
-<p>Their names were <a href="https://en.wikipedia.org/wiki/Ken_Thompson">Ken Thompson</a> and <a href="https://en.wikipedia.org/wiki/Dennis_Ritchie">Dennis Ritchie</a>.</p>
-
-<h2 id="what-is-windows">What Is Windows?</h2>
-
-<p>Five years later, another operating system was created, with different abstractions.
-Not everything was a file anymore, processes were not parallel, and there were no pipelines.
-The name of the system was <a href="https://en.wikipedia.org/wiki/CP/M">CP/M</a> and the name of the inventor was <a href="https://en.wikipedia.org/wiki/Gary_Kildall">Gary Kildall</a>.
-Then, five years later, 24-year-old <a href="https://en.wikipedia.org/wiki/Tim_Paterson">Tim Paterson</a> has made a copy of CP/M and called it <a href="https://en.wikipedia.org/wiki/86-DOS">86-DOS</a>.
-<a href="https://www.microsoft.com/">Microsoft</a> purchased a non-exclusive license, rebranded it <a href="https://en.wikipedia.org/wiki/MS-DOS">MS-DOS</a>, and sold it to IBM.
-That’s how Windows was born, in 1981.</p>
-
-<p>Why were there no proper files, no processes, and no pipelines?
-Because they weren’t trying to build a “real” operating system.
-CP/M and MS-DOS were designed for tiny, single-user, single-task microcomputers, not multi-user minicomputers or mainframes.
-Unix came out of Bell Labs—researchers, not hobbyists.
-CP/M and MS-DOS were made for personal computers: offices and home users.
-In other words, <em>MS-DOS never meant to be a proper OS</em>.
-It was something that can boot up a small machine and run a single program.</p>
-
-<p>Then, in 1985, <a href="https://en.wikipedia.org/wiki/Windows_1.0">Windows 1.0</a> was built.
-It was a fancy <a href="https://en.wikipedia.org/wiki/Graphical_user_interface">GUI</a> on top of MS-DOS, not a new OS.
-Later, in 1995, Microsoft introduced 32-bit APIs (<a href="https://en.wikipedia.org/wiki/Windows_API">Win32</a>) and preemptive multitasking.
-However, the DOS subsystem was still lurking underneath.
-Windows 95 looked modern but was still a half-DOS zombie.</p>
-
-<p>At the same time, in 1993, the team of <a href="https://en.wikipedia.org/wiki/Dave_Cutler">Dave Cutler</a> has built <a href="https://en.wikipedia.org/wiki/Windows_NT">Windows NT</a> that was not based on DOS at all.
-Latest Windows versions are descendants of NT, not MS-DOS.
-Under the hood it’s conceptually closer to Unix than to CP/M.
-There are features like protected memory, kernel/user separation, and file handles.
-However, still it’s not Unix.</p>
-
-<h2 id="what-is-macos">What Is macOS?</h2>
-
-<p>In 1984, <a href="https://www.apple.com/">Apple</a> shipped their first <a href="https://en.wikipedia.org/wiki/Macintosh_128K">Macintosh</a> with the “System 1” operating system.
-It was no better than MS-DOS: no multitasking, no memory protection, and primitive file system.
-No surprise, it didn’t fly.</p>
-
-<p>In 1997, Apple bought <a href="https://en.wikipedia.org/wiki/NeXT">NeXT</a> and adopted <a href="https://en.wikipedia.org/wiki/NeXTSTEP">NeXTSTEP</a> operating system.
-They made it the foundation for the new <a href="https://en.wikipedia.org/wiki/MacOS">Mac OS</a>—codenamed <a href="https://en.wikipedia.org/wiki/Rhapsody_(operating_system)">Rhapsody</a>, later “Mac OS X”.</p>
-
-<p>In 2001 they shipped Mac OS X 10.0 (“<a href="https://en.wikipedia.org/wiki/Mac_OS_X_10.0">Cheetah</a>”).
-Five years later I threw away my ThinkPad with Windows and bought my first MacBook with <a href="https://en.wikipedia.org/wiki/Mac_OS_X_Leopard">Mac OS X Leopard</a>.</p>
-
-<p>Modern macOS (Catalina, Ventura, Sequoia, etc.) is still built on that NeXT foundation.
-It is POSIX-compliant and, of course, it has processes and pipelines.
-In other words, it is Unix with a pretty GUI.</p>
-
-<h2 id="abstractions">Abstractions</h2>
-
-<p>Both Windows and macOS, in their current versions, are solid operating systems.
-The difference is in the abstractions inside them: files, sockets, processes, memory blocks, users, permissions, and so on.
-In Unix (macOS), everything is a <em>file</em>, while in Windows, everything is an <em>object</em>.
-Files in Unix are a uniform abstraction, that’s why they can be chained via pipes.
-In Windows objects are not unified in practice, they have different interfaces.</p>
-
-<p>This is why <a href="https://en.wikipedia.org/wiki/Unix_shell">Unix shells</a> and small composable tools became so powerful.
-The uniformity of “everything is a file” made composition natural.
-You can build complex workflows from simple programs.</p>
-
-<p>Windows, on the other hand, evolved around GUI apps and message loops, not shell pipelines.</p>
-
-<h2 id="pipelines">Pipelines</h2>
-
-<p><a href="https://en.wikipedia.org/wiki/Unix">Unix</a> was built around pipelines.
-In Unix, everything is a small tool reading stdin, writing stdout.
-At the same time, everything is a file, including sockets, devices, and processes.
-Programmers, in Unix, see every process as a <em>composition</em> of smaller processes, glued together via pipelines.
-This mindset, since 1970s, has proven to be effective, amongst a few generations of software engineering elite.</p>
-
-<p>Say, you want to know which parts of your codebase change the most—maybe for refactoring, testing focus, or bug-hotspot analysis.
-This is how you do it Unix-style:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git log <span class="nt">--pretty</span><span class="o">=</span>format: <span class="nt">--name-only</span> | <span class="se">\</span>
-  <span class="nb">grep</span> <span class="s1">'\.java$'</span> | <span class="se">\</span>
-  <span class="nb">sort</span> | <span class="se">\</span>
-  <span class="nb">uniq</span> <span class="nt">-c</span> | <span class="se">\</span>
-  <span class="nb">sort</span> <span class="nt">-nr</span> | <span class="se">\</span>
-  <span class="nb">head</span> <span class="nt">-20</span>
-</code></pre></div></div>
-
-<p>Does this syntax make sense to you?
-If it does, I bet you use <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>.
-Most serious Windows developers end up doing exactly that.</p>
-
-<p>The command line is the bare metal interface to Unix.
-The heart of the command line is pipelines.
-Thanks to pipelines, command-line tools are inherently composable.
-You can chain them and automate tasks in seconds that would take hours by hand.
-No <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> plugin can replace this power.</p>
-
-<h2 id="what-are-you">What Are You?</h2>
-
-<p>Now, you know what the difference is between Windows and macOS.
-In both of them you can code, browse Internet, and watch movies.
-However, in macOS you interact with the computer through Unix abstractions in a <a href="https://en.wikipedia.org/wiki/Unix_shell">shell</a>.
-You don’t just use macOS—you inherit <em>fifty years of disciplined abstraction</em>.</p>
-
-<p>In Windows you interact with the computer through draggable GUI elements.
-A GUI makes you a consumer; a CLI makes you a creator.
-A GUI hides the logic behind gestures and icons; a CLI exposes it as text you can reason about, automate, and combine.
-You can’t pipe a button click into another program, you can’t grep a progress bar, and you can’t version-control a mouse movement.
-Every click you make dies the moment you make it; every command you write can live forever.</p>
-
-<p>Oh, wait.
-In macOS you can’t really play games.
-Bummer…
-Maybe you shouldn’t, since you are a programmer?</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[Windows turns programmers into mouse operators. macOS, built on Unix, keeps the command line alive—where everything is a file, tools connect through pipelines, and real programmers stay in control.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/10/das-experiment.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/10/das-experiment.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+Fail fast, blame smart, and move on stronger.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><category term="etiquette" /><summary type="html"><![CDATA[When your pull request won’t merge, don't fight it—fail fast, split your changes, file bugs, and move on smarter.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/amores-perros.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/amores-perros.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
