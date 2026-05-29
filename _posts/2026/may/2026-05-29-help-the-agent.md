@@ -47,7 +47,7 @@ It's not only almost impossible to validate, but also hard to formulate.
 Not only because it's a matter of personal taste, but because it's an _emotion_, not an algorithm.
 You either feel it or you don't.
 
-Let me give you an example by sharing a list of what I'm particular allergic to in programming:
+Let me give you an example by sharing a list of what I'm particularly allergic to in programming:
 
 * The [absence]({% pst 2015/jul/2015-07-16-fools-dont-write-unit-tests %}) of tests
 * Knowledge duplication
