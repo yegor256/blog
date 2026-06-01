@@ -65,21 +65,67 @@ John Stacey Adams's [equity theory][equity] adds the next link, fairness: worker
   distress" and withdraw.
 Control, measurability, fairness---each is a multiplier, not a bonus.
 
-- yet most workers barely move the top line; their influence is indirect and unmeasurable
+Yet most workers barely move the top line, and their influence is both indirect
+  and unmeasurable.
+[W. Edwards Deming][deming] demonstrated the first half with his red-bead
+  experiment: workers drew from a box rigged with a fixed ratio of red beads,
+  were praised and punished for the count, and yet could do nothing to change it.
+"The performance of anybody, almost anybody," he concluded, "is governed almost
+  totally by the system he works in."
+The second half---unmeasurability---is a foundational result in the economics of
+  the firm.
+In their classic paper on [team production][teams], Armen Alchian and Harold
+  Demsetz put it exactly: "marginal products of cooperative team members are not
+  so directly and separably (i.e., cheaply) observable," and "what a team offers
+  to the market can be taken as the marginal product of the team but not of the
+  team members."
+Their remedy was to meter each person's input rather than the team's output.
 
-- so company-size targets only demotivate
+So a company-size target, pinned on one person, does not pull---it pushes the
+  other way.
+The thought is not mine: [W. Edwards Deming][points] reached it forty years ago.
+His eleventh point for managers is blunt: "Eliminate management by objective.
+  Eliminate management by numbers, numerical goals."
+His reason is the one these paragraphs have been building toward---the causes of
+  performance "belong to the system and thus lie beyond the power of the work
+  force."
+What is left to add is the machinery: no control, so expectancy is zero; no
+  separable output, so the contribution is unmeasurable; and a target resting on
+  both can move no one.
+Even the goal-setting psychologists who usually champion stretch targets concede
+  the boundary: [Höchli and colleagues][goals] note that a superordinate goal
+  "can be too abstract and disconnected from actual behavior" to guide anyone's
+  next move.
+Deming saw the symptom, and the mechanism makes it inevitable.
 
-- at best they tune out; at worst they feel cheated and turn on the business
+What happens next is no mystery; it has its own research literature.
+Let people sense the judgment is rigged, and the response runs along a spectrum
+  that industrial psychologists call counterproductive work behavior: at the
+  quiet end they withdraw effort and tune out, at the loud end they retaliate.
+[Skarlicki and Folger][retaliation] traced this in 240 employees and found that
+  perceived injustice reliably predicts "organizational retaliation behavior"---
+  the disgruntled striking back at the firm they believe wronged them.
+[Jerald Greenberg][theft] showed how literal the damage can be: when a company
+  cut pay by 15% without proper explanation, the employees who felt underpaid
+  stole significantly more---the "hidden cost of pay cuts."
+Explain the same cut honestly and respectfully, and the theft fell back, because
+  the injury was never the money alone but the sense of being cheated.
 
-- better: hold each person to their own work, nothing more
-
-- modern management preaches the opposite: cascade OKRs, open the books, show everyone the top line
-
-- I argue the reverse: a number you can't move is a tax on motivation, not a boost
-
-- blindness to the metrics above is no loss -- it keeps them focused and fairly judged
-
-- yes, this defies the transparency gospel -- and that's the point
+The remedy follows directly: hold each person to their own work, and nothing
+  more.
+Modern management does the opposite---it cascades the OKRs, opens the books, and
+  parades the top-line number before everyone, as if visibility alone were
+  motivation.
+I argue the reverse, and then a step beyond it: a number you cannot move is
+  not a goal but a tax on motivation, so the right move is not to push people
+  toward the metrics above them, but to hide those metrics from them altogether.
+Keep the higher numbers out of sight and there is nothing left to feel
+  manipulated by---no rigged judgment, no smell of a game whose rules you cannot
+  touch, none of the resentment that turns a worker against the firm.
+What remains in view is the only thing that should be: the worker's own metric,
+  something they control, can measure, and are judged on fairly---and on that
+  ground motivation is not merely protected but amplified.
+Yes, this defies the transparency gospel; that defiance is precisely the point.
 
 [bcg]: https://bcgbrighthouse.com/thinking/think-like-an-owner-part-ii-cultivating-an-ownership-mindset-at-scale/
 [Patrick Lencioni]: https://en.wikipedia.org/wiki/Patrick_Lencioni
@@ -89,3 +135,9 @@ Control, measurability, fairness---each is a multiplier, not a bonus.
 [smith]: https://en.wikipedia.org/wiki/The_Theory_of_Moral_Sentiments
 [vroom]: https://en.wikipedia.org/wiki/Expectancy_theory
 [equity]: https://en.wikipedia.org/wiki/Equity_theory
+[deming]: https://deming.org/lessons-from-the-red-bead-experiment-with-dr-deming/
+[points]: https://deming.org/explore/fourteen-points/
+[goals]: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.01879/full
+[teams]: https://www.jstor.org/stable/1815199
+[retaliation]: https://doi.org/10.1037/0021-9010.82.3.434
+[theft]: https://doi.org/10.1037/0021-9010.75.5.561
