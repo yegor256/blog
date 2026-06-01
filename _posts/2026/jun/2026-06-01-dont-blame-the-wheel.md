@@ -27,9 +27,16 @@ jb_picture:
 
 {% jb_picture_body %}
 
-- everyone must own the business result, they say
+Everyone must own the business result---so the management orthodoxy insists.
+[BCG][bcg] urges every company to cultivate an "ownership mindset" at all
+  levels, so that each employee feels personally responsible for the firm's
+  outcomes.
+[Patrick Lencioni], in [The Five Dysfunctions of a Team][five], brands
+  "inattention to results" the gravest sin a team can commit, and demands that
+  its members surrender their individual goals to the collective number.
+The refrain is everywhere: the bottom line belongs to all of us.
 
-- nothing burns like being judged for what you didn't do
+- yet, nothing burns like being judged for what you didn't do
 
 - motivation runs on a chain: control + measurability → fairness → drive
 
@@ -48,3 +55,7 @@ jb_picture:
 - blindness to the metrics above is no loss -- it keeps them focused and fairly judged
 
 - yes, this defies the transparency gospel -- and that's the point
+
+[bcg]: https://bcgbrighthouse.com/thinking/think-like-an-owner-part-ii-cultivating-an-ownership-mindset-at-scale/
+[Patrick Lencioni]: https://en.wikipedia.org/wiki/Patrick_Lencioni
+[five]: https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team
