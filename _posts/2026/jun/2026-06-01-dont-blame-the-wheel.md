@@ -36,7 +36,20 @@ Everyone must own the business result---so the management orthodoxy insists.
   its members surrender their individual goals to the collective number.
 The refrain is everywhere: the bottom line belongs to all of us.
 
-- yet, nothing burns like being judged for what you didn't do
+Yet nothing burns like being judged for what you didn't do.
+The intuition is old.
+[Aristotle][ethics] held that "on voluntary passions and actions praise and
+  blame are bestowed, on those that are involuntary pardon, and sometimes also
+  pity."
+Modern philosophers, from Kant to Thomas Nagel, sharpened the same instinct into
+  the [control principle][luck]: "we are morally assessable only to the extent
+  that what we are assessed for depends on factors under our control."
+And [Adam Smith][smith] insisted that reward belongs only to "actions of a
+  beneficent tendency, which proceed from proper motives"---chain a person's
+  praise or blame to outcomes their own conduct never produced, and you trade
+  desert for arbitrariness.
+The resentment that follows is not weakness; it is an ancient sense of justice
+  protesting.
 
 - motivation runs on a chain: control + measurability → fairness → drive
 
@@ -59,3 +72,6 @@ The refrain is everywhere: the bottom line belongs to all of us.
 [bcg]: https://bcgbrighthouse.com/thinking/think-like-an-owner-part-ii-cultivating-an-ownership-mindset-at-scale/
 [Patrick Lencioni]: https://en.wikipedia.org/wiki/Patrick_Lencioni
 [five]: https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team
+[ethics]: https://classics.mit.edu/Aristotle/nicomachaen.3.iii.html
+[luck]: https://plato.stanford.edu/entries/moral-luck/
+[smith]: https://en.wikipedia.org/wiki/The_Theory_of_Moral_Sentiments
