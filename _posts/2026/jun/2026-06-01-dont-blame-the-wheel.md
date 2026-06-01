@@ -43,7 +43,7 @@ The intuition is old.
   pity."
 Modern philosophers, from Kant to Thomas Nagel, sharpened the same instinct into
   the [control principle][luck]: "we are morally assessable only to the extent
-  that what we are assessed for depends on factors under our control."
+  that what we are assessed for depends on factors _under our control_."
 And [Adam Smith][smith] insisted that reward belongs only to "actions of a
   beneficent tendency, which proceed from proper motives"---chain a person's
   praise or blame to outcomes their own conduct never produced, and you trade
@@ -51,7 +51,19 @@ And [Adam Smith][smith] insisted that reward belongs only to "actions of a
 The resentment that follows is not weakness; it is an ancient sense of justice
   protesting.
 
-- motivation runs on a chain: control + measurability → fairness → drive
+Motivation runs on a chain, and psychologists have mapped its links.
+Victor Vroom's [expectancy theory][vroom] reduces it to a product: "Motivational
+  Force = Expectancy × Instrumentality × Valence."
+Expectancy is your belief that effort will actually yield the performance---with
+  no control over the outcome, it drops to zero.
+Instrumentality is the visible link from that performance to the reward---with no
+  way to measure it, it drops to zero as well.
+Because the terms multiply, a single zero empties the whole equation.
+John Stacey Adams's [equity theory][equity] adds the next link, fairness: workers
+  "seek to maintain equity between the inputs that they bring to a job and the
+  outcomes that they receive," and those who feel short-changed "experience
+  distress" and withdraw.
+Control, measurability, fairness---each is a multiplier, not a bonus.
 
 - yet most workers barely move the top line; their influence is indirect and unmeasurable
 
@@ -75,3 +87,5 @@ The resentment that follows is not weakness; it is an ancient sense of justice
 [ethics]: https://classics.mit.edu/Aristotle/nicomachaen.3.iii.html
 [luck]: https://plato.stanford.edu/entries/moral-luck/
 [smith]: https://en.wikipedia.org/wiki/The_Theory_of_Moral_Sentiments
+[vroom]: https://en.wikipedia.org/wiki/Expectancy_theory
+[equity]: https://en.wikipedia.org/wiki/Equity_theory
