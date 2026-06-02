@@ -107,13 +107,12 @@ Don't cascades the OKRs, don't open the books,
   don't parade the top-line number before everyone,
   as if visibility alone were motivation.
 Don't push people toward the metrics above them.
-Instead, hide those metrics from them altogether.
+Instead, _hide_ those metrics from them altogether.
 
-Keep the higher numbers out of sight and there is nothing left to feel
-  manipulated by: no rigged judgment, no smell of a game whose rules you cannot
-  touch, none of the resentment that turns a worker against the firm.
-What stays in view is the only thing that should: the worker's own metric, which
-  they control, can measure, and are judged on fairly.
+Keep the higher numbers out of sight.
+There will be nothing left to feel manipulated by.
+What stays in view is the only thing that should: the worker's own metric.
+They can control them and can measure.
 On that ground motivation is not just protected but amplified.
 
 Yes, this defies the transparency gospel.
