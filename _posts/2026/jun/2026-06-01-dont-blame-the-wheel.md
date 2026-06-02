@@ -21,25 +21,24 @@ jb_picture:
   caption: ...
 ---
 
-
-
-<!--more-->
-
-{% jb_picture_body %}
-
 Management gurus keep saying that everyone must own the business result.
 [BCG][bcg] wants every company to build an "ownership mindset" at all levels.
 Each employee must feel responsible for the firm's outcomes.
 [Patrick Lencioni], in [The Five Dysfunctions of a Team][five], calls
   "inattention to results" the worst sin a team can commit.
 He wants us to give up our own goals for the shared number.
-The want the bottom line to belong to all of us.
+They want the bottom line to belong to all of us.
+I disagree.
 
-Yet nothing burns like being judged for what you didn't do.
+<!--more-->
+
+{% jb_picture_body %}
+
+Nothing burns like being judged for what you didn't do.
 [Aristotle][ethics] held that "on voluntary passions and actions praise and
   blame are bestowed, on those that are involuntary pardon, and sometimes also
   pity."
-Later thinkers, from Kant to Thomas Nagel, turned the same instinct into the
+Later thinkers, from [Kant] to [Thomas Nagel], turned the same instinct into the
   [control principle][luck]: "we are morally assessable only to the extent that
   what we are assessed for depends on factors _under our control_."
 [Adam Smith][smith] agreed that reward belongs only to "actions of a beneficent
@@ -47,7 +46,7 @@ Later thinkers, from Kant to Thomas Nagel, turned the same instinct into the
 Tie a person's praise or blame to results their own work never caused, and the
   judgment stops being fair.
 
-Victor Vroom's [expectancy theory][vroom] boils motivation down to a product:
+[Victor Vroom]'s [expectancy theory][vroom] boils motivation down to a product:
 
 > Motivation = Expectancy × Instrumentality × Valence
 
@@ -55,6 +54,9 @@ Expectancy is your belief that effort will lead to the performance.
 With no control over the outcome, it drops to zero.
 Instrumentality is the link from that performance to the reward.
 With no way to measure it, it drops to zero too.
+Valence is how much you want that reward.
+Even when it runs high, the three terms multiply, so a single zero empties the
+  whole product.
 
 John Stacey Adams's [equity theory][equity] adds the next link: fairness.
 Workers "seek to maintain equity between the inputs that
@@ -73,11 +75,11 @@ Workers drew from a box rigged with a fixed ratio of red beads, were praised and
 
 The second half---you cannot measure one person's share---is a basic result in
   the economics of the firm.
-In their classic paper on [team production][teams], Armen Alchian and Harold
-  Demsetz put it plainly: "marginal products of cooperative team members are not
-  so directly and separably (i.e., cheaply) observable," and "what a team offers
-  to the market can be taken as the marginal product of the team but not of the
-  team members."
+In their classic paper on [team production][teams], [Armen Alchian] and
+  [Harold Demsetz] put it plainly: "marginal products of cooperative team
+  members are not so directly and separably (i.e., cheaply) observable," and
+  "what a team offers to the market can be taken as the marginal product of
+  the team but not of the team members."
 Their fix was to measure each person's input, not the team's output.
 
 So a company-size target, pinned on one person, does not pull.
@@ -121,13 +123,17 @@ That defiance is exactly the point.
 [Patrick Lencioni]: https://en.wikipedia.org/wiki/Patrick_Lencioni
 [five]: https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team
 [ethics]: https://classics.mit.edu/Aristotle/nicomachaen.3.iii.html
+[Kant]: https://en.wikipedia.org/wiki/Immanuel_Kant
+[Thomas Nagel]: https://en.wikipedia.org/wiki/Thomas_Nagel
 [luck]: https://plato.stanford.edu/entries/moral-luck/
 [smith]: https://en.wikipedia.org/wiki/The_Theory_of_Moral_Sentiments
+[Victor Vroom]: https://en.wikipedia.org/wiki/Victor_Vroom
 [vroom]: https://en.wikipedia.org/wiki/Expectancy_theory
 [equity]: https://en.wikipedia.org/wiki/Equity_theory
 [deming]: https://deming.org/lessons-from-the-red-bead-experiment-with-dr-deming/
-[points]: https://deming.org/explore/fourteen-points/
 [goals]: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.01879/full
 [teams]: https://www.jstor.org/stable/1815199
+[Armen Alchian]: https://en.wikipedia.org/wiki/Armen_Alchian
+[Harold Demsetz]: https://en.wikipedia.org/wiki/Harold_Demsetz
 [retaliation]: https://doi.org/10.1037/0021-9010.82.3.434
 [theft]: https://doi.org/10.1037/0021-9010.75.5.561
