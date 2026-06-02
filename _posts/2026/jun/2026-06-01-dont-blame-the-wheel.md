@@ -11,14 +11,14 @@ description: |
   Holding ordinary employees accountable for business-wide results
   they cannot control is unfair and demotivating.
 keywords:
-  - ...
-  - ...
-  - ...
-  - ...
-  - ...
-image: /images/2026/06/...
+  - ownership mindset
+  - employee accountability
+  - employee motivation
+  - cascading OKRs
+  - workplace fairness
+image: /images/2026/06/fanny-and-alexander.jpg
 jb_picture:
-  caption: ...
+  caption: Fanny and Alexander (1982) by Ingmar Bergman
 ---
 
 Management gurus keep saying that everyone must own the business result.
@@ -50,12 +50,12 @@ Tie a person's praise or blame to results their own work never caused, and the
 
 > Motivation = Expectancy × Instrumentality × Valence
 
-Expectancy is your belief that effort will lead to the performance.
+Expectancy is your belief that effort will lead to performance.
 With no control over the outcome, it drops to zero.
 Instrumentality is the link from that performance to the reward.
 With no way to measure it, it drops to zero too.
 Valence is how much you want that reward.
-Even when it runs high, the three terms multiply, so a single zero empties the
+Even when it runs high, the three terms multiply, so one zero kills the
   whole product.
 
 John Stacey Adams's [equity theory][equity] adds the next link: fairness.
@@ -65,7 +65,7 @@ Workers "seek to maintain equity between the inputs that
 Those who feel short-changed "experience distress" and withdraw.
 
 Yet most of us barely move the top line.
-The influence is both indirect and impossible to measure.
+Our effect on it is indirect, and impossible to measure.
 
 [W. Edwards Deming][deming] showed the first half with his red-bead experiment.
 Workers drew from a box rigged with a fixed ratio of red beads, were praised and
@@ -90,10 +90,10 @@ Even the goal-setting psychologists who love stretch targets admit the limit:
   abstract and disconnected from actual behavior" to guide anyone's next move.
 
 What happens next is no mystery; researchers have studied it for years.
-Let people sense the judgment is rigged, and they react along a range that
+Let people sense the judgment is rigged, and they react in ways
   industrial psychologists call counterproductive work behavior.
-At the quiet end they pull back and tune out.
-At the loud end they fight back.
+At best, they will quietly sabotage.
+At worst, they will rebel.
 
 [Skarlicki and Folger][retaliation] tracked 240 employees and found that a sense
   of injustice reliably predicts "organizational retaliation behavior": the
@@ -102,18 +102,19 @@ At the loud end they fight back.
 When a company cut pay by 15% without a proper explanation, the workers who felt
   underpaid stole much more---the "hidden cost of pay cuts."
 
-The fix suggested: hold each person to their own work, and nothing more.
-Don't cascades the OKRs, don't open the books,
+The suggested fix: hold each person to their own work, and nothing more.
+Don't cascade the OKRs, don't open the books,
   don't parade the top-line number before everyone,
   as if visibility alone were motivation.
 Don't push people toward the metrics above them.
 Instead, _hide_ those metrics from them altogether.
 
 Keep the higher numbers out of sight.
-There will be nothing left to feel manipulated by.
-What stays in view is the only thing that should: the worker's own metric.
-They can control them and can measure.
-On that ground motivation is not just protected but amplified.
+Nothing is left to feel manipulated by.
+Only one thing stays in view: the worker's own metric.
+They can control it and measure it.
+On that ground, motivation does not just survive.
+It grows.
 
 Yes, this defies the transparency gospel.
 That defiance is exactly the point.
