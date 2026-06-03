@@ -21,7 +21,7 @@ jb_picture:
   caption: Fanny and Alexander (1982) by Ingmar Bergman
 ---
 
-Management gurus keep saying that everyone must own the business result.
+Management gurus keep saying everyone must own the business result.
 [BCG][bcg] wants every company to build an "ownership mindset" at all levels.
 Each employee must feel responsible for the firm's outcomes.
 [Patrick Lencioni], in [The Five Dysfunctions of a Team][five], calls
@@ -92,8 +92,8 @@ Even the goal-setting psychologists who love stretch targets admit the limit:
 What happens next is no mystery; researchers have studied it for years.
 Let people sense the judgment is rigged, and they react in ways
   industrial psychologists call counterproductive work behavior.
-At best, they will quietly sabotage.
-At worst, they will rebel.
+At best, they quietly sabotage.
+At worst, they rebel.
 
 [Skarlicki and Folger][retaliation] tracked 240 employees and found that a sense
   of injustice reliably predicts "organizational retaliation behavior": the
