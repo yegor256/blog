@@ -95,6 +95,8 @@ Let people sense the judgment is rigged, and they react in ways
 At best, they quietly sabotage.
 At worst, they rebel.
 
+{% quote Don't push people toward the metrics above them; instead, hide those metrics from them altogether %}
+
 [Skarlicki and Folger][retaliation] tracked 240 employees and found that a sense
   of injustice reliably predicts "organizational retaliation behavior": the
   disgruntled striking back at the firm they believe wronged them.
