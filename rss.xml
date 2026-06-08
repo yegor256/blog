@@ -1,4 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-05-29T11:32:49+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Help the Agent to Feel</title><link href="https://www.yegor256.com/2026/05/29/help-the-agent.html" rel="alternate" type="text/html" title="Help the Agent to Feel" /><published>2026-05-29T00:00:00+00:00</published><updated>2026-05-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/05/29/help-the-agent</id><content type="html" xml:base="https://www.yegor256.com/2026/05/29/help-the-agent.html"><![CDATA[<p>Since the <a href="https://www.anthropic.com/news/claude-opus-4-7">release of Opus 4.7</a> in April, I don’t write code by hand anymore.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-06-08T04:26:45+00:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Don’t Blame the Wheel for Missing a Turn</title><link href="https://www.yegor256.com/2026/06/01/dont-blame-the-wheel.html" rel="alternate" type="text/html" title="Don’t Blame the Wheel for Missing a Turn" /><published>2026-06-01T00:00:00+00:00</published><updated>2026-06-01T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/06/01/dont-blame-the-wheel</id><content type="html" xml:base="https://www.yegor256.com/2026/06/01/dont-blame-the-wheel.html"><![CDATA[<p>Management gurus keep saying everyone must own the business result.
+<a href="https://bcgbrighthouse.com/thinking/think-like-an-owner-part-ii-cultivating-an-ownership-mindset-at-scale/">BCG</a> wants every company to build an “ownership mindset” at all levels.
+Each employee must feel responsible for the firm’s outcomes.
+<a href="https://en.wikipedia.org/wiki/Patrick_Lencioni">Patrick Lencioni</a>, in <a href="https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team">The Five Dysfunctions of a Team</a>, calls
+  “inattention to results” the worst sin a team can commit.
+He wants us to give up our own goals for the shared number.
+They want the bottom line to belong to all of us.
+I disagree.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Fanny and Alexander (1982) by Ingmar Bergman" src="/images/2026/06/fanny-and-alexander.jpg" longdesc="#2f4b8fc0" /><figcaption id="2f4b8fc0">Fanny and Alexander (1982) by Ingmar Bergman</figcaption></figure>
+
+<p>Nothing burns like being judged for what you didn’t do.
+<a href="https://classics.mit.edu/Aristotle/nicomachaen.3.iii.html">Aristotle</a> held that “on voluntary passions and actions praise and
+  blame are bestowed, on those that are involuntary pardon, and sometimes also
+  pity.”
+Later thinkers, from <a href="https://en.wikipedia.org/wiki/Immanuel_Kant">Kant</a> to <a href="https://en.wikipedia.org/wiki/Thomas_Nagel">Thomas Nagel</a>, turned the same instinct into the
+  <a href="https://plato.stanford.edu/entries/moral-luck/">control principle</a>: “we are morally assessable only to the extent that
+  what we are assessed for depends on factors <em>under our control</em>.”
+<a href="https://en.wikipedia.org/wiki/The_Theory_of_Moral_Sentiments">Adam Smith</a> agreed that reward belongs only to “actions of a beneficent
+  tendency, which proceed from proper motives.”
+Tie a person’s praise or blame to results their own work never caused, and the
+  judgment stops being fair.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Victor_Vroom">Victor Vroom</a>’s <a href="https://en.wikipedia.org/wiki/Expectancy_theory">expectancy theory</a> boils motivation down to a product:</p>
+
+<blockquote>
+  <p>Motivation = Expectancy × Instrumentality × Valence</p>
+</blockquote>
+
+<p>Expectancy is your belief that effort will lead to performance.
+With no control over the outcome, it drops to zero.
+Instrumentality is the link from that performance to the reward.
+With no way to measure it, it drops to zero too.
+Valence is how much you want that reward.
+Even when it runs high, the three terms multiply, so one zero kills the
+  whole product.</p>
+
+<p>John Stacey Adams’s <a href="https://en.wikipedia.org/wiki/Equity_theory">equity theory</a> adds the next link: fairness.
+Workers “seek to maintain equity between the inputs that
+  they bring to a job and the
+  outcomes that they receive.”
+Those who feel short-changed “experience distress” and withdraw.</p>
+
+<p>Yet most of us barely move the top line.
+Our effect on it is indirect, and impossible to measure.</p>
+
+<p><a href="https://deming.org/lessons-from-the-red-bead-experiment-with-dr-deming/">W. Edwards Deming</a> showed the first half with his red-bead experiment.
+Workers drew from a box rigged with a fixed ratio of red beads, were praised and
+  punished for the count, and could do nothing to change it.
+“The performance of anybody, almost anybody,” he concluded, “is governed almost
+  totally by the system he works in.”</p>
+
+<p>The second half—you cannot measure one person’s share—is a basic result in
+  the economics of the firm.
+In their classic paper on <a href="https://www.jstor.org/stable/1815199">team production</a>, <a href="https://en.wikipedia.org/wiki/Armen_Alchian">Armen Alchian</a> and
+  <a href="https://en.wikipedia.org/wiki/Harold_Demsetz">Harold Demsetz</a> put it plainly: “marginal products of cooperative team
+  members are not so directly and separably (i.e., cheaply) observable,” and
+  “what a team offers to the market can be taken as the marginal product of
+  the team but not of the team members.”
+Their fix was to measure each person’s input, not the team’s output.</p>
+
+<p>So a company-size target, pinned on one person, does not pull.
+It pushes the other way.</p>
+
+<p>Even the goal-setting psychologists who love stretch targets admit the limit:
+  <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2018.01879/full">Höchli and colleagues</a> note that a superordinate goal “can be too
+  abstract and disconnected from actual behavior” to guide anyone’s next move.</p>
+
+<p>What happens next is no mystery; researchers have studied it for years.
+Let people sense the judgment is rigged, and they react in ways
+  industrial psychologists call counterproductive work behavior.
+At best, they quietly sabotage.
+At worst, they rebel.</p>
+
+<p><a href="https://doi.org/10.1037/0021-9010.82.3.434">Skarlicki and Folger</a> tracked 240 employees and found that a sense
+  of injustice reliably predicts “organizational retaliation behavior”: the
+  disgruntled striking back at the firm they believe wronged them.
+<a href="https://doi.org/10.1037/0021-9010.75.5.561">Jerald Greenberg</a> showed how literal the damage can be.
+When a company cut pay by 15% without a proper explanation, the workers who felt
+  underpaid stole much more—the “hidden cost of pay cuts.”</p>
+
+<p>The suggested fix: hold each person to their own work, and nothing more.
+Don’t cascade the OKRs, don’t open the books,
+  don’t parade the top-line number before everyone,
+  as if visibility alone were motivation.
+Don’t push people toward the metrics above them.
+Instead, <em>hide</em> those metrics from them altogether.</p>
+
+<p>Keep the higher numbers out of sight.
+Nothing is left to feel manipulated by.
+Only one thing stays in view: the worker’s own metric.
+They can control it and measure it.
+On that ground, motivation does not just survive.
+It grows.</p>
+
+<p>Yes, this defies the transparency gospel.
+That defiance is exactly the point.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html"><![CDATA[Holding ordinary employees accountable for business-wide results they cannot control is unfair and demotivating.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/06/fanny-and-alexander.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/06/fanny-and-alexander.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Help the Agent to Feel</title><link href="https://www.yegor256.com/2026/05/29/help-the-agent.html" rel="alternate" type="text/html" title="Help the Agent to Feel" /><published>2026-05-29T00:00:00+00:00</published><updated>2026-05-29T00:00:00+00:00</updated><id>https://www.yegor256.com/2026/05/29/help-the-agent</id><content type="html" xml:base="https://www.yegor256.com/2026/05/29/help-the-agent.html"><![CDATA[<p>Since the <a href="https://www.anthropic.com/news/claude-opus-4-7">release of Opus 4.7</a> in April, I don’t write code by hand anymore.
 I only talk to <a href="https://github.com/anthropics/claude-code">Claude Code</a>.
 Not because I’m lazy or don’t like coding, but because he is a better programmer than I.
 Also faster and much cheaper.
@@ -797,99 +895,4 @@ is <a href="/2015/12/22/why-dont-you-contribute-to-open-source.html">allegedly</
 <p>In summary, you should look for an opportunity to extract a piece of code as a standalone package.
 Then, insist on making it <a href="/2017/05/30/why-contribute-to-open-source.html">open source</a>.
 Then, promote it in the community.
-Then, quit your office job and join <a href="https://www.zerocracy.com">Zerocracy</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html"><![CDATA[By breaking your software into small open-source packages, you make the entire product easier to maintain—and significantly higher in quality.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/morphine.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/morphine.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Can’t Merge? Don’t Despair.</title><link href="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html" rel="alternate" type="text/html" title="Can’t Merge? Don’t Despair." /><published>2025-11-09T00:00:00+00:00</published><updated>2025-11-09T00:00:00+00:00</updated><id>https://www.yegor256.com/2025/11/09/help-me-cant-merge</id><content type="html" xml:base="https://www.yegor256.com/2025/11/09/help-me-cant-merge.html"><![CDATA[<p>You’ve made a pull request, but it won’t merge.
-A reviewer says it’s not good or the tests don’t pass.
-No matter what, you can’t get it into the master branch.
-You keep fixing the branch, keep convincing the reviewer, keep hating the tests.
-Stop.
-Try <em>smarter</em> tactics.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Amores Perros (2000) by Alejandro González Iñárritu" src="/images/2025/11/amores-perros.jpg" longdesc="#d0b0373b" /><figcaption id="d0b0373b">Amores Perros (2000) by Alejandro González Iñárritu</figcaption></figure>
-
-<h2 id="1-give-up-instantly">1. Give Up Instantly</h2>
-
-<p>First, <a href="https://en.wikipedia.org/wiki/Fail_fast">fail fast</a>.
-Give up quickly.
-If it doesn’t go through smoothly, <em>close it</em>.
-If the reviewers’ complaints are more than stylistic issues, your understanding of the architecture is flawed.</p>
-
-<p>Ask yourself, how did this happen?
-Why did you, a smart programmer, get a wrong understanding of the architecture?
-Obviously, it’s <a href="/2015/02/16/it-is-not-a-school.html">not your mistake</a>.
-It’s a bug in the repository.
-Its <a href="/2019/04/23/elegant-readme.html">README</a> isn’t complete, its code isn’t clean enough, its documentation is outdated.</p>
-
-<p>What do you do?
-You <a href="/2025/05/25/bug-driven-development.html">blame</a> them by submitting <a href="/2014/04/13/bugs-are-welcome.html">bug reports</a>.
-Then, when they fix the repository, you try again, with a new pull request.</p>
-
-<h2 id="2-take-a-smaller-bite">2. Take a Smaller Bite</h2>
-
-<p>Most likely they don’t complain about all the changes you’ve made.
-Something looks good to them, while they refuse to accept something else.
-Good, remove the bad parts from your pull request.</p>
-
-<p>Don’t waste time trying to sell the entire package in one go.
-Instead, give them as much as they’re <em>ready to accept</em>.
-In the end, you will merge a few pull requests instead of one.
-The more, the better, at least for us in <a href="https://www.zerocracy.com">Zerocracy</a>, where we <a href="/2018/07/24/bugs-or-pull-requests.html">reward</a> each merged pull request.</p>
-
-<h2 id="3-blame-them-wisely">3. Blame Them Wisely</h2>
-
-<p>This may be a defect in their existing codebase.
-Pretty often it is.
-Your code can’t merge, not because it’s broken, but because one of the existing tests is flaky.
-This is tricky and it may get ugly.</p>
-
-<p>Don’t get negative or frustrated.
-You know that it’s not your fault.
-But they don’t.
-They believe that your code is defective and their code is perfect.
-Moreover, all CI workflows are <a href="/2014/07/21/read-only-master-branch.html">green</a> on master, while your branch is red.
-Who do we <a href="/2025/04/19/dont-merge-into-broken-master.html">blame</a>?
-Obviously, you.</p>
-
-<aside class="quote">They won’t listen if you blame them for the failure in your pull request
-</aside>
-
-<p>You have to collect <em>enough evidence</em> and submit a bug report.
-It should explain what’s wrong in their master branch.
-Don’t ever mention your pull request.
-It’s a trap!
-If you try to use your pull request as a proof of their mistakes, they won’t listen.</p>
-
-<p>Forget about your pull request for a while.
-Submit a bug report as if you were a stranger who just found a <em>bug in master</em>.</p>
-
-<p>It may be hard, since master is green.
-However, there is no other way around it.
-Again, they won’t listen if you blame them for the failure in your pull request.
-At best, they will explain to you the basics of continuous integration.</p>
-
-<h2 id="4-move-on">4. Move On</h2>
-
-<p>Just as poker fish (immature players) try to win every hand, junior developers try to merge every pull request.
-This is a mistake.
-Some problems simply can’t be fixed and some features can’t be implemented right now.
-There will be time for them later.</p>
-
-<p>It’s perfectly all right to <em>close</em> a pull request after a negative review.
-There’s no need to feel obliged to finish it.
-It’s better to spend time on easier bugs to fix and simpler functionality to implement.</p>
-
-<h2 id="5-dont-call-for-help">5. Don’t Call for Help</h2>
-
-<p>No matter how hard it is, don’t ask them to help you.
-“I can’t understand why it doesn’t merge!”
-Don’t say this.</p>
-
-<p>They <a href="/2015/02/16/it-is-not-a-school.html">may help</a>, but it will be annoying for them.
-You won’t look like a reliable programmer.
-The more you ask for help, the more you ruin your reputation.
-You must know how to solve issues on your own.</p>
-
-<p>A failed PR isn’t a setback.
-It’s a <em>lesson</em>.
-Fail fast, blame smart, and move on stronger.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><category term="etiquette" /><summary type="html"><![CDATA[When your pull request won’t merge, don't fight it—fail fast, split your changes, file bugs, and move on smarter.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/amores-perros.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/amores-perros.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+Then, quit your office job and join <a href="https://www.zerocracy.com">Zerocracy</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html"><![CDATA[By breaking your software into small open-source packages, you make the entire product easier to maintain—and significantly higher in quality.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/morphine.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/morphine.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
