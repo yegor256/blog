@@ -32,16 +32,7 @@ pre {
 }
 
 .highlighter-rouge pre {
-  border-left: 3 * $px solid $silver;
-  margin-left: 2 * $rem;
   overflow-x: auto;
-  padding-left: .5 * $rem !important;
-
-  @media all and (max-width: $width) {
-    border-left: 0;
-    margin-left: 0;
-    padding-left: 0 !important;
-  }
 
   .kn,
   .kd,
