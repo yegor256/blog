@@ -239,7 +239,7 @@ GEM
     regexp_parser (2.12.0)
     rexml (3.4.4)
     rouge (4.7.0)
-    rss (0.3.2)
+    rss (0.3.3)
       rexml
     rubocop (1.86.1)
       json (~> 2.3)
