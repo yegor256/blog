@@ -121,7 +121,7 @@ del {
         text-decoration: none;
 
         &:hover {
-          text-decoration: underline;
+          color: $red;
         }
       }
 
@@ -398,12 +398,24 @@ figure {
 
 .tagged {
   margin: $rem 0;
+
+  span {
+    display: block;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .tag {
   @extend %mono;
-  background-color: $gray;
-  color: $white !important;
+  background-color: $platinum;
+  color: $gray;
   display: inline-block;
   font-size: .8 * $rem;
   line-height: 1.15 * $rem;
@@ -421,11 +433,12 @@ figure {
   }
 
   &:visited {
-    color: $white !important;
+    color: $gray;
   }
 
   &:hover {
-    background-color: $black;
+    background-color: $gray;
+    color: $white;
   }
 }
 

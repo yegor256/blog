@@ -131,7 +131,7 @@ module Yegor
 
     def tagged(post)
       "<div class='tagged' data-length='#{post.content.split(/\s+/).length}'>
-        <div><a href='#{post.url}'>#{post['title']}</a></div>
+        <span><a href='#{post.url}'>#{post['title']}</a></span>
         <ul class='subline'>
           <li>
             <time datetime='#{post['date'].xmlschema}'>
