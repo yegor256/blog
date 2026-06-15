@@ -31,11 +31,27 @@ layout: compress
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="{{ site.url }}/rss.xml"/>
     <link rel="preload" href="/fonts/cmu-serif/cmu-serif-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
     <link rel="preload" href="/fonts/cmu-serif/cmu-serif-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <style>html.fonts-loading body { visibility: hidden; }</style>
+    <script>document.documentElement.classList.add('fonts-loading');</script>
     {% for css in page.stylesheets %}
       <link rel="stylesheet" href="{{ css }}"/>
     {% endfor %}
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="stylesheet" href="/css/icons.css?{{ site.data['hash'] }}"/>
+    <script>
+      (function () {
+        var reveal = function () { document.documentElement.classList.remove('fonts-loading'); };
+        if (!document.fonts) { reveal(); return; }
+        Promise.all([
+          document.fonts.load("1em 'CMU Serif'"),
+          document.fonts.load("italic 1em 'CMU Serif'"),
+          document.fonts.load("bold 1em 'CMU Serif'"),
+          document.fonts.load("bold italic 1em 'CMU Serif'"),
+          document.fonts.load("1em 'CMU Typewriter'"),
+          document.fonts.load("bold 1em 'CMU Typewriter'")
+        ]).then(reveal, reveal);
+      })();
+    </script>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <title>{{ page.title }}{% if paginator.page > 1 %} (page #{{ paginator.page }}){% endif %}</title>
     {% if page.style %}
