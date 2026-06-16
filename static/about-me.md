@@ -20,7 +20,8 @@ keywords:
 ---
 
 I'm Yegor Bugayenko (|jeɪˈɡər buːɡʌˈjenkɒ|, Russian:
-  <span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р Ге&#x43E;&#x301;ргиевич Буга&#x435;&#x301;нко</span>),
+  <span lang="ru" xml:lang="ru">Ег&#x43E;&#x301;р
+    Ге&#x43E;&#x301;ргиевич Буга&#x435;&#x301;нко</span>),
   a programmer, founder, investor, and philanthropist.
 
 Update: Since September 2019, I'm a software developer
@@ -29,13 +30,15 @@ Update: Since September 2019, I'm a software developer
 {% badge /images/about/yegor-speaking.jpg 300 %}
 
 I was a **founder** and CEO of [Zerocracy](https://www.zerocracy.com/),
-  a software engineering and management platform with an absolutely unique
-  methodology called [XDSD](https://www.xdsd.org) (watch [this video](https://www.youtube.com/watch?v=7EytYc7K5JA)).
-Most of the ideas behind the methodology I explained in my book [Code Ahead](/code-ahead.html).
+  a software engineering and management platform with a unique
+  methodology called [XDSD](https://www.xdsd.org)
+  (watch [this video](https://www.youtube.com/watch?v=7EytYc7K5JA)).
+Most of the ideas behind the methodology I explained in my book
+  [Code Ahead](/code-ahead.html).
 I'm the author of a few patent applications, including
-  [Puzzle-Driven Development (PDD) Method and Software](https://www.google.com/patents/US20120023476)
+  [Puzzle-Driven Development (PDD) Method and Software][pdd]
   and
-  [Method for Software Cost Estimating Using Scope Champions](https://www.google.com/patents/US20100042968).
+  [Method for Software Cost Estimating Using Scope Champions][champions].
 I'm a certified Project Management Professional ([PMP&reg;](/pdf/certifications/PMP-Jun07.pdf)).
 Besides that, I'm a proud holder of
   [RUP 7](/pdf/certifications/RUP-Feb07.pdf),
@@ -45,7 +48,8 @@ Besides that, I'm a proud holder of
   [COSMIC](https://www.cosmicon.com/certificateHoldersV3.asp) certificates.
 
 I am a **programmer**, [writing](https://github.com/yegor256)
-  mostly in Java, but also in Ruby, Rust, and JavaScript (watch [this](https://www.youtube.com/watch?v=cGcCcxx4xrg)).
+  mostly in Java, but also in Ruby, Rust, and JavaScript
+  (watch [this](https://www.youtube.com/watch?v=cGcCcxx4xrg)).
 Also, a founder and lead architect of
   [Zold](https://www.zold.io),
   [Cactoos](https://www.cactoos.org),
@@ -53,7 +57,8 @@ Also, a founder and lead architect of
   [Rultor](https://www.rultor.com),
   and [a few others](/pets.html).
 You can sponsor me on [GitHub](https://github.com/sponsors/yegor256).
-Here are [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
+Here are
+  [my favorite books]({% pst 2015/apr/2015-04-22-favorite-software-books %})
   about software engineering, and a detailed description of
   [my work environment]({% pst 2017/jun/2017-06-27-my-environment %}).
 Also, an Oracle Certified Master and Java EE 6 Enterprise Architect
@@ -67,22 +72,19 @@ I've also written a book series about object-oriented programming,
   [a few other books](/books.html),
   and founded [a movement for better OOP](https://elegantobjects.org).
 
-I was an **investor** at [SeedRamp.com](https://www.seedramp.com),
-  where I've made a few investments, but haven't got any results as of yet.
+I was an **investor** at [SeedRamp],
+  where I've made a few investments, but haven't got any results yet.
 
 I am a **philanthropist**, donating a few thousand dollars
   every year (started in 2015) to the best open source project at the time,
-  which we pick out of about a few hundreds in
+  which we pick out of a few hundred in
   a more or less fair [competition](https://www.kaicode.org).
 
 I'm also a bit of a [scientist](/research.html):
-  [Scopus](https://www.scopus.com/authid/detail.uri?authorId=30367443600),
-  [Google Scholar](https://scholar.google.com/citations?user=cYmXh60AAAAJ),
-  [DBLP](https://dblp.org/pid/17/7086.html).
+  [Scopus], [Google Scholar], [DBLP].
 Occasionally teaching in
-  [HSE University](https://www.hse.ru/ba/se/courses/835171227.html) (Moscow, Russia)
-  and in
-  [Innopolis University](https://innopolis.university/en/) (Kazan, Russia).
+  [HSE University] (Moscow, Russia) and in
+  [Innopolis University] (Kazan, Russia).
 
 Here is [my resume][cv] and its longer and [boring version][cv-boring].
 
@@ -121,7 +123,8 @@ Sometimes, I even make [films](/films.html).
 Here is my list of favorite
   [fiction](/fiction.html) and [non-fiction](/non-fiction.html) books.
 
-By the way, I'm also an amateur artist, ~~check~~ buy [my paintings](/paintings.html).
+By the way, I'm also an amateur artist, ~~check~~
+  buy [my paintings](/paintings.html).
 
 Just in case, my public PGP key is [026E65F3].
 
@@ -141,13 +144,26 @@ Here is my SO flair:
 This is my <span style="background-color:#053c5e;color:white;">blue</span> (`#053c5e`).
 -->
 
-I also contributed to the development of [IEEE 730-2014](/pdf/ieee-730-2014.pdf) standard.
+I also contributed to the development of
+  the [IEEE 730-2014](/pdf/ieee-730-2014.pdf) standard.
 
-Full list of my [certifications](https://github.com/yegor256/blog/tree/master/pdf/certifications).
+Full list of my [certifications].
 
-BTW, if you wonder why 256, the answer is simple---this is my [FIDOnet](https://en.wikipedia.org/wiki/FidoNet) node ID back from 1995.
-I was [2:464/256](http://nodehist.fidonet.org.ua/?address=2%3A464%2F256) over there, and this is where my network presence has started.
+BTW, if you wonder why 256, the answer is simple---this
+  is my [FIDOnet] node ID back from 1995.
+I was [2:464/256] over there, and this is where my network presence started.
 
 [cv]: https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume.tex&command=pdflatex&trackId=1520158941887
 [cv-boring]: https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fboring.tex&command=pdflatex&trackId=1520166474432
 [026E65F3]: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x82a1a9d03a09b8334650940fb8283801026e65f3
+[pdd]: https://www.google.com/patents/US20120023476
+[champions]: https://www.google.com/patents/US20100042968
+[HSE University]: https://www.hse.ru/ba/se/courses/835171227.html
+[Innopolis University]: https://innopolis.university/en/
+[Scopus]: https://www.scopus.com/authid/detail.uri?authorId=30367443600
+[Google Scholar]: https://scholar.google.com/citations?user=cYmXh60AAAAJ
+[DBLP]: https://dblp.org/pid/17/7086.html
+[SeedRamp]: https://www.seedramp.com
+[FIDOnet]: https://en.wikipedia.org/wiki/FidoNet
+[2:464/256]: http://nodehist.fidonet.org.ua/?address=2%3A464%2F256
+[certifications]: https://github.com/yegor256/blog/tree/master/pdf/certifications
