@@ -46,6 +46,11 @@ Subscribe at
 
 Recent episodes:
 
+<img src="/images/shift-m/douglas-crockford.png" class="guest-face" alt="Douglas Crockford"/>
+<img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>
+&#35;56: [Shift-M/56: Douglas Crockford about JavaScript, OOP, JSON, Misty, and actors](/shift-m/2026/56.html)<br/>
+13 January 2026; 63 min; [video](https://youtu.be/BrlOIPEsSJ4).
+
 <img src="/images/shift-m/richard-pawson.png" class="guest-face" alt="Richard Pawson"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>
 &#35;55: [Richard Pawson about Naked Objects and OOP](/shift-m/2025/55.html)<br/>
@@ -181,9 +186,11 @@ Recent episodes:
 &#35;29: [Team dynamics in modern IT companies](/shift-m/2018/29.html)<br/>
 12 July 2018; 60 min.
 
+<!--
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>
 &#35;28: [How to be critical and lazy](/shift-m/2018/28.html)<br/>
 20 May 2018; 53 min.
+-->
 
 <img src="/images/shift-m/geepaw.png" class="guest-face" alt="GeePaw photo"/>
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>
@@ -205,7 +212,6 @@ Recent episodes:
 &#35;24: [Mandatory skills of a software architect](/shift-m/2018/24.html)<br/>
 2 April 2018; 51 min.
 -->
-
 
 <!--
 <img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/><br/>
