@@ -20,14 +20,13 @@ keywords:
 nospell: true
 style: |
   .guest-face {
+    border-radius: 50%;
     display: block;
-    width: 92px;
+    filter: grayscale(100%);
     height: 92px;
-    display: inline-block;
     margin-right: .5em;
     margin-top: 1em;
-    border-radius: 50%;
-    filter: grayscale(100%);
+    width: 92px;
   }
 ---
 
@@ -129,7 +128,7 @@ Recent episodes:
 &#35;37: [Zen project management with Mike Clayton](/shift-m/2018/37.html)<br/>
 29 September 2018; 58 min.
 
-<img src="/images/shift-m/olga-arnoldi.png" class="guest-face" alt="Olga Arnoldi"/><br/>
+<img src="/images/shift-m/olga-arnoldi.png" class="guest-face" alt="Olga Arnoldi"/>
 &#35;36: [70/70 or how to make a business deal](/shift-m/2018/36.html)<br/>
 10 September 2018; 62 min.
 
