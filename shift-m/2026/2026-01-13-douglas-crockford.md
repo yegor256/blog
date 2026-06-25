@@ -9,8 +9,8 @@ place: Moscow, Russia
 permalink: /shift-m/2026/56.html
 description: |
   Douglas Crockford is a software architect and language designer
-  best known for his work on JavaScript, JSON, and for his sustained critique
-  of mainstream programming language design and programming culture.
+  known for his work on JavaScript, JSON, and his critique
+  of mainstream programming language design.
 keywords:
   - javascript
   - douglas crockford interview
