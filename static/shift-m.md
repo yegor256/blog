@@ -64,7 +64,8 @@ Recent episodes:
 
 <img src="/images/shift-m/aino-corry.png" class="guest-face" alt="Aino Corry"/>
 &#35;52: [Aino Corry about meetings and retrospectives](/shift-m/2022/52.html)<br/>
-19 January 2022; 55 min; [video](https://youtu.be/2Zt9oJtFKGw).
+19 January 2022; 55 min.
+<!-- [video](https://youtu.be/2Zt9oJtFKGw) -->
 
 <img src="/images/shift-m/michael-kay.png" class="guest-face" alt="Michael Kay"/>
 &#35;51: [Michael Kay about XSLT, XML, and software business](/shift-m/2022/51.html)<br/>
@@ -72,7 +73,8 @@ Recent episodes:
 
 <img src="/images/shift-m/andy-hunt.png" class="guest-face" alt="Andy Hunt"/>
 &#35;50: [Andy Hunt about tech books publishing](/shift-m/2021/50.html)<br/>
-24 December 2021; 59 min; [video](https://www.youtube.com/watch?v=JER03qMCmIk).
+24 December 2021; 59 min.
+<!-- [video](https://www.youtube.com/watch?v=JER03qMCmIk). -->
 
 <img src="/images/shift-m/greg-young.png" class="guest-face" alt="Greg Young"/>
 &#35;49: [Greg Young about software architecture](/shift-m/2021/49.html)<br/>
