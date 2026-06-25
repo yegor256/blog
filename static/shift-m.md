@@ -20,6 +20,7 @@ keywords:
 nospell: true
 style: |
   .guest-face {
+    display: block;
     width: 92px;
     height: 92px;
     display: inline-block;
@@ -128,7 +129,6 @@ Recent episodes:
 &#35;37: [Zen project management with Mike Clayton](/shift-m/2018/37.html)<br/>
 29 September 2018; 58 min.
 
-<img src="/images/face-256x256.jpg" class="guest-face" alt="Yegor Bugayenko"/>
 <img src="/images/shift-m/olga-arnoldi.png" class="guest-face" alt="Olga Arnoldi"/><br/>
 &#35;36: [70/70 or how to make a business deal](/shift-m/2018/36.html)<br/>
 10 September 2018; 62 min.
