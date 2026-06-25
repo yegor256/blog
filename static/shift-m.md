@@ -158,7 +158,7 @@ Recent episodes:
 22 July 2018; 54 min.
 
 <img src="/images/shift-m/michael-krigsman.png" class="guest-face" alt="Michael Krigsman photo"/>
-&#35;29: [Team dynamics in modern IT companies](/shift-m/2018/29.html)<br/>
+&#35;29: [Team dynamics in modern IT companies with Michael Krigsman](/shift-m/2018/29.html)<br/>
 12 July 2018; 60 min.
 
 <!--
