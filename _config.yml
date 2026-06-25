@@ -8,9 +8,9 @@ author:
   name: "Yegor Bugayenko"
   email: yegor256@gmail.com
 description: "Yegor Bugayenko"
-copyright: "(c) Yegor Bugayenko, 2014-2025"
+copyright: "(c) Yegor Bugayenko, 2014-2026"
 encoding: utf-8
-timezone: America/San_Francisco
+timezone: Europe/Moscow
 
 highlighter: rouge
 markdown: kramdown
