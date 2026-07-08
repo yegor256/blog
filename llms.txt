@@ -1,0 +1,11 @@
+# Yegor Bugayenko
+
+> Personal blog about computers, programming, object-oriented design, and software management, written by Yegor Bugayenko and published at https://www.yegor256.com.
+
+The Markdown sources of every HTML page on this site live in a public GitHub repository: https://github.com/yegor256/blog
+
+## Details
+
+- [Repository](https://github.com/yegor256/blog): Markdown sources of all pages
+- [RSS feed](https://www.yegor256.com/rss.xml): full list of posts
+- [Sitemap](https://www.yegor256.com/sitemap.xml): all URLs
