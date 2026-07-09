@@ -76,7 +76,7 @@ Now, the research questions, most important at the top:
 * How does _measuring_ work results affect human motivation?
 
 * How often are _virtual table_ calls used in modern open source C++ projects
-  [we've [done it](https://arxiv.org/abs/2410.05631) for Java]?
+  (we've [done it](https://arxiv.org/abs/2410.05631) for Java)?
 
 * How many design patterns, out of all actively used ones, are _dataless_
   (the [dataset](https://github.com/yegor256/cam) is ready)?
