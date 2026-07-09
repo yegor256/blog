@@ -65,9 +65,6 @@ Now, the research questions, most important at the top:
   also for [C](https://github.com/polystat/c2eo) and
   [Python](https://github.com/polystat/py2eo))?
 
-* Can _confluence_ of [𝜑-calculus] be proven using [Lean4]
-  (we've [tried](https://github.com/objectionary/proof))?
-
 * How different is the _productivity_ of a team paid
   per time vs. the team paid per delivered results
   ([some data]({% pst 2014/apr/2014-04-11-cost-of-loc %}) already available)?
