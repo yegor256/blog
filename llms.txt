@@ -2,7 +2,7 @@
 
 > Personal blog about computers, programming, object-oriented design, and software management, written by Yegor Bugayenko and published at https://www.yegor256.com.
 
-The Markdown sources of every HTML page on this site live in a public GitHub repository: https://github.com/yegor256/blog
+A clean Markdown version of every post is served at the same URL with the `.html` extension replaced by `.md`, for example https://www.yegor256.com/2026/06/01/title.md. The Markdown sources of every HTML page also live in a public GitHub repository: https://github.com/yegor256/blog
 
 ## Details
 

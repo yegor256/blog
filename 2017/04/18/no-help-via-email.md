@@ -1,0 +1,39 @@
+# Why I Won't Help You Via Email
+
+Source: https://www.yegor256.com/2017/04/18/no-help-via-email.html
+
+I've been blogging and writing for almost three years now, and a few times a week
+I get emails or Facebook and Telegram messages from
+people I don't really know. They ask questions about Java,
+management, object-oriented programming, and other things
+they believe I understand and can help them with. Well, my contact details are
+published right in the header on my blog---what else would I expect, right?
+True, but even though I always reply to them, I never
+answer their questions.
+
+
+{% jb_picture_body %}
+
+Why?
+
+Because it's ineffective.
+
+Honestly, I believe that the more people I help, the better. The bigger my contribution
+to the community is, the better---for both the community and me personally.
+That's why I try to answer every single comment on this blog,
+on my [YouTube channel](https://www.youtube.com/c/yegor256?sub_confirmation=1), in
+our Gitter chat (now defunct), and on
+[Twitter](https://twitter.com/yegor256).
+I spend at least two hours a day on this activity.
+
+That's why I'm asking everybody who seeks help from me personally to
+go to one of these public channels and ask there. Then, I will find their
+questions and answer them. Maybe even someone else will reply, because the community
+is pretty big now.
+
+When the question is asked publicly, _everybody_ can see our conversation
+and learn something from it. This is the most effective use of my
+time and the time of those who are asking.
+
+Thus, you can expect **no help** provided privately, but all
+public questions will be answered.
