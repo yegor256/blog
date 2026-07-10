@@ -114,6 +114,7 @@ layout: default
         </a>
       </nav>
     </header>
+    <p class="hidden">A Markdown version of this page is available at <a href="{{ page.url | replace: '.html', '.md' }}">{{ site.url }}{{ page.url | replace: '.html', '.md' }}</a>.</p>
     <article class="main" itemprop="articleBody">
       <div {% if page.nospell %} class="nospell" {% endif %}>
         <div id="bibtex" style="display: none">
