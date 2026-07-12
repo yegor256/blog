@@ -63,7 +63,7 @@ I present you with a list of skills that may help, if you develop them.
 Not soft skills, not hard skills, but rat's skills.
 Here they are:
 
-**How to Read Between the Lines**.
+**How to Read Between the Lines**
 In a professional full-of-rats office environment everybody wishes to screw everybody.
 The only way to put a friend into trouble is by finding how his actions violated the rules.
 Talking and writing is the only act a rat does.
@@ -72,7 +72,7 @@ A rat writes "The report is great!" and means "I don't trust you anymore, better
 The "great" is the tell, if he usually writes "perfect."
 You must know how to read between the lines and understand what people truly mean.
 
-**How to Talk a Lot Saying Nothing**.
+**How to Talk a Lot Saying Nothing**
 All rats do in the office is talking.
 If you keep your mouth shut and your eyes open, as many office coaches recommend, you either
   look obviously weird and get rejected,
@@ -88,7 +88,7 @@ This idea doesn't add anything to the argument, but it helps you defend yourself
 They won't think of you as their enemy and won't bite.
 Your point is an obvious boring truth---the best type of argument.
 
-**How to Find Scapegoats**.
+**How to Find Scapegoats**
 Some people stay in the company because they produce products:
   code, tests, design, architecture, etc.
 Rats don't do that, because they don't want to and they don't know how to.
@@ -108,7 +108,7 @@ Schedule a fake meeting on this very morning and when the time comes, claim that
 Build such evidence systematically and you'll have a strong weapon against your friend,
   who is obviously your enemy at the same time.
 
-**How to Invent Obstacles**.
+**How to Invent Obstacles**
 Regular people, who are not rats, try to be helpful to others and be modest about it.
 This is what rats use against them: modesty is your weakness.
 Instead, you should radiate the smell of sweat.
@@ -120,7 +120,7 @@ Later, when you screw it up, you will blame the obstacles.
 If you don't, you will be a hero who fought the obstacles.
 Those quiet humble losers who just do their job will always be behind you.
 
-**How to Disrespect Yourself**.
+**How to Disrespect Yourself**
 Rats don't produce anything valuable, neither engineering nor management.
 They do politics only: make friends and then betray them.
 A long time ago, when they were engineers, they did something productive, but it was a long time ago.
@@ -135,7 +135,7 @@ You must be ready to answer yourself:
 This answer will make you stronger.
 You will be a good rat.
 
-**How to Identify Owners**.
+**How to Identify Owners**
 Only in a small startup of five people everything is owned by the founder, who is one of these five.
 In a large organization, resources---money, staff, hardware, offices---belong to people
   who decide how to distribute them.
@@ -151,7 +151,7 @@ A good rat is always prepared to ask for a favor when being asked for a favor.
 A good rat never gives anything to anyone for free.
 Learn what your friends possess or have access to---be prepared to ask them to share.
 
-**How to Be a Friend**.
+**How to Be a Friend**
 Rats are politicians, not engineers or managers.
 A good politician knows how to do one thing and nothing else: make friends.
 It's easy to make a friend when you have nothing to share.
@@ -166,7 +166,7 @@ Productivity, efficiency, profit, customers---all of that is secondary.
 Enemies ruin your career, not bad code, broken servers, or lost customers.
 Know how to make friends at all costs.
 
-**How to Respect Fools**.
+**How to Respect Fools**
 The higher you are on the organizational ladder, the less competent people are around you.
 I mean technical competence.
 A CEO of PepsiCo can become a CEO of Apple, you know [this story][John Sculley].
