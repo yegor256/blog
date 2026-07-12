@@ -52,13 +52,16 @@ For example,
 and
 [Rosabeth Moss Kanter]'s
 [Men and Women of the Corporation] (1977).
+Also
+[Joep Schrijvers]'s
+[The Way of the Rat] (2004), which is my favorite.
 
 However, very few or no books give exact recommendations on what to do.
 Exactly what actions to be performed to win a particular fight?
 How every day in the office must be spent to be the best candidate for promotion?
 Or simply put, what skills a good rat must possess and learn during its entire office career?
 
-My short list of rat's skills follows:
+This blog post is trying to fill the gap by giving a list of practical skills.
 
 **How to Read Between the Lines**.
 In a professional full-of-rats office environment everybody wishes to screw everybody.
@@ -185,3 +188,5 @@ If you know more skills that deserve to be in this list, please post a comment b
 [Power In and Around Organizations]: https://amzn.to/4yxeNH4
 [Rosabeth Moss Kanter]: https://de.wikipedia.org/wiki/Rosabeth_Moss_Kanter
 [Men and Women of the Corporation]: https://amzn.to/4fafAVd
+[The Way of the Rat]: https://amzn.to/450laow
+[Joep Schrijvers]: https://nl.wikipedia.org/wiki/Joep_Schrijvers
