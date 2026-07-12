@@ -75,7 +75,7 @@ This idea doesn't add anything to the argument, but it helps you defend yourself
 They won't think of you as of their enemy and won't bite.
 Your point is an obvious boring truth---the best type of argument.
 
-**Find a Scape Goat**.
+**Find Scape Goats**.
 Some people stay in the company because they produce products:
   code, tests, design, architecture, etc.
 Rats don't do that, because they don't want to and they don't know how to.
@@ -95,6 +95,17 @@ Schedule a fake meeting on this very morning and when time comes, claim that bec
 Build such evidence systematically and you'll have a strong weapon against your friend,
   who is obviously your enemy at the same time.
 
+**Invent Obstacles**.
+Regular people, who are not rats, try to be helpful to others and be modest about it.
+This is what rats use against them: modesty is your weakness.
+Instead, you should radiate the smell of sweat.
+Every task should be difficult for you, but not because of your incompetence.
+Because of so many obstacles you have to deal with.
+Regular say "I will deal with it, trust me."
+A rat says "I will try, but it's very difficult, because of ..."
+Later, when you screw it up, you will blame the obstacles.
+If you don't, you will be a hero who fought the obstacles.
+Those quiet humble loosers who just do their job will always be behind you.
 
 
 
