@@ -21,7 +21,7 @@ image: /images/2026/07/le-professionnel.jpg
 jb_picture:
   caption: Le Professionnel (1981) by Georges Lautner
 style: |-
-  article .strong { display: block; }
+  article p strong { display: block; }
 ---
 
 How to get promoted?
@@ -48,17 +48,18 @@ They are good as reads, but useless as practical guidelines.
 They treat career-successful people as people.
 They are not, they are rats.
 
+{% badge https://yegor256.github.io/bibliography/book-covers/schrijvers2004rat.jpg 128 %}
 [Joep Schrijvers]'s [The Way of the Rat] (2004), my favorite, uses exactly this metaphor.
 
 Being a rat means enjoying taking advantage of other people.
-This is what a rat does: it doesn't earn its food, it steals it.
+This is what a rat does in nature: it doesn't earn its food, it steals it.
 That's why we people hate rats---they steal from us.
 However, rats feel nothing bad about being rats.
 That's how they were born.
 They are made to be thieves, with a big smile on their ugly faces.
 
 Being a rat may be hard for most of us.
-I present you a list of skills that may help, if you develop them.
+I present you with a list of skills that may help, if you develop them.
 Not soft skills, not hard skills, but rat's skills.
 Here they are:
 
@@ -68,13 +69,13 @@ The only way to put a friend into trouble is by finding how his actions violated
 Talking and writing is the only act a rat does.
 A rat knows that enemies are watching him, that's why he doesn't say or write anything straight.
 A rat writes "The report is great!" and means "I don't trust you anymore, better quit this job."
-The "great" is the tell, if usually he writes "perfect."
+The "great" is the tell, if he usually writes "perfect."
 You must know how to read between the lines and understand what people truly mean.
 
 **How to Talk a Lot Saying Nothing**.
 All rats do in the office is talking.
 If you keep your mouth shut and your eyes open, as many office coaches recommend, you either
-  look obviously weird and that's why rejected,
+  look obviously weird and get rejected,
   or
   eventually start talking, disclosing everything you've been holding to yourself for long.
 In a rat office, silence is never safe.
@@ -102,7 +103,7 @@ You should learn this skill too, it's not so difficult.
 Just pay attention to every mistake people around you make and link them with your own possible failures.
 Say, your friend came late to the office on Wednesday last week.
 Good!
-Schedule a fake meeting on this very morning and when time comes, claim that because of
+Schedule a fake meeting on this very morning and when the time comes, claim that because of
   his absence you weren't able to share important information with him.
 Build such evidence systematically and you'll have a strong weapon against your friend,
   who is obviously your enemy at the same time.
@@ -126,7 +127,7 @@ A long time ago, when they were engineers, they did something productive, but it
 They've forgotten all that already.
 All they do all day is attending meetings with other rats, also highly incompetent.
 If you have any talents somehow related to engineering or management, you will hate yourself for being a rat.
-Sitting on those meetings you will be bored to death.
+Sitting in those meetings you will be bored to death.
 More importantly, you will constantly ask yourself a question:
   "Why do I have to be here? Am I as useless as these morons?"
 You must be ready to answer yourself:
@@ -154,7 +155,7 @@ Learn what your friends possess or have access to---be prepared to ask them to s
 Rats are politicians, not engineers or managers.
 A good politician knows how to do one thing and nothing else: make friends.
 It's easy to make a friend when you have nothing to share.
-However, imagine a lead of another department comes to you and asks to give your best engineer to his project.
+However, imagine a lead of another department comes to you and asks you to give your best engineer to his project.
 What would a regular team lead do?
 He would fight for the engineer, to keep him in the project.
 What would a politician do?
@@ -163,10 +164,10 @@ He would not care about the engineer or the project at all.
 Friendship, for a rat, comes first.
 Productivity, efficiency, profit, customers---all of that is secondary.
 Enemies ruin your career, not bad code, broken servers, or lost customers.
-Know how to make friends at all cost.
+Know how to make friends at all costs.
 
 **How to Respect Fools**.
-The higher you are in the organizational ladder, the less competent people are around you.
+The higher you are on the organizational ladder, the less competent people are around you.
 I mean technical competence.
 A CEO of PepsiCo can become a CEO of Apple, you know [this story][John Sculley].
 The same happens everywhere: clowns are climbing up management ladders.
