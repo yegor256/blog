@@ -159,13 +159,15 @@ Know how to make friends at all cost.
 The higher you are in the organizational ladder, the less competent people are around you.
 I mean technical competence.
 A CEO of PepsiCo can become a CEO of Apple, you know [this story][John Sculley].
-The same happens everywhere: fools are climbing up the ladder.
+The same happens everywhere: clowns are climbing up management ladders.
 They get promoted for being great politicians, not for knowing how computers work.
-Your job, as a rat, is to never tell them they are fools.
-The better expert you are, the more difficult it will be.
-You must learn how to stop asking yourself a question: "Why do I have to spend time with fools?"
-Also, this question may hurt: "Why our company tolerate fools being in charge of smart people?"
-God forbid you ask these questions out loud.
+Your job, is to keep your mouth shut and never tell them they are fools.
+However, the better expert you are, the more difficult it will be.
+Do your best.
+Learn how to stop asking yourself a question: "Why do I have to spend time with fools?"
+Also, this question may hurt: "Why our company tolerates fools being in charge of smart people?"
+God forbids you ask these questions out loud in the office.
+This would be the end of your career.
 
 If you know more skills that deserve to be in this list, please post a comment bellow.
 
