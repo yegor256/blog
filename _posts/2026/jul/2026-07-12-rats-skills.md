@@ -138,10 +138,20 @@ A good rat is always prepared to ask for a favor when being asked for a favor.
 A good rat never gives anything to anyone for free.
 Learn what your friends possess of have access to---be prepared to ask them to share.
 
-
-
-
-
+**How to Be a Friend**.
+Rats are politicians, not engineers or managers.
+A good policitian knows how to do one thing and nothing else: make friends.
+It's easy to make a friend when you have nothing to share.
+However, imagine a lead of another department comes to you and asks to give your best engineer to his project.
+What would a regular team lead?
+He would fight for the engineer, to keep him in the project.
+What would a politician do?
+He would do everything to keep the other manager a friend.
+He would not care about the engineer or the project at all.
+Friendship, for a rat, comes first.
+Productivity, efficiency, profit, customers---all of that is secondary.
+Enemies ruin your career, not bad code, broken servers, or lost customers.
+Know how to make friends at all cost.
 
 
 
