@@ -8,7 +8,9 @@ date: 2026-07-12
 place: Moscow, Russia
 tags: management
 description: |
-  ...
+  The path to promotion is not competence but a learnable set
+  of parasitic "rat" behaviors, and here is
+  the concrete skill-set that produces the climb.
 keywords:
   - ...
   - ...
@@ -27,13 +29,26 @@ How to get a salary raise?
 How to stop writing code and start managing other losers who still write it?
 How to become a team leader, a manager, a boss, a Vice President, a CTO, and a CEO?
 Is it a matter of luck, or can some tactics help you get to the top of the career ladder?
-Now I will teach you some tactics.
-They are pretty simple, but hard to follow for most of us, due to our education and innate qualities.
-However, they work like a charm, if you stop being a human and start being a rat.
+Let me share some tactics.
+My experience tells me that they work.
 
 <!--more-->
 
 {% jb_picture_body %}
+
+There are books about office power games.
+[Jeffrey Pfeffer]'s
+[Power in Organizations] (1981),
+[Henry Mintzberg]'s
+[Power In and Around Organizations] (1983),
+and
+[Rosabeth Moss Kanter]'s
+[Men and Women of the Corporation] (1977).
+They are good as reads, but useless as practical guidelines.
+They treat career-successful people as people.
+They are not, they are rats.
+
+[Joep Schrijvers]'s [The Way of the Rat] (2004), my favorite, uses exactly this metaphor.
 
 Being a rat means enjoying taking advantage of other people.
 This is what a rat does: it doesn't earn its food, it steals it.
@@ -42,26 +57,10 @@ However, rats feel nothing bad about being rats.
 That's how they were born.
 They are made to be thieves, with a big smile on their ugly faces.
 
-I'm not the first to apply this metaphor to office life.
-There are books and studies that explain: to win an office battle you have to be less human and more of a rat.
-For example,
-[Jeffrey Pfeffer]'s
-[Power in Organizations] (1981),
-[Henry Mintzberg]'s
-[Power In and Around Organizations] (1983),
-and
-[Rosabeth Moss Kanter]'s
-[Men and Women of the Corporation] (1977).
-Also
-[Joep Schrijvers]'s
-[The Way of the Rat] (2004), which is my favorite.
-
-However, very few or no books give exact recommendations on what to do.
-Exactly what actions to be performed to win a particular fight?
-How every day in the office must be spent to be the best candidate for promotion?
-Or simply put, what skills a good rat must possess and learn during its entire office career?
-
-This blog post is trying to fill the gap by giving a list of practical skills.
+Being is rat may be hard for most of us.
+I present you a list of skills that may help, if you develop them.
+Not soft skills, not hard skills, but rat's skills.
+Here they are:
 
 **How to Read Between the Lines**.
 In a professional full-of-rats office environment everybody wishes to screw everybody.
