@@ -18,6 +18,8 @@ keywords:
 image: /images/2026/07/le-professionnel.jpg
 jb_picture:
   caption: Le Professionnel (1981) by Georges Lautner
+style: |-
+  article .strong { display: block; }
 ---
 
 How to get promoted?
@@ -156,7 +158,7 @@ Know how to make friends at all cost.
 **How to Respect Fools**.
 The higher you are in the organizational ladder, the less competent people are around you.
 I mean technical competence.
-A CEO of PepsiCo can become a CEO of Apple, you know this story.
+A CEO of PepsiCo can become a CEO of Apple, you know [this story][John Sculley].
 The same happens everywhere: fools are climbing up the ladder.
 They get promoted for being great politicians, not for knowing how computers work.
 Your job, as a rat, is to never tell them they are fools.
@@ -165,9 +167,6 @@ You must learn how to stop asking yourself a question: "Why do I have to spend t
 Also, this question may hurt: "Why our company tolerate fools being in charge of smart people?"
 God forbid you ask these questions out loud.
 
-<hr/>
+If you know more skills that deserve to be in this list, please post a comment bellow.
 
-I will keep this article updated.
-I learn new skills every day.
-Stay tuned.
-
+[John Sculley]: https://en.wikipedia.org/wiki/John_Sculley
