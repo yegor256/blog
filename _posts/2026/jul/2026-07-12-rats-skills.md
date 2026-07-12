@@ -74,3 +74,41 @@ Your argument should be: "Not raising a salary for a good employee is bad!"
 This idea doesn't add anything to the argument, but it helps you defend yourself against other rats.
 They won't think of you as of their enemy and won't bite.
 Your point is an obvious boring truth---the best type of argument.
+
+**Find a Scape Goat**.
+Some people stay in the company because they produce products:
+  code, tests, design, architecture, etc.
+Rats don't do that, because they don't want to and they don't know how to.
+Instead, they stay in the company because it's hard to kick them out.
+They know to look formally innocent.
+Moreover, they know to make themselves look valuable.
+They know how to directly attribute themselves to the results
+  achieved by those coders and designers.
+When things go south, rats know how to find scape goats---people that
+  can be formally blamed for the failures.
+You should learn this skill too, it's not so difficult.
+Just pay attention to every mistake people around you make and link them with your own possible failures.
+Say, your friend came late to the office on Wednesday last week.
+Good!
+Schedule a fake meeting on this very morning and when time comes, claim that because of
+  his absence you wasn't able to share important information with him.
+Build such evidence systematically and you'll have a strong weapon against your friend,
+  who is obviously your enemy at the same time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
