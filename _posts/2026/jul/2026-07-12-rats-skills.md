@@ -44,7 +44,14 @@ They are made to be thieves, with a big smile on their ugly faces.
 
 I'm not the first to apply this metaphor to office life.
 There are books and studies that explain: to win an office battle you have to be less human and more of a rat.
-For example, ....
+For example,
+[Jeffrey Pfeffer]'s
+[Power in Organizations] (1981),
+[Henry Mintzberg]'s
+[Power In and Around Organizations] (1983),
+and
+[Rosabeth Moss Kanter]'s
+[Men and Women of the Corporation] (1977).
 
 However, very few or no books give exact recommendations on what to do.
 Exactly what actions to be performed to win a particular fight?
@@ -172,3 +179,9 @@ This would be the end of your career.
 If you know more skills that deserve to be in this list, please post a comment below.
 
 [John Sculley]: https://en.wikipedia.org/wiki/John_Sculley
+[Jeffrey Pfeffer]: https://de.wikipedia.org/wiki/Jeffrey_Pfeffer
+[Power in Organizations]: https://amzn.to/4y8YGPA
+[Henry Mintzberg]: https://en.wikipedia.org/wiki/Henry_Mintzberg
+[Power In and Around Organizations]: https://amzn.to/4yxeNH4
+[Rosabeth Moss Kanter]: https://de.wikipedia.org/wiki/Rosabeth_Moss_Kanter
+[Men and Women of the Corporation]: https://amzn.to/4fafAVd
