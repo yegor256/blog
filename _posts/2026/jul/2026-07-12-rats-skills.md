@@ -51,7 +51,7 @@ Or simply put, what skills a good rat must posess and learn during its entire of
 
 My short list of rat's skills follows:
 
-**Read Between the Lines**.
+**How to Read Between the Lines**.
 In a professional full-of-rats office environment everybody wishes to screw everybody.
 The only way to put a friend into a trouble is by finding how his actions violated the rules.
 Talking and writing is the only act a rat does.
@@ -60,7 +60,7 @@ A rat writes "The report is great!" and means "You have no trust from me anymore
 The "great" is the tell, if usually he writes "perfect."
 You must know how to read between the lines and understand what people trully mean.
 
-**Talk a Lot Saying Nothing**.
+**How to Talk a Lot Saying Nothing**.
 All rats do in the office is talking.
 If you keep your month shut and your eyes open, as many office couches recommend, you either
   will look obviously weird and that's why rejected,
@@ -75,7 +75,7 @@ This idea doesn't add anything to the argument, but it helps you defend yourself
 They won't think of you as of their enemy and won't bite.
 Your point is an obvious boring truth---the best type of argument.
 
-**Find Scape Goats**.
+**How to Find Scape Goats**.
 Some people stay in the company because they produce products:
   code, tests, design, architecture, etc.
 Rats don't do that, because they don't want to and they don't know how to.
@@ -95,7 +95,7 @@ Schedule a fake meeting on this very morning and when time comes, claim that bec
 Build such evidence systematically and you'll have a strong weapon against your friend,
   who is obviously your enemy at the same time.
 
-**Invent Obstacles**.
+**How to Invent Obstacles**.
 Regular people, who are not rats, try to be helpful to others and be modest about it.
 This is what rats use against them: modesty is your weakness.
 Instead, you should radiate the smell of sweat.
@@ -107,7 +107,20 @@ Later, when you screw it up, you will blame the obstacles.
 If you don't, you will be a hero who fought the obstacles.
 Those quiet humble loosers who just do their job will always be behind you.
 
-
+**How to Disrespect Yourself**.
+Rats don't produce anything valuable, neither engineering nor management.
+They do politics only: make friends and they betray them.
+Long time ago, when they were engineers, they did something productive, but it was long time ago.
+They've forgotten all that already.
+All they do all day is attending meetings with other rats, also highly incompetent.
+If you have any talents somehow related to engineering or management, you will hate yourself for being a rat.
+Sitting on those meetings you will be borded to death.
+More importantly, you will constantly ask yourself a question:
+  "Why do I have to be here? Am I as useless as these morons?"
+You must be ready to answer to yourlelf:
+  "Yes, I'm one of them, my talents are useless, I'm nothing more than a talking head. It's over."
+This answer will make you stonger.
+You will be a good rat.
 
 
 
