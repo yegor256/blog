@@ -44,7 +44,7 @@ There are books about office power games.
 and
 [Rosabeth Moss Kanter]'s
 [Men and Women of the Corporation] (1977).
-They are good as reads, but useless as practical guidelines.
+They are good reads, but useless as practical guidelines.
 They treat career-successful people as people.
 They are not, they are rats.
 
@@ -65,7 +65,7 @@ Here they are:
 
 **How to Read Between the Lines**
 In a professional full-of-rats office environment everybody wishes to screw everybody.
-The only way to put a friend into trouble is by finding how his actions violated the rules.
+The only way to get a friend into trouble is by finding how his actions violated the rules.
 Talking and writing is the only act a rat does.
 A rat knows that enemies are watching him, that's why he doesn't say or write anything straight.
 A rat writes "The report is great!" and means "I don't trust you anymore, better quit this job."
@@ -81,7 +81,7 @@ If you keep your mouth shut and your eyes open, as many office coaches recommend
 In a rat office, silence is never safe.
 Instead, you should talk a lot, at every [meeting][meetings], using every opportunity to open your mouth.
 But you should say nothing.
-This is easy: no matter what is the subject, find an angle that is obvious and argue in favor of it.
+This is easy: no matter what the subject is, find an angle that is obvious and argue in favor of it.
 Say, we discuss who gets the [salary] raise: Jeff or Mary.
 Your argument should be: "Not raising a salary for a good employee is bad!"
 This idea doesn't add anything to the argument, but it helps you defend yourself against other rats.
@@ -122,7 +122,7 @@ Later, when you screw it up, you will blame the obstacles.
 If you don't, you will be a hero who fought the obstacles.
 Those quiet humble losers who just do their job will always be behind you.
 
-{% quote All an effective politian does is making friends and betraying them %}
+{% quote All an effective politician does is making friends and betraying them %}
 
 **How to Disrespect Yourself**
 Rats don't produce anything valuable, neither engineering nor [management].
