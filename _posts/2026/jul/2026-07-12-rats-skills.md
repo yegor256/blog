@@ -135,4 +135,7 @@ You will be a good rat.
 
 
 
+I will keep this article updated.
+I learn new skills every day.
+Stay tuned.
 
