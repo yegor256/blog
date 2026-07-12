@@ -1,0 +1,76 @@
+---
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
+# SPDX-License-Identifier: MIT
+
+layout: post
+title: "Rat's Skills"
+date: 2026-07-12
+place: Moscow, Russia
+tags: management
+description: |
+  ...
+keywords:
+  - ...
+  - ...
+  - ...
+  - ...
+  - ...
+image: /images/2026/07/le-professionnel.jpg
+jb_picture:
+  caption: Le Professionnel (1981) by Georges Lautner
+---
+
+How to get promoted?
+How to get a salary raise?
+How to stop writing code and start managing other loosers who still write it?
+How to become a team leader, a manager, a boss, a Vice President, a CTO, and a CEO?
+Is it a matter of luck of some tacticts may help you get to the top of the carreer ladder?
+Now I will teach you some tacticts.
+They are pretty simple, but hard to follow for most of us, due to our education and innane qualities.
+However, they work like a charm, if you stop being a human being and start being a rat.
+
+<!--more-->
+
+{% jb_picture_body %}
+
+Being a rat means being enjoying taking advantage of other people.
+This is what a rat does: it doesn't earn its food, it steals it.
+That's why people hate rats, because they steal from us.
+They feel nothing bad about being rats.
+That's how they were born.
+They are made to be thieves, with a big smile on their ugly faces.
+
+I'm not the first to apply this metaphor to office life.
+There are books and studies that explain: to win an office battle you have to be less human and more a rat.
+For example, ....
+
+However, very few or no books give exact recommendations what to do.
+Exactly what actions to be performed to win a particular fight?
+How every day in the office must be spent to be the best candidate for promotion?
+Or simply put, what skills a good rat must posess and learn during its entire office career?
+
+My short list of rat's skills follows:
+
+**Read Between the Lines**.
+In a professional full-of-rats office environment everybody wishes to screw everybody.
+The only way to put a friend into a trouble is by finding how his actions violated the rules.
+Talking and writing is the only act a rat does.
+A rat knows that enemies are watching him, that's why doesn't say or writing anything straight.
+A rat writes "The report is great!" and means "You have no trust from me anymore, better quit this job."
+The "great" is the tell, if usually he writes "perfect."
+You must know how to read between the lines and understand what people trully mean.
+
+**Talk a Lot Saying Nothing**.
+All rats do in the office is talking.
+If you keep your month shut and your eyes open, as many office couches recommend, you either
+  will look obviously weird and that's why rejected,
+  or
+  will eventually start talking, disclosing everything you've been holding to yourself for long.
+Instead, you should talk a lot, at every meeting, using every opportunity to open your mouth.
+But you should say nothing.
+This is easy: no matter what is the subject, find an angle that is obvious and argue in favor of it.
+Say, we discuss who gets the salary raise: Jeff or Mary.
+Your argument should be: "Not raising a salary for a good employee is bad!"
+This idea doesn't add anything to the argument, but it helps you defend yourself against other rats.
+They won't think of you as of their enemy and won't bite.
+Your point is an obvious boring truth---the best type of argument.
