@@ -79,14 +79,16 @@ If you keep your mouth shut and your eyes open, as many office coaches recommend
   or
   eventually start talking, disclosing everything you've been holding to yourself for long.
 In a rat office, silence is never safe.
-Instead, you should talk a lot, at every meeting, using every opportunity to open your mouth.
+Instead, you should talk a lot, at every [meeting][meetings], using every opportunity to open your mouth.
 But you should say nothing.
 This is easy: no matter what is the subject, find an angle that is obvious and argue in favor of it.
-Say, we discuss who gets the salary raise: Jeff or Mary.
+Say, we discuss who gets the [salary] raise: Jeff or Mary.
 Your argument should be: "Not raising a salary for a good employee is bad!"
 This idea doesn't add anything to the argument, but it helps you defend yourself against other rats.
 They won't think of you as their enemy and won't bite.
 Your point is an obvious boring truth---the best type of argument.
+
+{% quote Rats stay in the company because it’s hard to kick them out, not because they produce value %}
 
 **How to Find Scapegoats**
 Some people stay in the company because they produce products:
@@ -120,14 +122,16 @@ Later, when you screw it up, you will blame the obstacles.
 If you don't, you will be a hero who fought the obstacles.
 Those quiet humble losers who just do their job will always be behind you.
 
+{% quote All an effective politian does is making friends and betraying them %}
+
 **How to Disrespect Yourself**
-Rats don't produce anything valuable, neither engineering nor management.
+Rats don't produce anything valuable, neither engineering nor [management].
 They do politics only: make friends and then betray them.
 A long time ago, when they were engineers, they did something productive, but it was a long time ago.
 They've forgotten all that already.
-All they do all day is attending meetings with other rats, also highly incompetent.
+All they do all day is attending [meetings] with other rats, also highly incompetent.
 If you have any talents somehow related to engineering or management, you will hate yourself for being a rat.
-Sitting in those meetings you will be bored to death.
+Sitting in those [meetings] you will be bored to death.
 More importantly, you will constantly ask yourself a question:
   "Why do I have to be here? Am I as useless as these morons?"
 You must be ready to answer yourself:
@@ -150,6 +154,8 @@ If you don't know what this guy owns, you don't know what to trade.
 A good rat is always prepared to ask for a favor when being asked for a favor.
 A good rat never gives anything to anyone for free.
 Learn what your friends possess or have access to---be prepared to ask them to share.
+
+{% quote Only your enemies can ruin your career, not your faulty architectures or your lousy management decisions %}
 
 **How to Be a Friend**
 Rats are politicians, not engineers or managers.
@@ -191,3 +197,6 @@ If you know more skills that deserve to be in this list, please post a comment b
 [Men and Women of the Corporation]: https://amzn.to/4fafAVd
 [The Way of the Rat]: https://amzn.to/450laow
 [Joep Schrijvers]: https://nl.wikipedia.org/wiki/Joep_Schrijvers
+[meetings]: {% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}
+[salary]: {% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}
+[management]: {% pst 2016/may/2016-05-24-who-is-project-manager %}
