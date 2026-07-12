@@ -57,7 +57,7 @@ However, rats feel nothing bad about being rats.
 That's how they were born.
 They are made to be thieves, with a big smile on their ugly faces.
 
-Being is rat may be hard for most of us.
+Being a rat may be hard for most of us.
 I present you a list of skills that may help, if you develop them.
 Not soft skills, not hard skills, but rat's skills.
 Here they are:
@@ -77,6 +77,7 @@ If you keep your mouth shut and your eyes open, as many office coaches recommend
   look obviously weird and that's why rejected,
   or
   eventually start talking, disclosing everything you've been holding to yourself for long.
+In a rat office, silence is never safe.
 Instead, you should talk a lot, at every meeting, using every opportunity to open your mouth.
 But you should say nothing.
 This is easy: no matter what is the subject, find an angle that is obvious and argue in favor of it.
