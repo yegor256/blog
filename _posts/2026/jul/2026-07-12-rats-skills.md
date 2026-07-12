@@ -27,16 +27,16 @@ How to become a team leader, a manager, a boss, a Vice President, a CTO, and a C
 Is it a matter of luck of some tacticts may help you get to the top of the carreer ladder?
 Now I will teach you some tacticts.
 They are pretty simple, but hard to follow for most of us, due to our education and innane qualities.
-However, they work like a charm, if you stop being a human being and start being a rat.
+However, they work like a charm, if you stop being a human and start being a rat.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-Being a rat means being enjoying taking advantage of other people.
+Being a rat means enjoying taking advantage of other people.
 This is what a rat does: it doesn't earn its food, it steals it.
-That's why people hate rats, because they steal from us.
-They feel nothing bad about being rats.
+That's why we people hate rats---they steal from us.
+However, rats feel nothing bad about being rats.
 That's how they were born.
 They are made to be thieves, with a big smile on their ugly faces.
 
@@ -55,17 +55,17 @@ My short list of rat's skills follows:
 In a professional full-of-rats office environment everybody wishes to screw everybody.
 The only way to put a friend into a trouble is by finding how his actions violated the rules.
 Talking and writing is the only act a rat does.
-A rat knows that enemies are watching him, that's why doesn't say or writing anything straight.
-A rat writes "The report is great!" and means "You have no trust from me anymore, better quit this job."
+A rat knows that enemies are watching him, that's why doesn't say or write anything straight.
+A rat writes "The report is great!" and means "I don't trust you anymore, better quit this job."
 The "great" is the tell, if usually he writes "perfect."
 You must know how to read between the lines and understand what people trully mean.
 
 **How to Talk a Lot Saying Nothing**.
 All rats do in the office is talking.
 If you keep your month shut and your eyes open, as many office couches recommend, you either
-  will look obviously weird and that's why rejected,
+  look obviously weird and that's why rejected,
   or
-  will eventually start talking, disclosing everything you've been holding to yourself for long.
+  eventually start talking, disclosing everything you've been holding to yourself for long.
 Instead, you should talk a lot, at every meeting, using every opportunity to open your mouth.
 But you should say nothing.
 This is easy: no matter what is the subject, find an angle that is obvious and argue in favor of it.
@@ -122,6 +122,21 @@ You must be ready to answer to yourlelf:
 This answer will make you stonger.
 You will be a good rat.
 
+**How to Identify Owners**.
+Only in a small startup of five people everything is owned by the founder, who is one of these five.
+In a large organization, resources---money, staff, hardware, offices---belong to people
+  who decide how to distribute them.
+To achieve your goals in the organization, you need resources.
+You need their owners to give them to you.
+They won't do it voluntarily, no matter how noble your objectives are.
+They don't care.
+You can get resources only if you trade: you give them something in exchange.
+The scenario is easy, when you need them, since you know what you can give them in exchange.
+It's more complex when someone comes to you asking for the resources you own.
+If you don't know what this guy owns, you don't know what to trade.
+A good rat is always prepared to ask for a favor when being asked for a favor.
+A good rat never gives anything to anyone for free.
+Learn what your friends possess of have access to---be prepared to ask them to share.
 
 
 
@@ -131,9 +146,7 @@ You will be a good rat.
 
 
 
-
-
-
+<hr/>
 
 I will keep this article updated.
 I learn new skills every day.
