@@ -49,7 +49,7 @@ They are not, they are _rats_.
 
 {% badge https://yegor256.github.io/bibliography/book-covers/schrijvers2004rat.jpg 128 %}
 [Joep Schrijvers]'s [The Way of the Rat] (2004), my favorite, uses exactly this metaphor.
-Being a rat means taking advantage of other people and enjoying it.
+Being a rat means [taking advantage][monkey-habits] of other people and enjoying it.
 
 This is what a rat does in nature: it doesn't earn its food, it steals it.
 That's why we people hate rats---they steal from us.
@@ -220,3 +220,4 @@ If you know more skills that deserve to be in this list, please post a comment b
 [meetings]: {% pst 2015/jul/2015-07-13-meetings-are-legalized-robbery %}
 [salary]: {% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}
 [management]: {% pst 2016/may/2016-05-24-who-is-project-manager %}
+[monkey-habits]: https://monkey-habits.com/en/book
