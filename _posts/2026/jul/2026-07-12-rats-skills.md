@@ -12,11 +12,11 @@ description: |
   of parasitic "rat" behaviors, and here is
   the concrete skill-set that produces the climb.
 keywords:
-  - ...
-  - ...
-  - ...
-  - ...
-  - ...
+  - office politics
+  - how to get promoted
+  - corporate ladder climbing
+  - workplace power games
+  - career advancement tactics
 image: /images/2026/07/le-professionnel.jpg
 jb_picture:
   caption: Le Professionnel (1981) by Georges Lautner
