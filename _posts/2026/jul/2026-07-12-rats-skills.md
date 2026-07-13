@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "Rat's Skills"
+title: "Rat's Skills: Making Friends and Betraying Them"
 date: 2026-07-12
 place: Moscow, Russia
 tags: management
