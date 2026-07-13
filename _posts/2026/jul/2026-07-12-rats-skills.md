@@ -27,50 +27,47 @@ style: |-
 How to get promoted?
 How to get a salary raise?
 How to stop writing code and start managing other losers who still write it?
-How to become a team leader, a manager, a boss, a Vice President, a CTO, and a CEO?
+How to become a team leader, a boss, a Vice President, a CTO, and a CEO?
 Is it a matter of luck, or can some tactics help you get to the top of the career ladder?
-Let me share some tactics.
-My experience tells me that they work.
+Let me share a few lessons I've learned.
 
 <!--more-->
 
 {% jb_picture_body %}
 
-There are books about office power games.
-[Jeffrey Pfeffer]'s
-[Power in Organizations] (1981),
-[Henry Mintzberg]'s
-[Power In and Around Organizations] (1983),
-and
-[Rosabeth Moss Kanter]'s
-[Men and Women of the Corporation] (1977).
-They are good reads, but useless as practical guidelines.
-They treat career-successful people as people.
-They are not, they are rats.
+Many books have been written about office power games, for example
+  [Jeffrey Pfeffer]'s
+  [Power in Organizations] (1981),
+  [Henry Mintzberg]'s
+  [Power In and Around Organizations] (1983),
+  and
+  [Rosabeth Moss Kanter]'s
+  [Men and Women of the Corporation] (1977).
+They are good reads, but barely useful as practical guidelines.
+They treat career-successful people as humans.
+They are not, they are _rats_.
 
 {% badge https://yegor256.github.io/bibliography/book-covers/schrijvers2004rat.jpg 128 %}
 [Joep Schrijvers]'s [The Way of the Rat] (2004), my favorite, uses exactly this metaphor.
+Being a rat means taking advantage of other people and enjoying it.
 
-Being a rat means enjoying taking advantage of other people.
 This is what a rat does in nature: it doesn't earn its food, it steals it.
 That's why we people hate rats---they steal from us.
 However, rats feel nothing bad about being rats.
 That's how they were born.
 They are made to be thieves, with a big smile on their ugly faces.
 
-Being a rat may be hard for most of us.
-I present you with a list of skills that may help, if you develop them.
+{% quote To win an office game rats don't write better code, they make other rats loose }
+
+First and foremost, office rats are politicians.
+All they do is fight with other rats for better position, higher rank, and bigger resources.
+To win they don't write cleaner code, and they don't make more precise budget forecasts either.
+To win they make other rats lose.
+
+Being an office rat may be hard for most of us.
+I present you with a list of skills that may help if you're ready to stop being a human.
 Not soft skills, not hard skills, but rat's skills.
 Here they are:
-
-**How to Read Between the Lines**
-In a professional full-of-rats office environment everybody wishes to screw everybody.
-The only way to get a friend into trouble is by finding how his actions violated the rules.
-Talking and writing is the only act a rat does.
-A rat knows that enemies are watching him, that's why he doesn't say or write anything straight.
-A rat writes "The report is great!" and means "I don't trust you anymore, better quit this job."
-The "great" is the tell, if he usually writes "perfect."
-You must know how to read between the lines and understand what people truly mean.
 
 **How to Talk a Lot Saying Nothing**
 All rats do in the office is talking.
@@ -109,6 +106,15 @@ Schedule a fake meeting on this very morning and when the time comes, claim that
   his absence you weren't able to share important information with him.
 Build such evidence systematically and you'll have a strong weapon against your friend,
   who is obviously your enemy at the same time.
+
+**How to Read Between the Lines**
+In a professional full-of-rats office environment everybody wishes to screw everybody.
+The only way to get a friend into trouble is by finding how his actions violated the rules.
+Talking and writing is the only act a rat does.
+A rat knows that enemies are watching him, that's why he doesn't say or write anything straight.
+A rat writes "The report is great!" and means "I don't trust you anymore, better quit this job."
+The "great" is the tell, if he usually writes "perfect."
+You must know how to read between the lines and understand what people truly mean.
 
 **How to Invent Obstacles**
 Regular people, who are not rats, try to be helpful to others and be modest about it.
@@ -180,11 +186,25 @@ The same happens everywhere: clowns are climbing up management ladders.
 They get promoted for being great politicians, not for knowing how computers work.
 Your job is to keep your mouth shut and never tell them they are fools.
 However, the better expert you are, the more difficult it will be.
-Do your best.
 Learn how to stop asking yourself a question: "Why do I have to spend time with fools?"
 Also, this question may hurt: "Why does our company tolerate fools being in charge of smart people?"
 God forbid you ask these questions out loud in the office.
 This would be the end of your career.
+
+**How to Be a Fool**
+Since the better expert you are, the more you despise the fools around you,
+  your office life would be easier if you stop being an expert.
+Don't code, don't read technical books, don't touch anything related to product engineering.
+Instead, spend most of your time with other rats, picking the most incompetent ones.
+You can easily find them---they are constantly surrounded by other smaller-caliber rats.
+All they do is talking, organizing meeting, attending meetings, and spreading rumors.
+They are wasting time, you may think.
+This would be your first instinct while you only becoming a rat
+  still having some technical expertise inside you.
+In a few years you will realize that you are an absolute disgrace,
+  a highly incompetent imposter, with an overblown salary.
+This is when you put all of your energy to the fight with other rats.
+This is when you become a perfect rat.
 
 If you know more skills that deserve to be in this list, please post a comment below.
 
