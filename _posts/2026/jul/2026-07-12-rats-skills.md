@@ -57,7 +57,7 @@ However, rats feel nothing bad about being rats.
 That's how they were born.
 They are made to be thieves, with a big smile on their ugly faces.
 
-{% quote To win an office game rats don't write better code, they make other rats loose }
+{% quote To win an office game rats don't write better code, they make other rats lose %}
 
 First and foremost, office rats are politicians.
 All they do is fight with other rats for better position, higher rank, and bigger resources.
@@ -128,23 +128,6 @@ Later, when you screw it up, you will blame the obstacles.
 If you don't, you will be a hero who fought the obstacles.
 Those quiet humble losers who just do their job will always be behind you.
 
-{% quote All an effective politician does is making friends and betraying them %}
-
-**How to Disrespect Yourself**
-Rats don't produce anything valuable, neither engineering nor [management].
-They do politics only: make friends and then betray them.
-A long time ago, when they were engineers, they did something productive, but it was a long time ago.
-They've forgotten all that already.
-All they do all day is attending [meetings] with other rats, also highly incompetent.
-If you have any talents somehow related to engineering or management, you will hate yourself for being a rat.
-Sitting in those [meetings] you will be bored to death.
-More importantly, you will constantly ask yourself a question:
-  "Why do I have to be here? Am I as useless as these morons?"
-You must be ready to answer yourself:
-  "Yes, I'm one of them, my talents are useless, I'm nothing more than a talking head. It's over."
-This answer will make you stronger.
-You will be a good rat.
-
 **How to Identify Owners**
 Only in a small startup of five people everything is owned by the founder, who is one of these five.
 In a large organization, resources---money, staff, hardware, offices---belong to people
@@ -178,6 +161,23 @@ Productivity, efficiency, profit, customers---all of that is secondary.
 Enemies ruin your career, not bad code, broken servers, or lost customers.
 Know how to make friends at all costs.
 
+**How to Disrespect Yourself**
+Rats don't produce anything valuable, neither engineering nor [management].
+They do politics only: make friends and then betray them.
+A long time ago, when they were engineers, they did something productive, but it was a long time ago.
+They've forgotten all that already.
+All they do all day is attending [meetings] with other rats, also highly incompetent.
+If you have any talents somehow related to engineering or management, you will hate yourself for being a rat.
+Sitting in those [meetings] you will be bored to death.
+More importantly, you will constantly ask yourself a question:
+  "Why do I have to be here? Am I as useless as these morons?"
+You must be ready to answer yourself:
+  "Yes, I'm one of them, my talents are useless, I'm nothing more than a talking head. It's over."
+This answer will make you stronger.
+You will be a good rat.
+
+{% quote All an effective politician does is making friends and betraying them %}
+
 **How to Respect Fools**
 The higher you are on the organizational ladder, the less competent people are around you.
 I mean technical competence.
@@ -193,17 +193,17 @@ This would be the end of your career.
 
 **How to Be a Fool**
 Since the better expert you are, the more you despise the fools around you,
-  your office life would be easier if you stop being an expert.
+  your office life would be easier if you stopped being an expert.
 Don't code, don't read technical books, don't touch anything related to product engineering.
 Instead, spend most of your time with other rats, picking the most incompetent ones.
 You can easily find them---they are constantly surrounded by other smaller-caliber rats.
-All they do is talking, organizing meeting, attending meetings, and spreading rumors.
+All they do is talking, organizing meetings, attending meetings, and spreading rumors.
 They are wasting time, you may think.
-This would be your first instinct while you only becoming a rat
+This would be your first instinct while you are only becoming a rat
   still having some technical expertise inside you.
 In a few years you will realize that you are an absolute disgrace,
   a highly incompetent imposter, with an overblown salary.
-This is when you put all of your energy to the fight with other rats.
+This is when you put all of your energy into the fight with other rats.
 This is when you become a perfect rat.
 
 If you know more skills that deserve to be in this list, please post a comment below.
