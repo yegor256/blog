@@ -203,10 +203,22 @@ This would be your first instinct while you are only becoming a rat
   still having some technical expertise inside you.
 In a few years you will realize that you are an absolute disgrace,
   a highly incompetent imposter, with an overblown salary.
-This is when you put all of your energy into the fight with other rats.
-This is when you become a perfect rat.
+This is when you put all of your energy
+  into the fight with other rats---the survival instinct will kick in.
+This is when you become a great rat: a CEO, a President, an icon for others.
 
-If you know more skills that deserve to be in this list, please post a comment below.
+If you don't want to be a big boss and an icon, it's your call, stay human.
+
+However, if you don't want to be a rat,
+  but still want to be a big boss, bad news for you:
+  you will be a food for other rats.
+You will be a step in the career ladder for other rats.
+They will set you up and present your mistakes as their advantages.
+
+Being a rat is full time job, without vacations or day-offs.
+You can't be a bit of a rat and a bit of a software engineer.
+Trying to stay in the middle only makes you a weak rat:
+  a perfect material for other rats to use.
 
 [John Sculley]: https://en.wikipedia.org/wiki/John_Sculley
 [Jeffrey Pfeffer]: https://de.wikipedia.org/wiki/Jeffrey_Pfeffer
