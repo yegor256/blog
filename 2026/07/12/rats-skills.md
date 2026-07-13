@@ -1,4 +1,4 @@
-# Rat's Skills
+# Rat's Skills: Making Friends and Betraying Them
 
 Source: https://www.yegor256.com/2026/07/12/rats-skills.html
 
