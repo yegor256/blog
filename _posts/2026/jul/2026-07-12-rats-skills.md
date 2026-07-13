@@ -211,15 +211,15 @@ If you don't want to be a big boss and an icon, it's your call, stay human.
 
 However, if you don't want to be a rat,
   but still want to be a big boss, bad news for you:
-  you will be a food for other rats, just a step in their career ladders.
+  you will be food for other rats, just a step in their career ladders.
 They will set you up and present your mistakes as their advantages.
 
-Being a rat is full time job, without vacations or day-offs.
+Being a rat is a full-time job, without vacations or day-offs.
 You can't be a bit of a rat and a bit of a software engineer.
 Trying to stay in the middle only makes you a weak rat:
-  a perfect material for other rats to use.
-Spending time on writing code, analyzing servers architecture,
-  or sitting with an UI designer to make your product better only
+  perfect material for other rats to use.
+Spending time on writing code, analyzing server architecture,
+  or sitting with a UI designer to make your product better only
   takes you away from rat's job: making friends and betraying them.
 
 Make a choice.
