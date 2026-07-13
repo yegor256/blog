@@ -1,4 +1,208 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-07-10T09:48:14+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Don’t Blame the Wheel for Missing a Turn</title><link href="https://www.yegor256.com/2026/06/01/dont-blame-the-wheel.html" rel="alternate" type="text/html" title="Don’t Blame the Wheel for Missing a Turn" /><published>2026-06-01T00:00:00+03:00</published><updated>2026-06-01T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/06/01/dont-blame-the-wheel</id><content type="html" xml:base="https://www.yegor256.com/2026/06/01/dont-blame-the-wheel.html"><![CDATA[<p>Management gurus keep saying everyone must own the business result.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-07-13T09:27:14+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Rat’s Skills</title><link href="https://www.yegor256.com/2026/07/12/rats-skills.html" rel="alternate" type="text/html" title="Rat’s Skills" /><published>2026-07-12T00:00:00+03:00</published><updated>2026-07-12T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/07/12/rats-skills</id><content type="html" xml:base="https://www.yegor256.com/2026/07/12/rats-skills.html"><![CDATA[<p>How to get promoted?
+How to get a salary raise?
+How to stop writing code and start managing other losers who still write it?
+How to become a team leader, a boss, a Vice President, a CTO, and a CEO?
+Is it a matter of luck, or can some tactics help you get to the top of the career ladder?
+Let me share a few lessons I’ve learned.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Le Professionnel (1981) by Georges Lautner" src="/images/2026/07/le-professionnel.jpg" longdesc="#aef9e9ac" /><figcaption id="aef9e9ac">Le Professionnel (1981) by Georges Lautner</figcaption></figure>
+
+<p>Many books have been written about office power games, for example
+  <a href="https://de.wikipedia.org/wiki/Jeffrey_Pfeffer">Jeffrey Pfeffer</a>’s
+  <a href="https://amzn.to/4y8YGPA">Power in Organizations</a> (1981),
+  <a href="https://en.wikipedia.org/wiki/Henry_Mintzberg">Henry Mintzberg</a>’s
+  <a href="https://amzn.to/4yxeNH4">Power In and Around Organizations</a> (1983),
+  and
+  <a href="https://de.wikipedia.org/wiki/Rosabeth_Moss_Kanter">Rosabeth Moss Kanter</a>’s
+  <a href="https://amzn.to/4fafAVd">Men and Women of the Corporation</a> (1977).
+They are good reads, but barely useful as practical guidelines.
+They treat career-successful people as humans.
+They are not, they are <em>rats</em>.</p>
+
+<figure class="badge"><img src="https://yegor256.github.io/bibliography/book-covers/schrijvers2004rat.jpg" style="width:128px;max-width:100%;" alt="badge" /></figure>
+
+<p><a href="https://nl.wikipedia.org/wiki/Joep_Schrijvers">Joep Schrijvers</a>’s <a href="https://amzn.to/450laow">The Way of the Rat</a> (2004), my favorite, uses exactly this metaphor.
+Being a rat means <a href="https://monkey-habits.com/en/book">taking advantage</a> of other people and enjoying it.</p>
+
+<p>This is what a rat does in nature: it doesn’t earn its food, it steals it.
+That’s why we people hate rats—they steal from us.
+However, rats feel nothing bad about being rats.
+That’s how they were born.
+They are made to be thieves, with a big smile on their ugly faces.</p>
+
+<aside class="quote">To win an office game rats don’t write better code, they make other rats lose
+</aside>
+
+<p>First and foremost, office rats are politicians.
+All they do is fight with other rats for better position, higher rank, and bigger resources.
+To win they don’t write cleaner code, and they don’t make more precise budget forecasts either.
+To win they make other rats lose.</p>
+
+<p>Being an office rat may be hard for most of us.
+I present you with a list of skills that may help if you’re ready to stop being a human.
+Not soft skills, not hard skills, but rat’s skills.
+Here they are:</p>
+
+<p><strong>How to Talk a Lot Saying Nothing</strong>
+All rats do in the office is talking.
+If you keep your mouth shut and your eyes open, as many office coaches recommend, you either
+  look obviously weird and get rejected,
+  or
+  eventually start talking, disclosing everything you’ve been holding to yourself for long.
+In a rat office, silence is never safe.
+Instead, you should talk a lot, at every <a href="/2015/07/13/meetings-are-legalized-robbery.html">meeting</a>, using every opportunity to open your mouth.
+But you should say nothing.
+This is easy: no matter what the subject is, find an angle that is obvious and argue in favor of it.
+Say, we discuss who gets the <a href="/2015/07/21/hourly-pay-modern-slavery.html">salary</a> raise: Jeff or Mary.
+Your argument should be: “Not raising a salary for a good employee is bad!”
+This idea doesn’t add anything to the argument, but it helps you defend yourself against other rats.
+They won’t think of you as their enemy and won’t bite.
+Your point is an obvious boring truth—the best type of argument.</p>
+
+<aside class="quote">Rats stay in the company because it’s hard to kick them out, not because they produce value
+</aside>
+
+<p><strong>How to Find Scapegoats</strong>
+Some people stay in the company because they produce products:
+  code, tests, design, architecture, etc.
+Rats don’t do that, because they don’t want to and they don’t know how to.
+Instead, they stay in the company because it’s hard to kick them out.
+They know how to look formally innocent.
+Moreover, they know how to make themselves look valuable.
+They know how to directly attribute themselves to the results
+  achieved by those coders and designers.
+When things go south, rats know how to find scapegoats—people that
+  can be formally blamed for the failures.
+You should learn this skill too, it’s not so difficult.
+Just pay attention to every mistake people around you make and link them with your own possible failures.
+Say, your friend came late to the office on Wednesday last week.
+Good!
+Schedule a fake meeting on this very morning and when the time comes, claim that because of
+  his absence you weren’t able to share important information with him.
+Build such evidence systematically and you’ll have a strong weapon against your friend,
+  who is obviously your enemy at the same time.</p>
+
+<p><strong>How to Read Between the Lines</strong>
+In a professional full-of-rats office environment everybody wishes to screw everybody.
+The only way to get a friend into trouble is by finding how his actions violated the rules.
+Talking and writing is the only act a rat does.
+A rat knows that enemies are watching him, that’s why he doesn’t say or write anything straight.
+A rat writes “The report is great!” and means “I don’t trust you anymore, better quit this job.”
+The “great” is the tell, if he usually writes “perfect.”
+You must know how to read between the lines and understand what people truly mean.</p>
+
+<p><strong>How to Invent Obstacles</strong>
+Regular people, who are not rats, try to be helpful to others and be modest about it.
+This is what rats use against them: modesty is your weakness.
+Instead, you should radiate the smell of sweat.
+Every task should be difficult for you, but not because of your incompetence.
+Because of so many obstacles you have to deal with.
+Regular people say “I will deal with it, trust me.”
+A rat says “I will try, but it’s very difficult, because of …”
+Later, when you screw it up, you will blame the obstacles.
+If you don’t, you will be a hero who fought the obstacles.
+Those quiet humble losers who just do their job will always be behind you.</p>
+
+<p><strong>How to Identify Owners</strong>
+Only in a small startup of five people everything is owned by the founder, who is one of these five.
+In a large organization, resources—money, staff, hardware, offices—belong to people
+  who decide how to distribute them.
+To achieve your goals in the organization, you need resources.
+You need their owners to give them to you.
+They won’t do it voluntarily, no matter how noble your objectives are.
+They don’t care.
+You can get resources only if you trade: you give them something in exchange.
+The scenario is easy, when you need them, since you know what you can give them in exchange.
+It’s more complex when someone comes to you asking for the resources you own.
+If you don’t know what this guy owns, you don’t know what to trade.
+A good rat is always prepared to ask for a favor when being asked for a favor.
+A good rat never gives anything to anyone for free.
+Learn what your friends possess or have access to—be prepared to ask them to share.</p>
+
+<aside class="quote">Only your enemies can ruin your career, not your faulty architectures or your lousy management decisions
+</aside>
+
+<p><strong>How to Be a Friend</strong>
+Rats are politicians, not engineers or managers.
+A good politician knows how to do one thing and nothing else: make friends.
+It’s easy to make a friend when you have nothing to share.
+However, imagine a lead of another department comes to you and asks you to give your best engineer to his project.
+What would a regular team lead do?
+He would fight for the engineer, to keep him in the project.
+What would a politician do?
+He would do everything to keep the other manager a friend.
+He would not care about the engineer or the project at all.
+Friendship, for a rat, comes first.
+Productivity, efficiency, profit, customers—all of that is secondary.
+Enemies ruin your career, not bad code, broken servers, or lost customers.
+Know how to make friends at all costs.</p>
+
+<p><strong>How to Disrespect Yourself</strong>
+Rats don’t produce anything valuable, neither engineering nor <a href="/2016/05/24/who-is-project-manager.html">management</a>.
+They do politics only: make friends and then betray them.
+A long time ago, when they were engineers, they did something productive, but it was a long time ago.
+They’ve forgotten all that already.
+All they do all day is attending <a href="/2015/07/13/meetings-are-legalized-robbery.html">meetings</a> with other rats, also highly incompetent.
+If you have any talents somehow related to engineering or management, you will hate yourself for being a rat.
+Sitting in those <a href="/2015/07/13/meetings-are-legalized-robbery.html">meetings</a> you will be bored to death.
+More importantly, you will constantly ask yourself a question:
+  “Why do I have to be here? Am I as useless as these morons?”
+You must be ready to answer yourself:
+  “Yes, I’m one of them, my talents are useless, I’m nothing more than a talking head. It’s over.”
+This answer will make you stronger.
+You will be a good rat.</p>
+
+<aside class="quote">All an effective politician does is making friends and betraying them
+</aside>
+
+<p><strong>How to Respect Fools</strong>
+The higher you are on the organizational ladder, the less competent people are around you.
+I mean technical competence.
+A CEO of PepsiCo can become a CEO of Apple, you know <a href="https://en.wikipedia.org/wiki/John_Sculley">this story</a>.
+The same happens everywhere: clowns are climbing up management ladders.
+They get promoted for being great politicians, not for knowing how computers work.
+Your job is to keep your mouth shut and never tell them they are fools.
+However, the better expert you are, the more difficult it will be.
+Learn how to stop asking yourself a question: “Why do I have to spend time with fools?”
+Also, this question may hurt: “Why does our company tolerate fools being in charge of smart people?”
+God forbid you ask these questions out loud in the office.
+This would be the end of your career.</p>
+
+<p><strong>How to Be a Fool</strong>
+Since the better expert you are, the more you despise the fools around you,
+  your office life would be easier if you stopped being an expert.
+Don’t code, don’t read technical books, don’t touch anything related to product engineering.
+Instead, spend most of your time with other rats, picking the most incompetent ones.
+You can easily find them—they are constantly surrounded by other smaller-caliber rats.
+All they do is talking, organizing meetings, attending meetings, and spreading rumors.
+They are wasting time, you may think.
+This would be your first instinct while you are only becoming a rat
+  still having some technical expertise inside you.
+In a few years you will realize that you are an absolute disgrace,
+  a highly incompetent imposter, with an overblown salary.
+This is when you put all of your energy
+  into the fight with other rats—the survival instinct will kick in.
+This is when you become a great rat: a CEO, a President, an icon for others.</p>
+
+<p>If you don’t want to be a big boss and an icon, it’s your call, stay human.</p>
+
+<p>However, if you don’t want to be a rat,
+  but still want to be a big boss, bad news for you:
+  you will be food for other rats, just a step in their career ladders.
+They will set you up and present your mistakes as their advantages.</p>
+
+<p>Being a rat is a full-time job, without vacations or day-offs.
+You can’t be a bit of a rat and a bit of a software engineer.
+Trying to stay in the middle only makes you a weak rat:
+  perfect material for other rats to use.
+Spending time on writing code, analyzing server architecture,
+  or sitting with a UI designer to make your product better only
+  takes you away from rat’s job: making friends and betraying them.</p>
+
+<p>Make a choice.
+The earlier in life, the better.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html"><![CDATA[The path to promotion is not competence but a learnable set of parasitic "rat" behaviors, and here is the concrete skill-set that produces the climb.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/07/le-professionnel.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/07/le-professionnel.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Don’t Blame the Wheel for Missing a Turn</title><link href="https://www.yegor256.com/2026/06/01/dont-blame-the-wheel.html" rel="alternate" type="text/html" title="Don’t Blame the Wheel for Missing a Turn" /><published>2026-06-01T00:00:00+03:00</published><updated>2026-06-01T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/06/01/dont-blame-the-wheel</id><content type="html" xml:base="https://www.yegor256.com/2026/06/01/dont-blame-the-wheel.html"><![CDATA[<p>Management gurus keep saying everyone must own the business result.
 <a href="https://bcgbrighthouse.com/thinking/think-like-an-owner-part-ii-cultivating-an-ownership-mindset-at-scale/">BCG</a> wants every company to build an “ownership mindset” at all levels.
 Each employee must feel responsible for the firm’s outcomes.
 <a href="https://en.wikipedia.org/wiki/Patrick_Lencioni">Patrick Lencioni</a>, in <a href="https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team">The Five Dysfunctions of a Team</a>, calls
@@ -811,91 +1015,4 @@ No matter how many times they repeat “I was working hard the entire weekend.�
 If you reward excuses, you buy excuses.
 If you reward results, you get results.
 As a founder, your job is to eliminate the temptation for your team to <a href="/2019/07/10/inversive-management.html">sell you</a>
-  anything other than tangible artifacts.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html"><![CDATA[Sales reps and programmers can either fight external obstacles to earn their pay, or convince you, the founder, to pay for their time regardless of results; make the internal path harder.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/city-of-god.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/city-of-god.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Small Repo, High Quality</title><link href="https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality.html" rel="alternate" type="text/html" title="Small Repo, High Quality" /><published>2025-11-16T00:00:00+03:00</published><updated>2025-11-16T00:00:00+03:00</updated><id>https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality</id><content type="html" xml:base="https://www.yegor256.com/2025/11/16/smaller-repository-higher-quality.html"><![CDATA[<p>I don’t like <a href="/2018/09/05/monolithic-repositories.html">monolithic repositories</a>.
-They keep multiple projects together, often written in different languages, by different teams.
-Unfortunately, <a href="https://dl.acm.org/doi/pdf/10.1145/2854146">Google</a>, <a href="https://engineering.fb.com/2025/10/16/developer-tools/branching-in-a-sapling-monorepo/">Facebook</a>, and <a href="https://shiftmag.dev/mono-repo-infrastructure-yandex-1011/">Yandex</a> favor them.
-Primarily, according to them, <a href="https://monorepo.tools/">monorepos</a> reduce integration <a href="https://www.sonarsource.com/resources/library/monorepo/">overhead</a>.
-They do, but at the cost of quality.
-In smaller repositories we can develop better code.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Морфий (2008) by Алексей Балабанов" src="/images/2025/11/morphine.jpg" longdesc="#04b3173e" /><figcaption id="04b3173e">Морфий (2008) by Алексей Балабанов</figcaption></figure>
-
-<p>When a repository is smaller you can achieve higher quality, for a number of reasons:</p>
-
-<ul>
-  <li>
-    <p><strong>You can be stricter on style.</strong>
-It’s easier to keep a thousand lines consistently formatted than a million.
-With a thousand lines, you can configure <a href="https://eslint.org/">ESLint</a> to its maximum, enabling as many rules as you can find.
-Stricter <a href="/2014/08/13/strict-code-quality-control.html">control</a> over code stylistics leads to cleaner code.</p>
-  </li>
-  <li>
-    <p><strong>You can write deeper tests.</strong>
-Integration (or <a href="/2023/08/22/fast-vs-deep-testing.html">deep</a>) tests are inevitably slow.
-In a smaller repository, a good integration test coverage doesn’t mean a slow build.
-In a larger repository—it does.
-A slow build is something a team tries to avoid, thus jeopardizing the coverage.</p>
-  </li>
-  <li>
-    <p><strong>You can review more pedantically.</strong>
-In a larger repository it may be harder to remember all the aspects of design.
-A pull request that affects different seemingly unrelated code parts
-may be a challenge to <a href="/2015/02/09/serious-code-reviewer.html">review</a>.
-Even if you are the <a href="/2014/10/12/who-is-software-architect.html">architect</a>.</p>
-  </li>
-  <li>
-    <p><strong>You can write a README.</strong>
-Maybe you have noticed already: large open source projects have short and sketchy <a href="/2019/04/23/elegant-readme.html">README</a> files.
-They can’t make them much longer without them becoming as large as a book.
-All they can do is redirect the reader to the documentation website.
-The inability to explain the entire scope in a single file leads to scope creep.
-Contributors struggle to understand the borders of the project.
-This leads, among other bad things, to code duplication.</p>
-  </li>
-  <li>
-    <p><strong>You can release frequently.</strong>
-In a larger repository, frequent reintegration may be expensive, in both time and money.
-In a small repo, a <a href="/2025/04/12/four-builds.html">build</a> of a few seconds is not a dream of programmers, it’s their reality.
-Not only CI is cheap, but also CD.
-After every small change you can publish a new release, with its own <a href="https://semver.org/">version</a>.
-In a monorepo, we tend to wait until a portion of changes accumulate.</p>
-  </li>
-  <li>
-    <p><strong>You can use AI agents effectively.</strong>
-It is no secret that modern LLMs have limited <a href="https://docs.claude.com/en/docs/build-with-claude/context-windows">context windows</a>.
-A million lines of code can’t fit into even the largest of them.
-Even ten thousand lines, let alone a million, is more than an LLM can digest.
-By keeping a repository small we do a big favor to our little friends: AI agents.</p>
-  </li>
-  <li>
-    <p><strong>You can on-board faster.</strong>
-Larger codebases are usually older and more <a href="/2018/09/12/clear-code.html">chaotic</a>, full of legacy code.
-It takes longer to start making meaningful contribution to such a repository.
-Monorepos attract
-<a href="/2015/12/29/turnover-is-good-for-maintainability.html">long-term</a>
-<a href="/2017/05/02/remote-slaves.html">office-based</a>
-contributors
-who care about job security more than about code quality.</p>
-  </li>
-  <li>
-    <p><strong>You can expect responsibility.</strong>
-In larger codebases, the very idea of code ownership is hard to maintain.
-Programmers can hardly feel responsible for the code written and modified by others.
-Smaller repositories, on the other hand, emotionally attach people to code.</p>
-  </li>
-  <li>
-    <p><strong>You can go open source.</strong>
-No matter how much your boss <a href="/2020/05/05/open-source-arms-race.html">loves</a>
-open source, you can’t put your entire enterprise monorepo on GitHub.
-However, if you extract a small part of it, you can.
-The code that is open, visible and criticized by many people,
-is <a href="/2015/12/22/why-dont-you-contribute-to-open-source.html">allegedly</a> of a higher quality.</p>
-  </li>
-</ul>
-
-<p>In summary, you should look for an opportunity to extract a piece of code as a standalone package.
-Then, insist on making it <a href="/2017/05/30/why-contribute-to-open-source.html">open source</a>.
-Then, promote it in the community.
-Then, quit your office job and join <a href="https://www.zerocracy.com">Zerocracy</a>.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oss" /><summary type="html"><![CDATA[By breaking your software into small open-source packages, you make the entire product easier to maintain—and significantly higher in quality.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/morphine.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/morphine.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+  anything other than tangible artifacts.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html"><![CDATA[Sales reps and programmers can either fight external obstacles to earn their pay, or convince you, the founder, to pay for their time regardless of results; make the internal path harder.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/city-of-god.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/city-of-god.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

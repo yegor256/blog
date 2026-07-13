@@ -1324,6 +1324,7 @@ card
 cards
 care
 career
+career-successful
 career-wise
 careers
 careful
@@ -2407,6 +2408,7 @@ dave's
 david
 davvd
 day
+day-offs
 day-to-day
 days
 db
@@ -2811,6 +2813,7 @@ discussing
 discussion
 discussions
 disease
+disgrace
 disgruntled
 disgusting
 dish
@@ -3596,6 +3599,7 @@ factoryofphrasestest
 facts
 factual
 fading
+fafAVd
 fail
 failed
 failing
@@ -3879,6 +3883,7 @@ foods
 fool
 fooled
 fooling
+fools
 foot
 footer
 footest
@@ -3900,6 +3905,7 @@ forde
 foreach
 foreachwithindex
 forecast
+forecasts
 foreign
 foreigner
 foremost
@@ -3956,6 +3962,7 @@ forwarded
 FOSDEM
 fosdick
 foster
+fought
 found
 foundation
 foundational
@@ -4041,6 +4048,7 @@ fulfilling
 full
 full-blown
 full-hearted
+full-of-rats
 full-purpose
 full-scale
 full-speed
@@ -4703,6 +4711,7 @@ IBM
 ICCQ
 ice
 icloud
+icon
 icons
 ICPC
 ICSE
@@ -4803,6 +4812,7 @@ importantly
 importers
 impose
 impossible
+imposter
 impostor
 impostors
 impractical
@@ -5338,6 +5348,7 @@ jobs
 joe
 joel
 joelonsoftware
+joep
 john
 join
 joined
@@ -5421,6 +5432,7 @@ kamil-sabbagh
 kanban
 kane
 kant
+kanter
 kapralov
 karachi
 karam
@@ -5537,6 +5549,7 @@ lacking
 lacks
 ladamoroz
 ladder
+ladders
 ladies
 lady
 lag
@@ -5560,6 +5573,7 @@ langsworth
 language
 languages
 lanyrd
+laow
 laptop
 laptops
 large
@@ -6009,6 +6023,7 @@ martela
 martian
 martin
 martinfowler
+mary
 masculine
 mask
 massage
@@ -6267,6 +6282,7 @@ minister
 minnaar
 minor
 minority
+mintzberg
 minus
 minuses
 minute
@@ -6338,6 +6354,8 @@ modeling
 models
 moderator
 modern
+modest
+modesty
 modifiable
 modification
 modifications
@@ -6372,6 +6390,7 @@ monitoring
 monitors
 monkey
 monkey-feeding
+monkey-habits
 monkeys
 mono-repo-infrastructure-yandex-
 mono-tech
@@ -6405,6 +6424,7 @@ moronic
 morons
 moscow
 moscowstate
+moss
 most
 mostly
 mother
@@ -7074,6 +7094,7 @@ owe
 owen
 OWL
 own
+owned
 owner
 owner's
 owners
@@ -7273,6 +7294,7 @@ pep
 pep-
 pepper
 peps
+pepsico
 per
 perceive
 perceived
@@ -7326,6 +7348,7 @@ peter
 petersburg
 pets
 pewtrusts
+pfeffer
 pgarticle
 pgauthor
 pghead
@@ -7370,6 +7393,7 @@ physics
 piano
 pick
 picked
+picking
 picks
 picocontainer
 picture
@@ -7503,6 +7527,7 @@ polisher
 polite
 political
 politically
+politician
 politicians
 politics
 poll
@@ -8040,6 +8065,7 @@ RAS
 raster-graphics
 rasterized
 rat
+rat's
 ratan
 rate
 rate-setting
@@ -8051,6 +8077,7 @@ ratio
 rationale
 rationality
 ratios
+rats
 raw
 raychev
 raymond
@@ -8622,6 +8649,7 @@ roommate
 rooms
 root
 ror
+rosabeth
 rose
 rospatent
 rotate
@@ -8784,6 +8812,7 @@ scan
 scandal
 scandals
 scans
+scapegoats
 scare
 scared
 scarred
@@ -8806,6 +8835,7 @@ school
 school's
 schoolmate
 schools
+schrijvers
 science
 scientific
 scientifically
@@ -8838,6 +8868,7 @@ scrumology
 scrutinizer
 scrutiny
 scss
+sculley
 sculpture
 SDK
 SDK-s
@@ -9272,6 +9303,7 @@ slowly
 slows
 small
 smaller
+smaller-caliber
 smallest
 smalltalk
 smalltalk-
@@ -9851,6 +9883,7 @@ swallowed
 swallowing
 swallows
 swear
+sweat
 sweet
 swift
 swim
@@ -10105,6 +10138,7 @@ they'll
 they're
 they've
 thiel
+thieves
 thing
 things
 think
@@ -11221,6 +11255,7 @@ yes
 yesterday
 yet
 yevgeny
+YGPA
 yield
 ying
 yml
@@ -11245,6 +11280,7 @@ yukl
 yummy
 yummy-scented
 yuxin
+yxeNH
 zache
 zalando
 zarathustra
