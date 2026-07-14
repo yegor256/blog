@@ -61,6 +61,7 @@ Your argument should be: "Not raising a salary for a good employee is bad!"
 This idea doesn't add anything to the argument, but it helps you defend yourself against other rats.
 They won't think of you as their enemy and won't bite.
 Your point is an obvious boring truth---the best type of argument.
+{: .skill}
 
 {% quote Rats stay in the company because it’s hard to kick them out, not because they produce value %}
 
@@ -83,6 +84,7 @@ Schedule a fake meeting on this very morning and when the time comes, claim that
   his absence you weren't able to share important information with him.
 Build such evidence systematically and you'll have a strong weapon against your friend,
   who is obviously your enemy at the same time.
+{: .skill}
 
 **How to Read Between the Lines**
 In a professional full-of-rats office environment everybody wishes to screw everybody.
@@ -92,6 +94,7 @@ A rat knows that enemies are watching him, that's why he doesn't say or write an
 A rat writes "The report is great!" and means "I don't trust you anymore, better quit this job."
 The "great" is the tell, if he usually writes "perfect."
 You must know how to read between the lines and understand what people truly mean.
+{: .skill}
 
 **How to Invent Obstacles**
 Regular people, who are not rats, try to be helpful to others and be modest about it.
@@ -104,6 +107,7 @@ A rat says "I will try, but it's very difficult, because of ..."
 Later, when you screw it up, you will blame the obstacles.
 If you don't, you will be a hero who fought the obstacles.
 Those quiet humble losers who just do their job will always be behind you.
+{: .skill}
 
 **How to Identify Owners**
 Only in a small startup of five people everything is owned by the founder, who is one of these five.
@@ -120,6 +124,7 @@ If you don't know what this guy owns, you don't know what to trade.
 A good rat is always prepared to ask for a favor when being asked for a favor.
 A good rat never gives anything to anyone for free.
 Learn what your friends possess or have access to---be prepared to ask them to share.
+{: .skill}
 
 {% quote Only your enemies can ruin your career, not your faulty architectures or your lousy management decisions %}
 
@@ -137,6 +142,7 @@ Friendship, for a rat, comes first.
 Productivity, efficiency, profit, customers---all of that is secondary.
 Enemies ruin your career, not bad code, broken servers, or lost customers.
 Know how to make friends at all costs.
+{: .skill}
 
 **How to Disrespect Yourself**
 Rats don't produce anything valuable, neither engineering nor [management].
@@ -152,6 +158,7 @@ You must be ready to answer yourself:
   "Yes, I'm one of them, my talents are useless, I'm nothing more than a talking head. It's over."
 This answer will make you stronger.
 You will be a good rat.
+{: .skill}
 
 {% quote All an effective politician does is making friends and betraying them %}
 
@@ -167,6 +174,7 @@ Learn how to stop asking yourself a question: "Why do I have to spend time with 
 Also, this question may hurt: "Why does our company tolerate fools being in charge of smart people?"
 God forbid you ask these questions out loud in the office.
 This would be the end of your career.
+{: .skill}
 
 **How to Be a Fool**
 Since the better expert you are, the more you despise the fools around you,
@@ -183,6 +191,7 @@ In a few years you will realize that you are an absolute disgrace,
 This is when you put all of your energy
   into the fight with other rats---the survival instinct will kick in.
 This is when you become a great rat: a CEO, a President, an icon for others.
+{: .skill}
 
 If you don't want to be a big boss and an icon, it's your call, stay human.
 

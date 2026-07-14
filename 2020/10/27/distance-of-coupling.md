@@ -2,32 +2,30 @@
 
 Source: https://www.yegor256.com/2020/10/27/distance-of-coupling.html
 
-[Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29),
-as you know, is one of the
-[four key principles](https://www.indeed.com/career-advice/career-development/what-is-object-oriented-programming)
-in [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming).
+[Encapsulation], as you know, is one of the [four key principles]
+  in [object-oriented programming].
 Encapsulation, according to [Grady Booch et al.](https://amzn.to/3o7RnDZ),
-is "the process of hiding all the secrets of an object
-that do not contribute to its essential characteristics."
+  is "the process of hiding all the secrets of an object
+  that do not contribute to its essential characteristics."
 Practically speaking, it's about those `private`
-attributes that we use in Java and C++: they are not visible to the users of
-our objects, that's why they can't be modified or even read.
+  attributes that we use in Java and C++: they are not visible to the users of
+  our objects, that's why they can't be modified or even read.
 Booch et al. believe that the purpose of encapsulation is
-"to provide explicit barriers among different abstractions,"
-which leads to "a clear separation of concerns."
-However, does it really work as planned? Do we really have
-explicit barriers between objects? Let's see.
+  "to provide explicit barriers among different abstractions,"
+  which leads to "a clear separation of concerns."
+However, does it really work as planned?
+Do we really have explicit barriers between objects?
+Let's see.
 
 
 {% jb_picture_body %}
 
 First, I'm not the first and not the only one asking this question.
 [David West](https://amzn.to/266oJr4) much earlier said that "in most ways,
-encapsulation is a discipline more than a real barrier," and
-that "seldom is the integrity of an object protected in any absolute sense".
+  encapsulation is a discipline more than a real barrier," and
+  that "seldom is the integrity of an object protected in any absolute sense".
 In practice, "it is up to the user of an object to respect that object's encapsulation.''
-Indeed, let's take a look at the class `Temperature` from my blog post
-about [naked data]({% pst 2016/nov/2016-11-21-naked-data %}):
+Indeed, let's take a look at the class `Temperature` from my blog post about [naked data]:
 
 ```java
 class Temperature {
@@ -38,8 +36,7 @@ class Temperature {
 ```
 
 Can we say that the attribute `t` is truly _encapsulated_?
-Technically, it is: it's impossible
-to modify it directly via the dot notation.
+Technically, it is: it's impossible to modify it directly via the dot notation.
 Simply put, we can't do this:
 
 ```java
@@ -53,19 +50,17 @@ And we can't even do this:
 int y = x.t;
 ```
 
-However, we can do exactly the same via the
-[getter]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}) `getT()`
-and the setter `setT()`.
+However, we can do exactly the same via the [getter][getters] `getT()`
+  and the setter `setT()`.
 Thus, the designer of the class `Temperature` gives us the ability to access
-its attribute, but indirectly, through
-[getters and setters]({% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}).
-I would say
-that the principle of encapsulation is being violated here, and, I'm sure,
-[Allen Holub](https://www.infoworld.com/article/2072302/more-on-getters-and-setters.html)
-would agree with me. What is the solution? The [article]({% pst 2016/nov/2016-11-21-naked-data %})
-about naked data
-proposed the use of the [TellDontAsk principle](http://media.pragprog.com/articles/jan_03_enbug.pdf)
-and that we should get rid of the getter:
+  its attribute, but indirectly, through [getters and setters][getters].
+I would say that the principle of encapsulation is being violated here, and, I'm sure,
+  [Allen Holub] would agree with me.
+
+What is the solution?
+The [article][naked data] about naked data
+  proposed the use of the [TellDontAsk principle]
+  and that we should get rid of the getter:
 
 ```java
 class Temperature {
@@ -143,3 +138,11 @@ return a quick summary of it. The distance metric will tell us exactly that:
 how many times, and by how much, we violated the principle of loose coupling.
 
 Would you be interested in creating such an analyzer for, say, Java code?
+
+[TellDontAsk principle]: http://media.pragprog.com/articles/jan_03_enbug.pdf
+[naked data]: {% pst 2016/nov/2016-11-21-naked-data %}
+[Encapsulation]: https://en.wikipedia.org/wiki/Encapsulation_%28computer_programming%29
+[four key principles]: https://www.indeed.com/career-advice/career-development/what-is-object-oriented-programming
+[object-oriented programming]: https://en.wikipedia.org/wiki/Object-oriented_programming
+[getters]: {% pst 2014/sep/2014-09-16-getters-and-setters-are-evil %}
+[Allen Holub]: https://www.infoworld.com/article/2072302/more-on-getters-and-setters.html

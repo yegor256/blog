@@ -532,9 +532,9 @@
 		<polygon fill = 'rgb( 79,  73,  73)' points = '384.49,230.00 386.95,230.00 386.95,210.66 384.49,210.66 '/>
 	</g>
 	<path stroke='rgb( 79,  73,  73)'  d='M384.49,230.00 L384.49,210.67 L386.94,210.67 L386.94,230.00 L384.49,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb( 79,  73,  73)' points = '394.34,230.00 396.80,230.00 396.80,208.86 394.34,208.86 '/>
+		<polygon fill = 'rgb( 79,  73,  73)' points = '394.34,230.00 396.80,230.00 396.80,207.78 394.34,207.78 '/>
 	</g>
-	<path stroke='rgb( 79,  73,  73)'  d='M394.34,230.00 L394.34,208.87 L396.79,208.87 L396.79,230.00 L394.34,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
+	<path stroke='rgb( 79,  73,  73)'  d='M394.34,230.00 L394.34,207.79 L396.79,207.79 L396.79,230.00 L394.34,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
 		<polygon fill = 'rgb( 79,  73,  73)' points = '397.62,230.00 400.07,230.00 400.07,195.08 397.62,195.08 '/>
 	</g>
 	<path stroke='rgb( 79,  73,  73)'  d='M397.62,230.00 L397.62,195.09 L400.06,195.09 L400.06,230.00 L397.62,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
@@ -664,9 +664,9 @@
 		<polygon fill = 'rgb( 79,  73,  73)' points = '615.73,230.00 618.18,230.00 618.18,211.80 615.73,211.80 '/>
 	</g>
 	<path stroke='rgb( 79,  73,  73)'  d='M615.73,230.00 L615.73,211.81 L618.17,211.81 L618.17,230.00 L615.73,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb( 79,  73,  73)' points = '618.98,230.00 621.44,230.00 621.44,190.97 618.98,190.97 '/>
+		<polygon fill = 'rgb( 79,  73,  73)' points = '618.98,230.00 621.44,230.00 621.44,190.78 618.98,190.78 '/>
 	</g>
-	<path stroke='rgb( 79,  73,  73)'  d='M618.98,230.00 L618.98,190.98 L621.43,190.98 L621.43,230.00 L618.98,230.00 Z  '/></g>
+	<path stroke='rgb( 79,  73,  73)'  d='M618.98,230.00 L618.98,190.79 L621.43,190.79 L621.43,230.00 L618.98,230.00 Z  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb( 79,  73,  73)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>

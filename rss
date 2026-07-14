@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-07-13T10:05:59+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Rat’s Skills: Making Friends and Betraying Them</title><link href="https://www.yegor256.com/2026/07/12/rats-skills.html" rel="alternate" type="text/html" title="Rat’s Skills: Making Friends and Betraying Them" /><published>2026-07-12T00:00:00+03:00</published><updated>2026-07-12T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/07/12/rats-skills</id><content type="html" xml:base="https://www.yegor256.com/2026/07/12/rats-skills.html"><![CDATA[<p>How to get promoted?
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-07-14T11:36:32+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Rat’s Skills: Making Friends and Betraying Them</title><link href="https://www.yegor256.com/2026/07/12/rats-skills.html" rel="alternate" type="text/html" title="Rat’s Skills: Making Friends and Betraying Them" /><published>2026-07-12T00:00:00+03:00</published><updated>2026-07-12T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/07/12/rats-skills</id><content type="html" xml:base="https://www.yegor256.com/2026/07/12/rats-skills.html"><![CDATA[<p>How to get promoted?
 How to get a salary raise?
 How to stop writing code and start managing other losers who still write it?
 How to become a team leader, a boss, a Vice President, a CTO, and a CEO?
@@ -45,7 +45,7 @@ I present you with a list of skills that may help if you’re ready to stop bein
 Not soft skills, not hard skills, but rat’s skills.
 Here they are:</p>
 
-<p><strong>How to Talk a Lot Saying Nothing</strong>
+<p class="skill"><strong>How to Talk a Lot Saying Nothing</strong>
 All rats do in the office is talking.
 If you keep your mouth shut and your eyes open, as many office coaches recommend, you either
   look obviously weird and get rejected,
@@ -64,7 +64,7 @@ Your point is an obvious boring truth—the best type of argument.</p>
 <aside class="quote">Rats stay in the company because it’s hard to kick them out, not because they produce value
 </aside>
 
-<p><strong>How to Find Scapegoats</strong>
+<p class="skill"><strong>How to Find Scapegoats</strong>
 Some people stay in the company because they produce products:
   code, tests, design, architecture, etc.
 Rats don’t do that, because they don’t want to and they don’t know how to.
@@ -84,7 +84,7 @@ Schedule a fake meeting on this very morning and when the time comes, claim that
 Build such evidence systematically and you’ll have a strong weapon against your friend,
   who is obviously your enemy at the same time.</p>
 
-<p><strong>How to Read Between the Lines</strong>
+<p class="skill"><strong>How to Read Between the Lines</strong>
 In a professional full-of-rats office environment everybody wishes to screw everybody.
 The only way to get a friend into trouble is by finding how his actions violated the rules.
 Talking and writing is the only act a rat does.
@@ -93,7 +93,7 @@ A rat writes “The report is great!” and means “I don’t trust you anymore
 The “great” is the tell, if he usually writes “perfect.”
 You must know how to read between the lines and understand what people truly mean.</p>
 
-<p><strong>How to Invent Obstacles</strong>
+<p class="skill"><strong>How to Invent Obstacles</strong>
 Regular people, who are not rats, try to be helpful to others and be modest about it.
 This is what rats use against them: modesty is your weakness.
 Instead, you should radiate the smell of sweat.
@@ -105,7 +105,7 @@ Later, when you screw it up, you will blame the obstacles.
 If you don’t, you will be a hero who fought the obstacles.
 Those quiet humble losers who just do their job will always be behind you.</p>
 
-<p><strong>How to Identify Owners</strong>
+<p class="skill"><strong>How to Identify Owners</strong>
 Only in a small startup of five people everything is owned by the founder, who is one of these five.
 In a large organization, resources—money, staff, hardware, offices—belong to people
   who decide how to distribute them.
@@ -124,7 +124,7 @@ Learn what your friends possess or have access to—be prepared to ask them to s
 <aside class="quote">Only your enemies can ruin your career, not your faulty architectures or your lousy management decisions
 </aside>
 
-<p><strong>How to Be a Friend</strong>
+<p class="skill"><strong>How to Be a Friend</strong>
 Rats are politicians, not engineers or managers.
 A good politician knows how to do one thing and nothing else: make friends.
 It’s easy to make a friend when you have nothing to share.
@@ -139,7 +139,7 @@ Productivity, efficiency, profit, customers—all of that is secondary.
 Enemies ruin your career, not bad code, broken servers, or lost customers.
 Know how to make friends at all costs.</p>
 
-<p><strong>How to Disrespect Yourself</strong>
+<p class="skill"><strong>How to Disrespect Yourself</strong>
 Rats don’t produce anything valuable, neither engineering nor <a href="/2016/05/24/who-is-project-manager.html">management</a>.
 They do politics only: make friends and then betray them.
 A long time ago, when they were engineers, they did something productive, but it was a long time ago.
@@ -157,7 +157,7 @@ You will be a good rat.</p>
 <aside class="quote">All an effective politician does is making friends and betraying them
 </aside>
 
-<p><strong>How to Respect Fools</strong>
+<p class="skill"><strong>How to Respect Fools</strong>
 The higher you are on the organizational ladder, the less competent people are around you.
 I mean technical competence.
 A CEO of PepsiCo can become a CEO of Apple, you know <a href="https://en.wikipedia.org/wiki/John_Sculley">this story</a>.
@@ -170,7 +170,7 @@ Also, this question may hurt: “Why does our company tolerate fools being in ch
 God forbid you ask these questions out loud in the office.
 This would be the end of your career.</p>
 
-<p><strong>How to Be a Fool</strong>
+<p class="skill"><strong>How to Be a Fool</strong>
 Since the better expert you are, the more you despise the fools around you,
   your office life would be easier if you stopped being an expert.
 Don’t code, don’t read technical books, don’t touch anything related to product engineering.
