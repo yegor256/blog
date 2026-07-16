@@ -39,13 +39,9 @@ I'm the author of a few patent applications, including
   [Puzzle-Driven Development (PDD) Method and Software][pdd]
   and
   [Method for Software Cost Estimating Using Scope Champions][champions].
-I'm a certified Project Management Professional ([PMP&reg;](/pdf/certifications/PMP-Jun07.pdf)).
+I'm a certified Project Management Professional ([PMP]).
 Besides that, I'm a proud holder of
-  [RUP 7](/pdf/certifications/RUP-Feb07.pdf),
-  [PRINCE2 Foundation](/pdf/certifications/PRINCE2-Jun08.pdf),
-  [MCP](/pdf/certifications/MCP-Oct07.pdf),
-  and
-  [COSMIC](https://www.cosmicon.com/certificateHoldersV3.asp) certificates.
+  [RUP 7], [PRINCE2 Foundation], [MCP], and [COSMIC] certificates.
 
 I am a **programmer**, [writing](https://github.com/yegor256)
   mostly in Java, but also in Ruby, Rust, and JavaScript
@@ -167,3 +163,8 @@ I was [2:464/256] over there, and this is where my network presence started.
 [FIDOnet]: https://en.wikipedia.org/wiki/FidoNet
 [2:464/256]: http://nodehist.fidonet.org.ua/?address=2%3A464%2F256
 [certifications]: https://github.com/yegor256/blog/tree/master/pdf/certifications
+[PMP]: /pdf/certifications/PMP-Jun07.pdf
+[RUP 7]: /pdf/certifications/RUP-Feb07.pdf
+[PRINCE2 Foundation]: /pdf/certifications/PRINCE2-Jun08.pdf
+[MCP]: /pdf/certifications/MCP-Oct07.pdf
+[COSMIC]: https://www.cosmicon.com/certificateHoldersV3.asp
