@@ -17,6 +17,7 @@ programming, and it totally changed my understanding of it. I would
 recommend you read it a few times. But before reading, try to forget everything
 you've heard about programming in the past. Try to start from scratch. Maybe it will
 work for you too.
+{: .advice}
 
 {% jttu rita2009pmp %}
 [**PMP Exam Prep, Eighth Edition: Rita's Course in a Book for Passing the PMP Exam**](https://jttu.net/rita2009pmp)
@@ -26,6 +27,7 @@ PMI approach and PMBOK in particular, it is a must-read for everyone who
 is interested in management. Ignore the PMBOK specifics and focus on
 the philosophy of project management and the role of
 [project manager]({% pst 2015/sep/2015-09-22-micromanagement %}) in it.
+{: .advice}
 
 {% jttu myers2012art %}
 [**The Art of Software Testing**](https://jttu.net/myers2012art)
@@ -36,6 +38,7 @@ many typical myths and stereotypes. No matter what your job description is,
 if you're working in the software industry, you should understand testing
 and its fundamental principles. This is the only book you need in order to
 get that understanding.
+{: .advice}
 
 {% jttu freeman2009growing %}
 [**Growing Object-Oriented Software, Guided by Tests**](https://amzn.to/1PBpoDT)
@@ -46,6 +49,7 @@ that I didn't include famous software engineer
 in this list because I don't like it at all. You definitely should read
 it, just to know what's going on, but it won't help you write good tests.
 Read this one instead, and read it many times.
+{: .advice}
 
 {% jttu feathers2004working %}
 [**Working Effectively With Legacy Code**](https://amzn.to/1SdcZ8M)
@@ -54,6 +58,7 @@ This is awesome reading about modern software development, its pitfalls, and
 typical failures. Most of the code we're working on now is legacy
 (a.k.a. [open source]({% pst 2015/dec/2015-12-22-why-dont-you-contribute-to-open-source %})).
 I read this book as a novel.
+{: .advice}
 
 {% jttu humble2010continuous %}
 [**Continuous Delivery: Reliable Software Releases Through Build, Test, and Deployment Automation**](https://amzn.to/2c7sR4V)
@@ -62,6 +67,7 @@ This is a perfect book about software delivery,
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}),
 testing, packaging, versioning, and many other techniques involved in programming.
 It's definitely a must-read for anyone who is serious about software engineering.
+{: .advice}
 
 {% jttu harold2000xml %}
 [**XML in a Nutshell, Third Edition**](https://amzn.to/2bNiHWD)
@@ -70,6 +76,7 @@ XML is my favorite standard. And I hated it before I read this book. I didn't
 understand all the strange prefixes, namespaces, XPath expressions, and
 schemes. Just this one book changed everything, and ever since reading it, I've used XML
 everywhere. It is very well written and easy to read. It's a must for everybody.
+{: .advice}
 
 {% jttu goetz2006java %}
 [**Java Concurrency in Practice**](https://amzn.to/2cs3KZR)
@@ -77,6 +84,7 @@ by Brian Goetz et al.
 This is a very practical book about Java multi-threading, and at the same time,
 it provides a lot of theoretical knowledge about concurrency in general. I highly
 recommend you read it at least once.
+{: .advice}
 
 {% jttu stroustrup2014programming %}
 [**Effective Modern C++: 42 Specific Ways to Improve Your Use of C++11 and C++14**](https://amzn.to/2bQV0uE)
@@ -85,6 +93,7 @@ No matter what language you're using, this book is very interesting and
 very useful. It makes many important suggestions about better C++ coding. If
 you understand most of them, your Java/Ruby/Python/Scala coding skills will
 improve significantly.
+{: .advice}
 
 {% jttu mcconnell2004code %}
 [**Code Complete: A Practical Handbook of Software Construction, Second Edition**](https://jttu.net/mcconnell2004code)
@@ -93,12 +102,14 @@ Consider this the bible of clean coding. Read it a few times and use it as a ref
 manual in debates with your colleagues. It mentions the most terrible anti-patterns
 and worst practices you'll see in modern programming. To be a good programmer,
 you must know all of them.
+{: .advice}
 
 {% jttu jones2007 %}
 [**Software Estimation: Demystifying the Black Art**](https://amzn.to/2bNiZws)
 by Steve McConnell.
 This one's an interesting read about software engineering and its most tricky part---estimations.
 At the least, read it to be aware of the problem and possible solutions.
+{: .advice}
 
 {% jttu cockburn2000writing %}
 [**Writing Effective Use Cases**](https://amzn.to/2c5n0eK)
@@ -108,6 +119,7 @@ real projects, but you will pick up the philosophy of use cases, which will
 redirect your mind in the right direction. Don't take this book as something
 practical; these use cases are hardly used anywhere today, but the idea of
 scoping functionality this way is absolutely right.
+{: .advice}
 
 {% jttu wiegers2003software %}
 [**Software Requirements, Third Edition**](https://amzn.to/2cgyB9t)
@@ -115,6 +127,7 @@ by Karl Wiegers (author) and Joy Beatty.
 A superb book about requirements analysis, the first and most important
 activity in any software project. Even if you're not an analyst, this book
 is a must-read.
+{: .advice}
 
 {% jttu loeliger2012version %}
 [**Version Control With Git: Powerful Tools and Techniques for Collaborative Software Development**](https://amzn.to/2crIfoY)
@@ -123,6 +136,7 @@ This title serves as a practical guide for Git, a version control system. Read i
 cover to cover and you will save many hours of your time in the future.
 Git is a de-facto standard in version control, and every programmer must
 know its fundamental principles---not from a cheat sheet but from an original source.
+{: .advice}
 
 {% badge /images/2015/04/book-javascript.jpg M https://amzn.to/2cgyfQj %}
 [**JavaScript: The Definitive Guide: Activate Your Web Pages**](https://amzn.to/2cgyfQj)
@@ -131,6 +145,7 @@ JavaScript is a language of the modern Web, and this book explains it very well.
 No matter what kind of software you develop, you must know JavaScript. Don't read
 it as a practical guide (even though it's called a guide) but rather as
 food for thought. JavaScript offers a lot to learn for Java/Ruby/Python developers.
+{: .advice}
 
 {% jttu meyer2006css %}
 [**CSS: The Definitive Guide**](https://amzn.to/2cs55ju)
@@ -138,5 +153,6 @@ by Eric A. Meyer.
 CSS is not just about colors and shadows, and it's not only for graphic designers.
 CSS is a key language of the modern Web. Every developer must know it, whether
 you're working with a back-end, front-end, or desktop application in C++.
+{: .advice}
 
 Also, check my [GoodReads profile](https://www.goodreads.com/user/show/54072702-yegor-bugayenko).
