@@ -20,7 +20,7 @@ keywords:
 ---
 
 {: .book-badge}
-{% badge /images/books/junior-objects/cover.png 160 http://goo.gl/W2WVMk %}
+{% badge /images/books/junior-objects/cover.png L http://goo.gl/W2WVMk %}
 
 "Junior Objects" is a book about object-oriented programming, written
 for those who are just starting their career and don't really

@@ -47,7 +47,7 @@ are funded by myself. I add money to Zerocracy out of my pocket and Zerocracy
 [pays]({% pst 2018/jan/2018-01-09-micro-budgeting %})
 programmers when they close their [microtasks]({% pst 2017/nov/2017-11-28-microtasking %}) in GitHub.
 
-{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg M https://www.zerocracy.com %}
 
 A few days ago someone approached me by email and literally said: "There
 is a bug in your project, I'm happy to pay you for your time if you can come

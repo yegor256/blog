@@ -25,7 +25,7 @@ In addition to being a hands-on programmer, I'm also co-founder and CTO of
 I play the role of a technical and management leader in all projects
 we work with.
 
-{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg M https://www.zerocracy.com %}
 
 I wrote this article for those who're interested in hiring me and/or
 my team. This article will demonstrate what happens from day one until
@@ -95,7 +95,7 @@ much more than a mistake made later.
 
 ## Thinking
 
-{% badge /images/2014/10/lifecycle-thinking.png 250 %}
+{% badge /images/2014/10/lifecycle-thinking.png XL %}
 
 Thinking is the first and the most important phase.
 
@@ -135,7 +135,7 @@ Using this HoC metric, we can roughly
 
 ## Building
 
-{% badge /images/2014/10/lifecycle-building.png 250 %}
+{% badge /images/2014/10/lifecycle-building.png XL %}
 
 This is a one-man job for
 [an architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).
@@ -166,7 +166,7 @@ More about the Building phase here:
 
 ## Fixing
 
-{% badge /images/2014/10/lifecycle-fixing.png 250 %}
+{% badge /images/2014/10/lifecycle-fixing.png XL %}
 
 Now it's time to build a distributed team of programmers. First, we
 invite those who've worked on other projects and have already
@@ -207,7 +207,7 @@ in GitHub.
 
 ## Using
 
-{% badge /images/2014/10/lifecycle-using.png 250 %}
+{% badge /images/2014/10/lifecycle-using.png XL %}
 
 This is the final phase and it can take quite a long time. By now, the product is
 ready and is launched to the market. But we still receive

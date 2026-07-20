@@ -164,7 +164,7 @@ in GitHub. The only solution is to work through forks and pull requests only.
 Simply remove everybody from the list of "collaborators" and they will
 have to submit changes through pull requests.
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 Then, start using [Rultor.com](https://www.rultor.com), which will help
 you to test, merge and push every pull request. Basically, Rultor is

@@ -22,7 +22,7 @@ jb_picture:
   caption: The Trotsky (2009) by Jacob Tierney
 ---
 
-{% badge https://raw.githubusercontent.com/yegor256/xcop/master/logo.svg 128 https://github.com/yegor256/xcop %}
+{% badge https://raw.githubusercontent.com/yegor256/xcop/master/logo.svg L https://github.com/yegor256/xcop %}
 
 [A few years ago]({% pst 2017/aug/2017-08-29-xcop %})
 I created [xcop](https://github.com/yegor256/xcop),

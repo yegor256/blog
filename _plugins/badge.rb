@@ -9,27 +9,36 @@ require 'fastimage'
 module Yegor
   # A small clickable image badge, sized from its source.
   class Badge
-    def initialize(src, width, url = nil)
+    def initialize(src, size, url = nil)
       @src = src
-      @width = width
+      @size = size
       @url = url
     end
 
     def render(context)
       src = Yegor::Img.new(@src, context).to_s
+      rem = width
       dims = ''
       if @src.start_with?('/') && !@src.start_with?('//')
         path = File.exist?("./_site#{@src}") ? "./_site#{@src}" : ".#{@src}"
         size = FastImage.size(path) if File.exist?(path)
         if size
-          h = (@width.to_i * size[1] / size[0].to_f).round
-          dims = "width='#{@width}' height='#{h}' "
+          px = (rem * 16).round
+          h = (px * size[1] / size[0].to_f).round
+          dims = "width='#{px}' height='#{h}' "
         end
       end
       img = "<img #{dims}src='#{src}' " \
-            "style='width:#{@width}px;max-width:100%;' alt='badge'/>"
+            "style='width:#{rem}rem;max-width:100%;' alt='badge'/>"
       img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>" if @url
       "<figure class='badge'>#{img}</figure>\n\n"
+    end
+
+    private
+
+    def width
+      { 'XS' => 3, 'S' => 4.25, 'M' => 6, 'L' => 8.5, 'XL' => 12 }
+        .fetch(@size.upcase) { raise "Unknown badge size #{@size.inspect}" }
     end
   end
 
@@ -39,12 +48,12 @@ module Yegor
       super
       opts = markup.strip.split(/\s+/, 3)
       @src = opts[0].strip
-      @width = opts[1].strip
+      @size = opts[1].strip
       @url = opts[2].strip if opts[2]
     end
 
     def render(context)
-      Yegor::Badge.new(@src, @width, @url).render(context)
+      Yegor::Badge.new(@src, @size, @url).render(context)
     end
   end
 end

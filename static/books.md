@@ -25,7 +25,7 @@ style: |
   }
 ---
 
-{% badge /images/andreea/writing.svg 200 %}
+{% badge /images/andreea/writing.svg XL %}
 
 If you already purchased and read my books, please review them on
 [Amazon](https://www.amazon.com/Yegor-Bugayenko/e/B01AM1QMDK) and/or
@@ -42,7 +42,7 @@ send you the PDF version (rendered with your name inside, to make sure
 you don't share it with others).
 
 {: .book-badge}
-{% badge /images/books/elegant-objects/cover-eo1.png 125 /elegant-objects.html %}
+{% badge /images/books/elegant-objects/cover-eo1.png L /elegant-objects.html %}
 
 [Elegant Objects](/elegant-objects.html) (two volumes)
 is my first book. It is about object-oriented
@@ -57,7 +57,7 @@ Published: 22 Feb 2016.
 {: .book-par}
 
 {: .book-badge}
-{% badge /images/books/256-bloghacks/cover.png 125 /256-bloghacks.html %}
+{% badge /images/books/256-bloghacks/cover.png L /256-bloghacks.html %}
 
 [256 Bloghacks](/256-bloghacks.html) is a book about blogging,
 disclosing all techniques, secrets and tactics I'm using at this blog.
@@ -72,7 +72,7 @@ Published: 6 Nov 2016.
 {: .book-par}
 
 {: .book-badge}
-{% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
+{% badge /images/books/code-ahead/cover.png L /code-ahead.html %}
 
 [Code Ahead](/code-ahead.html) is a novel about software engineering. In this book I
 propose a number of best practices for organizing software development
@@ -85,7 +85,7 @@ Published: 6 July 2018.
 {: .book-par}
 
 {: .book-badge}
-{% badge /images/books/junior-objects/cover.png 125 /junior-objects.html %}
+{% badge /images/books/junior-objects/cover.png L /junior-objects.html %}
 
 It is a book for junior programmers or even for someone who hasn't
 seen a computer yet. It starts from the explanation of basic things
@@ -99,7 +99,7 @@ Published: 22 June 2020.
 {: .book-par}
 
 {: .book-badge}
-{% badge /images/books/angry-tests/cover-1.png 125 /angry-tests.html %}
+{% badge /images/books/angry-tests/cover-1.png L /angry-tests.html %}
 
 It is a book about automated testing. It summarizes everything I have to say about unit testing,
 integration testing, and code quality. It is essentially a summary of my

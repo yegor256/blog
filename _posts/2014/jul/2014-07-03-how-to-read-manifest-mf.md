@@ -20,7 +20,7 @@ keywords:
   - how to read manifest.mf
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://manifests.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://manifests.jcabi.com %}
 
 Every Java package (JAR, WAR, EAR, etc.) has
 a [`MANIFEST.MF`](http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html)

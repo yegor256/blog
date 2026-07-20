@@ -23,7 +23,7 @@ jb_picture:
   caption: Brazil (1985) by Terry Gilliam
 ---
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 Yes, I know, "line of code" (LoC)
 is a [very wrong metric](http://stackoverflow.com/questions/966800/mythical-man-month-10-lines-per-developer-day-how-close-on-large-projects).

@@ -20,7 +20,7 @@ keywords:
   - apache maven
 ---
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 In my [previous article]({% pst 2015/sep/2015-09-07-maven-repository-amazon-s3 %}),
 I described how to
@@ -61,7 +61,7 @@ a 25% discount off of your first year.
 Simply [shoot them an email](mailto:support@cloudrepo.io) when your account is created
 and they'll take care of you (don't forget to mention me, to get the discount).
 
-{% badge /images/2019/02/cloudrepo.png 100 https://www.cloudrepo.io %}
+{% badge /images/2019/02/cloudrepo.png M https://www.cloudrepo.io %}
 
 Assuming you have created an account with
 CloudRepo and [setup both a user and maven repository](https://www.cloudrepo.io/docs/repository-types/jvm/maven-repositories.html),

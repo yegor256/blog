@@ -30,7 +30,7 @@ style: |
   }
 ---
 
-{% badge /images/andreea/yegor-is-presenting.svg 200 %}
+{% badge /images/andreea/yegor-is-presenting.svg XL %}
 
 As a side-track activity, I'm teaching in a few universities,
 mostly the courses about software development and project management.

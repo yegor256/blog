@@ -18,7 +18,7 @@ image: /images/andreea/angry-testimonials.png
 nospell: true
 ---
 
-{% badge /images/andreea/angry-testimonials.png 220 %}
+{% badge /images/andreea/angry-testimonials.png XL %}
 
 **WARNING**:
 The text you are about to read is of a mature matter.

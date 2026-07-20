@@ -19,7 +19,7 @@ keywords:
   - xslt for web app
 ---
 
-{% badge https://www.takes.org/logo.png 96 https://www.takes.org %}
+{% badge https://www.takes.org/logo.png M https://www.takes.org %}
 
 A year ago, I [tried to explain]({% pst 2014/jun/2014-06-25-xml-and-xslt-in-browser %})
 how effectively data and its presentation can be separated

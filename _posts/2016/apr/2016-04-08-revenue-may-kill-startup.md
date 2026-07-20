@@ -44,7 +44,7 @@ buyers and pay for marketing, promotion, and Google AdWords. The numbers
 grow every month and ... they don't realize they are
 actually _killing_ their own startup.
 
-{% badge https://www.seedramp.com/images/logo.svg 128 https://www.seedramp.com %}
+{% badge https://www.seedramp.com/images/logo.svg L https://www.seedramp.com %}
 
 If you're building a cafe, a bakery, a web development studio,
 or a bicycle repair shop, a growing customer base with stable revenue

@@ -18,7 +18,7 @@ keywords:
 nospell: true
 ---
 
-{% badge https://www.yegor256.com/images/about/yegor-full-size.jpg 250 %}
+{% badge https://www.yegor256.com/images/about/yegor-full-size.jpg XL %}
 
 Quick bio:<br/>
   Software developer in Huawei, founder of [Zerocracy],

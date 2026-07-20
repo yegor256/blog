@@ -70,7 +70,7 @@ full of priceless quotes that can also be very practical. For example, on page 6
 
 > Testing is a destructive, even sadistic, process, which explains why most people find it difficult
 
-{% badge /images/2014/08/glenford-myers.png 200 https://amzn.to/1Y3qAbN %}
+{% badge /images/2014/08/glenford-myers.png XL https://amzn.to/1Y3qAbN %}
 
 In Chapter 2, Dr. Myers discusses the psychology of testing and a very common and crucial
 misunderstanding of testing objectives. He claims that it is commonly accepted that

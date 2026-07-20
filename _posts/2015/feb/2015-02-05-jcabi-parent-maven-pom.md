@@ -18,7 +18,7 @@ keywords:
   - parent pom maven
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://http.jcabi.com %}
 
 Maven is a build automation tool mostly for Java projects. It's a great
 tool, but it has one important drawback that has motivated the creation

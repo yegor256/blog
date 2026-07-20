@@ -20,9 +20,9 @@ keywords:
   - hosted continuous integration
 ---
 
-{% badge /images/2014/07/travis-logo.png 100 https://www.travis-ci.org %}
+{% badge /images/2014/07/travis-logo.png M https://www.travis-ci.org %}
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 [Rultor](https://www.rultor.com) is a coding team assistant.
 [Travis](http://travis-ci.org) is a hosted

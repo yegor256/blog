@@ -20,7 +20,7 @@ keywords:
 image: /images/2017/04/0pdd-screenshot.jpg
 ---
 
-{% badge https://avatars2.githubusercontent.com/u/24456188 64 https://www.0pdd.com %}
+{% badge https://avatars2.githubusercontent.com/u/24456188 S https://www.0pdd.com %}
 
 [Puzzle Driven development]({% pst 2010/mar/2010-03-04-pdd %})
 (PDD) is a methodology we've been practicing on our teams

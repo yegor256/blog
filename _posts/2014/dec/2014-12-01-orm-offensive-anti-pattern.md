@@ -205,7 +205,7 @@ they miss the main point. You can see a very good, practical answer
 to these practical arguments given by Bozhidar Bozhanov
 in his [ORM Haters Don't Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
 
-{% badge /images/2014/11/orm-anti-pattern.svg 413 %}
+{% badge /images/2014/11/orm-anti-pattern.svg XL %}
 
 The main point is that ORM, instead of encapsulating database interaction
 inside an object, extracts it away, literally tearing a solid and cohesive
@@ -254,7 +254,7 @@ violating the very idea of [what an object is]({% pst 2014/nov/2014-11-20-seven-
 
 ## SQL-Speaking Objects
 
-{% badge /images/2014/11/sql-speaking-object.svg 213 %}
+{% badge /images/2014/11/sql-speaking-object.svg XL %}
 
 What is the alternative? Let me show it to you by example. Let's try to design that
 class, `Post`, my way. We'll have to break it down into two classes: `Post`

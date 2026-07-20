@@ -22,7 +22,7 @@ keywords:
   - continuous delivery pre-flight builds
 ---
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 You get a GitHub pull request. You review it. It looks correct---it's time
 to merge it into `master`. You post a comment in it, asking

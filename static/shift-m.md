@@ -30,7 +30,7 @@ style: |
   }
 ---
 
-{% badge /images/andreea/podcast.svg 200 %}
+{% badge /images/andreea/podcast.svg XL %}
 
 It's a podcast about project management and software engineering.
 If you want to be a guest or know a good guest, please email to

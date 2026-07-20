@@ -19,7 +19,7 @@ keywords:
   - object thinking
 ---
 
-{% badge /images/books/elegant-objects/cover-eo1.png 120 http://goo.gl/W2WVMk %}
+{% badge /images/books/elegant-objects/cover-eo1.png L http://goo.gl/W2WVMk %}
 
 "Elegant Objects" is a book series about object-oriented
 programming. There are two volumes at the moment, they are

@@ -24,7 +24,7 @@ jb_picture:
   caption: The Big Lebowski (1998) by Joel Coen
 ---
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 It is a very common problem in project management---how to make team
 members more responsible and avoid [micro

@@ -21,7 +21,7 @@ social:
   - hackernews: https://news.ycombinator.com/item?id=11394981
 ---
 
-{% badge https://www.jare.io/images/logo.svg 92 https://www.jare.io %}
+{% badge https://www.jare.io/images/logo.svg M https://www.jare.io %}
 
 CDN stands for a Content Delivery Network. Technically, it is a bunch
 of servers located in different countries and continents. You give them

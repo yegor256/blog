@@ -18,7 +18,7 @@ keywords:
   - read github notifications
 ---
 
-{% badge https://www.wring.io/images/logo.svg 92 https://www.wring.io %}
+{% badge https://www.wring.io/images/logo.svg M https://www.wring.io %}
 
 I'm taking participation in over 50 repositories in GitHub. [We](https://www.zerocracy.com)
 manage all of our projects there. GitHub is sending me hundreds of emails

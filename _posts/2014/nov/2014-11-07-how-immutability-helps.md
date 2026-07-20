@@ -187,7 +187,7 @@ arguments of a constructor and you're done.
 
 ## How Did I Design An Immutable Email?
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://http.jcabi.com %}
 
 When I was designing [jcabi-email](https://github.com/jcabi/jcabi-email)
 I started with a small and simple class:

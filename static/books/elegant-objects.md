@@ -54,7 +54,7 @@ style: |
 ---
 
 {: .book-badge}
-{% badge /images/books/elegant-objects/cover-eo1.png 160 http://goo.gl/W2WVMk %}
+{% badge /images/books/elegant-objects/cover-eo1.png L http://goo.gl/W2WVMk %}
 
 "Elegant Objects" is my first book. It is about object-oriented
 programming from an idealistic and, maybe, a bit of a futuristic
@@ -145,7 +145,7 @@ May 11, 2017:
 I created funny [Telegram stickers](https://t.me/addstickers/elegantobjects),
 about object-oriented programming. Feel free to use them.
 
-{% badge /images/books/elegant-objects/cactus-stickers.png 150 %}
+{% badge /images/books/elegant-objects/cactus-stickers.png L %}
 
 Apr 27, 2017:
 I've got stickers for you. I will give them in exchange for an Amazon
@@ -197,7 +197,7 @@ If you see yourself on the list, please [email me](mailto:blog@yegor256.com)
 and we'll discuss the practical
 details. I'll be ready to mail you the manuscript in a few days.
 
-{% badge /images/books/elegant-objects/cover-razbor-poletov.png 125 %}
+{% badge /images/books/elegant-objects/cover-razbor-poletov.png L %}
 
 <a name="razbor"></a>
 Feb 23, 2017:
@@ -713,7 +713,7 @@ send me that picture and I will send you a Kindle/epub/PDF/whatever
 file **for free**. How does that sound?
 
 <div class="book-event">&nbsp;</div>
-{% badge /images/books/elegant-objects/cover-eo1.png 125 http://goo.gl/W2WVMk %}
+{% badge /images/books/elegant-objects/cover-eo1.png L http://goo.gl/W2WVMk %}
 Feb 22, 2016:
 The book is published! It is for sale
 [on Amazon](http://goo.gl/W2WVMk).
@@ -728,7 +728,7 @@ an email at [book@yegor256.com](mailto:book@yegor256.com).
 I'm very interested in knowing what you think. Thanks!
 
 <div class="book-event">&nbsp;</div>
-{% badge /images/books/elegant-objects/cactus.svg 125 %}
+{% badge /images/books/elegant-objects/cactus.svg L %}
 Jan 27, 2016:
 This cute cactus, created by [Andreea Mironiuc](http://andreeamironiuc.com/),
 will be on the cover of the book. For a number of reasons. First,
@@ -738,7 +738,7 @@ breaking its skin and treating it as a bag for other objects. And fourth,
 I just like it.
 
 <div class="book-event">&nbsp;</div>
-{% badge /images/books/elegant-objects/contents.png 125 /images/books/elegant-objects/contents.pdf %}
+{% badge /images/books/elegant-objects/contents.png L /images/books/elegant-objects/contents.pdf %}
 Jan 19, 2016:
 Nearly all the reviewers have finished already. I'm waiting for the
 last two to send me their results, and then I will start making
@@ -747,14 +747,14 @@ so far. All reviewers said the book was worth reading.
 Here is its [contents](/images/books/elegant-objects/contents.pdf), by the way.
 
 <div class="book-event">&nbsp;</div>
-{% badge /images/books/amazon-advantage.gif 125 https://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
+{% badge /images/books/amazon-advantage.gif L https://www.amazon.com/Elegant-Objects-Yegor-Bugayenko/dp/1519166915/ %}
 Jan 13, 2016:
 You can [pre-order](http://goo.gl/W2WVMk)
 the book on Amazon.com. The price is **$40.96**.
 As promised, the book will be published on **Feb 22**.
 
 <div class="book-event">&nbsp;</div>
-{% badge /images/books/elegant-objects/seven-pages.png 125 /images/books/elegant-objects/seven-pages.pdf %}
+{% badge /images/books/elegant-objects/seven-pages.png L /images/books/elegant-objects/seven-pages.pdf %}
 Dec 24, 2015:
 Here is a small Christmas gift for those who are interested
 in the book: [**seven pages** from chapter 2.4](/images/books/elegant-objects/seven-pages.pdf), which
@@ -785,7 +785,7 @@ the names of selected reviewers here soon. Thanks a lot to all of you
 for your readiness to help!
 
 <div class="book-event">&nbsp;</div>
-{% badge /images/books/elegant-objects/elegant-objects-cover-0.1.png 150 %}
+{% badge /images/books/elegant-objects/elegant-objects-cover-0.1.png L %}
 Nov 22, 2015:
 The book is ready in its first draft, version **0.1**.
 I invite you to become its first reviewer. Send me

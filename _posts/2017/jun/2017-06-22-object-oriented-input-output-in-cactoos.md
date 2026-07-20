@@ -19,7 +19,7 @@ keywords:
   - input/output cactoos
 ---
 
-{% badge /images/books/elegant-objects/cactus.svg 92 https://www.cactoos.org %}
+{% badge /images/books/elegant-objects/cactus.svg M https://www.cactoos.org %}
 
 [Cactoos](https://www.cactoos.org) is a library of object-oriented
 Java primitives

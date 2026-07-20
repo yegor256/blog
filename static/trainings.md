@@ -30,7 +30,7 @@ He is an active open source [contributor](https://github.com/yegor256),
 Aside from his [regular speaking](/talks.html) at international software conferences, Yegor, once in a while, trains programmers in their offices.
 You have a chance to see Yegor in your office with one of these three trainings:
 
-{% badge /images/trainings/yegor-bugayenko-training-5.jpg 200 %}
+{% badge /images/trainings/yegor-bugayenko-training-5.jpg XL %}
 
 &#35;1: **Object-Oriented Programming Done Right**<br/>
 Why do classes get so big and turn into spaghetti code? What's wrong with
@@ -43,7 +43,7 @@ How to make sure the code is readable not only by its authors, but also
 by new team members? How to increase the lifetime of code and minimize
 re-writing?
 
-{% badge /images/trainings/yegor-bugayenko-training-1.jpg 200 %}
+{% badge /images/trainings/yegor-bugayenko-training-1.jpg XL %}
 
 &#35;2: **DevOps Done Right**<br/>
 Why continuous integration doesn't work even though Jenkins or Travis are configured
@@ -55,7 +55,7 @@ in a co-located team? What is blue/green deployment and how to utilize
 it right in a multi-node deployment configuration? How to migrate to AWS
 or Google Cloud, where to start from?
 
-{% badge /images/trainings/yegor-bugayenko-training-4.jpg 200 %}
+{% badge /images/trainings/yegor-bugayenko-training-4.jpg XL %}
 
 &#35;3: **Microtasking Done Right**<br/>
 Why, no matter how much we plan, our deadlines are missed? Why don't we

@@ -25,7 +25,7 @@ including [RubyGems](https://www.yegor256.com/2014/08/26/publish-to-rubygems.htm
 [CloudBees](https://www.yegor256.com/2014/08/25/deploy-to-cloudbees.html)
 and [Maven Central](https://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html).
 
-{% badge /images/2014/09/heroku-logo.svg 100 https://www.heroku.com %}
+{% badge /images/2014/09/heroku-logo.svg M https://www.heroku.com %}
 
 This one describes how Heroku deployment can be automated. When I
 need to deploy a new version of an Aintshy web application,
@@ -93,7 +93,7 @@ release:
 You can compare your file with live Rultor
 [configuration of aintshy/hub](https://github.com/aintshy/hub/blob/master/.rultor.yml).
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like this into it

@@ -18,7 +18,7 @@ keywords:
 image: /images/andreea/pet.png
 ---
 
-{% badge /images/andreea/pet.svg 200 %}
+{% badge /images/andreea/pet.svg XL %}
 
 It's a full list of my pet projects (which are still alive). If interested
 in helping any of them, don't hesitate to [email](mailto:pets@yegor256.com).
@@ -28,7 +28,7 @@ interested to discuss a co-founding opportunity for you: I will pay for
 all project expenses and you will write software. We will be co-founders.
 [Email me](mailto:cofounder@yegor256.com).
 
-{% badge //doc.rultor.com/images/logo.svg 70 https://www.rultor.com %}
+{% badge //doc.rultor.com/images/logo.svg S https://www.rultor.com %}
 
 [Rultor.com](https://www.rultor.com) is a chat bot that helps GitHub projects automate
 their basic DevOps procedures, including merging, deploying, and
@@ -38,7 +38,7 @@ and [Deployment Script vs. Rultor]({% pst 2014/sep/2014-09-11-deployment-script-
 <br/>
 Founded 5-Jun-2013.
 
-{% badge https://www.qulice.com/logo.svg 140 https://www.qulice.com %}
+{% badge https://www.qulice.com/logo.svg L https://www.qulice.com %}
 
 [Qulice](https://www.qulice.com) is an aggregate of a few popular and powerful
 style checkers for Java, in particular Checkstyle and PMD. Qulice not only makes it
@@ -48,7 +48,7 @@ Java projects of mine.
 <br/>
 Founded 22-Aug-2011.
 
-{% badge //www.sixnines.io/images/logo.svg 70 https://www.sixnines.io %}
+{% badge //www.sixnines.io/images/logo.svg S https://www.sixnines.io %}
 
 [SixNines.io](https://www.sixnines.io) is a website availability monitor
 that constantly HTTP requests your website to measure how often
@@ -58,7 +58,7 @@ a nice SVG badge, a landing page, and via JSON/XML. More about it here:
 <br/>
 Founded 10-Mar-2017.
 
-{% badge /images/pets/jare.svg 70 https://www.jare.io %}
+{% badge /images/pets/jare.svg S https://www.jare.io %}
 
 [Jare.io](https://www.jare.io) is an instant CDN for small projects. It
 helps webmasters to eliminate the necessity to pay for CDN and spend time
@@ -67,7 +67,7 @@ configuring it. More about it here:
 <br/>
 Founded 2-Mar-2016.
 
-{% badge //avatars2.githubusercontent.com/u/24456188 70 https://www.0pdd.com %}
+{% badge //avatars2.githubusercontent.com/u/24456188 S https://www.0pdd.com %}
 
 [0pdd.com](https://www.0pdd.com) is a hosted puzzles collector for GitHub projects,
 which automates and streamlines
@@ -79,7 +79,7 @@ More about it here:
 <br/>
 Founded 8-Dec-2016.
 
-{% badge /images/pets/s3auth.png 140 https://www.s3auth.com %}
+{% badge /images/pets/s3auth.png L https://www.s3auth.com %}
 
 [S3Auth.com](https://www.s3auth.com) is a lightweight Basic authentication
 gateway for Amazon S3 buckets. Unfortunately AWS doesn't provide such
@@ -89,7 +89,7 @@ More about it here: [Basic HTTP Auth for S3 Buckets]({% pst 2014/apr/2014-04-21-
 <br/>
 Founded 22-Aug-2012.
 
-{% badge /images/pets/stateful.svg 70 https://www.stateful.co %}
+{% badge /images/pets/stateful.svg S https://www.stateful.co %}
 
 [Stateful.co](https://www.stateful.co) is a hosted set of micro-services
 that help achieve statefulness in a multi-server/node environments. In other
@@ -99,7 +99,7 @@ Still not clear? Check this out:
 <br/>
 Founded 7-May-2014.
 
-{% badge //www.takes.org/logo.png 70 https://www.takes.org %}
+{% badge //www.takes.org/logo.png S https://www.takes.org %}
 
 [Takes.org](https://www.takes.org) is an open source Java web framework,
 which adheres to almost all principles of object-oriented programming
@@ -109,7 +109,7 @@ More about it in this article:
 <br/>
 Founded 8-Jan-2015.
 
-{% badge /images/books/elegant-objects/cactus.svg 70 https://www.cactoos.org %}
+{% badge /images/books/elegant-objects/cactus.svg S https://www.cactoos.org %}
 
 [Cactoos.org](https://www.cactoos.org) is an open source Java library
 of object-oriented primitives, which are the alternatives to
@@ -119,7 +119,7 @@ More about it in this article:
 <br/>
 Founded 23-May-2017.
 
-{% badge //www.rehttp.net/images/logo.svg 70 https://www.rehttp.net %}
+{% badge //www.rehttp.net/images/logo.svg S https://www.rehttp.net %}
 
 [ReHTTP.net](https://www.rehttp.net) is an HTTP repeater, which stays as
 an extra layer between web apps and accumulates HTTP requests they send
@@ -130,7 +130,7 @@ More about it in this article:
 Founded 21-Aug-2017.
 
 <!--
-{% badge //www.threecopies.com/images/logo.png 70 https://www.threecopies.com %}
+{% badge //www.threecopies.com/images/logo.png S https://www.threecopies.com %}
 
 [ThreeCopies.com](https://www.threecopies.com) is a hosted service
 to backup your server-side data. You create a bash script and one of our
@@ -142,7 +142,7 @@ More about it in this article:
 Founded 25-Jun-2017.
 -->
 
-<!-- {% badge //www.wring.io/images/logo.svg 70 https://www.wring.io %} -->
+<!-- {% badge //www.wring.io/images/logo.svg S https://www.wring.io %} -->
 
 <!-- [Wring.io](https://www.wring.io) is a smart inbox for GitHub (and other, in the future)
 notifications we can't parse in our email inbox, because there are too many of them.
@@ -152,7 +152,7 @@ More about it in this article:
 <br/>
 Founded 21-Feb-2016. -->
 
-{% badge //github.com/yegor256/tacit/raw/master/tacit_logo.png 70 https://github.com/yegor256/tacit %}
+{% badge //github.com/yegor256/tacit/raw/master/tacit_logo.png S https://github.com/yegor256/tacit %}
 
 [Tacit](https://github.com/yegor256/tacit) is a CSS framework without a single
 "class," especially for those who don't understand anything in graphic
@@ -162,7 +162,7 @@ More about it in this article:
 <br/>
 Founded 7-Apr-2015.
 
-{% badge /images/pets/jcabi.svg 70 https://www.jcabi.com %}
+{% badge /images/pets/jcabi.svg S https://www.jcabi.com %}
 
 [JCabi](https://www.jcabi.com) is a collection of over 20 small Java libraries,
 which were designed with object-oriented paradigm in mind, to solve some
@@ -173,7 +173,7 @@ and [jcabi-github]({% pst 2014/may/2014-05-14-object-oriented-github-java-sdk %}
 <br/>
 Founded 29-Apr-2012.
 
-{% badge //www.xembly.org/logo.png 70 https://www.xembly.org %}
+{% badge //www.xembly.org/logo.png S https://www.xembly.org %}
 
 [Xembly](https://www.xembly.org) is a language and a Java library for creating
 and modifying XML documents, which decorates DOM and makes it way easier
@@ -183,7 +183,7 @@ More about it in this article:
 <br/>
 Founded 31-Jul-2013.
 
-{% badge //www.zold.io/logo.png 70 https://www.zold.io %}
+{% badge //www.zold.io/logo.png S https://www.zold.io %}
 
 [Zold](https://www.zold.io) is a digital currency for fast micro payments,
 based on the proof-of-work principle, but without the Blockchain. More
@@ -192,7 +192,7 @@ There is also a [blog](https://blog.zold.io), where I regularly post some short 
 <br/>
 Founded 29-Jan-2018.
 
-{% badge //www.mailanes.com/logo.svg 70 https://www.mailanes.com %}
+{% badge //www.mailanes.com/logo.svg S https://www.mailanes.com %}
 
 [Mailanes](https://www.mailanes.com) is a newsletter management email delivery
 web system that does what MailChimp and similar products can do, but in
@@ -202,7 +202,7 @@ More about it in this article:
 <br/>
 Founded 27-Aug-2018.
 
-<!-- {% badge //www.soalition.com/logo.svg 70 https://www.soalition.com %} -->
+<!-- {% badge //www.soalition.com/logo.svg S https://www.soalition.com %} -->
 
 <!--
 [Soalition](https://www.soalition.com) is a manager of social coalitions
@@ -214,7 +214,7 @@ you all gain better social visibility of your mutual idea.
 Founded 28-Aug-2018.
 -->
 
-{% badge //www.0rsk.com/logo.svg 70 https://www.0rsk.com %}
+{% badge //www.0rsk.com/logo.svg S https://www.0rsk.com %}
 
 [0rsk](https://www.0rsk.com) is a free online risk management tool,
 to help you identify risks, record them in Cause+Risk+Effect format,

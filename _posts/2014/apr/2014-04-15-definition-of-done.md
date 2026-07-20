@@ -20,7 +20,7 @@ keywords:
   - human resource management
 ---
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 [Definition of Done (DoD)](https://www.scrum.org/Resources/Scrum-Glossary/Definition-of-Done) is a
 key definition used in Scrum and the one we also use in [XDSD](https://www.xdsd.org).

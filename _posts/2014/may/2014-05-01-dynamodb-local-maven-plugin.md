@@ -20,7 +20,7 @@ keywords:
   - dynamodblocal
 ---
 
-{% badge /images/2014/04/dynamodb-logo.png 150 https://aws.amazon.com/dynamodb %}
+{% badge /images/2014/04/dynamodb-logo.png L https://aws.amazon.com/dynamodb %}
 
 [DynamoDB Local](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.html)
 is a locally running copy of Amazon DynamoDB server. Amazon developed
@@ -37,7 +37,7 @@ that you start all your supplementary test stubs during
 the `pre-integration-test` phase, run your tests in the `integration-test`
 phase and then shutdown all stubs during the `post-integration-test`.
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://dynamodb.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://dynamodb.jcabi.com %}
 
 It would be great if it were possible to use DynamoDB Local
 that way. I didn't find any Maven plugins for that purpose,

@@ -26,7 +26,7 @@ style: |
   }
 ---
 
-{% badge /images/andreea/webinar.svg 200 %}
+{% badge /images/andreea/webinar.svg XL %}
 
 On the first Wednesday of each month, at 11am PST, I _try to_ organize
 a webinar. For about an hour we talk about software

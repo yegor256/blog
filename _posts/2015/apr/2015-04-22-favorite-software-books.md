@@ -141,7 +141,7 @@ cover to cover and you will save many hours of your time in the future.
 Git is a de-facto standard in version control, and every programmer must
 know its fundamental principles---not from a cheat sheet but from an original source.
 
-{% badge /images/2015/04/book-javascript.jpg 96 https://amzn.to/2cgyfQj %}
+{% badge /images/2015/04/book-javascript.jpg M https://amzn.to/2cgyfQj %}
 [**JavaScript: The Definitive Guide: Activate Your Web Pages**](https://amzn.to/2cgyfQj)
 by David Flanagan.
 JavaScript is a language of the modern Web, and this book explains it very well.

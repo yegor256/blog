@@ -48,7 +48,7 @@ It was [propaganda](https://en.wikipedia.org/wiki/Propaganda) in 1949.
 But isn't it quite similar to what I've just seen a few days ago,
 produced and directed in 2015 by [Ridley Scott](https://www.imdb.com/name/nm0000631/)?
 
-{% badge /images/2015/10/ussr-symbol.jpg 128 https://en.wikipedia.org/wiki/Soviet_Union %}
+{% badge /images/2015/10/ussr-symbol.jpg L https://en.wikipedia.org/wiki/Soviet_Union %}
 
 In 1949, the goal of Soviet propaganda was to convince people that
 their personal situations with a lack of food and lack of future were
@@ -120,7 +120,7 @@ Intentionally _false_. He knows better than I do how real management
 works in real-life organizations. Hollywood is not much different
 than Silicon Valley in this aspect. So, why is he lying?
 
-{% badge /images/2015/10/third-reich-symbol.jpg 128 https://en.wikipedia.org/wiki/Nazi_Germany %}
+{% badge /images/2015/10/third-reich-symbol.jpg L https://en.wikipedia.org/wiki/Nazi_Germany %}
 
 Why was [Joseph Goebbels](https://en.wikipedia.org/wiki/Joseph_Goebbels),
 a minister of propaganda in the Third Reich,

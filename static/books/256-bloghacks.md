@@ -23,7 +23,7 @@ style: |
 ---
 
 {: .book-badge}
-{% badge /images/books/256-bloghacks/cover.png 160 %}
+{% badge /images/books/256-bloghacks/cover.png L %}
 
 "256 Bloghacks" is a book about blogging. It says everything
 I can say about my blogging experience here, at this blog. I put

@@ -45,7 +45,7 @@ Where did that profit come from?
 How can Coinbase pay me eight times more now than I paid them less than a year ago?
 Where did they get that cash?
 
-{% badge /images/2017/08/coinbase-1.jpg 200 %}
+{% badge /images/2017/08/coinbase-1.jpg XL %}
 
 Obviously you know what a [Ponzi scheme](https://en.wikipedia.org/wiki/Ponzi_scheme) is, right?
 If you don't, watch
