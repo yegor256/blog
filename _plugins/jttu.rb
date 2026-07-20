@@ -15,7 +15,7 @@ module Yegor
     def render(context)
       Yegor::Badge.new(
         "https://github.com/yegor256/bibliography/blob/master/book-covers/#{@name}.jpg?raw=true",
-        'L',
+        'M',
         "https://jttu.net/#{@name}"
       ).render(context)
     end
