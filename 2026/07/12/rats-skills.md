@@ -24,7 +24,7 @@ They are good reads, but barely useful as practical guidelines.
 They treat career-successful people as humans.
 They are not, they are _rats_.
 
-{% badge https://yegor256.github.io/bibliography/book-covers/schrijvers2004rat.jpg L %}
+{% jttu schrijvers2004rat %}
 [Joep Schrijvers]'s [The Way of the Rat] (2004), my favorite, uses exactly this metaphor.
 Being a rat means [taking advantage][monkey-habits] of other people and enjoying it.
 
