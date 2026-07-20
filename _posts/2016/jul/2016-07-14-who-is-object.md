@@ -127,7 +127,7 @@ treats an object as a box with data that are too visible to
 the outside world. That visibility provokes us to think _procedurally_
 and try to access that data as much as possible.
 
-{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
+{% jttu west2004object %}
 
 If we would think of an object as a **representative** of data instead of
 a container of them, we would not want to get a hold of data as soon as

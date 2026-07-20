@@ -114,7 +114,7 @@ from class `Manuscript`, as if it's not a
 [living organism]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}), but rather a dead
 one from which we can inherit its parts, "money, properties, or a title."
 
-{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
+{% jttu west2004object %}
 
 Implementation inheritance was created as a mechanism for
 [code reuse](https://en.wikipedia.org/wiki/Code_reuse),

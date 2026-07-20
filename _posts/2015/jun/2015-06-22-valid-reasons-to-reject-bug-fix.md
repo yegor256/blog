@@ -53,7 +53,7 @@ product when under pressure.
 Obviously, there are situations when the unit tests are wrong and
 we have to delete them. In those cases, don't forget to create new ones.
 
-{% badge /images/2015/04/book-legacy.jpg 96 https://amzn.to/1SdcZ8M %}
+{% jttu feathers2004working %}
 
 There are also situations when the bug must be fixed in a few minutes
 to put the system back online and fixing all unit tests will take an hour.

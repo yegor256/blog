@@ -45,7 +45,7 @@ per hour, per week, or per month, but rather for verified deliverables.
 What is the difference and what does all this have to do with slavery?
 Let's see.
 
-{% badge /images/2015/07/how-to-manage-your-slaves.jpg 96 https://amzn.to/2crHiNG %}
+{% jttu falx2014manage %}
 
 My point here is that any payment schedule based on time instead of results
 is turning us into slaves.

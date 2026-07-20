@@ -8,13 +8,11 @@ require 'fastimage'
 # My module
 module Yegor
   # A small clickable image badge, sized from its source.
-  class BadgeBlock < Liquid::Tag
-    def initialize(tag, markup, tokens)
-      super
-      opts = markup.strip.split(/\s+/, 3)
-      @src = opts[0].strip
-      @width = opts[1].strip
-      @url = opts[2].strip if opts[2]
+  class Badge
+    def initialize(src, width, url = nil)
+      @src = src
+      @width = width
+      @url = url
     end
 
     def render(context)
@@ -32,6 +30,21 @@ module Yegor
             "style='width:#{@width}px;max-width:100%;' alt='badge'/>"
       img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>" if @url
       "<figure class='badge'>#{img}</figure>\n\n"
+    end
+  end
+
+  # The Liquid tag for a badge.
+  class BadgeBlock < Liquid::Tag
+    def initialize(tag, markup, tokens)
+      super
+      opts = markup.strip.split(/\s+/, 3)
+      @src = opts[0].strip
+      @width = opts[1].strip
+      @url = opts[2].strip if opts[2]
+    end
+
+    def render(context)
+      Yegor::Badge.new(@src, @width, @url).render(context)
     end
   end
 end

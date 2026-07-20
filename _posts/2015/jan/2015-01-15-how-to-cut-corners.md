@@ -147,7 +147,7 @@ to create a test that reproduces the bug. Basically, this is what you should sta
 every ticket with, be it a bug or a feature. Catch the bug with a unit test!
 Prove that the bug exists by failing the build with a new test.
 
-{% badge /images/2015/01/working-effectively-with-legacy-code.png 96 https://amzn.to/1SdcZ8M %}
+{% jttu feathers2004working %}
 
 This may be rather difficult to achieve, especially when the software you're
 trying to fix or modify was written by <span class="strike">idiots</span>

@@ -229,7 +229,7 @@ class BooksTest {
 }
 ```
 
-{% badge /images/2014/12/java-concurrency-in-practice.png 100 https://amzn.to/2c7sVS1 %}
+{% jttu goetz2006java %}
 
 The first argument of `assertThat()` is an instance of
 [`Func`](https://javadoc.io/static/org.cactoos/cactoos/0.29/org/cactoos/Func.html)

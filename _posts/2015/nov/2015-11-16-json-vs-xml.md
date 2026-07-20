@@ -83,7 +83,7 @@ We're using it **temporarily** to transfer a piece
 of data from point A to point B. Indeed, it is shorter than XML and
 more readable. That's it.
 
-{% badge /images/2015/04/book-xml-nutshell.jpg 96 https://amzn.to/2c5n8uC %}
+{% jttu harold2000xml %}
 
 XML is not a data format; it is a **language**. A very powerful one. Let me
 show you what it's capable of. Let me basically explain why I love it. And I would

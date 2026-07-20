@@ -18,7 +18,7 @@ keywords:
   - quotes about software testing
 ---
 
-{% badge /images/2014/08/art-of-software-testing.png 96 https://jttu.net/myers2012art %}
+{% jttu myers2012art %}
 
 "[The Art of Software Testing"](https://jttu.net/myers2012art)"
 by Glenford J. Myers, Tom Badgett and Corey Sandler is one of
