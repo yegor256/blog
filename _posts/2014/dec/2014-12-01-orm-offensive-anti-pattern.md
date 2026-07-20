@@ -205,7 +205,7 @@ they miss the main point. You can see a very good, practical answer
 to these practical arguments given by Bozhidar Bozhanov
 in his [ORM Haters Don't Get It](http://techblog.bozho.net/orm-haters-dont-get-it/) blog post.
 
-{% badge /images/2014/11/orm-anti-pattern.svg XL %}
+{% badge /images/2014/11/orm-anti-pattern.svg XXL %}
 
 The main point is that ORM, instead of encapsulating database interaction
 inside an object, extracts it away, literally tearing a solid and cohesive

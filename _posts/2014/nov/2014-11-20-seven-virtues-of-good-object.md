@@ -44,7 +44,7 @@ Here is my list of qualities of a good object.
 
 ## Class vs. Object
 
-{% badge /images/2014/11/good-object-1.png XL %}
+{% badge /images/2014/11/good-object-1.png XXL %}
 
 Before we start talking about [objects]({% pst 2016/jul/2016-07-14-who-is-object %}),
 let's define what a *class* is. It
@@ -78,7 +78,7 @@ Now, let's talk about objects and their best and worst sides.
 
 ## 1. He Exists in Real Life
 
-{% badge /images/2014/11/good-object-2.png XL %}
+{% badge /images/2014/11/good-object-2.png XXL %}
 
 First of all, an object is a **living organism**. Moreover, an object
 should be [anthropomorphized](https://en.wikipedia.org/wiki/Anthropomorphism), i.e.
@@ -126,7 +126,7 @@ start thinking about refactoring.
 
 ## 2. He Works by Contracts
 
-{% badge /images/2014/11/good-object-3.png XL %}
+{% badge /images/2014/11/good-object-3.png XXL %}
 
 A good object always works by contracts. He expects to be hired not
 because of his personal merits but because he obeys the contracts. On the
@@ -323,7 +323,7 @@ it is just obvious.
 
 ## 6. His Name Is Not a Job Title
 
-{% badge /images/2014/11/good-object-4.png XL %}
+{% badge /images/2014/11/good-object-4.png XXL %}
 
 The name of an object should tell us what this object **is**, not what
 it **does**, just like we name objects in real life: book instead of
@@ -362,7 +362,7 @@ More about this in [Don't Create Objects That End With -ER]({% pst 2015/mar/2015
 
 ## 7. His Class Is Either Final or Abstract
 
-{% badge /images/2014/11/good-object-5.png XL %}
+{% badge /images/2014/11/good-object-5.png XXL %}
 
 A good object comes from either a final or abstract class. A `final` class is one that
 can't be extended via [inheritance]({% pst 2016/sep/2016-09-13-inheritance-is-procedural %}).

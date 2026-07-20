@@ -42,7 +42,7 @@ of our code is much more important than its performance.
 
 ## Prices vs Salaries
 
-{% badge /images/2014/10/trends.png XL %}
+{% badge /images/2014/10/trends.png XXL %}
 
 Look at this graph. It is a comparison of two trends over the
 last twenty years (1994-2014).

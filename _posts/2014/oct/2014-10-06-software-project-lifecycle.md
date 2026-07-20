@@ -95,7 +95,7 @@ much more than a mistake made later.
 
 ## Thinking
 
-{% badge /images/2014/10/lifecycle-thinking.png XL %}
+{% badge /images/2014/10/lifecycle-thinking.png XXL %}
 
 Thinking is the first and the most important phase.
 
@@ -135,7 +135,7 @@ Using this HoC metric, we can roughly
 
 ## Building
 
-{% badge /images/2014/10/lifecycle-building.png XL %}
+{% badge /images/2014/10/lifecycle-building.png XXL %}
 
 This is a one-man job for
 [an architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).
@@ -166,7 +166,7 @@ More about the Building phase here:
 
 ## Fixing
 
-{% badge /images/2014/10/lifecycle-fixing.png XL %}
+{% badge /images/2014/10/lifecycle-fixing.png XXL %}
 
 Now it's time to build a distributed team of programmers. First, we
 invite those who've worked on other projects and have already
@@ -207,7 +207,7 @@ in GitHub.
 
 ## Using
 
-{% badge /images/2014/10/lifecycle-using.png XL %}
+{% badge /images/2014/10/lifecycle-using.png XXL %}
 
 This is the final phase and it can take quite a long time. By now, the product is
 ready and is launched to the market. But we still receive

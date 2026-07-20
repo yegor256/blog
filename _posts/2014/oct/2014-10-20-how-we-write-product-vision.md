@@ -19,7 +19,7 @@ keywords:
 image: /images/2014/10/lifecycle-thinking.png
 ---
 
-{% badge /images/2014/10/lifecycle-thinking.png XL %}
+{% badge /images/2014/10/lifecycle-thinking.png XXL %}
 
 Every software project we work with is started from a Product Vision document. We
 create it during our

@@ -31,7 +31,7 @@ style: |
   }
 ---
 
-{% badge /images/andreea/paintings.svg XL %}
+{% badge /images/andreea/paintings.svg XXL %}
 
 This is the full list of my paintings, which are for sale. You can buy
 them, paying via PayPal (you will also have to pay for shipment,

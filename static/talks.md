@@ -95,7 +95,7 @@ script: |
   });
 ---
 
-{% badge /images/andreea/yegor-is-presenting.svg XL %}
+{% badge /images/andreea/yegor-is-presenting.svg XXL %}
 
 Here is where I'll be speaking soon.
 I update this list very often, but

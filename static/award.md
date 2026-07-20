@@ -19,7 +19,7 @@ keywords:
   - open source project award
 ---
 
-{% badge /images/andreea/quality-award.svg XL %}
+{% badge /images/andreea/quality-award.svg XXL %}
 
 I'm a big fan of rules and discipline in software development; as an example, see
 [Are You a Hacker or a Designer?]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).

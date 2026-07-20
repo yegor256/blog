@@ -27,7 +27,7 @@ I'm Yegor Bugayenko (|jeɪˈɡər buːɡʌˈjenkɒ|, Russian:
 Update: Since September 2019, I'm a software developer
   in [Huawei](https://www.huawei.com).
 
-{% badge /images/about/yegor-speaking.jpg XL %}
+{% badge /images/about/yegor-speaking.jpg XXL %}
 
 I was a **founder** and CEO of [Zerocracy](https://www.zerocracy.com/),
   a software engineering and management platform with a unique

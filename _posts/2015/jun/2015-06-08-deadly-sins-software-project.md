@@ -38,7 +38,7 @@ literally unmaintainable. I believe there are seven fundamental and fatal
 
 ## Anti-Patterns
 
-{% badge /images/2015/06/software-project-sins-1.gif XL %}
+{% badge /images/2015/06/software-project-sins-1.gif XXL %}
 
 Unfortunately, the programming languages we're using are too _flexible_.
 They allow too much and forbid too little. For example, Java has nothing
@@ -79,7 +79,7 @@ the chance to survive.
 
 ## Untraceable Changes
 
-{% badge /images/2015/06/software-project-sins-2.gif XL %}
+{% badge /images/2015/06/software-project-sins-2.gif XXL %}
 
 When I look at the commit history, I should be able to tell
 for every single change _what_ was changed, _who_ made a change, and
@@ -112,7 +112,7 @@ stay with you, no matter how bad (or messy) it may look to you now.
 
 ## Ad Hoc Releases
 
-{% badge /images/2015/06/software-project-sins-3.gif XL %}
+{% badge /images/2015/06/software-project-sins-3.gif XXL %}
 
 Every piece of software must be packaged before it can
 be delivered to the end user. If it's a Java library, it has to be
@@ -143,7 +143,7 @@ procedure is fully automated and can be executed from the command line.
 
 ## Volunteer Static Analysis
 
-{% badge /images/2015/06/software-project-sins-4.gif XL %}
+{% badge /images/2015/06/software-project-sins-4.gif XXL %}
 
 [Static analysis](https://en.wikipedia.org/wiki/Static_program_analysis)
 is what makes our code _look_ better. And by making it
@@ -169,7 +169,7 @@ rule is violated.
 
 ## Unknown Test Coverage
 
-{% badge /images/2015/06/software-project-sins-5.gif XL %}
+{% badge /images/2015/06/software-project-sins-5.gif XXL %}
 
 Simply put, [test coverage](https://en.wikipedia.org/wiki/Code_coverage)
 is the degree to which the software has been
@@ -194,7 +194,7 @@ fail if it comes out lower than a certain pre-defined threshold
 
 ## Nonstop Development
 
-{% badge /images/2015/06/software-project-sins-6.gif XL %}
+{% badge /images/2015/06/software-project-sins-6.gif XXL %}
 
 What I mean by nonstop is without milestones and releases. No matter what kind of
 software you're writing, you must release and [versionalize](http://semver.org/) it frequently.
@@ -219,7 +219,7 @@ if the project is working on 3.4 at the moment.
 
 ## Undocumented Interfaces
 
-{% badge /images/2015/06/software-project-sins-7.gif XL %}
+{% badge /images/2015/06/software-project-sins-7.gif XXL %}
 
 Every piece of software has interfaces through which it is supposed to be used.
 If it's a Ruby gem, there are classes and methods that I'm going to

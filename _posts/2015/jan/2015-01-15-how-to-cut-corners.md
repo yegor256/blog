@@ -63,7 +63,7 @@ So be positive; don't blame yourself. If you don't know how this
 damn code works, it's a fault of the code, not you. Good code is
 easy to understand and maintain.
 
-{% badge /images/2015/01/cut-corners-1.png XL %}
+{% badge /images/2015/01/cut-corners-1.png XXL %}
 
 Don't try to eat spaghetti code; complain to the chef and ask
 him or her to cook something better (BTW, I love spaghetti).
@@ -110,7 +110,7 @@ you don't understand. And in order to understand, you will need a lot of
 time---much more than you have from your project manager or your Scrum board. What
 do you do?
 
-{% badge /images/2015/01/cut-corners-2.png XL %}
+{% badge /images/2015/01/cut-corners-2.png XXL %}
 
 Again, think positively and don't blame yourself. If the software is not
 clear enough for a total stranger, it's "their" fault, not yours. They created
@@ -180,7 +180,7 @@ crash it in a test. The error stack trace reported by the end user or your
 production logging system is not reproducible. It's a very common situation.
 What do you do?
 
-{% badge /images/2015/01/cut-corners-3.png XL %}
+{% badge /images/2015/01/cut-corners-3.png XXL %}
 
 I think the best option here is to create a test that will prove that
 the code works as intended. The test won't fail, and the build will remain clean.
@@ -248,7 +248,7 @@ test from you as proof of the bug's absence. They also don't allow you to
 disable a feature, because it is critical to the user experience. What choices
 do you have? Just one.
 
-{% badge /images/2015/01/cut-corners-4.png XL %}
+{% badge /images/2015/01/cut-corners-4.png XXL %}
 
 Be professional and say "No, I can't do this; find someone else."
 Being a professional developer doesn't mean being able to fix any problem. Instead,

@@ -400,7 +400,7 @@ and six half-hour sessions. Then I published
 to YouTube.
 I also had to create their front images and some text descriptions.
 
-{% badge /images/2021/04/iccq-box.png XL %}
+{% badge /images/2021/04/iccq-box.png XXL %}
 
 **Gifts**<br/>
 We packaged our Proceedings in custom-made boxes together with
