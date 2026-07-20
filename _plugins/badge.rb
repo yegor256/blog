@@ -37,7 +37,7 @@ module Yegor
     private
 
     def width
-      { 'XS' => 3, 'S' => 4.25, 'M' => 6, 'L' => 8.5, 'XL' => 12, 'XXL' => 17 }
+      { 'XS' => 3.75, 'S' => 5.25, 'M' => 7.5, 'L' => 10.5, 'XL' => 15, 'XXL' => 21 }
         .fetch(@size.upcase) { raise "Unknown badge size #{@size.inspect}" }
     end
   end
