@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/04/12/puzzle-driven-development-by-roles.html
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 In this post, I'll try to walk you through a project managed
 with the spirit of

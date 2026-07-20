@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2015/01/10/windows-appveyor-maven.html
 
-{% badge /images/2014/10/appveyor.png 64 https://www.appveyor.com %}
+{% badge /images/2014/10/appveyor.png S https://www.appveyor.com %}
 
 The purpose of Continuous Integration is to tell us, the developers,
 when the product we're working on is not "packagable" any more. The

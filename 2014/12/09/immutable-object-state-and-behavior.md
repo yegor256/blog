@@ -250,7 +250,7 @@ on its own? No, it's not possible. Every object is a representative of
 a real-world entity. So, who does it represent if we want to keep `title` inside
 it and we don't have any file or HTTP page behind the object?
 
-{% badge /images/2014/12/memory-stick.png 200 %}
+{% badge /images/2014/12/memory-stick.png XL %}
 
 It represents *computer memory*.
 

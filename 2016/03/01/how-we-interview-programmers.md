@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2016/03/01/how-we-interview-programmers.html
 
-{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg M https://www.zerocracy.com %}
 
 At [Zerocracy](https://www.zerocracy.com), we've been getting
 about 10 [resumes]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %})

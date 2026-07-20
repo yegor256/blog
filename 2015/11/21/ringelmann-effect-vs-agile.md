@@ -20,7 +20,7 @@ all non-native English speakers. Then, both groups received the same
 task---to create as many words as possible using the letters in a single given word.
 It's a pretty simple task that just requires some time and creativity.
 
-{% badge https://www.socialpsychology.org/images/socialfigures/ringelmann.jpg 72 https://en.wikipedia.org/wiki/Max_Ringelmann %}
+{% badge https://www.socialpsychology.org/images/socialfigures/ringelmann.jpg S https://en.wikipedia.org/wiki/Max_Ringelmann %}
 
 The first group worked as a team. They had just one piece of paper
 and one pen to write down the words they found. We called them a

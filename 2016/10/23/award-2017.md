@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2016/10/23/award-2017.html
 
-{% badge /images/andreea/quality-award.svg 300 %}
+{% badge /images/andreea/quality-award.svg XXL %}
 
 This is the third year of the
 [Software Quality Award](/award.html). The prize

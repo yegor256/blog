@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/10/07/stop-chatting-start-coding.html
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 The first principle of eXtremely Distributed Software Development
 ([XDSD](https://www.xdsd.org)) states that

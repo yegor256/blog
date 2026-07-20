@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2016/03/30/jare-instant-free-cdn.html
 
-{% badge https://www.jare.io/images/logo.svg 92 https://www.jare.io %}
+{% badge https://www.jare.io/images/logo.svg M https://www.jare.io %}
 
 CDN stands for a Content Delivery Network. Technically, it is a bunch
 of servers located in different countries and continents. You give them

@@ -157,7 +157,7 @@ That's what you need!
 
 <hr/>
 
-{% badge /images/2016/01/management-stripped-bare.jpg 96 https://amzn.to/2bNjruM %}
+{% badge /images/2016/01/management-stripped-bare.jpg M https://amzn.to/2bNjruM %}
 
 This list is definitely not exhaustive. I'm sure there are many
 more [interesting](https://en.wikipedia.org/wiki/Psychopathy)

@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/07/24/rultor-automated-merging.html
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 You get a GitHub pull request. You review it. It looks correct---it's time
 to merge it into `master`. You post a comment in it, asking

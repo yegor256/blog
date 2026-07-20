@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2017/09/05/rehttp-http-repeater.html
 
-{% badge https://www.rehttp.net/images/logo.svg 92 https://www.rehttp.net %}
+{% badge https://www.rehttp.net/images/logo.svg M https://www.rehttp.net %}
 
 I faced a problem a few weeks ago with
 [0pdd.com](https://www.0pdd.com), one of my web apps that is

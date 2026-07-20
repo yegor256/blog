@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/08/15/retry-java-method-on-exception.html
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://aspects.jcabi.com %}
 
 If you have a method that fails occasionally and
 you want to retry it a few times before

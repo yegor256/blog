@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2021/10/21/objectionary.html
 
-{% badge /images/books/elegant-objects/cactus.svg 128 https://www.eolang.org %}
+{% badge /images/books/elegant-objects/cactus.svg L https://www.eolang.org %}
 
 Since the time of Kernighan and Ritchie we share binary code in
 libraries. You need to print some text with [`printf()`](https://en.wikipedia.org/wiki/Printf_format_string) in C++?
@@ -32,7 +32,7 @@ a "combination of dictionary and object factory," with the following properties:
   * Objects are nothing more than collections of objects;
   * Objects require hardware-specific VMs for execution.
 
-{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
+{% jttu west2004object %}
 Seventeen years later (the book was published in 2004), we implemented the idea
 on top of [EO](https://www.eolang.org), our new programming language.
 The language is intentionally much simpler than Java or C++.

@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2015/03/26/jaxb-vs-xembly.html
 
-{% badge https://www.xembly.org/logo.png 64 https://www.xembly.org %}
+{% badge https://www.xembly.org/logo.png S https://www.xembly.org %}
 
 [JAXB](https://en.wikipedia.org/wiki/Java_Architecture_for_XML_Binding)
 is a 10-year-old Java technology that allows us to

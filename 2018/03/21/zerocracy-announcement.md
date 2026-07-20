@@ -67,7 +67,7 @@ result of this chaos we have restarts (94% projects!), cost overruns, and time
 overruns. The report also says that technology incompetence is the root cause of project failures only in
 7% cases. In almost all other cases the management is the source of the trouble.
 
-{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg M https://www.zerocracy.com %}
 
 We, at [Zerocracy](https://www.zerocracy.com),
 believe that in the 21st century programmers (and not only them) deserve
@@ -94,7 +94,7 @@ only by their merits, which are visible via [objective metrics](https://www.zero
 Thanks to this, programmers become their own bosses, reporting only to a soulless piece of software,
 which acts according to a very strict [policy](https://www.zerocracy.com/how-it-works).
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 The [policy](https://www.zerocracy.com/how-it-works)
 of Zerocracy is based on [XDSD](https://www.xdsd.org) principles,

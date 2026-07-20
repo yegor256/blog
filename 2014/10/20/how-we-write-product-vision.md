@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/10/20/how-we-write-product-vision.html
 
-{% badge /images/2014/10/lifecycle-thinking.png 250 %}
+{% badge /images/2014/10/lifecycle-thinking.png XXL %}
 
 Every software project we work with is started from a Product Vision document. We
 create it during our

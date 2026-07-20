@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/05/14/object-oriented-github-java-sdk.html
 
-{% badge /images/2014/05/github-logo.png 128 %}
+{% badge /images/2014/05/github-logo.png L %}
 
 [GitHub](https://www.github.com) is an awesome platform for maintaining Git sources and
 tracking project issues. I moved all my projects (both private and public)
@@ -18,7 +18,7 @@ but faced a number of issues:
  * They provide no mocking instruments
  * They don't cover the entire API and can't be extended
 
-{% badge https://www.jcabi.com/logo-square.svg 64 %}
+{% badge https://www.jcabi.com/logo-square.svg S %}
 
 Keeping in mind all those drawbacks, I created my
 own library---[jcabi-github](https://github.jcabi.com).

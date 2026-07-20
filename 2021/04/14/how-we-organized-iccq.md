@@ -348,7 +348,7 @@ the required
 [package-list](https://ieeemce.org/planning-basics/ieee-conference-publications/submitting-proceedings-ieee-xplore/)
 file for IEEE.
 
-{% badge https://www.iccq.ru/images/2021/proceedings.png 200 %}
+{% badge https://www.iccq.ru/images/2021/proceedings.png XL %}
 
 **Prints**<br/>
 We found a printing company here in Moscow and ordered them to print
@@ -379,7 +379,7 @@ and six half-hour sessions. Then I published
 to YouTube.
 I also had to create their front images and some text descriptions.
 
-{% badge /images/2021/04/iccq-box.png 250 %}
+{% badge /images/2021/04/iccq-box.png XXL %}
 
 **Gifts**<br/>
 We packaged our Proceedings in custom-made boxes together with

@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/05/26/amazon-s3-java-oop-adapter.html
 
-{% badge /images/2014/05/s3-logo.png 150 %}
+{% badge /images/2014/05/s3-logo.png L %}
 
 I'm a big fan of Amazon Web Services (AWS). I'm using them
 in almost all of my projects. One of their most popular
@@ -32,7 +32,7 @@ String content = IOUtils.toString(input, "UTF-8");
 input.close();
 ```
 
-{% badge https://www.jcabi.com/logo-square.svg 64 %}
+{% badge https://www.jcabi.com/logo-square.svg S %}
 
 As always, procedural programming has its inevitable
 disadvantages. To overcome them all, I designed

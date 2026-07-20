@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/04/14/jcabi-dynamo-java-api-of-aws-dynamodb.html
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://dynamo.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://dynamo.jcabi.com %}
 
 I'm a big fan of cloud computing in general and of
 [Amazon Web Services](https://aws.amazon.com/) in particular. I honestly believe that in a

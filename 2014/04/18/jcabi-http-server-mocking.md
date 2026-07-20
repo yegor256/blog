@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/04/18/jcabi-http-server-mocking.html
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://http.jcabi.com %}
 
 Recently, I explained a
 [fluent Java HTTP client]({% pst 2014/apr/2014-04-11-jcabi-http-intro %})

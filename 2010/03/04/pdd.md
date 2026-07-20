@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2010/03/04/pdd.html
 
-{% badge https://avatars2.githubusercontent.com/u/24456188 128 https://www.0pdd.com %}
+{% badge https://avatars2.githubusercontent.com/u/24456188 L https://www.0pdd.com %}
 
 PDD, or Puzzle Driven Development, is a method used to break down programming
 tasks into smaller ones and enable their implementation in parallel. The PDD

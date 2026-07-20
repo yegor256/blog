@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2017/06/22/object-oriented-input-output-in-cactoos.html
 
-{% badge /images/books/elegant-objects/cactus.svg 92 https://www.cactoos.org %}
+{% badge /images/books/elegant-objects/cactus.svg M https://www.cactoos.org %}
 
 [Cactoos](https://www.cactoos.org) is a library of object-oriented
 Java primitives

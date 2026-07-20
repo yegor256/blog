@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2019/05/07/sibit-bitcoin-command-line-client.html
 
-{% badge https://raw.githubusercontent.com/yegor256/sibit/master/logo.svg?sanitize=true 64 https://github.com/yegor256/sibit %}
+{% badge https://raw.githubusercontent.com/yegor256/sibit/master/logo.svg?sanitize=true S https://github.com/yegor256/sibit %}
 
 [Bitcoin](https://www.bitcoin.org) was a big technical mystery for me. All the articles I'd read
 about it sounded extremely complex and absolutely indigestible. Until

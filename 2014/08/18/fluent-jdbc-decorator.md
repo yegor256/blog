@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/08/18/fluent-jdbc-decorator.html
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://aspects.jcabi.com %}
 
 This is how you fetch text from a SQL table
 with [jcabi-jdbc](https://jdbc.jcabi.com):

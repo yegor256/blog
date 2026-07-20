@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/04/29/w3c-java-validators.html
 
-{% badge https://www.jcabi.com/logo-square.svg 64 http://w3c.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S http://w3c.jcabi.com %}
 
 A few years ago, I created two Java wrappers for W3C validators: ([HTML](http://validator.w3.org/) and
 [CSS](http://jigsaw.w3.org/css-validator/)).

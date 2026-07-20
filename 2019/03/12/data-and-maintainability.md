@@ -170,7 +170,7 @@ example made a promise to take part of the problem and let me never worry about 
 but in reality it only made the problem larger, by giving me back two problems:
 `print()` and `Idx`.
 
-{% badge /images/2019/03/bjarne-stroustrup-book.jpg 96 https://amzn.to/2uMlANB %}
+{% jttu stroustrup2014programming %}
 
 Why is this thanks to C++? Because C++ added object-orientation on top of C procedural
 programming ideas, never even thinking about prohibiting some of them, to _force_

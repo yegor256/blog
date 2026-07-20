@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2020/11/15/award-2021.html
 
-{% badge /images/andreea/quality-award.svg 300 %}
+{% badge /images/andreea/quality-award.svg XXL %}
 
 This is the _seventh_ year of the
 [Software Quality Award](/award.html). The maximum prize
@@ -25,7 +25,7 @@ This year we do this competition together with
 initiative to support young and emerging products. We hope
 that some of our winners will get rewards from KaiCode.
 
-{% badge https://www.kaicode.org/logo.svg 128 %}
+{% badge https://www.kaicode.org/logo.svg L %}
 
 Rules:
 

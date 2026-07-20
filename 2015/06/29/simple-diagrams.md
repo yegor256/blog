@@ -63,7 +63,7 @@ all at one glance and immediately understand who is who. I just made up
 the number five, but you get the idea---make sure all diagram participants
 are easy to count. I've seen diagrams with 25 or more rectangles ... that's unacceptable.
 
-{% badge /images/2015/06/uml-distilled-book.jpg 96 https://amzn.to/2bQVt00 %}
+{% jttu fowler2004uml %}
 
 **Use UML**.
 Well, use whatever notation you feel comfortable with, but many years ago

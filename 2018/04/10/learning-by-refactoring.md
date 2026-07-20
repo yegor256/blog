@@ -21,7 +21,7 @@ According to Wikipedia,
 factoring---without changing its external behavior." The goal
 of refactoring is to make code more readable and suitable for modifications.
 
-{% badge /images/2018/04/refactoring.jpg 96 https://amzn.to/2E7i17H %}
+{% jttu fowler1999refactoring %}
 
 Martin Fowler in his famous book [Refactoring: Improving the Design of Existing Code](https://amzn.to/2E7i17H)
 suggested a number of refactoring techniques which help making
@@ -110,9 +110,9 @@ if we are talking about closed-source commercial code. We are lucky if
 the classes have more or less descriptive names and are small and
 cohesive.
 
-{% badge /images/2015/04/book-goos.jpg 96 https://amzn.to/1PBpoDT %}
+{% jttu freeman2009growing %}
 
-{% badge /images/2015/04/book-legacy.jpg 96 https://amzn.to/1SdcZ8M %}
+{% jttu feathers2004working %}
 
 However, instead of documentation I prefer to deal with unit tests. They
 explain the code much better and prove that it works. When I don't

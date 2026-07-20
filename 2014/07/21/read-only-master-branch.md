@@ -41,7 +41,7 @@ a top priority for its author and the entire team. The error
 should be fixed right after a red flag is raised by the
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) server.
 
-{% badge /images/2014/07/continuous-delivery-book.png 100 https://amzn.to/2bQVmlb %}
+{% jttu humble2010continuous %}
 
 [Continuous Delivery by Jez Humble et. al.](https://amzn.to/2bQVmlb)
 explains this approach perfectly in Chapter 7, pages 169&ndash;186.
@@ -144,7 +144,7 @@ in GitHub. The only solution is to work through forks and pull requests only.
 Simply remove everybody from the list of "collaborators" and they will
 have to submit changes through pull requests.
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 Then, start using [Rultor.com](https://www.rultor.com), which will help
 you to test, merge and push every pull request. Basically, Rultor is

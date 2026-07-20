@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/04/28/xml-xpath-hamcrest-matchers.html
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://matchers.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://matchers.jcabi.com %}
 
 [Hamcrest](https://github.com/hamcrest/JavaHamcrest) is my favorite instrument
 in unit testing. It replaces the JUnit procedural assertions of

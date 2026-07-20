@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/05/18/cloud-autoincrement-counters.html
 
-{% badge /images/2014/04/dynamodb-logo.png 150 %}
+{% badge /images/2014/04/dynamodb-logo.png L %}
 
 Amazon DynamoDB is a great NoSQL cloud database. It is cheap,
 highly reliable and rather powerful. I'm using it in many web systems.
@@ -41,7 +41,7 @@ In case of conditional updates, you should
 [retry]({% pst 2014/aug/2014-08-15-retry-java-method-on-exception %})
 a few times in case of collisions.
 
-{% badge http://img.stateful.co/pomegranate.svg 128 %}
+{% badge http://img.stateful.co/pomegranate.svg L %}
 
 To make life easier in a few of my applications, I created a simple web
 service---[stateful.co](https://www.stateful.co).

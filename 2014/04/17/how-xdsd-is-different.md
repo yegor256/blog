@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/04/17/how-xdsd-is-different.html
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 eXtremely Distributed Software Development, or [XDSD](https://www.xdsd.org) for short, is a methodology
 that differs significantly from working in traditional software development

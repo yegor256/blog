@@ -103,7 +103,7 @@ Of course, another random set of Java classes may produce different results,
 but this is how empirical science works: we can't prove the theorem other
 than by some experiments.
 
-{% badge https://www.jpeek.org/logo.svg 64 https://www.jpeek.org %}
+{% badge https://www.jpeek.org/logo.svg S https://www.jpeek.org %}
 
 I created an open source software library to help me do these experiments and called
 it [jPeek.org](https://www.jpeek.org). It is a calculator of cohesion metrics

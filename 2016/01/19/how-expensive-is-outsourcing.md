@@ -21,7 +21,7 @@ and why and how we're [different]({% pst 2014/apr/2014-04-17-how-xdsd-is-differe
 from everybody else. He seemed to be impressed.
 Then, he asked, "_How much_ do you charge?"
 
-{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg M https://www.zerocracy.com %}
 
 I told him that we are also different in the way we bill for our work,
 because we don't charge for the time spent by our programmers sitting
@@ -81,7 +81,7 @@ Now, honestly tell me if you find and solve eight bugs per day with that
 level of complexity, detailed code review, and precision of
 documentation? I seriously doubt it.
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 In that [How Much Do You Pay Per Line of Code?]({% pst 2014/apr/2014-04-11-cost-of-loc %})
 post, I actually did a comparison of a co-located project, where I was an architect,

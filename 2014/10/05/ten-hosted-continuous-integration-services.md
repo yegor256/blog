@@ -172,7 +172,7 @@ them in the list with &#x263A; emoji.
 
 ## Best Four
 
-{% badge /images/2014/10/shippable.svg 92 %}
+{% badge /images/2014/10/shippable.svg M %}
 
 **Shippable** was easy to configure
 since it understands `.travis.yml` out of the box.
@@ -182,7 +182,7 @@ configured via `shippable.yml` file in the repository. The service
 looks stable and robust, no complains so far. What is especially
 cool about them is that they allow you to build in a Docker container.
 
-{% badge /images/2014/10/travis.png 92 https://www.travis-ci.org %}
+{% badge /images/2014/10/travis.png M https://www.travis-ci.org %}
 
 [**Travis**](https://www.travis-ci.org) is
 the best platform I've seen so far. Mostly because
@@ -194,7 +194,7 @@ say. I strongly disagree, since Jenkins will
 require a 24x7 administration, which costs way more than $129, but
 it's always difficult to explain.
 
-{% badge /images/2014/10/wercker.png 92 %}
+{% badge /images/2014/10/wercker.png M %}
 
 **Wercker** was a European product
 from Amsterdam, which is still in beta and that's why free
@@ -205,7 +205,7 @@ They also have an interesting concept of build "boxes," which
 can be pre-configured similar to Docker containers.
 It works rather stable for the last few months, no complains so far.
 
-{% badge /images/2014/10/appveyor.png 92 https://www.appveyor.com %}
+{% badge /images/2014/10/appveyor.png M https://www.appveyor.com %}
 
 [**AppVeyor**](https://www.appveyor.com) is the only one
 that runs Windows builds. Even though I'm working mostly with
@@ -219,7 +219,7 @@ with AppVeyor.
 
 ## Others
 
-{% badge /images/2014/10/semaphoreapp.png 64 https://www.semaphoreapp.com %}
+{% badge /images/2014/10/semaphoreapp.png S https://www.semaphoreapp.com %}
 
 [**SemaphoreApp**](https://www.semaphoreapp.com) is easy to
 configure and work with. It makes an impression of a light-weight
@@ -230,7 +230,7 @@ custom script that downloads and unpacks the latest Maven. Another downside is
 that they are not configurable through a file (like `.travis.yml`)---you should do everything through a UI. They also support
 [caching between builds](https://semaphoreapp.com/docs/caching-between-builds.html).
 
-{% badge /images/2014/10/snap.png 64 https://www.snap-ci.com %}
+{% badge /images/2014/10/snap.png S https://www.snap-ci.com %}
 
 **Snap-CI** ~~is~~ was a product of
 ThoughtWorks, an author of [Go](https://www.go.cd/),
@@ -249,43 +249,43 @@ requests, but I didn't manage to configure them. They simply
 don't notify our pull requests in GitHub, even though they build them.
 Maybe I'll find a way, so far it's not clear.
 
-{% badge /images/2014/10/circleci.png 64 https://www.circleci.com %}
+{% badge /images/2014/10/circleci.png S https://www.circleci.com %}
 
 [**CircleCI**](https://www.circleci.com) I still don't know why my build
 fails there. Really difficult to configure and understand
 what's going on. Trying to figure it out...
 
-{% badge /images/2014/10/solanolabs.png 64 https://www.solanolabs.com %}
+{% badge /images/2014/10/solanolabs.png S https://www.solanolabs.com %}
 
 [**SolanoLabs**](https://www.solanolabs.com) looks rather immature and
 difficult to configure. They don't even support automatic GitHub hook
 configuration when new repository is added. However, their sales spams me
 rather aggressively.
 
-{% badge /images/2014/10/hostedci.png 64 %}
+{% badge /images/2014/10/hostedci.png S %}
 
 **Hosted-CI** was for iOS/OSX only. They didn't
 give anything for free, even for open source projects. I didn't have a chance
 to test them yet.
 
-{% badge /images/2014/10/cloudbees.png 64 https://www.cloudbees.com %}
+{% badge /images/2014/10/cloudbees.png S https://www.cloudbees.com %}
 
 [**CloudBees**](https://www.cloudbees.com) is basically a hosted Jenkins.
 I don't really like Jenkins, that's why can't recommend this platform.
 
-{% badge /images/2014/10/deploybot.png 64 https://www.deploybot.com %}
+{% badge /images/2014/10/deploybot.png S https://www.deploybot.com %}
 
 [**DeployBot**](https://deploybot.com/) doesn't even allow me to login
 via GitHub, huh? They seem to be more "deployment" oriented, not just
 continuous integration.
 
-{% badge /images/2014/10/vexor.png 64 %}
+{% badge /images/2014/10/vexor.png S %}
 
 **Vexor** looked nice and offered a rather unique
 billing model---they charge per build, not per month. I would definitely
 recommend to give it a try. I couldn't make it work though...
 
-{% badge /images/2014/10/greenhouseci.png 64 https://www.greenhouseci.com %}
+{% badge /images/2014/10/greenhouseci.png S https://www.greenhouseci.com %}
 
 [**GreenHouseCI**](http://greenhouseci.com/) is a CI platform for
 mobile apps (iOS, Android, etc.) Seems to be interesting, I just don't have

@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/07/29/docker-in-rultor.html
 
-{% badge https://doc.rultor.com/images/docker-logo.png 100 https://www.docker.io %}
+{% badge https://doc.rultor.com/images/docker-logo.png M https://www.docker.io %}
 
 [Docker](https://www.docker.io) is a command line tool that
 can run a shell command in a virtual Linux, inside an isolated file system.
@@ -13,7 +13,7 @@ Docker containers. Take this Maven project for example:
 $ sudo docker run -i -t ubuntu mvn clean test
 ```
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 This command will start a new Ubuntu system and execute
 `mvn clean test` inside it. [Rultor.com](https://www.rultor.com), our

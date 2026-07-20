@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/04/24/java-xml-parsing-and-traversing.html
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://xml.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://xml.jcabi.com %}
 
 Unlike with many other modern languages, parsing XML in Java requires  more than
 one line of code. XML traversing using XPath takes even more code,  and I find

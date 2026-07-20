@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/07/03/how-to-read-manifest-mf.html
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://manifests.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://manifests.jcabi.com %}
 
 Every Java package (JAR, WAR, EAR, etc.) has
 a [`MANIFEST.MF`](http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html)

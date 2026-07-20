@@ -84,7 +84,7 @@ does the job, prepares a response, and posts it there. The client receives
 an email notification about a new response just posted to the ticket. The
 client then checks GitHub and finds the response.
 
-{% badge /images/2015/11/bot-3.jpg 250 %}
+{% badge /images/2015/11/bot-3.jpg XXL %}
 
 Here is how this would look in a restaurant: There would be a board with sticky notes.
 First, you write the note, "I'd like spaghetti carbonara
@@ -112,7 +112,7 @@ provides a lot of benefits to us, its developers.
 
 ## No Need to Be Fast
 
-{% badge /images/2015/11/bot-5.jpg 250 %}
+{% badge /images/2015/11/bot-5.jpg XXL %}
 
 First of all, we don't need to care much about the performance of our
 UI. Well, we don't care at all, since we don't have a UI. Do we care
@@ -139,7 +139,7 @@ otherwise, I immediately get frustrated. The same thing happens to you, right?
 
 ## No Need to Look Cute
 
-{% badge /images/2015/11/bot-4.jpg 250 %}
+{% badge /images/2015/11/bot-4.jpg XXL %}
 
 Another advantage of this no-server design is that there is no need
 to look pretty. There is no web interface, no HTML, no CSS,
@@ -170,7 +170,7 @@ on being **nice**. We spend them on being **useful**.
 
 ## Much Easier to Scale
 
-{% badge /images/2015/11/bot-6.jpg 250 %}
+{% badge /images/2015/11/bot-6.jpg XXL %}
 
 If we have too many stickies on that board, we just hire more cooks,
 or maybe even build another kitchen, and the problem is solved.
@@ -190,7 +190,7 @@ decision of when to process them is made by us.
 
 ## Mistakes Are Not So Visible
 
-{% badge /images/2015/11/bot-2.jpg 250 %}
+{% badge /images/2015/11/bot-2.jpg XXL %}
 
 When you're standing in front of a customer, most of your mistakes
 are unforgivable, primarily because they are very visible. On the other
@@ -218,7 +218,7 @@ in our server logs. Users didn't see them. Well, mostly.
 
 ## Everything Is Traceable
 
-{% badge /images/2015/11/bot-1.jpg 250 %}
+{% badge /images/2015/11/bot-1.jpg XXL %}
 
 Since there is a communication board between us, it's very easy
 to see the entire history of our discussion, which is very intuitive.

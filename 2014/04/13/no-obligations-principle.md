@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/04/13/no-obligations-principle.html
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 It is a very common problem in project management---how to make team
 members more responsible and avoid [micro

@@ -11,7 +11,7 @@ memory and on disc. However, it is always good to make sure
 that your classes are tested against a database identical
 to the one you have in production environment.
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://mysql.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://mysql.jcabi.com %}
 
 I've created my own Maven plugin, [jcabi-mysql-maven-plugin](https://mysql.jcabi.com),
 that does exactly two things: starts a MySQL server on

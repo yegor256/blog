@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/08/22/art-of-software-testing.html
 
-{% badge /images/2014/08/art-of-software-testing.png 96 https://jttu.net/myers2012art %}
+{% jttu myers2012art %}
 
 "[The Art of Software Testing"](https://jttu.net/myers2012art)"
 by Glenford J. Myers, Tom Badgett and Corey Sandler is one of
@@ -53,7 +53,7 @@ full of priceless quotes that can also be very practical. For example, on page 6
 
 > Testing is a destructive, even sadistic, process, which explains why most people find it difficult
 
-{% badge /images/2014/08/glenford-myers.png 200 https://amzn.to/1Y3qAbN %}
+{% badge /images/2014/08/glenford-myers.png XL https://amzn.to/1Y3qAbN %}
 
 In Chapter 2, Dr. Myers discusses the psychology of testing and a very common and crucial
 misunderstanding of testing objectives. He claims that it is commonly accepted that

@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2015/04/16/award.html
 
-{% badge /images/andreea/quality-award.svg 300 %}
+{% badge /images/andreea/quality-award.svg XXL %}
 
 I'm a big fan of rules and discipline in software development; as an example, see
 [Are You a Hacker or a Designer?]({% pst 2014/oct/2014-10-26-hacker-vs-programmer-mentality %}).
@@ -45,7 +45,7 @@ Rules:
  * Final decisions will be made by me and are not negotiable
    (although I may invite other people to help me make the right decision).
 
-{% badge /images/2015/06/jetbrains-logo.gif 128 https://www.jetbrains.com %}
+{% badge /images/2015/06/jetbrains-logo.gif L https://www.jetbrains.com %}
 
 Each project must be:
 

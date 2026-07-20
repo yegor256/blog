@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2017/09/26/threecopies-server-data-backup.html
 
-<!-- {% badge https://www.threecopies.com/images/logo.png 64 https://www.threecopies.com %} -->
+<!-- {% badge https://www.threecopies.com/images/logo.png S https://www.threecopies.com %} -->
 
 I have a number of data resources which exist in one place only and which
 I don't really want to lose. For example, I have a hosted PHP website,

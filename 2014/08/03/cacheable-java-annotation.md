@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/08/03/cacheable-java-annotation.html
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://aspects.jcabi.com %}
 
 Say, you have a method that takes time to execute and you want
 its result to be cached. There are [many solutions](https://www.coderanch.com/how-to/java/CachingStrategies),

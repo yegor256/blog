@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/09/11/deployment-script-vs-rultor.html
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 When I explain how [Rultor](https://www.rultor.com) automates deployment/release processes,
 very often I hear something like:

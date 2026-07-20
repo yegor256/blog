@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2014/06/20/limit-method-execution-time.html
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://aspects.jcabi.com %}
 
 Say, you want to allow a Java method to work for
 a maximum of five seconds and want an exception

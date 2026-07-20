@@ -27,7 +27,7 @@ in pretty simple English. But do we have time to read those boring standards?
 They are for university professors and certification boards.
 We are practitioners, for goodness sake! ... Hold on, I'm joking.
 
-{% badge /images/2015/11/ieee-830.jpg 128 https://standards.ieee.org/findstds/standard/830-1998.html %}
+{% badge /images/2015/11/ieee-830.jpg L https://standards.ieee.org/findstds/standard/830-1998.html %}
 
 No matter how small the project is and how practical we are, there
 is always a document that explains what needs to be done, and it

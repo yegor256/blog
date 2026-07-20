@@ -2,7 +2,7 @@
 
 Source: https://www.yegor256.com/2019/05/14/cause-risk-effect.html
 
-{% badge https://www.0rsk.com/logo.svg 64 https://www.0rsk.com %}
+{% badge https://www.0rsk.com/logo.svg S https://www.0rsk.com %}
 
 "A project manager's work should not focus on dealing with problems;
 it should focus on preventing them,"---this is how
