@@ -19,7 +19,7 @@ keywords:
   - unit testing anti-pattern java
 image: /images/2018/12/breaking-bad.jpg
 jb_picture:
-  caption: Breaking Bad (2010) by Vince Gilligan
+  caption: Breaking Bad (2008-2013) by Vince Gilligan
 ---
 
 I wrote some time ago about [anti-patterns in OOP]({% pst 2014/sep/2014-09-10-anti-patterns-in-oop %}).
