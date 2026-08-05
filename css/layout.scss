@@ -391,15 +391,15 @@ figure {
   position: relative;
 
   figcaption {
-    background-color: $silver;
+    background-color: $plate;
     bottom: $rem;
-    color: $platinum;
+    color: $chalk;
     font-size: .8 * $rem;
     left: .5 * $rem;
     line-height: $rem;
     max-width: 90%;
     position: absolute;
-    text-shadow: .2 * $px .2 * $px $gray;
+    text-shadow: .2 * $px .2 * $px $soot;
   }
 
   figcaption::before {

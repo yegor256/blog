@@ -9,6 +9,9 @@
   --silver: #a4a0a0;
   --platinum: #e1e0e0;
   --red: #b22222;
+  --plate: #a4a0a0;
+  --chalk: #e1e0e0;
+  --soot: #4f4949;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,3 +31,6 @@ $gray: var(--gray);
 $silver: var(--silver);
 $platinum: var(--platinum);
 $red: var(--red);
+$plate: var(--plate);
+$chalk: var(--chalk);
+$soot: var(--soot);
