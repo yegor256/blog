@@ -14,4 +14,9 @@ $(function() {
   s.src = 'https://yegor256.disqus.com/embed.js';
   s.setAttribute('data-timestamp', +new Date());
   document.head.appendChild(s);
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+    if (window.DISQUS) {
+      window.DISQUS.reset({ reload: true, config: window.disqus_config });
+    }
+  });
 });
