@@ -3179,6 +3179,7 @@ else
 else's
 elsewhere
 elucidate
+elvis
 emacs
 email
 emailed

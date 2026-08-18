@@ -49,6 +49,12 @@ And one more:
 m = a > b ? 'Hello' : nil
 ```
 
+Or even with the [Elvis], if it would be Perl:
+
+```perl
+m = a > b ?: 'Hello'
+```
+
 Which one is "right?" Are there any Perl developers? Can you suggest
 some other way to achieve the same result?
 
@@ -125,3 +131,5 @@ would be restricted.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">An ability to implement the same thing in a few different ways (a.k.a. &quot;syntax sugar&quot;) makes a programming language ...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1076767928715038720?ref_src=twsrc%5Etfw">December 23, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+[Elvis]: https://en.wikipedia.org/wiki/Elvis_operator
