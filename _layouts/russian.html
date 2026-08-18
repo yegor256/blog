@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% capture disqus %}{% if page.disqus %}{{ page.disqus }}{% else %}https://ru.yegor256.com/{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}.html{% endif %}{% endcapture %}
+
 <section itemscope="" itemtype="http://schema.org/BlogPosting">
   <div itemprop="review" itemscope="" itemtype="http://schema.org/Review">
     <meta itemprop="author" content="{{ site.author.name }}">
@@ -68,7 +70,7 @@ layout: default
         </li>
         <li class="unprintable">
           <i class="icon icon-comments"></i>
-          <a href="{{ site.url }}{{ page.url }}#disqus_thread" itemprop="discussionUrl">комментарии</a>
+          <a href="{{ site.url }}{{ page.url }}#disqus_thread" data-disqus-identifier="{{ disqus }}" itemprop="discussionUrl">комментарии</a>
         </li>
       </ul>
       <div class="buttons notranslate desktop-only">
@@ -121,7 +123,7 @@ layout: default
 
   {% include related.html %}
 
-  {% include disqus.html shortname="ru-yegor256-com" %}
+  {% include disqus.html shortname="ru-yegor256-com" identifier=disqus %}
 
   {% include footer.html %}
 

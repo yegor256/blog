@@ -7,7 +7,7 @@
 
 window.disqus_config = function () {
   this.page.url = document.location.href.split('?')[0].split('#')[0];
-  this.page.identifier = this.page.url;
+  this.page.identifier = window.disqus_identifier || this.page.url;
 };
 $(function() {
   const s = document.createElement('script');

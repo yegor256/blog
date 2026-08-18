@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 layout: russian
+disqus: https://www.yegor256.com/2018/10/07/history-simplification.html
 date: 2018-10-07
 title: "Ветер истории"
 description: |

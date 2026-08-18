@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: MIT
 
 layout: russian
+disqus: https://www.yegor256.com/2024/09/21/interpreters-of-chaos.html
 date: 2024-09-21
 title: "Толкователи хаоса"
 description: |
