@@ -1,1 +1,0 @@
-{%- if include.post.disqus -%}{{ include.post.disqus }}{%- elsif include.post.layout == 'russian' -%}https://ru.yegor256.com/{{ include.post.date | date: '%Y-%m-%d' }}-{{ include.post.slug }}.html{%- endif -%}
