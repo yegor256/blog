@@ -70,8 +70,8 @@ layout: compress
     <!-- see https://help.disqus.com/en/articles/1717274-adding-comment-count-links-to-your-home-page -->
     {% capture forum %}{% if page.layout == 'russian' %}ru-yegor256-com{% else %}yegor256{% endif %}{% endcapture %}
     <script id="dsq-count-scr" src="https://{{ forum }}.disqus.com/count.js" async="async"></script>
-    {% if paginator or page.posts %}
-      <!-- listings mix both blogs, and one count.js speaks for one forum only -->
+    {% unless page.layout == 'post' or page.layout == 'russian' %}
+      <!-- a listing mixes both blogs, and one count.js speaks for one forum only -->
       <script>
         (function() {
           function again() {
@@ -85,7 +85,7 @@ layout: compress
           }
         })();
       </script>
-    {% endif %}
+    {% endunless %}
     {% if page.script %}
       <script>
         {{ page.script }}
