@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% capture disqus %}{% include identifier.html post=page %}{% endcapture %}
+{% assign disqus = page | yb_disqus %}
 
 <section itemscope="" itemtype="http://schema.org/BlogPosting">
   <div itemprop="review" itemscope="" itemtype="http://schema.org/Review">

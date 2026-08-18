@@ -71,6 +71,8 @@ module Yegor
 
   # Module
   module TaggingFilters
+    include DisqusFilters
+
     def tag_cloud(tags)
       tags.keys.sort.map { |t| tag_link(t) }.join(' ')
     end
@@ -130,6 +132,7 @@ module Yegor
     end
 
     def tagged(post)
+      ident = yb_disqus(post)
       "<div class='tagged' data-length='#{post.content.split(/\s+/).length}'>
         <span><a href='#{post.url}'>#{post['title']}</a></span>
         <ul class='subline'>
@@ -140,7 +143,7 @@ module Yegor
           </li>
           <li class='tags'>#{yb_page_tags(post)}</li>
           <li class='unprintable'>
-            <a href='https://www.yegor256.com#{post.url}#disqus_thread' class='comment_count notranslate'>comments</a>
+            <a href='https://www.yegor256.com#{post.url}#disqus_thread'#{" data-disqus-identifier='#{ident}'" unless ident.empty?} class='comment_count notranslate'>comments</a>
           </li>
           #{'<li class="has-poll" title="There is a Twitter poll inside"><i class="icon icon-twitter"></i></li>' if post.content.include?('twitter-tweet')}
           #{'<li class="has-youtube" title="There is a YouTube video inside"><i class="icon icon-youtube"></i></li>' if post.content.include?('{% youtube')}
