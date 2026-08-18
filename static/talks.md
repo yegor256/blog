@@ -69,11 +69,9 @@ style: |
     }
   }
 script: |
-  $(function() {
+  document.addEventListener('DOMContentLoaded', function() {
     $('#future-talks-total').text($('img.future-talk').length);
     $('#past-talks-total').text($('img.past-talk').length);
-  });
-  $(function() {
     var cities = $.map(
       $('span.city'),
       function (v, i) { return $(v).text().toLowerCase(); }
