@@ -5,10 +5,6 @@
 
 /*globals $:false, window:false, document:false */
 
-// This is Disqus configuration, to make it identify the website correctly.
-var disqus_domain = 'yegor256.com';
-var disqus_shortname = 'yegor256';
-
 var VK = {};
 if (typeof($) != 'undefined') {
   $(function() {
