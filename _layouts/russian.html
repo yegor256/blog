@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% capture disqus %}{% if page.disqus %}{{ page.disqus }}{% else %}https://ru.yegor256.com/{{ page.date | date: '%Y-%m-%d' }}-{{ page.slug }}.html{% endif %}{% endcapture %}
+{% capture disqus %}{% include identifier.html post=page %}{% endcapture %}
 
 <section itemscope="" itemtype="http://schema.org/BlogPosting">
   <div itemprop="review" itemscope="" itemtype="http://schema.org/Review">
