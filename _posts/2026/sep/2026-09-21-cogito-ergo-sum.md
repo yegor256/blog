@@ -38,13 +38,28 @@ Adjacent to this, [Edward Deci] and [Richard Ryan],
   among the "vital needs of the human soul."
 Moreover, [Émile Durkheim] in [_Le Suicide (1897)_]
   found suicide rates rise as social integration falls.
-"The true joy in life", according to [Bernard Shaw] in [_Man and Superman (1903)_],
+"The true joy in life",
+  according to [Bernard Shaw] in [_Man and Superman (1903)_],
   is "being used for a mighty purpose."
 I believe that being needed by others is not only a joy,
-  but the reason to exist.
+  but the primary reason to exist.
 
-+ Thinking is what makes us, intellectuals, needed.
-  Jahoda's latent deprivation model — from the Marienthal study (Jahoda, Lazarsfeld & Zeisel, 1933), which observed an Austrian village after its factory closed and recorded the collapse of time structure, purpose, and the sense of counting for something. Jahoda later formalized it: employment supplies time structure, social contact, collective purpose, status, and activity. There is meta-analytic and large-survey support. This is your mechanism — it explains how work delivers being-needed, which is what line 2 needs.
+There are nearly 50 million programmers like us in the world, by
+  [SlashData]'s count.
+We are a small part of something larger: about 400 million people whom
+  [ISCO] classifies as "professionals"---one in nine of everyone
+  employed on the planet.
+[Peter Drucker] named us "knowledge workers" in
+  [Landmarks of Tomorrow (1959)], before the personal computer existed.
+[Robert Reich], in [The Work of Nations (1991)], called us people who
+  "manipulate symbols," and put us at a fifth of the American workforce.
+Counting managers and technicians alongside professionals, [ISCO] now
+  finds 20.1% of the planet in that kind of work.
+The world looks the way America looked in 1989.
+We contribute by thinking, and that is what makes us needed.
+
+
+
 
 + An LLM now thinks better than most of us.
 
@@ -53,6 +68,12 @@ I believe that being needed by others is not only a joy,
 + The "made by a human" will be a liability, not a selling point.
 
 + We will retire, or move to physical work.
+  The most careful global study says most of us won't be fired — we'll be augmented
+  https://www.ilo.org/sites/default/files/2024-07/WP96_web.pdf
+  Gmyrek, Berg & Bescond find that high automation potential covers only 5.5% of employment in high-income countries and 0.4% in low-income ones. Clerical work is by far the most exposed (24% of tasks highly exposed). Most knowledge-work occupations come in at 1–4% of tasks highly exposed. Their conclusion is that work will be "transformed, but still very much in existence."
+  But read their distinction carefully, because it rescues you. They separate automation (job disappears) from augmentation (job stays, machine takes some tasks), and augmentation is much larger — 13.4% in high-income countries against 5.5% for automation. Augmentation is exactly your scenario: you keep the job, the machine does the thinking, you remain for the hands and the liability.
+
+  Every previous automation wave hit the least educated hardest. This one inverts that.
 
 + Robots arrive next, and being needed for our hands is not what we were.
 
@@ -63,6 +84,16 @@ I believe that being needed by others is not only a joy,
 
 I have no remedy, and anyone selling one is lying.
 
+[Daniel Bell] in [The Coming of Post-Industrial Society (1973)] said it plainly:
+  "post-industrial society is organized around knowledge."
+
+
+[Frank Schmidt and John Hunter (1998)] demonstrated that
+  "general mental ability" strongly correlates with job performance.
+
+
 <!--more-->
 
 {% jb_picture_body %}
+
+[Frank Schmidt and John Hunter (1998)]: https://psycnet.apa.org/record/1998-10661-006
