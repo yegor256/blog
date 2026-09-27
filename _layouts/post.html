@@ -25,7 +25,6 @@ layout: default
         {% if page.place %}
           <li class="desktop-only" itemprop="locationCreated">{{ page.place }}</li>
         {% endif %}
-        {{ page | modified }}
         <li class="printable" itemscope="" itemprop="author" itemtype="http://schema.org/Person">
           <span itemprop="name">{{ site.author.name }}</span>
         </li>
@@ -34,6 +33,7 @@ layout: default
           <a href="https://www.yegor256.com{{ page.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
         </li>
       </ul>
+      {{ page | modified }}
       {% if page.translated %}
         <ul class="unprintable subline">
           <li>Translated:</li>

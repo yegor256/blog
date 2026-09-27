@@ -68,6 +68,8 @@ Counting managers and technicians alongside professionals, [ISCO] now
 The world looks the way America looked in 1989.
 We **contribute by thinking**, and that is what makes us needed.
 
+{% quote "Made by a human" will stop being a price premium and will become a disclosure. %}
+
 However, [LLM]s already think better than us, and faster too.
 At the [2025 ICPC World Finals], Gemini [solved] ten of twelve problems.
 Had it competed as a team of humans, it would have finished 2nd out of 139.
@@ -77,7 +79,7 @@ I've been writing code for more than 25 years, contributing over 100K
   lines to [my GitHub] annually.
 Since March, **not a single line of code** committed under my name has been
   written by me.
-It's all Claude Code.
+It's all [Claude Code].
 It was [4%] in February.
 
 And they are not only good.
@@ -212,3 +214,4 @@ Neither does this one.
 [~13x cheaper]: https://epoch.ai/publications/the-plunging-price-of-thought
 [Émile Durkheim]: https://en.wikipedia.org/wiki/%C3%89mile_Durkheim
 [my GitHub]: https://github.com/yegor256
+[Claude Code]: https://claude.com/product/claude-code
