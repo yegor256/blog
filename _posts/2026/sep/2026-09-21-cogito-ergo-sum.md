@@ -94,16 +94,21 @@ Our code won't be illegal at first---just something no reviewer approves.
 In mission-critical systems first, then everywhere.
 "Made by a human" will stop being a price premium and will become a disclosure.
 
+None of this is new.
+[Steven Pinker] in [The Language Instinct (1994)] predicted this:
+  "It will be the stock analysts
+  and petrochemical engineers and parole board members who are in danger
+  of being replaced by machines. The gardeners, receptionists, and cooks
+  are secure in their jobs for decades to come."
+He was writing about the future.
+Thirty-two years later it is career advice.
+In May 2026 [Jensen Huang] [told] a graduating class at Carnegie Mellon:
+  "Electricians, plumbers, iron workers, technicians,
+  builders---this is your time."
+He meant it kindly.
+He was talking to people who had just finished four years of university.
+We will retire, or we will move to physical work.
 
-
-+ We will retire, or move to physical work.
-
-  The most careful global study says most of us won't be fired — we'll be augmented
-  https://www.ilo.org/sites/default/files/2024-07/WP96_web.pdf
-  Gmyrek, Berg & Bescond find that high automation potential covers only 5.5% of employment in high-income countries and 0.4% in low-income ones. Clerical work is by far the most exposed (24% of tasks highly exposed). Most knowledge-work occupations come in at 1–4% of tasks highly exposed. Their conclusion is that work will be "transformed, but still very much in existence."
-  But read their distinction carefully, because it rescues you. They separate automation (job disappears) from augmentation (job stays, machine takes some tasks), and augmentation is much larger — 13.4% in high-income countries against 5.5% for automation. Augmentation is exactly your scenario: you keep the job, the machine does the thinking, you remain for the hands and the liability.
-
-  Every previous automation wave hit the least educated hardest. This one inverts that.
 
 + Robots arrive next, and being needed for our hands is not what we were.
 
@@ -132,4 +137,4 @@ I have no remedy, and anyone selling one is lying.
 [country of geniuses in a datacenter]: https://darioamodei.com/essay/machines-of-loving-grace
 [safer]: https://arxiv.org/pdf/2508.21634
 [artisanal code]: https://www.theregister.com/software/2024/09/18/the-case-for-handcrafted-software-in-a-mass-produced-world/671793
-
+[told]: https://fortune.com/2026/05/11/jensen-huang-tells-electricians-and-plumbers-this-is-your-time/
