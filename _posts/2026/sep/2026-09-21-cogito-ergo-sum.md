@@ -3,26 +3,33 @@
 # SPDX-License-Identifier: MIT
 
 layout: post
-title: "Cogito Ergo Sum"
+title: "Non Cogito, Ergo Quid Sum?"
 date: 2026-09-21
 place: Moscow, Russia
 tags: mood ai
 description: |
   ...
 keywords:
-  - ...
-  - ...
-  - ...
-  - ...
-  - ...
+  - threats of AI
+  - AI blogging
+  - AI threat
+  - employment after AI
+  - AI jobs
 image: /images/2026/09/...
 jb_picture:
   caption: ...
 ---
 
-this essay is worse than the one the machine would write, and that's the point.
-
-This is the least-discussed, and possibly the biggest threat AI poses to humanity.
+Claude helped me write this.
+Mostly quotes and fact-checking.
+I catch myself wanting to stress the "mostly," and that is the
+  whole subject of this essay.
+It's September 2026.
+By September 2027 I don't expect to be using Claude to write blog posts.
+Because I don't expect there to be blog posts by me to write.
+I won't be a writer.
+I won't be a programmer either.
+And I don't know what a man is for, after that.
 
 ---
 
@@ -109,23 +116,49 @@ He meant it kindly.
 He was talking to people who had just finished four years of university.
 We will retire, or we will move to physical work.
 
+[John Keynes] named it in [Economic Possibilities for Our Grandchildren (1930)]:
+  "technological unemployment," he called it,
+  "unemployment due to our discovery of means of economising the use of
+  labour outrunning the pace at which we can find new uses for labour."
+[Yuval Harari] named the people in 2017:
+  a [useless class] that "will not merely
+  be unemployed---it will be unemployable."
+[Nick Bostrom] declared a world of "deep redundancy" in [Deep Utopia (2024)]:
+  there is nothing you could do that anyone would need.
+He proposed "artificial purpose"---challenges
+  designed for us by the intelligence that replaced us.
+Keynes already knew how that ends:
+  the people who had money and no duties, he wrote, "failed disastrously."
 
-+ Robots arrive next, and being needed for our hands is not what we were.
+A child born today will be obsolete before he finishes school.
 
-+ A child born today will be obsolete before he finishes school.
+This already happened once, to people with less protection than us.
+From 1999, middle-aged Americans without a degree started dying faster
+  than their parents' generation---the first such reversal in a century.
+Drugs, alcohol, suicide.
+[151,845] of them in 2017 alone.
+The suicide rate was the highest since 1938.
+Deaths from alcohol the highest since the First World War.
+[Anne Case] and [Angus Deaton] found the cause was not poverty.
+It was the sense that "their ability to contribute to society has been
+  terribly thwarted."
+We read about it, called it their problem, and we went back to work.
+Now the same thing is coming up the ladder, for the people who have
+  the degrees.
 
-+ We will not be needed and we will not have a reason to exist.
-  Hannah Arendt, The Human Condition (1958) — the prologue worries about "a society of laborers without labor,"
+[Hannah Arendt] saw the shape of this in 1958, before anyone had
+  written a line of code.
+"What we are confronted with," she wrote, "is the prospect of a society
+  of laborers without labor, that is, without the only activity left to
+  them. Surely, nothing could be worse."
+And she saw no way out: no class left, "no aristocracy of either a
+  political or spiritual nature from which a restoration of the other
+  capacities of man could start anew."
+The next sentence of her prologue is the one I keep returning to:
+  "To these preoccupations and perplexities, this book does not offer
+  an answer."
 
-I have no remedy, and anyone selling one is lying.
-
-[Daniel Bell] in [The Coming of Post-Industrial Society (1973)] said it plainly:
-  "post-industrial society is organized around knowledge."
-
-
-[Frank Schmidt and John Hunter (1998)] demonstrated that
-  "general mental ability" strongly correlates with job performance.
-
+Neither does this one.
 
 <!--more-->
 
@@ -138,3 +171,6 @@ I have no remedy, and anyone selling one is lying.
 [safer]: https://arxiv.org/pdf/2508.21634
 [artisanal code]: https://www.theregister.com/software/2024/09/18/the-case-for-handcrafted-software-in-a-mass-produced-world/671793
 [told]: https://fortune.com/2026/05/11/jensen-huang-tells-electricians-and-plumbers-this-is-your-time/
+[useless class]: https://ideas.ted.com/the-rise-of-the-useless-class/
+[Deep Utopia (2024)]: https://nickbostrom.com/deep-utopia/
+[151,845]: https://www.tfah.org/report-details/pain-in-the-nation-2023/
