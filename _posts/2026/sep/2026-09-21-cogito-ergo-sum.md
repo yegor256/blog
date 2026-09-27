@@ -31,7 +31,9 @@ I won't be a writer.
 I won't be a programmer either.
 And I don't know what a man is for, after that.
 
----
+<!--more-->
+
+{% jb_picture_body %}
 
 In 1908, [Alfred Adler] suggested that contributing to others
   (a.k.a. [Gemeinschaftsgefühl]) is what gives the individual a sense of worth.
@@ -48,7 +50,7 @@ Moreover, [Émile Durkheim] in [_Le Suicide (1897)_]
 "The true joy in life,"
   according to [Bernard Shaw] in [_Man and Superman (1903)_],
   is "being used for a mighty purpose."
-I believe that being needed by others is not only a joy,
+I believe that being **needed by others** is not only a joy,
   but the primary reason to exist.
 
 There are nearly 50 million programmers like us in the world, by
@@ -63,16 +65,16 @@ We are a small part of something larger: about 400 million people whom
 Counting managers and technicians alongside professionals, [ISCO] now
   finds 20.1% of the planet in that kind of work.
 The world looks the way America looked in 1989.
-We contribute by thinking, and that is what makes us needed.
+We **contribute by thinking**, and that is what makes us needed.
 
-However, LLMs already think better than us, and faster too.
+However, [LLM]s already think better than us, and faster too.
 At the [2025 ICPC World Finals], Gemini [solved] ten of twelve problems.
 Had it competed as a team of humans, it would have finished 2nd out of 139.
 It also solved Problem C, which no human team solved at all.
 That was a year ago.
 I've been writing code for more than 25 years, contributing over 100K
-  lines to GitHub annually.
-Since March, not a single line of code committed under my name has been
+  lines to [my GitHub] annually.
+Since March, **not a single line of code** committed under my name has been
   written by me.
 It's all Claude Code.
 It was [4%] in February.
@@ -86,7 +88,7 @@ If all of us took a fifty percent pay cut tomorrow, the machines would
   each thinking at "10x-100x human speed"---a
   "[country of geniuses in a datacenter]."
 Thinking stops being scarce.
-Soon we won't be needed.
+Soon **we won't be needed**.
 
 Some expect a market for [artisanal code]:
   machines will write the millions of routine lines,
@@ -96,9 +98,9 @@ No law banned it.
 The compiler simply got better than we were.
 Every published study still says our code is the [safer] of the two.
 I don't believe them anymore.
-Since March I have shipped nothing else,
+Since March I have shipped nothing else but LLM-written code,
   and the quality is higher than a year ago.
-Our code won't be illegal at first---just something no reviewer approves.
+Our code won't be illegal at first---just something **no reviewer approves**.
 In mission-critical systems first, then everywhere.
 "Made by a human" will stop being a price premium and will become a disclosure.
 
@@ -115,7 +117,7 @@ In May 2026 [Jensen Huang] [told] a graduating class at Carnegie Mellon:
   builders---this is your time."
 He meant it kindly.
 He was talking to people who had just finished four years of university.
-We will retire, or we will move to physical work.
+We will **retire**, or we will move to physical work.
 
 [John Keynes] named it in [Economic Possibilities for Our Grandchildren (1930)]:
   "technological unemployment," he called it,
@@ -123,7 +125,7 @@ We will retire, or we will move to physical work.
   labour outrunning the pace at which we can find new uses for labour."
 [Yuval Harari] named the people in 2017:
   a [useless class] that "will not merely
-  be unemployed---it will be unemployable."
+  be unemployed---it will be **unemployable**."
 [Nick Bostrom] declared a world of "deep redundancy" in [Deep Utopia (2024)]:
   there is nothing you could do that anyone would need.
 He proposed "artificial purpose"---challenges
@@ -138,8 +140,8 @@ From 1999, middle-aged Americans without a degree started dying faster
   than their parents' generation---the first such reversal in a century.
 Drugs, alcohol, suicide.
 [151,845] of them in 2017 alone.
-The suicide rate was the highest since 1938.
-Deaths from alcohol were the highest since the First World War.
+The **suicide** rate was the highest since 1938.
+Deaths from **alcohol** were the highest since the First World War.
 [Anne Case] and [Angus Deaton] found the cause was not poverty.
 It was the sense that "their ability to contribute to society has been
   terribly thwarted."
@@ -150,7 +152,7 @@ Now the same thing is coming up the ladder, for the people who have
 [Hannah Arendt] saw the shape of this in 1958, before anyone had
   written a line of code.
 "What we are confronted with," she wrote, "is the prospect of a society
-  of laborers without labor, that is, without the only activity left to
+  of **laborers without labor**, that is, without the only activity left to
   them. Surely, nothing could be worse."
 And she saw no way out: no class left, "no aristocracy of either a
   political or spiritual nature from which a restoration of the other
@@ -161,17 +163,48 @@ The next sentence of her prologue is the one I keep returning to:
 
 Neither does this one.
 
-<!--more-->
-
-{% jb_picture_body %}
-
-[Frank Schmidt and John Hunter (1998)]: https://psycnet.apa.org/record/1998-10661-006
+[151,845]: https://www.tfah.org/report-details/pain-in-the-nation-2023/
+[2025 ICPC World Finals]: https://worldfinals.icpc.global/2025/
 [4%]: https://newsletter.semianalysis.com/p/claude-code-is-the-inflection-point
-[~13x cheaper]: https://epoch.ai/publications/the-plunging-price-of-thought
-[country of geniuses in a datacenter]: https://darioamodei.com/essay/machines-of-loving-grace
-[safer]: https://arxiv.org/pdf/2508.21634
+[_Le Suicide (1897)_]: https://en.wikipedia.org/wiki/Suicide_(book)
+[_Man and Superman (1903)_]: https://en.wikipedia.org/wiki/Man_and_Superman
+[_The Need for Roots (1943)_]: https://en.wikipedia.org/wiki/The_Need_for_Roots
+[Alfred Adler]: https://en.wikipedia.org/wiki/Alfred_Adler
+[Angus Deaton]: https://en.wikipedia.org/wiki/Angus_Deaton
+[Anne Case]: https://en.wikipedia.org/wiki/Anne_Case
 [artisanal code]: https://www.theregister.com/software/2024/09/18/the-case-for-handcrafted-software-in-a-mass-produced-world/671793
+[Bernard Shaw]: https://en.wikipedia.org/wiki/George_Bernard_Shaw
+[country of geniuses in a datacenter]: https://darioamodei.com/essay/machines-of-loving-grace
+[Dario Amodei]: https://en.wikipedia.org/wiki/Dario_Amodei
+[Deep Utopia (2024)]: https://nickbostrom.com/deep-utopia/
+[Economic Possibilities for Our Grandchildren (1930)]: https://www.marxists.org/reference/subject/economics/keynes/1930/our-grandchildren.htm
+[Edward Deci]: https://en.wikipedia.org/wiki/Edward_L._Deci
+[Frank Schmidt and John Hunter (1998)]: https://psycnet.apa.org/record/1998-10661-006
+[Gemeinschaftsgefühl]: https://en.wikipedia.org/wiki/Individual_psychology
+[Gordon Flett]: https://www.yorku.ca/lamarsh/gord-flett/
+[Hannah Arendt]: https://en.wikipedia.org/wiki/Hannah_Arendt
+[ISCO]: https://en.wikipedia.org/wiki/International_Standard_Classification_of_Occupations
+[Jensen Huang]: https://en.wikipedia.org/wiki/Jensen_Huang
+[John Keynes]: https://en.wikipedia.org/wiki/John_Maynard_Keynes
+[Landmarks of Tomorrow (1959)]: https://archive.org/details/landmarksoftomor0000druc
+[LLM]: https://en.wikipedia.org/wiki/Large_language_model
+[mattering]: https://en.wikipedia.org/wiki/Mattering
+[Morris Rosenberg]: https://en.wikipedia.org/wiki/Morris_Rosenberg
+[Nick Bostrom]: https://en.wikipedia.org/wiki/Nick_Bostrom
+[Peter Drucker]: https://en.wikipedia.org/wiki/Peter_Drucker
+[Richard Ryan]: https://en.wikipedia.org/wiki/Richard_M._Ryan
+[Robert Reich]: https://en.wikipedia.org/wiki/Robert_Reich
+[safer]: https://arxiv.org/pdf/2508.21634
+[Self-Determination Theory]: https://en.wikipedia.org/wiki/Self-determination_theory
+[Simone Weil]: https://en.wikipedia.org/wiki/Simone_Weil
+[SlashData]: https://www.slashdata.co/post/global-developer-population-trends-2025-how-many-developers-are-there
+[solved]: https://deepmind.google/blog/gemini-achieves-gold-medal-level-at-the-international-collegiate-programming-contest-world-finals/
+[Steven Pinker]: https://en.wikipedia.org/wiki/Steven_Pinker
+[The Language Instinct (1994)]: https://en.wikipedia.org/wiki/The_Language_Instinct
+[The Work of Nations (1991)]: https://archive.org/details/workofnationspre00reic
 [told]: https://fortune.com/2026/05/11/jensen-huang-tells-electricians-and-plumbers-this-is-your-time/
 [useless class]: https://ideas.ted.com/the-rise-of-the-useless-class/
-[Deep Utopia (2024)]: https://nickbostrom.com/deep-utopia/
-[151,845]: https://www.tfah.org/report-details/pain-in-the-nation-2023/
+[Yuval Harari]: https://en.wikipedia.org/wiki/Yuval_Noah_Harari
+[~13x cheaper]: https://epoch.ai/publications/the-plunging-price-of-thought
+[Émile Durkheim]: https://en.wikipedia.org/wiki/%C3%89mile_Durkheim
+[my GitHub]: https://github.com/yegor256
