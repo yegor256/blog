@@ -149,8 +149,8 @@ We read about it, called it their problem, and went back to work.
 Now the same thing is coming up the ladder, for the people who have
   the degrees.
 
-[Hannah Arendt] saw the shape of this in 1958, before anyone had
-  written a line of code.
+[Hannah Arendt] saw the shape of this in 1958,
+  before programming became a profession.
 "What we are confronted with," she wrote, "is the prospect of a society
   of **laborers without labor**, that is, without the only activity left to
   them. Surely, nothing could be worse."
