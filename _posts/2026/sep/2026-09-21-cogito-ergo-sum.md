@@ -45,7 +45,7 @@ Adjacent to this, [Edward Deci] and [Richard Ryan],
   among the "vital needs of the human soul."
 Moreover, [Émile Durkheim] in [_Le Suicide (1897)_]
   found suicide rates rise as social integration falls.
-"The true joy in life",
+"The true joy in life,"
   according to [Bernard Shaw] in [_Man and Superman (1903)_],
   is "being used for a mighty purpose."
 I believe that being needed by others is not only a joy,
@@ -83,16 +83,17 @@ They are cheap, and getting [~13x cheaper]
 If all of us took a fifty percent pay cut tomorrow, the machines would
   take back the difference in ninety-nine days.
 [Dario Amodei] describes what is arriving: "millions of instances,"
-  each thinking "10x-100x human speed"---a
+  each thinking at "10x-100x human speed"---a
   "[country of geniuses in a datacenter]."
 Thinking stops being scarce.
 Soon we won't be needed.
 
 Some expect a market for [artisanal code]:
-  machines will write the routine millions of lines,
-  humans will craft the parts that matter, charging double for it.
+  machines will write the millions of routine lines,
+  and humans will craft the parts that matter, charging double for it.
 This won't happen for the same reason nobody hand-writes assembly anymore.
-No law banned it, the compiler simply got better than we were.
+No law banned it.
+The compiler simply got better than we were.
 Every published study still says our code is the [safer] of the two.
 I don't believe them anymore.
 Since March I have shipped nothing else,
@@ -138,11 +139,11 @@ From 1999, middle-aged Americans without a degree started dying faster
 Drugs, alcohol, suicide.
 [151,845] of them in 2017 alone.
 The suicide rate was the highest since 1938.
-Deaths from alcohol the highest since the First World War.
+Deaths from alcohol were the highest since the First World War.
 [Anne Case] and [Angus Deaton] found the cause was not poverty.
 It was the sense that "their ability to contribute to society has been
   terribly thwarted."
-We read about it, called it their problem, and we went back to work.
+We read about it, called it their problem, and went back to work.
 Now the same thing is coming up the ladder, for the people who have
   the degrees.
 
