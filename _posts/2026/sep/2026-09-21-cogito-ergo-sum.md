@@ -8,7 +8,8 @@ date: 2026-09-21
 place: Moscow, Russia
 tags: mood ai
 description: |
-  ...
+  We exist to be needed, we were needed for thinking, machines now think
+  better and cheaper than we do, and nobody knows what a man is for after that.
 keywords:
   - threats of AI
   - AI blogging
