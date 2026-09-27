@@ -70,8 +70,17 @@ Since March, not a single line of code committed under my name has been
 It's all Claude Code.
 It was [4%] in February.
 
+And they are not only good.
+They are cheap, and getting [~13x cheaper]
+  every year---faster than computing or electricity ever fell.
+If all of us took a fifty percent pay cut tomorrow, the machines would
+  take back the difference in ninety-nine days.
+[Dario Amodei] describes what is arriving: "millions of instances,"
+  each thinking "10x-100x human speed"---a
+  "[country of geniuses in a datacenter]."
+Thinking stops being scarce.
+Soon we won't be needed.
 
-+ Soon we won't be needed: machines think faster and cheaper.
 
 + The "made by a human" will be a liability, not a selling point.
 
@@ -106,3 +115,5 @@ I have no remedy, and anyone selling one is lying.
 
 [Frank Schmidt and John Hunter (1998)]: https://psycnet.apa.org/record/1998-10661-006
 [4%]: https://newsletter.semianalysis.com/p/claude-code-is-the-inflection-point
+[~13x cheaper]: https://epoch.ai/publications/the-plunging-price-of-thought
+[country of geniuses in a datacenter]: https://darioamodei.com/essay/machines-of-loving-grace
