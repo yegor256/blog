@@ -81,10 +81,23 @@ If all of us took a fifty percent pay cut tomorrow, the machines would
 Thinking stops being scarce.
 Soon we won't be needed.
 
+Some expect a market for [artisanal code]:
+  machines will write the routine millions of lines,
+  humans will craft the parts that matter, charging double for it.
+This won't happen for the same reason nobody hand-writes assembly anymore.
+No law banned it, the compiler simply got better than we were.
+Every published study still says our code is the [safer] of the two.
+I don't believe them anymore.
+Since March I have shipped nothing else,
+  and the quality is higher than a year ago.
+Our code won't be illegal at first---just something no reviewer approves.
+In mission-critical systems first, then everywhere.
+"Made by a human" will stop being a price premium and will become a disclosure.
 
-+ The "made by a human" will be a liability, not a selling point.
+
 
 + We will retire, or move to physical work.
+
   The most careful global study says most of us won't be fired — we'll be augmented
   https://www.ilo.org/sites/default/files/2024-07/WP96_web.pdf
   Gmyrek, Berg & Bescond find that high automation potential covers only 5.5% of employment in high-income countries and 0.4% in low-income ones. Clerical work is by far the most exposed (24% of tasks highly exposed). Most knowledge-work occupations come in at 1–4% of tasks highly exposed. Their conclusion is that work will be "transformed, but still very much in existence."
@@ -117,3 +130,6 @@ I have no remedy, and anyone selling one is lying.
 [4%]: https://newsletter.semianalysis.com/p/claude-code-is-the-inflection-point
 [~13x cheaper]: https://epoch.ai/publications/the-plunging-price-of-thought
 [country of geniuses in a datacenter]: https://darioamodei.com/essay/machines-of-loving-grace
+[safer]: https://arxiv.org/pdf/2508.21634
+[artisanal code]: https://www.theregister.com/software/2024/09/18/the-case-for-handcrafted-software-in-a-mass-produced-world/671793
+
