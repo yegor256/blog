@@ -36,7 +36,7 @@ And I don't know what a man is for, after that.
 {% jb_picture_body %}
 
 In 1908, [Alfred Adler] suggested that contributing to others
-  (a.k.a. [Gemeinschaftsgefühl]) is what gives the individual a sense of worth.
+  (a.k.a. [Gemeinschaftsgefühl]) is what gives the individual a **sense of worth**.
 Later psychologists, like [Morris Rosenberg] and [Gordon Flett],
   called it "[mattering]": the sense that one is significant to others.
 Adjacent to this, [Edward Deci] and [Richard Ryan],
@@ -47,11 +47,12 @@ Adjacent to this, [Edward Deci] and [Richard Ryan],
   among the "vital needs of the human soul."
 Moreover, [Émile Durkheim] in [_Le Suicide (1897)_]
   found suicide rates rise as social integration falls.
+
 "The true joy in life,"
   according to [Bernard Shaw] in [_Man and Superman (1903)_],
   is "being used for a mighty purpose."
 I believe that being **needed by others** is not only a joy,
-  but the primary reason to exist.
+  but the primary **reason to exist**.
 
 There are nearly 50 million programmers like us in the world, by
   [SlashData]'s count.
@@ -92,11 +93,12 @@ Soon **we won't be needed**.
 
 Some expect a market for [artisanal code]:
   machines will write the millions of routine lines,
-  and humans will craft the parts that matter, charging double for it.
+  and humans will **craft** the parts that matter, **charging double** for it.
 This won't happen for the same reason nobody hand-writes assembly anymore.
 No law banned it.
 The compiler simply got better than we were.
 Every published study still says our code is the [safer] of the two.
+
 I don't believe them anymore.
 Since March I have shipped nothing else but LLM-written code,
   and the quality is higher than a year ago.
@@ -111,7 +113,8 @@ None of this is new.
   of being replaced by machines. The gardeners, receptionists, and cooks
   are secure in their jobs for decades to come."
 He was writing about the future.
-Thirty-two years later it is career advice.
+Thirty-two years later it is **career advice**.
+
 In May 2026 [Jensen Huang] [told] a graduating class at Carnegie Mellon:
   "Electricians, plumbers, iron workers, technicians,
   builders---this is your time."
