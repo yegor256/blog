@@ -15,9 +15,9 @@ keywords:
   - AI threat
   - employment after AI
   - AI jobs
-image: /images/2026/09/...
+image: /images/2026/09/solaris.jpg
 jb_picture:
-  caption: ...
+  caption: Солярис (1972) by Андрей Тарковский
 ---
 
 Claude helped me write this.
@@ -129,14 +129,15 @@ We will **retire**, or we will move to physical work.
 [Yuval Harari] named the people in 2017:
   a [useless class] that "will not merely
   be unemployed---it will be **unemployable**."
+
+A child born today will be obsolete before he finishes school.
+
 [Nick Bostrom] declared a world of "deep redundancy" in [Deep Utopia (2024)]:
   there is nothing you could do that anyone would need.
 He proposed "artificial purpose"---challenges
   designed for us by the intelligence that replaced us.
 Keynes already knew how that ends:
-  the people who had money and no duties, he wrote, "failed disastrously."
-
-A child born today will be obsolete before he finishes school.
+  the people who **had money and no duties**, he wrote, "failed disastrously."
 
 This already happened once, to people with less protection than us.
 From 1999, middle-aged Americans without a degree started dying faster
