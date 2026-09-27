@@ -58,10 +58,18 @@ Counting managers and technicians alongside professionals, [ISCO] now
 The world looks the way America looked in 1989.
 We contribute by thinking, and that is what makes us needed.
 
+However, LLMs already think better than us, and faster too.
+At the [2025 ICPC World Finals], Gemini [solved] ten of twelve problems.
+Had it competed as a team of humans, it would have finished 2nd out of 139.
+It also solved Problem C, which no human team solved at all.
+That was a year ago.
+I've been writing code for more than 25 years, contributing over 100K
+  lines to GitHub annually.
+Since March, not a single line of code committed under my name has been
+  written by me.
+It's all Claude Code.
+It was [4%] in February.
 
-
-
-+ An LLM now thinks better than most of us.
 
 + Soon we won't be needed: machines think faster and cheaper.
 
@@ -97,3 +105,4 @@ I have no remedy, and anyone selling one is lying.
 {% jb_picture_body %}
 
 [Frank Schmidt and John Hunter (1998)]: https://psycnet.apa.org/record/1998-10661-006
+[4%]: https://newsletter.semianalysis.com/p/claude-code-is-the-inflection-point
