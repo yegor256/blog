@@ -267,22 +267,31 @@ h3 {
   @extend %clear;
   @extend %serif;
   position: relative;
-}
-
-h2 {
-  margin-top: 2 * $rem;
 
   .link {
     @extend %gray;
     @extend %desktop-only;
     margin-left: .3 * $rem;
     text-decoration: none;
+    visibility: hidden;
 
     &:hover {
       color: inherit;
       opacity: 1;
     }
+
+    &:focus {
+      visibility: visible;
+    }
   }
+
+  &:hover .link {
+    visibility: visible;
+  }
+}
+
+h2 {
+  margin-top: 2 * $rem;
 }
 
 .subline {

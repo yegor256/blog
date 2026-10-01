@@ -110,7 +110,7 @@ if (typeof($) != 'undefined') {
         });
       }
     }
-    $('h2').each(
+    $('h2, h3').each(
       function (idx, element) {
         var $element = $(element), id = $element.attr('id');
         if (id) {
