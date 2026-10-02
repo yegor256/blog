@@ -133,6 +133,17 @@ and
 
 I was also seen at [these events](/seen.html).
 
+### 2026
+
+<span class="venue-rate green-mark">B</span>
+**Зачем ты мне, человек?**;
+<span class="city">Moscow</span>, <span class="country">Russia</span>;
+21 May 2026.
+A nice local event, by Sber.
+I did enjoy the audience.
+[video](https://rutube.ru/video/b2e67bda01c7097e91a6d227f2509846/).
+{: .talk-event}
+
 ### 2025
 
 <span class="venue-rate green-mark">A</span>
