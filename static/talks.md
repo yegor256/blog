@@ -154,7 +154,7 @@ Many students, interested in doing the right thing.
 I feel like being a disappointment for them.
 Would be great to visit again.
 [video](https://www.youtube.com/watch?v=ePPilLkDn0s),
-[slides][https://speakerdeck.com/yegor256/coders-vs-researchers-how-to-be-both].
+[slides](https://speakerdeck.com/yegor256/coders-vs-researchers-how-to-be-both).
 {: .talk-event}
 
 ### 2025
