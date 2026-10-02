@@ -147,6 +147,7 @@ I did enjoy the audience.
 {: .talk-event}
 
 <span class="venue-rate B-mark">B+</span>
+<img src="https://i.ytimg.com/vi/ePPilLkDn0s/mqdefault.jpg" class="past-talk" alt="Researchers vs. Engineers"/>
 **Researchers vs Engineers**;
 ПикАйти;
 <span class="city">Ekaterinburg</span>, <span class="country">Russia</span>;
