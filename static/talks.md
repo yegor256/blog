@@ -137,11 +137,24 @@ I was also seen at [these events](/seen.html).
 
 <span class="venue-rate green-mark">B</span>
 **Зачем ты мне, человек?**;
+Sbergile'2026;
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 21 May 2026.
 A nice local event, by Sber.
 I did enjoy the audience.
 [video](https://rutube.ru/video/b2e67bda01c7097e91a6d227f2509846/).
+{: .talk-event}
+
+<span class="venue-rate green-mark">B+</span>
+**Researchers vs Engineers**;
+ПикАйти;
+<span class="city">Ekaterinburg</span>, <span class="country">Russia</span>;
+13 March 2026.
+Many students, interested in doing the right thing.
+I feel like being a disappointment for them.
+Would be great to visit again.
+[video](https://www.youtube.com/watch?v=ePPilLkDn0s),
+[slides][https://speakerdeck.com/yegor256/coders-vs-researchers-how-to-be-both].
 {: .talk-event}
 
 ### 2025
