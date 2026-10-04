@@ -143,6 +143,7 @@ adheres
 adjacent
 adjectives
 adjusts
+adler
 admin
 administering
 administration
@@ -246,6 +247,7 @@ alert
 alerts
 alexander
 alexey
+alfred
 algorithm
 algorithm-writing
 algorithmic
@@ -320,6 +322,7 @@ americans
 americas-mental-health-crisis
 AMG
 amirovaldiar
+amodei
 among
 amongst
 amount
@@ -356,6 +359,7 @@ andronache
 andwithindex
 andy
 anemic
+anew
 angel
 anger
 angle
@@ -363,10 +367,12 @@ angles
 angry
 angular
 AngularJS
+angus
 anil
 animal
 animals
 animator
+anne
 annotate
 annotated
 annotation
@@ -499,6 +505,7 @@ areas
 aren't
 arena
 arenas
+arendt
 argentina
 argue
 argued
@@ -508,6 +515,7 @@ argument
 argumentation
 arguments
 arises
+aristocracy
 aristotle
 arithmetic
 arizona
@@ -539,9 +547,11 @@ articulate
 artifact
 artifacts
 artificial
+artisanal
 artist
 artistic
 artists
+arxiv
 arzhantsev
 as
 asaf
@@ -778,6 +788,7 @@ bank
 bankrupt
 bankruptcy
 banks
+banned
 banners
 bar
 barbara
@@ -897,6 +908,7 @@ benjamin
 benner
 benwinding
 berlin
+bernard
 bernie
 bertrand
 besides
@@ -1020,6 +1032,7 @@ bodyguards
 boeing
 boils
 bold
+bonded
 bonds
 boni
 bonus
@@ -1059,6 +1072,7 @@ borrows
 boss
 bosses
 boston
+bostrom
 bot
 both
 bother
@@ -1309,6 +1323,7 @@ cap
 capabilities
 capability
 capable
+capacities
 capers
 capital
 capitalism
@@ -1337,6 +1352,7 @@ cares
 caring
 carlo
 carlosmiranda
+carnegie
 carr
 carried
 carriers
@@ -1584,12 +1600,14 @@ classics
 classification
 classified
 classifier
+classifies
 classify
 classifying
 classmate
 classroom
 claude
 claude-code
+claude-code-is-the-inflection-point
 claude-mem
 claude-opus-
 clause
@@ -1830,6 +1848,7 @@ compensated
 compensates
 compensation
 compete
+competed
 competence
 competent
 competing
@@ -1969,6 +1988,7 @@ conflicting
 conflicts
 conforming
 confrontation
+confronted
 confuse
 confused
 confuses
@@ -2383,6 +2403,8 @@ danisalukaev
 DAO
 DAOs
 dare
+dario
+darioamodei
 dariusz
 dark
 dashboard
@@ -2393,6 +2415,7 @@ data-set
 database
 database-connected
 databases
+datacenter
 datafile
 dataflow
 dataization
@@ -2436,6 +2459,8 @@ dealt
 dean
 dear
 death
+deaths
+deaton
 debate
 debated
 debates
@@ -2451,6 +2476,7 @@ decades
 december
 decent
 decently
+deci
 decide
 decided
 decides
@@ -2496,6 +2522,7 @@ deduce
 deducted
 deem
 deep
+deep-utopia
 deeper
 deeply
 deepmind
@@ -2530,6 +2557,7 @@ degradation
 degrade
 degrades
 degree
+degrees
 delay
 delayed
 delays
@@ -2778,6 +2806,7 @@ disappointing
 disarms
 disaster
 disasters
+disastrously
 disbelief
 disc
 discern
@@ -3014,7 +3043,9 @@ drop
 dropbox
 dropped
 drops
+druc
 drucker
+drugs
 drunk
 DRY
 DSL
@@ -3040,8 +3071,10 @@ durango
 duration
 durden
 during
+durkheim
 duties
 dw
+dying
 dynamic
 dynamically
 dynamicity
@@ -3090,7 +3123,9 @@ ECMAScript
 eco-friendly
 eco-manager
 eco-titles
+economic
 economics
+economising
 economy
 ecosystem
 ed
@@ -3116,6 +3151,7 @@ educated
 educating
 education
 educational
+edward
 edwards
 EE
 EEG
@@ -3152,6 +3188,7 @@ elastic
 election
 electric
 electrician
+electricians
 electricity
 elegance
 elegant
@@ -3351,6 +3388,7 @@ epidemic
 episode
 episodes
 EPO
+epoch
 eps
 EPUB
 eq
@@ -3592,6 +3630,7 @@ faces
 facility
 facing
 fact
+fact-checking
 factor
 factorials
 factories
@@ -3763,6 +3802,7 @@ finalist
 finalists
 finalize
 finally
+finals
 finance
 financial
 financially
@@ -3835,6 +3875,7 @@ flawed
 flawless
 flaws
 fletcher
+flett
 flexibility
 flexible
 flies
@@ -4105,6 +4146,7 @@ gaps
 garbage
 garcia
 garden
+gardeners
 garr
 garrett
 garry
@@ -4128,6 +4170,9 @@ GeekOUT
 geekoutee
 geeks
 gem
+gemeinschaftsgef
+gemini
+gemini-achieves-gold-medal-level-at-the-international-collegiate-programming-contest-world-finals
 gemspec
 gender
 genderless
@@ -4151,11 +4196,13 @@ generous
 genetically
 geneva
 genius
+geniuses
 gentle
 gentleman
 gentlemen
 genuine
 geographic
+george
 gerard
 german
 gesture
@@ -4212,6 +4259,7 @@ glass
 glassfish
 glenford
 global
+global-developer-population-trends-
 globally
 globe
 glogin
@@ -4259,6 +4307,8 @@ google-killer
 googled
 googling
 GOP
+gord-flett
+gordon
 gosling
 gospel
 got
@@ -4279,6 +4329,7 @@ gradle
 gradual
 gradually
 graduated
+graduating
 graduation
 grady
 graham
@@ -4411,6 +4462,7 @@ hamcrest
 hammer
 hand
 hand-washing
+hand-writes
 handbook
 handful
 handle
@@ -4423,6 +4475,7 @@ hands-on
 handy
 hang
 hanging
+hannah
 hansson
 haoyi
 happen
@@ -4432,6 +4485,7 @@ happens
 happier
 happiness
 happy
+harari
 harassers
 harassment
 harassment-free
@@ -4583,6 +4637,7 @@ hits
 hits-of-code
 hitsofcode
 hitter
+hl
 HN
 hoare
 hobbies
@@ -4656,6 +4711,7 @@ HP
 hpegn
 hr
 HSE
+htm
 HTML
 htpasswd
 HTTP
@@ -4666,6 +4722,7 @@ httprequest
 https
 HTTPStatus
 HttpURLConnection
+huang
 huawei
 hub
 hudson
@@ -5191,6 +5248,7 @@ IPO
 IPOS
 IPv
 IRC
+iron
 ironic
 irrational
 irrationality
@@ -5204,6 +5262,7 @@ is-the-per-host-connection-limit-raised-with-http-
 isaac
 isalwayshtml
 isbn
+ISCO
 isencodeanyway
 isn't
 ISO
@@ -5323,6 +5382,8 @@ jemielniak
 jenkins
 jennifer
 jens
+jensen
+jensen-huang-tells-electricians-and-plumbers-this-is-your-time
 jeopardize
 jeopardized
 jeopardizing
@@ -5467,6 +5528,7 @@ kernighan
 key
 keyboard
 keychain
+keynes
 keynote
 keys
 keyword
@@ -5547,6 +5609,8 @@ lab
 label
 labeled
 labor
+laborers
+labour
 labs
 lack
 lacked
@@ -5564,11 +5628,14 @@ laissez
 laissez-faire
 lake
 laloux
+lamarsh
 lambda
 lamp
 lamport
 land
 landed
+landmarks
+landmarksoftomor
 lands
 landscape
 lane
@@ -5778,6 +5845,7 @@ ll
 ller
 LLM
 LLM-based
+LLM-written
 LLMs
 LLVM
 lmaa
@@ -5899,6 +5967,7 @@ machine
 machine's
 machine-interpretable
 machines
+machines-of-loving-grace
 macintosh
 mack
 MacOS
@@ -6028,6 +6097,7 @@ martela
 martian
 martin
 martinfowler
+marxists
 mary
 masculine
 mask
@@ -6057,6 +6127,7 @@ matrix
 matt
 matte
 matter
+mattering
 matters
 matthew
 mature
@@ -6080,6 +6151,7 @@ maximizing
 maximum
 may
 maybe
+maynard
 mayonnaise
 mayonnaise-free
 mb
@@ -6132,6 +6204,7 @@ meets
 meetup
 meetups
 melina
+mellon
 melt
 member
 members
@@ -6240,11 +6313,13 @@ microtasking
 microtasks
 microvesting
 middle
+middle-aged
 middle-level
 middleman
 middlemen
 middlewoman
 might
+mighty
 migrate
 migrates
 migration
@@ -6319,6 +6394,7 @@ missed
 misses
 missing
 mission
+mission-critical
 mistake
 mistaken
 mistakenly
@@ -6428,6 +6504,7 @@ morning
 moron
 moronic
 morons
+morris
 moscow
 moscowstate
 moss
@@ -6568,6 +6645,7 @@ nashorn
 nat
 national
 nationality
+nations
 native
 natively
 natural
@@ -6652,6 +6730,8 @@ nicely-looking
 niceness
 nicer
 niche
+nick
+nickbostrom
 nickname
 nicomachaen
 nierstrasz
@@ -6666,6 +6746,7 @@ nine
 nine-to-five
 nine-year-old
 nines
+ninety-nine
 nitpicker
 nl
 no
@@ -6673,6 +6754,7 @@ no-guests
 no-management
 no-server
 no-tests-upfront
+noah
 noaltruism
 noam
 nobel
@@ -6818,6 +6900,7 @@ observer
 observes
 observing
 obsession
+obsolete
 obstacle
 obstacles
 obtain
@@ -6827,6 +6910,7 @@ obviously
 occam's
 occasional
 occasionally
+occupations
 occupied
 occur
 occurred
@@ -7029,6 +7113,7 @@ others
 others'
 otherwise
 our
+our-grandchildren
 ours
 ourselves
 out
@@ -7044,6 +7129,7 @@ outofmemoryexception
 output
 outputstream
 outright
+outrunning
 outside
 outsider
 outsource
@@ -7124,6 +7210,7 @@ pages
 pagesettings
 paid
 pain
+pain-in-the-nation-
 painful
 painless-bug-tracking
 painofoop
@@ -7169,11 +7256,13 @@ paren
 parent
 parenting
 parents
+parents'
 paris
 parking
 parmesan
 parnas
 parodies
+parole
 parse
 parseable
 parsed
@@ -7330,6 +7419,7 @@ permanently
 permission
 permissions
 permit
+perplexities
 persisted
 persistence
 persistent
@@ -7352,6 +7442,7 @@ pet-friendly
 petabridge
 peter
 petersburg
+petrochemical
 pets
 pewtrusts
 pfeffer
@@ -7424,6 +7515,7 @@ pinaf
 ping
 pings
 pink
+pinker
 pinned
 pinpoint
 pint
@@ -7496,6 +7588,7 @@ plot
 plugin
 plugins
 plumber
+plumbers
 plus
 pluses
 PM
@@ -7670,6 +7763,7 @@ preliminary
 premises
 premium
 prenup
+preoccupations
 prep
 preparation
 prepare
@@ -7836,6 +7930,7 @@ projectors
 projects
 prokhorov
 proletariat
+prologue
 promise
 promised
 promises
@@ -7931,6 +8026,7 @@ psychological
 psychologically
 psychologists
 psychology
+psycnet
 pub
 public
 publication
@@ -8185,6 +8281,7 @@ receives
 receiving
 recent
 recently
+receptionists
 recipe
 recipes
 recipient
@@ -8294,6 +8391,7 @@ regulated
 regulations
 rehearse
 ReHTTP
+reic
 reich
 reinagel
 reinforce
@@ -8311,6 +8409,7 @@ rejects
 relase
 relate
 related
+relatedness
 relating
 relation
 relational
@@ -8404,6 +8503,7 @@ replying
 replyto
 repo
 report
+report-details
 reported
 reporter
 reporters
@@ -8505,6 +8605,7 @@ restarted
 restarts
 restaurant
 RESTful
+restoration
 restresponse
 restrict
 restricted
@@ -8561,6 +8662,7 @@ reveals
 revenge
 revenue
 revenue-generating
+reversal
 revert
 review
 reviewed
@@ -8655,9 +8757,11 @@ room
 roommate
 rooms
 root
+roots
 ror
 rosabeth
 rose
+rosenberg
 rospatent
 rotate
 rotating
@@ -8741,6 +8845,7 @@ rusty
 ruthless
 rutracker
 ruvimova
+ryan
 rydgren
 s-class
 sabotage
@@ -8820,6 +8925,7 @@ scandal
 scandals
 scans
 scapegoats
+scarce
 scare
 scared
 scarred
@@ -8837,6 +8943,7 @@ scheme
 scheme-ish
 schemes
 schlossberg
+schmidt
 scholar
 school
 school's
@@ -8938,6 +9045,7 @@ self-appointed
 self-confidence
 self-contained
 self-descriptive
+self-determination
 self-diagnose
 self-discipline
 self-disciplined
@@ -8977,6 +9085,7 @@ semi-automatically
 semi-historical
 semi-object
 semi-procedural
+semianalysis
 seminar
 seminars
 semnasem
@@ -9096,6 +9205,7 @@ shares
 sharing
 sharp
 sharply
+shaw
 she
 sheckley
 sheet
@@ -9282,6 +9392,7 @@ SLA
 slack
 slade
 SLAs
+slashdata
 slashes
 slave
 slave's
@@ -9478,6 +9589,7 @@ sphere
 spikes
 spin-wait
 spirit
+spiritual
 splash
 split
 splitting
@@ -9835,6 +9947,7 @@ super
 super-appreciated
 superb
 superior
+superman
 superordinate
 superstar
 supervision
@@ -9860,6 +9973,7 @@ supremacists
 supreme
 sur
 sure
+surely
 surface
 surfaces
 surgeons
@@ -10015,10 +10129,13 @@ techcrunch
 technical
 technically
 technically-savvy
+technicians
 technique
 techniques
+technological
 technologies
 technology
+ted
 tee
 teeinput
 teeinputstream
@@ -10107,6 +10224,7 @@ textpage
 texts
 textual
 textutils
+tfah
 tg
 th
 than
@@ -10115,8 +10233,11 @@ thanks
 that
 that's
 the
+the-case-for-handcrafted-software-in-a-mass-produced-world
+the-plunging-price-of-thought
 the-problem-with-single-page-applications
 the-real-story-behind-es
+the-rise-of-the-useless-class
 thedotmack
 theft
 theguardian
@@ -10206,6 +10327,7 @@ thumbs
 thursday
 thus
 thwart
+thwarted
 ticket
 ticketing
 tickets
@@ -10581,6 +10703,9 @@ undertaken
 underwear
 undocumented
 undoubtedly
+unemployable
+unemployed
+unemployment
 unethical
 unevenly
 unexpected
@@ -10938,6 +11063,7 @@ wallet
 walls
 want
 wanted
+wanting
 wants
 WAR
 war-time
@@ -11010,6 +11136,7 @@ weeks
 wei
 weight
 weights
+weil
 weird
 welch
 welcome
@@ -11148,8 +11275,10 @@ worker's
 workers
 workflow
 workflows
+workforce
 working
 workload
+workofnationspre
 workplace
 workplaces
 works
@@ -11157,6 +11286,7 @@ workshop
 workshops
 world
 world-class
+worldfinals
 worlds
 worldwide
 worn
@@ -11197,6 +11327,7 @@ WTS
 wulf
 WWII
 www
+x-
 x-body
 xcop
 xdebug
@@ -11269,6 +11400,7 @@ ying
 yml
 yoga
 york
+yorku
 you
 you'd
 you'll
@@ -11287,6 +11419,7 @@ ypshenychka
 yukl
 yummy
 yummy-scented
+yuval
 yuxin
 yxeNH
 zache

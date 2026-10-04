@@ -1,4 +1,152 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-10-02T10:56:05+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Rat’s Skills: Making Friends and Betraying Them</title><link href="https://www.yegor256.com/2026/07/12/rats-skills.html" rel="alternate" type="text/html" title="Rat’s Skills: Making Friends and Betraying Them" /><published>2026-07-12T00:00:00+03:00</published><updated>2026-07-12T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/07/12/rats-skills</id><content type="html" xml:base="https://www.yegor256.com/2026/07/12/rats-skills.html"><![CDATA[<p>How to get promoted?
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-10-04T10:41:58+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Non Cogito, Ergo Quid Sum?</title><link href="https://www.yegor256.com/2026/09/21/cogito-ergo-sum.html" rel="alternate" type="text/html" title="Non Cogito, Ergo Quid Sum?" /><published>2026-09-21T00:00:00+03:00</published><updated>2026-09-21T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/09/21/cogito-ergo-sum</id><content type="html" xml:base="https://www.yegor256.com/2026/09/21/cogito-ergo-sum.html"><![CDATA[<p>Claude helped me write this.
+Mostly quotes and fact-checking.
+I catch myself wanting to stress the “mostly,” and that is the
+  whole subject of this essay.
+It’s September 2026.
+By September 2027 I don’t expect to be using Claude to write blog posts.
+Because I don’t expect there to be blog posts by me to write.
+I won’t be a writer.
+I won’t be a programmer either.
+And I don’t know what a man is for, after that.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Солярис (1972) by Андрей Тарковский" src="/images/2026/09/solaris.jpg" longdesc="#779fbc0c" /><figcaption id="779fbc0c">Солярис (1972) by Андрей Тарковский</figcaption></figure>
+
+<p>In 1908, <a href="https://en.wikipedia.org/wiki/Alfred_Adler">Alfred Adler</a> suggested that contributing to others
+  (a.k.a. <a href="https://en.wikipedia.org/wiki/Individual_psychology">Gemeinschaftsgefühl</a>) is what gives the individual a <strong>sense of worth</strong>.
+Later psychologists, like <a href="https://en.wikipedia.org/wiki/Morris_Rosenberg">Morris Rosenberg</a> and <a href="https://www.yorku.ca/lamarsh/gord-flett/">Gordon Flett</a>,
+  called it “<a href="https://en.wikipedia.org/wiki/Mattering">mattering</a>”: the sense that one is significant to others.
+Adjacent to this, <a href="https://en.wikipedia.org/wiki/Edward_L._Deci">Edward Deci</a> and <a href="https://en.wikipedia.org/wiki/Richard_M._Ryan">Richard Ryan</a>,
+  authors of the <a href="https://en.wikipedia.org/wiki/Self-determination_theory">Self-Determination Theory</a>, identified “relatedness”:
+  a psychological need to be bonded with others.
+<a href="https://en.wikipedia.org/wiki/Simone_Weil">Simone Weil</a> in <a href="https://en.wikipedia.org/wiki/The_Need_for_Roots"><em>The Need for Roots (1943)</em></a>
+  listed “to feel one is useful and even indispensable”
+  among the “vital needs of the human soul.”
+Moreover, <a href="https://en.wikipedia.org/wiki/%C3%89mile_Durkheim">Émile Durkheim</a> in <a href="https://en.wikipedia.org/wiki/Suicide_(book)"><em>Le Suicide (1897)</em></a>
+  found suicide rates rise as social integration falls.</p>
+
+<p>“The true joy in life,”
+  according to <a href="https://en.wikipedia.org/wiki/George_Bernard_Shaw">Bernard Shaw</a> in <a href="https://en.wikipedia.org/wiki/Man_and_Superman"><em>Man and Superman (1903)</em></a>,
+  is “being used for a mighty purpose.”
+I believe that being <strong>needed by others</strong> is not only a joy,
+  but the primary <strong>reason to exist</strong>.</p>
+
+<p>There are nearly 50 million programmers like us in the world, by
+  <a href="https://www.slashdata.co/post/global-developer-population-trends-2025-how-many-developers-are-there">SlashData</a>’s count.
+We are a small part of something larger: about 400 million people whom
+  <a href="https://en.wikipedia.org/wiki/International_Standard_Classification_of_Occupations">ISCO</a> classifies as “professionals”—one in nine of everyone
+  employed on the planet.
+<a href="https://en.wikipedia.org/wiki/Peter_Drucker">Peter Drucker</a> named us “knowledge workers” in
+  <a href="https://archive.org/details/landmarksoftomor0000druc">Landmarks of Tomorrow (1959)</a>, before the personal computer existed.
+<a href="https://en.wikipedia.org/wiki/Robert_Reich">Robert Reich</a>, in <a href="https://archive.org/details/workofnationspre00reic">The Work of Nations (1991)</a>, called us people who
+  “manipulate symbols,” and put us at a fifth of the American workforce.
+Counting managers and technicians alongside professionals, <a href="https://en.wikipedia.org/wiki/International_Standard_Classification_of_Occupations">ISCO</a> now
+  finds 20.1% of the planet in that kind of work.
+The world looks the way America looked in 1989.
+We <strong>contribute by thinking</strong>, and that is what makes us needed.</p>
+
+<aside class="quote">“Made by a human” will stop being a price premium and will become a disclosure.
+</aside>
+
+<p>However, <a href="https://en.wikipedia.org/wiki/Large_language_model">LLM</a>s already think better than us, and faster too.
+At the <a href="https://worldfinals.icpc.global/2025/">2025 ICPC World Finals</a>, Gemini <a href="https://deepmind.google/blog/gemini-achieves-gold-medal-level-at-the-international-collegiate-programming-contest-world-finals/">solved</a> ten of twelve problems.
+Had it competed as a team of humans, it would have finished 2nd out of 139.
+It also solved Problem C, which no human team solved at all.
+That was a year ago.
+I’ve been writing code for more than 25 years, contributing over 100K
+  lines to <a href="https://github.com/yegor256">my GitHub</a> annually.
+Since March, <strong>not a single line of code</strong> committed under my name has been
+  written by me.
+It’s all <a href="https://claude.com/product/claude-code">Claude Code</a>.
+It was <a href="https://newsletter.semianalysis.com/p/claude-code-is-the-inflection-point">4%</a> in February.</p>
+
+<p>And they are not only good.
+They are cheap, and getting <a href="https://epoch.ai/publications/the-plunging-price-of-thought">~13x cheaper</a>
+  every year—faster than computing or electricity ever fell.
+If all of us took a fifty percent pay cut tomorrow, the machines would
+  take back the difference in ninety-nine days.
+<a href="https://en.wikipedia.org/wiki/Dario_Amodei">Dario Amodei</a> describes what is arriving: “millions of instances,”
+  each thinking at “10x-100x human speed”—a
+  “<a href="https://darioamodei.com/essay/machines-of-loving-grace">country of geniuses in a datacenter</a>.”
+Thinking stops being scarce.
+Soon <strong>we won’t be needed</strong>.</p>
+
+<p>Some expect a market for <a href="https://www.theregister.com/software/2024/09/18/the-case-for-handcrafted-software-in-a-mass-produced-world/671793">artisanal code</a>:
+  machines will write the millions of routine lines,
+  and humans will <strong>craft</strong> the parts that matter, <strong>charging double</strong> for it.
+This won’t happen for the same reason nobody hand-writes assembly anymore.
+No law banned it.
+The compiler simply got better than we were.
+Every published study still says our code is the <a href="https://arxiv.org/pdf/2508.21634">safer</a> of the two.</p>
+
+<p>I don’t believe them anymore.
+Since March I have shipped nothing else but LLM-written code,
+  and the quality is higher than a year ago.
+Our code won’t be illegal at first—just something <strong>no reviewer approves</strong>.
+In mission-critical systems first, then everywhere.
+“Made by a human” will stop being a price premium and will become a disclosure.</p>
+
+<p>None of this is new.
+<a href="https://en.wikipedia.org/wiki/Steven_Pinker">Steven Pinker</a> in <a href="https://en.wikipedia.org/wiki/The_Language_Instinct">The Language Instinct (1994)</a> predicted this:
+  “It will be the stock analysts
+  and petrochemical engineers and parole board members who are in danger
+  of being replaced by machines. The gardeners, receptionists, and cooks
+  are secure in their jobs for decades to come.”
+He was writing about the future.
+Thirty-two years later it is <strong>career advice</strong>.</p>
+
+<p>In May 2026 <a href="https://fortune.com/2026/05/11/jensen-huang-tells-electricians-and-plumbers-this-is-your-time/">Jensen Huang</a> a graduating class at Carnegie Mellon:
+  “Electricians, plumbers, iron workers, technicians,
+  builders—this is your time.”
+He meant it kindly.
+He was talking to people who had just finished four years of university.
+We will <strong>retire</strong>, or we will move to physical work.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/John_Maynard_Keynes">John Keynes</a> named it in <a href="https://www.marxists.org/reference/subject/economics/keynes/1930/our-grandchildren.htm">Economic Possibilities for Our Grandchildren (1930)</a>:
+  “technological unemployment,” he called it,
+  “unemployment due to our discovery of means of economising the use of
+  labour outrunning the pace at which we can find new uses for labour.”
+<a href="https://en.wikipedia.org/wiki/Yuval_Noah_Harari">Yuval Harari</a> named the people in 2017:
+  a <a href="https://ideas.ted.com/the-rise-of-the-useless-class/">useless class</a> that “will not merely
+  be unemployed—it will be <strong>unemployable</strong>.”</p>
+
+<p>A child born today will be obsolete before he finishes school.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Nick_Bostrom">Nick Bostrom</a> declared a world of “deep redundancy” in <a href="https://nickbostrom.com/deep-utopia/">Deep Utopia (2024)</a>:
+  there is nothing you could do that anyone would need.
+He proposed “artificial purpose”—challenges
+  designed for us by the intelligence that replaced us.
+Keynes already knew how that ends:
+  the people who <strong>had money and no duties</strong>, he wrote, “failed disastrously.”</p>
+
+<p>This already happened once, to people with less protection than us.
+From 1999, middle-aged Americans without a degree started dying faster
+  than their parents’ generation—the first such reversal in a century.
+Drugs, alcohol, suicide.
+<a href="https://www.tfah.org/report-details/pain-in-the-nation-2023/">151,845</a> of them in 2017 alone.
+The <strong>suicide</strong> rate was the highest since 1938.
+Deaths from <strong>alcohol</strong> were the highest since the First World War.
+<a href="https://en.wikipedia.org/wiki/Anne_Case">Anne Case</a> and <a href="https://en.wikipedia.org/wiki/Angus_Deaton">Angus Deaton</a> found the cause was not poverty.
+It was the sense that “their ability to contribute to society has been
+  terribly thwarted.”
+We read about it, called it their problem, and went back to work.
+Now the same thing is coming up the ladder, for the people who have
+  the degrees.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Hannah_Arendt">Hannah Arendt</a> saw the shape of this in 1958,
+  before programming became a profession.
+“What we are confronted with,” she wrote, “is the prospect of a society
+  of <strong>laborers without labor</strong>, that is, without the only activity left to
+  them. Surely, nothing could be worse.”
+And she saw no way out: no class left, “no aristocracy of either a
+  political or spiritual nature from which a restoration of the other
+  capacities of man could start anew.”
+The next sentence of her prologue is the one I keep returning to:
+  “To these preoccupations and perplexities, this book does not offer
+  an answer.”</p>
+
+<p>Neither does this one.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><category term="ai" /><summary type="html"><![CDATA[We exist to be needed, we were needed for thinking, machines now think better and cheaper than we do, and nobody knows what a man is for after that.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/09/solaris.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/09/solaris.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Rat’s Skills: Making Friends and Betraying Them</title><link href="https://www.yegor256.com/2026/07/12/rats-skills.html" rel="alternate" type="text/html" title="Rat’s Skills: Making Friends and Betraying Them" /><published>2026-07-12T00:00:00+03:00</published><updated>2026-07-12T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/07/12/rats-skills</id><content type="html" xml:base="https://www.yegor256.com/2026/07/12/rats-skills.html"><![CDATA[<p>How to get promoted?
 How to get a salary raise?
 How to stop writing code and start managing other losers who still write it?
 How to become a team leader, a boss, a Vice President, a CTO, and a CEO?
@@ -934,85 +1082,4 @@ It illustrates the <a href="/junior-objects.html">Junior Objects</a> book of min
 I’m proud of this code.</p>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">“People using classes in JavaScript will go to their graves never knowing how miserable they were” - Douglas Crockford <a href="https://t.co/D2Hpegn0vY">https://t.co/D2Hpegn0vY</a></p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/2010297169899913568?ref_src=twsrc%5Etfw">January 11, 2026</a></blockquote>
-<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[JavaScript was an elegant prototype-based class-free language until TypeScript and ES6 classes ruined it.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/12/platoon.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/12/platoon.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">You Are the Low-Hanging Fruit</title><link href="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html" rel="alternate" type="text/html" title="You Are the Low-Hanging Fruit" /><published>2025-11-30T00:00:00+03:00</published><updated>2025-11-30T00:00:00+03:00</updated><id>https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles</id><content type="html" xml:base="https://www.yegor256.com/2025/11/30/internal-vs-external-obstacles.html"><![CDATA[<p>Let’s say, you are a startup founder, like <a href="https://www.zerocracy.com">myself</a>.
-Try to hire a sales guy.
-Offer him a commission-only payment scheme.
-Listen to his reaction: he will demand that you pay a fixed salary too, on top of commission.
-Try to convince him that commission-only is a more reasonable and <a href="/2014/09/24/why-monetary-awards-dont-work.html">motivating</a> setup.
-Goto 1.
-After a number of iterations you realize that the mission is impossible.
-Sales people are good at selling and the best thing they sell is the idea that their <em>time</em> must be compensated.
-Even if they don’t sell the product to your customers.
-If you don’t buy the idea, they go find another loser who will.
-Something similar happens when you try to pay programmers by result.
-They easily convince you to pay for <a href="/2015/07/21/hourly-pay-modern-slavery.html">their time</a>.
-And you do.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="City of God (2002) by Kátia Lund" src="/images/2025/11/city-of-god.jpg" longdesc="#1e31b0ff" /><figcaption id="1e31b0ff">City of God (2002) by Kátia Lund</figcaption></figure>
-
-<p>A sales rep doesn’t know how to write code.
-Most of them don’t even know how computers work.
-However, he <em>perfectly</em> knows how to bullshit people.
-That’s exactly why we need him.
-Because we don’t know how to bullshit people and we don’t want to learn it.</p>
-
-<p>Now, two strategies lie in front of him.
-He can use the skill against the prospects on the market and turn them into paying customers.
-He can also use the same selling skill against you, the owner of the startup.
-Instead of selling the product to the market he can sell <em>himself</em> to you.
-He can sell the idea that even if he fails to sell the product to the customers he still deserves a decent weekly paycheck.</p>
-
-<p>What do you think, which sale is easier to make?
-What would you do in his shoes?
-The answer is obvious.
-The customers are far away and they have no mercy.
-If they don’t like the offer, they simply hang up on him and that’s it.
-You, on the other hand, sit next to him in the same office and can’t hang up.
-You are the <em>low-hanging fruit</em>.
-You are the <em>weakest</em> prey he can reach out to.</p>
-
-<aside class="quote">In order to make him focus on external obstacles, you should make internal ones harder to overcome
-</aside>
-
-<p>A customer is an <em>external</em> obstacle that he must overcome in order to get paid, as a sales commission.
-You are an <em>internal</em> obstacle, which he may also overcome to get a fixed weekly payment.
-You need him to fight the external obstacle.
-However, he is free to choose the <em>easiest</em> path.</p>
-
-<p>In order to make him focus on external obstacles, you should make internal ones <em>harder</em> to overcome.
-Joseph Stalin once <a href="https://www.goodreads.com/quotes/338750-in-the-soviet-army-it-takes-more-courage-to-retreat">said</a> that “in the Soviet army it takes more courage to retreat than advance.”
-This war-time concept seems relevant to the sales guys you hire.
-It must be harder for them to talk you into paying them a fixed salary than to convince a prospect to buy your product.</p>
-
-<p>Emotionally, for you it may be rather challenging to constantly push him back.
-Just like it’s often hard to say “No” to a vagrant begging for a dollar at the corner.
-Beggars, unless they are physically disabled, also, just like sales people, have two possible life strategies.
-Either find a job or beg at the corner.
-The begging strategy, for the vagrant and for the sales rep, is <em>easier</em> to pursue.</p>
-
-<p>Programmers are not much different.
-They also have two strategies.
-They can solve technical problems by merging qualified pull requests.
-They can also persuade you that you must pay for their time, not their pull requests.
-Which obstacle is going to be harder for them to overcome depends on <em>you</em>.</p>
-
-<p>First, you set up a formula for measuring their contribution.
-Second, you bind their paychecks to it: they get paid <a href="/2016/05/24/who-is-project-manager.html">not by you</a>,
-  but by <em>merged pull requests</em>.
-Finally, you taboo the very possibility of discussing time-based compensation.</p>
-
-<aside class="quote">Taboo the very possibility of discussing time-based compensation
-</aside>
-
-<p>What you get is a technical team focused on resolving external problems.
-The team will <em>advance</em> because it will be <a href="/2018/07/24/bugs-or-pull-requests.html">pointless</a> to <em>retreat</em>.
-You simply <a href="/2015/07/21/hourly-pay-modern-slavery.html">won’t pay</a> them for their time.
-No matter how many times they repeat “I was working hard the entire weekend.”</p>
-
-<p>Incentives shape behavior.
-If you reward excuses, you buy excuses.
-If you reward results, you get results.
-As a founder, your job is to eliminate the temptation for your team to <a href="/2019/07/10/inversive-management.html">sell you</a>
-  anything other than tangible artifacts.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="management" /><summary type="html"><![CDATA[Sales reps and programmers can either fight external obstacles to earn their pay, or convince you, the founder, to pay for their time regardless of results; make the internal path harder.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/11/city-of-god.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/11/city-of-god.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="oop" /><summary type="html"><![CDATA[JavaScript was an elegant prototype-based class-free language until TypeScript and ES6 classes ruined it.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2025/12/platoon.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2025/12/platoon.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
