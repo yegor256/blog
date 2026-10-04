@@ -125,6 +125,8 @@ He meant it kindly.
 He was talking to people who had just finished four years of university.
 We will **retire**, or we will move to physical work.
 
+{% quote A child born today will be obsolete before he finishes school. %}
+
 [John Keynes] named it in [Economic Possibilities for Our Grandchildren (1930)]:
   "technological unemployment," he called it,
   "unemployment due to our discovery of means of economising the use of
