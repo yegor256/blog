@@ -118,14 +118,14 @@ None of this is new.
 He was writing about the future.
 Thirty-two years later it is **career advice**.
 
+{% quote A child born today will be obsolete before he finishes school. %}
+
 In May 2026 [Jensen Huang] [told] a graduating class at Carnegie Mellon:
   "Electricians, plumbers, iron workers, technicians,
   builders---this is your time."
 He meant it kindly.
 He was talking to people who had just finished four years of university.
 We will **retire**, or we will move to physical work.
-
-{% quote A child born today will be obsolete before he finishes school. %}
 
 [John Keynes] named it in [Economic Possibilities for Our Grandchildren (1930)]:
   "technological unemployment," he called it,
