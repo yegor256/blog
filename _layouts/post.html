@@ -5,13 +5,15 @@ layout: default
 <div class="wrapper">
   <section itemscope="" itemtype="http://schema.org/BlogPosting">
     <header>
-      <p class="printable">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ site.url }}{{ page.url }}&amp;format=svg"
-          style="width:125px;height:125px;" alt="QR code"/>
-      </p>
-      <p class="printable">
-        <code itemprop="url">{{ site.url }}{{ page.short-url }}</code>
-      </p>
+      {% unless site.url contains "localhost" %}
+        <p class="printable">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data={{ site.url }}{{ page.url }}&amp;format=svg"
+            style="width:125px;height:125px;" alt="QR code"/>
+        </p>
+        <p class="printable">
+          <code itemprop="url">{{ site.url }}{{ page.short-url }}</code>
+        </p>
+      {% endunless %}
       <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
       {% if page.book %}
         {{ page.book | book }}
@@ -25,7 +27,6 @@ layout: default
         {% if page.place %}
           <li class="desktop-only" itemprop="locationCreated">{{ page.place }}</li>
         {% endif %}
-        {{ page | modified }}
         <li class="printable" itemscope="" itemprop="author" itemtype="http://schema.org/Person">
           <span itemprop="name">{{ site.author.name }}</span>
         </li>
@@ -34,6 +35,7 @@ layout: default
           <a href="https://www.yegor256.com{{ page.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
         </li>
       </ul>
+      {{ page | modified }}
       {% if page.translated %}
         <ul class="unprintable subline">
           <li>Translated:</li>

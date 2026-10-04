@@ -17,8 +17,8 @@ module Yegor
       return '' if count <= 1
       date = Time.parse(`git log -n 1 --date=iso --format=%ad #{escaped}`.strip)
       return '' if date <= page['date']
-      "<li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/#{path}'>Modified</a>\
-      on <time itemprop='dateModified' datetime='#{date.strftime('%Y-%m-%dT%H:%M:%S%z')}'>#{date.strftime('%-d %B %Y')}</time></li>"
+      "<ul class='subline'><li class='unprintable desktop-only'><a href='https://github.com/yegor256/blog/commits/master/#{path}'>Modified</a>\
+      on <time itemprop='dateModified' datetime='#{date.strftime('%Y-%m-%dT%H:%M:%S%z')}'>#{date.strftime('%-d %B %Y')}</time></li></ul>"
     end
   end
 end
