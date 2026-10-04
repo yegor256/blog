@@ -158,7 +158,8 @@ Now the same thing is coming up the ladder, for the people who have
 
 [Hannah Arendt] saw the shape of this in 1958,
   before programming became a profession.
-"What we are confronted with," she wrote, "is the prospect of a society
+"What we are confronted with," she [wrote][human-condition],
+  "is the prospect of a society
   of **laborers without labor**, that is, without the only activity left to
   them. Surely, nothing could be worse."
 And she saw no way out: no class left, "no aristocracy of either a
@@ -216,3 +217,4 @@ Neither does this one.
 [Émile Durkheim]: https://en.wikipedia.org/wiki/%C3%89mile_Durkheim
 [my GitHub]: https://github.com/yegor256
 [Claude Code]: https://claude.com/product/claude-code
+[human-condition]: https://en.wikipedia.org/wiki/The_Human_Condition_(Arendt_book)
