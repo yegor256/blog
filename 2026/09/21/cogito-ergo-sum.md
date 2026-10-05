@@ -11,7 +11,7 @@ By September 2027 I don't expect to be using Claude to write blog posts.
 Because I don't expect there to be blog posts by me to write.
 I won't be a writer.
 I won't be a programmer either.
-And I don't know what a man is for, after that.
+And **I don't know what a man is for**, after that.
 
 
 {% jb_picture_body %}
