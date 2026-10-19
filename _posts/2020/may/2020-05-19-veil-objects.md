@@ -164,3 +164,6 @@ of its methods to be pre-calculated.
 
 P.P.S. This is the implementation for
 [Kotlin](https://github.com/binkley/kotlin-veil).
+
+P.P.P.S. This is the implementation for
+[JavaScript](https://github.com/illia-m-b/veils-js).
