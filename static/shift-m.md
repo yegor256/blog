@@ -47,7 +47,7 @@ Subscribe at
 Recent episodes:
 
 <img src="/images/shift-m/douglas-crockford.png" class="guest-face" alt="Douglas Crockford"/>
-&#35;56: [Shift-M/56: Douglas Crockford about JavaScript, OOP, JSON, Misty, and actors](/shift-m/2026/56.html)<br/>
+&#35;56: [Douglas Crockford about JavaScript, OOP, JSON, Misty, and actors](/shift-m/2026/56.html)<br/>
 13 January 2026; 63 min; [video](https://youtu.be/BrlOIPEsSJ4).
 
 <img src="/images/shift-m/richard-pawson.png" class="guest-face" alt="Richard Pawson"/>
