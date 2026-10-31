@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -153,7 +153,7 @@ It's very similar to what gangsters do when they "protect" you,
 but here we're dealing with intellectual property and there is only one
 "gangster" per country. The concept is pretty much the same.
 
-{% badge /images/2015/04/nolo-patent-it-yourself.jpg 96 https://amzn.to/2c5oky8 %}
+{% jttu pressman2020patent %}
 
 First, you describe your idea in the format that patents are written. It is
 not difficult at all, but it would help if you read one of those "how to file

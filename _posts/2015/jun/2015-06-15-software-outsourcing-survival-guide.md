@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -59,7 +59,7 @@ for you to be the only person with write access. To make life simpler,
 I would recommend you use [Rultor]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
 as a tool for merging those pull requests semi-automatically.
 
-{% quote Don't rely on reports, promises, guarantees, and extensive documentation. %}
+{% quote Don't rely on reports, promises, guarantees, and extensive documentation %}
 
 **Regularly Collect Metrics**.
 Ask your outsourcing team members to regularly collect metrics from the software
@@ -120,7 +120,7 @@ you see your software packaged and deployed every single week, no exceptions
 and no excuses. If your outsourcing team can't give that to you, start worrying
 and change something.
 
-{% quote They have to know what will happen to them if they succeed and how much they will suffer if they fail. %}
+{% quote They have to know what will happen to them if they succeed and how much they will suffer if they fail %}
 
 **Hire an Independent CTO**.
 This advice is mostly for small companies or individuals who
@@ -165,7 +165,7 @@ Added on the 14th of October, 2018:
 Some say [12 weeks](http://12weekmvp.com/process.html), I say a month.
 And I'm [not alone](https://medium.freecodecamp.org/the-developers-workflow-in-practice-how-we-built-our-mvp-in-30-days-c60d804695a8).
 Do you know that the first version of Minecraft (which was later
-[sold](https://mojang.com/2014/09/yes-were-being-bought-by-microsoft/)
+[sold](https://news.microsoft.com/source/2014/09/15/minecraft-to-join-microsoft/)
 to Microsoft for $2.5B) was released in just [six](https://www.techradar.com/news/the-history-of-minecraft)
 days? There are many other examples, including Uber, Dropbox,
 [Buffer](https://blog.bufferapp.com/idea-to-paying-customers-in-7-weeks-how-we-did-it),
@@ -187,7 +187,7 @@ Make them happy and you lose. You must find a way to align your objectives
 (buy a new car and spend the next vacation on a beach).
 Can you do that? It's difficult. That's why we created [Zerocracy](https://www.zerocracy.com), which makes
 [incremental billing]({% pst 2014/oct/2014-10-21-incremental-billing %})
-and paying by results possible. You can either [move](https://www.zerocracy.com/rfp) your
+and paying by results possible. You can either [move](https://www.zerocracy.com) your
 project to our platform and manage your developers there, or invent something
 on your own. But remember, no monthly salaries! Only pay by results delivered.
 

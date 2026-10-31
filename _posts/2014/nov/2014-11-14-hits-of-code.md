@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: Hits-of-Code Instead of SLoC
 date: 2014-11-14
 tags: management
+place: Amsterdam, Holland
 description: |
   The Hits of Code (HoC) metric is an alternative measurement
   indicator that can replace Software Lines Of Code (SLoC) and help

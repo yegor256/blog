@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Fluent Java HTTP Client"
 date: 2014-04-11
 tags: jcabi http java
+place: Amsterdam, Holland
 description: |
   I created a simple fluent Java HTTP client to make things
   easier with HTTP interactions; the article explains its benefits
@@ -19,7 +20,7 @@ keywords:
   - java http client
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://http.jcabi.com %}
 
 In the world of Java, there are plenty of HTTP clients from which to choose.
 Nevertheless, I decided to create a new one because none of the other clients

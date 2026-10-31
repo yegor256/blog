@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -25,7 +25,7 @@ related:
 image: /images/2014/11/rate-open-source-contribution.png
 ---
 
-{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg M https://www.zerocracy.com %}
 
 I'm getting a few emails every day from programmers
 interested in working with [Zerocracy](https://www.zerocracy.com) remotely.
@@ -44,7 +44,7 @@ I do find them objective and logical, though---so let me explain.
 
 ## Open Source Contribution
 
-{% badge /images/2014/11/rate-open-source-contribution.png 350 %}
+{% badge /images/2014/11/rate-open-source-contribution.png XXL %}
 
 This is the first and the most important characteristic of a
 software developer. Do you contribute to open source projects?
@@ -109,7 +109,7 @@ expensive countries. When I'm getting resumes from San Francisco programmers,
 their rates are $70+ per hour. The same skills and experience cost
 $15-20 in Karachi. The reason here is the cost of living---it is much higher in the US than in Pakistan.
 
-{% quote We prefer to work with people whose expenses are lower. %}
+{% quote We prefer to work with people whose expenses are lower %}
 
 However, this reason doesn't sound logical to me. If you're driving a more
 expensive car, we have to pay you a
@@ -143,7 +143,7 @@ Or maybe you're too shy to ask? Or you can't describe your questions
 in an accurate and precise format? Or maybe all your questions already
 have answers? In any case, it's sad.
 
-{% quote SO reputation is proof that you can find answers to your questions by communicating with people you don't know. %}
+{% quote SO reputation is proof that you can find answers to your questions by communicating with people you don't know %}
 
 Second, if you're not answering, you simply have nothing to say. In most cases,
 this means that you're not solving complex and unique problems.
@@ -177,7 +177,7 @@ It is a very important skill.
 
 ## Years of Experience
 
-{% badge /images/2014/11/rate-years-of-experience.png 350 %}
+{% badge /images/2014/11/rate-years-of-experience.png XXL %}
 
 "I've written Java for 10 years!"---so what? This number means only
 one thing to me---you managed to survive in some office for ten years.
@@ -202,7 +202,7 @@ Play this card only if you have other merits. Otherwise, keep it to yourself.
 
 ## Certifications
 
-{% badge /images/2014/11/rate-certifications.png 350 %}
+{% badge /images/2014/11/rate-certifications.png XXL %}
 
 Oracle, Zend, Amazon, IBM, MySQL, etc.---I'm talking about these certifications. In order to get them you should
 pass an exam. Not an easy one and not online. It is a real exam taken in
@@ -261,7 +261,7 @@ I realize that you know very little about databases.
 
 ## Talks and Publications
 
-{% badge /images/2014/11/rate-talks-and-publications.png 350 %}
+{% badge /images/2014/11/rate-talks-and-publications.png XXL %}
 
 I think it is obvious that having a blog (about programming, not about
 your favorite cat) is a positive factor. Even better is to be an
@@ -353,4 +353,4 @@ completely different numbers, see
 [How Hourly Rate Is Calculated]({% pst 2014/apr/2014-04-20-how-hourly-rate-is-calculated %})
 
 BTW, illustrations you see above are created by
-[Andreea Mironiuc](http://andreeamironiuc.com/).
+[Andreea Mironiuc](https://andreeaillustration.wordpress.com/).

@@ -1,37 +1,38 @@
-// SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+// SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
+
+@use 'defs' as *;
+@use 'colors' as *;
+@use 'fonts' as *;
+@use 'placeholders' as *;
 
 code,
 pre {
-  font-family: $code-font;
-  font-weight: 400;
+  @extend %mono;
 
   @media all and (max-width: $width) {
-    font-family: 'Ubuntu Mono';
     letter-spacing: -1 * $px;
   }
 }
 
 code {
-  background-color: lightgray;
-  border-radius: 3 * $px;
-  font-size: 90%;
+  font-size: .9 * $rem;
   hyphens: none;
-  line-height: $em;
-  padding: 0 .15 * $em;
+  line-height: $rem;
+}
+
+pre {
+  display: block;
+  line-height: 1.2 * $rem;
+
+  code {
+    background-color: inherit;
+    padding: 0;
+  }
 }
 
 .highlighter-rouge pre {
-  border-left: 3 * $px solid lightgray;
-  margin-left: 2 * $em;
-  padding-left: .5 * $em !important;
-
-  @media all and (max-width: $width) {
-    border-left: 0;
-    margin-left: 0;
-    overflow-x: auto;
-    padding-left: 0 !important;
-  }
+  overflow-x: auto;
 
   .kn,
   .kd,
@@ -40,7 +41,7 @@ code {
   }
 
   .c1 {
-    color: dimgray;
+    color: $gray;
   }
 }
 
@@ -52,10 +53,11 @@ code {
   .linenos {
     @extend %gray;
     @extend %desktop-only;
-    min-width: 2 * $em;
+
+    min-width: 2 * $rem;
     padding-right: 2 * $px;
     text-align: right;
-    width: 2 * $em;
+    width: 2 * $rem;
   }
 
   .highlight {
@@ -64,20 +66,5 @@ code {
 
   @media all and (max-width: $width) {
     overflow-x: auto;
-  }
-}
-
-pre {
-  display: block;
-  font-size: .9 * $em;
-  line-height: 1.2 * $em;
-
-  code {
-    background-color: inherit;
-    padding: 0;
-  }
-
-  @media all and (max-width: $width) {
-    line-height: 1.2 * $em;
   }
 }

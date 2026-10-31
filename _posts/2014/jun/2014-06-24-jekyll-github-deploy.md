@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Deploy Jekyll to GitHub Pages"
 date: 2014-06-24
 tags: jekyll github ruby
+place: Amsterdam, Holland
 description: |
   Jekyll site can easily be deployed to GitHub Pages
   even with custom plugins; just use my jgd Ruby gem
@@ -57,8 +58,7 @@ located in the root directory of the repository. Just
 as they do on [this blog]({% pst 2014/apr/2014-04-06-introduction %});
 see [its sources in GitHub](https://github.com/yegor256/blog).
 
-You can easily integrate `jgd` with Travis. See
-[`.travis.yml`](https://github.com/yegor256/blog/blob/master/.travis.yml) of this blog.
+You can easily integrate `jgd` with Travis.
 
 Full documentation about the gem is located
 [here](https://github.com/yegor256/jekyll-github-deploy).

@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: static
@@ -11,6 +11,9 @@ description: |
   email per month and you can always unsubscribe.
 keywords:
   - unsubscribe
+  - mailing list
+  - email subscription
+  - newsletter
 ---
 
 Thanks for subscribing! I will send you an email soon (on the closest

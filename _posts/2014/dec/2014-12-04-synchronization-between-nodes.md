@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Synchronization Between Nodes"
 date: 2014-12-04
 tags: pets
+place: Amsterdam, Holland
 description: |
   Free cloud service stateful.co helps you synchronize
   across multiple servers or parallel processes on the same machine.
@@ -28,7 +29,7 @@ such synchronization, there will be collisions and conflicts. This
 is especially true when we're talking about "resources" that do
 not support *atomic* transactions.
 
-{% badge http://img.stateful.co/pomegranate.svg 64 https://www.stateful.co %}
+{% badge http://img.stateful.co/pomegranate.svg S https://www.stateful.co %}
 
 To solve this issue and prevent conflicts, we have to introduce
 one more element into the picture. All software modules, before

@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -54,7 +54,7 @@ Four-page brochures have far fewer chances than one-pagers.
 
 ## Don't Lie
 
-{% quote You can tell half of the truth, you can hide some information, and you can rephrase the truth, but never lie. %}
+{% quote You can tell half of the truth, you can hide some information, and you can rephrase the truth, but never lie %}
 
 No matter what you do with your resume, never lie about a single word. You
 can tell half of the truth, you can hide some information, and you can rephrase
@@ -140,7 +140,7 @@ software developer, you must be on GitHub. You
 to some open source. You have to be visible in the open source world if you
 want to sell yourself high.
 
-{% quote You don't have to spend all your time on open source projects, just contribute to the ones you're using already. %}
+{% quote You don't have to spend all your time on open source projects, just contribute to the ones you're using already %}
 
 Your potential employer wants to see what the _market_ is thinking about
 your code and about you. They are afraid of making a mistake by hiring you.
@@ -167,7 +167,7 @@ in the world, but only a few percent of them are certified. Regardless of whethe
 you think it's important or not, get those certifications.
 
 As many as you like. But stay away from
-[BrainBench](https://www.brainbench.com/) and similar sites. Well,
+BrainBench and similar sites. Well,
 you can get certified there, but don't put them into your resume. That will
 only demonstrate that you are proud of a very questionable achievement. It's not
 a good sign.
@@ -271,8 +271,6 @@ me, because I truly believe that modern offices and full-time jobs
 turn programmers into
 [slaves]({% pst 2015/oct/2015-10-06-how-to-be-good-office-slave %}) (and not only programmers).
 
-{% youtube af6bidlat6Q %}
-
 Other employers may think differently. Well, they most likely think differently.
 That's why you have to demonstrate with which offices you've spent 10 recent
 years of your life. I would recommend you keep this list short. Even if you've
@@ -340,4 +338,4 @@ Look at these samples (they are good):
 [`@leventov`](/pdf/resumes/roman-leventov.pdf).
 
 Here is [mine](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume.tex&command=pdflatex&trackId=1520158941887)
-and its longer and [boring version](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume-boring.tex&command=pdflatex&trackId=1520166474432).
+and its longer and [boring version](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fboring.tex&command=pdflatex&trackId=1520166474432).

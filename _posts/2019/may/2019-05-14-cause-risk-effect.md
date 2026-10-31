@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -22,7 +22,7 @@ jb_picture:
   caption: The Departed (2006) by Martin Scorsese
 ---
 
-{% badge https://www.0rsk.com/logo.svg 64 https://www.0rsk.com %}
+{% badge https://www.0rsk.com/logo.svg S https://www.0rsk.com %}
 
 "A project manager's work should not focus on dealing with problems;
 it should focus on preventing them,"---this is how

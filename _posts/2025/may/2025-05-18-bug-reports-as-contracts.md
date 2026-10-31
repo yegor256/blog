@@ -1,12 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "No BTW in Bug Reports"
 date: 2025-05-18
 place: Moscow, Russia
-tags: testing etiquette
+tags: tests etiquette
 description: |
   Keep your ticket focused---one issue per report, no distractions,
   no "by the way"---this is how you help your team achieve higher efficiency.
@@ -68,7 +68,7 @@ They're [not motivated]({% pst 2014/nov/2014-11-24-principles-of-bug-tracking %}
 What they really want is to close the ticket---ASAP.
 Dragging out the conversation only risks **annoying** them.
 
-{% quote Nothing hurts a software team more than a silent customer and an empty bug tracker. %}
+{% quote Nothing hurts a software team more than a silent customer and an empty bug tracker %}
 
 You might also believe that submitting a ticket offends the team.
 They already have a lot of work to do---why bother them with even more?

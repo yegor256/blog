@@ -1,12 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Unit Testing Anti-Patterns, Full List"
 date: 2018-12-11
 place: Moscow, Russia
-tags: testing
+tags: tests
 description: |
   This is a full list of unit-testing anti-patterns that I
   managed to find and collect; feel free to add your
@@ -19,7 +19,7 @@ keywords:
   - unit testing anti-pattern java
 image: /images/2018/12/breaking-bad.jpg
 jb_picture:
-  caption: Breaking Bad (2010) by Vince Gilligan
+  caption: Breaking Bad (2008-2013) by Vince Gilligan
 ---
 
 I wrote some time ago about [anti-patterns in OOP]({% pst 2014/sep/2014-09-10-anti-patterns-in-oop %}).
@@ -183,4 +183,4 @@ Useful links:
   1. [_Spock: Up and Running_](https://amzn.to/2BaAKRB) by Rob Fletcher
   2. [_Mastering Software Testing with JUnit 5_](https://amzn.to/2DpkFc6) by Boni Garcia
   3. [_TDD Anti-Patterns_](http://archive.is/3acB#selection-119.0-119.17) by James Carr
-  4. [_Anti-Patterns_](https://www.digitaltapestry.net/testify/manual/AntiPatterns.html) by William E. Kempf
+  4. _Anti-Patterns_ by William E. Kempf (link dead)

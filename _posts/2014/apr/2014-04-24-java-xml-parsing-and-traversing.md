@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -19,7 +19,7 @@ keywords:
   - java xml parsing best practices
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://xml.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://xml.jcabi.com %}
 
 Unlike with many other modern languages, parsing XML in Java requires  more than
 one line of code. XML traversing using XPath takes even more code,  and I find

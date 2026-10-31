@@ -1,12 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "The TDD That Works for Me"
 date: 2017-03-24
 place: Frankfurt, Germany
-tags: testing tdd
+tags: tests tdd
 description: |
   Test-driven development is a brilliant idea...if it works;
   in reality, it doesn't work the way most software books
@@ -27,8 +27,8 @@ was [rediscovered](https://www.quora.com/Why-does-Kent-Beck-refer-to-the-redisco
 by [Kent Beck](https://en.wikipedia.org/wiki/Kent_Beck) and explained in
 [his famous book](https://amzn.to/2mTuxCs) in 2002.
 In 2014, David Heinemeier Hansson (the creator of Ruby on Rails)
-said that TDD [is dead](http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html)
-and only [harms architecture](http://david.heinemeierhansson.com/2014/test-induced-design-damage.html).
+said that TDD [is dead](https://dhh.dk/2014/tdd-is-dead-long-live-testing.html)
+and only [harms architecture](https://dhh.dk/2014/test-induced-design-damage.html).
 [Robert Martin](https://en.wikipedia.org/wiki/Robert_Cecil_Martin)
 (the inventor of the [SOLID principles]({% pst 2017/mar/2017-03-28-solid %}))
 [disagreed](https://8thlight.com/blog/uncle-bob/2014/04/25/MonogamousTDD.html)
@@ -56,7 +56,7 @@ when we're in a good mood and have nothing else to do. And this is only logical,
 if we understand TDD literally, by
 [the book](https://en.wikipedia.org/wiki/Kent_Beck).
 
-{% quote I have never done TDD by the book: tests first and code next. %}
+{% quote I have never done TDD by the book: tests first and code next %}
 
 Writing a test for a class without having that class in front of you is
 _difficult_. I would even say impossible, if we are talking about real code,
@@ -117,7 +117,7 @@ to fix only what's visible and intolerable by the business. If the business
 doesn't care or our users/testers don't see our bugs---we must not
 _waste_ project resources on fixing them.
 
-{% quote I only create tests later when my users express the need for them by reporting bugs. %}
+{% quote I only create tests later when my users express the need for them by reporting bugs %}
 
 On the other hand, when the business or our users/testers are complaining,
 we have to be very strict with ourselves; our testing system is weak and

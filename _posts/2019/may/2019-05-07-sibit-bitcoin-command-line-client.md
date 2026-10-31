@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -23,7 +23,7 @@ jb_picture:
   caption: The Invention of Lying (2009) by Ricky Gervais et al.
 ---
 
-{% badge https://raw.githubusercontent.com/yegor256/sibit/master/logo.svg?sanitize=true 64 https://github.com/yegor256/sibit %}
+{% badge https://raw.githubusercontent.com/yegor256/sibit/master/logo.svg?sanitize=true S https://github.com/yegor256/sibit %}
 
 [Bitcoin](https://www.bitcoin.org) was a big technical mystery for me. All the articles I'd read
 about it sounded extremely complex and absolutely indigestible. Until

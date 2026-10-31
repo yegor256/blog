@@ -1,12 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Single Statement Unit Tests"
 date: 2017-05-17
 place: Odessa, Ukraine
-tags: testing java
+tags: tests java
 description: |
   Test methods are traditionally very procedural
   and algorithmic, which makes them difficult to read
@@ -109,7 +109,7 @@ and its
 of basic matchers is a perfect instrument to make our
 single-statement test methods even more cohesive and readable.
 
-{% youtube CCr8hRE_TUs %}
+{% youtube 1QTfi9kLzrM %}
 
 There are a number of practical benefits of this principle, if we
 agree to follow it:

@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -101,7 +101,7 @@ they stay in the office [from nine till five]({% pst 2015/jul/2015-07-21-hourly-
 and get a raise every few years only by switching company. And they have
 supervisors, mentors, coaches, leaders, you name it, ... instead of managers.
 
-{% quote Programmers, lined up every morning and forced to explain themselves, inevitably feel guilty. %}
+{% quote Programmers, lined up every morning and forced to explain themselves, inevitably feel guilty %}
 
 Thus, how is it possible to keep the group together and make sure programmers
 at least pretend to be working, if they have no personal responsibilities,

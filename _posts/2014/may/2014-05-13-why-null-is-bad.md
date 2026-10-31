@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -20,7 +20,6 @@ keywords:
   - null is bad
   - null is evil
 translated:
-  - Japanese: http://tbd.kaitoy.xyz/2015/07/26/why-null-is-bad/
 book: elegant-objects-1 2.6
 buffer:
   - "Still using NULL in your code? Still think it's justified in some places? Think again"

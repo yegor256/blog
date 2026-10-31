@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 set -ex -o pipefail
@@ -19,6 +19,6 @@ mkdir -p "${tmp}"
 target=$1
 mkdir -p "${target}"
 
-for e in svg ttf woff eot css; do
+for e in svg ttf woff woff2 eot css; do
   cp "${tmp}/icons.${e}" "${target}"
 done

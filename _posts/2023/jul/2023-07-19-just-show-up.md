@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -22,7 +22,7 @@ jb_picture:
 ---
 
 According to a [study](https://www.emerald.com/insight/content/doi/10.1108/09534810710760045/full/html)
-conducted by [Dariusz Jemielniak](https://www.jemielniak.org/) in 2007, the majority of programmers perceive
+conducted by Dariusz Jemielniak in 2007, the majority of programmers perceive
 their own managers as highly incompetent. We don't expect our bosses to be
 coding-savvy---this level of technical competence is [not a requirement]({% pst 2016/may/2016-05-24-who-is-project-manager %})
 for an average manager. Additionally, we don't expect them to excel in
@@ -67,7 +67,7 @@ and creativity by introducing the concept of [productivity evaluation](https://w
 (that's unthinkable!).
 They can simply reward the most disciplined clock-watchers and call it a management.
 
-{% quote Let's focus on fitting into the group rather than contributing to the codebase. %}
+{% quote Let's focus on fitting into the group rather than contributing to the codebase %}
 
 On the other hand, perhaps it's not entirely detrimental for some of us. If the management
 is [incompetent]({% pst 2017/aug/2017-08-01-how-to-manage-a-manager %})

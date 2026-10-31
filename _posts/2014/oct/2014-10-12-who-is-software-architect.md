@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -19,7 +19,6 @@ keywords:
   - software architect salary
   - software architect job description
 translated:
-  - Japanese: http://tbd.kaitoy.xyz/2016/01/11/who-is-software-architect/
 image: /images/2014/10/jackie-brown.jpg
 jb_picture:
   caption: Jackie Brown (1997) by Quentin Tarantino

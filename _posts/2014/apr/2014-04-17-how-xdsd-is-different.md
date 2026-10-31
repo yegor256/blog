@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -21,7 +21,7 @@ jb_picture:
   caption: Revolver (2005) by Guy Ritchie
 ---
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 eXtremely Distributed Software Development, or [XDSD](https://www.xdsd.org) for short, is a methodology
 that differs significantly from working in traditional software development

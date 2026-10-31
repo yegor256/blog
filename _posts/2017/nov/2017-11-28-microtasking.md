@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -64,7 +64,7 @@ getting lazy, you control, you dominate, you annoy, you
 you [punish]({% pst 2016/jan/2016-01-05-how-to-punish-employees %})
 them every way you can.
 
-{% quote The more aggressive you are, the higher the chances you win. %}
+{% quote The more aggressive you are, the higher the chances you win %}
 
 You don't do that because you're evil. You just know that otherwise they
 will trash your apartment, will forget things, will miss
@@ -156,7 +156,7 @@ into, say, 2,500+ micro tasks:
     [paying by result]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %}) and
     [prohibition of chitchats]({% pst 2014/oct/2014-10-07-stop-chatting-start-coding %}).
 
-{% quote They are simply spoiled by the traditional macro-tasking where they are paid by the month and nobody really controls their results. %}
+{% quote They are simply spoiled by the traditional macro-tasking where they are paid by the month and nobody really controls their results %}
 
   * **Laziness**.
     Just like that apartment designers, programmers also love to get paid
@@ -289,7 +289,7 @@ down:
   * **Metrics work**.
     When one programmer closes 40-50 tasks per week and another one closes
     5-10, it does mean something, keeping in mind that all tasks are almost
-    equal in size. We use this metric (and [a few others](https://www.0crat.com/gang))
+    equal in size. We use this metric (and [a few others](https://www.zerocracy.com/elite))
     to make organizational
     and discipline decisions. In a macro-tasking environment almost no HR metrics
     really work.

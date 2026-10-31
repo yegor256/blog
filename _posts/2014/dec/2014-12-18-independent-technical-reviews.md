@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "You Do Need Independent Technical Reviews!"
 date: 2014-12-18
 tags: management
+place: Amsterdam, Holland
 categories: jcg
 description: |
   Regularly and systematically having your programmers' technical deliverables
@@ -74,7 +75,7 @@ where he would change it, and what he would do instead. Then, you pay him
 and he leaves. You may never see him again, but his conclusions and suggestions
 help you _check the reality_ of your code and evaluate how your team is really doing.
 
-{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg M https://www.zerocracy.com %}
 
 We, at [Zerocracy](https://www.zerocracy.com), do independent reviews
 with every project of ours, and this is a list of principles we use:

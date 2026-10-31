@@ -1,12 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "More Bugs, Please"
 date: 2018-02-06
 place: Moscow, Russia
-tags: testing
+tags: tests
 description: |
   We encourage programmers to find bugs and report them;
   we even pay for each bug found; this article
@@ -92,7 +92,7 @@ it's a bug.
 If a unit test fails sporadically
 ([yegor256/takes#506](https://github.com/yegor256/takes/issues/506))
 or doesn't work in some particular environment
-([yegor256/jpeek#151](https://github.com/yegor256/jpeek/issues/151)),
+([cqfn/jpeek#151](https://github.com/cqfn/jpeek/issues/151)),
 it's a bug.
 
 Also, it's worth mentioning that minor, cosmetic, or poorly formulated

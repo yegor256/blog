@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -21,7 +21,6 @@ keywords:
   - morning stand-up meeting
   - scrum standup
 translated:
-  - Japanese: http://tbd.kaitoy.xyz/2015/08/11/daily-stand-up-meetings-are-a-good-tool-for-a-bad-manager/
 image: /images/2015/01/cool-hand-luke.png
 jb_picture:
   caption: Cool Hand Luke (1967) by Stuart Rosenberg
@@ -101,7 +100,7 @@ even outside of the office. Actually, you would not need an office at all,
 but that's a subject for
 [another discussion]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %}).
 
-{% quote These morning meetings give the impression that the manager is working hard and well deserves his overblown salary. %}
+{% quote These morning meetings give the impression that the manager is working hard and well deserves his overblown salary %}
 
 Someone may say that daily stand-ups are a perfect place and time to
 exchange information among programmers, not just to inform the Scrum master and
@@ -158,7 +157,7 @@ Why would such a manager need daily stand-ups? Why would he need to
 ask his people what they are doing? He is not meddling in their plans.
 Instead, he trusts them and controls their results only.
 
-{% quote Only a good manager is capable of defining awards, penalties, and rules so explicitly and strictly. %}
+{% quote Only a good manager is capable of defining awards, penalties, and rules so explicitly and strictly %}
 
 Let me reiterate: I strongly believe that responsibility must be
 delegated, and this delegation consists of three components:

@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Definition Of Done"
 date: 2014-04-15
 tags: management xdsd
+place: Amsterdam, Holland
 description: |
   When tasks can be considered DONE and their
   implementation paid for? This post answers both of these questions.
@@ -19,7 +20,7 @@ keywords:
   - human resource management
 ---
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 [Definition of Done (DoD)](https://www.scrum.org/Resources/Scrum-Glossary/Definition-of-Done) is a
 key definition used in Scrum and the one we also use in [XDSD](https://www.xdsd.org).

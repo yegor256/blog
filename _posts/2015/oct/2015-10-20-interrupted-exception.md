@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -106,7 +106,7 @@ code doesn't check the flag and never calls `Thread.interrupted()`, it
 accepts the fact that sooner or later it will be terminated cold turkey,
 by clicking `Ctrl-C`.
 
-{% quote The code should either be bullet-fast or interruption-ready, nothing in between. %}
+{% quote The code should either be bullet-fast or interruption-ready, nothing in between %}
 
 Sound logical so far? I hope so.
 

@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 require 'fileutils'
+require 'qbash'
 
 # Jekyll module
 module Jekyll
@@ -27,7 +28,7 @@ module Jekyll
       context['site'].posts.each do |doc|
         words += Jekyll.all_words(doc.content)
       end
-      puts "#{decimal(words.length)} words in the entire blog, #{decimal(words.uniq.length)} uniques"
+      puts "\n#{decimal(words.length)} words in the entire blog, #{decimal(words.uniq.length)} uniques"
       "approx. #{decimal(words.length)} words in the entire blog, \
       <a href='/words.txt'>#{decimal(words.uniq(&:downcase).length)}</a> unique ones"
     end
@@ -83,10 +84,9 @@ module Jekyll
       dat = File.join(site.config['source'], '_temp/stats/stats.dat')
       FileUtils.mkdir_p File.dirname(dat)
       months = {}
-      min = Time.parse('2014-04-01')
       words = []
       site.posts.docs.each do |doc|
-        next if doc.date < min
+        next if doc.date.year < 2014
         m = doc.date.strftime('%Y-%m')
         months[m] = 0 unless months.key?(m)
         all = Jekyll.all_words(doc.content)
@@ -106,23 +106,19 @@ module Jekyll
         File.join(site.config['source'], '_temp/stats/words.txt'),
         words.sort_by(&:downcase).uniq(&:downcase).join("\n")
       )
-      File.write(
-        dat,
-        months.map do |m, c|
-          "#{m}-01T00:00 #{c}"
-        end.join("\n")
-      )
-      puts `
-        set -e
-        src=#{site.config['source']}
-        tmp=#{File.dirname(dat)}
-        cp ${src}/_stats/stats.gpi ${tmp}/stats.gpi
-        cd ${tmp}
-        gnuplot stats.gpi
-        mkdir -p ${src}/_site
+      File.write(dat, months.map { |m, c| "#{m} #{c}" }.join("\n"))
+      qbash(
+        "
+        src=#{Shellwords.escape(site.config['source'])} &&
+        tmp=#{Shellwords.escape(File.dirname(dat))} &&
+        cp ${src}/_stats/stats.gpi ${tmp}/stats.gpi &&
+        cd ${tmp} &&
+        gnuplot stats.gpi &&
+        mkdir -p ${src}/_site &&
         cp ${tmp}/stats.svg ${src}/_site/stats.svg
-      `
-      raise 'failed to build gnuplot stats image' unless $CHILD_STATUS.exitstatus
+        "
+      )
+      raise 'failed to build gnuplot stats image' unless $CHILD_STATUS.success?
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'stats.svg')
       site.static_files << Jekyll::StatsFile.new(site, site.dest, '', 'words.txt')
       puts 'stats.svg generated'

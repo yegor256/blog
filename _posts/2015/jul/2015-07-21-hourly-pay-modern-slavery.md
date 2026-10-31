@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -17,8 +17,6 @@ keywords:
   - pay per hour jobs
   - payroll slavery
   - pay per hour slavery
-translated:
-  - Persian: http://farzam.me/farsi/post?id=65
 image: /images/2015/07/gladiator.jpg
 jb_picture:
   caption: Gladiator (2000) by Ridley Scott
@@ -47,7 +45,7 @@ per hour, per week, or per month, but rather for verified deliverables.
 What is the difference and what does all this have to do with slavery?
 Let's see.
 
-{% badge /images/2015/07/how-to-manage-your-slaves.jpg 96 https://amzn.to/2crHiNG %}
+{% jttu falx2014manage %}
 
 My point here is that any payment schedule based on time instead of results
 is turning us into slaves.
@@ -82,7 +80,7 @@ in return is exactly what slavery is about.
 
 What is freedom, then? How should a free man make money?
 
-{% quote A free man sells results, not time. %}
+{% quote A free man sells results, not time %}
 
 A free man sells the _results of his work_. A free man cleans someone's house
 and bills him when the work is done. A free man drives passengers

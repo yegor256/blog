@@ -1,12 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "The Right Way to Report a Bug"
 date: 2018-04-24
 place: Moscow, Russia
-tags: testing zerocracy etiquette
+tags: tests zerocracy etiquette
 description: |
   Not every bug you report will be accepted by a project
   and paid for; here is a list of tricks to increase
@@ -27,8 +27,8 @@ and [we pay]({% pst 2014/apr/2014-04-13-bugs-are-welcome %})
 for each bug you find and report. Well, not quite. We pay for
 each bug report a project architect considers good enough to pay for.
 The architect's decision is totally subjective and non-disputable,
-according to [§29](https://www.zerocracy.com/policy.html#29)
-of the [Policy](https://www.zerocracy.com/policy.html).
+according to [§29](https://www.zerocracy.com/how-it-works)
+of the [Policy](https://www.zerocracy.com/how-it-works).
 Some of our developers find this unfair and ask me to explain
 how they can report bugs such that they are definitely paid.
 Here is a non-exhaustive list of my recommendations.
@@ -50,7 +50,7 @@ Don't expect all of your bugs to be accepted and paid for.
 Some of them won't be.
 This must not stop you from reporting them.
 
-{% quote Present it as if the entire world will collapse tomorrow if they don't fix it. %}
+{% quote Present it as if the entire world will collapse tomorrow if they don't fix it %}
 
 **Exaggerate**.
 No matter how minor the bug is, present it as if the entire world will

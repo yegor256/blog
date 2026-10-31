@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -79,7 +79,7 @@ to strangers, who care more about the information you're able to deliver than th
 care about you personally. That's a skill you can't buy; you have to earn it.
 And it's crucial in a distributed team.
 
-{% quote It is a must-have instrument for any modern software developer, no matter what your programming language, your age, your project, or your professional level are. %}
+{% quote It is a must-have instrument for any modern software developer, no matter what your programming language, your age, your project, or your professional level are %}
 
 **How to Deal With Morons**.
 You know what to do with them in the office, but on the Internet, they are
@@ -115,7 +115,7 @@ this instrument on a daily basis, your
 [reputation]({% pst 2016/mar/2016-03-08-pimp-up-your-resume %})
 will inevitably reach high levels.
 
-{% badge http://stackexchange.com/users/flair/63162.png 208 http://stackexchange.com/users/63162 %}
+{% badge http://stackexchange.com/users/flair/63162.png XL http://stackexchange.com/users/63162 %}
 
 By the way, this is my [StackExchange profile](http://stackexchange.com/users/63162).
 I've earned the majority of my reputation a few years ago, so now I'm mostly getting up-votes

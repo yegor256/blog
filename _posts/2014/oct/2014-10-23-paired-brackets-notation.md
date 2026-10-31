@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Paired Brackets"
 date: 2014-10-23
 tags: java
+place: Amsterdam, Holland
 description: |
   Paired Brackets notation makes your object-oriented
   code look beautiful and disciplined, no matter

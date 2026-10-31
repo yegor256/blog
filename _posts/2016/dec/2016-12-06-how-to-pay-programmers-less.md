@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -23,7 +23,6 @@ social:
   - reddit: https://www.reddit.com/r/programming/comments/5gtd0k/how_to_pay_programmers_less/
 translated:
   - Russian: http://ebanoe.it/2016/12/08/how-to-pay-devs-less/
-  - Chinese: http://blog.csdn.net/qshn2sky/article/details/54977527
 related:
   - 2016/jan/2016-01-05-how-to-punish-employees
   - 2015/oct/2015-10-06-how-to-be-good-office-slave
@@ -92,7 +91,7 @@ you about abnormal or suspicious behavior (office cameras will help too). Any co
 companies should be considered suspicious. Employees must know you're spying on them.
 Extra fear is always helpful.
 
-{% quote Brainwash them regularly by communicating how great your company is. %}
+{% quote Brainwash them regularly by communicating how great your company is %}
 
 **Make a deal with competitors**.
 Contact your major competitors in the region and agree to not head-hunt
@@ -134,7 +133,7 @@ raise investments, or by the time a big contract is signed, or when
 to always make your promises dependable on events that are out of your
 control---your hands must always be clean.
 
-{% quote Instead of giving someone a raise, it's always better to buy a new PlayStation for the office. %}
+{% quote Instead of giving someone a raise, it's always better to buy a new PlayStation for the office %}
 
 **Buy them cushion chairs and tennis tables**.
 Spend just a little on all those funny office things, and they will
@@ -154,7 +153,7 @@ profiles. If you're running out of Vice Presidents, try
 [Senior Architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}),
 Lead Technical Lead, Chief Scientist, etc.
 
-{% quote They will keep working for you for less money just because you're good friends. %}
+{% quote They will keep working for you for less money just because you're good friends %}
 
 **Help them survive**.
 Most programmers are rather stupid when it comes to managing money. They simply don't

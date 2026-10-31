@@ -1,4 +1,4 @@
-<img src="https://www.yegor256.com/images/icon.svg" width="64px" height="64px" />
+# This Is My Blog in Jekyll
 
 [![DevOps By Rultor.com](https://www.rultor.com/b/yegor256/blog)](https://www.rultor.com/p/yegor256/blog)
 
@@ -9,28 +9,25 @@
 [![My Twitter](https://img.shields.io/badge/Twitter-follow-active?logo=twitter)](https://twitter.com/intent/follow?screen_name=yegor256)
 [![My Telegram](https://img.shields.io/badge/Telegram-subscribe-active?logo=telegram)](https://t.me/yegor256news)
 
-This repository contains the sources of my
-blog: [www.yegor256.com](https://www.yegor256.com)
-(the backup URL is [this one](https://yegor256.github.io/blog)).
+This repository contains the sources of my blog:
+  [www.yegor256.com] (the backup URL is [this one][backup]).
 
 My book [_256 Bloghacks_](https://www.yegor256.com/256-bloghacks.html)
-explains how this blog is built and maintained.
+  explains how this blog is built and maintained.
 
-You are welcome to submit corrections to this blog. In order to do that,
-you will need [Ruby](https://www.ruby-lang.org/en/) 3.0+,
-[Bundler](https://bundler.io/),
-Woff2,
-and [PlantUML](http://plantuml.com/) installed.
+You are welcome to submit corrections to this blog.
+In order to do that, you will need
+  [Ruby] 3.0+, [Bundler], Woff2, and [PlantUML] installed.
 Then, run this:
 
 ```bash
 bundle update
-bundle exec jekyll serve --drafts --future --limit_posts 10 -- --offline --dirty
+bundle exec jekyll serve --drafts --future --limit_posts 5 -- --offline --dirty
 ```
 
-In a few minutes of building you should be able to see the blog
-at `http://localhost:4000`. Make your changes and refresh
-the page in the browser.
+In a few minutes of building you should be able to see
+  the blog at `http://localhost:4000`.
+Make your changes and refresh the page in the browser.
 If everything is fine, submit a pull request.
 
 If it doesn't work (for some reason), do it via Docker:
@@ -40,3 +37,9 @@ docker build . -t blog
 docker run -it --rm -v "$(pwd):/b" -p 4000:4000 blog \
   'cd /b && bundle lock && bundle update && bundle exec jekyll serve --trace --host=0.0.0.0'
 ```
+
+[www.yegor256.com]: https://www.yegor256.com
+[PlantUML]: http://plantuml.com/
+[Bundler]: https://bundler.io/
+[Ruby]: https://www.ruby-lang.org/en/
+[backup]: https://yegor256.github.io/blog

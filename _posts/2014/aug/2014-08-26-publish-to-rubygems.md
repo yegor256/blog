@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "How to Publish to RubyGems, in One Click"
 date: 2014-08-26
 tags: rultor devops ruby
+place: Amsterdam, Holland
 description: |
   This tutorial explains how a Ruby gem can be
   released to RubyGems.org in just one click and
@@ -107,7 +108,7 @@ In this example, replace `foo` with the name of your gem.
 
 ## Run It!
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in
 the GitHub issue tracker, and post something like that into it

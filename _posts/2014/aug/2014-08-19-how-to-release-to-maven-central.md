@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -279,7 +279,7 @@ decrypt:
   secring.gpg: "repo/secring.gpg.asc"
 release:
   script: |
-    mvn versions:set "-DnewVersion=${tag}"
+    mvn -ntp versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
     mvn clean deploy -Pjcabi --settings /home/r/settings.xml
 ```
@@ -289,7 +289,7 @@ You can compare your file with live Rultor
 
 ## Run It!
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like that into it

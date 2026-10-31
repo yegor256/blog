@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -20,8 +20,6 @@ keywords:
 image: /images/2016/07/jackass-the-movie.jpg
 jb_picture:
   caption: "Jackass: The Movie (2002) by Jeff Tremaine"
-translated:
-  - Russian: https://agorlov.github.io/yb-object.html
 ---
 
 There are thousands of books about object-oriented programming and
@@ -56,7 +54,7 @@ What is common throughout all these definitions is the word "contains" (or "hold
 "consists," "has," etc.). They all think that an object is a _box with data_.
 And this perspective is exactly what I'm strongly against.
 
-{% quote They all think that an object is a box with data---this perspective is exactly what I'm strongly against. %}
+{% quote They all think that an object is a box with data---this perspective is exactly what I'm strongly against %}
 
 If we look at how C++ or Java are implemented, such a definition of an
 object will sound _technically_ correct. Indeed, for each object, Java Virtual
@@ -109,7 +107,7 @@ _pointer_ to another object. If our object would only have an
 `engine` attribute, it would take just 8 bytes in memory, with none of them
 actually occupied by "data."
 
-{% quote Objects are no longer boxes with data; they know where the data is, but they don't contain the data. %}
+{% quote Objects are no longer boxes with data; they know where the data is, but they don't contain the data %}
 
 Now, let's get back to our new pseudo language. Let's imagine it treats
 objects very differently than C++---it doesn't keep object attributes
@@ -129,7 +127,7 @@ treats an object as a box with data that are too visible to
 the outside world. That visibility provokes us to think _procedurally_
 and try to access that data as much as possible.
 
-{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
+{% jttu west2004object %}
 
 If we would think of an object as a **representative** of data instead of
 a container of them, we would not want to get a hold of data as soon as

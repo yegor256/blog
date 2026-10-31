@@ -1,8 +1,9 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: russian
+disqus: https://www.yegor256.com/2024/09/21/interpreters-of-chaos.html
 date: 2024-09-21
 title: "Толкователи хаоса"
 description: |

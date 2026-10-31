@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -27,8 +27,8 @@ principle. You, as a developer, are supposed to work only
 when you feel like it. If you don't like the task assigned to you, you
 simply refuse it. No strings attached. However, Zerocrat will penalize
 you for such a refusal with a few negative reputation points,
-according to the [§6](http://www.zerocracy.com/policy.html#6) of
-the [Policy](http://www.zerocracy.com/policy.html). Why so?
+according to the [§6](https://www.zerocracy.com/how-it-works) of
+the [Policy](https://www.zerocracy.com/how-it-works). Why so?
 Here is the logic explained.
 
 <!--more-->

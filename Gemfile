@@ -1,17 +1,18 @@
 # frozen_string_literal: true
 
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 source 'https://rubygems.org'
 
 # gem 'jekyll-related-posts'
 
+gem 'elapsed', '~>0.2'
 gem 'fastimage', '~>2.4'
 gem 'html-proofer', '~>5.0'
 gem 'jekyll', '~>4.3'
 gem 'jekyll-bits', '~>0.15'
-gem 'jekyll-chatgpt-translate', '~>0.0'
+gem 'jekyll-chatgpt-translate', '~>0.2'
 gem 'jekyll-feed', '~>0.17'
 gem 'jekyll-gist', '~>1.5'
 gem 'jekyll-git-hash', '~>0.1'
@@ -29,6 +30,7 @@ gem 'mail', '~>2.8'
 gem 'nokogiri', '~>1.18'
 gem 'nuggets', '~>1.6'
 gem 'pygments.rb', '~>4.0'
+gem 'qbash', '~>0.4'
 gem 'rainbow', '~>3.1'
 gem 'rake', '~>13.2'
 gem 'redcarpet', '~>3.6'

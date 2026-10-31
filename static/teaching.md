@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: static
@@ -26,10 +26,11 @@ style: |
     margin-right: 1em;
     display: block;
     float: left;
+    filter: grayscale(100%);
   }
 ---
 
-{% badge /images/andreea/yegor-is-presenting.svg 200 %}
+{% badge /images/andreea/yegor-is-presenting.svg XL %}
 
 As a side-track activity, I'm teaching in a few universities,
 mostly the courses about software development and project management.

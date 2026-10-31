@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -22,7 +22,7 @@ jb_picture:
   caption: Taboo (2017) by Tom Hardy, et al.
 ---
 
-I've been writing [so much](/tags/oop.html) about object-oriented programming and its
+I've been writing [so much](/tag/oop.html) about object-oriented programming and its
 [pitfalls]({% pst 2016/feb/2016-02-03-design-patterns-and-anti-patterns %}),
 claiming that most of the design patterns and "good practices" which we are accustomed to
 are actually [wrong and hurtful]({% pst 2014/sep/2014-09-10-anti-patterns-in-oop %}),
@@ -126,7 +126,7 @@ So, how about we create a programming language, which will not allow global
 variables? This will solve the problem. Programmers will have no technical
 ability to define them and their scopes will inevitably be smaller.
 
-{% quote I believe that objects were invented to force programmers to keep their scopes of visibility smaller. %}
+{% quote I believe that objects were invented to force programmers to keep their scopes of visibility smaller %}
 
 I believe that objects [were invented]({% pst 2017/dec/2017-12-12-alan-kay-was-wrong %})
 exactly to do that:
@@ -191,7 +191,7 @@ example made a promise to take part of the problem and let me never worry about 
 but in reality it only made the problem larger, by giving me back two problems:
 `print()` and `Idx`.
 
-{% badge /images/2019/03/bjarne-stroustrup-book.jpg 96 https://amzn.to/2uMlANB %}
+{% jttu stroustrup2014programming %}
 
 Why is this thanks to C++? Because C++ added object-orientation on top of C procedural
 programming ideas, never even thinking about prohibiting some of them, to _force_

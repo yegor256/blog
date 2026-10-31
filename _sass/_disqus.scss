@@ -1,18 +1,21 @@
-// SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+// SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
 
-@import 'defs';
-@import 'wrapper';
+@use 'defs' as *;
+@use 'colors' as *;
+@use 'wrapper' as *;
+@use 'placeholders' as *;
 
 .disqus {
   @extend %unprintable;
   @extend %wrapper;
-  margin-top: 5 * $em;
+
+  margin-top: 5 * $rem;
   text-align: center;
-  width: 80% !important;
+  width: 80%;
 
   @media all and (max-width: $width * 1.3) {
-    width: 100% !important;
+    width: 100%;
   }
 
   .hint {
@@ -20,8 +23,10 @@
   }
 
   .disqus-thread {
+    background-color: $white;
+
     a {
-      color: steelblue;
+      color: $black;
       text-decoration: underline;
     }
   }

@@ -1,5 +1,7 @@
 Sitemap: https://www.yegor256.com/sitemap.xml
 
 User-agent: *
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
 Disallow: /p/
 Disallow: /404.html

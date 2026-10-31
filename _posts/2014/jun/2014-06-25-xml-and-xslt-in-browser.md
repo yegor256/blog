@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -109,7 +109,7 @@ jQuery and an SVG logo:
 `index.xsl` includes `layout.xsl`, that's why it is loaded right after.
 
 Let's consider an example of `index.xsl` (in reality
-it is much more complex, check [`layout.xsl`](https://github.com/sttc/stateful/blob/master/src/main/webapp/xsl/layout.xsl).
+it is much more complex).
 For example:
 
 ```xml

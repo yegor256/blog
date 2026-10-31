@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -8,7 +8,7 @@ redirect_from:
 title: "Any Program Has an Unlimited Number of Bugs"
 date: 2017-05-23
 place: Odessa, Ukraine
-tags: testing
+tags: tests
 description: |
   Since requirements and user expectations are vague
   any piece of software may be improved a literally
@@ -48,7 +48,7 @@ To prove this claim we just need to put two thoughts together:
 
   * First, a bug is something that compromises the quality of software,
     which, according to
-    [IEEE&nbsp;610.12-1990](https://standards.ieee.org/findstds/standard/610.12-1990.html),
+    [IEEE&nbsp;610.12-1990](https://standards.ieee.org/ieee/610.12/855/),
     is "the degree to which
     a system meets specified requirements or _user expectations_."
 
@@ -63,7 +63,7 @@ are ambiguous: user expectations and
 We can't be precise about them and that's why the number of bugs
 they will produce has no limit.
 
-{% quote Most of the bugs that exist in a program may stay there even after it is shipped to its users. %}
+{% quote Most of the bugs that exist in a program may stay there even after it is shipped to its users %}
 
 Of course, only a very limited subset of the entire set of bugs has any
 real business impact. Most of the bugs that exist in a program may

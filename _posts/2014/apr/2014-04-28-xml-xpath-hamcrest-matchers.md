@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -21,7 +21,7 @@ keywords:
   - hamcrest xpath example code
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://matchers.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://matchers.jcabi.com %}
 
 [Hamcrest](https://github.com/hamcrest/JavaHamcrest) is my favorite instrument
 in unit testing. It replaces the JUnit procedural assertions of
@@ -60,7 +60,7 @@ public class FooTest {
 <!--more-->
 
 There are two alternatives to the above that I'm aware of, which are do almost the same thing:
-[xml-matchers](https://code.google.com/p/xml-matchers/) by
+[xml-matchers](https://github.com/davidehringer/xml-matchers) by
 David Ehringer
 and
 [`hasXPath()`](https://github.com/hamcrest/JavaHamcrest/blob/hamcrest-java-1.3/hamcrest-library/src/main/java/org/hamcrest/xml/HasXPath.java)
@@ -85,7 +85,7 @@ use an XPath query with a non-default namespace, you should create an instance
 of `NamespaceContext`.
 
 The library provides
-[a simple implementation](https://code.google.com/p/xml-matchers/source/browse/trunk/xml-matchers/src/main/java/org/xmlmatchers/namespace/SimpleNamespaceContext.java) of this interface,
+[a simple implementation](https://github.com/davidehringer/xml-matchers/blob/master/xml-matchers/src/main/java/org/xmlmatchers/namespace/SimpleNamespaceContext.java) of this interface,
 but, still, it is requires extra code in every unit test.
 
 [jcabi-matchers](https://matchers.jcabi.com) simplifies namespace handling

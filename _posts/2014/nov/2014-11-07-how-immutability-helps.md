@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "How Immutability Helps"
 date: 2014-11-07
 tags: jcabi java oop
+place: Amsterdam, Holland
 categories: jcg
 description: |
   This article illustrates by example how immutability
@@ -82,7 +83,7 @@ dealing with a monster
 that can do everything for you, including
 sending your MIME message via SMTP, creating the message, configuring
 its parameters, adding MIME parts to it, etc. The
-[`Email`](http://svn.apache.org/viewvc/commons/proper/email/tags/EMAIL_1_3_3/src/main/java/org/apache/commons/mail/Email.java?revision=1609295&view=co)
+[`Email`](https://github.com/apache/commons-email/blob/master/commons-email2-jakarta/src/main/java/org/apache/commons/mail2/jakarta/Email.java)
 class from commons-email is really a huge class---33 private properties, over
 a hundred methods, about two thousands lines of code. First, you configure
 the class through a bunch of setters and then you ask it to `send()`
@@ -186,7 +187,7 @@ arguments of a constructor and you're done.
 
 ## How Did I Design An Immutable Email?
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://http.jcabi.com %}
 
 When I was designing [jcabi-email](https://github.com/jcabi/jcabi-email)
 I started with a small and simple class:

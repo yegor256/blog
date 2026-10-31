@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -70,6 +70,12 @@ And one more:
 m = a > b ? 'Hello' : nil
 ```
 
+Or even with the [Elvis], if it would be Perl:
+
+```perl
+m = a > b ?: 'Hello'
+```
+
 Which one is "right?" Are there any Perl developers? Can you suggest
 some other way to achieve the same result?
 
@@ -106,7 +112,7 @@ On the other hand, if we're designers and happen to _read_ the code that is
 full of sugar, which "just works," we'll be very annoyed and
 frustrated. Well, maybe I have to speak for myself, but I definitely will be.
 
-{% quote Simply put, higher quality comes from simpler languages. %}
+{% quote Simply put, higher quality comes from simpler languages %}
 
 This overly-sugared Ruby syntax is a perfect example of "works vs. good"
 positioning. Ruby philosophy is this: It doesn't matter how you write it, as long
@@ -146,3 +152,5 @@ would be restricted.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">An ability to implement the same thing in a few different ways (a.k.a. &quot;syntax sugar&quot;) makes a programming language ...</p>&mdash; Yegor Bugayenko (@yegor256) <a href="https://twitter.com/yegor256/status/1076767928715038720?ref_src=twsrc%5Etfw">December 23, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+[Elvis]: https://en.wikipedia.org/wiki/Elvis_operator

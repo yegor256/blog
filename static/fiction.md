@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: static
@@ -51,7 +51,7 @@ Erich Maria Remarque, _Drei Kameraden_, 1936. [Buy](https://amzn.to/2xiXvAO).
 
 Борис Полевой, _Повесть о настоящем человеке_, 1946.
 
-Albert Camus, _La Peste_, 1947. [Buy](https://amzn.to/2xiqJzB).
+Albert Camus, _La Peste_, 1947. [Buy](https://www.amazon.com/Plague-Albert-Camus/dp/0679720219).
 
 Jerome Salinger, _The Catcher in the Rye_, 1951. [Buy](https://amzn.to/2xjhPlH).
 

@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Cache Java Method Results"
 date: 2014-08-03
 tags: java jcabi aop
+place: Amsterdam, Holland
 description: |
   Caching Java method results is easy with jcabi-aspects,
   a small library that uses AspectJ and Java annotations
@@ -20,7 +21,7 @@ keywords:
   - "@Cacheable"
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://aspects.jcabi.com %}
 
 Say, you have a method that takes time to execute and you want
 its result to be cached. There are [many solutions](https://www.coderanch.com/how-to/java/CachingStrategies),
@@ -28,7 +29,7 @@ including
 [Apache Commons JCS](http://commons.apache.org/proper/commons-jcs/),
 [Ehcache](https://www.ehcache.org),
 [JSR 107](https://jcp.org/en/jsr/detail?id=107),
-[Guava Caching](https://code.google.com/p/guava-libraries/wiki/CachesExplained)
+[Guava Caching](https://github.com/google/guava/wiki/CachesExplained)
 and many others.
 
 [jcabi-aspects](https://aspects.jcabi.com/annotation-cacheable.html) offers a very simple one,

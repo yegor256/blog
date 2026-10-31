@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Bugs Are Welcome"
 date: 2014-04-13
-tags: testing xdsd management
+tags: tests xdsd management
+place: Amsterdam, Holland
 description: |
   Unlike a very common understanding of a software bug as something negative,
   XDSD encourages all team members to find and report as many bugs
@@ -36,7 +37,7 @@ projects. Why?
 
 <!--more-->
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 Because we understand that there are two categories of bugs: visible and hidden.
 The more bugs that become visible, the more of them we can fix. More fixed bugs

@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -26,7 +26,7 @@ How do you define the quality of a software product? There is definitely an
 intrinsic emotional component to it, which means satisfaction for the user,
 willingness to pay, appreciation, positive attitude, and all that. However,
 if we put emotions aside, how can we really measure it?
-The IEEE [says](https://standards.ieee.org/findstds/standard/610.12-1990.html) that
+The IEEE [says](https://standards.ieee.org/ieee/610.12/855/) that
 quality is the degree to which a product meets its requirements or
 user expectations. But what is the formula? Can we say that it
 satisfies requirements and expectations to, say, 73%?
@@ -61,7 +61,7 @@ of 0% means that all bugs are found by them.
 
 Does it make sense?
 
-{% badge /images/2017/12/managing-the-testing-process.jpg 96 https://amzn.to/2EEe2o6 %}
+{% jttu black2002managing %}
 
 P.S. It seems that I'm not the inventor of the formula. This is the quote
 from [_Managing the Testing Process: Practical Tools and Techniques for Managing Hardware and Software Testing_](https://amzn.to/2GvhMEV) (2009)

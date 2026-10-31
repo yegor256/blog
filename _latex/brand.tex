@@ -1,0 +1,45 @@
+% SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
+% SPDX-License-Identifier: MIT
+
+\documentclass{yb}
+\usepackage{fontspec}
+\usepackage{svg}
+
+\begin{document}
+
+\begin{textblock}{2.4}[1,0](14,1.5){
+  \includesvg[width=\textwidth]{../images/icon.svg}
+}\end{textblock}
+
+Fonts:
+\begin{itemize}
+\item \href{https://cm-unicode.sourceforge.io}{{\rmfamily CMU Concrete}} (Serif)
+\item \href{https://cm-unicode.sourceforge.io}{{\sffamily CMU Sans}} (Sans Serif)
+\item \href{https://cm-unicode.sourceforge.io}{{\ttfamily CMU Typewriter}} (Monospace)
+\item \href{https://cm-unicode.sourceforge.io}{{\cmuSerifFont CMU Serif}}
+\item \href{https://www.dafont.com/molot.font}{{\molotFont Molot}}
+\end{itemize}
+
+\newcommand\clr[2]{
+  #1:
+  \definecolor{yb#1}{HTML}{#2}
+  \colorbox{yb#1}{\textcolor{white}{\texttt{#2}}}}
+Colors:
+\begin{itemize}
+\item \clr{Red}{B22222}
+\item \clr{Black}{1B1212}
+\item \clr{Gray}{4F4949}
+\item \clr{Silver}{A4A0A0}
+\item \clr{Platinum}{E1E0E0}
+\end{itemize}
+
+Style principles:
+\begin{itemize}
+\item No other colors except mentioned above and white
+\item No color gradients, only solid colors
+\item No bold in text, only italic for emphasis
+\item No more than two fonts in a document
+\item All human photos must be monochrome
+\end{itemize}
+
+\end{document}

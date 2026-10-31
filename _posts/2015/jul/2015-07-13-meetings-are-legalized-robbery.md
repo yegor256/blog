@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -134,7 +134,7 @@ other programmers!
 Moreover, I can add my own concerns to the document, and on the next iteration,
 ask Jeff to pay attention to and resolve them.
 
-{% quote Train and discipline yourself to work with documents and let juniors enjoy their meetings. %}
+{% quote Train and discipline yourself to work with documents and let juniors enjoy their meetings %}
 
 The more we circle this document, the better it becomes. And every minute
 the project pays for turns into a tangible product: a _document_

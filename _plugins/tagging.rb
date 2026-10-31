@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 require 'erb'
@@ -52,7 +52,8 @@ module Yegor
       hash = orig_to_liquid
       count = data['posts'].size
       tag = data['tag']
-      hash['title'] = "#{count} Blog Posts About \"#{tag}\""
+      words = %w[Zero One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve]
+      hash['title'] = "#{count < 13 ? words[count] : count} Blog Posts About \"#{tag}\""
       hash['tag'] = tag
       hash['description'] = [
         "This collection of #{count} blog posts about \"#{tag}\"",
@@ -70,6 +71,8 @@ module Yegor
 
   # Module
   module TaggingFilters
+    include DisqusFilters
+
     def tag_cloud(tags)
       tags.keys.sort.map { |t| tag_link(t) }.join(' ')
     end
@@ -78,6 +81,8 @@ module Yegor
       prefix = case tag
       when 'oop', 'eolang'
         "<img src='/images/icons/cactus.svg' alt='OOP'/>"
+      when 'tests'
+        "<img src='/images/icons/onion.svg' alt='Angry Tests'/>"
       when 'management'
         "<img src='/images/icons/mushroom.svg' alt='Management'/>"
       when 'java'
@@ -127,8 +132,9 @@ module Yegor
     end
 
     def tagged(post)
+      ident = yb_disqus(post)
       "<div class='tagged' data-length='#{post.content.split(/\s+/).length}'>
-        <div><a href='#{post.url}'>#{post['title']}</a></div>
+        <span><a href='#{post.url}'>#{post['title']}</a></span>
         <ul class='subline'>
           <li>
             <time datetime='#{post['date'].xmlschema}'>
@@ -137,7 +143,7 @@ module Yegor
           </li>
           <li class='tags'>#{yb_page_tags(post)}</li>
           <li class='unprintable'>
-            <a href='https://www.yegor256.com#{post.url}#disqus_thread' class='comment_count notranslate'>comments</a>
+            <a href='https://www.yegor256.com#{post.url}#disqus_thread'#{" data-disqus-identifier='#{ident}'" unless ident.empty?} class='comment_count notranslate'>comments</a>
           </li>
           #{'<li class="has-poll" title="There is a Twitter poll inside"><i class="icon icon-twitter"></i></li>' if post.content.include?('twitter-tweet')}
           #{'<li class="has-youtube" title="There is a YouTube video inside"><i class="icon icon-youtube"></i></li>' if post.content.include?('{% youtube')}

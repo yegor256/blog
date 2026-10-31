@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -66,7 +66,7 @@ the IEEE Software editor thinks that it's something everybody is already using.
 
 Ironic, huh?
 
-{% quote If you want to be published, say what everybody else is saying. %}
+{% quote If you want to be published, say what everybody else is saying %}
 
 Finally, I submitted that very same article to the blog section of the Communications of the ACM
 and it was [published](https://cacm.acm.org/blogs/blog-cacm/229942-blame-free-quality-control/fulltext) there,

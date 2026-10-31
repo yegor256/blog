@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -27,7 +27,7 @@ jb_picture:
 JSON or XML? Which one is better? Which one is faster? Which
 one should I use in my next project? Stop it! These things are not comparable.
 It's similar to comparing a bicycle and an
-[AMG S65](https://www.mbusa.com/mercedes/vehicles/model/class-S/model-S65V). Seriously,
+[AMG S65](https://en.wikipedia.org/wiki/Mercedes-Benz_S-Class). Seriously,
 which one is better? They both can take you from home to the office, right?
 In some cases, a bicycle will do it better. But does that mean
 they can be compared to each other? The same applies here with JSON and XML.
@@ -83,7 +83,7 @@ We're using it **temporarily** to transfer a piece
 of data from point A to point B. Indeed, it is shorter than XML and
 more readable. That's it.
 
-{% badge /images/2015/04/book-xml-nutshell.jpg 96 https://amzn.to/2c5n8uC %}
+{% jttu harold2000xml %}
 
 XML is not a data format; it is a **language**. A very powerful one. Let me
 show you what it's capable of. Let me basically explain why I love it. And I would

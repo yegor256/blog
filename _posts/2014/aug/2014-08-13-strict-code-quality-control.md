@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -41,7 +41,7 @@ servers, like Jenkins.
 aggregates a few quality checkers, configures them to a maximum
 strict mode, and breaks your build if any of them fail.
 
-{% badge https://www.qulice.com/logo.svg 128 https://www.qulice.com %}
+{% badge https://www.qulice.com/logo.svg L https://www.qulice.com %}
 
 Seriously. There are
 [over 130 checks](http://checkstyle.sourceforge.net/checks.html) in Checkstyle,
@@ -188,6 +188,6 @@ So, what do I tell those who complain about quality rules being too strict?
 I say this: "Do you want to learn and improve, or do you just want to get paid
 and get away with it?"
 
-ps. You can use my [settings.jar](http://img.teamed.io/settings.jar)
+ps. You can use my [settings.jar](/bin/settings.jar)
 for IntelliJ, they are rather strict and will help you clean your
 code even before Qulice starts to complain.

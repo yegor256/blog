@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -88,7 +88,7 @@ result of this chaos we have restarts (94% projects!), cost overruns, and time
 overruns. The report also says that technology incompetence is the root cause of project failures only in
 7% cases. In almost all other cases the management is the source of the trouble.
 
-{% badge //www.zerocracy.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg M https://www.zerocracy.com %}
 
 We, at [Zerocracy](https://www.zerocracy.com),
 believe that in the 21st century programmers (and not only them) deserve
@@ -98,7 +98,7 @@ needs a management model which is based
 on people's professional merits, instead of on their ability to play
 the [alpha/beta](https://en.wikipedia.org/wiki/Alpha_%28ethology%29) games.
 
-Zerocracy offers exactly that: [Zerocrat](https://www.0crat.com), an automated project manager, which
+Zerocracy offers exactly that: [Zerocrat](https://www.zerocracy.com), an automated project manager, which
 communicates as a chat bot and tells programmers what to do.
 It replaces a traditional "boss in the office,"
 distributing [micro tasks]({% pst 2017/nov/2017-11-28-microtasking %})
@@ -111,13 +111,13 @@ It doesn't look boring to the robot though.
 Zerocrat is a project manager that never sleeps. It doesn't make mistakes,
 doesn't forget things, and doesn't accept excuses.
 It also doesn't know anything about hierarchies. It manages programmers
-only by their merits, which are visible via [objective metrics](https://www.0crat.com/team).
+only by their merits, which are visible via [objective metrics](https://www.zerocracy.com/how-to-earn).
 Thanks to this, programmers become their own bosses, reporting only to a soulless piece of software,
-which acts according to a very strict [policy](https://www.zerocracy.com/policy.html).
+which acts according to a very strict [policy](https://www.zerocracy.com/how-it-works).
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
-The [policy](https://www.zerocracy.com/policy.html)
+The [policy](https://www.zerocracy.com/how-it-works)
 of Zerocracy is based on [XDSD](https://www.xdsd.org) principles,
 which were introduced in 2010 and practiced since then on [many](https://www.youtube.com/watch?v=qRZYJGYdrwk)
 software projects. The principles have proved able to seriously increase project

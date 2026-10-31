@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -22,7 +22,7 @@ jb_picture:
   caption: Barton Fink (1991) by Joel Coen
 ---
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 The first principle of eXtremely Distributed Software Development
 ([XDSD](https://www.xdsd.org)) states that
@@ -66,7 +66,7 @@ We don't use **any** (I mean it!) [informal communication channels]({% pst 2016/
 XDSD projects. We don't do meetings or conference calls. We never discuss
 any technical issues on Skype or by phone.
 
-{% quote Every hour spent by a team member is traceable to the line of code produced. %}
+{% quote Every hour spent by a team member is traceable to the line of code produced %}
 
 So, how do we resolve problems and share information?
 

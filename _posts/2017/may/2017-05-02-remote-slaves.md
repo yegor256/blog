@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -73,7 +73,7 @@ radical changes:
     We keep everybody busy learning new tools and filling them with data.
 
   * Fourth, and most importantly, we replace office chit-chats with
-    [Slack](https://slack.com/) channels or [HipChat](https://www.hipchat.com/) groups.
+    [Slack](https://slack.com/) channels or similar group chats.
     Instead of being in the office at 9 a.m.,
     everybody will have the ability to demonstrate the level of their
     [presenteeism](https://en.wikipedia.org/wiki/Presenteeism) using emojis.
@@ -129,7 +129,7 @@ skills. The manager will call more meetings largely in order to convince
 himself that the team is actually working; hearing your voice many times a day is
 a perfect confirmation that you are busy and he is a good manager.
 
-{% quote Remote work will happen automatically as soon as everybody starts getting their paychecks for the results they deliver, not the time they spend. %}
+{% quote Remote work will happen automatically as soon as everybody starts getting their paychecks for the results they deliver, not the time they spend %}
 
 On a more serious note, I believe that working remotely
 only makes things _worse_ when the motivation of the team

@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -18,8 +18,6 @@ keywords:
   - agile planning
   - agile task planning
   - time management agile
-translated:
-  - Spanish: https://medium.com/@izarodsos/c%C3%B3mo-tomar-atajos-y-quedarte-tranquilo-ddfc680c97e8
 image: /images/2015/01/regarding-henry.jpg
 jb_picture:
   caption: Regarding Henry (1991) by Mike Nichols
@@ -65,7 +63,7 @@ So be positive; don't blame yourself. If you don't know how this
 damn code works, it's a fault of the code, not you. Good code is
 easy to understand and maintain.
 
-{% badge /images/2015/01/cut-corners-1.png 250 %}
+{% badge /images/2015/01/cut-corners-1.png XXL %}
 
 Don't try to eat spaghetti code; complain to the chef and ask
 him or her to cook something better (BTW, I love spaghetti).
@@ -76,7 +74,7 @@ whatever. Be creative and offensive---in a constructive and professional way,
 of course. Don't get personal. No matter who cooked that spaghetti, you have
 nothing against him or her personally. You just want another dish, that's all.
 
-{% quote If you don't know how this damn code works, it's a fault of the code, not you. %}
+{% quote If you don't know how this damn code works, it's a fault of the code, not you %}
 
 Once you have those dependencies reported, explain in the main ticket
 that you can't continue until all of them are resolved. You will
@@ -112,7 +110,7 @@ you don't understand. And in order to understand, you will need a lot of
 time---much more than you have from your project manager or your Scrum board. What
 do you do?
 
-{% badge /images/2015/01/cut-corners-2.png 250 %}
+{% badge /images/2015/01/cut-corners-2.png XXL %}
 
 Again, think positively and don't blame yourself. If the software is not
 clear enough for a total stranger, it's "their" fault, not yours. They created
@@ -149,7 +147,7 @@ to create a test that reproduces the bug. Basically, this is what you should sta
 every ticket with, be it a bug or a feature. Catch the bug with a unit test!
 Prove that the bug exists by failing the build with a new test.
 
-{% badge /images/2015/01/working-effectively-with-legacy-code.png 96 https://amzn.to/1SdcZ8M %}
+{% jttu feathers2004working %}
 
 This may be rather difficult to achieve, especially when the software you're
 trying to fix or modify was written by <span class="strike">idiots</span>
@@ -159,7 +157,7 @@ highly recommend you read
 [Working Effectively with Legacy Code](https://amzn.to/1SdcZ8M)
 by Michael Feathers. There are many different patterns, and most of them work.
 
-{% quote Catching a bug with a unit test is, in most cases, more than 80% of success. %}
+{% quote Catching a bug with a unit test is, in most cases, more than 80% of success %}
 
 Once you manage to reproduce the bug and the build fails, stop right there.
 That's more than enough for a single piece of work. Skip the test
@@ -182,7 +180,7 @@ crash it in a test. The error stack trace reported by the end user or your
 production logging system is not reproducible. It's a very common situation.
 What do you do?
 
-{% badge /images/2015/01/cut-corners-3.png 250 %}
+{% badge /images/2015/01/cut-corners-3.png XXL %}
 
 I think the best option here is to create a test that will prove that
 the code works as intended. The test won't fail, and the build will remain clean.
@@ -219,7 +217,7 @@ And they will also say they don't really care about your bloody
 unit tests. All they care about is that PDF document that should be
 downloadable. So the trick with a unit test won't work. What do you do?
 
-{% quote Production errors are not programmers' mistakes, though delayed tickets are. %}
+{% quote Production errors are not programmers' mistakes, though delayed tickets are %}
 
 It depends on many factors, and most of these factors are not technical.
 They are political, organizational, managerial, social, you name it. However,
@@ -250,7 +248,7 @@ test from you as proof of the bug's absence. They also don't allow you to
 disable a feature, because it is critical to the user experience. What choices
 do you have? Just one.
 
-{% badge /images/2015/01/cut-corners-4.png 250 %}
+{% badge /images/2015/01/cut-corners-4.png XXL %}
 
 Be professional and say "No, I can't do this; find someone else."
 Being a professional developer doesn't mean being able to fix any problem. Instead,
@@ -268,7 +266,7 @@ you. He decided to give you this
 task. He estimated your abilities and your skills.
 So it's payback time.
 
-{% quote Being a professional developer doesn't mean being able to fix any problem. %}
+{% quote Being a professional developer doesn't mean being able to fix any problem %}
 
 Your "No!" will be very valuable feedback for him. It will help him
 make his next important management [decisions]({% pst 2023/aug/2023-08-15-decision-making-process %}).

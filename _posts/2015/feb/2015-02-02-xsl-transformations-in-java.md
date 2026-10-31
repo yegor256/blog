@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -18,7 +18,7 @@ keywords:
   - java xslt code example
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://http.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://http.jcabi.com %}
 
 [XSL transformation](https://www.w3.org/TR/xslt20/)
 (XSLT) is a powerful mechanism for converting one

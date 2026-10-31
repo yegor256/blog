@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: static
@@ -19,7 +19,7 @@ keywords:
   - object thinking
 ---
 
-{% badge /images/books/elegant-objects/cover-eo1.png 120 http://goo.gl/W2WVMk %}
+{% badge /images/books/elegant-objects/cover-eo1.png L http://goo.gl/W2WVMk %}
 
 "Elegant Objects" is a book series about object-oriented
 programming. There are two volumes at the moment, they are
@@ -50,6 +50,6 @@ Developer Advocate of [JFrog](https://www.jfrog.com/):<br/>
 Co-founder of [DevTernity](http://devternity.com/):<br/>
 "Well-written, entertaining, practical, bold and marginal at times."
 
-[Anton Chernousov](https://www.amazon.com/gp/customer-reviews/R1PLMTYQ0BP6XM/),
+Anton Chernousov,
 Founder of [The Art of Programming](https://theartofprogramming.podbean.com/):<br/>
 "It is one of the best books if you have a lot of experience in different projects."

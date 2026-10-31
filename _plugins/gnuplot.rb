@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 # Jekyll module
@@ -35,7 +35,7 @@ module Jekyll
           mkdir -p ${dir}/_temp/gnuplot/#{path}
           mv #{base}.svg ${dir}/_temp/gnuplot/#{path}
         `
-        raise 'failed to build gnuplot image' unless $CHILD_STATUS.exitstatus
+        raise 'failed to build gnuplot image' unless $CHILD_STATUS.success?
         site.static_files << Jekyll::GnuplotFile.new(site, site.dest, 'gnuplot', "#{path}/#{base}.svg")
       end
     end

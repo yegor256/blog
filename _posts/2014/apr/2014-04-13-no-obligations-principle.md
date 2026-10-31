@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: No Obligations
 date: 2014-04-13
 tags: xdsd management
+place: Amsterdam, Holland
 description: |
   In XDSD projects we recommend to manage accountability
   of team members by clearly defining task scope and borders
@@ -23,7 +24,7 @@ jb_picture:
   caption: The Big Lebowski (1998) by Joel Coen
 ---
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 It is a very common problem in project management---how to make team
 members more responsible and avoid [micro
@@ -74,7 +75,7 @@ Personally, I find this management style extremely annoying and destructive for
 the project. The project environment becomes very unhealthy and good people
 usually end up leaving.
 
-{% quote To keep the project on track and meet all milestones, responsibility must be on the shoulders of the team members. %}
+{% quote To keep the project on track and meet all milestones, responsibility must be on the shoulders of the team members %}
 
 Another traditional management method is
 [micro-management]({% pst 2015/sep/2015-09-22-micromanagement %}). This results when the

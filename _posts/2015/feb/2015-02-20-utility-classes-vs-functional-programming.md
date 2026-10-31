@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -62,7 +62,7 @@ value of a floating point number:
 double x = Math.abs(3.1415926d);
 ```
 
-{% quote The code will work, but it is not object-oriented programming. %}
+{% quote The code will work, but it is not object-oriented programming %}
 
 What's wrong with it? We need a function, and we get it from class `Math`.
 The class has many useful functions inside it that can be used for many typical
@@ -106,7 +106,7 @@ the same code would look in Lisp, a functional programming language:
 
 What's the catch? Just a difference in syntax? Not really.
 
-There are [many definitions](https://en.wikipedia.org/wiki/Comparison_of_programming_paradigms)
+There are [many definitions](https://en.wikipedia.org/wiki/Programming_paradigm)
 of the difference between imperative and declarative styles, but I will try to
 give my own. There are basically three roles interacting in the scenario
 with this `f` function/method: a _buyer_, a _packager_ of the result,

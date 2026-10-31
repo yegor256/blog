@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -20,7 +20,7 @@ keywords:
   - apache maven
 ---
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 In my [previous article]({% pst 2015/sep/2015-09-07-maven-repository-amazon-s3 %}),
 I described how to
@@ -61,10 +61,10 @@ a 25% discount off of your first year.
 Simply [shoot them an email](mailto:support@cloudrepo.io) when your account is created
 and they'll take care of you (don't forget to mention me, to get the discount).
 
-{% badge /images/2019/02/cloudrepo.png 100 https://www.cloudrepo.io %}
+{% badge /images/2019/02/cloudrepo.png M https://www.cloudrepo.io %}
 
 Assuming you have created an account with
-CloudRepo and [setup both a user and maven repository](https://www.cloudrepo.io/docs/maven.html#pre-requisites),
+CloudRepo and [setup both a user and maven repository](https://www.cloudrepo.io/docs/repository-types/jvm/maven-repositories.html),
 deploying to CloudRepo requires two steps on the client side:
 1) Configure a `settings.xml` file with credentials, and
 2) Add your repository to your `pom.xml` file's `<distributionManagement>` section.

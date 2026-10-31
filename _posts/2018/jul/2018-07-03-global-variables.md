@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -37,8 +37,8 @@ in ways which are different from what its original author expected.
 {% jb_picture_body %}
 
 I was recently writing a web front for [Zold](https://www.zold.io) in Ruby,
-on top of [Sinatra](http://sinatrarb.com/).
-This is how a web server starts according to [their documentation](http://sinatrarb.com/intro.html):
+on top of [Sinatra](https://sinatrarb.com/).
+This is how a web server starts according to [their documentation](https://sinatrarb.com/intro.html):
 
 ```ruby
 App.start!
@@ -81,7 +81,7 @@ Ruby global variables, I believe, because they know that they are bad.
 Why exactly they are bad and what the
 [alternatives]({% pst 2014/may/2014-05-05-oop-alternative-to-utility-classes %}) are---slipped through their fingers.
 
-{% quote While the application is small and its test coverage is low, global variables may not hurt. %}
+{% quote While the application is small and its test coverage is low, global variables may not hurt %}
 
 Technically speaking, their design is "globally scoped."
 `Sinatra::Base` treats the entire application as its scope of visibility.

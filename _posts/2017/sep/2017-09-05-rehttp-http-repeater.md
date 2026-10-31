@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -19,7 +19,7 @@ keywords:
   - repeat webhook
 ---
 
-{% badge https://www.rehttp.net/images/logo.svg 92 https://www.rehttp.net %}
+{% badge https://www.rehttp.net/images/logo.svg M https://www.rehttp.net %}
 
 I faced a problem a few weeks ago with
 [0pdd.com](https://www.0pdd.com), one of my web apps that is
@@ -28,7 +28,7 @@ supposed to receive HTTP requests (known as
 sometimes the app is down, GitHub gets an HTTP error, and never
 sends the request again. The request simply gets lost. There is absolutely
 no way to receive it again once the app is back up. I realized that I needed
-a [service mesh](https://buoyant.io/2017/04/25/whats-a-service-mesh-and-why-do-i-need-one/)
+a [service mesh](https://linkerd.io/what-is-a-service-mesh/)
 between GitHub and my web app, to accept HTTP
 requests and repeat them later if they can't be delivered immediately.
 

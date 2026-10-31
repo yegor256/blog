@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -65,7 +65,7 @@ When the problem is properly decomposed (broken down into smaller, isolated
 and properly decoupled pieces), the complexity _decreases_, and it becomes
 easier for everybody to understand and resolve.
 
-{% quote If I don't understand you, it's your fault. %}
+{% quote If I don't understand you, it's your fault %}
 
 The main virtue of an architect is the ability to _reduce_ complexity. Thus,
 a good architect would never be proud of a complex diagram. Instead, he would
@@ -86,7 +86,7 @@ all at one glance and immediately understand who is who. I just made up
 the number five, but you get the idea---make sure all diagram participants
 are easy to count. I've seen diagrams with 25 or more rectangles ... that's unacceptable.
 
-{% badge /images/2015/06/uml-distilled-book.jpg 96 https://amzn.to/2bQVt00 %}
+{% jttu fowler2004uml %}
 
 **Use UML**.
 Well, use whatever notation you feel comfortable with, but many years ago
@@ -105,7 +105,7 @@ of data? Is it a compile-time dependency? There are many possible meanings.
 Always use arrows, and always annotate them---this will help me
 understand you much faster.
 
-{% quote A good architect would never be proud of a complex diagram. %}
+{% quote A good architect would never be proud of a complex diagram %}
 
 **Don't Use Colors**.
 Or let me put it this way: Don't abuse colors. And in order to avoid abusing

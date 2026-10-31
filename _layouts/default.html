@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebSite">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US" itemscope="" itemtype="http://schema.org/WebSite">
   <head>
     <meta charset="utf-8"/>
     <meta name="description" content="{{ page | yb_description | xml_escape }}{% if paginator.page > 1 %} (page {{ paginator.page }}) {% endif %}" />
@@ -14,9 +14,9 @@ layout: compress
       <meta name="article:published_time" content="{{ page.date }}">
     {% endif %}
     <meta name="yandex-verification" content="7d2a0afee14d72bc" />
-    <meta name="og:site_name" content="{{ site.author.name }}"/>
-    <meta name="og:type" content="article" />
-    <meta name="og:locale" content="en_US" />
+    <meta property="og:site_name" content="{{ site.author.name }}"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:account_id" content="4503599630178231" />
     <meta name="twitter:creator" content="@yegor256"/>
     <meta name="twitter:site" content="@yegor256"/>
@@ -29,15 +29,33 @@ layout: compress
     <link rel="shortcut icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="apple-touch-icon" href="/favicon.ico?{{ site.data['hash'] }}"/>
     <link rel="alternate" type="application/rss+xml" title="RSS for yegor256.com" href="{{ site.url }}/rss.xml"/>
+    {% if page.date and page.url contains '.html' %}
+      <link rel="alternate" type="text/markdown" href="{{ page.url | replace: '.html', '.md' }}"/>
+    {% endif %}
+    <link rel="preload" href="/fonts/cmu-serif/cmu-serif-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="preload" href="/fonts/cmu-serif/cmu-serif-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <style>html.fonts-loading body { visibility: hidden; }</style>
+    <script>document.documentElement.classList.add('fonts-loading');</script>
     {% for css in page.stylesheets %}
       <link rel="stylesheet" href="{{ css }}"/>
     {% endfor %}
     <link rel="stylesheet" href="/css/layout.css?{{ site.data['hash'] }}"/>
     <link rel="stylesheet" href="/css/icons.css?{{ site.data['hash'] }}"/>
+    <script>
+      (function () {
+        var reveal = function () { document.documentElement.classList.remove('fonts-loading'); };
+        if (!document.fonts) { reveal(); return; }
+        Promise.all([
+          document.fonts.load("1em 'CMU Serif'"),
+          document.fonts.load("italic 1em 'CMU Serif'"),
+          document.fonts.load("bold 1em 'CMU Serif'"),
+          document.fonts.load("bold italic 1em 'CMU Serif'"),
+          document.fonts.load("1em 'CMU Typewriter'"),
+          document.fonts.load("bold 1em 'CMU Typewriter'")
+        ]).then(reveal, reveal);
+      })();
+    </script>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-    {% if page.style %}
-      <link rel="amphtml" href="{{ site.url }}{{ page.url | replace_first:'.html','.amp.html' }}" />
-    {% endif %}
     <title>{{ page.title }}{% if paginator.page > 1 %} (page #{{ paginator.page }}){% endif %}</title>
     {% if page.style %}
       <style>
@@ -45,6 +63,66 @@ layout: compress
       </style>
     {% endif %}
     {{ page | jb_picture_head }}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous" defer="defer"></script>
+    <script src="/js/all.js?{{ site.data['hash'] }}" defer="defer"></script>
+    <!-- see https://help.disqus.com/en/articles/1717274-adding-comment-count-links-to-your-home-page -->
+    {% capture forum %}{% if page.layout == 'russian' %}ru-yegor256-com{% else %}yegor256{% endif %}{% endcapture %}
+    <script id="dsq-count-scr" src="https://{{ forum }}.disqus.com/count.js" async="async"></script>
+    {% unless page.layout == 'post' or page.layout == 'russian' %}
+      <!-- a listing mixes both blogs, and one count.js speaks for one forum only -->
+      <script>
+        (function() {
+          function again() {
+            window.DISQUSWIDGETS.forum = '{% if forum == 'yegor256' %}ru-yegor256-com{% else %}yegor256{% endif %}';
+            window.DISQUSWIDGETS.getCount({ reset: true });
+          }
+          if (window.DISQUSWIDGETS) {
+            again();
+          } else {
+            document.getElementById('dsq-count-scr').addEventListener('load', again);
+          }
+        })();
+      </script>
+    {% endunless %}
+    {% if page.script %}
+      <script>
+        {{ page.script }}
+      </script>
+    {% endif %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-1963507-32', 'auto');
+      ga('send', 'pageview');
+      Cd=document;Cr="&"+Math.random();Cp="&s=1";
+      Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1";
+      Cp+="&t="+(new Date()).getTimezoneOffset();
+      if(self!=top)Cp+="&f=1";
+      if(navigator.javaEnabled())Cp+="&j=1";
+      if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+
+      screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Yegor Bugayenko",
+        "url": "https://www.yegor256.com",
+        "sameAs": [
+          "https://www.facebook.com/yegor256",
+          "https://instagram.com/yegor256",
+          "https://www.linkedin.com/in/yegor256",
+          "https://twitter.com/yegor256",
+          "https://github.com/yegor256",
+          "https://www.pinterest.com/yegor256/",
+          "https://www.youtube.com/c/yegor256"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div class="wrapper">
@@ -52,7 +130,9 @@ layout: compress
         onclick="$('#header').show();$('#header-toggle').hide();">&#9776;</aside>
       <header class="header" id="header">
         <div class="face">
+          <!--
           <a href="/about-me.html#form" class="sub" title="Click to subscribe to my monthly newsletter"><span>Subscribe</span></a>
+          -->
           <a href="/about-me.html" style="position:relative;">
             <!-- <img src="/images/santa-hat.svg" alt="Santa hat" style="position:absolute;width:115px;left:-30px;top:-120px"/> -->
             <img src="/images/face-256x256.jpg" class="photo" alt="{{ site.author.name }}"/>
@@ -122,7 +202,7 @@ layout: compress
             <meta itemprop="target" content="https://www.google.com/search?q={q}"/>
             <input name="sitesearch" value="yegor256.com" type="hidden"/>
             <input itemprop="query-input" type="text" id="search-query" class="field field-text" required="required"
-              onfocus="$('.google').css('visibility', 'visible');" name="q" placeholder="Type 🄵 to search" autocomplete="off"/>
+              name="q" placeholder="Type 🄵 to search" autocomplete="off"/>
             <input type="image" src="/images/google-search-icon.svg" class="google"
               title="Search via Google" alt="Search via Google"/>
           </form>
@@ -133,10 +213,9 @@ layout: compress
             <li>
               If you have an open source repository designed right,
               there is a chance to win up to $4,096 at
-              <a href="https://www.kaicode.org">KaiCode'25</a>,
-              our 8th annual open source festival.
-              <a href="https://docs.google.com/forms/d/1nUlL2xvL1OOy3LoVF-g7MfB-9yeG68XB2wXW4MAoWrY">Submit</a>
-              your project now, it's free!
+              <a href="https://www.kaicode.org">KaiCode'26</a>,
+              our <strong>9th annual open source festival</strong>.
+              You still have time until the 1st of June!
             </li>
             -->
             <!--
@@ -144,22 +223,10 @@ layout: compress
               Are you a computer scientist working on program analysis,
               code optimization and generation, bug detection, or program maintenance?
               Submit your paper to the
-              <strong>5th <a href="https://www.iccq.ru/2025.html">ICCQ</a> conference</strong>,
-              co-organized by me and sponsored by IEEE.
-              The CFP closes on the 24th of August!
+              <strong>6th <a href="https://www.iccq.ru/2026.html">ICCQ</a> conference</strong>.
+              The CFP closes on the 27th of August!
             </li>
             -->
-            <li>
-              We are organizing the
-              <strong>6th <a href="https://www.iccq.ru/2026.html">ICCQ</a> conference</strong>
-              in collaboration with
-              <a href="https://www.iis.nsk.su/en">IIS</a> (Novosibirsk) and,
-              hopefully, IEEE Computer Society.
-              We're looking for volunteers to help us.
-              If interested, please email at
-              <a href="mailto:orgs@iccq.ru">orgs@iccq.ru</a>
-              (attach your LinkedIn and GitHub profiles).
-            </li>
             <!--
             <li>
               Не пропустите наш
@@ -183,6 +250,7 @@ layout: compress
               <a href="mailto:job@yegor256.com">Email me</a>, we'll discuss.
             </li>
             -->
+            <!--
             <li>
               Are you familiar with open source and have a decent GitHub portfolio
               of contributions? <strong>We need freelancers</strong>,
@@ -192,6 +260,7 @@ layout: compress
               Join our Telegram group, we'll discuss:
               <a href="https://t.me/eolang_org">@eolang_org</a>.
             </li>
+            -->
             <!--
             <li>
               Meet me at
@@ -217,56 +286,5 @@ layout: compress
         <img src="https://img.shields.io/github/stars/yegor256/blog.svg?style=flat-square"
         alt="GitHub stars"/></a>
     </div>
-    <script src="https://code.jquery.com/jquery-1.9.0.min.js"></script>
-    <script src="/js/all.js?{{ site.data['hash'] }}"></script>
-    {% if page.script %}
-      <script>
-        {{ page.script }}
-      </script>
-    {% endif %}
-    {% if jekyll.environment == "production" %}
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-1963507-32', 'auto');
-        ga('send', 'pageview');
-      </script>
-      <script>
-        Cd=document;Cr="&"+Math.random();Cp="&s=1";
-        Cd.cookie="b=b";if(Cd.cookie)Cp+="&c=1";
-        Cp+="&t="+(new Date()).getTimezoneOffset();
-        if(self!=top)Cp+="&f=1";
-      </script>
-      <script>
-        if(navigator.javaEnabled())Cp+="&j=1";
-      </script>
-      <script>
-        if(typeof(screen)!='undefined')Cp+="&w="+screen.width+"&h="+
-        screen.height+"&d="+(screen.colorDepth?screen.colorDepth:screen.pixelDepth);
-      </script>
-      <script>
-        Cd.write("<img src='//c.hit.ua/hit?i=95870&g=0&x=2"+Cp+Cr+
-        "&r="+escape(Cd.referrer)+"&u="+escape(window.location.href)+
-        "' border='0' wi"+"dth='1' he"+"ight='1'/>");
-      </script>
-    {% endif %}
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Yegor Bugayenko",
-        "url": "https://www.yegor256.com",
-        "sameAs": [
-          "https://www.facebook.com/yegor256",
-          "https://instagram.com/yegor256",
-          "https://www.linkedin.com/in/yegor256",
-          "https://twitter.com/yegor256",
-          "https://github.com/yegor256",
-          "https://www.pinterest.com/yegor256/"
-        ]
-      }
-    </script>
   </body>
 </html>

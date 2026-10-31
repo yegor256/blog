@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: GitHub Guidelines
 date: 2014-04-15
 tags: github xdsd
+place: Amsterdam, Holland
 description: |
   This step-by-step manual helps you to start working
   with a GitHub-hosted project in the spirit of XDSD.

@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -124,12 +124,12 @@ Of course, another random set of Java classes may produce different results,
 but this is how empirical science works: we can't prove the theorem other
 than by some experiments.
 
-{% badge https://www.jpeek.org/logo.svg 64 https://www.jpeek.org %}
+{% badge https://www.jpeek.org/logo.svg S https://www.jpeek.org %}
 
 I created an open source software library to help me do these experiments and called
 it [jPeek.org](https://www.jpeek.org). It is a calculator of cohesion metrics
 for Java code. No surprise, there are many metrics we can use to calculate cohesion. At least
-[thirty](https://www.math.md/files/csjm/v25-n1/v25-n1-%28pp44-74%29.pdf)
+[thirty](https://web.archive.org/web/20240619181537/http://www.math.md/files/csjm/v25-n1/v25-n1-(pp44-74).pdf)
 of them are published, while only a few of them were properly implemented.
 In jPeek, thanks to its contributors, we managed to implement over a dozen.
 

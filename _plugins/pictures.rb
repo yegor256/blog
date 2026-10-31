@@ -1,22 +1,21 @@
 # frozen_string_literal: true
 
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
+
+require 'fastimage'
 
 # My module
 module Yegor
   # The class
   class Img
     def initialize(src, _ctx)
-      if src.index('/').zero? && src.index('//') != 0
-        @url = src
-        raise "File doesn't exist: #{src}" unless
-          File.exist?("./_site#{src}") ||
-          File.exist?(".#{src}") ||
-          src.include?('gnuplot')
-      else
-        @url = src
-      end
+      @url = src
+      return unless src.start_with?('/') && !src.start_with?('//')
+      raise "File doesn't exist: #{src}" unless
+        File.exist?("./_site#{src}") ||
+        File.exist?(".#{src}") ||
+        src.include?('gnuplot')
     end
 
     def to_s
@@ -42,24 +41,6 @@ module Yegor
                "<img src='#{uri}' #{attrs}/>"
              end
       "<figure class='unprintable'>#{html}</figure>"
-    end
-  end
-
-  # The class
-  class BadgeBlock < Liquid::Tag
-    def initialize(tag, markup, tokens)
-      super
-      opts = markup.strip.split(/\s+/, 3)
-      @src = opts[0].strip
-      @width = opts[1].strip
-      @url = opts[2].strip if opts[2]
-    end
-
-    def render(context)
-      img = "<img src='#{Yegor::Img.new(@src, context)}' " \
-            "style='width:#{@width}px;max-width:100%;' alt='badge'/>"
-      img = "<a href='#{CGI.escapeHTML @url}'>#{img}</a>" if @url
-      "<figure class='badge'>#{img}</figure>\n\n"
     end
   end
 
@@ -91,5 +72,4 @@ module Yegor
 end
 
 Liquid::Template.register_tag('figure', Yegor::FigureBlock)
-Liquid::Template.register_tag('badge', Yegor::BadgeBlock)
 Liquid::Template.register_tag('picture', Yegor::PictureBlock)

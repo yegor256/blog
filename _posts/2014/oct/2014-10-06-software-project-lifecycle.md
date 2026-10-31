@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: Project Lifecycle in Zerocracy
 date: 2014-10-06
 tags: management
+place: Amsterdam, Holland
 description: |
   There are four standard phases in
   a software development lifecycle for all projects
@@ -24,11 +25,11 @@ In addition to being a hands-on programmer, I'm also co-founder and CTO of
 I play the role of a technical and management leader in all projects
 we work with.
 
-{% badge //www.0crat.com/svg/logo.svg 100 https://www.zerocracy.com %}
+{% badge //www.zerocracy.com/svg/logo.svg M https://www.zerocracy.com %}
 
 I wrote this article for those who're interested in hiring me and/or
 my team. This article will demonstrate what happens from day one until
-the end of the project, when you choose to [work with us](https://www.0crat.com/join).
+the end of the project, when you choose to [work with us](https://www.zerocracy.com/how-to-earn).
 
 You will see below that our methods of
 software development [seriously differ]({% pst 2014/apr/2014-04-17-how-xdsd-is-different %})
@@ -94,7 +95,7 @@ much more than a mistake made later.
 
 ## Thinking
 
-{% badge /images/2014/10/lifecycle-thinking.png 250 %}
+{% badge /images/2014/10/lifecycle-thinking.png XXL %}
 
 Thinking is the first and the most important phase.
 
@@ -134,7 +135,7 @@ Using this HoC metric, we can roughly
 
 ## Building
 
-{% badge /images/2014/10/lifecycle-building.png 250 %}
+{% badge /images/2014/10/lifecycle-building.png XXL %}
 
 This is a one-man job for
 [an architect]({% pst 2014/oct/2014-10-12-who-is-software-architect %}).
@@ -165,7 +166,7 @@ More about the Building phase here:
 
 ## Fixing
 
-{% badge /images/2014/10/lifecycle-fixing.png 250 %}
+{% badge /images/2014/10/lifecycle-fixing.png XXL %}
 
 Now it's time to build a distributed team of programmers. First, we
 invite those who've worked on other projects and have already
@@ -206,7 +207,7 @@ in GitHub.
 
 ## Using
 
-{% badge /images/2014/10/lifecycle-using.png 250 %}
+{% badge /images/2014/10/lifecycle-using.png XXL %}
 
 This is the final phase and it can take quite a long time. By now, the product is
 ready and is launched to the market. But we still receive
@@ -223,5 +224,4 @@ And big feature requests? At this phase, we usually try to convert
 them into new projects and develop them separately, starting again
 from Thinking.
 
-BTW, the illustrations you see above are made by
-[Bárbara Lopes](https://www.behance.net/lopesbarbara).
+BTW, the illustrations you see above are made by Bárbara Lopes.

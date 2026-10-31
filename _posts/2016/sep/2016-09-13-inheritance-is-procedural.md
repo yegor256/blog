@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -114,7 +114,7 @@ from class `Manuscript`, as if it's not a
 [living organism]({% pst 2014/nov/2014-11-20-seven-virtues-of-good-object %}), but rather a dead
 one from which we can inherit its parts, "money, properties, or a title."
 
-{% badge https://yegor256.github.io/bibliography/book-covers/west2004object.jpg 96 https://jttu.net/west2004object %}
+{% jttu west2004object %}
 
 Implementation inheritance was created as a mechanism for
 [code reuse](https://en.wikipedia.org/wiki/Code_reuse),
@@ -134,8 +134,6 @@ It comes as no surprise that it introduces all the problems people have been tal
 Because it is procedural!
 That's why it doesn't fit into object-oriented programming.
 
-By the way, we [discussed](https://gitter.im/yegor256/elegantobjects?at=57bcd2e4cd00bdff6e745584)
-this problem in our
-[Gitter chat](https://gitter.im/yegor256/elegantobjects) (it's dead already)
+By the way, we discussed this problem in our Gitter chat (it's dead now)
 a week ago, and that's when it became obvious to me what exactly is
-wrong with inheritance. Take a look at our discussion there.
+wrong with inheritance.

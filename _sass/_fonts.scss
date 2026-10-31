@@ -1,16 +1,77 @@
-// SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+// SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
 
-@import url('//fonts.googleapis.com/css?family=Source+Code+Pro:400,500|Ubuntu+Mono:400');
-
 @font-face {
-  font-family: 'Cambria';
+  font-family: 'CMU Serif';
   font-weight: normal;
   font-style: normal;
-  src: local('Cambria'),
-    url('//cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_2_0.eot'),
-    url('//cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_2_0.eot?#iefix') format('embedded-opentype'),
-    url('//cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_2_0.woff2') format('woff2'),
-    url('//cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_2_0.woff') format('woff'),
-    url('//cf.jare.io/?u=https://www.yegor256.com/fonts/cambria/2EAA54_2_0.ttf') format('truetype');
+  font-display: block;
+  src: url('/fonts/cmu-serif/cmu-serif-regular.woff2') format('woff2'),
+       url('/fonts/cmu-serif/cmu-serif-regular.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'CMU Serif';
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+  src: url('/fonts/cmu-serif/cmu-serif-bold.woff2') format('woff2'),
+       url('/fonts/cmu-serif/cmu-serif-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Serif';
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+  src: url('/fonts/cmu-serif/cmu-serif-italic.woff2') format('woff2'),
+       url('/fonts/cmu-serif/cmu-serif-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Serif';
+  font-weight: bold;
+  font-style: italic;
+  font-display: block;
+  src: url('/fonts/cmu-serif/cmu-serif-bold-italic.woff2') format('woff2'),
+       url('/fonts/cmu-serif/cmu-serif-bold-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Typewriter';
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url('/fonts/cmu-typewriter/cmu-typewriter-regular.woff2') format('woff2'),
+       url('/fonts/cmu-typewriter/cmu-typewriter-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Typewriter';
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+  src: url('/fonts/cmu-typewriter/cmu-typewriter-bold.woff2') format('woff2'),
+       url('/fonts/cmu-typewriter/cmu-typewriter-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Typewriter';
+  font-weight: normal;
+  font-style: italic;
+  font-display: block;
+  src: url('/fonts/cmu-typewriter/cmu-typewriter-italic.woff2') format('woff2'),
+       url('/fonts/cmu-typewriter/cmu-typewriter-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CMU Typewriter';
+  font-weight: bold;
+  font-style: italic;
+  font-display: block;
+  src: url('/fonts/cmu-typewriter/cmu-typewriter-bold-italic.woff2') format('woff2'),
+       url('/fonts/cmu-typewriter/cmu-typewriter-bold-italic.ttf') format('truetype');
+}
+
+$serif: 'CMU Serif', serif;
+$mono: 'CMU Typewriter', monospace;

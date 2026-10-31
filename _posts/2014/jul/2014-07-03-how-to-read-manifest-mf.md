@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -20,7 +20,7 @@ keywords:
   - how to read manifest.mf
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://manifests.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://manifests.jcabi.com %}
 
 Every Java package (JAR, WAR, EAR, etc.) has
 a [`MANIFEST.MF`](http://docs.oracle.com/javase/tutorial/deployment/jar/manifestindex.html)

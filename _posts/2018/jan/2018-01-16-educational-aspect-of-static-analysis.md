@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -73,7 +73,7 @@ we want to prefix all attribute references with `this.`, and we want the
 code to be formatted the same way, since we believe that the uniformity
 of the code seriously increases its maintainability.
 
-{% quote Of course, we could create a tool, but in that case you would never learn what the project wants from you and why. %}
+{% quote Of course, we could create a tool, but in that case you would never learn what the project wants from you and why %}
 
 Of course, we could create a tool which you could then use to re-format
 the code, to make it look the way we want. But in that case you would

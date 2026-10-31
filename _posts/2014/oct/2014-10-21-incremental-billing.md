@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Incremental Billing"
 date: 2014-10-21
 tags: xdsd management
+place: Amsterdam, Holland
 description: |
   With either a Fixed Price or Time and Material contract,
   your chances of getting the project done are very low.
@@ -25,7 +26,7 @@ basically two types of contracts:
 [time-and-material](https://en.wikipedia.org/wiki/Time_and_materials).
 They are fundamentally different but the truth is that in either case---**you lose**.
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 In the eXtremely Distributed Software Development
 ([XDSD](https://www.xdsd.org)) methodology everything is different, including

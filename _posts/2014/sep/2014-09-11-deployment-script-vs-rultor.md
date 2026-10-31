@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -21,7 +21,7 @@ jb_picture:
   caption: Charlie and the Chocolate Factory (2005) by Tim Burton
 ---
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 When I explain how [Rultor](https://www.rultor.com) automates deployment/release processes,
 very often I hear something like:

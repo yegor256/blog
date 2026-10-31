@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -19,8 +19,6 @@ keywords:
   - nutch without command line
   - nutch apache
 ---
-
-{% badge https://upload.wikimedia.org/wikipedia/commons/8/89/Nutch_logo.svg 92 https://nutch.apache.org/ %}
 
 [Apache Nutch](https://nutch.apache.org/)
 is an open source framework written in Java. Its purpose

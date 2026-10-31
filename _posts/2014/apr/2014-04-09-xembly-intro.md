@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Xembly, an Assembly for XML"
 date: 2014-04-09
 tags: pets xml
+place: Amsterdam, Holland
 description: |
   Xembly is an imperative language for XML data and schema manipulations
   that makes XML building much easier and convenient
@@ -19,7 +20,7 @@ keywords:
   - xpath
 ---
 
-{% badge https://www.xembly.org/logo.png 64 https://www.xembly.org %}
+{% badge https://www.xembly.org/logo.png S https://www.xembly.org %}
 
 I use XML in almost every one of my projects. And, despite all the fuss about
 JSON/YAML, I honestly

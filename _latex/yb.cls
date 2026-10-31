@@ -1,15 +1,56 @@
-% SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+% SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 % SPDX-License-Identifier: MIT
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{yb}[21/4/2021 0.1.0 Template for my documents]
 \LoadClass[12pt]{article}
 \RequirePackage{xcolor}
-  \definecolor{yb-blue}{RGB}{5,60,94}
+  \definecolor{yb-red}{HTML}{B22222}
+  \definecolor{yb-black}{HTML}{1B1212}
+  \definecolor{yb-gray}{HTML}{4F4949}
+  \definecolor{yb-silver}{HTML}{A4A0A0}
+  \definecolor{yb-platinum}{HTML}{E1E0E0}
 \RequirePackage{graphicx}
 \RequirePackage{svg}
+\RequirePackage{fontspec}
+  \setmainfont{CMU Concrete}[
+    Path=../fonts/cmu-concrete/,
+    Extension=.ttf,
+    UprightFont=cmu-concrete-regular,
+    BoldFont=cmu-concrete-bold,
+    ItalicFont=cmu-concrete-italic,
+    BoldItalicFont=cmu-concrete-bold-italic
+  ]
+  \setsansfont{CMU Sans}[
+    Path=../fonts/cmu-sans/,
+    Extension=.ttf,
+    UprightFont=cmu-sans-regular,
+    BoldFont=cmu-sans-bold,
+    ItalicFont=cmu-sans-italic,
+    BoldItalicFont=cmu-sans-bold-italic
+  ]
+  \setmonofont{CMU Typewriter}[
+    Path=../fonts/cmu-typewriter/,
+    Extension=.ttf,
+    UprightFont=cmu-typewriter-regular,
+    BoldFont=cmu-typewriter-bold,
+    ItalicFont=cmu-typewriter-italic,
+    BoldItalicFont=cmu-typewriter-bold-italic
+  ]
+  \newfontfamily\cmuSerifFont{CMU Serif}[
+    Path=../fonts/cmu-serif/,
+    Extension=.ttf,
+    UprightFont=cmu-serif-regular,
+    BoldFont=cmu-serif-bold,
+    ItalicFont=cmu-serif-italic,
+    BoldItalicFont=cmu-serif-bold-italic
+  ]
+  \newfontfamily\molotFont{Molot}[
+    Path=../fonts/molot/,
+    Extension=.ttf,
+    UprightFont=molot-regular
+  ]
 \RequirePackage{microtype}
-\RequirePackage{libertine}
 \RequirePackage[absolute]{textpos}
   \TPGrid{16}{16}
 \RequirePackage[top=2\TPVertModule, bottom=2\TPVertModule, left=3\TPHorizModule, right=2\TPHorizModule]{geometry}
@@ -25,7 +66,7 @@
   }}
   \fancyfoot[C]{
     \begin{textblock}{2}(0,0){
-      \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-blue, draw=none] (0,0) rectangle (2,16);
+      \tikz[x=\TPHorizModule,y=\TPVertModule] \filldraw[fill=yb-silver, draw=none] (0,0) rectangle (2,16);
     }\end{textblock}
     % \ifnum\value{page}=1
     %   \begin{textblock}{2}[0,1](0,16){
@@ -51,6 +92,7 @@
 \newcommand\nospell[1]{#1}
 
 \AtBeginDocument{%
+  \color{yb-black}
   \setlength{\topskip}{0mm}
   \setlength{\parindent}{0pt}
   \setlength{\parskip}{5pt}
@@ -61,7 +103,7 @@
 
 \newcommand\ybPrintPhoto{%
   \begin{textblock}{2.4}[1,0](14,1.5){
-    \includegraphics[width=\textwidth]{../images/face-1024x1024.jpg}
+    \includegraphics[width=\textwidth]{../images/face-monochrome-1024x1024.jpg}
   }\end{textblock}
 }
 

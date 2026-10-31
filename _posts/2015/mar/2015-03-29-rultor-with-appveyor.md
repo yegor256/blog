@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -18,7 +18,7 @@ keywords:
   - windows builds with docker
 ---
 
-{% badge /images/2014/10/appveyor.png 100 https://www.appveyor.com %}
+{% badge /images/2014/10/appveyor.png M https://www.appveyor.com %}
 
 [AppVeyor](https://www.appveyor.com) is a great cloud
 [continuous integration]({% pst 2014/oct/2014-10-08-continuous-integration-is-dead %}) service that builds
@@ -28,7 +28,7 @@ explain how Rultor works and what it's for:
 [Rultor.com, a Merging Bot]({% pst 2014/jul/2014-07-24-rultor-automated-merging %})
 and [Master Branch Must Be Read-Only]({% pst 2014/jul/2014-07-21-read-only-master-branch %}).
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 The problem is that Rultor is running all scripts inside Docker containers
 and Docker can't build Windows projects. The only and the best logical solution
@@ -59,7 +59,7 @@ $ rultor encrypt -p yegor256/takes curl-appveyor.cfg
 ```
 
 The file I created was called
-[`curl-appveyor.cfg.asc`](https://github.com/yegor256/takes/blob/master/curl-appveyor.cfg.asc).
+`curl-appveyor.cfg.asc`.
 I committed and pushed into [yegor256/takes](https://github.com/yegor256/takes)
 GitHub repository.
 

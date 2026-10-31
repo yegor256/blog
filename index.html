@@ -50,7 +50,8 @@ keywords:
               </li>
               <li>
                 <i class="icon icon-comments"></i>
-                <a href="{{ site.url }}{{ post.url }}#disqus_thread" itemprop="discussionUrl">comments</a>
+                {% assign disqus = post | yb_disqus %}
+                <a href="{{ site.url }}{{ post.url }}#disqus_thread"{% if disqus != '' %} data-disqus-identifier="{{ disqus }}"{% endif %} itemprop="discussionUrl">comments</a>
               </li>
               {% if post.chatgpt-translate.model %}
                 <li title="This article is translated to a few languages by ChatGPT">
@@ -99,8 +100,3 @@ keywords:
     </div>
   </footer>
 </div>
-
-{% if jekyll.environment == "production" %}
-  <script>var disqus_shortname = 'yegor256';</script>
-  <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>
-{% endif %}

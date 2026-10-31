@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -21,11 +21,11 @@ keywords:
   - s3 java object-oriented
 ---
 
-{% badge /images/2014/05/s3-logo.png 150 %}
+{% badge /images/2014/05/s3-logo.png L %}
 
 I'm a big fan of Amazon Web Services (AWS). I'm using them
 in almost all of my projects. One of their most popular
-services is [Simple Storage Service (S3)](http://aws.amazon.com/s3/).
+services is [Simple Storage Service (S3)](https://aws.amazon.com/s3/).
 It is a storage for binary objects (files) with unique names,
 accessible through HTTP or RESTful API.
 
@@ -51,7 +51,7 @@ String content = IOUtils.toString(input, "UTF-8");
 input.close();
 ```
 
-{% badge https://www.jcabi.com/logo-square.svg 64 %}
+{% badge https://www.jcabi.com/logo-square.svg S %}
 
 As always, procedural programming has its inevitable
 disadvantages. To overcome them all, I designed

@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -62,7 +62,7 @@ The oven has to speak their language. Not the language of its designer.
 
 How do you do that? How do you make sure the code is clear, not just clean?
 
-{% quote If a stranger can modify your code and fix a bug in less than an hour, it is maintainable. %}
+{% quote If a stranger can modify your code and fix a bug in less than an hour, it is maintainable %}
 
 Well, test it. Ask someone who is outside of the project to take a look
 at your code and tell you how clear it is. Not how beautiful your classes

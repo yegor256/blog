@@ -1,11 +1,11 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Wikipedia's Definition of a Software Bug Is Wrong"
 date: 2015-06-11
-tags: testing
+tags: tests
 categories: jcg
 description: |
   Wikipedia defines a software bug in a functional

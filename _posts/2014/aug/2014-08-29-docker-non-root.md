@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "How We Run as a Non-Root Inside Docker Container"
 date: 2014-08-29
 tags: docker rultor
+place: Amsterdam, Holland
 description: |
   By default, docker container starts a process inside
   as a root user. In rultor.com we change it to a custom

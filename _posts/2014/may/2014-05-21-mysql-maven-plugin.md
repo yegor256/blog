@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "MySQL Maven Plugin"
 date: 2014-05-21
 tags: maven java
+place: Amsterdam, Holland
 description: |
   jcabi-mysql-maven-plugin starts a fresh instance of MySQL
   server before integration tests and shuts it down
@@ -30,7 +31,7 @@ memory and on disc. However, it is always good to make sure
 that your classes are tested against a database identical
 to the one you have in production environment.
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://mysql.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://mysql.jcabi.com %}
 
 I've created my own Maven plugin, [jcabi-mysql-maven-plugin](https://mysql.jcabi.com),
 that does exactly two things: starts a MySQL server on
@@ -220,7 +221,7 @@ That's pretty much it. I'm using [jcabi-mysql-maven-plugin](https://mysql.jcabi.
 in a few projects, and it helps me to stay confident that my code works
 with a real MySQL server. I'm also using the
 [Liquibase](https://www.liquibase.org/)
-Maven [plugin](https://www.liquibase.org/documentation/maven/) in
+Maven [plugin](https://docs.liquibase.com/tools-integrations/maven/home.html) in
 order to populate an empty server with tables required for the application.
 Nevertheless, that is a story for the
 [next post]({% pst 2014/jul/2014-07-20-liquibase-in-maven %}).

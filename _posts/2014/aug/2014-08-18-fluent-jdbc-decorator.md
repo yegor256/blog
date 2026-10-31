@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Fluent JDBC Decorator"
 date: 2014-08-18
 tags: java jcabi
+place: Amsterdam, Holland
 description: |
   jcabi-jdbc is a fluent wrapper of JDBC, making
   interaction with relational databases easier and
@@ -18,7 +19,7 @@ keywords:
   - lightweight jdbc wrapper
 ---
 
-{% badge https://www.jcabi.com/logo-square.svg 64 https://aspects.jcabi.com %}
+{% badge https://www.jcabi.com/logo-square.svg S https://aspects.jcabi.com %}
 
 This is how you fetch text from a SQL table
 with [jcabi-jdbc](https://jdbc.jcabi.com):
@@ -48,8 +49,8 @@ Every instance of `JdbcSession` is a "transaction" in a database.
 You start it by instantiating the class with a single parameter---data source.
 
 You can obtain the data source from your connection pool. There are many
-implementations of connection pools. I would recommend that you use
-[BoneCP](https://www.jolbox.com/). Below is an example of how you would connect to PostgreSQL:
+implementations of connection pools, such as
+[HikariCP](https://github.com/brettwooldridge/HikariCP). Below is an example of how you would connect to PostgreSQL:
 
 ```java
 @Cacheable(forever = true)

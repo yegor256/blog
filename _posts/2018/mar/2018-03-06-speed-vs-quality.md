@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -100,7 +100,7 @@ quality control to programmers, hoping that they "won't do evil."
 This leads to frustration, distress, constant fear of mistakes, long delays,
 blaming, and shaming. Both the project and its programmers lose.
 
-{% quote If we put these two interests in conflict, we will get a high-quality product, which is growing very fast. %}
+{% quote If we put these two interests in conflict, we will get a high-quality product, which is growing very fast %}
 
 Programmers must not be responsible for the quality! They must not care
 what they may, or will, break. They must not care how good the code they write is.

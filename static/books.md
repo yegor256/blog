@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: static
@@ -25,7 +25,7 @@ style: |
   }
 ---
 
-{% badge /images/andreea/writing.svg 200 %}
+{% badge /images/andreea/writing.svg XL %}
 
 If you already purchased and read my books, please review them on
 [Amazon](https://www.amazon.com/Yegor-Bugayenko/e/B01AM1QMDK) and/or
@@ -42,9 +42,9 @@ send you the PDF version (rendered with your name inside, to make sure
 you don't share it with others).
 
 {: .book-badge}
-{% badge /images/books/elegant-objects/cover-eo1.png 125 /elegant-objects.html %}
+{% badge /images/books/elegant-objects/cover-eo1.png L /elegant-objects.html %}
 
-[Elegant Objects](/elegant-objects.html) (Volume 1)
+[Elegant Objects](/elegant-objects.html) (two volumes)
 is my first book. It is about object-oriented
 programming, from an idealistic and, maybe, a bit futuristic
 point of view. There are 23 independent recommendations for
@@ -57,7 +57,7 @@ Published: 22 Feb 2016.
 {: .book-par}
 
 {: .book-badge}
-{% badge /images/books/256-bloghacks/cover.png 125 /256-bloghacks.html %}
+{% badge /images/books/256-bloghacks/cover.png L /256-bloghacks.html %}
 
 [256 Bloghacks](/256-bloghacks.html) is a book about blogging,
 disclosing all techniques, secrets and tactics I'm using at this blog.
@@ -72,20 +72,7 @@ Published: 6 Nov 2016.
 {: .book-par}
 
 {: .book-badge}
-{% badge /images/books/elegant-objects/cover-eo2.png 125 /elegant-objects.html %}
-
-The **2nd Volume** of [Elegant Objects](/elegant-objects.html)
-covers more object-oriented patterns and anti-patterns,
-including MVC, ORM, annotations, printers, validators, inheritance and subtyping,
-dependency injection, reflection, and others.
-<br/>
-Published: 18 Apr 2017.
-<br/>
-<a href="https://amzn.to/2pD42k3"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
-{: .book-par}
-
-{: .book-badge}
-{% badge /images/books/code-ahead/cover.png 125 /code-ahead.html %}
+{% badge /images/books/code-ahead/cover.png L /code-ahead.html %}
 
 [Code Ahead](/code-ahead.html) is a novel about software engineering. In this book I
 propose a number of best practices for organizing software development
@@ -98,7 +85,7 @@ Published: 6 July 2018.
 {: .book-par}
 
 {: .book-badge}
-{% badge /images/books/junior-objects/cover.png 125 /junior-objects.html %}
+{% badge /images/books/junior-objects/cover.png L /junior-objects.html %}
 
 It is a book for junior programmers or even for someone who hasn't
 seen a computer yet. It starts from the explanation of basic things
@@ -112,7 +99,7 @@ Published: 22 June 2020.
 {: .book-par}
 
 {: .book-badge}
-{% badge /images/books/angry-tests/cover.png 125 /angry-tests.html %}
+{% badge /images/books/angry-tests/cover-1.png L /angry-tests.html %}
 
 It is a book about automated testing. It summarizes everything I have to say about unit testing,
 integration testing, and code quality. It is essentially a summary of my
@@ -123,20 +110,6 @@ make your tests more helpful---regardless of your programming language.
 Published: 16 April 2025.
 <br/>
 <a href="https://amzn.to/4czWVkh"><img src='/images/books/amazon-buy-button.png' style='height:30px' alt='Click to buy'/></a>
-{: .book-par}
-
-{: .book-badge}
-{% badge /images/books/elegant-objects/cover-eo1.png 125 /elegant-objects.html %}
-
-The **3rd Volume** of [Elegant Objects](/elegant-objects.html)
-will contain practical object-oriented design patterns, just like
-those GoF book suggested. The book will not criticize bad practices, like
-previous two volumes did, but will suggest what to do instead.
-<br/>
-To be published: in <del>2022</del> 2026.
-{: .book-par}
-
-To be continued...
 {: .book-par}
 
 <!--

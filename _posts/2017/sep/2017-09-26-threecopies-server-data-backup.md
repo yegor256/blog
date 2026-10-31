@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -21,7 +21,7 @@ buffer:
   - "I would say that it's a light version of AWS Data Pipeline. ThreeCopies does exactly the same, but it's easier to configure, and it's cheaper"
 ---
 
-<!-- {% badge https://www.threecopies.com/images/logo.png 64 https://www.threecopies.com %} -->
+<!-- {% badge https://www.threecopies.com/images/logo.png S https://www.threecopies.com %} -->
 
 I have a number of data resources which exist in one place only and which
 I don't really want to lose. For example, I have a hosted PHP website,
@@ -60,7 +60,7 @@ I created [ThreeCopies](https://www.threecopies.com).
 It's a very simple hosted executor of bash scripts, which you edit
 through a web interface. Then one of our servers starts a Docker
 container ([yegor256/threecopies](https://hub.docker.com/r/yegor256/threecopies/) is the image, here is the
-[`Dockerfile`](https://github.com/yegor256/threecopies/blob/master/src/docker/Dockerfile))
+[`Dockerfile`](https://github.com/yegor256/threecopies-image/blob/master/Dockerfile))
 and runs your script inside.
 
 The script starts every hour, every day and every week.

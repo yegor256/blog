@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -25,7 +25,7 @@ including [RubyGems](https://www.yegor256.com/2014/08/26/publish-to-rubygems.htm
 [CloudBees](https://www.yegor256.com/2014/08/25/deploy-to-cloudbees.html)
 and [Maven Central](https://www.yegor256.com/2014/08/19/how-to-release-to-maven-central.html).
 
-{% badge /images/2014/09/heroku-logo.svg 100 https://www.heroku.com %}
+{% badge /images/2014/09/heroku-logo.svg M https://www.heroku.com %}
 
 This one describes how Heroku deployment can be automated. When I
 need to deploy a new version of an Aintshy web application,
@@ -40,7 +40,7 @@ a free hosted DevOps assistant.
 
 Create a new project at [Heroku.com](https://www.heroku.com).
 
-Then install their [command line tool-belt](https://toolbelt.heroku.com/).
+Then install their [command line tool-belt](https://devcenter.heroku.com/articles/heroku-cli).
 
 You should authenticate your public SSH key at Heroku, using
 their command line tool-belt. The process is explained
@@ -77,7 +77,7 @@ decrypt:
   id_rsa.pub: "repo/id_rsa.pub.asc"
 release:
   script: |
-    mvn versions:set "-DnewVersion=${tag}"
+    mvn -ntp versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
     mvn clean install -Pqulice --errors
     git remote add heroku git@heroku.com:aintshy.git
@@ -93,7 +93,7 @@ release:
 You can compare your file with live Rultor
 [configuration of aintshy/hub](https://github.com/aintshy/hub/blob/master/.rultor.yml).
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like this into it

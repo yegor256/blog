@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -18,8 +18,6 @@ keywords:
   - good practices in programming
   - bad practices in java
 categories: jcg
-translated:
-  - Chinese: http://blog.csdn.net/lvshuilantian/article/details/52303290
 ---
 
 This page contains most typical mistakes I see in the Java code of people

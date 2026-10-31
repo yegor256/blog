@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Simple Java SSH Client"
 date: 2014-09-02
 tags: java jcabi
+place: Amsterdam, Holland
 description: |
   jcabi-ssh is a simple Java SSH client that
   wraps jsch library and makes its usage more
@@ -34,7 +35,7 @@ String hello = new Shell.Plain(
 ```
 
 [`jcabi-ssh`](https://ssh.jcabi.com) is
-a convenient wrapper of [`JSch`](https://www.jcraft.com/jsch/),
+a convenient wrapper of [`JSch`](https://github.com/mwiede/jsch),
 a well-known pure Java implementation of SSH2.
 
 <!--more-->

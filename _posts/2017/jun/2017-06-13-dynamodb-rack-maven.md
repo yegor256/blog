@@ -1,12 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "DynamoDB + Rake + Maven + Rack::Test"
 date: 2017-06-13
 place: Odessa, Ukraine
-tags: testing ruby aws
+tags: tests ruby aws
 description: |
   The article explains how DynamoDB Local can be
   used in Rake integration testing; a practical

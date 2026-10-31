@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -18,8 +18,6 @@ keywords:
   - class constructor
   - object constructor
 book: elegant-objects-1 1.2
-translated:
-  - Chinese: http://blog.csdn.net/LvShuiLanTian/article/details/52390622
 image: /images/2015/05/the-matrix-agent-smith.jpg
 jb_picture:
   caption: The Matrix (1999) by The Wachowski Brothers

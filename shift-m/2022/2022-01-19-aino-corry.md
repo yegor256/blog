@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -28,7 +28,7 @@ Aino's website is [here](https://metadeveloper.com).
 
 And the book is [here](https://amzn.to/3fREDOQ).
 
-Video is [here](https://youtu.be/ByatpkT2-tI) (Aino asked to take it down).
+Video was taken down at Aino's request.
 
 ## Transcript
 

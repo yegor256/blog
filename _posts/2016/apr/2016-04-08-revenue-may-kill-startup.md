@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -44,7 +44,7 @@ buyers and pay for marketing, promotion, and Google AdWords. The numbers
 grow every month and ... they don't realize they are
 actually _killing_ their own startup.
 
-{% badge https://www.seedramp.com/images/logo.svg 128 https://www.seedramp.com %}
+{% badge https://www.seedramp.com/images/logo.svg L https://www.seedramp.com %}
 
 If you're building a cafe, a bakery, a web development studio,
 or a bicycle repair shop, a growing customer base with stable revenue
@@ -96,7 +96,7 @@ If that's not happening, close the business and start something else. The
 valuation must _skyrocket_ or you have to abandon the startup and try your
 hand on another one as soon as possible.
 
-{% quote The revenue is good for you but not really good for investors. %}
+{% quote The revenue is good for you but not really good for investors %}
 
 One of the biggest mistakes a startup founder can make is to forget
 about this "skyrocketing valuation" principle and focus on making

@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -86,7 +86,7 @@ thousand anonymous GitHub hooligans, are two very different stories. You will
 need time to get up to speed in this wild territory. It took me over three years.
 Don't wait, start now.
 
-{% quote I truly believe that a professional programmer spends more time creating automated tests than writing production code. %}
+{% quote I truly believe that a professional programmer spends more time creating automated tests than writing production code %}
 
 **Test Everything**.
 To be honest, almost everything I've learned about software quality, I owe
@@ -129,7 +129,7 @@ I've got some of them and I'm planning to get more, even though I'm not really
 a programmer [on a payroll]({% pst 2015/jul/2015-07-21-hourly-pay-modern-slavery %})
 and I'm not going to be employed by any enterprise that
 cares about badges in
-[my CV](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fresume-boring.tex&command=pdflatex&trackId=1520166474432).
+[my CV](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Fblog&target=_latex%2Fboring.tex&command=pdflatex&trackId=1520166474432).
 Still, I want more certificates. Why? Because I learn a lot when I pass them.
 Also when I fail (I have done, twice, up to now). There are two things certificates
 give you: 1) they help you fill up your knowledge gaps, and 2) they boost your

@@ -1,65 +1,36 @@
 ---
 ---
 
-// SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+// SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
 
 @use "sass:color";
+@use 'defs' as *;
+@use 'colors' as *;
+@use 'fonts' as *;
+@use 'placeholders' as *;
+@use 'disqus';
+@use 'highlight';
+@use 'ico';
+@use 'post';
+@use 'wrapper' as *;
+@use 'youtube';
 
-@import 'disqus';
-@import 'defs';
-@import 'fonts';
-@import 'highlight';
-@import 'ico';
-@import 'post';
-@import 'wrapper';
-@import 'youtube';
-@import 'russian';
-
-%gray {
-  color: gray;
-
-  a,
-  a:visited {
-    color: inherit;
-  }
+.em2 { font-size: 2 * $rem; }
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
-
-.em2 { font-size: 2 * $em; }
 .center { text-align: center; }
-.green { color: darkgreen; }
-.red { color: firebrick; }
-.orange { color: orange; }
+.red { color: $red; }
 .gray { @extend %gray; }
-
-%clear { clear: both; }
-
-%small { font-size: .85 * $em; }
-
-%strike { text-decoration: line-through; }
-
-%main-font {
-  font-family: $main-font;
-  font-style: normal;
-  font-weight: normal;
-}
-%main-font-bold {
-  // Because it doesn't work anyway. Something is wrong with this Cambria in the bold style
-  //font-family: $main-font;
-  font-style: normal;
-  //font-weight: bold;
-}
-%main-font-italic {
-  //font-family: $main-font;
-  font-style: italic;
-  //font-weight: normal;
-}
-
-%desktop-only {
-  @media all and (max-width: $width) {
-    display: none;
-  }
-}
 
 .desktop-only { @extend %desktop-only; }
 
@@ -67,21 +38,7 @@
 
 twitter-widget { @extend %unprintable; }
 
-%unprintable {
-  @media print {
-    display: none !important;
-    visibility: hidden;
-  }
-}
-
 .unprintable { @extend %unprintable; }
-
-%printable {
-  @media not print  {
-    display: none !important;
-    visibility: hidden;
-  }
-}
 
 .clear { @extend %clear; }
 
@@ -92,15 +49,15 @@ twitter-widget { @extend %unprintable; }
 }
 
 body {
-  @extend %main-font;
-  background-color: white;
-  color: black;
-  font-size: $em;
+  @extend %serif;
+  background-color: $white;
+  color: $black;
+  font-size: $rem;
   height: 100%;
   margin: 0;
   overflow-x: hidden;
-  padding-bottom: 2 * $em;
-  padding-top: 2 * $em;
+  padding-bottom: 2 * $rem;
+  padding-top: 2 * $rem;
   position: relative;
 }
 
@@ -108,18 +65,14 @@ a,
 a:visited {
   color: inherit;
   text-decoration: underline;
-  // scss-lint:disable PropertySpelling
-  text-decoration-thickness: $px;
-  // scss-lint:enable PropertySpelling
-  &.foreign {
-    &:hover {
-      color: gray;
-    }
+  &.external {
+    text-decoration-color: $silver;
+    text-decoration-style: dotted;
   }
 
   .link {
-    height: .5 * $em;
-    width: .5 * $em;
+    height: .5 * $rem;
+    width: .5 * $rem;
   }
 }
 
@@ -130,7 +83,7 @@ del {
 .header-toggle {
   cursor: pointer;
   display: inline-block;
-  font-size: 1.4 * $em;
+  font-size: 1.4 * $rem;
   @media all and (min-width: $width) {
     display: none;
   }
@@ -145,12 +98,13 @@ del {
   }
 
   .hot {
+    @extend %gray;
+    @extend %mono;
     @extend %unprintable;
-    font-family: 'Monaco', monospace;
-    font-size: 75%;
-    line-height: $em;
-    margin-bottom: 2 * $em;
-    margin-top: 2 * $em;
+    font-size: .9 * $rem;
+    line-height: $rem;
+    margin-bottom: 2 * $rem;
+    margin-top: 2 * $rem;
     text-align: left;
 
     ul {
@@ -158,14 +112,10 @@ del {
       padding-left: 0;
 
       li {
-        border-left: 4 * $px solid darkgreen;
-        color: darkgreen;
-        margin-bottom: $em;
-        padding-left: $em;
-
-        strong {
-          color: firebrick;
-        }
+        border-left: 4 * $px solid $red;
+        color: $gray;
+        margin-bottom: $rem;
+        padding-left: $rem;
       }
     }
   }
@@ -176,20 +126,28 @@ del {
 
     li {
       display: inline;
-      margin-right: .4 * $em;
+      margin-right: .4 * $rem;
+
+      a {
+        text-decoration: none;
+
+        &:hover {
+          color: $red;
+        }
+      }
 
       &.selected {
         a {
-          color: darkgreen;
+          color: $red;
           text-decoration: none;
         }
       }
 
       &.highlighted {
         a {
-          background-color: firebrick;
-          color: white;
-          padding: 0 .3em;
+          background-color: $red;
+          color: $white;
+          padding: 0 .3 * $rem;
           text-decoration: none;
         }
       }
@@ -207,10 +165,10 @@ del {
 
     .google {
       @extend %desktop-only;
-      height: 2.4 * $em;
-      margin-left: 1 * $em;
+      height: 2.4 * $rem;
+      margin-left: 1 * $rem;
       position: absolute;
-      top: .3 * $em;
+      top: .3 * $rem;
       visibility: hidden;
     }
   }
@@ -226,13 +184,14 @@ del {
 
     .photo {
       border-radius: 50%;
+      filter: grayscale(100%);
       height: 80 * $px;
       width: 80 * $px;
     }
 
     .hire {
       @extend %desktop-only;
-      color: darkgreen;
+      color: $gray;
       left: 50%;
       margin-left: 45 * $px;
       position: absolute;
@@ -242,7 +201,7 @@ del {
 
     .sub {
       @extend %desktop-only;
-      color: darkgreen;
+      color: $gray;
       margin-right: 45 * $px;
       position: absolute;
       right: 50%;
@@ -257,7 +216,7 @@ del {
   @extend %small;
   @extend %gray;
   @extend %desktop-only;
-  margin-top: 5 * $em;
+  margin-top: 5 * $rem;
   text-align: center;
 }
 
@@ -271,10 +230,10 @@ fieldset {
 }
 
 .field {
-  @extend %main-font;
+  @extend %serif;
   box-sizing: border-box;
-  font-size: $em;
-  padding: .2 * $em .5 * $em;
+  font-size: $rem;
+  padding: .2 * $rem .5 * $rem;
 }
 
 .field-text {
@@ -286,15 +245,17 @@ fieldset {
 
 b,
 strong {
-  @extend %main-font-bold;
+  color: $red;
+  font-style: normal;
+  font-weight: normal;
 }
 
 h1 {
   @extend %clear;
-  @extend %main-font-bold;
-  font-size: 2 * $em;
-  line-height: 2 * $em;
-  margin-bottom: .5 * $em;
+  @extend %serif;
+  font-size: 2 * $rem;
+  line-height: 2 * $rem;
+  margin-bottom: .5 * $rem;
 
   a {
     text-decoration: none;
@@ -304,24 +265,33 @@ h1 {
 h2,
 h3 {
   @extend %clear;
-  @extend %main-font-bold;
+  @extend %serif;
   position: relative;
-}
-
-h2 {
-  margin-top: 2 * $em;
 
   .link {
     @extend %gray;
     @extend %desktop-only;
-    margin-left: .3 * $em;
+    margin-left: .3 * $rem;
     text-decoration: none;
+    visibility: hidden;
 
     &:hover {
       color: inherit;
       opacity: 1;
     }
+
+    &:focus {
+      visibility: visible;
+    }
   }
+
+  &:hover .link {
+    visibility: visible;
+  }
+}
+
+h2 {
+  margin-top: 2 * $rem;
 }
 
 .subline {
@@ -332,23 +302,15 @@ h2 {
   padding-left: 0;
 
   li {
-    display: inline;
-    margin-right: .5 * $em;
+    display: inline-block;
+    margin-right: .5 * $rem;
     white-space: nowrap;
-
-    &.has-poll {
-      // nothing yet
-    }
-
-    &.tags {
-      // nothing yet
-    }
   }
 }
 
 .front {
-  margin-bottom: 4 * $em;
-  margin-top: 4 * $em;
+  margin-bottom: 4 * $rem;
+  margin-top: 4 * $rem;
 }
 
 .pagination {
@@ -374,56 +336,56 @@ h2 {
 
 sup,
 sub {
-  font-size: .6em;
+  font-size: .6 * $rem;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
 sup {
-  top: -.3em;
+  top: -.3 * $rem;
 }
 
 sub {
-  top: .3em;
+  top: .3 * $rem;
 }
 
 hr {
   @extend %clear;
   border: 0;
-  border-top: 1 * $px solid lightgray;
+  border-top: 1 * $px solid $silver;
   height: 0;
-  margin-top: 2 * $em;
+  margin-top: 2 * $rem;
   text-align: left;
   width: 50%;
 }
 
 .badge {
   float: right;
-  margin-left: 2em;
+  margin-left: 2 * $rem;
   @media all and (max-width: $width) {
     float: none;
-    margin-bottom: $em;
+    margin-bottom: $rem;
     margin-left: 0;
-    margin-top: $em;
+    margin-top: $rem;
   }
 }
 
 blockquote {
-  @extend %main-font-italic;
-  border-left: 3 * $px solid lightgray;
-  margin-left: 1.5 * $em;
-  padding-left: .5 * $em !important;
+  @extend %serif;
+  border-left: 3 * $px solid $silver;
+  margin-left: 1.5 * $rem;
+  padding-left: .5 * $rem !important;
   position: relative;
 
   p::before {
-    @extend %gray;
     @extend %desktop-only;
+    @extend %gray;
     content: 'ˮ';
-    font-size: 2.5 * $em;
-    left: -1.5 * $em;
+    font-size: 2.5 * $rem;
+    left: -1.5 * $rem;
     position: absolute;
-    top: .5 * $em;
+    top: .5 * $rem;
   }
 
   @media all and (max-width: $width) {
@@ -438,15 +400,15 @@ figure {
   position: relative;
 
   figcaption {
-    background-color: $lightgrey;
-    bottom: 1em;
-    color: silver;
-    font-size: .8em;
-    left: .5em;
-    line-height: 1em;
+    background-color: $plate;
+    bottom: $rem;
+    color: $chalk;
+    font-size: .8 * $rem;
+    left: .5 * $rem;
+    line-height: $rem;
     max-width: 90%;
     position: absolute;
-    text-shadow: .2 * $px .2 * $px dimgray;
+    text-shadow: .2 * $px .2 * $px $soot;
   }
 
   figcaption::before {
@@ -455,40 +417,55 @@ figure {
 }
 
 .tagged {
-  margin: $em 0;
+  margin: $rem 0;
+
+  span {
+    display: block;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .tag {
-  background-color: gray;
-  color: white !important;
-  font-family: $code-font;
-  font-size: .8 * $em;
-  margin-right: .2 * $em;
-  padding: 0 .5 * $em;
+  @extend %mono;
+  background-color: $platinum;
+  color: $gray;
+  display: inline-block;
+  font-size: .8 * $rem;
+  line-height: 1.15 * $rem;
+  margin-right: .2 * $rem;
+  padding: 0 .5 * $rem;
   text-decoration: none;
   white-space: nowrap;
 
   img {
     display: inline-block;
-    height: 1em;
-    margin-right: .2em;
-    margin-top: -.25em;
+    height: $rem;
+    margin-right: .2 * $rem;
+    margin-top: -.25 * $rem;
     vertical-align: middle;
   }
 
   &:visited {
-    color: white !important;
+    color: $gray;
   }
 
   &:hover {
-    background-color: black;
+    background-color: $gray;
+    color: $white;
   }
 }
 
 .note {
-  color: gray;
-  font-size: .8 * $em;
-  line-height: $em;
+  color: $gray;
+  font-size: .8 * $rem;
+  line-height: $rem;
   margin-top: 0;
 }
 
@@ -508,18 +485,19 @@ figure {
 
 // see 2015-11-03-chatbot-better-than-ui-for-microservices
 .bullet {
-  @extend %main-font-bold;
-  background-color: white;
+  @extend %serif;
+  background-color: $white;
   border-radius: 50%;
-  color: sandybrown;
+  color: $gray;
   display: inline-block;
-  font-size: .8em;
-  height: 1em;
-  line-height: 1em;
-  padding: .2em;
+  font-size: .8 * $rem;
+  font-weight: bold;
+  height: $rem;
+  line-height: $rem;
+  padding: .2 * $rem;
   text-align: center;
   vertical-align: middle;
-  width: 1em;
+  width: $rem;
 }
 
 table {

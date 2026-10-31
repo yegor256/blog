@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -154,5 +154,5 @@ These opinions might also be helpful:
     by Paul Kretchmer
   * [Discussion Section for Research Papers](https://www.sjsu.edu/writingcenter/docs/handouts/Discussion%20Section%20for%20Research%20Papers.pdf)
     by Rowan Dunton
-  * [Distinguishing between Results and Discussion](https://www.uvm.edu/sites/default/files/Graduate-Writing-Center/GWC%20Guides/Genres/Science_Writing_Results_Discussion.pdf)
+  * Distinguishing between Results and Discussion
     by University of Vermont

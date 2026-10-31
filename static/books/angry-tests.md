@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: static
@@ -24,7 +24,7 @@ style: |
 ---
 
 {: .book-badge}
-{% badge /images/books/angry-tests/cover.png 160 %}
+{% badge /images/books/angry-tests/cover-1.png L https://amzn.to/4czWVkh %}
 
 "Angry Tests" is a book about automated testing. I wrote it in just one month:
 January 2025. It summarizes everything I have to say about unit testing,
@@ -38,5 +38,15 @@ Volume 1:<br/>
 
 <!--more-->
 
+Dec 29, 2024:
+Started to write it.
+
 Apr 16, 2025:
 The first volume was published [on Amazon](https://amzn.to/4czWVkh).
+
+Dec 19, 2025:
+[Started](https://x.com/yegor256/status/2003480458940809490)
+to write the second volume.
+
+Mar 23, 2026:
+The second volume was sent to 20 reviewers.

@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: static
@@ -27,27 +27,31 @@ style: |
     font-weight: bold;
   }
 script: |
-  function count_comments() {
+  function count_comments(left) {
     var total = 0;
+    var pending = 0;
     $('.comment_count').each(
       function() {
         var m = /(\d+) .*/.exec($(this).html());
         if (m) {
           total += parseInt(m[1]);
+        } else if ($(this).html() == 'comments') {
+          pending += 1;
         }
       }
     );
-    var before = $('#total_comments').html();
-    var after = ' (' + total + ' comments total)';
-    $('#total_comments').css('color', 'gray');
-    $('#total_comments').html(after);
-    if (total == 0 || before != after) {
-      setTimeout(count_comments, 1000);
-    } else {
+    $('#total_comments').html(' (' + total + ' comments total)');
+    if (pending == 0 || left == 0) {
       $('#total_comments').css('color', 'inherit');
+    } else {
+      $('#total_comments').css('color', 'gray');
+      setTimeout(function() { count_comments(left - 1); }, 1000);
     }
   }
-  count_comments();
+  document.addEventListener(
+    'DOMContentLoaded',
+    function() { count_comments(30); }
+  );
   function sort_by_comments() {
     sort_by(
       function(x) {
@@ -115,8 +119,3 @@ Sort by:
 <div id="all">
 {{ site.posts | yb_tagged_list }}
 </div>
-
-{% if jekyll.environment == "production" %}
-  <script>var disqus_shortname = 'yegor256';</script>
-  <script id="dsq-count-scr" src="//yegor256.disqus.com/count.js" async="async"></script>
-{% endif %}

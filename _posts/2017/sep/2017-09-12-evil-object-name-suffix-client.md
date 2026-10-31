@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -64,7 +64,7 @@ That's why it's not as maintainable as it should be, for two reasons:
   Since the client is an abstraction of a server, it inevitably has to
   represent the server's _entire_ functionality. When the functionality
   is rather limited there is no issue. Take
-  [`HttpClient`](https://hc.apache.org/httpcomponents-client-ga/httpclient/apidocs/org/apache/http/client/HttpClient.html)
+  [`HttpClient`](https://javadoc.io/doc/org.apache.httpcomponents/httpclient/latest/org/apache/http/client/HttpClient.html)
   from [Apache HttpComponents](https://hc.apache.org/) as an example.
   However, when the server is more complex, the size of the client also
   grows. There are over 160 (!) methods in `AmazonS3Client` at the time of writing, while
@@ -139,7 +139,7 @@ exposes the functionality of real
 [versions](http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html),
 which the AWS S3 can expose.
 
-{% quote The right design would be to replace clients with client-side objects that represent entities of the server side. %}
+{% quote The right design would be to replace clients with client-side objects that represent entities of the server side %}
 
 Of course, we will need a high-level object that somehow represents the
 entire API/server, but it should be small. For example, in the S3 SDK example

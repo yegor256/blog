@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Rultor.com, a Merging Bot"
 date: 2014-07-24
 tags: rultor devops
+place: Amsterdam, Holland
 description: |
   Rultor.com is a bot that talks to you via GitHub
   issue tracking and helps you merge pull requests by
@@ -21,7 +22,7 @@ keywords:
   - continuous delivery pre-flight builds
 ---
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 You get a GitHub pull request. You review it. It looks correct---it's time
 to merge it into `master`. You post a comment in it, asking

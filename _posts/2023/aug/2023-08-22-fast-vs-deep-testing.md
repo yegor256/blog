@@ -1,12 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Fast Tests Help Humans, Deep Tests Help Servers"
 date: 2023-08-22
 place: Kazan, Russia
-tags: testing java
+tags: tests java
 description: |
   Humans should run "fast" tests to catch obvious mistakes, while
   servers should execute "deep" tests to ensure the highest quality.
@@ -110,7 +110,7 @@ programmers. Automated tests, meant to assist coders, turn into a hindrance.
 If a coder has to wait several minutes after every code change to ensure nothing broke,
 frustration ensues. Often, the frustrated coder might remove those slow tests.
 
-{% quote It's impossible to make integration tests faster since they are inherently slow for a reason. %}
+{% quote It's impossible to make integration tests faster since they are inherently slow for a reason %}
 
 It goes without saying that deleting slow tests isn't the solution.
 So, what is? Speeding them up? Not quite. It's almost always challenging,

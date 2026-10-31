@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -177,7 +177,7 @@ in the eighth row and smile back. Sometimes the clicker doesn't work and I switc
 slides [with my feet](https://www.youtube.com/watch?v=Rip_04Bv3Jk). Sometimes
 I just fool around.
 
-{% quote If you know everything, you can't be trusted. %}
+{% quote If you know everything, you can't be trusted %}
 
 **Be Humble**.
 I believe that a really good speaker knows when to say "I don't know" (not too often though).

@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: static
@@ -23,7 +23,7 @@ style: |
 ---
 
 {: .book-badge}
-{% badge /images/books/256-bloghacks/cover.png 160 %}
+{% badge /images/books/256-bloghacks/cover.png L %}
 
 "256 Bloghacks" is a book about blogging. It says everything
 I can say about my blogging experience here, at this blog. I put
@@ -63,7 +63,7 @@ main reviewers/contributors (Wojciech Adam Koszek). I will add more reviews
 to this list once they show up:
 
   * [Trinity Takei](https://www.trinitytakei.io/blog/book_review_256_bloghacks_by_yegor_bugayenko/)
-  * [Wojciech Adam Koszek](https://www.koszek.com/books/2017/01/07/book-blog-hacks-256/)
+  * [Wojciech Adam Koszek](https://www.koszek.com/reading/2017/01/07/book-blog-hacks-256/)
   * [Vojtech Ruzicka](http://vojtechruzicka.com/book-review-256-bloghacks/)
   * [Gareth Rees](https://www.garethrees.co.uk/2020/04/05/book-notes-256-bloghacks/)
 

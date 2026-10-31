@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "Every Build in Its Own Docker Container"
 date: 2014-07-29
 tags: docker rultor devops
+place: Amsterdam, Holland
 description: |
   Rultor.com runs every build in its own Docker container,
   perfectly isolating configurations and making them cacheable and reproducible.
@@ -19,7 +20,7 @@ keywords:
   - unit tests in docker
 ---
 
-{% badge https://doc.rultor.com/images/docker-logo.png 100 https://www.docker.io %}
+{% badge https://doc.rultor.com/images/docker-logo.png M https://www.docker.io %}
 
 [Docker](https://www.docker.io) is a command line tool that
 can run a shell command in a virtual Linux, inside an isolated file system.
@@ -30,7 +31,7 @@ Docker containers. Take this Maven project for example:
 $ sudo docker run -i -t ubuntu mvn clean test
 ```
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 This command will start a new Ubuntu system and execute
 `mvn clean test` inside it. [Rultor.com](https://www.rultor.com), our

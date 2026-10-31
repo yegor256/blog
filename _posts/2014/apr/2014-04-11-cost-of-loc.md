@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "How Much Do You Pay Per&nbsp;Line&nbsp;of&nbsp;Code?"
 date: 2014-04-11
 tags: xdsd management
+place: Amsterdam, Holland
 categories: jcg
 description: |
   This article compares two projects and calculates
@@ -22,7 +23,7 @@ jb_picture:
   caption: Brazil (1985) by Terry Gilliam
 ---
 
-{% badge https://www.xdsd.org/images/logo.svg 100 https://www.xdsd.org %}
+{% badge https://www.xdsd.org/images/logo.svg M https://www.xdsd.org %}
 
 Yes, I know, "line of code" (LoC)
 is a [very wrong metric](http://stackoverflow.com/questions/966800/mythical-man-month-10-lines-per-developer-day-how-close-on-large-projects).
@@ -64,8 +65,6 @@ distributed](https://www.xdsd.org) team of about 15 developers. We didn't have
 any chats or any other informal communications. We discussed everything in
 GitHub issues. The code base was significantly smaller with only about 30k
 lines, of which about 90% was Java and the rest in XML.
-
-{% picture /images/2014/04/shaolin-temple-jet-li.png 0 Shaolin Temple (1982) by Chang Hsin Yen %}
 
 ## Maturity of Development
 
@@ -141,8 +140,6 @@ money-wise, than a co-located team. Again, I can hear you
 saying that "line of code" is not a proper metric. But, come on, $0.13 vs.
 $3.98? Thirty times more expensive?
 
-{% picture /images/2014/04/lebowski-they-did-not-receive-the-money.png 0 The Big Lebowski (1998) by Joel Coen %}
-
 It's not about metrics any more. It's about preventing wasteful man hours and
 the huge waste of money that comes with them?
 
@@ -160,6 +157,5 @@ By the way, this is what people say about their projects:
 
  * $12&ndash;103: [crazyontap.com](https://www.crazyontap.com/topic.php?TopicId=242135)
  * $15&ndash;40: [betterembsw.blogspot.nl](http://betterembsw.blogspot.nl/2010/10/embedded-software-costs-15-40-per-line.html)
- * over $5: [joelonsoftware.com](http://discuss.joelonsoftware.com/default.asp?biz.5.467536.25)
 
 What are your numbers? Please post your comments below.

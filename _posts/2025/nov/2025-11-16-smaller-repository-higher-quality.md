@@ -1,5 +1,5 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
@@ -17,6 +17,7 @@ keywords:
   - github quality
   - quality of software
   - high quality
+book: angry-tests-1 3.49
 image: /images/2025/11/morphine.jpg
 jb_picture:
   caption: Морфий (2008) by Алексей Балабанов

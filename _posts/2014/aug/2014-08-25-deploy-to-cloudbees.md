@@ -1,11 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "How to Deploy to CloudBees, in One Click"
 date: 2014-08-25
 tags: java rultor devops
+place: Amsterdam, Holland
 description: |
   This tutorial explains how a Java web application can be
   deployed to CloudBees in just one click and
@@ -192,7 +193,7 @@ decrypt:
   settings.xml: "repo/settings.xml.asc"
 release:
   script: |
-    mvn versions:set "-DnewVersion=${tag}"
+    mvn -ntp versions:set "-DnewVersion=${tag}"
     git commit -am "${tag}"
     mvn clean deploy --settings /home/r/settings.xml
 ```
@@ -202,7 +203,7 @@ You can compare your file with live Rultor
 
 ## Run It!
 
-{% badge https://doc.rultor.com/images/logo.svg 100 https://www.rultor.com %}
+{% badge https://doc.rultor.com/images/logo.svg M https://www.rultor.com %}
 
 Now it's time to see how it all works. Create a new ticket in the
 GitHub issue tracker, and post something like that into it

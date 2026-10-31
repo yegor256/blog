@@ -1,12 +1,12 @@
 ---
-# SPDX-FileCopyrightText: Copyright (c) 2014-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 # SPDX-License-Identifier: MIT
 
 layout: post
 title: "TDD Misbeliefs"
 date: 2019-07-02
 place: Minsk, Belarus
-tags: testing
+tags: tests
 description: |
   Test-driven development is a very obvious and at the same time
   very unclear territory in modern software development;
