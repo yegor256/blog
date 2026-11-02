@@ -18,11 +18,11 @@ keywords:
   - high quality programming
 ---
 
-<div itemscope="" itemtype="http://schema.org/Blog">
-{% for post in paginator.posts %}
-  {% if post.noindex %}
-  {% else %}
-    <div class="wrapper">
+<div class="wrapper">
+  <div class="blog" itemscope="" itemtype="http://schema.org/Blog">
+  {% for post in paginator.posts %}
+    {% if post.noindex %}
+    {% else %}
       <section class="front" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
         <article>
           <header>
@@ -70,9 +70,9 @@ keywords:
           </p>
         </article>
       </section>
-    </div>
-  {% endif %}
-{% endfor %}
+    {% endif %}
+  {% endfor %}
+  </div>
 </div>
 
 <div class="wrapper">

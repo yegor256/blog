@@ -7,6 +7,7 @@
 @use "sass:color";
 @use 'defs' as *;
 @use 'colors' as *;
+@use 'columns' as *;
 @use 'fonts' as *;
 @use 'placeholders' as *;
 @use 'disqus';
@@ -305,6 +306,14 @@ h2 {
     display: inline-block;
     margin-right: .5 * $rem;
     white-space: nowrap;
+  }
+}
+
+.blog {
+  @include columns using ($count) {
+    column-gap: 2 * $rem;
+    display: grid;
+    grid-template-columns: repeat($count, 1fr);
   }
 }
 
