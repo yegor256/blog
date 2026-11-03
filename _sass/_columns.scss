@@ -1,0 +1,12 @@
+// SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
+// SPDX-License-Identifier: MIT
+
+@use 'defs' as *;
+
+@mixin columns {
+  @each $count in 2, 3, 4 {
+    @media all and (min-width: ($count - 1) * 64 * $rem) {
+      @content ($count);
+    }
+  }
+}
