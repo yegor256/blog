@@ -22,7 +22,7 @@
   }
 
   @include columns using ($count) {
-    width: $count * 32 * $rem;
+    width: $count * $width;
   }
 }
 
