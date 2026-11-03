@@ -320,6 +320,50 @@ h2 {
 .front {
   margin-bottom: 4 * $rem;
   margin-top: 4 * $rem;
+
+  &.x2,
+  &.x3 {
+    display: none;
+  }
+
+  @include columns using ($count) {
+    &.x2 {
+      display: block;
+    }
+
+    @if $count > 2 {
+      &.x3 {
+        display: block;
+      }
+    }
+  }
+}
+
+.series {
+  &.x2,
+  &.x3 {
+    display: none;
+  }
+
+  @include columns using ($count) {
+    &.x1 {
+      display: none;
+    }
+
+    @if $count == 2 {
+      &.x2 {
+        display: block;
+      }
+    } @else {
+      &.x2 {
+        display: none;
+      }
+
+      &.x3 {
+        display: block;
+      }
+    }
+  }
 }
 
 .pagination {

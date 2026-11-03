@@ -17,6 +17,8 @@ txt
 txt/2015/award-2015.txt
 p/5
 p/10/index.html
+p2/2/index.html
+p3/2/index.html
 pdf
 pdf/2014/guard-article.pdf
 fonts
