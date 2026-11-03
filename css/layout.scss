@@ -311,7 +311,7 @@ h2 {
 
 .blog {
   @include columns using ($count) {
-    column-gap: 2 * $rem;
+    column-gap: $gap;
     display: grid;
     grid-template-columns: repeat($count, 1fr);
   }
