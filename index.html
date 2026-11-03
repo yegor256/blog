@@ -20,83 +20,25 @@ keywords:
 
 <div class="wrapper">
   <div class="blog" itemscope="" itemtype="http://schema.org/Blog">
-  {% for post in paginator.posts %}
-    {% if post.noindex %}
-    {% else %}
-      <section class="front" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
-        <article>
-          <header>
-            <h1>
-              <a href="{{ post.url }}">
-                <span itemprop="name headline mainEntityOfPage">{{ post.title }}</span>
-              </a>
-            </h1>
-            <ul class="subline">
-              <li>
-                <time itemprop="datePublished dateModified" datetime="{{ post.date | date_to_xmlschema }}">
-                  {{ post.date | date: "%-d %B %Y" }}
-                </time>
-              </li>
-              <li itemprop="wordCount">
-                {{ post.content | number_of_words | append: ' words' }}
-              </li>
-              <li>
-                {% capture words %}
-                {{ post.content | number_of_words | minus: 180 }}
-                {% endcapture %}
-                {% unless words contains '-' %}
-                {{ words | plus: 180 | divided_by: 180 | append: ' minutes to read' }}
-                {% endunless %}
-              </li>
-              <li>
-                <i class="icon icon-comments"></i>
-                {% assign disqus = post | yb_disqus %}
-                <a href="{{ site.url }}{{ post.url }}#disqus_thread"{% if disqus != '' %} data-disqus-identifier="{{ disqus }}"{% endif %} itemprop="discussionUrl">comments</a>
-              </li>
-              {% if post.chatgpt-translate.model %}
-                <li title="This article is translated to a few languages by ChatGPT">
-                  <i class="icon icon-chatgpt"></i>
-              </li>
-              {% endif %}
-            </ul>
-          </header>
-          <div class="main" itemprop="description">
-            {{ post.excerpt }}
-          </div>
-          <p>
-            <a href="{{ post.url }}" itemprop="url">
-              Continue...
-            </a>
-          </p>
-        </article>
-      </section>
+    {% for post in paginator.posts %}
+      {% include front.html post=post %}
+    {% endfor %}
+    {% if paginator.page == 1 %}
+      {% assign double = paginator.per_page | times: 2 %}
+      {% for post in site.posts offset: paginator.per_page limit: paginator.per_page %}
+        {% include front.html post=post scale="x2" %}
+      {% endfor %}
+      {% for post in site.posts offset: double limit: paginator.per_page %}
+        {% include front.html post=post scale="x3" %}
+      {% endfor %}
     {% endif %}
-  {% endfor %}
   </div>
 </div>
 
-<div class="wrapper">
-  <footer>
-    <div class="pagination">
-      <div class="left">
-        {% if paginator.previous_page %}
-          {% if paginator.previous_page == 1 %}
-            <a href="/"><i class="icon icon-fast-backward"></i></a>
-          {% else %}
-            <a href="/p/{{ paginator.previous_page }}"><i class="icon icon-fast-backward"></i></a>
-          {% endif %}
-        {% else %}
-          <span class="mute"><i class="icon icon-fast-backward"></i></span>
-        {% endif %}
-      </div>
-      page {{ paginator.page }} of {{ paginator.total_pages }}
-      <div class="right">
-        {% if paginator.next_page %}
-          <a href="/p/{{ paginator.next_page }}"><i class="icon icon-fast-forward"></i></a>
-        {% else %}
-          <span class="mute"><i class="icon icon-fast-forward"></i></span>
-        {% endif %}
-      </div>
-    </div>
-  </footer>
-</div>
+{% if paginator.page == 1 %}
+  {% include pagination.html prefix="/p" number=1 total=paginator.total_pages scale="x1" %}
+  {% include pagination.html prefix="/p2" number=1 total=page.series.x2 scale="x2" %}
+  {% include pagination.html prefix="/p3" number=1 total=page.series.x3 scale="x3" %}
+{% else %}
+  {% include pagination.html prefix="/p" number=paginator.page total=paginator.total_pages %}
+{% endif %}
