@@ -4,7 +4,7 @@
 @use 'defs' as *;
 
 @mixin columns {
-  @each $count, $edge in (2: 80, 3: 128, 4: 192) {
+  @each $count, $edge in (2: 96, 3: 144, 4: 192) {
     @media all and (min-width: $edge * $rem) {
       @content ($count);
     }
