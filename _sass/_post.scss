@@ -41,7 +41,7 @@ article {
   }
 }
 
-[itemprop='articleBody'] {
+.columns {
   @include columns using ($count) {
     column-count: $count;
     column-gap: $gap;
