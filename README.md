@@ -39,7 +39,7 @@ docker run -it --rm -v "$(pwd):/b" -p 4000:4000 blog \
 ```
 
 [www.yegor256.com]: https://www.yegor256.com
-[PlantUML]: http://plantuml.com/
+[PlantUML]: https://plantuml.com/
 [Bundler]: https://bundler.io/
 [Ruby]: https://www.ruby-lang.org/en/
 [backup]: https://yegor256.github.io/blog
