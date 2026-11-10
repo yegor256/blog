@@ -32,4 +32,51 @@ We may return to an ancient ambition: people envision the future, while machines
 
 {% jb_picture_body %}
 
-...
+Our brains help us survive.
+We use it to find food, to escape a predator, to chase prey, to find a partner on Tinder, and to order pizza.
+We call it intelligence.
+
+The official history of our civilization teaches us: we know far more than our ancestors.
+They definitely didn't know how to use Tinder.
+Moreover, the speed of knowledge growth is also growing.
+Most of the knowedge is technical --- related to math, physics, chemistry, drugs, materials, algorithms.
+
+A kid must spend a decade in school and then another 4-6 years in a university to master a small part of that knowledge.
+We expect them to grow their intelligence by learning the stuff and solving the problems invented by others.
+We don't expect them all to become mathematicians or programmers.
+We want them to develop their intelligence.
+Because we expect them to be responsible for the resources they inherit from us --- the dying generation.
+
+Now, AI steps in and gives a ten-year-old a tool that solves almost anything a teacher asks them to solve.
+Honestly, I don't know what could motivate kids to study anymore.
+The complexity of knowledge is the primary motivation for study.
+Today, the complexity is literally zero.
+
+What will build the intelligence of a person, if all the answers are available without thinking?
+Techical knowledge, while being mostly useless in their lives, used to develop their skill of judgement.
+Not anymore.
+We may get a generation of morons with very smart calculators in their hands.
+
+Maybe we can make them learn, taking AI away from them?
+People still play chess, even after IBM's Deep Blue.
+Well, give a kid a computer that hints every move and see how interested he will be to stay at the board.
+
+We must give kids something else to motivate learning.
+The problems that aren't finished when an answer appears on a screen.
+How do you persuade people to work together?
+What is worth building?
+Whose interests should come first?
+What consequences are you willing to take responsibility for?
+AI can help us think through these questions.
+It cannot relieve us of the responsibility to decide.
+
+This is where rhetoric, psychology, politics, and management belong.
+At the top of the list I would put philosophy.
+
+Centuries of technological progress pushed these disciplines into the background.
+The respect was given mostly to mathematicians and engineers, who created AI for us.
+Now, we can get back to where ancient civilization started from and make its dream come true.
+People envision the future, while robots help them build it.
+
+Education of the future must prepare people for that.
+Philosophers, your time is coming.
