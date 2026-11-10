@@ -52,6 +52,7 @@ Because we expect them to be responsible for the resources they inherit from us-
 Now, AI steps in and gives a ten-year-old a tool that solves almost anything a teacher asks them to solve.
 Honestly, I don't know what could motivate kids to study anymore.
 The complexity of knowledge is the primary motivation for study.
+Seymour Papert [called][papert] it "hard fun": kids enjoy the work because it is hard, not in spite of it.
 Today, the complexity is literally zero.
 
 What will build the intelligence of a person, if all the answers are available without thinking?
@@ -85,3 +86,4 @@ Philosophers, your time is coming.
 
 [bornmann]: https://arxiv.org/abs/1402.4578
 [nsb]: https://www.ncses.nsf.gov/pubs/nsb20257/publication-output-by-geography-and-scientific-field
+[papert]: https://dailypapert.com/hard-fun/
