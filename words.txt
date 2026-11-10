@@ -17,6 +17,7 @@ above
 above-average
 above-the-market
 abrupt
+abs
 absence
 absent
 absolute
@@ -1065,6 +1066,7 @@ bored
 boredom
 boring
 born
+bornmann
 borrowed
 borrowing
 borrows
@@ -1523,6 +1525,7 @@ cheerleaders
 cheers
 cheetah
 chef
+chemistry
 cherry-picked
 chess
 chevrolet
@@ -2387,6 +2390,7 @@ dablup
 dad
 dagger
 daily
+dailypapert
 damage
 damaged
 damages
@@ -2471,6 +2475,7 @@ debug
 debug-level
 debugging
 dec
+decade
 decades
 december
 decent
@@ -2522,6 +2527,7 @@ deducted
 deem
 deep
 deep-utopia
+deepblue
 deeper
 deeply
 deepmind
@@ -2712,6 +2718,7 @@ devise
 devop
 devops
 devopsdays
+devoted
 devoxx
 DEVs
 dhh
@@ -3112,6 +3119,7 @@ eatcae
 eating
 EB-
 ebay
+ebooks
 EC
 eckel
 eclipse
@@ -3373,6 +3381,7 @@ envelopes
 environment
 environmental
 environments
+envision
 EO
 eo-basics
 eo-core
@@ -4422,6 +4431,7 @@ gunter
 gurus
 guseyn
 gut
+gutenberg
 guts
 guy
 guys
@@ -4489,6 +4499,7 @@ harassment
 harassment-free
 hard
 hard-coded
+hard-fun
 hard-to-resolve
 hard-workers
 hard-working
@@ -4733,6 +4744,7 @@ human-like
 human-readable
 humane
 humanistic
+humanities
 humanity
 humans
 humble
@@ -4767,6 +4779,7 @@ iakunin
 IAM
 ian
 IBM
+IBM's
 ICCQ
 ice
 icloud
@@ -4938,6 +4951,7 @@ increase
 increased
 increases
 increasing
+increasingly
 incredibly
 increment
 incremental
@@ -6600,6 +6614,7 @@ mutation
 mute
 mutko
 mutual
+mutz
 MVC
 mvn
 MVP
@@ -6655,6 +6670,7 @@ nazi
 nazis
 nbsp
 NCC
+ncses
 nd
 NDA
 NDAs
@@ -6844,6 +6860,8 @@ nowak
 nowhere
 NPM
 npmjs
+nsb
+nsf
 NT
 NULL
 nullpointerexception
@@ -6962,6 +6980,7 @@ oldest
 olive
 ology
 olympic
+omniscient
 on
 on-board
 on-boarding
@@ -7233,6 +7252,7 @@ pants
 paper
 paper-writing
 papers
+papert
 papertrail
 paperwork
 parade
@@ -7450,6 +7470,7 @@ PGP
 pgpost
 pgposts
 pgsql
+phaedrus
 phandom
 phantomjs
 phase
@@ -7461,6 +7482,7 @@ phew-ed
 philanthropists
 philippe
 phillip
+philosophers
 philosophical
 philosophically
 philosophy
@@ -7732,6 +7754,7 @@ preamble
 precise
 precisely
 precision
+predator
 predecessors
 predefined
 predict
@@ -8027,6 +8050,7 @@ psycnet
 pub
 public
 publication
+publication-output-by-geography-and-scientific-field
 publications
 publicity
 publicly
@@ -8061,6 +8085,7 @@ pursuant
 pursue
 pursued
 push
+pushed
 pushes
 pushing
 pushkinskijdom
@@ -8522,6 +8547,7 @@ reproduces
 reproducibility
 reproducible
 reproducing
+republic
 repurpose
 reputable
 reputation
@@ -8689,6 +8715,7 @@ reynolds
 rfp
 RGBColor
 rhapsody
+rhetoric
 RHVnNqB
 rhythm
 rich
@@ -8948,6 +8975,7 @@ schoolmate
 schools
 schrijvers
 science
+sciences
 scientific
 scientifically
 scientist
@@ -9094,6 +9122,7 @@ sendgrid
 sendinblue
 sending
 sends
+seneca
 senior
 sennheiser
 sense
@@ -9180,6 +9209,7 @@ sexier
 sexist
 sexual
 sexy
+seymour
 SF
 sh
 shades
@@ -9246,6 +9276,7 @@ shortage
 shorten
 shorter
 shortest
+shortness
 shorts
 shot
 should
@@ -9468,6 +9499,7 @@ sociotech
 sociotechnical
 socket
 sockets
+socrates
 soft
 soft-hearted
 soft-heartedness
@@ -9587,6 +9619,7 @@ spikes
 spin-wait
 spirit
 spiritual
+spite
 splash
 split
 splitting
@@ -10105,6 +10138,7 @@ tea
 teach
 teacher
 teachers
+teaches
 teaching
 teal
 team
@@ -10162,6 +10196,7 @@ temptation
 tempted
 tempting
 ten
+ten-year-old
 tend
 tendency
 tending
@@ -10981,6 +11016,7 @@ viewpoints
 views
 vigilant
 vigilantes
+vii
 villages
 villain
 vim
@@ -11204,6 +11240,7 @@ wiki
 WikiCFP
 wikipedia
 wikis
+wikisource
 wild
 wild-wild
 will
