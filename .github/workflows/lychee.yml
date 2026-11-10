@@ -16,7 +16,25 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
+      - id: changed
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch origin "${GITHUB_BASE_REF}" --depth=1
+          FILES=$(git diff --diff-filter=d --name-only "origin/${GITHUB_BASE_REF}" HEAD | grep -E '\.(md|html)$' | grep -v '^_drafts/' || true)
+          if [ -z "${FILES}" ]; then
+            echo "skip=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "skip=false" >> "${GITHUB_OUTPUT}"
+            echo "${FILES}" > /tmp/lychee_targets.txt
+          fi
       - uses: lycheeverse/lychee-action@v2
+        if: github.event_name == 'pull_request' && steps.changed.outputs.skip != 'true'
+        with:
+          args: --config .github/lychee.toml --files-from /tmp/lychee_targets.txt
+          format: compact
+          jobSummary: false
+      - uses: lycheeverse/lychee-action@v2
+        if: github.event_name != 'pull_request'
         with:
           args: --config .github/lychee.toml '**/*.md' '**/*.html'
           format: compact
