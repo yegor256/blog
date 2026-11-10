@@ -33,13 +33,13 @@ We may return to an ancient ambition: people envision the future, while machines
 {% jb_picture_body %}
 
 Our brains help us survive.
-We use it to find food, to escape a predator, to chase prey, to find a partner on Tinder, and to order pizza.
+We use them to find food, to escape a predator, to chase prey, to find a partner on Tinder, and to order pizza.
 We call it intelligence.
 
 The official history of our civilization teaches us: we know far more than our ancestors.
 They definitely didn't know how to use Tinder.
-Moreover, the speed of knowledge growth is also growing.
-Most of the knowedge is technical --- related to math, physics, chemistry, drugs, materials, algorithms.
+Moreover, the speed of knowledge growth keeps increasing.
+Most of the knowledge is technical --- related to math, physics, chemistry, drugs, materials, algorithms.
 
 A kid must spend a decade in school and then another 4-6 years in a university to master a small part of that knowledge.
 We expect them to grow their intelligence by learning the stuff and solving the problems invented by others.
@@ -53,16 +53,16 @@ The complexity of knowledge is the primary motivation for study.
 Today, the complexity is literally zero.
 
 What will build the intelligence of a person, if all the answers are available without thinking?
-Techical knowledge, while being mostly useless in their lives, used to develop their skill of judgement.
+Technical knowledge, while being mostly useless in their lives, used to develop their skill of judgment.
 Not anymore.
 We may get a generation of morons with very smart calculators in their hands.
 
-Maybe we can make them learn, taking AI away from them?
+Maybe we can make them learn by taking AI away from them?
 People still play chess, even after IBM's Deep Blue.
-Well, give a kid a computer that hints every move and see how interested he will be to stay at the board.
+Well, give a kid a computer that hints every move and see how interested they will be in staying at the board.
 
 We must give kids something else to motivate learning.
-The problems that aren't finished when an answer appears on a screen.
+Problems that aren't finished when an answer appears on a screen.
 How do you persuade people to work together?
 What is worth building?
 Whose interests should come first?
