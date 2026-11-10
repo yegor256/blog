@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
 
+@use 'columns' as *;
 @use 'defs' as *;
 
 %wrapper {
@@ -18,6 +19,10 @@
     padding-left: $rem;
     padding-right: $rem;
     width: 100%;
+  }
+
+  @include columns using ($count) {
+    width: $count * ($width - 4 * $rem) + ($count - 1) * $gap + 4 * $rem;
   }
 }
 

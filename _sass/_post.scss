@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
 
+@use 'columns' as *;
 @use 'defs' as *;
 @use 'colors' as *;
 @use 'fonts' as *;
@@ -36,6 +37,26 @@ article {
       color: $gray;
       margin-top: 4 * $rem;
       padding-left: $rem;
+    }
+  }
+}
+
+.columns {
+  @include columns using ($count) {
+    column-count: $count;
+    column-gap: $gap;
+
+    h2,
+    h3 {
+      break-after: avoid;
+    }
+
+    blockquote,
+    figure,
+    img,
+    pre,
+    table {
+      break-inside: avoid;
     }
   }
 }
