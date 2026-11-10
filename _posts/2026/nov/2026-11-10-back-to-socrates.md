@@ -26,7 +26,7 @@ As civilization grew more complex, education became increasingly devoted to solv
 A child had to spend years studying before we trusted them with meaningful resources.
 AI gives a ten-year-old an Einstein on call---without the years of study.
 But access to answers does not give the kid the judgment to use those capabilities wisely.
-Education must develop that judgment through rhetoric, psychology, politics, and philosophy.
+Education must develop that judgment through rhetoric, psychology, politics, economics, and philosophy.
 We may return to an ancient ambition: people envision the future, while machines build it.
 
 <!--more-->
@@ -74,7 +74,7 @@ What consequences are you willing to take responsibility for?
 AI can help us think through these questions.
 It cannot relieve us of the responsibility to decide.
 
-This is where rhetoric, psychology, politics, and management belong.
+This is where rhetoric, psychology, politics, and economics belong.
 At the top of the list I would put philosophy.
 
 Centuries of technological progress pushed these disciplines into the background.
