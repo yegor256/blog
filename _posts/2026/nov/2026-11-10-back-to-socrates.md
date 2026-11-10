@@ -35,7 +35,7 @@ We may return to an ancient ambition: people envision the future, while machines
 
 Our brains help us survive.
 We use them to find food, to escape a predator, to chase prey, to find a partner on Tinder, and to order pizza.
-We call it intelligence.
+We call this intelligence.
 
 The official history of our civilization teaches us: we know far more than our ancestors.
 They definitely didn't know how to use Tinder.
@@ -47,22 +47,21 @@ Of 3.3 million research papers published in 2023, only 5% were about social scie
 A kid must spend a decade in school and then another 4-6 years in a university to master a small part of that knowledge.
 We expect them to grow their intelligence by learning the stuff and solving the problems invented by others.
 We don't expect them all to become mathematicians or programmers.
-We want them to develop their intelligence.
-Because we expect them to be responsible for the resources they inherit from us---the dying generation.
+But we expect them to be responsible for the resources they inherit from us---the dying generation.
 
 Now, AI steps in and gives a ten-year-old a tool that solves almost anything a teacher asks them to solve.
 Honestly, I don't know what could motivate kids to study anymore.
 The complexity of knowledge is the primary motivation for study.
 Seymour Papert [called][papert] it "hard fun": kids enjoy the work because it is hard, not in spite of it.
-Today, the complexity is literally zero.
+Today, with AI, the perceived complexity is literally zero.
+And we can't take AI away from kids.
 
 What will build the intelligence of a person, if all the answers are available without thinking?
-Technical knowledge, while being mostly useless in their lives, used to develop their skill of judgment.
+Technical knowledge, while being mostly useless in their lives, used to develop their skill of judgment. [cite]
 Not anymore.
 We may get a generation that, as Socrates [warned][phaedrus], "will appear to be omniscient and will generally know nothing."
 
-Maybe we can make them learn by taking AI away from them?
-People still play chess, even after IBM's [Deep Blue][deepblue].
+Some say that people still play chess, even after IBM's [Deep Blue][deepblue].
 Well, give a kid a computer that hints every move and see how interested they will be in staying at the board.
 
 We must give kids something else to motivate learning.
@@ -71,8 +70,7 @@ How do you persuade people to work together?
 What is worth building?
 Whose interests should come first?
 What consequences are you willing to take responsibility for?
-AI can help us think through these questions.
-It cannot relieve us of the responsibility to decide.
+AI can help us think through these questions, but it cannot relieve us of the responsibility to decide.
 
 This is where rhetoric, psychology, politics, and economics belong.
 At the top of the list I would put philosophy.
