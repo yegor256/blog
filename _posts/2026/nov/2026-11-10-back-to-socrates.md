@@ -78,6 +78,7 @@ At the top of the list I would put philosophy.
 Centuries of technological progress pushed these disciplines into the background.
 The respect was given mostly to mathematicians and engineers, who created AI for us.
 Now, we can get back to where ancient civilization started from and make its dream come true.
+As Seneca [said][seneca], those "who take time for philosophy, they alone really live."
 People decide what to build, while robots build it.
 
 Education of the future must prepare people for that.
@@ -88,3 +89,4 @@ Philosophers, your time is coming.
 [nsb]: https://www.ncses.nsf.gov/pubs/nsb20257/publication-output-by-geography-and-scientific-field
 [papert]: https://dailypapert.com/hard-fun/
 [phaedrus]: https://www.gutenberg.org/ebooks/1636
+[seneca]: https://en.wikisource.org/wiki/On_the_shortness_of_life/Chapter_XIV
