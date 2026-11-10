@@ -58,7 +58,7 @@ Today, the complexity is literally zero.
 What will build the intelligence of a person, if all the answers are available without thinking?
 Technical knowledge, while being mostly useless in their lives, used to develop their skill of judgment.
 Not anymore.
-We may get a generation of morons with very smart calculators in their hands.
+We may get a generation that, as Socrates [warned][phaedrus], "will appear to be omniscient and will generally know nothing."
 
 Maybe we can make them learn by taking AI away from them?
 People still play chess, even after IBM's Deep Blue.
@@ -87,3 +87,4 @@ Philosophers, your time is coming.
 [bornmann]: https://arxiv.org/abs/1402.4578
 [nsb]: https://www.ncses.nsf.gov/pubs/nsb20257/publication-output-by-geography-and-scientific-field
 [papert]: https://dailypapert.com/hard-fun/
+[phaedrus]: https://www.gutenberg.org/ebooks/1636
