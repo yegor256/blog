@@ -39,6 +39,7 @@ We call it intelligence.
 The official history of our civilization teaches us: we know far more than our ancestors.
 They definitely didn't know how to use Tinder.
 Moreover, the speed of knowledge growth keeps increasing.
+Scientific output doubles every nine years, [according to][bornmann] Bornmann and Mutz.
 Most of the knowledge is technical---related to math, physics, chemistry, drugs, materials, algorithms.
 Of 3.3 million research papers published in 2023, only 5% were about social sciences, [says][nsb] the U.S. National Science Board.
 
@@ -82,4 +83,5 @@ People envision the future, while robots help them build it.
 Education of the future must prepare people for that.
 Philosophers, your time is coming.
 
+[bornmann]: https://arxiv.org/abs/1402.4578
 [nsb]: https://www.ncses.nsf.gov/pubs/nsb20257/publication-output-by-geography-and-scientific-field
