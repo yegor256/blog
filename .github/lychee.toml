@@ -23,7 +23,7 @@ accept = [200, 202, 301, 302, 307, 401, 403, 429, 500, 501, 502, 503, 504, 520, 
 # accept_timeouts = true
 
 # Increase timeout and add retries to reduce transient failures
-timeout = 20
+timeout = 15
 max_retries = 2
 
 # Reduce concurrency to avoid triggering rate limits
@@ -60,5 +60,6 @@ exclude = [
   "web\\.archive\\.org",
   "rada\\.gov\\.ua",
   "ridus\\.ru",
-  "%7B%7B"
+  "%7B%7B",
+  "%7B%25",
 ]
