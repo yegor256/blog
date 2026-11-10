@@ -8,7 +8,8 @@ date: 2026-11-10
 place: Moscow, Russia
 tags: ai mood philosophy
 description: |
-  ...
+  AI solves technical puzzles for kids, so education must
+  teach judgment through philosophy, rhetoric, and politics.
 keywords:
   - AI philosophy
   - AI education
@@ -61,7 +62,7 @@ Not anymore.
 We may get a generation that, as Socrates [warned][phaedrus], "will appear to be omniscient and will generally know nothing."
 
 Maybe we can make them learn by taking AI away from them?
-People still play chess, even after IBM's Deep Blue.
+People still play chess, even after IBM's [Deep Blue][deepblue].
 Well, give a kid a computer that hints every move and see how interested they will be in staying at the board.
 
 We must give kids something else to motivate learning.
@@ -85,6 +86,7 @@ Education of the future must prepare people for that.
 Philosophers, your time is coming.
 
 [bornmann]: https://arxiv.org/abs/1402.4578
+[deepblue]: https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)
 [nsb]: https://www.ncses.nsf.gov/pubs/nsb20257/publication-output-by-geography-and-scientific-field
 [papert]: https://dailypapert.com/hard-fun/
 [phaedrus]: https://www.gutenberg.org/ebooks/1636
