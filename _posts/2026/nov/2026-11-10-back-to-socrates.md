@@ -39,13 +39,13 @@ We call it intelligence.
 The official history of our civilization teaches us: we know far more than our ancestors.
 They definitely didn't know how to use Tinder.
 Moreover, the speed of knowledge growth keeps increasing.
-Most of the knowledge is technical --- related to math, physics, chemistry, drugs, materials, algorithms.
+Most of the knowledge is technical---related to math, physics, chemistry, drugs, materials, algorithms.
 
 A kid must spend a decade in school and then another 4-6 years in a university to master a small part of that knowledge.
 We expect them to grow their intelligence by learning the stuff and solving the problems invented by others.
 We don't expect them all to become mathematicians or programmers.
 We want them to develop their intelligence.
-Because we expect them to be responsible for the resources they inherit from us --- the dying generation.
+Because we expect them to be responsible for the resources they inherit from us---the dying generation.
 
 Now, AI steps in and gives a ten-year-old a tool that solves almost anything a teacher asks them to solve.
 Honestly, I don't know what could motivate kids to study anymore.
