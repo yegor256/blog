@@ -8,7 +8,7 @@ date: 2026-11-10
 place: Moscow, Russia
 tags: ai mood philosophy
 description: |
-  AI solves technical puzzles for kids, so education must
+  AI solves technical puzzles for kids, so education have no choice but to
   teach judgment through philosophy, rhetoric, and politics.
 keywords:
   - AI philosophy
@@ -26,7 +26,7 @@ As civilization grew more complex, education became increasingly devoted to solv
 A child had to spend years studying before we trusted them with meaningful resources.
 AI gives a ten-year-old an Einstein on call---without the years of study.
 But access to answers does not give the kid the judgment to use those capabilities wisely.
-Education must develop that judgment through rhetoric, psychology, politics, economics, and philosophy.
+Education must develop that judgment through the humanities and social sciences.
 We may return to an ancient ambition: people envision the future, while machines build it.
 
 <!--more-->
@@ -80,7 +80,7 @@ At the top of the list I would put philosophy.
 Centuries of technological progress pushed these disciplines into the background.
 The respect was given mostly to mathematicians and engineers, who created AI for us.
 Now, we can get back to where ancient civilization started from and make its dream come true.
-People envision the future, while robots help them build it.
+People decide what to build, while robots build it.
 
 Education of the future must prepare people for that.
 Philosophers, your time is coming.
