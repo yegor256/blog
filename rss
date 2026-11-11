@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-11-10T16:27:48+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Back to Socrates</title><link href="https://www.yegor256.com/2026/11/10/back-to-socrates.html" rel="alternate" type="text/html" title="Back to Socrates" /><published>2026-11-10T00:00:00+03:00</published><updated>2026-11-10T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/11/10/back-to-socrates</id><content type="html" xml:base="https://www.yegor256.com/2026/11/10/back-to-socrates.html"><![CDATA[<p>The purpose of intelligence is to help us make decisions.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-11-11T08:49:26+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Back to Socrates</title><link href="https://www.yegor256.com/2026/11/10/back-to-socrates.html" rel="alternate" type="text/html" title="Back to Socrates" /><published>2026-11-10T00:00:00+03:00</published><updated>2026-11-10T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/11/10/back-to-socrates</id><content type="html" xml:base="https://www.yegor256.com/2026/11/10/back-to-socrates.html"><![CDATA[<p>The purpose of intelligence is to help us make decisions.
 As civilization grew more complex, education became increasingly devoted to solving technical puzzles.
 A child had to spend years studying before we trusted them with meaningful resources.
 Today, AI gives a ten-year-old an Einstein on call—without the years of study.
@@ -30,7 +30,7 @@ We don’t expect them all to become mathematicians or programmers.
 But we expect them to be responsible for the <strong>resources</strong> they inherit from us—the dying generation.
 Socrates <a href="http://classics.mit.edu/Plato/republic.8.vii.html">believed</a> that those trained in arithmetic “become much quicker than they would otherwise have been.”</p>
 
-<p>Now, AI steps in and gives a ten-year-old a tool that solves almost anything a teacher asks them to solve.
+<p>Now, AI steps in and gives a ten-year-old a tool that solves almost anything a <a href="/2021/12/01/teaching.html">teacher</a> asks them to solve.
 Honestly, I don’t know what could motivate kids to study anymore.
 The <strong>complexity</strong> of knowledge is the primary motivation for study.
 Seymour Papert <a href="https://dailypapert.com/hard-fun/">called</a> it “hard fun”: kids enjoy the work because it is hard, not in spite of it.
@@ -45,7 +45,7 @@ We may get a generation that, as Socrates <a href="https://www.gutenberg.org/ebo
 <p>Some say that people still play chess, even after IBM’s <a href="https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)">Deep Blue</a>.
 Well, give a kid a computer that hints every move and see how interested they will be in staying at the board.</p>
 
-<p>We must give kids something else to motivate learning.
+<p>We must give <a href="/2019/09/10/how-to-motivate-kids-to-code.html">kids</a> something else to <a href="https://x.com/yegor256/status/1467390909025300481">motivate</a> learning.
 Problems that aren’t finished when an answer appears on a screen.
 How do you persuade people to work together?
 What is worth building?
