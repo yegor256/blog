@@ -52,7 +52,7 @@ We don't expect them all to become mathematicians or programmers.
 But we expect them to be responsible for the **resources** they inherit from us---the dying generation.
 Socrates [believed][republic] that those trained in arithmetic "become much quicker than they would otherwise have been."
 
-Now, AI steps in and gives a ten-year-old a tool that solves almost anything a teacher asks them to solve.
+Now, AI steps in and gives a ten-year-old a tool that solves almost anything a [teacher] asks them to solve.
 Honestly, I don't know what could motivate kids to study anymore.
 The **complexity** of knowledge is the primary motivation for study.
 Seymour Papert [called][papert] it "hard fun": kids enjoy the work because it is hard, not in spite of it.
@@ -67,7 +67,7 @@ We may get a generation that, as Socrates [warned][phaedrus], "will appear to be
 Some say that people still play chess, even after IBM's [Deep Blue][deepblue].
 Well, give a kid a computer that hints every move and see how interested they will be in staying at the board.
 
-We must give kids something else to motivate learning.
+We must give [kids] something else to [motivate](https://x.com/yegor256/status/1467390909025300481) learning.
 Problems that aren't finished when an answer appears on a screen.
 How do you persuade people to work together?
 What is worth building?
@@ -94,3 +94,5 @@ Philosophers, your time is coming.
 [phaedrus]: https://www.gutenberg.org/ebooks/1636
 [republic]: http://classics.mit.edu/Plato/republic.8.vii.html
 [seneca]: https://en.wikisource.org/wiki/On_the_shortness_of_life/Chapter_XIV
+[teacher]: {% pst 2021/dec/2021-12-01-teaching %}
+[kids]: {% pst 2019/sep/2019-09-10-how-to-motivate-kids-to-code %}
