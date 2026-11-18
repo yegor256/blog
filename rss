@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-11-11T08:49:26+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Back to Socrates</title><link href="https://www.yegor256.com/2026/11/10/back-to-socrates.html" rel="alternate" type="text/html" title="Back to Socrates" /><published>2026-11-10T00:00:00+03:00</published><updated>2026-11-10T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/11/10/back-to-socrates</id><content type="html" xml:base="https://www.yegor256.com/2026/11/10/back-to-socrates.html"><![CDATA[<p>The purpose of intelligence is to help us make decisions.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-11-18T21:16:13+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Back to Socrates</title><link href="https://www.yegor256.com/2026/11/10/back-to-socrates.html" rel="alternate" type="text/html" title="Back to Socrates" /><published>2026-11-10T00:00:00+03:00</published><updated>2026-11-10T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/11/10/back-to-socrates</id><content type="html" xml:base="https://www.yegor256.com/2026/11/10/back-to-socrates.html"><![CDATA[<p>The purpose of intelligence is to help us make decisions.
 As civilization grew more complex, education became increasingly devoted to solving technical puzzles.
 A child had to spend years studying before we trusted them with meaningful resources.
 Today, AI gives a ten-year-old an Einstein on call—without the years of study.
 But access to answers does not give the kid the judgment to use those capabilities wisely.
 Education must develop that judgment through the humanities and social sciences.
-We may return to an ancient ambition: people envision the future, while machines build it.</p>
+We may return to an ancient ambition: <em>people envision the future</em>, while <em>machines build it</em>.</p>
 
 <!--more-->
 
@@ -187,6 +187,14 @@ He proposed “artificial purpose”—challenges
   designed for us by the intelligence that replaced us.
 Keynes already knew how that ends:
   the people who <strong>had money and no duties</strong>, he wrote, “failed disastrously.”</p>
+
+<aside class="youtube">
+        <a href="https://www.youtube.com/watch?v=GNDkTCtEVOk"><div class="box">
+        <img src="https://i.ytimg.com/vi/GNDkTCtEVOk/mqdefault.jpg" alt="YouTube video #GNDkTCtEVOk" />
+        <div class="play"><i class="icon icon-play"></i></div>
+        </div></a>
+        <div>Бессмертный AI: зачем ты мне, человек?;
+        13 October 2026.</div></aside>
 
 <p>This already happened once, to people with less protection than us.
 From 1999, middle-aged Americans without a degree started dying faster

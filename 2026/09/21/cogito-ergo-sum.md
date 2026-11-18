@@ -124,6 +124,8 @@ He proposed "artificial purpose"---challenges
 Keynes already knew how that ends:
   the people who **had money and no duties**, he wrote, "failed disastrously."
 
+{% youtube GNDkTCtEVOk %}
+
 This already happened once, to people with less protection than us.
 From 1999, middle-aged Americans without a degree started dying faster
   than their parents' generation---the first such reversal in a century.
