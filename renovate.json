@@ -16,6 +16,15 @@
       "matchPackageNames": [
         "ruby/setup-ruby"
       ]
+    },
+    {
+      "enabled": false,
+      "matchDepNames": [
+        "ruby"
+      ],
+      "matchFileNames": [
+        ".github/workflows/deploy.yml"
+      ]
     }
   ],
   "platformAutomerge": false
