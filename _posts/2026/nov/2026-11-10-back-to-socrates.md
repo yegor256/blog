@@ -27,7 +27,7 @@ A child had to spend years studying before we trusted them with meaningful resou
 Today, AI gives a ten-year-old an Einstein on call---without the years of study.
 But access to answers does not give the kid the judgment to use those capabilities wisely.
 Education must develop that judgment through the humanities and social sciences.
-We may return to an ancient ambition: people envision the future, while machines build it.
+We may return to an ancient ambition: _people envision the future_, while _machines build it_.
 
 <!--more-->
 
