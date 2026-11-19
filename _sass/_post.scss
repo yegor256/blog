@@ -118,7 +118,7 @@ article {
   @extend %desktop-only;
   @extend %unprintable;
 
-  border-left: 4 * $px solid $silver;
+  border-left: 2 * $px solid $black;
   float: right;
   font-size: 1.6 * $rem;
   line-height: 1.6 * $rem;
