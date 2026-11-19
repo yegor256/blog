@@ -22,10 +22,6 @@ keywords:
 book: elegant-objects-1 2.6
 social:
   - reddit: https://www.reddit.com/r/programming/comments/2ld05q/proper_objects_should_be_immutable_dont_you_think/
-related:
-  - 2014/dec/2014-12-22-immutable-objects-not-dumb
-  - 2014/dec/2014-12-09-immutable-object-state-and-behavior
-  - 2016/sep/2016-09-07-gradients-of-immutability
 ---
 
 In object-oriented programming, an object is
