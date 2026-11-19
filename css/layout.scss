@@ -448,27 +448,6 @@ blockquote {
   }
 }
 
-figure {
-  margin: 0;
-  position: relative;
-
-  figcaption {
-    background-color: $plate;
-    bottom: $rem;
-    color: $chalk;
-    font-size: .8 * $rem;
-    left: .5 * $rem;
-    line-height: $rem;
-    max-width: 90%;
-    position: absolute;
-    text-shadow: .2 * $px .2 * $px $soot;
-  }
-
-  figcaption::before {
-    content: '© ';
-  }
-}
-
 .tagged {
   margin: $rem 0;
 
@@ -532,10 +511,6 @@ figure {
   }
 }
 
-.plantuml {
-  width: 100%;
-}
-
 // see 2015-11-03-chatbot-better-than-ui-for-microservices
 .bullet {
   @extend %serif;
@@ -557,10 +532,4 @@ table {
   th {
     text-align: left;
   }
-}
-
-.eqtn {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
