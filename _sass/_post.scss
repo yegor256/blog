@@ -68,6 +68,20 @@ figure {
 }
 
 .dinkus {
+  border: none;
+  height: $rem;
+  text-align: center;
+  margin: 2 * $rem auto;
+
+  &::after {
+    content: "* * *";
+    letter-spacing: .25 * $rem;
+    color: $gray;
+    display: inline-block;
+  }
+}
+
+.dinkus {
   margin-top: 1 * $rem;
   text-align: center;
 }
