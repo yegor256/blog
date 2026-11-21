@@ -17,10 +17,6 @@ keywords:
   - object behavior model
   - object attributes
   - immutable object state
-related:
-  - 2014/jun/2014-06-09-objects-should-be-immutable
-  - 2016/sep/2016-09-07-gradients-of-immutability
-  - 2014/dec/2014-12-22-immutable-objects-not-dumb
 social:
   - reddit: https://www.reddit.com/r/programming/comments/2oqi6h/how_an_immutable_object_can_have_state_and/
 image: /images/2014/12/once-upon-a-time-in-the-west.png

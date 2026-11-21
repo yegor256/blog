@@ -7,6 +7,7 @@
 @use "sass:color";
 @use 'defs' as *;
 @use 'colors' as *;
+@use 'columns' as *;
 @use 'fonts' as *;
 @use 'placeholders' as *;
 @use 'disqus';
@@ -308,9 +309,61 @@ h2 {
   }
 }
 
+.blog {
+  @include columns using ($count) {
+    column-gap: $gap;
+    display: grid;
+    grid-template-columns: repeat($count, 1fr);
+  }
+}
+
 .front {
   margin-bottom: 4 * $rem;
   margin-top: 4 * $rem;
+
+  &.x2,
+  &.x3 {
+    display: none;
+  }
+
+  @include columns using ($count) {
+    &.x2 {
+      display: block;
+    }
+
+    @if $count > 2 {
+      &.x3 {
+        display: block;
+      }
+    }
+  }
+}
+
+.series {
+  &.x2,
+  &.x3 {
+    display: none;
+  }
+
+  @include columns using ($count) {
+    &.x1 {
+      display: none;
+    }
+
+    @if $count == 2 {
+      &.x2 {
+        display: block;
+      }
+    } @else {
+      &.x2 {
+        display: none;
+      }
+
+      &.x3 {
+        display: block;
+      }
+    }
+  }
 }
 
 .pagination {
@@ -395,27 +448,6 @@ blockquote {
   }
 }
 
-figure {
-  margin: 0;
-  position: relative;
-
-  figcaption {
-    background-color: $plate;
-    bottom: $rem;
-    color: $chalk;
-    font-size: .8 * $rem;
-    left: .5 * $rem;
-    line-height: $rem;
-    max-width: 90%;
-    position: absolute;
-    text-shadow: .2 * $px .2 * $px $soot;
-  }
-
-  figcaption::before {
-    content: '© ';
-  }
-}
-
 .tagged {
   margin: $rem 0;
 
@@ -479,10 +511,6 @@ figure {
   }
 }
 
-.plantuml {
-  width: 100%;
-}
-
 // see 2015-11-03-chatbot-better-than-ui-for-microservices
 .bullet {
   @extend %serif;
@@ -504,10 +532,4 @@ table {
   th {
     text-align: left;
   }
-}
-
-.eqtn {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }

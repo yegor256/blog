@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+  <div class="blog" itemscope="" itemtype="http://schema.org/Blog">
+    {% for post in site.posts offset: page.offset limit: page.limit %}
+      {% include front.html post=post %}
+    {% endfor %}
+  </div>
+</div>
+
+{% include pagination.html prefix=page.prefix number=page.number total=page.total %}

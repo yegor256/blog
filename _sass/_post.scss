@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
 
+@use 'columns' as *;
 @use 'defs' as *;
 @use 'colors' as *;
 @use 'fonts' as *;
@@ -36,6 +37,71 @@ article {
       color: $gray;
       margin-top: 4 * $rem;
       padding-left: $rem;
+    }
+  }
+}
+
+.plantuml {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+
+  figcaption {
+    background-color: $plate;
+    bottom: $rem;
+    color: $chalk;
+    font-size: .7 * $rem;
+    left: .5 * $rem;
+    line-height: $rem;
+    max-width: 90%;
+    padding: 0.05 * $rem .5 * $rem;
+    position: absolute;
+    text-shadow: .2 * $px .2 * $px $soot;
+  }
+
+  figcaption::before {
+    content: '© ';
+  }
+}
+
+.dinkus {
+  border: none;
+  height: $rem;
+  text-align: center;
+  margin: 2 * $rem auto;
+
+  &::after {
+    content: "* * *";
+    letter-spacing: .25 * $rem;
+    color: $gray;
+    display: inline-block;
+  }
+}
+
+.dinkus {
+  margin-top: 1 * $rem;
+  text-align: center;
+}
+
+.columns {
+  @include columns using ($count) {
+    column-count: $count;
+    column-gap: $gap;
+
+    h2,
+    h3 {
+      break-after: avoid;
+    }
+
+    blockquote,
+    figure,
+    img,
+    pre,
+    table {
+      break-inside: avoid;
     }
   }
 }
@@ -97,7 +163,7 @@ article {
   @extend %desktop-only;
   @extend %unprintable;
 
-  border-left: 4 * $px solid $silver;
+  border-left: 2 * $px solid $black;
   float: right;
   font-size: 1.6 * $rem;
   line-height: 1.6 * $rem;
@@ -127,4 +193,10 @@ article {
   .amazon-button {
     height: 20 * $px;
   }
+}
+
+.eqtn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

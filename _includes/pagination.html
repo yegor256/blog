@@ -1,0 +1,23 @@
+<div class="wrapper series {{ include.scale }}">
+  <footer>
+    <div class="pagination">
+      <div class="left">
+        {% if include.number == 2 %}
+          <a href="/"><i class="icon icon-fast-backward"></i></a>
+        {% elsif include.number > 2 %}
+          <a href="{{ include.prefix }}/{{ include.number | minus: 1 }}"><i class="icon icon-fast-backward"></i></a>
+        {% else %}
+          <span class="mute"><i class="icon icon-fast-backward"></i></span>
+        {% endif %}
+      </div>
+      page {{ include.number }} of {{ include.total }}
+      <div class="right">
+        {% if include.number < include.total %}
+          <a href="{{ include.prefix }}/{{ include.number | plus: 1 }}"><i class="icon icon-fast-forward"></i></a>
+        {% else %}
+          <span class="mute"><i class="icon icon-fast-forward"></i></span>
+        {% endif %}
+      </div>
+    </div>
+  </footer>
+</div>

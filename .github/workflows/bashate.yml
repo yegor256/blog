@@ -23,10 +23,10 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v6
         with:
-          python-version: 3.14
+          python-version: 3.15
       - run: pip install bashate
       - run: |
           readarray -t files < <(find . -name '*.sh')

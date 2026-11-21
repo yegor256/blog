@@ -16,10 +16,6 @@ keywords:
   - immutable objects in java example
   - immutable objects are thread safe
 book: elegant-objects-1 2.6
-related:
-  - 2014/jun/2014-06-09-objects-should-be-immutable
-  - 2014/dec/2014-12-09-immutable-object-state-and-behavior
-  - 2016/sep/2016-09-07-gradients-of-immutability
 image: /images/2014/12/usual-suspects-kobayashi.png
 jb_picture:
   caption: The Usual Suspects (1995) by Bryan Singer
