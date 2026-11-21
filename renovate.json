@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "automerge": true,
   "extends": [
     "config:base"
   ],
@@ -15,6 +16,16 @@
       "matchPackageNames": [
         "ruby/setup-ruby"
       ]
+    },
+    {
+      "enabled": false,
+      "matchDepNames": [
+        "ruby"
+      ],
+      "matchFileNames": [
+        ".github/workflows/deploy.yml"
+      ]
     }
-  ]
+  ],
+  "platformAutomerge": false
 }

@@ -23,10 +23,6 @@ social:
   - reddit: https://www.reddit.com/r/programming/comments/5gtd0k/how_to_pay_programmers_less/
 translated:
   - Russian: http://ebanoe.it/2016/12/08/how-to-pay-devs-less/
-related:
-  - 2016/jan/2016-01-05-how-to-punish-employees
-  - 2015/oct/2015-10-06-how-to-be-good-office-slave
-  - 2015/mar/2015-03-02-team-morale-myths-and-reality
 image: /images/2016/12/ben-hur.jpg
 jb_picture:
   caption: Ben-Hur (1959) by William Wyler

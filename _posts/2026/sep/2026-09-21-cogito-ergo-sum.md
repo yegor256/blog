@@ -69,7 +69,7 @@ Counting managers and technicians alongside professionals, [ISCO] now
 The world looks the way America looked in 1989.
 We **contribute by thinking**, and that is what makes us needed.
 
-{% quote "Made by a human" will stop being a price premium and will become a disclosure. %}
+{% quote "Made by a human" will stop being a price premium and will become a disclosure %}
 
 However, [LLM]s already think better than us, and faster too.
 At the [2025 ICPC World Finals], Gemini [solved] ten of twelve problems.
@@ -118,7 +118,7 @@ None of this is new.
 He was writing about the future.
 Thirty-two years later it is **career advice**.
 
-{% quote A child born today will be obsolete before he finishes school. %}
+{% quote A child born today will be obsolete before he finishes school %}
 
 In May 2026 [Jensen Huang] [told] a graduating class at Carnegie Mellon:
   "Electricians, plumbers, iron workers, technicians,
@@ -143,6 +143,8 @@ He proposed "artificial purpose"---challenges
   designed for us by the intelligence that replaced us.
 Keynes already knew how that ends:
   the people who **had money and no duties**, he wrote, "failed disastrously."
+
+{% youtube GNDkTCtEVOk %}
 
 This already happened once, to people with less protection than us.
 From 1999, middle-aged Americans without a degree started dying faster

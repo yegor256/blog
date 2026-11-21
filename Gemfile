@@ -5,8 +5,6 @@
 
 source 'https://rubygems.org'
 
-# gem 'jekyll-related-posts'
-
 gem 'elapsed', '~>0.2'
 gem 'fastimage', '~>2.4'
 gem 'html-proofer', '~>5.0'
@@ -29,7 +27,7 @@ gem 'liquid', '~>4.0'
 gem 'mail', '~>2.8'
 gem 'nokogiri', '~>1.18'
 gem 'nuggets', '~>1.6'
-gem 'pygments.rb', '~>4.0'
+gem 'pygments.rb', '~>5.0'
 gem 'qbash', '~>0.4'
 gem 'rainbow', '~>3.1'
 gem 'rake', '~>13.2'
