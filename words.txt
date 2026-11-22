@@ -2,6 +2,7 @@ a-
 a-class
 a-ha
 aa
+aad
 aaron
 abandon
 abandoned
@@ -73,6 +74,8 @@ achievement
 achievements
 achieves
 achieving
+acid
+acids
 acknowledge
 acknowledgements
 acknowledgments
@@ -197,6 +200,7 @@ agenda
 agendas
 agent
 agentic
+agentic-misalignment
 agenticmanifesto
 agents
 ages
@@ -241,6 +245,7 @@ ajcclosure
 aka
 akin
 al
+aladdin
 alan
 alchian
 alcohol
@@ -322,7 +327,9 @@ american
 americans
 americas-mental-health-crisis
 AMG
+amino
 amirovaldiar
+ammonia
 amodei
 among
 amongst
@@ -333,6 +340,7 @@ amplify
 amsterdam
 amy
 amy's
+amygdala
 amzn
 an
 anal
@@ -416,6 +424,7 @@ anti-semitic
 anti-social
 anticipated
 antiquated
+antonio
 antwerp
 any
 anybody
@@ -434,6 +443,7 @@ apache-nutch-
 apacherequest
 apart
 apartment
+apatheia
 API
 API-s
 APIs
@@ -541,6 +551,7 @@ arrow
 arrows
 arsenal
 art
+arthur
 article
 articles
 articulate
@@ -764,6 +775,7 @@ backslide
 backstabbing
 backup
 backups
+bacterium
 bad
 bad-mouthing
 badge
@@ -802,6 +814,7 @@ barriers
 barry
 bars
 bart
+baruch
 base
 baseball
 basecamp
@@ -819,6 +832,7 @@ bass
 bastard
 bat
 batchelder
+bateson
 bathroom
 batler
 bauer
@@ -853,10 +867,12 @@ became
 because
 beck
 beck's
+becker
 become
 becomes
 becoming
 bed
+bee
 been
 beer
 beers
@@ -872,6 +888,7 @@ beginning
 begins
 behalf
 behave
+behaved
 behaves
 behavior
 behaviors
@@ -881,6 +898,7 @@ behind-the-scenes
 beijing
 being
 beings
+belding
 belief
 beliefs
 believe
@@ -970,6 +988,7 @@ binding
 bing
 bintray
 biographies
+biologists
 birth
 birthday
 birthdays
@@ -986,6 +1005,7 @@ black-and-white
 blackberry
 blacked
 blacklivesmatter
+blackmailed
 blacks
 blacks'
 blah
@@ -1018,6 +1038,7 @@ blouses
 BLS
 blue
 bluff
+bluntly
 blur
 BMW
 board
@@ -1102,6 +1123,7 @@ bracket
 brackets
 bradley
 brain
+brain's
 brainbench
 brains
 brainstorming
@@ -1153,6 +1175,7 @@ broke
 broken
 brokers
 brother
+brothers
 brought
 browse
 browseable
@@ -1335,8 +1358,10 @@ caption
 capture
 captured
 car
+carbon
 carbonara
 card
+cardboard
 cards
 care
 career
@@ -1380,6 +1405,7 @@ catalina
 catalog
 catalogs
 catalysts
+catanzaro
 catastrophic
 catch
 catcher
@@ -1414,6 +1440,7 @@ celebrate
 celebrating
 celebrations
 cell
+cells
 cement
 cent
 center
@@ -1526,10 +1553,12 @@ cheers
 cheetah
 chef
 chemistry
+chemotaxis
 cherry-picked
 chess
 chevrolet
 chew
+chick
 chicken
 chickened
 chicks
@@ -1560,6 +1589,7 @@ chronologia
 chronological
 chunk
 CI
+cialdini
 cinema
 cinemas
 circle
@@ -1735,6 +1765,7 @@ codinghorror
 coen
 coffee
 cog
+cogito
 cognitive
 cogs
 coherent
@@ -1747,6 +1778,7 @@ coined
 coinmama
 cola
 cold
+coli
 collaborate
 collaboration
 collaborative
@@ -2226,6 +2258,7 @@ coursework
 court
 courteous
 courtesy
+cousins
 cover
 coverage
 covered
@@ -2245,6 +2278,7 @@ cqfn
 CQS
 craft
 craftsmanship
+craig
 craigslist
 crap
 crash
@@ -2395,6 +2429,7 @@ damage
 damaged
 damages
 damaging
+damasio
 damn
 damon
 dance
@@ -2435,6 +2470,7 @@ dave
 dave's
 david
 davvd
+dawkins
 day
 day-offs
 day-to-day
@@ -2529,6 +2565,7 @@ deep
 deep-utopia
 deepblue
 deeper
+deepest
 deeply
 deepmind
 deepseek
@@ -2614,6 +2651,7 @@ denominators
 dent
 dentists
 deny
+denys
 department
 depend
 dependable
@@ -2634,12 +2672,14 @@ deploys
 depressed
 depressing
 depression
+depressive
 deps
 derivative
 derive
 derived
 deriving
 descendants
+descent
 describe
 described
 describes
@@ -2777,6 +2817,7 @@ diminishes
 diminishing
 dinislam
 dinner
+dioxide
 diplomacy
 diplomas
 diplomat
@@ -3049,6 +3090,7 @@ drop
 dropbox
 dropped
 drops
+drowning
 druc
 drucker
 drugs
@@ -3069,6 +3111,7 @@ dull
 dumb
 dumber
 dummies
+dunbar
 dunton
 duplicate
 duplicates
@@ -3117,6 +3160,7 @@ easychair
 eat
 eatcae
 eating
+eats
 EB-
 ebay
 ebooks
@@ -3172,6 +3216,7 @@ efficiency
 efficient
 effort
 efforts
+egg
 ego
 egoism
 egoistic
@@ -3425,6 +3470,7 @@ escalated
 escalates
 escape
 escapes
+escherichia
 escort
 ESEC
 ESLint
@@ -3458,6 +3504,7 @@ europe
 european
 euros
 eurosys
+eva
 evaluate
 evaluates
 evaluating
@@ -3486,6 +3533,7 @@ evidence
 evil
 evils
 evolution
+evolutionarily
 evolved
 ex
 exact
@@ -3580,6 +3628,7 @@ explicit
 explicitly
 explicitly-defined
 explicitness
+explode
 exploit
 exploiting
 exploratory
@@ -3735,6 +3784,7 @@ feelings
 feels
 fees
 feet
+feinstein
 feline
 fell
 fellahi-ali
@@ -3870,6 +3920,7 @@ flags
 flagship
 flaky
 flanagan
+flask
 flat
 flatter
 flattering
@@ -3888,6 +3939,7 @@ flexible
 flies
 flight
 flip
+flips
 flirt
 flirtation
 flirting
@@ -4062,6 +4114,7 @@ freely
 freeman
 freemarker
 freer
+freezes
 freire
 french
 frequency
@@ -4125,6 +4178,7 @@ funding
 funds
 funnier
 funny
+fur
 furniture
 further
 furthermore
@@ -4183,6 +4237,7 @@ gemini-achieves-gold-medal-level-at-the-international-collegiate-programming-con
 gemspec
 gender
 genderless
+gene
 general
 generalize
 generally
@@ -4199,9 +4254,12 @@ generator
 generators
 generic
 generics
+generosity
 generous
+genes
 genetically
 geneva
+genie
 genius
 geniuses
 gentle
@@ -4270,6 +4328,7 @@ global-developer-population-trends-
 globally
 globe
 glogin
+glory
 glossaries
 glossary
 glow
@@ -4327,9 +4386,11 @@ government
 GPG
 GPL
 grab
+grabs
 gracefully
 grade
 grades
+gradient
 gradients
 grading
 gradle
@@ -4346,6 +4407,7 @@ grammarly
 grammatical
 grandchildren
 grandma
+grandparents
 grant
 graph
 graphic
@@ -4451,6 +4513,8 @@ hair
 haircut
 hairdresser
 hairs
+HAL
+haldane
 half
 half-a-house
 half-a-year-old
@@ -4467,6 +4531,7 @@ hallucinating
 halt
 hamburgers
 hamcrest
+hamilton
 hammer
 hand
 hand-washing
@@ -4527,6 +4592,8 @@ hasnext
 hassle
 hassle-free
 hasXPath
+hatch
+hatches
 hate
 hated
 haters
@@ -4535,6 +4602,8 @@ hating
 have
 haven't
 having
+hawk
+hawk-shaped
 hazardous
 HBR
 HD
@@ -4594,6 +4663,7 @@ heritage
 hero
 hero-driven
 heroes
+heroism
 heroku
 herself
 hesitant
@@ -4649,6 +4719,7 @@ hitter
 hl
 HN
 hoare
+hobbes
 hobbies
 hobby
 hobbyists
@@ -4766,6 +4837,7 @@ hurtful
 hurting
 hurts
 hybrid
+hydrogen
 hyperlinear
 hypotheses
 hypothesis
@@ -4845,6 +4917,7 @@ imaginary
 imagination
 imaginative
 imagine
+imagined
 imbalance
 imed
 imitate
@@ -4856,6 +4929,7 @@ immediately
 immigrant-friendly
 immigrants
 immortal
+immortality
 immunity
 immutability
 immutable
@@ -5030,6 +5104,7 @@ infringement
 ingredient
 ingredients
 inhabitants
+inhaled
 inherently
 inherit
 inheritance
@@ -5207,6 +5282,7 @@ introductory
 intros
 introspection
 introverts
+intruder
 intuition
 intuitive
 invalid
@@ -5312,6 +5388,7 @@ iterative
 iterator
 iterators
 iterm
+iteroparity
 itmusings
 its
 itself
@@ -5319,6 +5396,7 @@ iu
 IV
 ivan
 jack
+jackson
 jacob
 jacuzzi
 jaguar
@@ -5351,6 +5429,7 @@ javascript's
 javax
 javazone
 javdoc
+jaws
 JAX-RS
 JAX-WS
 JAXB
@@ -5434,11 +5513,13 @@ joiner
 joining
 joins
 joke
+joked
 joker
 jokes
 joking
 joKX
 jon
+jonas
 jones
 jong-un
 joost
@@ -5530,6 +5611,7 @@ keep
 keepers
 keeping
 keeps
+kelly
 kempf
 ken
 kent
@@ -5552,6 +5634,7 @@ kicked
 kicks
 kiczkowiak
 kid
+kid's
 kidding
 kids
 kildall
@@ -5562,6 +5645,7 @@ killers
 killing
 kills
 kilograms
+kilometers
 kilos
 kim
 kimmel
@@ -5573,6 +5657,7 @@ kinds
 king
 kingdom
 kings
+kingson
 kirkman
 kiss
 kissed
@@ -5595,6 +5680,7 @@ knuth
 kolbin
 kolluru
 kolorz-frontend
+konrad
 korean
 kotlin
 KPIs
@@ -5692,6 +5778,7 @@ laws
 lawsuit
 lawyer
 lawyers
+lay
 layer
 layering
 layers
@@ -5827,6 +5914,7 @@ linus
 linux
 lions
 liquibase
+liquid
 liskov
 LISP-syntax
 list
@@ -5920,6 +6008,7 @@ loops
 loose
 loosely
 lopes
+lorenz
 lose
 lose-lose
 loser
@@ -6134,6 +6223,7 @@ math
 mathematician
 mathematicians
 MathML
+mating
 matrix
 matt
 matte
@@ -6215,6 +6305,7 @@ meets
 meetup
 meetups
 melina
+melissa
 mellon
 melt
 member
@@ -6272,6 +6363,7 @@ META-INF
 metal
 metaphor
 metaphors
+methane
 method
 method-size
 methodlogger
@@ -6457,6 +6549,7 @@ modifying
 modularity
 module
 modules
+molecules
 mom
 mom's
 moment
@@ -6516,6 +6609,7 @@ moron
 moronic
 morons
 morris
+mortal
 moscow
 moscowstate
 moss
@@ -6702,6 +6796,7 @@ negotiator
 neighbors
 neiry
 neither
+neocapritermes
 neolurk
 nerves
 nervous
@@ -6714,6 +6809,7 @@ network
 networking
 networks
 neumann
+neurons
 neutral
 neutralize
 never
@@ -6724,6 +6820,7 @@ nevertheless
 new
 newbie
 newbies
+newborn
 newcomer
 newcomers
 newer
@@ -6754,6 +6851,8 @@ nightmare
 nightmares
 nights
 niklas
+niko
+nikolaas
 nil
 nine
 nine-to-five
@@ -6762,6 +6861,7 @@ nines
 ninety-nine
 nitpicker
 nl
+nn
 no
 no-guests
 no-management
@@ -6816,6 +6916,7 @@ non-tech
 non-traditional
 none
 nonetheless
+nonfiction
 nonsense
 nonstop
 nope
@@ -6851,6 +6952,7 @@ noun
 nouns
 nov
 novel
+novels
 novelty
 november
 novices
@@ -7030,6 +7132,7 @@ open-minded
 open-mindedness
 open-source
 OpenAI
+OpenAI's
 opened
 opener
 opening
@@ -7211,6 +7314,7 @@ owning
 owns
 paas
 pace
+pacific
 pacifistic
 pacino
 pack
@@ -7242,9 +7346,12 @@ pairs
 pakistan
 palandr
 palette
+palisade
+palisaderesearch
 palo
 panel
 panic
+panicked
 panov
 pantone
 pantonecolor
@@ -7336,6 +7443,7 @@ paths
 pathtemplatetest
 patience
 patient
+patients
 patreon
 patrick
 patriot
@@ -7383,6 +7491,7 @@ peasants
 pedagogy
 pedal
 pedantically
+pee
 peer
 peers
 peet's
@@ -7410,6 +7519,7 @@ pepsico
 per
 perceive
 perceived
+perceives
 percent
 percentage
 perception
@@ -7482,6 +7592,7 @@ phew-ed
 philanthropists
 philippe
 phillip
+philosopher
 philosophers
 philosophical
 philosophically
@@ -7623,6 +7734,7 @@ PNG
 PO
 pocket
 podcast
+poem
 poetry
 point
 pointer
@@ -7662,6 +7774,7 @@ pont
 ponzi
 POO
 pool
+poop
 poor
 poor-quality
 poorly
@@ -7802,9 +7915,11 @@ presenteeism
 presenter
 presenting
 presents
+preserve
 president
 presidents
 press
+pressed
 pressman
 pressure
 prestructor
@@ -7931,6 +8046,7 @@ profit
 profitable
 progam
 program
+programmed
 programmer
 programmer's
 programmers
@@ -8042,6 +8158,7 @@ psfacebook
 psfake
 PSGEjv
 pslogout
+psychiatrist
 psychological
 psychologically
 psychologists
@@ -8061,6 +8178,7 @@ publishes
 publishing
 pubring
 pubs
+pulitzer
 pull
 pulling
 pulls
@@ -8342,6 +8460,7 @@ recursive
 red
 red-bead
 red-green-refactor
+redback
 reddit
 redefine
 redesign
@@ -8379,6 +8498,7 @@ reflection
 reflection-discoverable
 reflective
 reflects
+reflexes
 reformat
 refreshment
 refrigerator
@@ -8440,6 +8560,7 @@ relationship
 relationships
 relative
 relatively
+relatives
 relax
 relaxed
 relaxing
@@ -8709,6 +8830,7 @@ rewards
 rework
 rewrite
 rewritten
+rewrote
 rex
 ReXSL
 reynolds
@@ -8742,6 +8864,7 @@ rising
 risk
 risk-driven
 risk-taking
+risking
 risks
 risky
 rita
@@ -8757,6 +8880,7 @@ rob
 robbery
 robbing
 robert
+robin
 robot
 robots
 robson
@@ -8811,6 +8935,7 @@ RQs
 rquser
 rs
 rsa
+rsbl
 rshtml
 rsk
 rspage
@@ -8830,6 +8955,7 @@ rubensson
 rubocop
 rubocop-elegant
 rubocop-hq
+rubs
 ruby
 ruby's
 rubygems
@@ -8881,6 +9007,7 @@ sacrificed
 sad
 sadistic
 sadly
+sadness
 sadowski
 safari
 safe
@@ -8894,6 +9021,7 @@ salary
 sale
 sales
 sally
+salmon
 salt
 sam
 same
@@ -8973,6 +9101,7 @@ school
 school's
 schoolmate
 schools
+schopenhauer
 schrijvers
 science
 sciences
@@ -9013,6 +9142,7 @@ SDK
 SDK-s
 SDKs
 SE
+sea
 seamless
 sean
 search
@@ -9105,6 +9235,7 @@ sem
 semann
 semantics
 semaphoreapp
+semelparity
 semenyuk
 semi-automatically
 semi-historical
@@ -9197,6 +9328,7 @@ setURL
 seven
 seventeen
 seventh
+seventy
 several
 severe
 severely
@@ -9242,6 +9374,7 @@ shell
 shellenbarger
 shells
 shelly
+sherman
 shield
 shielding
 shift
@@ -9289,12 +9422,14 @@ showcase
 showed
 showing
 showman
+shown
 shows
 shrinks
 shrug
 shrugs
 shut
 shutdown
+shutdown-resistance
 shuts
 shutting
 shy
@@ -9320,6 +9455,7 @@ silas
 silence
 silent
 silently
+silhouettes
 silicon
 siliconvalley
 silly
@@ -9474,6 +9610,7 @@ SMore-Napi
 SMTP
 sn-endpoints
 snake
+snakes
 Snap-CI
 snapchat
 snapshot
@@ -9576,8 +9713,10 @@ span
 spare
 sparingly
 spark
+sparks
 SPAs
 spawn
+spawns
 speak
 speaker
 speaker's
@@ -9614,13 +9753,18 @@ spend
 spending
 spends
 spent
+sperm
 sphere
+spider
+spiders
 spikes
 spin-wait
+spinoza
 spirit
 spiritual
 spite
 splash
+splashing
 split
 splitting
 spock
@@ -9663,6 +9807,8 @@ sqlarticle
 SQLite
 square
 squeeze
+squirrel
+squirrels
 src
 SRP
 SRS
@@ -9712,6 +9858,7 @@ stands
 standup
 standups
 stanford
+stanley
 stannard
 stapler
 star
@@ -9780,11 +9927,15 @@ stifling
 stigma
 still
 stimulated
+sting
+stings
 stink
 stlogged
 stock
 stockholm
 stocks
+stoic
+stoicism
 stole
 stolen
 stop
@@ -9855,6 +10006,7 @@ structuring
 struggle
 stsender
 stsubject
+stuart
 stubborn
 stubbornness
 stubs
@@ -9947,6 +10099,7 @@ sufficient
 sufficiently
 suffix
 suffixes
+suffocation
 sugar
 suggest
 suggested
@@ -9954,6 +10107,7 @@ suggesting
 suggestion
 suggestions
 suggests
+suicidal
 suicide
 suit
 suitable
@@ -10039,6 +10193,7 @@ sweet
 swift
 swim
 swimming
+swims
 switch
 switched
 switching
@@ -10050,6 +10205,8 @@ sympathy
 symphony
 symptom
 symptoms
+synapse
+synapses
 sync
 syncem
 synchronization
@@ -10111,6 +10268,7 @@ tandem
 tangible
 tangled
 tap
+taracua
 target
 targets
 TAs
@@ -10214,6 +10372,7 @@ terminates
 terminating
 termination
 terminology
+termite
 terms
 terrain
 terrible
@@ -10221,6 +10380,7 @@ terribly
 terrific
 territories
 territory
+terror
 terrorism
 terrorists
 tesla
@@ -10389,6 +10549,7 @@ timeout
 times
 timescale
 timing
+tinbergen
 tinder
 tiniest
 tiny
@@ -10427,6 +10588,7 @@ tolerate
 tolist
 toll-free
 tom
+tomato
 tomcat
 tomes
 TOML
@@ -10505,6 +10667,7 @@ trained
 trainer
 training
 trainings
+trains
 trainspotting
 trait
 traitors
@@ -10566,6 +10729,7 @@ tricks
 tricky
 tried
 tries
+trifonov
 trigger
 triggered
 triggering
@@ -10621,6 +10785,7 @@ turned
 turning
 turnover
 turns
+turtle
 tutorial
 tutorials
 tuytschaevers
@@ -10855,11 +11020,13 @@ upper
 upsets
 upsetting
 upside
+upstream
 uptime
 upvote
 upvotes
 upwork
 urauskas
+urey
 urge
 urgency
 urgent
@@ -10959,6 +11126,7 @@ vehicles
 veil
 velocity
 vendor
+venter
 ventura
 venture
 ventures
@@ -11091,6 +11259,7 @@ waitress
 waits
 walk
 walking
+walks
 wall
 wallet
 walls
@@ -11122,6 +11291,7 @@ watching
 water
 waterfall
 watson
+wavelength
 way
 ways
 WBS
@@ -11230,6 +11400,7 @@ whose
 why
 wide
 wider
+widows
 width
 wiegers
 wield
@@ -11457,6 +11628,7 @@ yuxin
 yxeNH
 zache
 zalando
+zapped
 zarathustra
 ZCE
 zdo
@@ -11494,4 +11666,5 @@ zoom
 zuckerberg
 zuckerberg's
 zurich
+zygote
 zykov

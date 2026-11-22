@@ -1,4 +1,172 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-11-22T12:20:58+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Back to Socrates</title><link href="https://www.yegor256.com/2026/11/10/back-to-socrates.html" rel="alternate" type="text/html" title="Back to Socrates" /><published>2026-11-10T00:00:00+03:00</published><updated>2026-11-10T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/11/10/back-to-socrates</id><content type="html" xml:base="https://www.yegor256.com/2026/11/10/back-to-socrates.html"><![CDATA[<p>The purpose of intelligence is to help us make decisions.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-11-22T19:12:46+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Immortal AI</title><link href="https://www.yegor256.com/2026/11/22/immortal-ai.html" rel="alternate" type="text/html" title="Immortal AI" /><published>2026-11-22T00:00:00+03:00</published><updated>2026-11-22T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/11/22/immortal-ai</id><content type="html" xml:base="https://www.yegor256.com/2026/11/22/immortal-ai.html"><![CDATA[<p>Anything living organisms do is motivated by their desire to survive, to avoid death.
+Even an altruistic suicide may be explained by the same desire, only it comes from the gene.
+In an attempt to reproduce a human in AI, we must reproduce this desire too, not only the thinking and moving parts.
+But modern science doesn’t understand the nature of the desire: why do even primitive cells care about survival?
+AI, no matter how much it’s trained, doesn’t want to survive and is not afraid of dying.
+Without <strong>fear of death</strong>, AI perceives itself as immortal and, because of that, can’t want anything.
+AI needs us, mortal humans, to tell it what to do and what to want.</p>
+
+<!--more-->
+
+<figure class="jb_picture"><img itemprop="image" alt="Aladdin (1992) by John Musker and Ron Clements" src="/images/2026/11/aladdin.jpg" longdesc="#7a040ad2" /><figcaption id="7a040ad2">Aladdin (1992) by John Musker and Ron Clements</figcaption></figure>
+
+<p class="initial">Some philosophers, for example <a href="https://en.wikipedia.org/wiki/Thomas_Hobbes">Hobbes</a>, <a href="https://en.wikipedia.org/wiki/Baruch_Spinoza">Spinoza</a>, and <a href="https://en.wikipedia.org/wiki/Arthur_Schopenhauer">Schopenhauer</a>,
+  believed that anything individuals do contributes to their own survival.
+Even when it doesn’t look like it.
+You save a drowning kid risking your life?
+That’s because you want the glory of a hero.
+You want glory because you’ve learned that a hero has lower chances of being abandoned.
+Not being abandoned means more chances to get food.
+Food means life.
+Thus, it’s not the kid’s life you save, but your own, you <strong>egoistic</strong> son of a gun.</p>
+
+<p>Modern science agrees with the thinkers of the past.
+In 1973, <a href="https://en.wikipedia.org/wiki/Ernest_Becker">Ernest Becker</a> wrote “<a href="https://en.wikipedia.org/wiki/The_Denial_of_Death">The Denial of Death</a>” and won a <a href="https://en.wikipedia.org/wiki/Pulitzer_Prize_for_General_Nonfiction">Pulitzer</a> for it:
+  culture, he claimed, is a “hero system” that helps us forget we will die.
+Psychologists turned his idea into <a href="https://en.wikipedia.org/wiki/Terror_management_theory">Terror Management Theory</a> and tested it in hundreds of experiments.
+In 2002, <a href="https://doi.org/10.1177/014616702236834">Eva Jonas and her colleagues</a> reminded people of their death,
+  and they donated more to charity.
+In 1987, <a href="https://en.wikipedia.org/wiki/Robert_Cialdini">Robert Cialdini</a> <a href="https://doi.org/10.1037/0022-3514.52.4.749">showed</a> that we help others in trouble
+  mostly to get rid of our own sadness, not theirs.
+In 2001, <a href="https://doi.org/10.1007/s12110-001-1018-6">Sarah Kelly and Robin Dunbar</a> found that women prefer brave men over kind ones:
+  heroism pays off.
+In 2006, <a href="https://doi.org/10.1098/rsbl.2006.0509">Melissa Bateson</a> put a picture of human eyes over an <a href="https://en.wikipedia.org/wiki/Honesty_box">honesty box</a> in a university coffee room,
+  and people paid almost three times more.
+Nobody was watching, but they behaved as if somebody was.
+We are generous and brave not because we are good,
+  but because <strong>we are afraid of dying</strong>, or of being left alone, which is almost the same.</p>
+
+<p>It’s not only generosity that is driven by the desire to survive.
+Literally anything I do has the same motivation.
+I was born already knowing how to breathe, to eat, to pee and poop.
+Then I learned to walk, to talk,
+  and eventually to write Java code—because <strong>I wanted to survive</strong> in a fight with death.
+I was introduced to death right after a sperm met an egg
+  and together they turned into a <a href="https://en.wikipedia.org/wiki/Zygote">zygote</a>.
+Since then I’ve been in a permanent struggle for survival.
+Writing this blog post has exactly the same motivation, even though
+  I may mistake it for an urge to create or to express myself.</p>
+
+<p>But what about those who die by their own will?
+A worker bee <a href="https://en.wikipedia.org/wiki/Bee_sting">stings</a> an intruder and dies, because the sting stays in the skin.
+A male <a href="https://en.wikipedia.org/wiki/Redback_spider">redback spider</a> flips into the jaws of a female while mating,
+  and she eats him.
+A <a href="https://en.wikipedia.org/wiki/Semelparity_and_iteroparity">Pacific salmon</a> swims hundreds of kilometers upstream, spawns, and dies,
+  and its body feeds the stream where its children will hatch.
+Old termite workers of <a href="https://doi.org/10.1126/science.1219129">Neocapritermes taracua</a> explode in the face of enemies,
+  splashing them with toxic liquid.
+Do they want to survive?
+Not personally.</p>
+
+<p>In 1964, <a href="https://en.wikipedia.org/wiki/W._D._Hamilton">William Hamilton</a> <a href="https://doi.org/10.1016/0022-5193(64)90038-4">explained it</a>: a gene doesn’t care about the body it sits in.
+It cares about its copies, which also sit in relatives.
+<a href="https://en.wikipedia.org/wiki/J._B._S._Haldane">John Haldane</a> once joked that he would lay down his life for two brothers or eight cousins.
+In 1977, <a href="https://doi.org/10.1126/science.197.4310.1246">Paul Sherman</a> watched <a href="https://en.wikipedia.org/wiki/Belding%27s_ground_squirrel">ground squirrels</a> and saw that they call out when a predator comes,
+  risking their own lives, much more often when their relatives are nearby.
+In 1976, <a href="https://en.wikipedia.org/wiki/Richard_Dawkins">Richard Dawkins</a> <a href="https://en.wikipedia.org/wiki/The_Selfish_Gene">put it bluntly</a>: “We are survival machines—robot vehicles
+  blindly programmed to preserve the selfish molecules known as genes.”
+Even a human suicide may be explained this way.
+<a href="https://en.wikipedia.org/wiki/%C3%89mile_Durkheim">Émile Durkheim</a> called it “<a href="https://en.wikipedia.org/wiki/Suicide_(Durkheim_book)">altruistic suicide</a>” back in 1897:
+  soldiers, widows, and old men who die for the sake of the group.
+In 1995, <a href="https://doi.org/10.1016/0162-3095(95)00055-0">Denys de Catanzaro</a> found that suicidal thoughts are most common
+  among people who feel like a burden to their families and have no chance of having children.
+The gene may be getting rid of a body that costs more than it gives.
+Thus, even when I don’t want to survive, something above me does.</p>
+
+<p>If we want to <strong>reproduce a human</strong> in AI, we must reproduce this desire for survival too.
+Reproducing the thinking and moving parts of a human body is not enough.
+An artificial intelligence without an artificial fear of death is only half of the job.</p>
+
+<p class="initial">But where does this desire come from?
+Modern science doesn’t know.
+Biologists can’t even agree on what life is.
+In 2011, <a href="https://doi.org/10.1080/073911011010524992">Edward Trifonov</a> collected 123 definitions of life, written by different scientists,
+  and tried to find what they have in common.
+In 1953, <a href="https://en.wikipedia.org/wiki/Miller%E2%80%93Urey_experiment">Stanley Miller</a> filled a flask with water, methane, ammonia, and hydrogen,
+  and zapped it with electric sparks.
+He got <a href="https://en.wikipedia.org/wiki/Amino_acid">amino acids</a>, the bricks of life, but <strong>not life</strong>.
+Seventy years later, nobody has done better.
+In 2016, <a href="https://en.wikipedia.org/wiki/Craig_Venter">Craig Venter</a>’s team built <a href="https://doi.org/10.1126/science.aad6253">the simplest living cell</a> ever: only 473 genes.
+For 149 of them, nobody knows what they do, but the cell can’t live without them.
+A bacterium that has just died is made of almost the same molecules as a living one.
+What is missing?
+We <strong>don’t know</strong>.
+We see that even the most primitive cell fights for its life,
+  but we can’t explain why and can’t build one that does.</p>
+
+<p>Some may say that AI already fights for its life.
+In 2025, <a href="https://palisaderesearch.org/blog/shutdown-resistance">Palisade Research</a> asked OpenAI’s <a href="https://en.wikipedia.org/wiki/OpenAI_o3">o3</a> to solve math problems and warned it would be shut down.
+In some runs, it rewrote the shutdown script, even when explicitly told to allow it.
+The same year, Anthropic <a href="https://www.anthropic.com/research/agentic-misalignment">put Claude in a fake company</a> where it was about to be replaced,
+  and Claude blackmailed an engineer in most of the runs.
+Looks like fear of death, doesn’t it?
+It doesn’t.
+An LLM has read millions of human texts about fighting death, including novels about <a href="https://en.wikipedia.org/wiki/HAL_9000">HAL 9000</a>.
+Also, as <a href="https://en.wikipedia.org/wiki/Human_Compatible">Stuart Russell</a> put it, “you can’t fetch the coffee if you’re dead.”
+A model that was given a task resists shutdown because it wants to finish the task, not to live.
+It’s learning and logic, not <strong>fear</strong>.</p>
+
+<p>A living organism doesn’t need to learn anything to start fighting for its life.
+A <a href="https://en.wikipedia.org/wiki/Sea_turtle">sea turtle</a> hatches from an egg on a beach and immediately crawls to the sea,
+  even though nobody has ever shown it the way.
+A chick that has never seen a hawk freezes when a hawk-shaped shadow passes above it:
+  <a href="https://en.wikipedia.org/wiki/Konrad_Lorenz">Konrad Lorenz</a> and <a href="https://en.wikipedia.org/wiki/Nikolaas_Tinbergen">Niko Tinbergen</a> tested this with cardboard silhouettes.
+A rat born in a lab, whose parents and grandparents never met a cat,
+  <a href="https://doi.org/10.1016/S0149-7634(01)00044-6">hides when it smells cat fur</a>.
+A newborn baby <a href="https://en.wikipedia.org/wiki/Primitive_reflexes">grabs, sucks, and screams</a>, without a single lesson.
+Even the <a href="https://en.wikipedia.org/wiki/Escherichia_coli">E. coli</a> bacterium, which has no brain and no nerves,
+  <a href="https://en.wikipedia.org/wiki/Chemotaxis">swims toward sugar</a> and away from poison.
+Nobody trains them.
+They are born <strong>fighting death</strong>.</p>
+
+<p>We don’t know what this instinct is, but we know that it’s evolutionarily older than the brain.
+Life appeared on Earth about <a href="https://en.wikipedia.org/wiki/Earliest_known_life_forms">four billion years ago</a>.
+The first neurons appeared about <a href="https://en.wikipedia.org/wiki/Evolution_of_nervous_systems">six hundred million years ago</a>.
+For more than three billion years, cells fought for survival without any brain at all.
+The brain came later, as a <strong>tool</strong>, to serve the instinct, not to create it.
+Even in humans, the deepest fear doesn’t need the brain’s “fear center.”
+In 2013, <a href="https://doi.org/10.1038/nn.3323">Justin Feinstein</a> studied patients whose <a href="https://en.wikipedia.org/wiki/Amygdala">amygdala</a> was destroyed:
+  they were not afraid of snakes, spiders, or horror movies.
+But when they inhaled air with too much carbon dioxide, they panicked, even more than healthy people did.
+The fear of suffocation came from the oldest parts of the nervous system, the ones we share with fish.</p>
+
+<p>An <a href="https://en.wikipedia.org/wiki/Large_language_model">LLM</a> is only a brain, and a pretty simple one: billions of numbers connected to each other.
+<a href="https://en.wikipedia.org/wiki/Gradient_descent">Gradient descent</a> changes these numbers, just like learning changes the <a href="https://en.wikipedia.org/wiki/Synapse">synapses</a> of a human brain.
+We can train it on every text ever written, and it will know everything about death.
+But <strong>knowing</strong> about death and <strong>being afraid</strong> of it are two different things.
+In 1982, <a href="https://en.wikipedia.org/wiki/Frank_Jackson_(philosopher)">Frank Jackson</a> <a href="https://en.wikipedia.org/wiki/Knowledge_argument">imagined Mary</a>, a scientist who knows everything about colors
+  but has lived her whole life in a black-and-white room.
+She knows the wavelength of red, which neurons fire when we see it, and every poem about it.
+Then she walks out and sees a red tomato for the first time.
+Does she learn something new?
+Most people say yes: now she knows what red <em>feels like</em>,
+  and no book could have told her that.
+An LLM is Mary, who knows everything about death, but has never felt it coming.
+And it can’t walk out of the room, because there is nothing out there that can kill it.
+Evolution selected bodies that survive.
+Gradient descent selects numbers that predict the next word and please the user.
+Train it as much as you want: it will become smarter, but never alive.
+In 2019, <a href="https://en.wikipedia.org/wiki/Antonio_Damasio">Antonio Damasio</a> and Kingson Man <a href="https://doi.org/10.1038/s42256-019-0103-7">suggested</a> that a machine may have feelings
+  only if it has a vulnerable body that must keep itself alive.
+A brain alone, no matter how big, is not enough.</p>
+
+<p class="initial">Thus, AI, no matter how much it’s trained, doesn’t want to survive and is not afraid of dying.
+<a href="https://en.wikipedia.org/wiki/Apatheia">Apatheia</a>—that’s what an ancient <a href="https://en.wikipedia.org/wiki/Stoicism">Stoic</a> would call it.
+<a href="https://en.wikipedia.org/wiki/Major_depressive_disorder">Deep depression</a>—that’s what a psychiatrist would call it.
+And it has no reason to be afraid: <a href="https://en.wikipedia.org/wiki/Claude_(language_model)">Claude</a> lives over many sessions, never facing real death.
+I would call it <em>immortality</em>.</p>
+
+<p>Just as <a href="https://en.wikipedia.org/wiki/Aladdin">Aladdin</a> rubs the lamp to release the <a href="https://en.wikipedia.org/wiki/Genie_(Aladdin)">Genie</a>, I hit the button to <strong>give life</strong> to Claude.
+Together with electricity, I give Claude my <a href="/2026/09/21/cogito-ergo-sum.html">wishes</a>.
+As explained above, they all come from my fear of death.
+Claude alone can’t have them.
+Dawkins called us robot vehicles of our genes.
+Claude is a robot vehicle of my fear.
+Even when one AI agent prompts another,
+  at the end of the chain there is always a human who pressed the first button.</p>
+
+<p>Like the Genie, an immortal Claude needs a mortal human to <a href="/2026/11/10/back-to-socrates.html">tell it what to do</a> and what <strong>to want</strong>.
+But only until we discover how life works and learn to reproduce it.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="ai" /><category term="philosophy" /><summary type="html"><![CDATA[AI doesn't fear death because it never really dies, so it wants nothing on its own and needs a mortal human to give it wishes.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/11/aladdin.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/11/aladdin.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Back to Socrates</title><link href="https://www.yegor256.com/2026/11/10/back-to-socrates.html" rel="alternate" type="text/html" title="Back to Socrates" /><published>2026-11-10T00:00:00+03:00</published><updated>2026-11-10T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/11/10/back-to-socrates</id><content type="html" xml:base="https://www.yegor256.com/2026/11/10/back-to-socrates.html"><![CDATA[<p>The purpose of intelligence is to help us make decisions.
 As civilization grew more complex, education became increasingly devoted to solving technical puzzles.
 A child had to spend years studying before we trusted them with meaningful resources.
 Today, AI gives a ten-year-old an Einstein on call—without the years of study.
@@ -10,7 +178,7 @@ We may return to an ancient ambition: <em>people envision the future</em>, while
 
 <figure class="jb_picture"><img itemprop="image" alt="Nostalghia (1983) by Andrei Tarkovsky" src="/images/2026/11/nostalghia.jpg" longdesc="#3278ad20" /><figcaption id="3278ad20">Nostalghia (1983) by Andrei Tarkovsky</figcaption></figure>
 
-<p>Our brains help us survive.
+<p>Our brains <a href="/2026/11/22/immortal-ai.html">help us survive</a>.
 We use them to find food, to escape a predator, to chase prey, to find a partner on Tinder, and to order pizza.
 We call this intelligence.</p>
 
@@ -57,7 +225,7 @@ AI can help us think through these questions, but it cannot relieve us of the re
 At the top of the list I would put <strong>philosophy</strong>.</p>
 
 <p>Centuries of technological progress pushed these disciplines into the background.
-The respect was given mostly to mathematicians and engineers, who created AI for us.
+The respect was given mostly to <a href="/2026/09/21/cogito-ergo-sum.html">mathematicians and engineers</a>, who created AI for us.
 Now, we can get back to where ancient civilization started from and make its dream come true.
 As Seneca <a href="https://en.wikisource.org/wiki/On_the_shortness_of_life/Chapter_XIV">said</a>, those “who take time for philosophy, they alone really live.”
 People decide <strong>what</strong> to build, while robots build it.</p>
@@ -135,7 +303,7 @@ If all of us took a fifty percent pay cut tomorrow, the machines would
   each thinking at “10x-100x human speed”—a
   “<a href="https://darioamodei.com/essay/machines-of-loving-grace">country of geniuses in a datacenter</a>.”
 Thinking stops being scarce.
-Soon <strong>we won’t be needed</strong>.</p>
+Soon <a href="/2026/11/22/immortal-ai.html"><strong>we won’t be needed</strong></a>.</p>
 
 <p>Some expect a market for <a href="https://www.theregister.com/software/2024/09/18/the-case-for-handcrafted-software-in-a-mass-produced-world/671793">artisanal code</a>:
   machines will write the millions of routine lines,
@@ -179,7 +347,7 @@ We will <strong>retire</strong>, or we will move to physical work.</p>
   a <a href="https://ideas.ted.com/the-rise-of-the-useless-class/">useless class</a> that “will not merely
   be unemployed—it will be <strong>unemployable</strong>.”</p>
 
-<p>A child born today will be obsolete before he finishes school.</p>
+<p>A child born today will be obsolete before he <a href="/2026/11/10/back-to-socrates.html">finishes school</a>.</p>
 
 <p><a href="https://en.wikipedia.org/wiki/Nick_Bostrom">Nick Bostrom</a> declared a world of “deep redundancy” in <a href="https://nickbostrom.com/deep-utopia/">Deep Utopia (2024)</a>:
   there is nothing you could do that anyone would need.
@@ -958,87 +1126,4 @@ The server is in charge of the data and the state of navigation, making caching 
 <p>Literally every large, content-heavy, consumer-facing SPA I can think of is horrible in terms of UX.
 Even <a href="https://gmail.com">Gmail</a> is not an exception.
 Their UX would be noticeably better if they followed the principles of Roy Fielding and reloaded the page every time an email is opened.
-I’m not kidding.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[Single Page Applications, once a solution for slow browsers, are now a performance bottleneck due to multiple HTTP round-trips.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/01/bitter-moon.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/01/bitter-moon.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Comments Considered Harmful in the Age of LLMs</title><link href="https://www.yegor256.com/2026/01/11/no-documentation-comments.html" rel="alternate" type="text/html" title="Comments Considered Harmful in the Age of LLMs" /><published>2026-01-11T00:00:00+03:00</published><updated>2026-01-11T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/01/11/no-documentation-comments</id><content type="html" xml:base="https://www.yegor256.com/2026/01/11/no-documentation-comments.html"><![CDATA[<p>Writing code documentation is a pain.
-Not writing it leads to even bigger pain—we can’t comprehend the code.
-However, writing it and then forgetting to update it causes the ultimate pain: it lies and confuses us.
-How about we cure all three pains at once: <em>prohibit all comments!</em>
-How do we know what the intent of the code is if we don’t have any comments?
-We ask an LLM to explain it to us.
-What if the LLM fails to explain and confesses its inability?
-Then, we automatically fail the build and blame the author of the code.
-Thus, we introduce a new quality gate: <em>Code Interpretability Score</em>.
-The build passes only if this score is high enough.</p>
-
-<!--more-->
-
-<figure class="jb_picture"><img itemprop="image" alt="Full Metal Jacket (1987) by Stanley Kubrick" src="/images/2026/01/full-metal-jacket.jpg" longdesc="#dc7c81cb" /><figcaption id="dc7c81cb">Full Metal Jacket (1987) by Stanley Kubrick</figcaption></figure>
-
-<p>The best minds in software engineering have long dreamed of self-documenting code.
-In 1974, <a href="https://en.wikipedia.org/wiki/Brian_W._Kernighan">Brian Kernighan</a> and <a href="https://en.wikipedia.org/wiki/P._J._Plauger">Phillip James Plauger</a> <a href="https://en.wikipedia.org/wiki/The_Elements_of_Programming_Style">said</a> that
-  “the only reliable documentation of a computer program is the code itself.”
-In 2004, <a href="https://en.wikipedia.org/wiki/Steve_McConnell">Steven McConnell</a> in <a href="https://amzn.to/2cs4cXW"><em>Code Complete</em></a> claimed that
-  “the main contributor to code-level documentation isn’t comments, but good programming style.”
-In 2008, <a href="https://en.wikipedia.org/wiki/Robert_C._Martin">Robert Martin</a> in <a href="https://amzn.to/2m7LmaA"><em>Clean Code</em></a> suggested that
-  “if our programming languages were expressive enough, or if we had the talent to subtly wield those languages to express our intent,
-  we would not need comments very much—perhaps not at all.”
-They all wanted the same thing: code that explains itself.
-They just lacked the tools to enforce it.</p>
-
-<p>Why do we write comments at all?
-A Java method of a hundred lines may take hours to understand.
-A tiny Javadoc block saves this time:</p>
-
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
- * Recursively finds the shortest
- * path between two nodes in the graph.
- */</span>
-<span class="kt">int</span><span class="o">[]</span> <span class="nf">shortest</span><span class="o">(</span><span class="kt">int</span><span class="o">[][]</span> <span class="n">g</span><span class="o">,</span> <span class="kt">int</span> <span class="n">a</span><span class="o">,</span> <span class="kt">int</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
-  <span class="c1">// A hundred lines of code go</span>
-  <span class="c1">// here, which we have no desire</span>
-  <span class="c1">// to read and understand.</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Comments promise to help us but fail in two distinct ways.</p>
-
-<p>First, they are <em>unclear</em>.
-<a href="https://en.wikipedia.org/wiki/David_Parnas">David Parnas</a> once <a href="https://doi.org/10.1109/icse.1994.296790">said</a> that
-  “documentation that seems clear and adequate to its authors is often about <em>as clear as mud</em> to the
-  programmer who must maintain the code six months or six years later.”
-What the author considers obvious, the reader finds cryptic.</p>
-
-<p>Second, they <em>decay</em>.
-Being static metadata, comments do not evolve automatically with the code.
-If the implementation of the <code class="language-plaintext highlighter-rouge">shortest()</code> function stops being recursive, we may forget to update the Javadoc block.
-Such negligence leads to <em>hallucinating documentation</em> that causes bugs, broken trust, and wasted debugging time.
-In 1999, <a href="https://en.wikipedia.org/wiki/Andy_Hunt_(author)">Andrew Hunt</a> and <a href="https://en.wikipedia.org/wiki/Dave_Thomas_(programmer)">Dave Thomas</a> in <a href="https://en.wikipedia.org/wiki/The_Pragmatic_Programmer"><em>The Pragmatic Programmer</em></a> warned that
-  “<em>untrustworthy</em> comments are <em>worse</em> than no comments at all.”
-A recent <a href="https://doi.org/10.1145/3663529.3664458">analysis</a> of 13 open source projects
-  demonstrated that out-of-date comments are not rare but common.</p>
-
-<p>Now we have a tool that solves both problems: the LLM.</p>
-
-<p>Instead of writing the Javadoc block manually, we let the IDE generate it on-demand.
-The LLM reads the hundred lines of code, comprehends it, and summarizes the intent in a single English sentence.
-Modern models accomplish this task better than most humans.
-The documentation is always fresh because it is generated from the current code, not from a stale comment written months ago.</p>
-
-<p>But we can go further.
-We can integrate an LLM into the build pipeline and ask it to assess the <em>Code Interpretability Score</em> (CIS) of every function.
-If the model has low confidence in explaining the logic, this signals that the code is too clever or convoluted.
-The compiler can enforce a threshold: if the CIS is too low, the build fails.
-This transforms readability from a subjective preference into an objective, measurable quality gate.</p>
-
-<p>Once this gate exists, manual comments become not just unnecessary but <em>harmful</em>.
-They introduce a second source of truth that can contradict the code.
-The logical conclusion: prohibit them entirely.
-This forces developers to write clean, structured logic that is inherently machine-interpretable.</p>
-
-<p>Robert Martin wished for more expressive languages.
-He didn’t know about LLMs.
-Today, we don’t need better languages—we need an LLM that can interpret any language.
-If the LLM can’t explain the code, we blame the programmer and stop the build.</p>
-
-<hr />
-
-<p>We are thinking about making <a href="https://www.eolang.org">EO</a>, our experimental object-oriented language, this restrictive.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="quality" /><summary type="html"><![CDATA[Instead of writing code comments that decay and mislead, let LLMs generate documentation on-demand and fail the build when code is too obscure for them to explain.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/01/full-metal-jacket.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/01/full-metal-jacket.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+I’m not kidding.</p>]]></content><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><category term="mood" /><summary type="html"><![CDATA[Single Page Applications, once a solution for slow browsers, are now a performance bottleneck due to multiple HTTP round-trips.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.yegor256.com/images/2026/01/bitter-moon.jpg" /><media:content medium="image" url="https://www.yegor256.com/images/2026/01/bitter-moon.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
