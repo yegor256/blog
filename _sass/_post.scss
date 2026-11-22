@@ -200,3 +200,13 @@ figure {
   margin-left: auto;
   margin-right: auto;
 }
+
+hr {
+  @extend %clear;
+  border: 0;
+  border-top: 1 * $px solid $silver;
+  height: 0;
+  margin: 1.5 * $rem auto;
+  text-align: left;
+  width: 35%;
+}

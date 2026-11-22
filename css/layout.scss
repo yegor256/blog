@@ -403,16 +403,6 @@ sub {
   top: .3 * $rem;
 }
 
-hr {
-  @extend %clear;
-  border: 0;
-  border-top: 1 * $px solid $silver;
-  height: 0;
-  margin-top: 2 * $rem;
-  text-align: left;
-  width: 50%;
-}
-
 .badge {
   float: right;
   margin-left: 2 * $rem;
