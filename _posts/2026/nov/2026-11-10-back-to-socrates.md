@@ -33,7 +33,7 @@ We may return to an ancient ambition: _people envision the future_, while _machi
 
 {% jb_picture_body %}
 
-Our brains help us survive.
+Our brains [help us survive][immortal].
 We use them to find food, to escape a predator, to chase prey, to find a partner on Tinder, and to order pizza.
 We call this intelligence.
 
@@ -79,7 +79,7 @@ This is where rhetoric, psychology, politics, and economics belong.
 At the top of the list I would put **philosophy**.
 
 Centuries of technological progress pushed these disciplines into the background.
-The respect was given mostly to mathematicians and engineers, who created AI for us.
+The respect was given mostly to [mathematicians and engineers][cogito], who created AI for us.
 Now, we can get back to where ancient civilization started from and make its dream come true.
 As Seneca [said][seneca], those "who take time for philosophy, they alone really live."
 People decide **what** to build, while robots build it.
@@ -96,3 +96,5 @@ Philosophers, your time is coming.
 [seneca]: https://en.wikisource.org/wiki/On_the_shortness_of_life/Chapter_XIV
 [teacher]: {% pst 2021/dec/2021-12-01-teaching %}
 [kids]: {% pst 2019/sep/2019-09-10-how-to-motivate-kids-to-code %}
+[immortal]: {% pst 2026/nov/2026-11-22-immortal-ai %}
+[cogito]: {% pst 2026/sep/2026-09-21-cogito-ergo-sum %}

@@ -184,7 +184,7 @@ I would call it _immortality_.
 {: .initial}
 
 Just as [Aladdin] rubs the lamp to release the [Genie], I hit the button to give life to Claude.
-Together with electricity, I give Claude my **wishes**.
+Together with electricity, I give Claude my [**wishes**][cogito].
 As explained above, they all come from my fear of death.
 Claude alone can't have them.
 Dawkins called us robot vehicles of our genes.
@@ -192,7 +192,7 @@ Claude is a robot vehicle of my fear.
 Even when one AI agent prompts another,
   at the end of the chain there is always a human who pressed the first button.
 
-Like the Genie, an immortal Claude needs a mortal human to tell it what to do and what **to want**.
+Like the Genie, an immortal Claude needs a mortal human to [tell it what to do][socrates] and what **to want**.
 But only until we discover how life works and learn to reproduce it.
 
 [Aladdin]: https://en.wikipedia.org/wiki/Aladdin
@@ -202,6 +202,7 @@ But only until we discover how life works and learn to reproduce it.
 [Antonio Damasio]: https://en.wikipedia.org/wiki/Antonio_Damasio
 [Apatheia]: https://en.wikipedia.org/wiki/Apatheia
 [Claude]: https://en.wikipedia.org/wiki/Claude_(language_model)
+[cogito]: {% pst 2026/sep/2026-09-21-cogito-ergo-sum %}
 [Craig Venter]: https://en.wikipedia.org/wiki/Craig_Venter
 [Deep depression]: https://en.wikipedia.org/wiki/Major_depressive_disorder
 [Denys de Catanzaro]: https://doi.org/10.1016/0162-3095(95)00055-0
@@ -243,6 +244,7 @@ But only until we discover how life works and learn to reproduce it.
 [sea turtle]: https://en.wikipedia.org/wiki/Sea_turtle
 [showed]: https://doi.org/10.1037/0022-3514.52.4.749
 [six hundred million years ago]: https://en.wikipedia.org/wiki/Evolution_of_nervous_systems
+[socrates]: {% pst 2026/nov/2026-11-10-back-to-socrates %}
 [Spinoza]: https://en.wikipedia.org/wiki/Baruch_Spinoza
 [Stanley Miller]: https://en.wikipedia.org/wiki/Miller%E2%80%93Urey_experiment
 [stings]: https://en.wikipedia.org/wiki/Bee_sting
