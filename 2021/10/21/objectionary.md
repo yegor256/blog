@@ -213,7 +213,7 @@ Here we simply try to find source code `.eo` files for all foreign
 objects in Objectionary, by looking at its
 [GitHub repository](https://github.com/yegor256/objectionary).
 For example, this is where we would find
-[`stdout.eo`](https://github.com/objectionary/eo/blob/master/eo-runtime/src/main/eo/org/eolang/io/stdout.eo).
+[`stdout.eo`](https://github.com/objectionary/eo/blob/0.15.0/eo-runtime/src/main/eo/org/eolang/io/stdout.eo).
 We find them there and pull to the local disc.
 
 Pay attention, we pull the sources. Not binaries or compiled XMIR
@@ -221,7 +221,7 @@ documents, but the sources in `.eo` format.
 
 ## Resolve 🌵
 
-This is what [`stdout.eo`](https://github.com/objectionary/eo/blob/master/eo-runtime/src/main/eo/org/eolang/io/stdout.eo)
+This is what [`stdout.eo`](https://github.com/objectionary/eo/blob/0.15.0/eo-runtime/src/main/eo/org/eolang/io/stdout.eo)
 may look like, after the pull:
 
 ```xml
@@ -330,7 +330,7 @@ them to `target/classes/EO-SOURCES/` directory. Later, they will be
 packaged together with `.class` files into a `.jar`, which will be
 deployed to Maven Central. While copying, we replace `0.0.0` in the
 runtime version to the currently deploying version. Take a look
-at the file [`stdout.eo`](https://github.com/cqfn/eo/blob/master/eo-runtime/src/main/eo/org/eolang/io/stdout.eo),
+at the file [`stdout.eo`](https://github.com/objectionary/eo/blob/0.15.0/eo-runtime/src/main/eo/org/eolang/io/stdout.eo),
 in its source repository:
 
 ```text
