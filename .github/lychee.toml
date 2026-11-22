@@ -67,6 +67,16 @@ exclude = [
   "razbor-poletov\\.com",
   "innopolis\\.university",
   "community-z\\.com",
+  "citaty\\.info",
+  # These time out from GitHub runners, but work in a browser
+  "nedbatchelder\\.com",
+  "gnu\\.org",
+  "ieee-security\\.org",
+  "roy\\.gbiv\\.com",
+  "geepawhill\\.org",
+  "evilhrlady\\.org",
+  "holub\\.com",
+  "leekelleher\\.com",
   # These block bots from CI, but work in a browser
   "sciencedirect\\.com",
   "elegantcode\\.com",

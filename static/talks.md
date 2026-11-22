@@ -1378,7 +1378,7 @@ that the same happened to other speakers
 <span class="venue-rate B-mark">B+</span>
 <img src="https://i.ytimg.com/vi/xbovkm0tTn0/mqdefault.jpg" class="past-talk" alt="AgileEE 2016"/>
 **Meetings Are a Threat to Code Quality**;
-[AgileEE 2016](http://Kyiv2016.agileee.org/);
+AgileEE 2016;
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 9 April 2016
 [slides](https://www.slideshare.net/YegorBugayenko/meetings-are-a-threat-to-code-quality),
