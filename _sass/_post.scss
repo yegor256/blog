@@ -26,6 +26,11 @@ article {
       font-size: 3 * $rem;
       line-height: 2.5 * $rem;
       margin: .1 * $rem .1 * $rem 0 0;
+
+      @media all and (max-width: $width) {
+        font-size: 3.5 * $rem;
+        line-height: 3 * $rem;
+      }
     }
   }
 
