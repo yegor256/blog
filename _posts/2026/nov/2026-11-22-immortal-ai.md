@@ -183,8 +183,8 @@ And it has no reason to be afraid: [Claude] lives over many sessions, never faci
 I would call it _immortality_.
 {: .initial}
 
-Just as [Aladdin] rubs the lamp to release the [Genie], I hit the button to give life to Claude.
-Together with electricity, I give Claude my [**wishes**][cogito].
+Just as [Aladdin] rubs the lamp to release the [Genie], I hit the button to **give life** to Claude.
+Together with electricity, I give Claude my [wishes][cogito].
 As explained above, they all come from my fear of death.
 Claude alone can't have them.
 Dawkins called us robot vehicles of our genes.
