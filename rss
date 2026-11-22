@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-11-22T19:12:46+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Immortal AI</title><link href="https://www.yegor256.com/2026/11/22/immortal-ai.html" rel="alternate" type="text/html" title="Immortal AI" /><published>2026-11-22T00:00:00+03:00</published><updated>2026-11-22T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/11/22/immortal-ai</id><content type="html" xml:base="https://www.yegor256.com/2026/11/22/immortal-ai.html"><![CDATA[<p>Anything living organisms do is motivated by their desire to survive, to avoid death.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://www.yegor256.com/rss.xml" rel="self" type="application/atom+xml" /><link href="https://www.yegor256.com/" rel="alternate" type="text/html" /><updated>2026-11-22T19:33:24+03:00</updated><id>https://www.yegor256.com/rss.xml</id><title type="html">Yegor Bugayenko</title><subtitle>Yegor Bugayenko</subtitle><author><name>Yegor Bugayenko</name><email>yegor256@gmail.com</email></author><entry><title type="html">Immortal AI</title><link href="https://www.yegor256.com/2026/11/22/immortal-ai.html" rel="alternate" type="text/html" title="Immortal AI" /><published>2026-11-22T00:00:00+03:00</published><updated>2026-11-22T00:00:00+03:00</updated><id>https://www.yegor256.com/2026/11/22/immortal-ai</id><content type="html" xml:base="https://www.yegor256.com/2026/11/22/immortal-ai.html"><![CDATA[<p>Anything living organisms do is motivated by their desire to survive, to avoid death.
 Even an altruistic suicide may be explained by the same desire, only it comes from the gene.
 In an attempt to reproduce a human in AI, we must reproduce this desire too, not only the thinking and moving parts.
 But modern science doesn’t understand the nature of the desire: why do even primitive cells care about survival?
@@ -36,6 +36,14 @@ Nobody was watching, but they behaved as if somebody was.
 We are generous and brave not because we are good,
   but because <strong>we are afraid of dying</strong>, or of being left alone, which is almost the same.</p>
 
+<aside class="youtube">
+        <a href="https://www.youtube.com/watch?v=GNDkTCtEVOk"><div class="box">
+        <img src="https://i.ytimg.com/vi/GNDkTCtEVOk/mqdefault.jpg" alt="YouTube video #GNDkTCtEVOk" />
+        <div class="play"><i class="icon icon-play"></i></div>
+        </div></a>
+        <div>Бессмертный AI: зачем ты мне, человек?;
+        13 October 2026.</div></aside>
+
 <p>It’s not only generosity that is driven by the desire to survive.
 Literally anything I do has the same motivation.
 I was born already knowing how to breathe, to eat, to pee and poop.
@@ -57,6 +65,9 @@ Old termite workers of <a href="https://doi.org/10.1126/science.1219129">Neocapr
   splashing them with toxic liquid.
 Do they want to survive?
 Not personally.</p>
+
+<aside class="quote">Knowing about death and being afraid of it are two different things
+</aside>
 
 <p>In 1964, <a href="https://en.wikipedia.org/wiki/W._D._Hamilton">William Hamilton</a> <a href="https://doi.org/10.1016/0022-5193(64)90038-4">explained it</a>: a gene doesn’t care about the body it sits in.
 It cares about its copies, which also sit in relatives.

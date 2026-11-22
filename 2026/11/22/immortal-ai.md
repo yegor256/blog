@@ -40,6 +40,8 @@ Nobody was watching, but they behaved as if somebody was.
 We are generous and brave not because we are good,
   but because **we are afraid of dying**, or of being left alone, which is almost the same.
 
+{% youtube GNDkTCtEVOk %}
+
 It's not only generosity that is driven by the desire to survive.
 Literally anything I do has the same motivation.
 I was born already knowing how to breathe, to eat, to pee and poop.
@@ -61,6 +63,8 @@ Old termite workers of [Neocapritermes taracua] explode in the face of enemies,
   splashing them with toxic liquid.
 Do they want to survive?
 Not personally.
+
+{% quote Knowing about death and being afraid of it are two different things %}
 
 In 1964, [William Hamilton][William Hamilton] [explained it]: a gene doesn't care about the body it sits in.
 It cares about its copies, which also sit in relatives.
