@@ -71,7 +71,7 @@ figure {
   border: none;
   height: $rem;
   text-align: center;
-  margin: 2 * $rem auto;
+  margin: 3 * $rem auto;
 
   &::after {
     content: "* * *";
