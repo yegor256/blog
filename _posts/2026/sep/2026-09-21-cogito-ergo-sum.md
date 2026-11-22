@@ -92,7 +92,7 @@ If all of us took a fifty percent pay cut tomorrow, the machines would
   each thinking at "10x-100x human speed"---a
   "[country of geniuses in a datacenter]."
 Thinking stops being scarce.
-Soon **we won't be needed**.
+Soon [**we won't be needed**][immortal].
 
 Some expect a market for [artisanal code]:
   machines will write the millions of routine lines,
@@ -135,7 +135,7 @@ We will **retire**, or we will move to physical work.
   a [useless class] that "will not merely
   be unemployed---it will be **unemployable**."
 
-A child born today will be obsolete before he finishes school.
+A child born today will be obsolete before he [finishes school][socrates].
 
 [Nick Bostrom] declared a world of "deep redundancy" in [Deep Utopia (2024)]:
   there is nothing you could do that anyone would need.
@@ -220,3 +220,5 @@ Neither does this one.
 [Émile Durkheim]: https://en.wikipedia.org/wiki/%C3%89mile_Durkheim
 [my GitHub]: https://github.com/yegor256
 [Claude Code]: https://claude.com/product/claude-code
+[immortal]: {% pst 2026/nov/2026-11-22-immortal-ai %}
+[socrates]: {% pst 2026/nov/2026-11-10-back-to-socrates %}
