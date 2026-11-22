@@ -26,7 +26,7 @@ Even an altruistic suicide may be explained by the same desire, only it comes fr
 In an attempt to reproduce a human in AI, we must reproduce this desire too, not only the thinking and moving parts.
 But modern science doesn't understand the nature of the desire: why do even primitive cells care about survival?
 AI, no matter how much it's trained, doesn't want to survive and is not afraid of dying.
-Without fear of death, AI perceives itself as immortal and, because of that, can't want anything.
+Without **fear of death**, AI perceives itself as immortal and, because of that, can't want anything.
 AI needs us, mortal humans, to tell it what to do and what to want.
 
 <!--more-->
