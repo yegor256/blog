@@ -161,7 +161,7 @@ public Response act() {
 ```
 
 The most important class here is
-[`RsXembly`](https://javadoc.io/static/org.takes/takes/1.1/org/takes/rs/xe/RsXembly.html).
+[`RsXembly`](https://javadoc.io/static/org.takes/takes/1.26.0/org/takes/rs/xe/RsXembly.html).
 The idea is to let
 model classes expose their data through Xembly "directives," which
 will later be applied to a DOM structure by `RsXembly`.
@@ -171,14 +171,14 @@ directives but with different meanings
 (they are all instances of an `XeSource` interface).
 Their names describe their
 intentions rather well.
-[`XeChain`](https://javadoc.io/static/org.takes/takes/1.1/org/takes/rs/xe/XeChain.html)
+[`XeChain`](https://javadoc.io/static/org.takes/takes/1.26.0/org/takes/rs/xe/XeChain.html)
 just chains everything that is
 delivered by encapsulated "directive sources."
-[`XeStylesheet`](https://javadoc.io/static/org.takes/takes/1.1/org/takes/rs/xe/XeStylesheet.html)
+[`XeStylesheet`](https://javadoc.io/static/org.takes/takes/1.26.0/org/takes/rs/xe/XeStylesheet.html)
 returns directives that create a single XML processing instruction.
-[`XeAppend`](https://javadoc.io/static/org.takes/takes/1.1/org/takes/rs/xe/XeAppend.html)
+[`XeAppend`](https://javadoc.io/static/org.takes/takes/1.26.0/org/takes/rs/xe/XeAppend.html)
 creates an XML node and adds encapsulated directives to it.
-[`XeDirectives`](https://javadoc.io/static/org.takes/takes/1.1/org/takes/rs/xe/XeDirectives.html)
+[`XeDirectives`](https://javadoc.io/static/org.takes/takes/1.26.0/org/takes/rs/xe/XeDirectives.html)
 simply returns what's inside.
 
 In the end, this code will create exactly the same XML document

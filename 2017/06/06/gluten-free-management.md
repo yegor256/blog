@@ -49,7 +49,7 @@ outdated performance and productivity
 that people would eventually work not out of greed or poverty, but because
 they just enjoy it. He would be happy to see
 that his prophesy finally
-[came true](https://techbeacon.com/13-ways-motivate-software-engineers):
+[came true](https://web.archive.org/web/20161201003832/https://techbeacon.com/13-ways-motivate-software-engineers):
 programmers don't work for money any more.
 They [work](https://en.wikipedia.org/wiki/Motivation#Intrinsic_motivation)
 for challenge, respect, curiosity, recognition, cooperation, and free beer

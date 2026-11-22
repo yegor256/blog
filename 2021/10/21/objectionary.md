@@ -213,7 +213,7 @@ Here we simply try to find source code `.eo` files for all foreign
 objects in Objectionary, by looking at its
 [GitHub repository](https://github.com/yegor256/objectionary).
 For example, this is where we would find
-[`stdout.eo`](https://github.com/yegor256/objectionary/blob/master/objects/org/eolang/io/stdout.eo).
+[`stdout.eo`](https://github.com/objectionary/eo/blob/master/eo-runtime/src/main/eo/org/eolang/io/stdout.eo).
 We find them there and pull to the local disc.
 
 Pay attention, we pull the sources. Not binaries or compiled XMIR
@@ -221,7 +221,7 @@ documents, but the sources in `.eo` format.
 
 ## Resolve 🌵
 
-This is what [`stdout.eo`](https://github.com/yegor256/objectionary/blob/master/objects/org/eolang/io/stdout.eo)
+This is what [`stdout.eo`](https://github.com/objectionary/eo/blob/master/eo-runtime/src/main/eo/org/eolang/io/stdout.eo)
 may look like, after the pull:
 
 ```xml

@@ -104,6 +104,6 @@ class ToList<T> implements List<T> {
 }
 ```
 
-[`ListOf`](https://www.javadoc.io/static/org.cactoos/cactoos/0.50/org/cactoos/list/ListOf.html)
+[`ListOf`](https://javadoc.io/static/org.cactoos/cactoos/0.61.1/org/cactoos/list/ListOf.html)
 from [Cactoos](https://www.cactoos.org) is a perfect example
 of such a prestructor.

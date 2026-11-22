@@ -50,7 +50,7 @@ Source: https://www.yegor256.com/2017/06/29/activists.html
 становились
 [полицаями](https://ru.wikipedia.org/wiki/%D0%92%D1%81%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D0%BF%D0%BE%D0%BB%D0%B8%D1%86%D0%B8%D1%8F)
 и боролись с партизанами
-[карательными акциями](http://oursociety.ru/publ/istorija_rossii/predateli_policai_v_gody_velikoj_otechestvennoj_vojny/4-1-0-195)
+[карательными акциями](https://web.archive.org/web/20170701203513/http://oursociety.ru/publ/istorija_rossii/predateli_policai_v_gody_velikoj_otechestvennoj_vojny/4-1-0-195)
 среди мирного населения, ими также двигало стремление к порядку. Они помогали
 существующей на тот момент
 [власти](https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B9%D1%85%D1%81%D0%BA%D0%BE%D0%BC%D0%B8%D1%81%D1%81%D0%B0%D1%80%D0%B8%D0%B0%D1%82_%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0), под флагом со свастикой, поддерживать

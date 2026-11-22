@@ -133,7 +133,7 @@ And when these principles are in place---you pay thirty times less.
 
 By the way, this is what people say about their projects:
 
- * $12&ndash;103: [crazyontap.com](https://www.crazyontap.com/topic.php?TopicId=242135)
+ * $12&ndash;103: [crazyontap.com](https://web.archive.org/web/20141005034852/https://www.crazyontap.com/topic.php?TopicId=242135)
  * $15&ndash;40: [betterembsw.blogspot.nl](http://betterembsw.blogspot.nl/2010/10/embedded-software-costs-15-40-per-line.html)
 
 What are your numbers? Please post your comments below.

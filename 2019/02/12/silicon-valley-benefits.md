@@ -133,7 +133,7 @@ thanks to [CalTrain](https://www.instagram.com/p/9cbYGSJG9z/).
 
 ## It is Democratic
 
-[They say](https://www.weeklystandard.com/michael-warren/will-america-in-10-years-look-like-california-does-today)
+[They say](https://web.archive.org/web/20181226095558/https://www.weeklystandard.com/michael-warren/will-america-in-10-years-look-like-california-does-today)
 California is the most democratic state, and it seems to be true.
 You can feel it in the way people dress, live, and don't show off, even
 though some of them are pretty rich. You can easily meet a billionaire

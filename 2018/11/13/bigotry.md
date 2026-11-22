@@ -125,7 +125,7 @@ Here is a non-complete list of them (I will keep updating the list, if and when
 I know for sure what the reason for rejection was):
 
   * [DevOpsDays Oslo](https://www.devopsdays.org/events/2018-oslo/welcome/) by Anders Bruvik.
-  * [vJUG](https://virtualjug.com/) by [Simon Maple](https://www.yegor256.com/2017/07/04/sexism.html#comment-3403001068).
+  * [vJUG](https://web.archive.org/web/20181112163531/https://virtualjug.com/) by [Simon Maple](https://www.yegor256.com/2017/07/04/sexism.html#comment-3403001068).
   * [JPoint 2020](https://jpoint.ru/en/)
 
 I will not hide their names. Just like Nazi criminals these guys should be known,

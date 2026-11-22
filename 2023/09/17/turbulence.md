@@ -106,7 +106,7 @@ Source: https://www.yegor256.com/2023/09/17/turbulence.html
 **Версия 7: Глобальный олигархат уничтожает национальный олигархат**.
 <br/>
 По мнению [Ростислава Ищенко](https://ukraina.ru/20200206/1026595822.html)
-и [Валерия Пякина](https://rutube.ru/video/9a3bcfd4f551379eb55048bf9400fd3e/),
+и [Валерия Пякина](https://web.archive.org/web/20230719164620/https://rutube.ru/video/9a3bcfd4f551379eb55048bf9400fd3e/),
 [представляющий](https://www.1tv.ru/shows/chelovek-i-zakon/vypuski/chelovek-i-zakon-vypusk-ot-16-09-2022)
 на территории Украины глобальный олигархический капитал,
 Джордж Сорос столкнулся в прямом противостоянии с национальным олигархическим

@@ -184,7 +184,7 @@ And that last `assertThat()` crashes now! I'm not getting 10 book IDs,
 as I was before. It's 7-9, but never 10. The class, apparently, is not thread-safe!
 
 But before we fix the class, let's make our test simpler. Let's use
-[`RunInThreads`](https://javadoc.io/static/org.cactoos/cactoos/0.29/org/cactoos/matchers/RunsInThreads.html)
+[`RunInThreads`](https://github.com/yegor256/cactoos/blob/0.29/src/main/java/org/cactoos/matchers/RunsInThreads.java)
 (renamed to just [`Threads`](https://www.javadoc.io/doc/org.cactoos/cactoos/latest/org/cactoos/experimental/Threads.html) in the recent version)
 from [Cactoos](https://www.cactoos.org), which does exactly the same as we've done above,
 but under the hood:
@@ -211,7 +211,7 @@ class BooksTest {
 {% jttu goetz2006java %}
 
 The first argument of `assertThat()` is an instance of
-[`Func`](https://javadoc.io/static/org.cactoos/cactoos/0.29/org/cactoos/Func.html)
+[`Func`](https://javadoc.io/static/org.cactoos/cactoos/0.61.1/org/cactoos/Func.html)
 (a functional interface), accepting an
 [`AtomicInteger`](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicInteger.html)
 (the first argument of `RunsInThreads`) and returning `Boolean`. This function will

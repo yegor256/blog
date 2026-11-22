@@ -116,7 +116,7 @@ I'm proud of this code.
 
 [Brendan Eich]: https://github.com/BrendanEich
 [JavaScript]: https://en.wikipedia.org/wiki/JavaScript
-[10 days]: https://exploringjs.com/es5/ch04.html
+[10 days]: https://web.archive.org/web/20260109053915/https://exploringjs.com/es5/ch04.html
 [Netscape]: https://en.wikipedia.org/wiki/Netscape
 [step down]: https://blog.mozilla.org/en/mozilla/brendan-eich-steps-down-as-mozilla-ceo/
 [donated]: https://www.theguardian.com/technology/2014/apr/02/controversial-mozilla-ceo-made-donations-right-wing-candidates-brendan-eich

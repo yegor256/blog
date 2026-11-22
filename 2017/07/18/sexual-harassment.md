@@ -9,7 +9,7 @@ in Silicon Valley, which led to serious career problems for
 [Travis Kalanick](https://www.nytimes.com/2017/02/19/business/uber-sexual-harassment-investigation.html) (former CEO of [Uber](https://www.uber.com)),
 [Chris Sacca](https://medium.com/@sacca/i-have-more-work-to-do-c775c5d56ca1),
 and
-[a few others](https://www.usatoday.com/story/tech/news/2017/06/30/venture-capital-sexual-harassment-scandal/103336512/).
+[a few others](https://web.archive.org/web/20170718161402/https://www.usatoday.com/story/tech/news/2017/06/30/venture-capital-sexual-harassment-scandal/103336512/).
 Let's try to put emotions aside and analyze what's happening
 and what long-term consequences this panic may have for our
 male-dominated engineering environment.

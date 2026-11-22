@@ -121,9 +121,9 @@ By the way, if you want to sponsor this award and increase the bonus,
  * [`xionghuiCoder/clearpool`](https://github.com/xionghuiCoder/clearpool)
  * [`android-cjj/ComicReader`](https://github.com/android-cjj/ComicReader)
  * [`Dreampie/icedog`](https://github.com/Dreampie/icedog)
- * [`hujiaweibujidao/TinyWeibo`](https://github.com/hujiaweibujidao/TinyWeibo)
+ * [`hujiaweibujidao/TinyWeibo`](https://web.archive.org/web/20180611012345/https://github.com/hujiaweibujidao/TinyWeibo)
  * `hujiaweibujidao/XingShan`
- * [`hujiaweibujidao/WeChat4j`](https://github.com/hujiaweibujidao/WeChat4j)
+ * [`hujiaweibujidao/WeChat4j`](https://web.archive.org/web/20180611035356/https://github.com/hujiaweibujidao/WeChat4j)
  * [`beartung/tclip-android`](https://github.com/beartung/tclip-android)
  * [`beartung/insta-filter`](https://github.com/beartung/insta-filter)
  * [`wewoor/ZBLOG`](https://github.com/wewoor/ZBLOG)
@@ -230,7 +230,7 @@ By the way, if you want to sponsor this award and increase the bonus,
  * [`xvik/guice-persist-orient`](https://github.com/xvik/guice-persist-orient)
  * [`xvik/dropwizard-guicey`](https://github.com/xvik/dropwizard-guicey)
  * [`mbosecke/pebble`](https://github.com/mbosecke/pebble)
- * [`inklabs/kommerce-core`](https://github.com/inklabs/kommerce-core) by [`@pdt256`](https://github.com/pdt256)
+ * [`inklabs/kommerce-core`](https://web.archive.org/web/20180611030400/https://github.com/inklabs/kommerce-core) by [`@pdt256`](https://github.com/pdt256)
  * [`elchris/easysql`](https://github.com/elchris/easysql)
  * [`checkstyle/checkstyle`](https://github.com/checkstyle/checkstyle) by [`@romani`](https://github.com/romani)
  * [`mifmif/mspider`](https://github.com/mifmif/mspider)
@@ -309,7 +309,7 @@ Here is what I found, preliminary.
     There are almost 3200 lines of code, that's way too many.
   * Static analysis is not a mandatory step in the build/release pipeline.
     That's why, I believe, code formatting is not consistent and sometimes
-    rather ugly. For example, [`pylint`](https://www.logilab.org/857) reports hundreds of issues.
+    rather ugly. For example, [`pylint`](https://web.archive.org/web/20150426010430/https://www.logilab.org/857) reports hundreds of issues.
     (update: scrutinizer is used, but I still believe that a local use of pylint
     would seriously improve the quality of code)
   * Some methods have documentation, others don't. I didn't understand

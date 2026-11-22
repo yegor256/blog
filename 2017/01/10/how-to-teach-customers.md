@@ -35,7 +35,7 @@ both work for the project, but from two very different angles.
 
 Very soon, when the project fails (and it will fail, just like 94 percent of all
 software projects, according to
-[Chaos Report](https://www.projectsmart.co.uk/white-papers/chaos-report.pdf)),
+[Chaos Report](https://web.archive.org/web/20161005173310/https://www.projectsmart.co.uk/white-papers/chaos-report.pdf)),
 the customer will find someone to blame. Needless to say,
 he won't blame himself; he will blame you.
 

@@ -97,7 +97,7 @@ Source: https://www.yegor256.com/2024/09/21/interpreters-of-chaos.html
 [три]: https://neolurk.org/wiki/%D0%91%D0%B5%D1%81%D0%BA%D0%BE%D0%BD%D0%B5%D1%87%D0%BD%D0%BE_%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE_%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C_%D0%BD%D0%B0_%D1%82%D1%80%D0%B8_%D0%B2%D0%B5%D1%89%D0%B8
 [рф-здоровье]: https://www.mediasphera.ru/issues/zhurnal-nevrologii-i-psikhiatrii-im-s-s-korsakova/2013/9/031997-7298201391
 [сша-здоровье]: https://www.pewtrusts.org/en/trend/archive/fall-2023/americas-mental-health-crisis
-[соловьёвщина]: https://semnasem.org/posts/2019/08/06/solovevshina-lidiruet-no-ne-vladeet-umam-rossiyan
+[соловьёвщина]: https://web.archive.org/web/20240823045046/https://semnasem.org/posts/2019/08/06/solovevshina-lidiruet-no-ne-vladeet-umam-rossiyan
 [свободное время]: https://incrussia.ru/news/free-time-make-you-unhappy/
 [китай-цензура]: https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D0%BD%D0%B7%D1%83%D1%80%D0%B0_%D0%B2_%D0%9A%D0%B8%D1%82%D0%B0%D0%B5
 [запрет]: https://rtvi.com/stories/oni-voobshhe-ne-paryatsya-kak-rabotaet-kitajskij-internet/
