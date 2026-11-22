@@ -27,7 +27,7 @@ jb_picture:
 Этими и похожими терминами обозначают группы людей, _идентифицирующих_
 себя по тем или иным признакам общности, таким, например, как язык, обычаи,
 идеология или религия. В любом случае, как
-[отмечал](https://sociology.mephi.ru/docs/sociologia/html/gumilev_etnogenez_bromley.html)
+[отмечал](https://web.archive.org/web/20210414045111/https://sociology.mephi.ru/docs/sociologia/html/gumilev_etnogenez_bromley.html)
 Лев Гумилев, неизменным объединяющим посылом для них является:
 "мы &mdash; такие-то, а все прочие &mdash; другие".
 

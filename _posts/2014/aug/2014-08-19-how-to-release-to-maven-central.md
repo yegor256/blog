@@ -52,7 +52,7 @@ artifacts to Maven Central.
 
 ## Register a Project With Sonatype
 
-Create an account in [Sonatype JIRA](https://issues.sonatype.org/)
+Create an account in [Sonatype JIRA](https://web.archive.org/web/20170607113129/https://issues.sonatype.org/)
 and raise a ticket, asking to approve your `groupId`. This
 [OSSRH Guide](http://central.sonatype.org/pages/ossrh-guide.html)
 explains this step in more detail.

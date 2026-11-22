@@ -53,7 +53,7 @@ were the winners in 2020 with
 [`decorators-squad/eo-yaml`](https://github.com/decorators-squad/eo-yaml) (**$1,024**),
 [`hdouss/jeometry`](https://github.com/hdouss/jeometry) (**$1,024**),
 and
-[`victorx64/devrating`](https://github.com/victorx64/devrating) (**$1,024**)
+[`victorx64/devrating`](https://web.archive.org/web/20260612160155/https://github.com/victorx64/devrating) (**$1,024**)
 projects.
 [More details]({% pst 2019/nov/2019-11-03-award-2020 %}).
 

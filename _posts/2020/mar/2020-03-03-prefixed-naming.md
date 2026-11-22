@@ -27,10 +27,10 @@ If you look at the source code of
 [Cactoos](https://github.com/yegor256/cactoos) for the first time,
 you most probably, like many others, will be triggered by the naming
 convention, which implies that most class names have two-letter prefixes:
-[`BkSafe`](https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/http/BkSafe.html),
-[`RqFake`](https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rq/RqFake.html),
-[`RsWithStatus`](https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/rs/RsWithStatus.html),
-[`TkGzip`](https://www.javadoc.io/static/org.takes/takes/1.9.1/org/takes/tk/TkGzip.html),
+[`BkSafe`](https://javadoc.io/static/org.takes/takes/1.26.0/org/takes/http/BkSafe.html),
+[`RqFake`](https://javadoc.io/static/org.takes/takes/1.26.0/org/takes/rq/RqFake.html),
+[`RsWithStatus`](https://javadoc.io/static/org.takes/takes/1.26.0/org/takes/rs/RsWithStatus.html),
+[`TkGzip`](https://javadoc.io/static/org.takes/takes/1.26.0/org/takes/tk/TkGzip.html),
 and so on. To be honest,
 I haven't seen a single Java developer who would be comfortable with this
 convention at first sight. I have, however, seen many who are in love with it
@@ -113,8 +113,8 @@ an implementation of the
 from [JDK](https://en.wikipedia.org/wiki/Java_servlet),
 not [`HttpRequest`](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/HttpRequest.html)
 from Spring,
-and not [`Request`](https://square.github.io/okhttp/3.x/okhttp/okhttp3/Request.html)
-from [OkHttp](https://square.github.io/okhttp/).
+and not [`Request`](https://web.archive.org/web/20190921150320/https://square.github.io/okhttp/3.x/okhttp/okhttp3/Request.html)
+from [OkHttp](https://web.archive.org/web/20200305194912/https://square.github.io/okhttp/).
 You know that it's the `Request` from Takes!
 
 Thus, by using short prefixes instead of nouns we add clarity to the code.

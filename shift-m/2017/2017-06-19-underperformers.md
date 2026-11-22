@@ -30,7 +30,7 @@ Inc.com article:
 [4 Keys to Coaching Underperforming Employees](https://www.inc.com/lee-colan/4-keys-to-coaching-underperforming-employees.html)
 
 Entrepreneur.com article:
-[9 Ways to Manage Underperforming Employees](https://www.entrepreneur.com/article/236263)
+[9 Ways to Manage Underperforming Employees](https://web.archive.org/web/20160630100337/https://www.entrepreneur.com/article/236263)
 
 Question at pm.stackexchange.com:
 [How to transition away a bad developer?](https://pm.stackexchange.com/questions/323/how-to-transition-away-a-bad-developer/326#326)

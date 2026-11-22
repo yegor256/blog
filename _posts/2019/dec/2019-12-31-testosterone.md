@@ -40,7 +40,7 @@ jb_picture:
 ответить некоторые ученые,
 [связывающие](https://versia.ru/nizkij-uroven-muzhskogo-gormona-prichina-mnozhestva-boleznej)
 падение тестостерона с ожирением, алкоголем, курением, отсутствием физических нагрузок, стрессом, и
-[т.д.](https://www.obozrevatel.com/health/diseases/26347-chto-vliyaet-na-padenie-urovnya-testosterona-u-muzhchin-nazvanyi-prichinyi.htm)
+[т.д.](https://web.archive.org/web/20190924204409/https://www.obozrevatel.com/health/diseases/26347-chto-vliyaet-na-padenie-urovnya-testosterona-u-muzhchin-nazvanyi-prichinyi.htm)
 Однако, не очень верится, что эти проблемы прогрессируют также стремительно, как падает уровень гормона мужественности.
 Неужели мы стали употреблять алкоголя и курить значительно больше наших прадедов?
 Это не так. В России, например, за последние 13 лет потребление алкоголя
@@ -64,7 +64,7 @@ jb_picture:
 уровень тестостерона в крови мужчин снижается сразу после рождения их детей.
 
 На основании сказанного, рискну предположить, что не алкоголь и ожирение виноваты в том,
-что мужчины слабеют и теряют агрессивность. [Виновата](https://econet.ru/articles/kak-feminizm-vliyaet-na-testosteron)
+что мужчины слабеют и теряют агрессивность. [Виновата](https://web.archive.org/web/20200810185936/https://econet.ru/articles/kak-feminizm-vliyaet-na-testosteron)
 новая формула социальных
 отношений, в которой на место таким старым добрым мужским
 добродетелям, как воля, решительность и независимость, пришли чувственность, эмпатия
@@ -91,7 +91,7 @@ jb_picture:
 особенно, если обратить внимание на то, кто же [стоит](http://masculist.ru/blogs/post-4998.html)
 за феминистическим движением последнего времени:
 [Билл Гейтс](https://zen.yandex.ru/media/konstantin/kto-finansiruet-feminizm-5d9baefcba281e00af417c13),
-[Николас Рокфеллер](https://expert.ru/d-stroke/2010/04/feminizm/),
+[Николас Рокфеллер](https://web.archive.org/web/20190305070418/https://expert.ru/d-stroke/2010/04/feminizm/),
 [Джордж Соррос](https://ria.ru/20170217/1488254327.html) и прочие.
 Это не эмоционально нестабильные [суфражистки](https://vz.ru/world/2017/3/8/860922.html) прошлого века.
 Это вполне прагматичные мужчины века XXI-го.

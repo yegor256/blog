@@ -135,7 +135,7 @@ negative ones you can find in my list of
 positive reviews I have. Here [it is](/eo-reviews.html).
 
 Oct 27, 2017:
-I signed a contract with [Ji &amp; Son](http://jiandson.co.kr/),
+I signed a contract with [Ji &amp; Son](https://web.archive.org/web/20181024152857/http://jiandson.co.kr/),
 a book publisher in Seoul.
 They will translate the first volume of the book to Korean and publish
 it in South Korea.
@@ -630,7 +630,7 @@ good, and how it could be better:
 
   * [Ben Nadel](https://www.bennadel.com/blog/3108-elegant-objects-by-yegor-bugayenko.htm)
   * [Alexei Vinogradov](http://qa-blog.alexei-vinogradov.de/2016/05/elegant-objects-egor-bugayenko/) (in Russian)
-  * [Renaud Pradenc](https://www.renaudpradenc.com/?p=504)
+  * [Renaud Pradenc](https://web.archive.org/web/20241209015523/https://www.renaudpradenc.com/?p=504)
   * [Руслан Кеба](http://rukeba.com/by-the-way/elegant-objects/) (in Russian)
   * [Lee Kelleher](https://leekelleher.com/2016/10/book-review-elegant-objects-vol1/)
   * [Anderson Dorow](https://adorow.github.io/blog/2017/05/28/elegant-objects-volume-1-review-chapter-1)
@@ -666,7 +666,7 @@ reviewers.
 
 <div class="book-event">&nbsp;</div>
 <div style="float:right;margin-left:1em">
-  <a href="http://javapoint.ru/en/">
+  <a href="https://web.archive.org/web/20160709100025/http://javapoint.ru/en/">
     <img src="/images/2016/jpoint-2016.png" style="height:45px;" alt="JPoint 2016"/></a><br/>
   <img src="/images/2016/jet-2016.png" style="height:45px;" alt="JET Conference 2016"/><br/>
   <a href="http://2016.geecon.org/">
@@ -684,7 +684,7 @@ already. Many thanks to their authors! It would
 be great if you published yours&mdash;this will greatly help
 in promoting the manuscript. Besides that, I will be presenting the
 book at the following conferences over the next few months:
-[JPoint](http://javapoint.ru/en/) in Moscow, April 22;
+[JPoint](https://web.archive.org/web/20160709100025/http://javapoint.ru/en/) in Moscow, April 22;
 JETConf in Minsk, April 25;
 [GeeCON](http://2016.geecon.org/) in Krakow, May 11;
 [DEVit](http://devitconf.org/) in Thessaloniki, May 20; and

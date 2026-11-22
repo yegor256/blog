@@ -18,7 +18,7 @@ keywords:
   - constructor or factory
   - factories vs constructiors
 social:
-  - dzone: https://dzone.com/articles/constructors-or-static-factory-methods
+  - dzone: https://web.archive.org/web/20171115220304/https://dzone.com/articles/constructors-or-static-factory-methods
 image: /images/2017/11/extract.jpg
 jb_picture:
   caption: Extract (2009) by Mike Judge
@@ -277,7 +277,7 @@ class Color {
 }
 ```
 
-If the [true red](https://www.pantone.com/color-finder/19-1664-TPX) color
+If the [true red](https://web.archive.org/web/20260216122206/https://www.pantone.com/color-finder/19-1664-TPX) color
 is requested, we return an instance of `PantoneColor`. In all other cases it's
 just a standard `RGBColor`. The decision is made by the static factory
 method. This is how we will call it:

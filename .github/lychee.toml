@@ -23,8 +23,8 @@ accept = [200, 202, 301, 302, 307, 401, 403, 429, 500, 501, 502, 503, 504, 520, 
 # accept_timeouts = true
 
 # Increase timeout and add retries to reduce transient failures
-timeout = 15
-max_retries = 2
+timeout = 30
+max_retries = 3
 
 # Reduce concurrency to avoid triggering rate limits
 max_concurrency = 16
@@ -62,4 +62,15 @@ exclude = [
   "ridus\\.ru",
   "%7B%7B",
   "%7B%25",
+  # Russian sites randomly time out from GitHub runners
+  "^https?://[^/]+\\.(ru|su|xn--p1ai)([/:?#]|$)",
+  "razbor-poletov\\.com",
+  "innopolis\\.university",
+  "community-z\\.com",
+  # These block bots from CI, but work in a browser
+  "sciencedirect\\.com",
+  "elegantcode\\.com",
+  "amazon\\.com/gp/customer-reviews",
+  "joya\\.com",
+  "fbcdn\\.net",
 ]

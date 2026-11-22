@@ -276,7 +276,7 @@ to meet Russian researchers, who challenge world-size problems;
 <span class="venue-rate B-mark">B</span>
 <img src="https://i.ytimg.com/vi/aYXuK2do6FA/mqdefault.jpg" class="past-talk" alt="TestCon 2020"/>
 **Testing and Testers**;
-[TestCon](https://testconf.ru/);
+[TestCon](https://web.archive.org/web/20180413003733/https://testconf.ru/);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 16 September;
 [видео](https://www.youtube.com/watch?v=aYXuK2do6FA)
@@ -326,7 +326,7 @@ to meet Russian researchers, who challenge world-size problems;
 <span class="venue-rate A-mark">A</span>
 <img src="https://i.ytimg.com/vi/jZitXMQaXvE/mqdefault.jpg" class="past-talk" alt="QAFest 2019"/>
 **Quality Assurance vs. Testing**;
-[QA Fest](http://qafest.com/en/);
+[QA Fest](https://web.archive.org/web/20190325155804/http://qafest.com/en/);
 <span class="city">Kyiv</span>, <span class="country">Ukraine</span>;
 20 September;
 [video](https://www.youtube.com/watch?v=jZitXMQaXvE),
@@ -433,7 +433,7 @@ Blockchain Conference 2018;
 <span class="venue-rate A-mark">A</span>
 <img src="https://i.ytimg.com/vi/55mwAbuDrV8/mqdefault.jpg" class="past-talk" alt="Joker Conf 2018"/>
 **Quality vs. Quantity**;
-[Joker Conf](https://2018.jokerconf.com/en/);
+[Joker Conf](https://web.archive.org/web/20171212073704/https://2018.jokerconf.com/en/);
 <span class="city">St. Petersburg</span>, <span class="country">Russia</span>;
 20 October;
 [видео](https://youtu.be/55mwAbuDrV8),
@@ -511,7 +511,7 @@ and engaged. I will definitely try to attend again
 <span class="venue-rate C-mark">C-</span>
 <!-- <img src="https://obs.com.ua/images/obs2.svg" class="past-talk" alt="Odessa Blockchain Summit 2018"/> -->
 **Zold: Experimental Cryptocurrency Without Blockchain**;
-[Odessa Blockchain Summit](https://obs.com.ua/);
+[Odessa Blockchain Summit](https://web.archive.org/web/20180906002421/https://obs.com.ua/);
 <span class="city">Odessa</span>, <span class="country">Ukraine</span>;
 6 September;
 [slides](https://www.slideshare.net/YegorBugayenko/zold-a-cryptocurrency-without-blockchain).
@@ -682,7 +682,7 @@ glad to attend again, if they invite
 <span class="venue-rate A-mark">A-</span>
 <img src="https://i.ytimg.com/vi/1bAixLaOCSA/mqdefault.jpg" class="past-talk" alt="JavaDay Minsk 2017"/>
 **Object Oriented JUnit Tests**;
-[JavaDay Minsk 2017](http://javaday.by/);
+[JavaDay Minsk 2017](https://web.archive.org/web/20190128143325/http://javaday.by/);
 <span class="city">Minsk</span>, <span class="country">Belarus</span>;
 3 June 2017;
 [video](https://www.youtube.com/watch?v=1bAixLaOCSA),
@@ -791,7 +791,7 @@ JBreak 2017;
 4 April 2017;
 [видео](https://www.youtube.com/watch?v=85B3FV_sB60) (with English subtitles),
 [slides](https://www.slideshare.net/YegorBugayenko/utility-classes-are-killing-us).
-Yet another great event by [JUG.ru](https://jug.ru/) in Siberia. This was
+Yet another great event by [JUG.ru](https://web.archive.org/web/20190101092505/https://jug.ru/) in Siberia. This was
 my first time there, and I enjoyed almost everything: the location, the
 organization, travel planning, equipment, and audience. The only thing I didn't
 like was the quality of food. Aside from that, I would say that JBreak is an
@@ -1066,7 +1066,7 @@ the audience. However, the venue was not comfortable at all
 <span class="venue-rate B-mark">B</span>
 <img src="https://i.ytimg.com/vi/6hOBfjJ2bpw/mqdefault.jpg" class="past-talk" alt="JavaDay 2016"/>
 **Java vs. OOP**;
-[JavaDay 2016](http://javaday.by/);
+[JavaDay 2016](https://web.archive.org/web/20190128143325/http://javaday.by/);
 <span class="city">Minsk</span>, <span class="country">Belarus</span>;
 11 June 2016;
 [slides](https://www.slideshare.net/YegorBugayenko/java-vs-oop),
@@ -1314,7 +1314,7 @@ deliver. Aside from that, the impression was positive
 <span class="venue-rate A-mark">A-</span>
 <img src="https://i.ytimg.com/vi/aER4uwyFbqQ/mqdefault.jpg" class="past-talk" alt="JPoint 2016"/>
 **ORM - это обидно (ORM Is an Offensive Anti-Pattern)**;
-[JPoint 2016](http://javapoint.ru/en/);
+[JPoint 2016](https://web.archive.org/web/20160709100025/http://javapoint.ru/en/);
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 22-24 April 2016;
 [slides](https://www.slideshare.net/YegorBugayenko/orm-is-offensive),
@@ -1332,7 +1332,7 @@ was perfect
 <span class="venue-rate A-mark">A</span>
 <img src="https://i.ytimg.com/vi/F4N25kZ2zQU/mqdefault.jpg" class="past-talk" alt="JPoint 2016 Students Day"/>
 **Объектно-Ориентированное Вранье (Object-Oriented Lies)**;
-[Student Day](http://students.javapoint.ru/talks/bugaenko/)
+[Student Day](https://web.archive.org/web/20181228151824/http://students.javapoint.ru/talks/bugaenko/)
 <span class="city">Moscow</span>, <span class="country">Russia</span>;
 22-24 April 2016;
 [slides](https://www.slideshare.net/YegorBugayenko/object-oriented-lies),
@@ -1347,7 +1347,7 @@ corrections were received. I would suggest inviting new speakers&mdash;it seems 
 <span class="venue-rate B-mark">B-</span>
 <img src="https://i.ytimg.com/vi/gL4XwP-EBOg/mqdefault.jpg" class="past-talk" alt="WEBIT.Festival 2016"/>
 **Continuous Integration May Have Negative Effects**;
-[WEBIT.Festival 2016](https://www.webit.bg/speaker.php?id=2128);
+[WEBIT.Festival 2016](https://web.archive.org/web/20160727201913/https://www.webit.bg/speaker.php?id=2128);
 <span class="city">Sophia</span>, <span class="country">Bulgaria</span>;
 20 April 2016;
 [photos](https://www.facebook.com/yegor256/posts/10209310350105703),
