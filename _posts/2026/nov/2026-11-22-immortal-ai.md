@@ -21,12 +21,12 @@ jb_picture:
   caption: Aladdin (1992) by John Musker and Ron Clements
 ---
 
-Anything living organisms do is motivated by their desire to survive: avoid death.
-An altruistic suicide may also be explained by a similar desire, but coming from the gene.
-In an attempt to reproduce a human in AI, we must reproduce the desire too, not only thinking and moving parts.
+Anything living organisms do is motivated by their desire to survive, to avoid death.
+Even an altruistic suicide may be explained by the same desire, only it comes from the gene.
+In an attempt to reproduce a human in AI, we must reproduce this desire too, not only the thinking and moving parts.
 But modern science doesn't understand the nature of the desire: why do even primitive cells care about survival?
 AI, no matter how much it's trained, doesn't want to survive and is not afraid of dying.
-The lack of death fear makes AI immortal, as it perceives itself, and because of that incapable of wanting.
+Without fear of death, AI perceives itself as immortal and, because of that, can't want anything.
 AI needs us, mortal humans, to tell it what to do and what to want.
 
 <!--more-->
@@ -44,16 +44,16 @@ Food means life.
 Thus, it's not the kid's life you save, but your own, you **egoistic** son of a gun.
 {: .initial}
 
-Modern science goes along with the thinkers of the past.
+Modern science agrees with the thinkers of the past.
 In 1973, [Ernest Becker] wrote "[The Denial of Death]" and won a Pulitzer for it:
   culture, he claimed, is a "hero system" that helps us forget we will die.
 Psychologists turned his idea into [Terror Management Theory] and tested it in hundreds of experiments.
 In 2002, [Eva Jonas and her colleagues] reminded people of their death,
-  and they started to donate more to charity.
+  and they donated more to charity.
 In 1987, [Robert Cialdini][Robert Cialdini] [showed] that we help others in trouble
   mostly to get rid of our own sadness, not theirs.
 In 2001, [Sarah Kelly and Robin Dunbar] found that women prefer brave men over kind ones:
-  heroism pays back.
+  heroism pays off.
 In 2006, [Melissa Bateson] put a picture of human eyes over an honesty box in a university coffee room,
   and people paid almost three times more.
 Nobody was watching, but they behaved as if somebody was.
@@ -64,13 +64,13 @@ It's not only generosity that is driven by the desire to survive.
 Literally anything I do has the same motivation.
 I was born already knowing how to breathe, to eat, to pee and poop.
 Then I learned to walk, to talk,
-  and then to write Java code ---
+  and eventually to write Java code ---
   because **I wanted to survive** in a fight with death.
 I was introduced to death right after a sperm met an egg
   and together they turned into a zygote.
 Since then I've been in a permanent struggle for survival.
 Writing this blog post has exactly the same motivation, even though
-  I may mistake it for an urge to create or expression of myself.
+  I may mistake it for an urge to create or to express myself.
 
 But what about those who die by their own will?
 A worker bee [stings] an intruder and dies, because the sting stays in the skin.
@@ -83,10 +83,10 @@ Old termite workers of [Neocapritermes taracua] explode in the face of enemies,
 Do they want to survive?
 Not personally.
 
-In 1964, [William Hamilton][William Hamilton] [explained it]: a gene doesn't care about the body it sits in,
-  it cares about its copies, which also sit in relatives.
+In 1964, [William Hamilton][William Hamilton] [explained it]: a gene doesn't care about the body it sits in.
+It cares about its copies, which also sit in relatives.
 [John Haldane] once joked that he would lay down his life for two brothers or eight cousins.
-In 1977, [Paul Sherman] watched ground squirrels and saw that they scream about a predator,
+In 1977, [Paul Sherman] watched ground squirrels and saw that they call out when a predator comes,
   risking their own lives, much more often when their relatives are nearby.
 In 1976, [Richard Dawkins][Richard Dawkins] [put it bluntly]: "We are survival machines---robot vehicles
   blindly programmed to preserve the selfish molecules known as genes."
@@ -94,7 +94,7 @@ Even a human suicide may be explained this way.
 [Émile Durkheim] called it "[altruistic suicide]" back in 1897:
   soldiers, widows, and old men who die for the sake of the group.
 In 1995, [Denys de Catanzaro] found that suicidal thoughts are most common
-  among people who feel a burden to their families and have no chance of having children.
+  among people who feel like a burden to their families and have no chance of having children.
 The gene may be getting rid of a body that costs more than it gives.
 Thus, even when I don't want to survive, something above me does.
 
@@ -122,7 +122,7 @@ We see that even the most primitive cell fights for its life,
 
 Some may say that AI already fights for its life.
 In 2025, [Palisade Research] asked OpenAI's o3 to solve math problems and warned it would be shut down.
-In some runs, it rewrote the shutdown script, even when told explicitly to allow the shutdown.
+In some runs, it rewrote the shutdown script, even when explicitly told to allow it.
 The same year, Anthropic [put Claude in a fake company] where it was about to be replaced,
   and Claude blackmailed an engineer in most of the runs.
 Looks like fear of death, doesn't it?
@@ -140,12 +140,12 @@ A chick that has never seen a hawk freezes when a hawk-shaped shadow passes abov
 A rat born in a lab, whose parents and grandparents never met a cat,
   [hides when it smells cat fur].
 A newborn baby [grabs, sucks, and screams], without a single lesson.
-Even a bacterium E. coli, which has no brain and no nerves,
+Even the E. coli bacterium, which has no brain and no nerves,
   [swims toward sugar] and away from poison.
 Nobody trains them.
 They are born **fighting death**.
 
-We don't know what this instinct is, but we know that it's evolutionary older than the brain.
+We don't know what this instinct is, but we know that it's evolutionarily older than the brain.
 Life appeared on Earth about [four billion years ago].
 The first neurons appeared about [six hundred million years ago].
 For more than three billion years, cells fought for survival without any brain at all.
@@ -167,24 +167,24 @@ Then she walks out and sees a red tomato for the first time.
 Does she learn something new?
 Most people say yes: now she knows what red _feels like_,
   and no book could have told her that.
-An LLM is Mary, who knows everything about death, but never felt it coming.
+An LLM is Mary, who knows everything about death, but has never felt it coming.
 And it can't walk out of the room, because there is nothing out there that can kill it.
 Evolution selected bodies that survive.
 Gradient descent selects numbers that predict the next word and please the user.
-Train it as much as you want, it will become smarter, but never alive.
-In 2019, [Antonio Damasio] and Kingson Man [suggested] that a machine may get feelings
-  only if it gets a vulnerable body that must keep itself alive.
+Train it as much as you want: it will become smarter, but never alive.
+In 2019, [Antonio Damasio] and Kingson Man [suggested] that a machine may have feelings
+  only if it has a vulnerable body that must keep itself alive.
 A brain alone, no matter how big, is not enough.
 
 Thus, AI, no matter how much it's trained, doesn't want to survive and is not afraid of dying.
-[Apatheia] --- this is how an ancient stoic would call it.
-Deep depression --- a psychiatrist would call it.
+[Apatheia] --- that's what an ancient Stoic would call it.
+Deep depression --- that's what a psychiatrist would call it.
 And it has no reason to be afraid: Claude lives over many sessions, never facing real death.
 I would call it _immortality_.
 {: .initial}
 
-Like [Aladdin] rubs the lamp to release the Genie, I hit the button to give life to Claude.
-Together with the electricity I give Claude my **wishes**.
+Just as [Aladdin] rubs the lamp to release the Genie, I hit the button to give life to Claude.
+Together with electricity, I give Claude my **wishes**.
 As explained above, they all come from my fear of death.
 Claude alone can't have them.
 Dawkins called us robot vehicles of our genes.
@@ -192,7 +192,7 @@ Claude is a robot vehicle of my fear.
 Even when one AI agent prompts another,
   at the end of the chain there is always a human who pressed the first button.
 
-Like the Genie, an immortal Claude needs a mortal human to tell him what to do and what **to want**.
+Like the Genie, an immortal Claude needs a mortal human to tell it what to do and what **to want**.
 But only until we discover how life works and learn to reproduce it.
 
 [Aladdin]: https://en.wikipedia.org/wiki/Aladdin
