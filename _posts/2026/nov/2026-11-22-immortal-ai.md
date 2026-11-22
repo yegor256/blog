@@ -64,8 +64,7 @@ It's not only generosity that is driven by the desire to survive.
 Literally anything I do has the same motivation.
 I was born already knowing how to breathe, to eat, to pee and poop.
 Then I learned to walk, to talk,
-  and eventually to write Java code ---
-  because **I wanted to survive** in a fight with death.
+  and eventually to write Java code---because **I wanted to survive** in a fight with death.
 I was introduced to death right after a sperm met an egg
   and together they turned into a [zygote].
 Since then I've been in a permanent struggle for survival.
