@@ -64,8 +64,6 @@ Old termite workers of [Neocapritermes taracua] explode in the face of enemies,
 Do they want to survive?
 Not personally.
 
-{% quote Knowing about death and being afraid of it are two different things %}
-
 In 1964, [William Hamilton][William Hamilton] [explained it]: a gene doesn't care about the body it sits in.
 It cares about its copies, which also sit in relatives.
 [John Haldane] once joked that he would lay down his life for two brothers or eight cousins.
@@ -114,6 +112,8 @@ An LLM has read millions of human texts about fighting death, including novels a
 Also, as [Stuart Russell] put it, "you can't fetch the coffee if you're dead."
 A model that was given a task resists shutdown because it wants to finish the task, not to live.
 It's learning and logic, not **fear**.
+
+{% quote Knowing about death and being afraid of it are two different things %}
 
 A living organism doesn't need to learn anything to start fighting for its life.
 A [sea turtle] hatches from an egg on a beach and immediately crawls to the sea,
