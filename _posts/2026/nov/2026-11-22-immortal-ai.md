@@ -177,8 +177,8 @@ In 2019, [Antonio Damasio] and Kingson Man [suggested] that a machine may have f
 A brain alone, no matter how big, is not enough.
 
 Thus, AI, no matter how much it's trained, doesn't want to survive and is not afraid of dying.
-[Apatheia] --- that's what an ancient [Stoic] would call it.
-[Deep depression] --- that's what a psychiatrist would call it.
+[Apatheia]---that's what an ancient [Stoic] would call it.
+[Deep depression]---that's what a psychiatrist would call it.
 And it has no reason to be afraid: [Claude] lives over many sessions, never facing real death.
 I would call it _immortality_.
 {: .initial}
