@@ -18,11 +18,15 @@ article {
     }
   }
 
-  .initial::first-letter {
-    float: left;
-    font-size: 3 * $rem;
-    line-height: 2.5 * $rem;
-    margin: .1 * $rem .1 * $rem 0 0;
+  .initial{
+    margin-top: 1.25 * $rem;
+
+    &::first-letter {
+      float: left;
+      font-size: 3 * $rem;
+      line-height: 2.5 * $rem;
+      margin: .1 * $rem .1 * $rem 0 0;
+    }
   }
 
   table tr {
