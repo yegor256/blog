@@ -25,6 +25,15 @@
       "matchFileNames": [
         ".github/workflows/deploy.yml"
       ]
+    },
+    {
+      "allowedVersions": "<5",
+      "matchDatasources": [
+        "rubygems"
+      ],
+      "matchPackageNames": [
+        "liquid"
+      ]
     }
   ],
   "platformAutomerge": false
