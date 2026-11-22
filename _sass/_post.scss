@@ -16,13 +16,13 @@ article {
     del {
       color: $gray;
     }
+  }
 
-    &.initial::first-letter {
-      float: left;
-      font-size: 3 * $rem;
-      line-height: 2.5 * $rem;
-      margin: .1 * $rem .1 * $rem 0 0;
-    }
+  .initial::first-letter {
+    float: left;
+    font-size: 3 * $rem;
+    line-height: 2.5 * $rem;
+    margin: .1 * $rem .1 * $rem 0 0;
   }
 
   table tr {
