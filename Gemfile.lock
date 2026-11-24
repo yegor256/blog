@@ -1,8 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    Ascii85 (2.0.1)
-    addressable (2.9.2)
+    Ascii85 (2.0.2)
+    addressable (2.10.0)
       public_suffix (>= 2.0.2, < 8.0)
     afm (1.0.1)
     ast (2.4.3)
@@ -316,8 +316,8 @@ GEM
     trollop (2.9.10)
     ttfunk (1.8.0)
       bigdecimal (~> 3.1)
-    typhoeus (1.7.1)
-      ethon (>= 0.19.1, < 0.20.0)
+    typhoeus (1.8.0)
+      ethon (>= 0.19.2, < 0.20.0)
     unicode-display_width (2.6.0)
     uri (1.1.2)
     uuidtools (3.0.0)
