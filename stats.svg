@@ -670,9 +670,9 @@
 		<polygon fill = 'rgb( 79,  73,  73)' points = '625.57,230.00 628.03,230.00 628.03,199.48 625.57,199.48 '/>
 	</g>
 	<path stroke='rgb( 79,  73,  73)'  d='M625.57,230.00 L625.57,199.49 L628.02,199.49 L628.02,230.00 L625.57,230.00 Z  '/>	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb( 79,  73,  73)' points = '632.10,230.00 634.56,230.00 634.56,168.22 632.10,168.22 '/>
+		<polygon fill = 'rgb( 79,  73,  73)' points = '632.10,230.00 634.56,230.00 634.56,167.77 632.10,167.77 '/>
 	</g>
-	<path stroke='rgb( 79,  73,  73)'  d='M632.10,230.00 L632.10,168.23 L634.55,168.23 L634.55,230.00 L632.10,230.00 Z  '/></g>
+	<path stroke='rgb( 79,  73,  73)'  d='M632.10,230.00 L632.10,167.78 L634.55,167.78 L634.55,230.00 L632.10,230.00 Z  '/></g>
 	</g>
 <g fill="none" color="white" stroke="rgb( 79,  73,  73)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
