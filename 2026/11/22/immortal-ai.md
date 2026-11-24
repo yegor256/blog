@@ -115,8 +115,7 @@ Also, as [Stuart Russell] put it, "you can't fetch the coffee if you're dead."
 A model that was given a task resists shutdown because it wants to finish the task, not to live.
 It's learning and logic, not **fear**.
 
-
-{% quote A bacterium that has just died is made of almost the same molecules as a living one, and we don't what's missing }
+{% quote A bacterium that has just died is made of almost the same molecules as a living one, and we don't what's missing %}
 
 A living organism doesn't need to learn anything to start fighting for its life.
 A [sea turtle] hatches from an egg on a beach and immediately crawls to the sea,
