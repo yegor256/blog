@@ -180,6 +180,7 @@ figure {
   @extend %unprintable;
 
   border-left: 2 * $px solid $black;
+  break-inside: avoid;
   float: right;
   font-size: 1.6 * $rem;
   line-height: 1.6 * $rem;
