@@ -87,7 +87,7 @@ figure {
   border: none;
   height: $rem;
   text-align: center;
-  margin: 3 * $rem auto;
+  margin: $rem auto 3 * $rem;
 
   &::after {
     content: "* * *";
@@ -97,15 +97,14 @@ figure {
   }
 }
 
-.dinkus {
-  margin-top: 1 * $rem;
-  text-align: center;
-}
-
 .columns {
   @include columns using ($count) {
     column-count: $count;
     column-gap: $gap;
+
+    .dinkus {
+      display: none;
+    }
 
     h2,
     h3 {
