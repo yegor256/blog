@@ -22,7 +22,7 @@ GEM
       json
     csv (3.3.7)
     date (3.6.0)
-    elapsed (0.3.1)
+    elapsed (0.3.2)
       loog (~> 0.6)
       tago (~> 0.1)
     ellipsized (0.3.0)
