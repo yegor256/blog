@@ -45,7 +45,7 @@ Before diving in, let's clarify that the "Related Work" section
 to explain foundational concepts like
 [Deep Learning](https://en.wikipedia.org/wiki/Deep_learning) or
 [Dataflow Architecture](https://en.wikipedia.org/wiki/Dataflow_architecture).
-That's what the "[Background](https://scientific-publishing.webshop.elsevier.com/manuscript-preparation/what-background-study-and-how-should-it-be-written/)" section is for.
+That's what the "[Background](https://web.archive.org/web/20230929083152/https://scientific-publishing.webshop.elsevier.com/manuscript-preparation/what-background-study-and-how-should-it-be-written/)" section is for.
 In "Related Work," it's assumed that the reader is already familiar with the subject matter.
 
 To effectively communicate the three-fold message, create a _taxonomy_ of existing studies.

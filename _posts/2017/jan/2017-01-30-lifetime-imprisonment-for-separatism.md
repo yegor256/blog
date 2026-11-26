@@ -70,7 +70,7 @@ jb_picture:
 [экс-мэр](http://obozrevatel.com/crime/17024-sud-prodlil-arest-eks-meru-slavyanska-nele-shtepe.htm),
 [мэр](http://obozrevatel.com/politics/94105-prosto-predsedatelstvoval-oppoblok-vstupilsya-za-arestovannogo-mera-toretska.htm),
 [блоггер](http://respublika-lv.su/1003-chergoviy-aresht-za-separatizm-u-merezh.html),
-[бывший городской голова](http://ura-inform.com/ru/society/2016/05/11/byvshij-gorodskoj-golova-zolotogo-poduchi-dva-goda-tjurmy-za-separatizm)
+[бывший городской голова](https://web.archive.org/web/20170925040030/http://ura-inform.com/ru/society/2016/05/11/byvshij-gorodskoj-golova-zolotogo-poduchi-dva-goda-tjurmy-za-separatizm)
 и [многие другие](http://censor.net.ua/news/349868/s_nachala_2015_goda_za_separatizm_v_donetskoyi_oblasti_arestovany_83_cheloveka_prokuratura).
 
 В украинском УК описано много других преступлений, наносящих, как

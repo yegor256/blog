@@ -49,7 +49,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   # - jekyll-chatgpt-translate
-  # - jekyll-related-posts
 
 shorts:
   permalink: :year:month:day:letter.html
@@ -81,12 +80,6 @@ shorts:
 #       source: ru
 #       language: zh
 #       permalink: zh/:year/:month/:day/:slug.html
-
-# see https://github.com/alfanick/jekyll-related-posts
-related:
-  max_count: 5
-  min_score: 0.1
-  accuracy: 0.75
 
 # jekyll-feed
 feed:

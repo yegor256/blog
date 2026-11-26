@@ -29,8 +29,7 @@ My recently made films:
 <img src="https://films.yegor256.com/hot-stone/1200x1800.png" style="width: 200px; float: left; margin-right: 1em;"/>
 
   Review:
-  [IMDB](https://www.imdb.com/title/tt31632099/) |
-  [Кинопоиск]()
+  [IMDB](https://www.imdb.com/title/tt31632099/)
 
   Watch:
   [YouTube](https://www.youtube.com/watch?v=asWCzJGyD98)

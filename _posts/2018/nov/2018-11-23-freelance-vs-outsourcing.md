@@ -36,7 +36,7 @@ The umbrella term for this new
 trend is "freelance." The [recent IPO of Upwork](https://www.cnbc.com/2018/10/03/upwork-ceo-on-ipo-day-we-do-not-incentivize-for-less-pay-for-freelancers.html),
 with a valuation of over $1.5B, demonstrates that the demand is high and will only grow. There is a lot of space
 for it, since Upwork only works with just 400,000 freelancers, while the entire
-population of programmers is [over 20 million](https://evansdata.com/reports/viewRelease.php?reportID=9).
+population of programmers is [over 20 million](https://web.archive.org/web/20181102022918/https://evansdata.com/reports/viewRelease.php?reportID=9).
 
 In order to survive, smart software houses must realize that the future, in its 10-15 years horizon, will
 make it mandatory for software projects to work with freelancers or build teams

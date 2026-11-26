@@ -18,7 +18,7 @@ keywords:
   - ActiveRecord java
   - ActiveRecord anti-pattern
 social:
-  - dzone: https://dzone.com/articles/activerecord-is-even-worse-than-orm
+  - dzone: https://web.archive.org/web/20160730231306/https://dzone.com/articles/activerecord-is-even-worse-than-orm
 book: elegant-objects-2 6.5
 image: /images/2016/07/en-duva-satt-pa-engren.jpg
 jb_picture:

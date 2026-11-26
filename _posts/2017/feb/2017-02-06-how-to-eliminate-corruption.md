@@ -29,7 +29,7 @@ jb_picture:
 остаются одним из самых глупых народов на планете, не умеющим
 так организовать работу обслуживающих их чиновников и полицейских,
 чтобы те не воровали. Как же нам поумнеть? Есть ли
-какие-то [проверенные](http://www.jk.ru/analiticheskaja-informatsija/antikorruptsionnyjj-kontrol-v-nekotorykh-gosudarstvakh-mira/)
+какие-то [проверенные](https://web.archive.org/web/20161123153038/http://www.jk.ru/analiticheskaja-informatsija/antikorruptsionnyjj-kontrol-v-nekotorykh-gosudarstvakh-mira/)
 способы?
 
 <!--more-->

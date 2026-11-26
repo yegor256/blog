@@ -69,7 +69,7 @@ Counting managers and technicians alongside professionals, [ISCO] now
 The world looks the way America looked in 1989.
 We **contribute by thinking**, and that is what makes us needed.
 
-{% quote "Made by a human" will stop being a price premium and will become a disclosure. %}
+{% quote "Made by a human" will stop being a price premium and will become a disclosure %}
 
 However, [LLM]s already think better than us, and faster too.
 At the [2025 ICPC World Finals], Gemini [solved] ten of twelve problems.
@@ -92,7 +92,7 @@ If all of us took a fifty percent pay cut tomorrow, the machines would
   each thinking at "10x-100x human speed"---a
   "[country of geniuses in a datacenter]."
 Thinking stops being scarce.
-Soon **we won't be needed**.
+Soon [**we won't be needed**][immortal].
 
 Some expect a market for [artisanal code]:
   machines will write the millions of routine lines,
@@ -118,7 +118,7 @@ None of this is new.
 He was writing about the future.
 Thirty-two years later it is **career advice**.
 
-{% quote A child born today will be obsolete before he finishes school. %}
+{% quote A child born today will be obsolete before he finishes school %}
 
 In May 2026 [Jensen Huang] [told] a graduating class at Carnegie Mellon:
   "Electricians, plumbers, iron workers, technicians,
@@ -135,7 +135,7 @@ We will **retire**, or we will move to physical work.
   a [useless class] that "will not merely
   be unemployed---it will be **unemployable**."
 
-A child born today will be obsolete before he finishes school.
+A child born today will be obsolete before he [finishes school][socrates].
 
 [Nick Bostrom] declared a world of "deep redundancy" in [Deep Utopia (2024)]:
   there is nothing you could do that anyone would need.
@@ -143,6 +143,8 @@ He proposed "artificial purpose"---challenges
   designed for us by the intelligence that replaced us.
 Keynes already knew how that ends:
   the people who **had money and no duties**, he wrote, "failed disastrously."
+
+{% youtube GNDkTCtEVOk %}
 
 This already happened once, to people with less protection than us.
 From 1999, middle-aged Americans without a degree started dying faster
@@ -218,3 +220,5 @@ Neither does this one.
 [Émile Durkheim]: https://en.wikipedia.org/wiki/%C3%89mile_Durkheim
 [my GitHub]: https://github.com/yegor256
 [Claude Code]: https://claude.com/product/claude-code
+[immortal]: {% pst 2026/nov/2026-11-22-immortal-ai %}
+[socrates]: {% pst 2026/nov/2026-11-10-back-to-socrates %}

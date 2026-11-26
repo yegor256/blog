@@ -1,6 +1,7 @@
 // SPDX-FileCopyrightText: Copyright (c) 2014-2026 Yegor Bugayenko
 // SPDX-License-Identifier: MIT
 
+@use 'columns' as *;
 @use 'defs' as *;
 @use 'colors' as *;
 @use 'fonts' as *;
@@ -14,6 +15,22 @@ article {
 
     del {
       color: $gray;
+    }
+  }
+
+  .initial{
+    margin-top: 1.25 * $rem;
+
+    &::first-letter {
+      float: left;
+      font-size: 3 * $rem;
+      line-height: 2.5 * $rem;
+      margin: .1 * $rem .1 * $rem 0 0;
+
+      @media all and (max-width: $width) {
+        font-size: 3.5 * $rem;
+        line-height: 3 * $rem;
+      }
     }
   }
 
@@ -36,6 +53,70 @@ article {
       color: $gray;
       margin-top: 4 * $rem;
       padding-left: $rem;
+    }
+  }
+}
+
+.plantuml {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+  position: relative;
+
+  figcaption {
+    background-color: $plate;
+    bottom: $rem;
+    color: $chalk;
+    font-size: .7 * $rem;
+    left: .5 * $rem;
+    line-height: $rem;
+    max-width: 90%;
+    padding: 0.05 * $rem .5 * $rem;
+    position: absolute;
+    text-shadow: .2 * $px .2 * $px $soot;
+  }
+
+  figcaption::before {
+    content: '© ';
+  }
+}
+
+.dinkus {
+  border: none;
+  height: $rem;
+  text-align: center;
+  margin: $rem auto 3 * $rem;
+
+  &::after {
+    content: "* * *";
+    letter-spacing: .25 * $rem;
+    color: $gray;
+    display: inline-block;
+  }
+}
+
+.columns {
+  @include columns using ($count) {
+    column-count: $count;
+    column-gap: $gap;
+
+    .dinkus {
+      display: none;
+    }
+
+    h2,
+    h3 {
+      break-after: avoid;
+    }
+
+    blockquote,
+    figure,
+    img,
+    pre,
+    table {
+      break-inside: avoid;
     }
   }
 }
@@ -97,13 +178,14 @@ article {
   @extend %desktop-only;
   @extend %unprintable;
 
-  border-left: 4 * $px solid $silver;
+  border-left: 2 * $px solid $black;
+  break-inside: avoid;
   float: right;
   font-size: 1.6 * $rem;
   line-height: 1.6 * $rem;
   margin: .5 * $rem -5 * $rem .5 * $rem $rem;
   padding-left: .75 * $rem;
-  width: 15 * $rem;
+  width: 14 * $rem;
 }
 
 .book {
@@ -127,4 +209,21 @@ article {
   .amazon-button {
     height: 20 * $px;
   }
+}
+
+.eqtn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  @extend %clear;
+
+  border: 0;
+  border-top: 1 * $px solid $silver;
+  height: 0;
+  margin: 1.5 * $rem auto;
+  text-align: left;
+  width: 35%;
 }

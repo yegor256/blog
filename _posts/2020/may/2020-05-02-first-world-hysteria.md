@@ -30,7 +30,7 @@ jb_picture:
 что дела обстоят именно так, как нам рассказывают
 [Коммерсантъ](https://www.kommersant.ru/theme/3304)
 и
-[Голос Америки](https://www.golos-ameriki.ru/p/7298.html)?
+[Голос Америки](https://www.golosameriki.com/p/7298.html)?
 Тогда дальше можете не читать, будет неинтересно. Если же вы,
 как и я, не верите в массовый психоз и хотели бы разобраться в его
 истинных причинах, давайте попробуем.
@@ -147,7 +147,7 @@ jb_picture:
     [политическое](https://www.dw.com/ru/%D0%BA%D0%B8%D1%82%D0%B0%D0%B9-%D0%B2%D0%B2%D0%BE%D0%B4%D0%B8%D1%82-%D1%81%D0%B0%D0%BD%D0%BA%D1%86%D0%B8%D0%B8-%D0%BF%D1%80%D0%BE%D1%82%D0%B8%D0%B2-%D1%81%D1%88%D0%B0-%D0%B8%D0%B7-%D0%B7%D0%B0-%D0%B3%D0%BE%D0%BD%D0%BA%D0%BE%D0%BD%D0%B3%D0%B0/a-51496715),
     и даже
     [уголовное](https://www.bbc.com/ukrainian/news-russian-46465492) негодование у хозяина
-    планеты. [Сделав](https://www.golos-ameriki.ru/a/trump-warns-china-coronavirus-outbreak-possible-consequences/5378798.html)
+    планеты. [Сделав](https://www.golosameriki.com/a/trump-warns-china-coronavirus-outbreak-possible-consequences/5378798.html)
     же из Китая распростанителя мировой инфекции, можно
     [существенно](https://korrespondent.net/world/4223863-ssha-hotoviat-protyv-kytaia-sanktsyy-za-COVID-19-smy)
     навредить как репутации КНР, так и ее

@@ -23,7 +23,7 @@ image: /images/andreea/podcast.png
 
 <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/472754832&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
 
-[Michael Krigsman](http://mkrigsman.com/) was our special guest.
+[Michael Krigsman](https://web.archive.org/web/20180713074252/http://mkrigsman.com/) was our special guest.
 
 His Twitter: [@mkrigsman](https://twitter.com/mkrigsman)
 

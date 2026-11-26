@@ -210,12 +210,12 @@ We didn't know what exactly this was for, but we saw other events doing this.
 we formed a Steering Committee of two people from our two most important partners:
 [Zhang Yuxin](https://www.huaweicloud.com/intl/en-us/news/building-a-smart-future-with-full-stack-innovation-for-the-cloud.html),
 the CTO of Huawei Cloud and
-[Yevgeny Kolbin](https://www.sberbank.ru/en/press_center/all/article?newsID=ef3e1c1b-fc7f-4eb5-9d36-db23e2ed42fc&blockID=1539&regionID=77&lang=en&type=NEWS),
+[Yevgeny Kolbin](https://web.archive.org/web/20210515022027/https://www.sberbank.ru/en/press_center/all/article?newsID=ef3e1c1b-fc7f-4eb5-9d36-db23e2ed42fc&blockID=1539&regionID=77&lang=en&type=NEWS),
 the CEO of SberCloud.
 
 **EasyChair**<br/>
 There has to be some website to collect papers from authors. We decided to use
-[EasyChair](https://www.easychair.org),
+[EasyChair](https://easychair.org),
 since it's pretty popular and not as expensive as
 [some others](https://academia.stackexchange.com/questions/2557/conference-management-software-preferably-open-source-with-custom-fields).
 
@@ -225,8 +225,8 @@ collect the papers from authors. We had to find a way to promote the conference 
 researchers decided to submit their work results to us. Aside from using our
 own existing Twitter/Facebook/Telegram channels, there were two options:
 call-for-papers (CFP) distribution, and paid ads.
-We made [PDF](https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Ficcq.github.io&target=cfp%2F2021%2Fcfp.tex&command=pdflatex&trackId=1617526368363) and
-[TXT](https://raw.githubusercontent.com/yegor256/iccq.github.io/master/cfp/2021/cfp.txt) versions
+We made [PDF](https://web.archive.org/web/20210510191800/https://latexonline.cc/compile?git=https%3A%2F%2Fgithub.com%2Fyegor256%2Ficcq.github.io&target=cfp%2F2021%2Fcfp.tex&command=pdflatex&trackId=1617526368363) and
+[TXT](https://web.archive.org/web/20210507102950/https://raw.githubusercontent.com/yegor256/iccq.github.io/master/cfp/2021/cfp.txt) versions
 of it and then posted to a few places:
 [WikiCFP](https://web.archive.org/web/20240423173934/http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=112792),
 [call4paper](https://www.call4paper.com/detail/event/PGNZHDXH27553174),

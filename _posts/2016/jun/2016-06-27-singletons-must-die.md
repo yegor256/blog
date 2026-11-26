@@ -18,7 +18,7 @@ keywords:
   - singleton replacement
   - singleton is bad
 social:
-  - dzone: https://dzone.com/articles/singletons-must-die
+  - dzone: https://web.archive.org/web/20160630204449/https://dzone.com/articles/singletons-must-die
 image: /images/2016/06/perdita-durango.jpg
 jb_picture:
   caption: Perdita Durango (1997) by Álex de la Iglesia

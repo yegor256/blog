@@ -62,7 +62,7 @@ I've got the first full-size review of the book from one of its
 main reviewers/contributors (Wojciech Adam Koszek). I will add more reviews
 to this list once they show up:
 
-  * [Trinity Takei](https://www.trinitytakei.io/blog/book_review_256_bloghacks_by_yegor_bugayenko/)
+  * [Trinity Takei](https://web.archive.org/web/20190719044335/https://www.trinitytakei.io/blog/book_review_256_bloghacks_by_yegor_bugayenko/)
   * [Wojciech Adam Koszek](https://www.koszek.com/reading/2017/01/07/book-blog-hacks-256/)
   * [Vojtech Ruzicka](http://vojtechruzicka.com/book-review-256-bloghacks/)
   * [Gareth Rees](https://www.garethrees.co.uk/2020/04/05/book-notes-256-bloghacks/)

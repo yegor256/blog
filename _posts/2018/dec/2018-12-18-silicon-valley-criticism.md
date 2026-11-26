@@ -146,7 +146,7 @@ and gracefully submits to whatever the boss demands." Enough said.
 ## It is Shallow
 
 You will be surprised how
-[cheerful, friendly and willing to communicate](https://www.cbsnews.com/news/how-americans-look-to-the-rest-of-the-world/)
+[cheerful, friendly and willing to communicate](https://web.archive.org/web/20181211111834/https://www.cbsnews.com/news/how-americans-look-to-the-rest-of-the-world/)
 Americans are, when you meet them as
 a stranger. In a grocery store, a gym, a cafe, on the street, they will
 smile and look very open. However, very soon you will realize that it's mostly
@@ -198,7 +198,7 @@ something really good and modern, get yourself ready for $8K+ numbers. You can v
 the numbers at [Zillow](https://www.zillow.com/palo-alto-ca-94301/rentals/).
 
 On top of that, the food is expensive, unless you don't care what you eat. If you
-do, [Whole Foods](https://eu.wholefoodsmarket.com/) is your grocery store, which has the reputation of
+do, [Whole Foods](https://web.archive.org/web/20181211215315/https://eu.wholefoodsmarket.com/) is your grocery store, which has the reputation of
 a [whole paycheck](https://www.sfgate.com/business/article/Whole-Foods-whole-paycheck-Amazon-Jeff-Bezos-13181055.php)
 place, where you basically are supposed to leave your entire monthly salary.
 Check their prices.

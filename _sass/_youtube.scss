@@ -10,14 +10,14 @@
   @extend %unprintable;
   @extend %gray;
 
-  border-left: 4 * $px solid #e52d27;
+  border-left: 2 * $px solid #e52d27;
   float: right;
   font-size: .8 * $rem;
   line-height: $rem;
   margin: .5 * $rem -5 * $rem .5 * $rem $rem;
   padding-left: $rem;
   text-align: left;
-  width: 10 * $rem;
+  width: 14 * $rem;
 
   .box {
     display: block;

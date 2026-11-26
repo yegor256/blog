@@ -24,7 +24,7 @@ jb_picture:
 
 When you review a pull/merge request from someone, do you check out
 the branch and run the build? I usually don't, but
-[some people do](https://exceptionnotfound.net/should-code-review-include-manual-testing-depends-2/).
+[some people do](https://web.archive.org/web/20191212124752/https://exceptionnotfound.net/should-code-review-include-manual-testing-depends-2/).
 Their obvious reason is: running a build, or even testing the product manually,
 helps find more important errors. Just looking at the source code may not
 reveal all visual defects recently introduced to the HTML/CSS, for example.

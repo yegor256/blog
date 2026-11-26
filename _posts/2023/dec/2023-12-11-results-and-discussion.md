@@ -144,7 +144,7 @@ These opinions might also be helpful:
 
   * [Guide to Writing the Results and Discussion Sections of a Scientific Article](https://goldbio.com/articles/article/Guide-to-results-and-discussion-section)
     by [Tyasning Kroemer](https://www.linkedin.com/in/tyasning-kroemer/)
-  * [How to write the Results and Discussion](https://healthprofessions.udmercy.edu/academics/na/agm/htresult.htm)
+  * [How to write the Results and Discussion](https://web.archive.org/web/20240108183621/https://healthprofessions.udmercy.edu/academics/na/agm/htresult.htm)
     by Michael P. Dosch
   * [How to Write Discussions and Conclusions](https://plos.org/resource/how-to-write-conclusions/)
     by PLOS
