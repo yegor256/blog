@@ -20,7 +20,10 @@ RUN .github/install-apt.sh \
 
 RUN gem install jgd -v 1.14.0
 
-RUN /usr/bin/install-node.sh \
-  && npm install -g eslint@8.57.1 \
+# Keep the container's .eslintrc.json configuration working with ESLint 9.
+ENV ESLINT_USE_FLAT_CONFIG=false
+
+RUN .github/install-node.sh \
+  && npm install -g eslint@9.39.5 \
   && npm install -g cssshrink@0.0.5 \
   && eslint --version
