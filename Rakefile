@@ -23,6 +23,7 @@ VERBOSE = false
 raise "Invalid encoding \"#{Encoding.default_external}\"" unless Encoding.default_external.to_s == 'UTF-8'
 
 task default: [
+  :pictures,
   :build,
   :pages,
   :garbage,
@@ -53,6 +54,11 @@ def all_links
     ).to_a.map(&:to_s)
   end
   links.sort.map { |a| a.gsub(%r{^/}, 'https://www.yegor256.com/') }
+end
+
+desc 'Check picture title escaping'
+task :pictures do
+  ruby '_rake/test_pictures.rb'
 end
 
 desc 'Delete _site directory'
