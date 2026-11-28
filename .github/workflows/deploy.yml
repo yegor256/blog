@@ -12,7 +12,7 @@ concurrency:
 jobs:
   site:
     timeout-minutes: 45
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
@@ -30,7 +30,7 @@ jobs:
           path: _site
   icons:
     timeout-minutes: 10
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - uses: actions/checkout@v7
       - run: rm -f Gemfile Gemfile.lock
@@ -46,7 +46,7 @@ jobs:
           path: icons
   publish:
     timeout-minutes: 15
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs: [site, icons]
     steps:
       - uses: actions/checkout@v7
