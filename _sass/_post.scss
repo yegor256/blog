@@ -87,7 +87,7 @@ figure {
   border: none;
   height: $rem;
   text-align: center;
-  margin: $rem auto 3 * $rem;
+  margin: 2 * $rem auto 3 * $rem;
 
   &::after {
     content: "* * *";
